@@ -50,11 +50,7 @@ jobs:
         run: |
           if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
             summary=$(head -n 1 build.log || echo Updated)
-            text="✅ پلی‌لیست آپدیت شد
-$summary
-
-لینک:
-https://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
+            text="✅ پلی‌لیست آپدیت شد%0A$summary%0A%0Aلینک:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
           else
             text="ℹ️ تغییری در پلی‌لیست نبود"
           fi
@@ -65,8 +61,7 @@ https://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
       - name: Telegram failure
         if: failure() && env.TG_TOKEN != '' && env.TG_CHAT != ''
         run: |
-          text="❌ خطا در آپدیت
-https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          text="❌ خطا در آپدیت%0Ahttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "text=${text}"
