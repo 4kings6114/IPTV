@@ -1,7 +1,7 @@
 name: Update playlist
 
 on:
-  workflow_dispatch:   # فقط دستی اجرا می‌شود (هر روز خودکار اجرا نمی‌شود)
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,9 +19,7 @@ jobs:
       - name: Telegram message
         if: env.TG_TOKEN != '' && env.TG_CHAT != ''
         run: |
-          text="ℹ️ پلی‌لیست دستی است و آپدیت خودکار غیرفعال شده.
-لینک فعلی:
-https://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
+          text="ℹ️ پلی‌لیست دستی است و آپدیت خودکار غیرفعال شده.%0Aلینک فعلی:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "text=${text}"
