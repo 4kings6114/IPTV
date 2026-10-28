@@ -1,0 +1,2254 @@
+#EXTM3U
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AlWilayah.ir@SD",Al Wilayah (720p)
+https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AsilTV.ir@SD",Asil TV (576p)
+https://live.asil.tv/asiltv/index.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="EslahTV.af@SD",Eslah TV (720p)
+https://eslahtvhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="iFilmArabic.ir@SD",iFilm Arabic
+https://live.presstv.co.uk/hls/ifilmar.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="iFilmEnglish.ir@SD",iFilm English
+https://live.presstv.co.uk/hls/ifilmen.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranJewishTV.ir@SD",Iran Jewish TV
+http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Amoozesh" tvg-logo="https://i.imgur.com/qox2azH.png" tvg-id="AmouzeshTV.ir" tvg-chno="7" tvg-country="IR" ,IRIB Amoozesh
+https://ncdn.telewebion.ir/amouzesh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Mostanad" tvg-logo="https://i.imgur.com/lRDgugZ.png" tvg-id="IRIBMostanad.ir" tvg-chno="9" tvg-country="IR" ,IRIB Mostanad
+https://ncdn.telewebion.ir/mostanad/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Ofogh" tvg-logo="https://i.imgur.com/fhqeYGb.png" tvg-id="OfoghTV.ir" tvg-chno="11" tvg-country="IR" ,IRIB Ofogh
+https://ncdn.telewebion.ir/ofogh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Omid" tvg-logo="https://i.imgur.com/s9iUe1l.png" tvg-id="IRIBOmid.ir" tvg-chno="16" tvg-country="IR" ,IRIB Omid
+https://ncdn.telewebion.ir/omid/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Pooya & Nahal" tvg-logo="https://i.imgur.com/hjeQUtg.png" tvg-id="PooyaTV.ir" tvg-chno="13" tvg-country="IR" ,IRIB Pooya & Nahal
+https://ncdn.telewebion.ir/pooya/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Salamat" tvg-logo="https://i.imgur.com/K0YUhne.png" tvg-id="SalamatTV.ir" tvg-chno="14" tvg-country="IR" ,IRIB Salamat
+https://ncdn.telewebion.ir/salamat/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB TV1" tvg-logo="https://i.imgur.com/rad9Guw.png" tvg-id="IRIB1.ir" tvg-chno="1" tvg-country="IR" ,IRIB TV1
+https://ncdn.telewebion.ir/tv1/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB TV4" tvg-logo="https://i.imgur.com/fsdz81l.png" tvg-id="IRIB4.ir" tvg-chno="4" tvg-country="IR" ,IRIB TV4
+https://ncdn.telewebion.ir/tv4/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB TV5/Tehran TV" tvg-logo="https://i.imgur.com/VdOFcN4.png" tvg-id="IRIB5.ir" tvg-chno="5" tvg-country="IR" ,IRIB TV5 (Tehran)
+https://ncdn.telewebion.ir/tehran/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB UHD-HDR" tvg-logo="https://i.imgur.com/qZ98jaa.png" tvg-id="IRIBUHD.ir" tvg-chno="19" tvg-country="IR" ,IRIB UHD-HDR
+https://ncdn.telewebion.ir/faratar/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Varzesh" tvg-logo="https://i.imgur.com/tRLSrxa.png" tvg-id="VarzeshTV.ir" tvg-chno="12" tvg-country="IR" ,IRIB Varzesh
+https://ncdn.telewebion.ir/varzesh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="MohabatTV.ir@SD",Mohabat TV (540p)
+http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PooyaTV.ir@SD",Pooya TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TamadonTV.af@SD",Tamadon TV (720p)
+https://hls.tamadon.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TBNNejatTV.ir@SD",TBN Nejat TV
+https://hls.nejat.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="VoATVPersian.us@SD",VOA Persian (1080p)
+https://voa-ingest.akamaized.net/hls/live/2033876/tvmc07/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="247BoxTV.ir@SD",247 Box TV
+https://hls.247box.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="AVAFamily.ir@SD",AVA Family
+https://familyhls.avatv.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilm2.ir@SD",iFilm 2
+https://live.presstv.co.uk/hls/ifilm2.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmPersian.ir@SD",iFilm Persian
+https://live.presstv.co.uk/hls/ifilmfa.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB Namayesh" tvg-logo="https://i.imgur.com/Nq0pCGr.png" tvg-id="NamayeshTV.ir" tvg-chno="10" tvg-country="IR" ,IRIB Namayesh
+https://ncdn.telewebion.ir/namayesh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB Nasim" tvg-logo="https://i.imgur.com/EqjQN83.png" tvg-id="Nasim.ir" tvg-chno="15" tvg-country="IR" ,IRIB Nasim
+https://ncdn.telewebion.ir/nasim/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB Tamasha" tvg-logo="https://i.imgur.com/YffSCWH.png" tvg-id="Tamasha.ir" tvg-chno="17" tvg-country="IR" ,IRIB Tamasha
+https://ncdn.telewebion.ir/hdtest/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB TV2" tvg-logo="https://i.imgur.com/FKiTd3O.png" tvg-id="IRIB2.ir" tvg-chno="2" tvg-country="IR" ,IRIB TV2
+https://ncdn.telewebion.ir/tv2/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB TV3" tvg-logo="https://i.imgur.com/6cIaH0c.png" tvg-id="IRIB3.ir" tvg-chno="3" tvg-country="IR" ,IRIB TV3
+https://ncdn.telewebion.ir/tv3/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="MaahTV.my@SD",Maah TV (720p)
+https://hls.maahtv.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="MBCPersia.ae@SD",MBC Persia (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-persia/818ee8e4b592dc497608f066d825bfb4/index.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="MBCPersia.ae@SD",MBC Persia (720p)
+https://hls.mbcpersia.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="OXIRTV.ir@SD",OXIR TV
+https://hls.oxir.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="PBCTapeshTV.us@SD",PBC Tapesh TV (720p)
+https://iptv.tapesh.tv/tapesh/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="TinTV.us@SD",Tin TV (720p) [Not 24/7]
+https://bozztv.com/1gbw5/tintv/tintv/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="YourTimeTV.ir@SD",YourTime TV
+https://live.yourtime.tv/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - موزیک" tvg-id="AFNTV.ir@SD",AFN TV
+https://bozztv.com/1gbw5/tintv2/tintv2/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - موزیک" tvg-id="AvangTV.us@SD",Avang TV (1080p)
+https://hls.avang.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - موزیک" tvg-id="HighVisionTV.us@SD",High Vision (1080p) [Not 24/7]
+https://streamer1.connectto.com/HIGHVISION_WEB_1205/index.m3u8
+#EXTINF:-1 group-title="فارسی - موزیک" tvg-id="NavahangTV.fi@SD",Navahang TV (720p)
+https://hls.navahang.live/hls/stream.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="IranInternational.uk@SD",Iran International (1080p)
+https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="IRINN.ir@SD",IRINN (576p)
+http://185.9.2.18/chid_926/index.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="KayhanTV.af@SD",Kayhan TV (720p)
+https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="PressTV.ir@SD",Press TV
+https://live.presstv.co.uk/hls/presstv.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="ToloTV.af@SD",Tolo TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolohd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="TOLOnews.af@SD",TOLOnews (720p)
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="2GB.au@SD",2GB Sydney (1080p)
+https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="AbanteTV.ph@HD",Abante TV (1080p)
+https://amg19223-amg19223c12-amgplt0352.playout.now3.amagi.tv/playlist/amg19223-amg19223c12-amgplt0352/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ABCNews.au@Sydney",ABC News (720p)
+https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ABPNews.in@SD",ABP News (1080p)
+https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-472500/abpnews/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Africa24English.fr@SD",Africa 24 English (1080p)
+https://edge20.vedge.infomaniak.com/livecast/ik:africa24english/manifest.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="AlJazeera.qa@English",Al Jazeera English (1080p)
+https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="AlJazeera.qa@EnglishHD",Al Jazeera English HD (576p)
+http://stream.mcquack.net/131/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="AL24News.dz@SD",AL24 News
+https://cdn.live.easybroadcast.io/abr_corp/66_al24_u4yga6h/corp/66_al24_u4yga6h_240p/chunks.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ArirangTV.kr@SD",Arirang TV (1080p)
+http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="BBCNews.uk@NorthAmerica",BBC News North America (576p)
+https://tvsen1.aynaott.com/shn6jGTk/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="BBCNews.uk@SouthAsia",BBC News South Asia (720p)
+https://mumbai-edge.smartplaytv.in/BBCNews/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Belarus24.by@SD",Belarus-24 (576p)
+http://ott-7.sevstar.net/belarus24/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Belarus24.by@HD",Belarus-24 HD (1080p)
+https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus24.smil/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="BharatExpress.in@SD",Bharat Express (576p)
+https://mumt07.tangotv.in/zHjX9OFlBHARATEXPRESS/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CBSNewsLosAngeles.us@SD",CBS News Los Angeles
+https://dai.google.com/linear/hls/pa/event/K_2aA7OVRTacJJli1oSi8w/stream/42e4ec14-fe53-469b-bc85-677ed0b245f4:ATL/variant/344ab3b460bc514714f94805d600b130/bandwidth/2121247.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CGTN.cn@SD",CGTN (1080p)
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNAInternational.sg@SD",CNA International (576p)
+https://mumt05.tangotv.in/87NeALx2CNA/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNN.us@SD",CNN (720p)
+https://tvsen6.aynaott.com/cnn/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNNInternational.us@Europe",CNN International (1080p)
+https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNNInternational.us@NorthAmerica",CNN International North America (1080p)
+https://d2sybdl23b9psq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-bocx3i7bjz0dg/CNNFAST_GB.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNNOriginals.us@SD",CNN Originals (1080p)
+https://amg01918-cnnus-amg01918c2-vizio-us-9192.playouts.now.amagi.tv/playlist/amg01918-cnnus-cnnoriginals-vizious/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CP24.ca@SD",CP24 (720p)
+http://107.167.16.138/cp24/index.m3u8?token=test
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="DijlahTV.iq@SD",Dijlah TV (1080p)
+https://ghaasiflu.online/Dijlah/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="DW.de@English",DW English (1080p)
+https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ForYouTV.cm@SD",For You TV
+https://stream.az-multimedia.com:3325/live/foryoutvlive.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FoxNewsChannel.us@SD",Fox News Channel (1080p)
+https://tvsen6.aynaott.com/foxnews/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FoxSportsNews.au@SD",Fox Sports News (1080p)
+https://skynewsau-live-premium.akamaized.net/hls/live/2105307/foxsportsnews/live_1080p.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="France24.fr@English",France 24 English (1080p)
+https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FreeSpeechTV.us@SD",Free Speech TV (720p)
+https://na.linear.zype.com/f2f02a72-71d0-45f3-829f-4ae51f721102/86ef0177-697d-41c4-be57-c4d1a2b83cad-hls4/live.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="GuardianTalkRadio.bs@SD",Guardian Talk Radio (1080p)
+https://cdn-edge1.streamcomedia.com/abr_tngr969fm/abr-tngr969fm_streams/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="HLN.us@SD",HLN (720p)
+http://23.237.104.106:8080/USA_HLN/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="HornbillTV.in@SD",Hornbill TV (576p)
+https://mumt01.tangotv.in/O5aw8Zn3HORNBILLTV/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="i24NEWSEnglishWorld.il@SD",i24NEWS English World (1080p)
+https://i24newsenglish-cdn.encoders.immergo.tv/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="IndiaAhead.in@SD",India Ahead (576p)
+https://mumt05.tangotv.in/87NeALx2INDIAAHEAD/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="IndiaToday.in@SD",India Today (720p)
+https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="IndywoodTV.in@SD",Indywood TV (720p)
+https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Newsmax2.us@KPVMLD",KPVM Newsmax 2
+https://2-fss-2.streamhoster.com/pl_120/206858-4404556-1/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="KTV2.kw@SD",KTV 2 (1080p)
+https://kwtktv2ta.cdn.mangomolo.com/ktv2/smil:ktv2.stream.smil/chunklist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="LiveNOWfromFOX.us@SD",LiveNOW from FOX (720p)
+https://fox-foxnewsnow-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="LN24SA.za@SD",LN24SA (1080p)
+https://cdnstack.internetmultimediaonline.org/ln24/ln24.stream/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="MaanTV.ps@SD",Ma'an TV (720p)
+https://htvmada.mada.ps:4443/maannews/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="MediBizTV.in@SD",MediBizTV (720p)
+https://43wrzjnpqoxe-hls-live.wmncdn.net/marinebiztvlive/marinebiztvlive/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="MirrorNow.in@SD",Mirror Now (720p)
+#EXTVLCOPT:http-referrer=https://www.timesnownews.com/
+https://dai.google.com/linear/hls/event/ClPOullTQky5vGPf7fMZ8g/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="MSNOW.us@SD",MS NOW (432p)
+https://tvsen6.aynaott.com/msnbc/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NBCNewsNOW.us@SD",NBC News NOW (1080p)
+https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NDTV24x7.in@SD",NDTV 24x7 (720p)
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/NDTV24x7.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News24.au@SD",News24 (1080p)
+https://skynewsau-live-premium.akamaized.net/hls/live/2105299/skynews/live.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News9Live.in@SD",News9Live (1080p)
+https://amg01106-amg01106c3-amgplt0844.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg01106-amg01106c3-amgplt0844/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NewsXWorld.in@HD",NewsX World (576p)
+https://mumt03.tangotv.in/Dsly5z3HNEWSXWORLD/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Newsy.us@SD",Newsy (1080p)
+https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/e3e6e29095844c4ba7d887f01e44a5ef/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NHKWorldJapan.jp@SD",NHK World-Japan (1080p)
+https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NowMediaTelevision.us@HD",NowMedia Television (1080p)
+https://stream-204968.castr.net/64e0c91d08bff3041638aee3/live_a4243540d4b911f0b624bda5e9a32aa9/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NTDTVEnglish.us@USA",NTD TV English (1080p)
+https://amg17596-amg17596c1-ntdtv-worldwide-3276.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-ntdtvworldwide/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="OANPlus.us@KPVMLD",OAN Plus KPVM-LD
+https://2-fss-2.streamhoster.com/pl_118/206858-4404458-1/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="OneAmericaNewsNetwork.us@SD",One America News Network (720p)
+http://23.237.104.106:8080/USA_OAN/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="PayvandTV.us@SD",Payvand TV (720p)
+https://tgn.bozztv.com/cus01/ucur1/Payvand/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="RepublicTV.in@SD",Republic TV (1080p)
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/RepublicTV.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="RTIndia.in@HD",RT India (1080p)
+https://rt-india.rttv.com/dvr/rtindia/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="SalemNewsChannel.us@SD",Salem News Channel (1080p)
+https://amg00732-salemmediagroup-snc-ono-ekp8j.amagi.tv/playlist/amg00732-salemmediagroup-snc-ono/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="SilverbirdNews24.ng@SD",Silverbird News 24 (576p)
+https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_029/Stream/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="SkyNewsExtra.au@SD",Sky News Extra
+https://skynewsau-live-premium.akamaized.net/hls/live/2105306/skynewsextra/live_540p.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Telesur.ve@English",Telesur English (480p)
+https://mblenmain01.telesur.ultrabase.net/mblivev3/480p/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="Telesur.ve@EnglishHD",Telesur English HD (1080p)
+https://mblenmain01.telesur.ultrabase.net/mblivev3/hd/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="TheFirstTV.us@SD",The First TV (1080p)
+https://thefirst-oando.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="TOIGlobal.in@SD",TOI Global (1080p)
+https://live.sli.ke/live/npnhm84gz9/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="TRTWorld.tr@SD",TRT World (720p)
+https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="UNWebTV.us@SD",UN Web TV (540p)
+https://cdnapi.kaltura.com/p/2503451/sp/250345100/playManifest/entryId/1_gb6tjmle/protocol/https/format/applehttp/a.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="UzReportTV.uz@SD",UzReport TV (1080p)
+https://stream8.cinerama.uz/1015/tracks-v1a1/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="VoATV.us@SD",VOA TV Africa (1080p)
+https://voa-ingest.akamaized.net/hls/live/2033874/tvmc06/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="W14DKD142.us@SD",W14DK-D 14.2 NEWSNET
+https://2-fss-2.streamhoster.com/pl_118/204972-1954106-1/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="WION.in@SD",WION (1080p)
+http://vg-zeefta.akamaized.net/ptnr-yupptv/title-wion/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/20c3c0d9-0256-43fe-bca6-70fdd490b957/main.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ACCNetwork.us@SD",ACC Network (720p)
+http://23.239.31.26:8989/accnetwork/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD",beIN SPORTS XTRA (1080p)
+https://bein-xtra-bein.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="CBSSportsGolazoNetwork.us@SD",CBS Sports Golazo Network (720p)
+https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="DraftKingsNetwork.us@SD",DraftKings Network (1080p)
+https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ElevenSports1.pl@SD",Eleven Sports 1
+http://92.114.85.87:8002/play/a00e/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FastFunBox.nl@SD",Fast&FunBox
+https://dash3.antik.sk/live/test_fast_and_funbox_medium_atk/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlus.uk@English",FIFA+ (720p)
+https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlus.uk@German",FIFA+ German (720p)
+https://4397879b.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWRlX0ZJRkFQbHVzR2VybWFuX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlus.uk@HispanicAmerica",FIFA+ Hispanic America (720p)
+https://6c849fb3.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctbXhfRklGQVBsdXNTcGFuaXNoLTFfSExT/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlus.uk@Italy",FIFA+ Italy (720p)
+https://5d95f7d7.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWl0X0ZJRkFQbHVzSXRhbGlhbl9ITFM/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlus.uk@UnitedStates",FIFA+ United States (720p)
+https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FIFAPlusWomen.uk@English",FIFA+ Women (720p)
+https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9GSUZBUGx1c3dvbWVuX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FightBox.nl@HD",FightBox HD
+https://nosignal1.antenaplay.ro/hls/fightbox-hd/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FightBox.nl@Poland",FightBox Poland (576i)
+http://92.114.85.87:8003/play/a00b/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FTFSports.us@SD",FTF Sports (720p)
+https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FUELTV.pt@EMEA",FUEL TV (1080p)
+https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="KTVSport.kw@SD",KTV Sport (1080p)
+https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="MLBStrikeZone.us@SD",MLB Strike Zone (720p)
+http://23.237.104.106:8080/USA_MLB_STRIKE_ZONE/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="MUTV.uk@SD",MUTV (720p)
+https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-hls.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="NBATV.us@SD",NBA TV (720p)
+http://23.237.104.106:8080/USA_NBA/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="NBCSportsNOW.us@SD",NBC Sports NOW (1080p)
+https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008
+#EXTINF:-1 group-title="ورزشی" tvg-id="RacerNetwork.us@SD",Racer Network (1080p)
+https://amg00378-mavtv-amg00378c3-sportstribal-emea-1325.playouts.now.amagi.tv/mavtv-smn-xm/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RacerSelect.us@SD",Racer Select (1080p)
+https://amg00378-amg00378c4-freelivesports-emea-5637.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RallyTV.us@SD",Rally TV (1080p)
+https://rally-tv-live.akamaized.net/hls/live/2117704/RallyTV-Pri/master.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@AU",Red Bull TV AU (1080p)
+https://db34cc6127ac459db55cab5f97cd66b9.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-680-WORBAUENFAST-WHALETVPLUS/680/whaletvplus/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@BR",Red Bull TV BR (1080p)
+https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@DE",Red Bull TV DE (1080p)
+https://46cfeb23c7f74853bba7a256655a3119.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-582-WORBDACHDEFAST-WHALETVPLUS/582/whaletvplus/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@ES",Red Bull TV ES (1080p)
+https://886bd3fbc782459f8de7555d32d7e9ce.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-957-WORBLATAMESFAST-WHALETVPLUS/957/whaletvplus/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@UK",Red Bull TV UK (1080p)
+https://1a3566cb46914c5499fbc86fbc4ac87e.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-932-WORBUKENFAST-WHALETVPLUS/932/whaletvplus/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@US",Red Bull TV US (1080p)
+https://0b73ace69ebb45eaa249bb87837cb958.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-644-WORBUSENFAST-LG_US/644/lgtv/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SetantaSports1Eurasia.ie@SD",Setanta Sports 1 Eurasia (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/234/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SetantaSports2Eurasia.ie@SD",Setanta Sports 2 Eurasia (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/235/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SetantaSports.uk@HD",Setanta Sports HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/8P7MBSH7RRPL53/20074/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SkyRacing1.au@SD",Sky Racing 1 (720p)
+https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SlopesTV.us@SD",Slopes TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2241
+#EXTINF:-1 group-title="ورزشی" tvg-id="Sport1Baltic.ua@SD",Sport 1 Baltic (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/461/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="Sport5.ua@SD",Sport 5 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/212/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TalentTV.lk@HD",Talent TV (720p)
+http://live.talenttv.lk:8080/hls/x8kd5n3tm8e8lsv/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="talkSPORT.uk@SD",talkSPORT (1080p)
+https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TennisChannel.us@SD",Tennis Channel (1080p)
+http://23.237.104.106:8080/USA_TENNIS/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TennisChannel2.us@SD",Tennis Channel 2 (1080p)
+https://mumbai-edge.smartplaytv.in/Tennis2/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TraceSportStars.fr@HD",Trace Sport Stars (576p)
+https://mumbai-edge.smartplaytv.in/TraceSport/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TraceSportStars.fr@Russia",Trace Sport Stars Russia (720p)
+https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TraceSportStars.fr@SD",Trace Sport Stars SD
+https://channels.trace.plus/Traceprod/TRACE_SPORT_STARS_sd/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TSNTheOcho.ca@SD",TSN The Ocho (1080p)
+https://d3pnbvng3bx2nj.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-rds8g35qfqrnv/TSN_The_Ocho.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSBowlingNetwork.us@SD",TVS Bowling Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvsbowling/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSSportsBureau.us@SD",TVS Sports Bureau (720p)
+https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSWomenSports.us@SD",TVS Women Sports (720p)
+https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="WillowSports.us@HD",Willow Sports (1080p)
+https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="WWENetwork.us@SD",WWE Network (1080p)
+http://103.151.60.162:2122/play/a00p/index.m3u8?hls
+#EXTINF:-1 group-title="ورزشی" tvg-id="XFCTV.us@SD",XFC TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2247
+#EXTINF:-1 group-title="فیلم اکشن" tvg-id="CrimePlusInvestigation.us@SD",Crime + Investigation (720p)
+http://23.237.104.106:8080/USA_CRIME_INVESTIGATION/index.m3u8
+#EXTINF:-1 group-title="فیلم اکشن" tvg-id="FILMBOXPlusLoveCrime.pl@Romania",FILMBOX+ Love & Crime Romania
+https://nosignal1.antenaplay.ro/hls/fb-love-and-crime-sd/index.m3u8
+#EXTINF:-1 group-title="فیلم اکشن" tvg-id="MoviesAction.sa@SD",Movies Action (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx011/playlist.m3u8
+#EXTINF:-1 group-title="فیلم ترسناک" tvg-id="AmericanHorrors.us@SD",American Horrors (480p)
+http://107.167.7.162:8081/playlist/amhor/playlist.m3u8
+#EXTINF:-1 group-title="فیلم ترسناک" tvg-id="MoviesThriller.sa@SD",Movies Thriller (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx012/playlist.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="48Hours.us@US",48 Hours (1080p)
+https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="CameraSmileTV.us@SD",Camera Smile (480p)
+https://rpn.bozztv.com/gusa/gusa-camerasmile/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="EuropaEuropa.ar@SD",Europa Europa (1080p)
+https://iptv.bitred.cl/EUROPAEUROPA_HD/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="JustforLaughsGags.us@SD",Just for Laughs Gags (1080p)
+https://streams2.sofast.tv/ptnr-yupptv/title-JUST_FOR_LAUGHS_GAGS_YUPPTV/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2790d143-5874-4146-bf91-9063c52b2f15/manifest.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="SNLVault.us@SD",SNL Vault (1080p)
+https://d4whmvwm0rdvi.cloudfront.net/10007/99993017/hls/master.m3u8?ads.xumo_channelId=99993017
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="StarzComedy.us@East",Starz Comedy (1080p)
+http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="TheLoop.us@SD",The Loop (1080p)
+https://tgn.bozztv.com/watc57/watc57-theloop/watc57-theloop/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="TVSComedyNetwork.us@SD",TVS Comedy Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvscomedy/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="WeTV.us@East",We TV (1080p)
+http://23.237.104.106:8080/USA_WE_TV/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="XPTVUS.es@SD",XPTV US (720p)
+https://janus.xpbroadcasting.com:8443/hls/xptvUS.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="AdventureEarth.de@SD",Adventure Earth (1080p)
+https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="AmericanHeroesChannel.us@SD",American Heroes Channel (720p)
+http://23.237.104.106:8080/USA_AMERICAN_HEROES/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="Atlas.us@SD",Atlas (480p)
+https://cdn.whiplash.cc/whiplash-atlas/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="AutenticHistory.de@SD",Autentic History (1080p)
+https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="BloombergOriginals.us@SD",Bloomberg Originals (1080p)
+https://86fdc85a.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="CGTNDocumentary.cn@SD",CGTN Documentary (1080p)
+https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="ChemodanTV.ua@SD",Chemodan TV (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/399/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="ChinaTravel.cn@SD",China Travel (1080p)
+https://fastlive.cctvplus.com/out/v1/ca6f9297b7314a63959435028af287fc/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="CNAOriginals.sg@SD",CNA Originals (1080p)
+https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="CourtTV.us@SD",Court TV (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="Dateline247.us@SD",Dateline 24/7 (1080p)
+https://d4whmvwm0rdvi.cloudfront.net/10007/99993007/hls/master.m3u8?ads.xumo_channelId=99993007
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DiscoveringChina.cn@SD",Discovering China (1080p)
+https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocuBox.nl@SD",DocuBox
+https://dash3.antik.sk/live/test_docubox_medium_atk/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocumentaryPlus.us@US",Documentary+ (1080p)
+https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocumentaryPlus.us@International",Documentary+ International (1080p)
+https://1d153317c8db4250b3789601274e2402.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-887-DOCUMENTARYINTERNATIONAL-DOCUMENTARYPLUS/mt/documentaryplus/887/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="HistoryTV18.in@SD",History TV18 (576p)
+http://103.151.60.162:2122/play/a00y/index.m3u8?hls
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="NationalGeographic.pl@SD",National Geographic (576i)
+http://92.114.85.87:8006/play/a00a/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="WedoBigStories.ch@SD",Wedo Big Stories (1080p)
+https://amg00735-videosolutionsa-wedobigdocs-ono-0urlz.amagi.tv/playlist/amg00735-videosolutionsa-wedobigdocs-ono/playlist.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="WildEarth.za@SD",WildEarth (1080p)
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01290-wildearth-oando/playlist.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="AnimalPlanet.us@East",Animal Planet (720p)
+http://23.239.31.26:8989/animalplanet/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="BetterLifeNatureChannel.us@SD",Better Life Nature Channel (480p)
+https://tgn.bozztv.com/betterlife/betternature/betternature/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="DuckHuntingTV.us@SD",Duck Hunting TV (1080p)
+https://main.duckhunting.playout.vju.tv/duckhuntingtv/main.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="HorseCountryTV.uk@SD",Horse & Country TV (1080p)
+https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="LoveNature.ca@HD",Love Nature HD (1080p)
+https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="10Bold.au@Sydney",10 Bold Adelaide (1080p)
+https://dce3793146fef017.mediapackage.us-west-2.amazonaws.com/out/v1/55cdf73af7894775ba6de8f57482b66a/CMAF_HLS/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AKCTV.us@SD",AKC TV (1080p)
+https://broadcast.blivenyc.com/speed/broadcast/22/desktop-playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AKCTVMeettheBreeds.us@SD",AKC TV Meet The Breeds
+https://install.akctvcontrol.com/speed/broadcast/139/desktop-playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AKCTVPuppies.us@SD",AKC TV Puppies 24/7
+https://install.akctvcontrol.com/speed/broadcast/140/desktop-playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="ArubaTV.aw@SD",Aruba.TV (1080p)
+https://cdn01.setar.aw/Canal49/canal49/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AspireTVLife.us@SD",Aspire TV Life (1080p)
+https://uptv-aspiretvlife-klowdtv.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AutenticTravel.de@SD",Autentic Travel (1080p)
+https://cb0c87cc605942ff9766a4e6744bbadc.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticTravel/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVFloridaAlabama.us@SD",Beach TV Florida & Alabama (720p)
+http://media4.tripsmarter.com:1935/LiveTV/DTVHD/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVKeyWestFloridaKeys.us@SD",Beach TV Key West & Florida Keys (720p)
+https://5ed325193d4e1.streamlock.net:444/LiveTV/KTVHD/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVMyrtleBeachTheGrandStrand.us@SD",Beach TV Myrtle Beach & The Grand Strand (720p)
+http://media4.tripsmarter.com:1935/LiveTV/MTVHD/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVPanamaCity.us@SD",Beach TV Panama City (720p)
+http://media4.tripsmarter.com:1935/LiveTV/BTVHD/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BetterHealthTV.us@SD",Better Health TV (480p)
+https://tgn.bozztv.com/betterlife/betterhealth/betterhealth/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BizTV.us@SD",Biz TV (1080p)
+https://2-fss-1.streamhoster.com/pl_154/205722-2251224-1/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="CanalMotor.no@SD",Canal Motor (720p)
+https://digicom.hls.iptvdc.com/canalmotor/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="CookingChannel.us@SD",Cooking Channel (720p)
+http://23.237.104.106:8080/USA_COOKING/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="CookingPanda.us@SD",Cooking Panda (576p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=46
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="DestinationAmerica.us@SD",Destination America (720p)
+http://23.237.104.106:8080/USA_DESTINATION_AMERICA/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="DiscoveryTurbo.us@SD",Discovery Turbo (720p)
+http://41.205.93.154/ESPNNEWS/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="DMAX.it@SD",DMAX (1080p)
+https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/DMAX/CMAF/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionLifeStyle.ru@SD",Fashion&LifeStyle (1080p)
+http://stream.mcquack.net/119/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionBox.nl@SD",FashionBox
+https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionTVSecrets.fr@HD",FashionTV Secrets (1080p)
+https://ssai.aniview.com/api/v1/hls/stream.m3u8?AVS_SSAIID=67c0c39764ad6f7dab07aa0b&AV_APPNAME=[ADS.APP_NAME]&AV_APPPKGNAME=[ADS.APP_BUNDLE]&AV_APPSTOREURL=[ADS.APP_STORE_URL]&AV_CCPA=[ADS.US_PRIVACY]&AV_CLIENT_SECTION=ftv_secrets&AV_CONSENT=[ADS.GDPR_CONSENT]&AV_CONTENT_CAT=IAB7&AV_CONTENT_CHANNEL=&AV_CONTENT_CONTEXT=&AV_CONTENT_EPISODE=&AV_CONTENT_GENRE=fashion+and+lifestyle&AV_CONTENT_ID=[ADS.VIDAA_ADS_CONTENTID]&AV_CONTENT_KEYWORDS=&AV_CONTENT_LANGUAGE=en&AV_CONTENT_LENGTH=&AV_CONTENT_NETWORK=&AV_CONTENT_PROVIDER=FTV&AV_CONTENT_RATING=R&AV_CONTENT_SEASON=&AV_CONTENT_SERIES=&AV_CONTENT_TITLE=&AV_CONTENT_URL=&AV_DNT=[ADS.DNT]&AV_GDPR=[ADS.GDPR]&AV_HEIGHT=[ADS.H]&AV_IDFA=[ADS.IFA]&AV_IFA_TYPE=[ADS.IFA_TYPE]&AV_LANGUAGE=[ADS.DEVICE_LANGUAGE]&AV_OSVERS=[ADS.DEVICE_OSV]&AV_RTB_DEVICE_TYPE=[ADS.DEVICE_TYPE]&AV_VAUTH=[ADS.VAUTH]&AV_WIDTH=[ADS.W]&Content_Id=[ADS.ADS_CONTENTID]&ads.vidaa_ads_param=1191723366&cb=[CACHEBUSTER]&content_channel_name=ftv+-fashiontv+Secrets&content_livestream=1
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FoodNetwork.us@East",Food Network (720p)
+http://23.237.104.106:8080/USA_FOOD_NETWORK/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FunRoads.us@SD",Fun Roads (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=978
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="GlobalFashionChannel.us@SD",Global Fashion Channel (1080p)
+https://pubgfc.teleosmedia.com/linear/globalfashionchannel/globalfashionchannel/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="GustoTV.ca@SD",Gusto TV (1080p)
+https://e75fc053c0d2406fb74cdd71d77e1a7f.mediatailor.us-east-1.amazonaws.com/v1/master/f4e8c53a8367a5b58e20ce054ea3ce25a3e904d3/RakutenTV-eu_GustoTV/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="HGTV.it@SD",HGTV (1080p)
+https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/HGTV/CMAF/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="HobbyMaker.uk@SD",Hobby Maker (720p)
+https://lo3.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="INFAST.nl@SD",INFAST (1080p)
+https://amg00861-amg00861c11-rlaxx-uk-3950.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="KaloopyTV.us@SD",Kaloopy TV (1080p)
+https://streamingserver000.viewtv.cloud/VIEWTVNETWORK-KALOOPY/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="SmartLifeStyleTV.us@SD",Lighting Lives Blessing Nations Smart Life Style TV (LLBN) (720p)
+https://brightstar-sls-pull-secure.akamaized.net/brightstarsls/stream.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="MonteCarloDigitalTelevision.fr@HD",Monte Carlo Digital Television (1080p)
+https://fl718492-exthls-p1.flovp.com/fl718492/live/live.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="Motorvision.de@SD",Motorvision TV (720p)
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=535
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="Okhotairybalka.ru@SD",Okhota i rybalka (576p)
+http://stream.mcquack.net/155/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="OutdoorChannel.us@HD",Outdoor Channel HD (720p)
+http://23.237.104.106:8080/USA_OUTDOOR/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="OWN.us@East",OWN (720p)
+http://23.237.104.106:8080/USA_OWN/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="PeerTVSouthTyrol.it@SD",Peer TV South Tyrol (1280p)
+https://iptv.peer.biz/live/peertv-en.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="PlousTV.ve@SD",Plous TV (1080p)
+https://vcp.myplaytv.com/glowtv/glowtv/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="PoconoTelevisionNetwork.us@HD",Pocono Television Network (1080p)
+https://dfoiz3dv1euv7.cloudfront.net/ptnlive-s3/live1.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="Revry.us@SD",Revry (1080p)
+https://linear-43.frequency.stream/dist/24i/43/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="SpaceLivepoweredbysen.uk@SD",Space Live powered by sen (1080p)
+https://linear-1224.frequency.stream/dist/lg-uk/1224/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="TravelChannel.pl@SD",Travel Channel (576i)
+http://92.114.85.87:8011/play/a00d/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="TravelPlusAdventure.ru@HD",Travel+Adventure HD (1080p)
+http://stream.mcquack.net/206/index.m3u8
+#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="Travelxp.in@HD",Travelxp HD (1080p)
+http://103.151.60.162:2122/play/a01s/index.m3u8?hls
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="FilmRiseClassicTV.us@SD",FilmRise Classic TV (720p)
+https://d2tv4k5moji5m7.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lu4pzh9l4b57p/master.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSHollywoodHistory.us@SD",TVS Hollywood History (582p)
+https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSNostalgia.us@SD",TVS Nostalgia (472p)
+https://rpn.bozztv.com/gusa/gusa-nostalgia/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSNostalgiaMovies.us@SD",TVS Nostalgia Movies (480p)
+https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSQuizShowNetwork.us@SD",TVS Quiz Show Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvsgameshow/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSTavern.us@SD",TVS Tavern (480p)
+https://rpn.bozztv.com/gusa/gusa-tavern/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSWesternMovie.us@SD",TVS Western Movie (270p)
+https://rpn.bozztv.com/gusa/gusa-tvswesternmovies/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="Westerns4U.us@SD",Westerns 4U (1080p)
+http://181.224.255.210:8001/play/a0rq/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="ABNBibleMoviesChannel.us@SD",ABN Bible Movies (720p)
+https://mediaserver.abnvideos.com/streams/abnbiblemovies.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AMC.us@EastHD",AMC (720p)
+http://23.239.31.26:8989/amc/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AMCLatinAmerica.us@Panregional",AMC Latin America (1080p)
+http://15.204.246.24:8080/AMCHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AMCLatinAmerica.us@Brazil",AMC Latin America Brazil (720p)
+http://170.83.49.66:8083/AMCHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AVIRewind.us@SD",AVI Rewind (1080p)
+http://45.70.201.81:8000/play/a010/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AXNAdria.us@SD",AXN Adria
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://5.57.74.130:8000/play/a0at/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AXNBlack.us@Hungary",AXN Black Hungary (576p)
+http://141.94.193.53:80/axn_black/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AXNBlack.us@Poland",AXN Black Poland (576p)
+http://185.227.34.179:8080/axn-black/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AXNLatinAmerica.us@Panregional",AXN Latin America (1080p)
+http://15.204.246.24:8080/AXNHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="AXNLatinAmerica.us@Andes",AXN Latin America Andes (1080p)
+http://181.78.8.199:8000/play/a0cu/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Charge.us@SD",Charge! (1080p)
+https://fast-channels.sinclairstoryline.com/CHARGE/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Cinecanal.us@Panregional",Cinecanal (1080p)
+http://15.204.246.24:8080/CinecanalHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Cinecanal.us@Pacific",Cinecanal Pacific (1080p)
+http://138.121.15.230:9002/CINECANAL/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxClassics.us@East",Cinemax Classics (1080p)
+http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxHits.us@East",Cinemax Hits (1080p)
+http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxLatinAmerica.us@SD",Cinemax Latin America (720p)
+https://streaming.onnethn.com/CINEMAX/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxLatinAmerica.us@HD",Cinemax Latin America HD (1080p)
+http://38.65.175.84:8000/play/a093/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Cinemax.us@West",Cinemax West (720p)
+http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="DePeliculaUS.us@SD",De Pelicula US (720p)
+http://138.121.15.230:9002/DEPELICULA/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="DHE.us@SD",DHE (1080p)
+http://15.204.246.24:8080/DHEHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="FrightFlix.us@SD",FrightFlix (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2229
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HallmarkMoviesMore.us@SD",Hallmark Movies & More (1080p)
+https://dbrb49pjoymg4.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/master.m3u8?ads.xumo_channelId=99991709
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HBO2LatinAmerica.us@HD",HBO 2 Latin America HD (1080p)
+http://45.171.64.30:6060/play/a00i/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="IFC.us@East",IFC (1080p)
+http://23.237.104.106:8080/USA_IFC/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Maxcine.us@HD",Maxcine (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208138/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Maxcine2.us@HD",Maxcine 2 (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-209163/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="MaxcineComedy.us@HD",Maxcine Comedy (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208730/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="MaxcineFamily.us@HD",Maxcine Family (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208817/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="MaxcineKids.us@HD",Maxcine Kids (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-209909/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Movies.us@KPVMLD",Movies! KPVM-LD
+https://2-fss-2.streamhoster.com/pl_120/206858-4412962-1/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="StarChannelLatinAmerica.us@Panregional",Star Channel Latin America (1080p)
+http://15.204.246.24:8080/STARCHANNELHD/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="SYFY.us@East",SYFY (720p)
+http://23.237.104.106:8080/USA_SYFY/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="UniversalCinema.us@SD",Universal Cinema (1080p)
+http://45.167.1.138:8000/play/a06m
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="WarnerChannel.us@Colombia",Warner Channel Colombia (1080p)
+http://38.134.250.110:8000/play/a029/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="WatchitScream.us@SD",Watch it Scream! (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2246
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="MovieSphereGold.us@WFXT",WFXT-DT2 (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionmystery-tablo/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="WhiplashCinema.us@SD",Whiplash Cinema (480p)
+https://cdn.whiplash.cc/whiplash-cinema/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="WuTangCollection.us@SD",Wu Tang Collection (720p)
+https://dbrb49pjoymg4.cloudfront.net/10001/99991745/hls/master.m3u8?ads.xumo_channelId=99991745
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="4everCinema.ua@SD",4ever Cinema (1080p)
+http://stream.mcquack.net/258/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="AmediaHit.ru@SD",Amedia Hit (1080p)
+http://stream.mcquack.net/162/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="AXNMovies.pt@SD",AXN Movies (720p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://50.7.120.34:8080/AXN_BLACK/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Bolt.ua@SD",Bolt (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/73/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="CinePlus.ua@SD",Cine+
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjUxOjcwMDAvY2gzMy90cmFja3MtdjJhMS9tb25vLm0zdTg%2FbGl2ZT0xJmlwPTE3OC4xMzYuNDIuMjIwJmlkPTk0ODg2NSZzZWNyZXQ9bjF1N3VpMDYmc3NsPTEmMjF5bz0wJmU9MTc5MDc1MjM2MiZzdD12bmp2elZKY2JtUndKMkFzY1l0UWpR&master=567
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="CinePlusHit.ua@SD",Cine+ Hit
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDAvdHJhY2tzLXYyYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA3NTI3NDUmc3Q9cVZaQ3Vpd2l3UzEwLW1tMzEwMktDZw%3D%3D&master=539
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="CinePlusLegend.ua@SD",Cine+ Legend
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoMzQvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA3NTI2Mzgmc3Q9RHdRc3AyN2l6V3J1dllqUEZ5aS1yUQ%3D%3D&master=568
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="cinebox.bg@SD",cine.box
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://212.70.131.37:8000/play/a08b
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Cinema.ru@SD",Cinema (576p)
+http://flussonic.linkintel.ru/cinema/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="CinemaratonPlus.ro@HD",Cinemaraton Plus (1080i)
+https://hls02ns.antenaplay.ro/hls/cinemaraton-plus-hd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Domkino.ru@SD",Dom kino (576p)
+http://stream.mcquack.net/236/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Dorama.ru@SD",Dorama (576p)
+https://fs.uplink.kz/dorama/mono.m3u8?token=onlinetv
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Dorama.ru@HD",Dorama HD (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/412/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Evrokino.ru@HD",Evrokino HD (1080p)
+http://stream.mcquack.net/385/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusComedy.pl@Poland",FILMBOX+ Comedy (720p)
+http://92.114.85.87:8008/play/a009/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusComedy.pl@Romania",FILMBOX+ Comedy Romania
+https://nosignal1.antenaplay.ro/hls/fb-comedy-hd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusEmotion.pl@Poland",FILMBOX+ Emotion (720p)
+http://92.114.85.87:8008/play/a008/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusFestival.pl@SD",FILMBOX+ Festival
+https://dash3.antik.sk/live/test_filmbox_arthouse_atk_1200/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusFestival.pl@HD",FILMBOX+ Festival HD (1080p)
+https://nosignal1.antenaplay.ro/hls/fb-festival-hd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusFestival.pl@Poland",FILMBOX+ Festival Poland
+http://92.114.85.87:8018/play/a009/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusHits.pl@Poland",FILMBOX+ Hits (576i)
+http://92.114.85.87:8008/play/a00a/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusHits.pl@Romania",FILMBOX+ Hits Romania (576p)
+https://nosignal1.antenaplay.ro/hls/fb-hits-sd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusOne.pl@Romania",FILMBOX+ One Romania (576p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+https://nosignal1.antenaplay.ro/hls/fb-one-sd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FilmUALive.ua@SD",FilmUA Live
+https://dash2.antik.sk/live/test_film_life_atktv/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FilmUADrama.ua@SD",FilmUADrama (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://88.99.215.227/FilmUADrama/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="HorosheeKino.ru@SD",Horoshee Kino (720p)
+https://live-rian.cdnvideo.ru/rian/rus-radio/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="IllusionPlus.ru@SD",Illusion+ (576p)
+http://176.118.197.101/Illuzion+/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="IndiyskoyeKino.ru@SD",Indiyskoye Kino (576p)
+http://188.113.190.12/329/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kino2.ua@SD",Kino 2 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/465/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="KinoTV.ru@SD",Kino TV (576p)
+http://flussonic.linkintel.ru/kino-tv/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="KinoTV.ru@HD",Kino TV HD (1080p)
+http://176.118.197.101/KinoTvHD/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="KinoTV.ru@SD",Kino TV SD (576p)
+http://stream.mcquack.net/221/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinopokaz.ru@SD",Kinopokaz (576p)
+http://stream.mcquack.net/64/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinopremyera.ru@SD",Kinopremyera (1080p)
+http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinosemja.ru@SD",Kinosemja (576p)
+http://stream.mcquack.net/170/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinosvidanie.ru@SD",Kinosvidanie (576p)
+http://5.188.159.128:8070/kinosvidanie/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinouzhas.ru@SD",Kinouzhas (576p)
+http://stream.mcquack.net/278/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Kinowood.ua@SD",Kinowood (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/446/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="KuriakosCine.pt@SD",Kuriakos Cine (1080p)
+https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="MAX4.hu@SD",MAX4 (1080p)
+http://141.94.193.53:80/MAX4_HD/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Muzhskoekino.ru@SD",Muzhskoe kino (576p)
+http://stream.mcquack.net/107/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="NasheLubimoeKinoUkraine.ua@SD",Nashe Lubimoe Kino Ukraine (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/456/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Nashemuzhskoe.ru@HD",Nashe muzhskoe HD (1080p)
+http://stream.mcquack.net/362/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="NostalgiaTV.ro@HD",Nostalgia TV (1080p)
+https://hls02ns.antenaplay.ro/hls/nostalgia-hd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="PolsatFilm.pl@HD",Polsat Film HD
+http://92.63.196.180:8080/live/74173747597177/7vfxky4rjx3j/10208.m3u8?token=Q0FaWEpZFFsXAwNWUFMEBwJXAwMDVlpTBgVTVwEHAQNeWgoACVVXVQAVGEZGFUdTUl9qWwIVAlBSAQBdGENHQ10RbVBdEwxDAgANUAJVFxoRRlxfAxUCUU4RQA1QQwheTQ9eFRtUThVQRVoFWT5RU0VbVldEDVYUDl8cRlsPbVRdDlNXXRMMQwQVGEZcEkUUCVxAXgobGgMLR0IFQAQQClYWXlUVE1UOQFlAFkxDDxRjfhceRFJAFQddQw1bDxAKGg4BTAETGkNcRGsWUBJBRFZTWFcUFQJDUhEcRlkASm9bDFxXXFJCCFpZR0YPQwQUHxBYXQheTA4QbEANUEMIXk0PXkQ=
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Premialnoe.ru@HD",Premialnoe HD (1080p)
+http://stream.mcquack.net/421/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ProCinema.ro@SD",Pro Cinema (1080p)
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="RusskiyBestseller.ru@SD",Russkiy Bestseller (576p)
+http://stream.mcquack.net/208/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="RusskiyDetektiv.ru@SD",Russkiy Detektiv (576p)
+http://stream.mcquack.net/204/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Russkiyroman.ru@SD",Russkiy roman (576p)
+http://stream.mcquack.net/266/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Smotrim100Klassika.ru@SD",Smotrim 100% Klassika (720p)
+https://stream.smotrim.ru/hls/fasttv03/playlist_3.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="SonyOneFavoris.fr@HD",Sony One Favoris (1080p)
+https://49d735318d6b4c30a24a7997ea594e1b.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-820-FR-SONYONEFAVORIS-LG_FR/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="SonyOneHitsAction.fr@HD",Sony One Hits Action (1080p)
+https://5098a8b860504a3690fd2e7c0a18d68f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-817-FR-SONYONEHITSACTION-LG_FR/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="SonyOneHitsComedie.fr@HD",Sony One Hits Comedie (1080p)
+https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="StarCinema.ru@SD",Star Cinema
+https://dash2.antik.sk/live/test_star_cinema_atktv/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="StarFamily.ru@SD",Star Family (1080p)
+https://dash2.antik.sk/live/test_star_family_atktv/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="STARTAir.ru@SD",START Air (1080p)
+http://176.118.197.101/START_AIR/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="TV21.ru@SD",TV 21 (576p)
+http://178.134.1.158:8081/TVXXI/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="TV21International.ru@SD",TV 21 International (576p)
+http://stream.mcquack.net/152/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="TV1000.bg@SD",TV1000
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://85.14.32.26:8800/udp/239.100.10.100:5000
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ViasatKinoComedy.ua@SD",Viasat Kino Comedy
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDQvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk4Mzcmc3Q9UzRPS1VZemNocmREQWhnSTJkTDJ5QQ%3D%3D&master=249
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ViasatKinoWorld.ua@SD",Viasat Kino World
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDgvdHJhY2tzLXYxYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA1OTk5NDcmc3Q9N3ROblpCZy02WTBka1RuekRIZjU0QQ%3D%3D&master=102
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ViasatSerial.ua@HD",Viasat Serial
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTAzLjI0MTo3MDAwL2NoNDUvdHJhY2tzLXYyYTEvbW9uby5tM3U4P2xpdmU9MSZpcD0xNzguMTM2LjQyLjIyMCZpZD05NDg4NjUmc2VjcmV0PW4xdTd1aTA2JnNzbD0xJjIxeW89MCZlPTE3OTA2MDExNzAmc3Q9VS12czVHQmhOdF9WQXJ4bHVYVzR2dw%3D%3D&master=599
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="vijuTV1000action.ru@SD",viju TV1000 action (576p)
+http://stream.mcquack.net/100/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="vijuPlusMegahit.ru@HD",viju+ Megahit HD (1080p)
+http://stream.mcquack.net/200/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="vijuPlusPremiere.ru@HD",viju+ Premiere HD (1080p)
+http://stream.mcquack.net/202/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="KinoTV.ru@SD",КИНОТВ
+https://vod.tuva.ru/kinotv/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="AXN.br@SD",AXN (720p)
+http://170.83.16.50/AXN/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="CanalCineDios.co@SD",Canal Cine Dios
+https://canal.mediaserver.com.co/live/cinedios.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="ClaroCinema.mx@SD",Claro Cinema (1080p)
+http://158.172.217.18:8000/play/a00d/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="DePeliculaLatinAmerica.mx@SD",De Pelicula Latin America (1080p)
+http://38.19.41.46:8081/DEPELICULA/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="DePeliculaPlus.mx@SD",De Pelicula Plus (1080p)
+http://200.115.120.1:8000/play/ca030/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="MegaCineTV.do@HD",Mega Cine TV (1080p)
+https://cnn.hostlagarto.com/megacinetv/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="MultiPremier.mx@SD",MultiPremier (1080p)
+http://168.196.127.137:6001/play/a08n/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="NextHD.py@SD",Next HD (480p)
+https://live.enhdtv.com:19360/nexthd/nexthd.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="PopcornCentral.mx@SD",Popcorn Central (1080p)
+https://oly-ftvpc.otteravision.com/oly/ftvpc/ftvpc.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="SonyMovies.br@SD",Sony Movies (720p)
+http://45.162.64.114/SONY_MOVIES/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="StarChannel.co@SD",Star Channel (1080p)
+http://190.61.47.54:8000/play/a035/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="StarChannel.cl@SD",Star Channel (720p)
+http://138.121.15.230:9002/STAR-CHANNEL/index.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="TelecineAction.br@SD",Telecine Action (1080p)
+http://46.151.196.223:14326/
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="XtremaAccion.ar@SD",Xtrema Accion
+#EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1434
+https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="XtremaCineClasico.ar@SD",Xtrema Cine Clasico
+#EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1460
+https://stmv6.voxtvhd.com.br/cineclasico/cineclasico/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - آمریکای لاتین" tvg-id="XtremaTerror.ar@SD",Xtrema Terror
+#EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1456
+https://stmv6.voxtvhd.com.br/cineterror/cineterror/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="ArmeniaPremium.am@SD",Armenia Premium (720p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/123/index.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="AXNAsia.sg@Taiwan",AXN Asia Taiwan (1080p)
+http://125.227.210.55:4050/VideoInput/play.ts
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="BIZCinema.uz@SD",BIZ Cinema (1080p)
+https://fl.biztv.media/cinema_720_EMfSyXgoRdiIHgldXTZICucKTIeCKO/index.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="CCTV6.cn@HD",CCTV-6 (1080p)
+http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="HITSMovies.sg@SD",HITS Movies (576p)
+http://103.151.60.162:2122/play/a01h/index.m3u8?hls
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="Kinoteatr.uz@SD",Kinoteatr (1080p)
+https://stream8.cinerama.uz/1009/tracks-v1a1/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="MeiAhMovieChannel.hk@SD",Mei Ah Movie Channel (1080p)
+http://103.172.187.30:12000/stream/mytv/null-9/master.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="MovieBangla.bd@SD",Movie Bangla
+http://alvetv.com/moviebanglatv/8080/index.m3u8
+#EXTINF:-1 group-title="فیلم - آسیا" tvg-id="VinhLongTV3.vn@SD",Vinh Long TV 3 (720p)
+https://dethich.pw/thvl3/index.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="Aflam.sa@SD",Aflam (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx001/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="AlloCine.cm@SD",Allo Cine (1080p)
+https://d1yl6bf4hrzbr0.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5km3zs4zs9sp0/allo.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="ItageTV.ng@SD",Itage TV (480p)
+https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_011/Stream/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="MBCPlusDrama.sa@SD",MBC+ Drama (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/index.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="MixHollywood.eg@SD",Mix Hollywood (1080p)
+https://ml-pull-hwc.myco.io/MixTV/hls/index.m3u8
+#EXTINF:-1 group-title="فیلم - خاورمیانه و آفریقا" tvg-id="NileDrama.eg@SD",Nile Drama (576p)
+#EXTVLCOPT:http-referrer=https://entv.dz/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0 Win64 x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/109.0.0.0 Safari/537.36
+http://185.9.2.18/chid_352/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="BabyFirst.us@US",BabyFirst (720p)
+https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="BabyFirst.us@Spanish",BabyFirst Spanish (1080p)
+http://168.196.127.137:6001/play/a06j/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="BratTV.us@SD",Brat TV (1080p)
+https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/04072b68-dc6a-4d5e-98af-f356ba8d5063/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CampSpoopy.us@SD",Camp Spoopy (576p)
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=269
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CartoonNetworkLatinAmerica.us@SouthAtlantic",Cartoon Network Latin America South Atlantic (1080p)
+http://158.172.217.18:8000/play/a03a/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CartoonNetworkLatinAmerica.us@SouthPacific",Cartoon Network Latin America South Pacific (576p)
+http://45.167.1.138:8000/play/a00w
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ChristianYouthChannelCYC.us@SD",Christian Youth Channel (CYC) (1080p)
+http://media3.smc-host.com:1935/cycnow.com/smil:cyc.smil/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DiscoveryKidsLatinAmerica.us@Panregional",Discovery Kids Latin America (1080p)
+http://181.224.200.5:2277/play/a00o/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DiscoveryKidsLatinAmerica.us@Chile",Discovery Kids Latin America Chile (1080p)
+http://38.224.231.176:8000/play/a01j/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DiscoveryKidsLatinAmerica.us@Colombia",Discovery Kids Latin America Colombia (1080p)
+http://38.134.250.110:8000/play/a003/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DiscoveryKidsLatinAmerica.us@Mexico",Discovery Kids Latin America Mexico (1080p)
+http://38.65.175.84:8000/play/a0an/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DreamWorksChannelLatinAmerica.us@SD",DreamWorks Channel Latin America (1080p)
+http://138.121.15.230:9002/DREAMWORKS/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="GiggleMug.us@SD",Giggle Mug (576p)
+https://tvsen6.aynaott.com/ytv/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="HappyKids.us@SD",HappyKids (576p)
+https://mumbai-edge.smartplaytv.in/HappyKids/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="KartoonChannel.us@SD",Kartoon Channel! (1080p)
+https://hlspackager.akamaized.net/live/DB/KARTOON_CHANNEL/HLS/KARTOON_CHANNEL.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="MoonbugKids.uk@SD",Moonbug Kids (720p)
+https://mumbai-edge.smartplaytv.in/Moonbug/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="MrBeanLiveAction.uk@English",Mr Bean Live Action (1080p)
+https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJr.us@EastHD",Nick Jr. East HD (720p)
+http://107.167.16.138/nickjr/index.m3u8?token=test
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickelodeonGlobal.uk@SD",Nickelodeon Global (576p)
+http://103.151.60.162:2122/play/a017/index.m3u8?hls
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Nicktoons.us@East",Nicktoons (720p)
+http://41.205.93.154/NICKTOONS/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="PBSKids.us@SD",PBS Kids (720p)
+https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="PBSKidsHawaii.us@SD",PBS Kids Hawaii (720p)
+https://livestream.pbskids.org/out/v1/aa31792fee094b24b09045483f04d150/hast.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SCorbyTV.us@HD",S Corby TV (480p)
+https://vodcdn.bamboo-cloud.com/livehls/6a9f89be0630445532152563/master.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SPlayEvent.us@HD",S Play Event (1080p)
+#EXTVLCOPT:http-referrer=https://splay.bamboo-cloud.com/channel/6aa1fc1f063044342e102703
+https://vodcdn.bamboo-cloud.com/livehls/6a9f929f0630443af52c7162/master.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SkwadPlay.us@SD",SKWAD (1080p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=71
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SmurfTV.us@SD",Smurf TV (480p)
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=4065
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SonicTV.us@SD",Sonic TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2260
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="StarzKidsFamily.us@East",Starz Kids & Family (1080p)
+http://23.237.104.106:8080/USA_STARZ_FAMILY/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonGoggles.us@SD",Toon Goggles (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=37
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonamiAftermath.us@East",Toonami Aftermath East (480p)
+http://api.toonamiaftermath.com:3000/est/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonamiAftermath.us@West",Toonami Aftermath West (480p)
+http://api.toonamiaftermath.com:3000/pst/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Tooncast.us@SD",Tooncast (1080p)
+http://38.134.250.110:8000/play/a01t/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonGoggles.us@SD",ToonGoggles (720p)
+https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="TVOKids.ca@SD",TVOKids (720p)
+https://fastly.live.brightcove.com/6369851620112/us-east-1/15364602001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicGZncmlmLmVncmVzcy50N2M3emwiLCJhY2NvdW50X2lkIjoiMTUzNjQ2MDIwMDEiLCJlaG4iOiJmYXN0bHkubGl2ZS5icmlnaHRjb3ZlLmNvbSIsImlzcyI6ImJsaXZlLXBsYXliYWNrLXNvdXJjZS1hcGkiLCJzdWIiOiJwYXRobWFwdG9rZW4iLCJhdWQiOlsiMTUzNjQ2MDIwMDEiXSwianRpIjoiNjM2OTg1MTYyMDExMiJ9.zRE6fD9JwdbNLUIK5zgvlTAvXCQ3HeeE5p0yH0Pd3-Q/playlist-hls.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="TVSHiTops.us@SD",TVS Hi Tops (720p)
+https://rpn.bozztv.com/gusa/gusa-hitops/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="TVSPinballNetwork.us@SD",TVS Pinball Network (480p)
+https://rpn.bozztv.com/gusa/gusa-TVSCartoonNetwork/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="WatchitKID.us@SD",Watch it KID! (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2245
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="YuGiOh.us@SD",Yu-Gi-Oh! (1080p)
+https://amg01796-amg01796c19-rakuten-gb-7486.playouts.now.amagi.tv/playlist/amg01796-fastmediafast-yugioh2en-rakutengb/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ADNTVPlus.fr@SD",ADN TV+ (720p)
+https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="BabyTime.ru@SD",Baby Time (576p)
+http://178.134.1.158:8081/babytime/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Carousel.ru@Plus4",Carousel (720p)
+http://185.37.150.46/Karusel/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Carousel.ru@SD",Carousel SD (576p)
+http://stream.mcquack.net/120/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="CBeebies.pl@SD",CBeebies (576p)
+http://92.114.85.87:8017/play/a004/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Clan.es@SD",Clan (1080p)
+https://lge-lgla2.otteravision.com/lge/lgcla/lgcla.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="DeParintiro.ro@SD",DeParinti.ro (576p)
+https://live77cdn2.antenaplay.ro/live2_fast/ch4/stream.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Detskiy.ru@SD",Detskiy (576p)
+https://stream8.cinerama.uz/1033/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="DisneyChannel.de@SD",Disney Channel (576p)
+https://s6.hopslan.com/disneyX/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="DisneyChannel.pl@HD",Disney Channel HD (1080p)
+http://185.227.34.179:8080/disney-channel-hd/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="DisneyXD.pl@SD",Disney XD (576p)
+http://185.227.34.179:8080/disney-xd/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ducktv.sk@HD",ducktv HD
+https://dash3.antik.sk/live/duck_tv/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ducktvPLUS.sk@SD",ducktv PLUS
+https://dash3.antik.sk/live/test_duck_plus/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="EKids.bg@SD",EKids (576p)
+http://78.108.244.134:8899/ekids
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ETV2.ee@SD",ETV2 (720p)
+https://sb.err.ee/live/etv2.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="FAN.ru@SD",FAN (576p)
+http://stream.mcquack.net/420/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Gulli.fr@SD",Gulli
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://99.27.51.147:8080/Gulli/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="GulliGirl.ru@SD",Gulli Girl (720p)
+https://stream8.cinerama.uz/1445/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="KinoKazka.es@SD",KinoKazka (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/167/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="KuriakosKids.pt@SD",Kuriakos Kids (1080p)
+https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Mult.ru@SD",Mult (576p)
+http://stream.mcquack.net/232/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="NickJr.ru@SD",Nick Jr. (576p)
+http://stream.mcquack.net/220/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Nickelodeon.de@SD",Nickelodeon
+https://ma.anixa.tv/clips/stream/nickelodeon/playlist.php
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="NicktoonsScandinavia.nl@SD",Nicktoons Scandinavia
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://sewv654wfcsdwfi87fwvgbngh.siauliairsavlt.pw/iptv/PE7C639D6VY8TCQQ4BYRZT7X/12059/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="NikiJunior.ua@SD",Niki Junior (1080p)
+http://stream.mcquack.net/262/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="NikiKids.ua@SD",Niki Kids (1080p)
+http://stream.mcquack.net/271/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="O.ru@SD",O! (576p)
+http://stream.mcquack.net/60/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ORFKids.at@SD",ORF Kids (720p)
+https://web12.mdn.ors.at/orf/web12/qxa/manifest.mpd
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="PLUSPLUS.ua@SD",PLUSPLUS (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/339/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="PolsatJimJam.pl@SD",Polsat JimJam (576p)
+http://185.227.34.179:8080/jimjam/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Ryzhiy.ru@SD",Ryzhiy (576i)
+https://stream8.cinerama.uz/1407/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="SmileTV.ru@SD",Smile TV (720p)
+https://5d23269b3ec0c.streamlock.net/WEB_Smilik/ngrp:Smilik.stream-adaptive/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Smotrim100Detskoe.ru@SD",Smotrim 100% Detskoe (720p)
+https://stream.smotrim.ru/hls/fasttv05/playlist_3.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Super.it@SD",Super!
+https://495c5a85d9074f29acffeaea9e0215eb.msvdn.net/super/super_main/super_main_hbbtv/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Tooku.ru@SD",Tooku (1080p)
+http://live-saha.cdnvideo.ru/saha/tooky/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="TraLaLaTV.ro@SD",TraLaLa TV
+https://hls01ns.antenaplay.ro/hls/tralala-hd/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Vgostyakhuskazki.ru@SD",V gostyakh u skazki (1080p)
+https://stream8.cinerama.uz/1270/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Solnce.ru@SD",Солнце (576p)
+http://tv.mediacdn.ru/live/solntse/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Tamyr.ru@SD",Тамыр (Уфа)
+https://bstonline.mediacdn.ru/cdn/tamyr/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="BoxKidsTV.br@SD",Box Kids TV (720p)
+http://170.83.49.66:8083/BOXKIDSHD/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="Chikitoonz.pe@SD",Chikitoonz (1080p)
+http://45.70.201.81:8000/play/a00p/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DiosTeVeKids.hn@SD",Dios Te Ve Kids (720p)
+https://s.emisoras.tv:8081/diostevekids/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@Panregional",Disney Channel Latin America (1080p)
+http://15.204.246.24:8080/DisneyHD/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@Center",Disney Channel Latin America Center (1080p)
+http://181.78.8.199:8000/play/a0dn/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@Mexico",Disney Channel Latin America Mexico (720p)
+http://45.166.93.156:9999/play/a0f3/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@North",Disney Channel Latin America North (576p)
+http://138.121.15.230:9002/DISNEY-CHANNEL/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@PanregionalHD",Disney Channel Latin America Panregional HD (1080p)
+http://45.134.141.161:2200/ARG/Disney_Channel/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyJrLatinAmerica.ar@North",Disney Jr. Latin America (1080p)
+http://190.14.10.19:16000/play/a02d/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyJrLatinAmerica.ar@South",Disney Jr. Latin America South (1080p)
+http://45.185.163.75:8000/play/a016/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DumDum.br@SD",DumDum (720p)
+http://45.162.64.114/ZOOMOO_KIDS/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="ElChavoTV.mx@HD",El Chavo TV (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-211465/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="eSportsMaxTV.ve@SD",eSports Max TV
+https://cdnlive.klicgo.net/esportsmax/live/playlist_dvr.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="FunBox.cl@SD",FunBox
+http://186.148.196.100:8000/play/a00d
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="LAMIL35TV.ar@SD",LAMIL35 TV (720p)
+#EXTVLCOPT:http-referrer=https://www.lamil35.com.ar/
+https://vtm2.msinteractiva.com/lamil35/lamil35/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="MAXAnime.ve@SD",MAX Anime (1080p)
+https://cdnlive.klicgo.net/maxanime/live/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="PequesTV.pe@SD",Peques TV (720p)
+https://live-evg7.tv360.bitel.com.pe/bitel/pequestv/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="PlimPlim.ar@SD",Plim Plim (1080p)
+http://200.115.120.1:8000/play/ca091/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="TomAndJerry.do@HD",Tom And Jerry (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="XtremaCartoons.ar@SD",Xtrema Cartoons
+#EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1390
+https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="Aqlvoy.uz@SD",Aqlvoy
+https://stream8.cinerama.uz/1205/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="Bolajon.uz@SD",Bolajon (576p)
+https://stream8.cinerama.uz/1007/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="CCTV14.cn@HD",CCTV-14 (1080p)
+http://74.91.26.218:82/live/cctv14hd.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="DurontoTV.bd@SD",Duronto TV (720p)
+https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="GodStandsKidsClubTV.pk@Arabic",God Stands Kids Club TV Arabic
+https://online.godstands.tv:5443/WebRTCApp/streams/KidsArabic.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="GodStandsKidsClubTV.pk@Chinese",God Stands Kids Club TV Chinese
+https://online.godstands.tv:5443/WebRTCApp/streams/KidsChinese.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="GodStandsKidsClubTV.pk@English",God Stands Kids Club TV English
+https://online.godstands.tv:5443/WebRTCApp/streams/kidsenglish.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="GodStandsKidsClubTV.pk@Urdu",God Stands Kids Club TV Urdu
+https://online.godstands.tv:5443/WebRTCApp/streams/KidsUrdu.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="GrooviaKids.id@HD",Groovia Kids (576p)
+https://gist.githubusercontent.com/iptvonlinetv/244b66c61f162a7c0c2b4fa59b528139/raw/2376b7ba1989ebbd383301ec7d645e222a6c9338/udp780.510.345:4545.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="NickelodeonCIS.kz@SD",Nickelodeon CIS (1080p)
+https://stream8.cinerama.uz/1500/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - آسیا" tvg-id="ZooMoo.sg@SD",ZooMoo (1080p)
+http://168.196.127.137:6001/play/a03k/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="AfarinBaxcha.iq@SD",Afarin Baxcha (1080p)
+https://5dcabf026b188.streamlock.net/afarinTV/livestream/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="AmouYazidTV.dz@SD",Amou Yazid TV (576p)
+http://mkstream.servehttp.com:1940/AmouYazid/ay1/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="KoogiTV.eg@SD",Koogi TV (1080p)
+https://5d658d7e9f562.streamlock.net/koogi.tv/koogi.smil/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="MinikaCocuk.tr@SD",Minika Cocuk (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago_cocuk/minikago_cocuk.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="MinikaGo.tr@SD",Minika Go (720p)
+https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/minikago/minikago.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="ReinoInfantil.mz@SD",Reino Infantil
+https://www.khuwemultimedia.com/hls/reinoinfantiltv/reinoinfantiltv.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="SpacetoonArabic.ae@SD",Spacetoon Arabic (576p)
+#EXTVLCOPT:http-referrer=https://spacetoon.com
+https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/r9p2hjipmw2kl.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="TahaTV.lb@SD",Taha TV (576p)
+https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="TRTCocuk.tr@SD",TRT Cocuk (1440p)
+https://tv-trtcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="TRTDiyanetCocuk.tr@SD",TRT Diyanet Çocuk (720p)
+https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه و آفریقا" tvg-id="Zoom.il@SD",Zoom (576p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/377/index.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="BRIDGERock.ru@SD",BRIDGE Rock (576p)
+http://178.134.1.158:8081/BRIDGEROCK/index.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="EskaRockTV.pl@SD",Eska Rock TV (1080p)
+http://92.114.85.87:8016/play/a005/index.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="EuroIndieMusicChartTV.it@SD",Euro Indie Music Chart TV (360p)
+http://178.33.224.197:1935/euroindiemusic/euroindiemusic/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="LamoreRockShowWebTV.br@SD",Lamore Rock Show WebTV (720p)
+https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-name="Now Rock" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/89/NOW_Rock_logo.png" tvg-id="NowRock.uk" tvg-chno="363" tvg-country="GB" ,NOW Rock
+https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="PUNKTumFernsehen.de@SD",PUNKTum Fernsehen (1080p) [Not 24/7]
+http://58bd5b7a98e04.streamlock.net/medienasa-live/punktum_high/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="Radiofreccia.it@SD",Radio Freccia TV (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="RockPop.ar@SD",Rock & Pop (1080p)
+http://190.128.214.97:64333/play/a032/index.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="RockAntenne.de@SD",Rock Antenne [Not 24/7]
+https://stream.rockantenne.de/rockantenne/stream/mp3
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="RockTV.ro@SD",Rock TV (720p)
+https://tv.broadcasting.ro/rocktv/85c83a80-4f71-4f2d-a8d6-43f676896bcb.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="VantageRock.ee@HD",Vantage Rock (720p) [Geo-blocked]
+https://hls.vantagetv.ee/vrock_stream/index.m3u8
+#EXTINF:-1 group-title="موزیک - راک" tvg-name="VH1+ Rock! – Pluto TV" tvg-logo="https://i.imgur.com/P1OCuFl.png" ,VH1+ Rock! (Pluto TV)
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/636a4173e34fd50007534542/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
+#EXTINF:-1 group-title="موزیک - راک" tvg-id="XtremoChannel.do@SD",Xtremo Channel (720p) [Geo-blocked]
+https://ss2.tvrdomi.com:1936/xtremochannel/xtremochannel/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="DeluxeRap.de@SD",Deluxe Rap (1080p)
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8
+#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="UrbanoTV.cr@SD",Urbano TV (720p)
+https://59ef525c24caa.streamlock.net/tvurbano/tvurbano/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-name="VH1+ Hip Hop & Rap – Pluto TV" tvg-logo="https://i.imgur.com/k1zQpiO.png" ,VH1+ Hip Hop & Rap (Pluto TV)
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6465fef47cb4b100086ee7bd/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="CanalWomtv.co@SD",Canal Womtv (720p)
+https://live.amelbatv.co:81/womtvlive/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MithilaNepalTV.np@SD",Mithila Nepal TV (1080p)
+http://150.107.205.212:1935/live/mithila/playlist.m3u8?DVR=
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTV.de@SD",MTV
+https://ma.anixa.tv/clips/stream/mtv/playlist.php
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTV.us@East",MTV (1080p)
+http://23.237.104.106:8080/USA_MTV/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVLatinAmerica.us@Panregional",MTV Latin America (1080p)
+http://15.204.246.24:8080/MTVHD/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVLebanon.lb@SD",MTV Lebanon (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mtv-lebanon/b8ebb2a5affb812f1541712adde10e26/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVLive.us@SD",MTV Live (720p)
+http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="SanMarinoRTV.sm@SD",San Marino RTV (720p)
+https://d2hrvno5bw6tg2.cloudfront.net/smrtv-ch01/smil:ch-01.smil/chunklist.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="ShakthiTV.lk@SD",Shakthi TV (576p)
+https://mumbai-edge.smartplaytv.in/ShakthiTV/index.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvEnglish.us@SD",SUMtv English (1080p)
+https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvLatino.us@SD",SUMtv Latino (1080p)
+https://bozztv.com/uni10rtmp/ssstv2-cdn/smil:ssstv2web.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="Rivne1.ua@SD",TV Rivne 1 (720p)
+https://cdn1.live-tv.cloud/rivne1/rivne1-abr/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="ACECountryRadio.us@KPVMLD",ACE Country Radio KPVM-LD
+https://2-fss-1.streamhoster.com/pl_122/206858-4412960-1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="AfrobeatTVEntertainment.uk@SD",Afrobeats (1080p)
+https://stream.ecable.tv/afrobeats/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="AXSTV.us@SD",AXS TV (720p)
+http://23.239.31.26:8989/axstv/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="BPXTVRadio.us@SD",BPX TV Radio
+https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CMCUSACountryMusicChannel.us@SD",CMC-USA Country Music Channel (720p)
+https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CMT.us@East",CMT (720p)
+http://23.237.104.106:8080/USA_CMT/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="ConcertChannel.us@SD",Concert Channel (720p)
+http://45.167.1.138:8000/play/a04i
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="FolkKlubTV.au@SD",Folk Klub (720p)
+http://tv1.intv.mk:1935/live2/folkklub/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HarmonyGospelMusicTV.us@SD",Harmony Gospel Music TV (1080p)
+https://tgn.bozztv.com/watc57/watc57-harmony/watc57-harmony/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HMIPROMZNEWS.us@SD",HMI PROMZ NEWS (720p)
+https://video1.getstreamhosting.com:1936/8326/8326/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HTV.us@SD",HTV (720p)
+http://45.171.64.30:6060/play/a012/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="INTVAustralia.au@SD",INTV Australia (720p)
+http://tv1.intv.mk:1935/live/intv/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="LIVExLIVE.us@SD",LiveXLive (1080p)
+https://livestream.liveone.com/lc1/p1.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MetaleitorTV.us@SD",Metaleitor TV
+https://vs20.live.opencaster.com/metaleitortv_423d3342/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MiMusicaReggaeton.us@SD",Mi Musica Reggaeton (1080p)
+http://181.78.12.119:16123/play/ch53/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MiMusicaRomantica.us@SD",Mi Musica Romantica (1080p)
+http://181.78.12.119:16123/play/ch54/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MiMusicaSalsa.us@SD",Mi Musica Salsa (1080p)
+http://181.78.12.119:16123/play/ch55/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="Now80s.uk@SD",Now 80s (720p)
+https://lightning-now80s-samsungnz.amagi.tv/playlist720p.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="Now90s00s.uk@Poland",Now 90s00s (1080p)
+https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01076-lightning-now90s00s-rakutengb/cb513f19657460909bce2167d0d334dd844c3bdd0b61cb3071aa448f049f4b1bdae5a5d3ec4ae47821c04d873d5f66411f21c118dc7c1fc7c76adf046727486b9b9ab265d9896450f08d597562ac7b1c51e00e07c47100238ebb4e5dd670e7295243a5583f5063c0bf5fab704fc1d50bd8767dd8a9d963317c383ea57e657305d692dfd07777ae0eb3876a0ac47116b2a063f3e669dea0488f5371ac408451dfcdb0def92098b6937091938145c78e2062208d51b3b0e4ebc3a2a1ecfe51622a3b40f4ac83fb010c87554a4fc219aad541d21cd480298d6178ee4ec80fcc11846fb806aee50ef1fce09f6f4e3badc85e3a67b2f3fadba9657ded2fbb85ecde7873d6a7462809992dfe2b393d96f2d35bd59145d8e651e8de0e3c36c4834a9299c0e1bee1f705f642ffc9ff963255401972258353a78864d869fc76acdc1c28580d69a2985cc8839b321d6d4d8f8c5b942313b6d58e89bd566e2a01dfdb52cdbf8ef6cea6a54bcf99790ab8c7b3a23d0c/85/1920x1080_4716800/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CKNOFM.ca@SD",Now TV 102.3FM Edmonton (CKNO-FM) (616p)
+https://videostream.jpbgdigital.com/NOWTV.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayGreatestHolidayHits.us@SD",Stingray Greatest Holiday Hits
+https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/54947915-6504-4548-aaef-eabd451f8607/1.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayiConcerts.ca@HD",Stingray iConcerts HD
+https://dash4.antik.sk/live/test_stingray_iconcerts_hd_hevc50/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayRememberthe80s.ca@SD",Stingray Remember the 80s
+https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/68cc5f97-cf6c-4ff7-9125-f56f272dbcb6/1.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayTikTokRadio.ca@HD",Stingray TikTok Radio (1080p)
+https://d3f4oii5n0oeqi.cloudfront.net/11701/88814594/hls/master.m3u8?ads.xumo_channelId=88814594
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="TVSMusicNetwork.us@SD",TVS Music Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvsmusic/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="VevoPop.us@SD",Vevo Pop (1080p)
+https://amg00056-amg00056c6-rakuten-uk-3235.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="VideoMixTV.us@SD",Video Mix TV
+https://2-fss-2.streamhoster.com/pl_118/206436-3189488-1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="WVCULP.us@SD",WVCU-LP Concord University Radio The Cure 97.7 (1080p)
+https://video1.getstreamhosting.com:1936/8152/8152/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="XITE90sThrowback.us@SD",XITE 90's Throwback (1080p)
+https://d284aawtm5vi48.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-fjdfi2br1jtq7/XITE_90s_Throwback.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="XITENuevoLatino.us@SD",XITE Nuevo Latino (1080p)
+https://d3bsgqzbpkrvbb.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-w288eaw03izg1/XITE_Nuevo_Latino.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="XITESiempreLatino.us@SD",XITE Siempre Latino (1080p)
+https://d1xc25jm9e0l4b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-xplkt8i7m24dc/XITE_Siempre_Latino.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="1HDMusicTelevision.ru@SD",1HD Music Television (1080p)
+https://stream8.cinerama.uz/1267/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="360TuneBox.nl@SD",360TuneBox (1080p)
+https://dash3.antik.sk/live/test_360_tunebox_medium_atk/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="4FunDance.pl@SD",4 Fun Dance
+http://92.114.85.87:8018/play/a00k/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="4everMusic.ua@SD",4ever Music (1080p)
+http://stream.mcquack.net/257/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="7080TV.it@SD",70-80 TV (1080P)
+https://585b674743bbb.streamlock.net/9050/9050/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="AlbKanaleMusicTV.al@HD",AlbKanale Music TV (1080p)
+https://albportal.net/albkanalemusic.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="AntenneKaernten.at@SD",Antenne Kaernten (720p)
+https://60efd7a2b4d02.streamlock.net/a_kaernten/ngrp:livestream_all/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="AntenneSteiermark.at@SD",Antenne Steiermark (720p)
+https://60efd7a2b4d02.streamlock.net/a_steiermark/ngrp:livestream_all/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="AtomicAcademyTV.ro@SD",Atomic Academy TV (480p)
+https://atomic.streamnet.ro/academia.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BarazaTV.gr@SD",Baraza TV (1080p)
+https://eco.streams.ovh:8081/barazatv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BarazaTVDeepHouse.gr@SD",Baraza TV Deep House (720p)
+https://rtmp.streams.ovh:1936/barazarelax/barazazararelax/barazarelax/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BarazaTVRelaxing.gr@SD",Baraza TV Relaxing (720p)
+https://rtmp.streams.ovh:1936/barazarelax/barazarelax/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BestofDanceTV.ee@SD",Best of Dance TV (1080p)
+https://m1b2.worldcast.tv/dancetelevisionone/dancetelevisionone.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BibelTVMusik.de@SD",Bibel TV Musik (720p)
+https://bibeltv03.iptv-playoutcenter.de/bibeltv03/bibeltv03.stream_1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BoomTV.ro@HD",Boom TV (1080p)
+#EXTVLCOPT:http-referrer=https://tvboom.ro/
+https://tvboom.ro/live-tv/live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGE.ru@SD",BRIDGE (576p)
+http://stream.mcquack.net/318/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEClassic.ru@SD",BRIDGE Classic (576p)
+http://stream.mcquack.net/272/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEDeluxe.ru@HD",BRIDGE Deluxe HD (576p)
+http://stream.mcquack.net/92/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ClassicMusic.ru@SD",Classic Music (1080p)
+http://stream.mcquack.net/312/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="CMCTV.hr@SD",CMC TV (1080p)
+https://stream.cmctv.hr:49998/cmc/live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="CompanyTV.it@SD",Company TV (720p)
+https://5929b138b139d.streamlock.net/CompanyTV/smil:CompanyTV.smil/master.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceTelevision.nl@SD",Dance Television (1080p)
+https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceHits80.ru@SD",DanceHits80
+http://dancehits80.denvs.ru:8080/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceTVAlgorhythm.ee@SD",DanceTV Algorhythm (1080p)
+https://m2b2.worldcast.tv:7443/dancetelevisionfour/dancetelevisionfour.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceTVDeepHouseDistrict.ee@SD",DanceTV Deep House District (1080p)
+https://m1b2.worldcast.tv/dancetelevisiontwo/dancetelevisiontwo.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceTVHouseFloor.ee@SD",DanceTV House Floor (1080p)
+https://m2b2.worldcast.tv:7443/dancetelevisionfive/dancetelevisionfive.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceTVTechnoWarehouse.ee@SD",DanceTV Techno Warehouse (1080p)
+https://m2b2.worldcast.tv:7443/dancetelevisionthree/dancetelevisionthree.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DBMTV.fr@SD",DBM TV (1080p)
+https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DeepHouseDistrict.nl@SD",DeepHouse District (1080p)
+https://eu-nl-012.worldcast.tv/dancetelevisiontwo/dancetelevisiontwo.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DeluxeDance.de@SD",Deluxe Dance (1080p)
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/64733/64733_264_live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DeluxeMusic.de@SD",Deluxe Music (720p)
+https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DiscoPoloMusic.pl@SD",Disco Polo Music (1080p)
+http://185.227.34.179:8080/disco-polo-music/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EllinikosFM.gr@SD",Ellinikos FM (720p)
+https://rtmp.win:3603/live/ellinikosfmlive.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EMITV.ro@SD",EMI TV
+https://astra.emitv.ro/hls/emi/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EskaTV.pl@SD",Eska TV (1080p)
+http://92.114.85.87:8018/play/a00h/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EskaTVExtra.pl@SD",Eska TV Extra (1080p)
+http://92.114.85.87:8016/play/a008/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EUMusic.ua@SD",EU Music (1080p)
+http://stream.mcquack.net/261/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EuropaPlusTV.ru@SD",Europa Plus TV SD (576p)
+http://stream.mcquack.net/184/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FomixTV.nl@HD",FomixTV (1080p)
+#EXTVLCOPT:http-referrer=https://www.fomix.nl
+https://stream.fomixmedia.nl/FomixTV/video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FONMusic.ru@SD",FON Music (576p)
+https://stream8.cinerama.uz/1272/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FunVision.be@SD",Fun Vision
+https://funradiovisionhd.vedge.infomaniak.com/livecast/ik:funradiovisionhd/manifest.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="GigantFM.nl@SD",Gigant FM (720p)
+https://video.uitzending.tv:19360/gigantfm/gigantfm.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="HappyRadioTV.ua@HD",Happy Radio TV (1080p)
+https://tv.mediacp.eu:8081/happyradio/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="HitFM.md@SD",Hit FM
+https://hitfm.nfthost.net/hls/hitfm/live_all/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="HitradioO3.at@SD",Hitradio O3 (720p)
+https://studiocam-oe3.mdn.ors.at/orf/studiocam_oe3/q6a/manifest.mpd
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="HypeVisualRadio.nl@SD",Hype Visual Radio (1080p)
+https://streammix.alsolnet.com/hyperadio/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ImpactTV2.ro@HD",Impact TV 2 (1080p)
+https://online.tvimpact.live/hls/impact_tv2.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ImpactTVDance.ro@SD",Impact TV Dance (1080p)
+https://online.tvimpact.live/hls/dancetv.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ImpactTVManele.ro@SD",Impact TV Manele (1080p)
+https://online.tvimpact.live/hls/impact_tv.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="InRatingTV.ua@SD",InRating TV (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/147/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="JRTVJarviradio.fi@SD",JRTV Järviradio (720p)
+https://streamer.radiotaajuus.fi/memfs/47f113bf-04ea-493b-a9d4-52945fd9db31.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="K100.is@SD",K100 (1080p)
+https://k100streymi.mbl.is/beint/k100/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="KissKissNapoliTV.it@SD",Kiss Kiss Napoli TV (720p)
+https://58f12ffd2447a.streamlock.net/KKTVNapoli/livestream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="KissKissTV.it@SD",Kiss Kiss TV (1080p)
+https://58f12ffd2447a.streamlock.net/KKMulti/livestream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="KissTV.ro@SD",Kiss TV (1080p)
+https://tv.broadcasting.ro/kisstv/a629c031-2170-4ee9-a36d-87a891aa3131.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="KlapeiTambureTV.hr@SD",Klape i Tambure TV (1080p)
+https://stream.cmctv.hr:49998/kit/live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Kronehit.at@SD",Kronehit (1080p)
+https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="KuriakosMusic.pt@SD",Kuriakos Music (1080p)
+http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Lausitzwelle.de@SD",Lausitzwelle (1080p)
+https://h056.video-stream-hosting.de/easycast11-live/_definst_/mp4:livestreamhd2/playlist.m3u8?ref=
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="LiraTV.es@SD",LiraTV (720p)
+https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="LittoralFMTV.fr@SD",Littoral FM (720p)
+https://live.creacast.com/littoralfm-ch1/stream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="LRTKlasika.lt@SD",LRT Klasika (1080p)
+https://stream-live.lrt.lt/klasika/master.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="LRTOpus.lt@SD",LRT Opus (1080p)
+https://stream-live.lrt.lt/opus/master.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="M1.lt@SD",M-1 (480p)
+https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="M1.ua@SD",M1 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/218/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="M2.ua@SD",M2 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/330/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="m2oTV.it@SD",m2o TV (1080p)
+https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MagicTV.bg@SD",Magic TV (720p)
+https://bss1.neterra.tv/magictv/magictv.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MagicTV.ro@SD",Magic TV (720p)
+https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Maidan.ru@SD",Maidan (720p)
+https://live-maidantv.cdnvideo.ru/maidantv/maidantv.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MessatidaTV.gr@SD",Messatida TV (720p)
+https://rtmp.streams.ovh:8081/mtv/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MezzoLive.fr@SD",Mezzo Live (1080p)
+http://stream.mcquack.net/276/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MusicBoxPolska.pl@Ukraine",Music Box Polska Ukraine
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cHM6Ly9obHMtY2RuMS5keXZ5YXBwLmNvbS9NdXNpYy1Cb3gvdHJhY2tzLXYxYTEvbW9uby50cy5tM3U4P3Rva2VuPWV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpqYUdGdWJtVnNYMmxrSWpvMU55d2lZMmhoYm01bGJGOXVZVzFsSWpvaVRYVnphV01nUW05NElpd2lhWEFpT2lJeE56Z3VNVE0yTGpReUxqSXlNQ0lzSW1OdmRXNTBjbmtpT2lKVmEzSmhhVzVsSWl3aWRYTmxjbDlwWkNJNk56UXdOeXdpZFhObGNsOXdhRzl1WlNJNklpc3pPREE1TXpBNU5qYzBNak1pTENKMWMyVnlYM0p2YkdWeklqcGJJbU5zYVdWdWRDSmRMQ0p3Y205bWFXeGxYMmxrSWpvMk5EY3hMQ0p6WlhOemFXOXVYMmxrSWpvaVpEQXdPVFppWmpndE1qTmxOUzAwWldVMkxXSmxNelV0Wmpnd09ETTVaV1k1WkRnMElpd2laVzUyYVhKdmJtMWxiblFpT2lKd2NtOWtkV04wYVc5dUlpd2ljR3hoZEdadmNtMGlPaUpFWlhOcmRHOXdJaXdpZFhObGNsOWhaMlZ1ZENJNklrMXZlbWxzYkdGY0x6VXVNQ0FvVjJsdVpHOTNjeUJPVkNBeE1DNHdPeUJYYVc0Mk5Ec2dlRFkwS1NCQmNIQnNaVmRsWWt0cGRGd3ZOVE0zTGpNMklDaExTRlJOVEN3Z2JHbHJaU0JIWldOcmJ5a2dRMmh5YjIxbFhDOHhOVEl1TUM0d0xqQWdVMkZtWVhKcFhDODFNemN1TXpZaUxDSmxlSEFpT2pFM09EZ3hPRFV4TmpkOS5nYUo1WGRxTjJ3djY2SnFxYldnX0dGUzY3V3lZVEVOc0JQa3VpcU1sNTVN&master=57
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Muzvar.ua@SD",Muzvar (1080p)
+https://cdn15.live-tv.cloud/ua_infinitas_tv/muzvar-abr/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="NASHEMusic.ua@SD",NASHE Music (720p)
+https://cdn15.live-tv.cloud/ua_infinitas_tv/nashemus-abr/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="NorocTV.md@SD",Noroc TV
+https://media.noroc.tv/noroc/bitrate_1080p.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OckoBlack.cz@SD",Ocko Black
+https://dash2.antik.sk/live/test_ocko_black/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OckoStar.cz@SD",Ocko Star
+https://dash4.antik.sk/live/test_ocko_star/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ONFM.pt@SD",ON FM (720p)
+https://5ce9406b73c33.streamlock.net/ONFM/livestream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Onda15TV.es@SD",Onda 15 TV (224p)
+https://cloudvideo.servers10.com:8081/8034/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OndaValenciaTV.es@SD",Onda Valencia (720p)
+https://cloudvideo.servers10.com:8081/8116/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OxygenMusic.hu@HD",Oxygen Music (1080p)
+https://oxygenmusic.hu:2443/hls/oxygenmusic.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="P2MTV.fr@SD",P2M TV (720p)
+https://vdo2.pro-fhi.net:3207/stream/play.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="PanikTV.gr@SD",Panik TV (1080p)
+https://livetv.streams.ovh:1936/paniktv/paniktv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="PartyMix.ro@HD",Party Mix HD (1080p)
+https://hls02ns.antenaplay.ro/hls/party-mix-hd/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="PolsatMusic.pl@SD",Polsat Music (1080p)
+http://92.114.85.87:8001/play/a00z/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="POPWorldTV.es@SD",POP World TV (720p)
+https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioBrunoTV.it@SD",Radio Bruno TV (720p)
+http://stream7.xdevel.com/video0s975758-1051/stream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioCapitalTiVu.it@HD",Radio Capital TiVu (720p)
+https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S35394734/Z6U2wGoDYANk/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioChisinau.md@SD",Radio Chisinau (576p)
+#EXTVLCOPT:http-referrer=https://radiochisinau.md/
+https://radiochisinau.md/hls/RChisinau.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RADIODISCOuntTV.ch@SD",RADIO DISCOunt TV (1080p)
+https://585b674743bbb.streamlock.net/9030/9030/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioFxNet.ro@HD",Radio Fx Net (720p)
+https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioHitFMTV.rs@SD",Radio Hit FM TV (720p)
+https://peer2.tdiradio.com/static/streaming-playlists/hls/bab99862-ec1c-474f-9a02-4f8c8677d565/0.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioJND.nl@SD",Radio JND (1080p)
+https://radiojnd.cdn.hostin.cc/radiojnd/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioKarolinaTV.rs@SD",Radio Karolina TV (720p)
+https://peer2.tdiradio.com/static/streaming-playlists/hls/4207de1d-52e8-4591-ad9e-218069b864d1/0.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioMoldovaMuzical.md@SD",Radio Moldova Muzical
+https://radiolive.trm.md:8001/hls_rmm/muzical.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioRAM.pl@HD",Radio RAM (1080p)
+https://1888165924.rsc.cdn77.org/live/RadioRAM/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioRomaniaTarguMures.ro@SD",Radio Romania Targu Mures (576p)
+https://stream3.srr.ro/live/radio-muresr/chunklist_w1731505049.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioSWHTV.lv@SD",Radio SWH TV (1080p)
+https://00ff00.latnet.media/edge/swh_tv.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioZeta.it@SD",Radio Zeta TV (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025Best.it@SD",RTL 102.5 Best (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S76960628/OEPHRUIctA0M/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025BroSis.it@SD",RTL 102.5 Bro&Sis (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S75007890/MUGHuxc9dQ3b/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025Caliente.it@SD",RTL 102.5 Caliente (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S8448465/zTYa1Z5Op9ue/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025Disco.it@SD",RTL 102.5 Disco (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S51100361/0Fb4R3k82b5Z/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025Napule.it@SD",RTL 102.5 Napulè (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S27134503/0f9AhuwKlhnZ/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025Traffic.it@SD",RTL 102.5 Traffic (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S38122967/2lyQRIAAGgRR/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTL1025TV.it@SD",RTL 102.5 TV (1080p)
+https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_video.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RTLGold.lu@SD",RTL Gold (1080p)
+https://stream.rtl.lu/data/live/tele/rtlgold/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TodayRadio.lu@SD",RTL Today Radio (720p)
+https://stream.rtl.lu/data/live/tele/rtltodayradio/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RUTV.ru@SD",RU.TV SD (576p)
+http://stream.mcquack.net/109/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RussianMusicBox.ru@SD",Russian MusicBox (576p)
+http://stream.mcquack.net/319/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ShansonTV.ru@SD",Shanson TV (576p)
+http://catchup.videoline.ru/shanson/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SlagerMuzika.cz@SD",Slager Muzika
+https://stream-23.mazana.tv/slagrmuzika.m3u8s
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SlagerOriginal.cz@SD",Slager Original
+https://stream-13.mazana.tv/slagroriginal.m3u8s
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SolMusica.es@SD",Sol Música (720p)
+https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SONGTVRussia.ru@SD",SONGTV Russia
+https://songtv.hls.iptvdc.com/web-russia/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SpektraTV.es@SD",SpektraTV (720p)
+https://cloudvideo.servers10.com:8081/8026/tracks-v1a1/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SuperTV.ro@SD",Super TV (576p)
+http://iptv.supertv.ro:8000/play/a001/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TDIRadioTV.rs@SD",TDI Radio TV
+https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-9975-9665f5605557/master.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Tele7music.ro@SD",Tele7music (576i)
+https://live.tele7music.ro/hls/stream/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TezaurTV.md@SD",Tezaur TV (576i)
+https://tezaurtv.md/stream/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TheVoice.bg@SD",The Voice TV (720p)
+https://bss1.neterra.tv/thevoice/thevoice.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TiankovFolk.bg@SD",Tiankov Folk (576p)
+https://streamer103.neterra.tv/tiankov-folk/live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TiankovOrientFolk.bg@SD",Tiankov Orient Folk (576p)
+https://streamer103.neterra.tv/tiankov-orient/live.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TopEstradaTV.mk@SD",TopEstrada TV (720p)
+http://live.topestrada.com/live/topestrada/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TraditionalTV.ro@SD",Traditional TV (1080p)
+http://83.103.149.75:8085/udp/239.30.0.9:4000
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TVOMIX.es@HD",TVOMIX (1080p)
+https://cloud.tvomix.com/TVOMIX/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TVRFolclor.ro@SD",TVR Folclor
+https://tvr-folclor.lg.mncdn.com/tvrfolclor/smil:tvrfolclor.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="UAMusic.ua@HD",UA Music (1080p)
+http://stream.mcquack.net/281/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VivaLatino.ua@SD",¡Viva Latino! (1080p)
+http://stream.mcquack.net/285/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VolksmusikTV.de@SD",Volksmusik TV (1080p)
+https://vmtv.iptv-playoutcenter.de/vmtv/vmtv1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VOXMusicTV.pl@SD",VOX Music TV (1080p)
+http://92.114.85.87:8016/play/a00a/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="XITEHits.nl@Germany",XITE Hits Germany (1080p)
+https://d726x48n2pd5h.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-skxr1pazhltvp/XITE_Hits.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="XITEHits.nl@UK",XITE Hits UK (1080p)
+https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg01243-xitenetworksint-hitsuk-samsunguk/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="XPTV1.es@SD",XPTV1 (720p)
+https://janus.xpbroadcasting.com:8443/hls/xptv1.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ZFMZoetermeerTV.nl@SD",ZFM Zoetermeer (720p)
+https://zfmzoetermeer.nl/live/master.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Ocko.cz@SD",Óčko (540p)
+https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko.stream.1.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OckoExpres.cz@SD",Óčko Expres (540p)
+https://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="OckoGold.cz@SD",Óčko Gold (540p)
+https://ocko-live.ssl.cdn.cra.cz/channels/ocko_gold/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MuzSoyuz.ru@SD",Муз союз (576p)
+https://hls-tvsoyuz.cdnvideo.ru/tvsoyuz2/muzsoyuz.6fw0-58xp-acts-esy0/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FirstMusicChannel.by@SD",Первый Музыкальный Канал (576p)
+http://hz1.teleport.cc/HLS/SD.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FirstMusicChannel.by@SD",Первый Музыкальный Канал HD (1080p)
+http://rtmp.one.by:1300
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FirstMusicChannel.by@SD",Первый Музыкальный Канал Int (576p)
+http://rtmp.one.by:1200
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FirstMusicChannelRussia.by@SD",Первый Музыкальный Канал Россия (576p)
+http://rtmp.one.by:2200
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FirstMusicChannelRussia.by@SD",Первый Музыкальный Канал Россия HD (1080p)
+http://rtmp.one.by:2300
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="13Festival.cl@SD",13 Festival (1080p)
+https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Audiokiss.bo@SD",Audiokiss (1080p)
+https://master.tucableip.com/audiokisstv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="AzaharesRadiovisualMultimedia.ar@SD",Azahares Radio Multimedia (720p)
+https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Bandamax.mx@SD",Bandamax (1080p)
+http://181.78.106.127:5000/play/ca064/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="BTATV.ve@SD",BTA TV (720p)
+https://cloud.fastchannel.es/manifiest/hls/prog9/btatv.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="BuenisimaRadioTV.co@SD",Buenisima Radio TV
+https://canal.mediaserver.com.co/live/buenisimatv.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Canal3KMKTV.cr@SD",Canal 3 KMK TV (720p)
+https://live20.bozztv.com/giatv/giatv-KMKTV/KMKTV/chunks.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ChamameTV.ar@SD",Chamame TV
+https://srv4.zcast.com.br/chamametv/chamametv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ChocolateFM.cl@SD",Chocolate FM (720p)
+https://5eaccbab48461.streamlock.net:1936/8180/8180/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ClaroMusicaTV.co@SD",Claro Musica TV (1080p)
+http://45.171.64.30:6060/play/a010
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ConectaTV.mx@SD",Conecta TV (720p)
+https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="CorazonTV.pa@SD",Corazon TV
+https://sistemastr.tropicalmoonmedia.com/live/7FFCFEC3978B68D1A2ED0A38DE96AF76/12.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="CumbiaMix.ar@HD",Cumbia Mix (720p)
+https://cloud.tvomix.com/CUMBIAMIX/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="DanceFM.cl@SD",Dance FM (720p)
+https://5eaccbab48461.streamlock.net:1936/dancefm_1/dancefm_1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="DismarRadioTV.py@SD",Dismar Radio TV (720p)
+https://rds3.desdeparaguay.net/dismartv/dismartv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="E40.py@SD",E40 (1080p)
+#EXTVLCOPT:http-referrer=https://www.estacion40.com.py/
+https://copacotf.desdeparaguay.net/e40tv/e40tv_py_alta/playlist.m3u8?admin=tvaccion
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ElSolNetworkTV.ec@SD",El Sol Network TV (1080p)
+https://tv.wracanal10.com:3025/live/elsoltvlive.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ExaTV.mx@SD",Exa TV
+http://190.61.90.17:40000/play/a0hk/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="FabulosaEstereo1005FM.pa@SD",Fabulosa Estéreo 100.5 FM (720p)
+https://www.streaming507.net:19360/videofabulosa/videofabulosa.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="FiestaTV.co@SD",Fiesta TV
+https://panelvideo1.intermediahost.co:3286/live/ruzfpkqklive.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="FMMundo.ec@SD",FM Mundo (1080p)
+https://video2.makrodigital.com/fmmundo/fmmundo/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="FMPlusTV.cl@SD",FM Plus TV (720p)
+https://v2.tustreaming.cl/fmplus/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="GalacticaTV.pe@SD",Galactica TV
+https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="GenialTV.cl@SD",Genial TV (720p)
+https://v1.tustreaming.cl/genialtv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="HEiNow.py@SD",HEi Now (1080p)
+#EXTVLCOPT:http-referrer=https://www.heinow.com.py/
+https://copacogen.desdeparaguay.net/heitv/heitv_py_alta/playlist.m3u8?admin=nacion
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="InfinitaTV.ec@SD",Infinita TV (1080p)
+https://s2.tvdatta.com:3753/hybrid/play.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="IQChannel.cr@SD",IQ Channel (720p)
+https://rtmp.info/iqtv/envivo/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="KandelaTV.ve@SD",KandelaTV (480p)
+https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Karibena.pe@SD",Karibena (720p)
+http://187.102.210.46/KARIBENA/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="KpopTVPlay.br@SD",KpopTV Play (576p)
+https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="La100.ar@SD",La 100 (1080p)
+https://mdstrm.com/live-stream-playlist/68b74fd1d6512526f1f7c75a.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaClave.cl@SD",La Clave (720p)
+https://unlimited1-cl-isp.dps.live/laclavetv/laclavetv.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaFabulosaTV.pe@SD",La Fabulosa Radio y TV (720p)
+https://eu1.servers10.com:8081/8004/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaMoradaRadioTV.co@SD",La Morada Radio TV (720p)
+https://movil.ejeserver.com/live/lamoradatv.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaTop1029.hn@SD",La Top 102.9 (720p)
+https://59d39900ebfb8.streamlock.net/top102/top102/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaTop1077.hn@SD",La Top 107.7 (720p)
+https://59d39900ebfb8.streamlock.net/top107/top107/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LaX.pr@SD",La-X (720p)
+https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LoboTV.mx@SD",Lobo TV (720p)
+https://5ca3e84a76d30.streamlock.net/tvlobo/videotvlobo/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="LosAngelesTVRadio.py@SD",Los Angeles TV Radio
+https://stmv6.voxtvhd.com.br/losangeles/losangeles/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MakaoTV.do@SD",Makao TV (1080i)
+https://live.obslivestream.com/makaomux/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Mas23TV.pa@SD",Mas23 TV
+https://movil.ejeserver.com/live/mas23tv.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MasMusicaFM.co@SD",MasMusica FM (720p)
+https://movil.ejeserver.com/live/masmusica.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MetropoliMediosTV.ec@SD",Metropoli Medios TV (720p)
+https://eu1.servers10.com:8081/8214/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MetropolitanadelCuzco.pe@SD",Metropolitana del Cuzco
+https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MielTV.pe@SD",Miel TV (720p)
+https://live-evg5.tv360.bitel.com.pe/bitel/mieltvSRT/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Millenium109FM.pe@SD",Millenium 109 FM
+https://videoserver.tmcreativos.com:19360/nqvnhujhrx/nqvnhujhrx.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MontonesTV.do@HD",Montones TV (1080p)
+https://lbgo.bozztv.com/ssh101/ssh101/montonestv1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="MasFM.ar@SD",Más FM 95.9 (720p)
+https://vivo.solumedia.com:19360/masfm/masfm.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ParrandaVallenata.co@SD",Parranda Vallenata (720p)
+https://backupmaxmedia.hvmultiplay.com/hls/stream3/parrandavallenata.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="PatagoniaRadioTV.cl@SD",Patagonia Radio TV (720p)
+https://video01.logicahost.com.br/grupomedia/grupomedia/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Pauta.cl@SD",Pauta (1080p)
+https://redirector.rudo.video/hls-video/ey6283je82983je9823je8jowowiekldk9838274/pautatv/pautatv.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="PindinTV.pa@SD",Pindin TV
+https://sistemastr.tropicalmoonmedia.com/live/7C452409423F57ADC960F6405635267F/7.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Planet1009FM.pa@SD",Planet 100.9 FM (1080p)
+https://streamlov.alsolnet.com/planet1009fm/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioBonita1067.ec@SD",Radio Bonita 106.7 (720p)
+https://cloudvideo.servers10.com:8081/8154/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioChalaca.pe@SD",Radio Chalaca
+https://servilive.com:3414/hybrid/play.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioCuencaEstereo.ec@SD",Radio Cuenca Estéreo (720p)
+https://eu1.servers10.com:8081/8074/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioDuna.cl@SD",Radio Duna (720p)
+https://mdstrm.com/live-stream-playlist/67ed8a8d6db4af9a0188555c.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioLaSerenaTV.cl@SD",Radio La Serena TV (720p)
+https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioMaster.pe@HD",Radio Master (720p)
+https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioOndaDigital.pe@SD",Radio Onda Digital (1080p)
+https://live.ondadigitaltv.com/RADIOODTV/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioPudahuel.cl@SD",Radio Pudahuel (720p)
+https://unlimited2-cl-isp.dps.live/pudahueltv/pudahueltv.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRealpolitik.ar@SD",Radio Realpolitik (720p)
+https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRumbaTV.pe@SD",Radio Rumba TV (720p)
+https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioSuyaiTV.cl@HD",Radio Suyai TV (1080p)
+https://cl-2.backend.energeek.cl/RadioSuyai-Neo/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTeleHit.ht@SD",Radio Télé Hit (480p)
+https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioZona903.cl@SD",Radio Zona 90.3 (720p)
+https://live.tvcontrolcp.com:8081/radiozona/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadiolaTV.co@SD",Radiola TV (1080p)
+http://158.172.217.18:8000/play/a01k/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RetromusicaTelevision.cl@SD",Retromusica Television (720p)
+https://vdochile.com:3864/stream/play.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RewindTV.cl@SD",Rewind TV (1080p)
+https://tls-cl.cdnz.cl/rewindtv/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Reyali.co@SD",Reyali (614p)
+https://eu1.servers10.com:8081/8090/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RitoqueTV.cl@SD",Ritoque TV (720p)
+https://streaming.purum.cl/ritoquetv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RumbaTV.co@SD",Rumba TV
+http://186.148.196.100:8000/play/a02h
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RumbaMixTV.pe@SD",RumbaMix TV (720p)
+https://live-evg5.tv360.bitel.com.pe/bitel/mixtvSRT/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SaborTV.cl@SD",Sabor TV (720p)
+https://v1.tustreaming.cl/sabortv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ScorchTV.tt@SD",Scorch TV (1080p)
+https://w6oy7x7jlxrg-hls-live.5centscdn.com/MandETV/955ad3298db330b5ee880c2c9e6f23a0.sdp/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="ShowVenTV.ve@SD",ShowVen TV (720p)
+https://cdnbarinas.tvzamora.com/showven/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SiembraTV.do@SD",Siembra TV (720p)
+https://streamunoapp.com:3809/live/siembratvlive.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SoloBailalo.cl@SD",SoloBáilalo (480p)
+https://5ff3d9babae13.streamlock.net/8000/8000/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SOYPlanchaTV.cr@SD",SOY Plancha TV (720p)
+https://59ef525c24caa.streamlock.net/vmtv/soyplancha/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SupermusicaTV.co@SD",Supermúsica TV (720p)
+https://backupmaxmedia.hvmultiplay.com/hls/stream4/supermusica.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SuperQPanama.pa@SD",Súper Q Panamá (1080p)
+https://vcp8.myplaytv.com:1936/superq/superq/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TeleangolRadio.cl@SD",Teleangol Radio (720p)
+https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TeleHit.mx@SD",TeleHit (1080p)
+http://190.61.47.54:8000/play/a029/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TikTokRadioBrasil.br@HD",TikTok Radio Brasil (1080p)
+https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992529
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TurboMixRadioTV.pe@SD",Turbo Mix Radio TV (720p)
+https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TVPeruanisima.pe@SD",TV Peruanisima (720p)
+https://k20.usastreams.com:8081/tvperuanisima/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TVExitos.do@SD",TV Éxitos (720p)
+https://streaming.grupomediosdelnorte.com:19360/tvexitos/tvexitos.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TVUNO.pe@SD",TVUNO (720p)
+https://streamtv.onliv3.online:1936/karibtv/karibtv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VClassicTV.cl@SD",V Classic TV (720p)
+https://5eaccbab48461.streamlock.net:1936/8112/8112/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VenusMedia.py@SD",Venus Media (1080p)
+https://tigocloud.desdeparaguay.net/venusmedia/venusmedia/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VideoTourChannel.cr@SD",Video Tour Channel
+https://59ef525c24caa.streamlock.net/videotour/videotour/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VintageMusic.cr@SD",Vintage Music (720p)
+https://59ef525c24caa.streamlock.net/vmtv/tvvintage/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VisionTelevision.mx@SD",Visión Televisión (720p)
+https://cloudvideo.servers10.com:8081/8016/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VoiceOverRadioTV.cr@SD",VoiceOver Radio TV (720p)
+https://cloudvideo.servers10.com:8081/8198/index.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="8XM.pk@HD",8XM HD
+https://cdn4.mjunoon.tv:8087/streamtest/131M/chunks.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="BIZMusic.uz@SD",BIZ Music (1080p)
+https://fl.biztv.media/music_720_QAKpGmVUjaPApCNjpsgBxrdqNihAkl/index.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="CCTV11.cn@SD",CCTV-11 (720p)
+http://74.91.26.218:82/live/cctv11hd.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="FTV.uz@SD",FTV (576p)
+https://stream8.cinerama.uz/1018/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="GugakTV.kr@SD",GugakTV 국악방송 (1080p)
+https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="JooMusic.pk@SD",JooMusic (720p)
+https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="KNMusicTV.az@SD",KN Music TV
+https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="LingkarTV.id@SD",Lingkar TV
+https://lingkartv.my.id/hls/lingkartv.m3u8
+#EXTINF:-1 group-title="موزیک - آسیا" tvg-id="MuzTVUzbekistan.uz@SD",Muz TV Uzbekistan
+https://stream8.cinerama.uz/1063/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="AbdulmajeedAbdullah.sa@SD",Abdulmajeed Abdullah (1080p)
+https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="ArabicaTV.lb@SD",Arabica TV (720p)
+http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="DreamTurk.tr@SD",Dream Türk (720p)
+https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="ElRadio9090FM.eg@SD",El Radio 9090 FM (480p)
+https://9090video.mobtada.com/hls/stream.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Fairuz.sa@HD",Fairuz (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx029/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="FalastiniTV.ps@SD",Falastini TV (1080p)
+https://rp.tactivemedia.com/palestiniantv_source/live/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="IvoireChannel.ci@SD",Ivoire Channel (720p)
+https://video1.getstreamhosting.com:1936/8244/8244/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="JordanSongs.jo@SD",Jordan Songs (1080p)
+https://playlist.fasttvcdn.com/pl/cc0blorawy1ibohhrupraa/Song/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="KralPopTV.tr@SD",KRAL Pop TV (720p)
+https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MajidAlMohandis.sa@SD",Majid Al Mohandis (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx019/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Mazzika.eg@SD",Mazzika (576p)
+http://149.100.11.235:8080/Mazzika/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MBCFM.ae@SD",MBC FM (1080p)
+https://dbbv9umqcd7cs.cloudfront.net/out/v1/db15b75c3cc0400c91961468d6a232ac/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MBCLoud.sa@SD",MBC Loud
+https://radio-loud-fm.mbc.net/radio-loud-fm_1.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MBCMood.sa@SD",MBC Mood (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-wanasah/13e82ea6232fa647c43b26e8a41f173d/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MedMuzik.tr@SD",Med Muzik (1080p)
+http://54.36.110.140/live3/live3.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MohammedAbdo.sa@SD",Mohammed Abdo (1080p)
+https://d2ow8h651gs7dx.cloudfront.net/out/v1/371fb663da604e659a2fb99bf89d92d4/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MosaiqueFM.tn@SD",Mosaique FM (1080p)
+https://webcam.mosaiquefm.net/mosatv/_definst_/studio/playlist.m3u8?DVR
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="MuzangalaTV.ao@SD",Muzangala TV (1080p)
+https://5cf4a2c2512a2.streamlock.net/tvmuzangala/tvmuzangala/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Number1Ask.tr@SD",Number 1 Ask (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Number1Damar.tr@SD",Number 1 Damar (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Number1Dance.tr@SD",Number 1 Dance (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Number1TV.tr@SD",Number 1 TV (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PanoramaFM.sa@SD",Panorama FM (1080p)
+https://d6izdil55uftn.cloudfront.net/out/v1/0a06d1d6377c47edbd48721ed724bd08/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PowerDance.tr@SD",Power Dance (1080p)
+https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PowerLove.tr@SD",Power Love (1080p)
+https://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PowerTurkAkustik.tr@SD",Power Türk Akustik (1080p)
+https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PowerTurkSlow.tr@SD",Power Türk Slow (1080p)
+https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="PowerTurkTaptaze.tr@SD",Power Türk Taptaze (1080p)
+https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="RabehSaqer.sa@HD",Rabeh Saqer (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx004/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="RashidAlMajed.sa@SD",Rashid AlMajed (1080p)
+https://dphwv2ufgnfsq.cloudfront.net/out/v1/59cd80dfe93a479eb8b4d79bc6f225ca/index.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="Tarab.sa@SD",Tarab (1080p)
+https://shd-amg-fast.edgenextcdn.net/tx002/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="TRTMuzik.tr@SD",TRT Muzik
+https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="TRTMuzik.tr@SD",TRT Müzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 group-title="موزیک - خاورمیانه و آفریقا" tvg-id="TVCidade.cv@SD",TV Cidade
+https://stmv1.srvif.com/tvcidade/tvcidade/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="981PearlFM.sx@SD",98.1 Pearl FM (720p)
+https://live2.tensila.com/pearl-v-1.pearlfm/hls/live/mystream.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="CoolFM989.aw@SD",Cool FM 98.9 (720p)
+https://live2.tensila.com/cool-v-1.arubara/hls/master.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="FUSIONTV.mq@SD",FUSION TV (1080p)
+https://edge20.vedge.infomaniak.com/livecast/ik:fusiontv/manifest.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="HeartRadioAruba.aw@SD",Heart Radio Aruba
+https://live2.tensila.com/heart-v-1.heartar/hls/live/mystream.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="IdentiteTeleCaraibes.mq@SD",Identité Télé Caraïbes (548p)
+https://vdo2.pro-fhi.net:3769/stream/play.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="Live99FM.bq@SD",Live99FM (1080p)
+https://media.streambrothers.com:1936/8014/8014/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="MadrasFMTV.gp@SD",Madras FM TV (1080p)
+https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="Power1017FM.aw@SD",Power 101.7 FM (720p)
+https://vcp11.myplaytv.com/powerfm/powerfm/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="RHTGuadeloupe.gp@SD",RHT Guadeloupe (720p)
+https://edge12.vedge.infomaniak.com/livecast/ik:livehautetension/manifest.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="TeleZoukla.mq@SD",Tele Zoukla
+https://vdo.pro-fhi.net:3228/stream/play.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="TMA.gp@SD",TMA (1080p)
+http://hls.tmacaraibes.com/live/index.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="VAMTV.cw@SD",VAM Vid's & More (720p)
+https://sincerecloud.stream/loadbalancer/public/J9EmQQGf.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="WavezFM.aw@SD",Wavez FM
+https://media.streambrothers.com:1936/uszqnhpjpa/uszqnhpjpa/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - سایر" tvg-id="X1027FM.aw@SD",X 102.7 FM
+https://live2.tensila.com/onair-v-1.xfm1027/hls/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AE.us@East",A&E (720p)
+http://23.239.31.26:8989/aande/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AELatinAmerica.us@Panregional",A&E Latin America (1080p)
+http://138.121.15.230:9002/A&E/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AELatinAmerica.us@Brazil",A&E Latin America Brazil (720p)
+http://170.83.16.50/AeE/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AceTV.us@SD",Ace TV (480p)
+https://c.streamhoster.com/link/hls/W5s3fS/inLo5pcsHjo/iqg9wps0m1x_5/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AfroLandTV.us@SD",AfroLandTV (1080p)
+https://alt-al.otteravision.com/alt/al/al.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AXNWhite.us@Poland",AXN White Poland (576p)
+http://185.227.34.179:8080/axn-white/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="BarkTV.us@SD",Bark TV (1080p)
+https://bbb-barkt-streamstak.otteravision.com/bbb/barkt/barkt.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="BBCAmerica.us@East",BBC America (720p)
+http://23.239.31.26:8989/bbcamerica/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="BounceXL.us@SD",Bounce XL (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-bouncexl-tablo/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Buzzr.us@SD",Buzzr (1080p)
+http://23.237.104.106:8080/USA_BUZZR/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Comet.us@SD",Comet (1080p)
+https://fast-channels.sinclairstoryline.com/COMET/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="DiscoveryChannelLatinAmerica.us@Panregional",Discovery Channel Latin America (1080p)
+http://45.171.64.30:6060/play/a032/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="DiscoveryWorld.us@LatinAmerica",Discovery World (1080p)
+http://168.196.127.137:6001/play/a097/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="E.us@East",E! (1080p)
+http://23.237.104.106:8080/USA_E/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="ELatinAmerica.us@Mexico",E! Latin America Mexico (720p)
+http://72.1.184.5:8089/play/a05d/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Fuse.us@East",Fuse (1080p)
+http://23.237.104.106:8080/USA_FUSE/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="FXLatinAmerica.us@Panregional",FX Latin America (1080p)
+http://15.204.246.24:8080/FXHD/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GalxyTV.us@SD",Galxy TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2230
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GlobalWorldTV.us@SD",GlobalWorldTV (720p)
+https://media.streambrothers.com:1936/8052/8052/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GritXtra.us@SD",Grit Xtra (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-gritxtra-tablo/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Heartland.us@Eastern",Heartland (720p)
+https://2-fss-2.streamhoster.com/pl_120/201950-2724904-1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HolaTVLatinAmerica.us@SD",Hola! TV Latin America (1080p)
+http://15.204.246.24:8080/HOLATVHD/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HollyWire.us@SD",HollyWire (720p)
+https://bozztv.com/hwotta/playlist/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="IONPlus.us@East",ION Plus (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionplus-tablo/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="IONTV.us@East",ION TV (720p)
+http://23.237.104.106:8080/USA_ION/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AceTV.us@KCKSLD",KCKS-LD 25.3 (720p)
+https://2-fss-1.streamhoster.com/pl_154/amlst:205432-2055980/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="KNino.us@SD",KNino (1080p)
+https://ats-edge-iqui-1.live.clarovtrcdn.vtrplay.com/kninohdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Roar.us@KOKITV",KOKI-DT1 (1080p)
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02104-imagicommcommun-kokibreaking-ono/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="LifetimeLatinAmerica.us@Panregional",Lifetime Latin America (1080p)
+http://138.121.15.230:9002/LIFETIME/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="LifetimeLatinAmerica.us@Brazil",Lifetime Latin America Brazil (720p)
+http://170.83.16.50/LIFETIME/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="LifetimeLatinAmerica.us@Mexico",Lifetime Latin America Mexico (1080p)
+https://streaming.onnethn.com/LIFETIME/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="NBCLXHome.us@HD",NBC LX Home (1080p)
+https://plex-xumoent-ch485-e7l5l.fast.nbcuni.com/live/master_5.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="PasionesLatinAmerica.us@SD",Pasiones Latin America (1080p)
+http://15.204.246.24:8080/PasionesHD/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="RevryLatinX.us@SD",Revry LatinX (720p)
+https://linear-142.frequency.stream/dist/24i/142/hls/master/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Roar.us@SD",Roar (1080p)
+https://fast-channels.sinclairstoryline.com/TBD/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="SooriyanTV.ca@SD",Sooriyan TV (1080p)
+https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="StarBharat.uk@SD",Star Bharat (576p)
+https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/gb/YuppTV/UtsavBharat.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="StarPlus.uk@SD",StarPlus (576p)
+https://d1rc86nwwc9fag.cloudfront.net/260723/starplusuk_2500/chunks.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TalkinLiveClassicsTV.us@SD",Talkin Live Classics TV (480p)
+https://2-fss-1.streamhoster.com/pl_122/206338-3120682-1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TeleBoston.us@SD",Tele Boston (480p)
+https://tv2.fastcast4u.com:3238/live/radiotelebostonlive.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheGrahamNortonShow.uk@SD",The Graham Norton Show (1080p)
+https://amg00654-itv-amg00654c35-rakuten-gb-7598.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheNest.us@SD",The Nest (1080p)
+https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="EstrellaTV.us@WMBCTV",WMBC-DT1 (720p)
+http://d029dcec.kazmazpaz.ru/iptv/GVR4V8HYAGBS5V/1098/manifest.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="YTATV.us@SD",YTA TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=16767
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="2x2.ru@SD",2x2 SD (576p)
+http://stream.mcquack.net/187/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="4everTheater.ua@SD",4ever Theater (1080p)
+http://stream.mcquack.net/259/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="7Gold.it@SD",7 Gold (1080p)
+https://streamcdnr6-dddfac816632463dac50b21109dc1bb3.msvdn.net/live/S58803518/OOZape6Nxp4H/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Acasa.ro@SD",Acasa (1080p)
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-pro2/live_fullhd?offsetSeconds=0
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AcasaGold.ro@SD",Acasa Gold (1080p)
+http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-progold/live_fullhd?offsetSeconds=0
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Acasa.ro@HD",Acasa HD
+http://eb4b8dcf.kablakaka.ru/iptv/AE8BY6FHF5ZGAG/6988/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AccesDirect.ro@SD",Acces Direct (576p)
+https://live77cdn2.antenaplay.ro/live2_fast/ch6/stream.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ANT1Cyprus.cy@SD",ANT1 Cyprus (1080p)
+http://l2.cloudskep.com/ant1cm2/abr/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AntenaHD.pl@SD",Antena HD
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+http://92.114.85.87:8010/play/a00g/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AntenaStars.ro@SD",Antena Stars
+https://live4dai.antenaplay.ro/live2_sdi07/live2_sdi07_600k.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AsiaExpressNonStop.ro@SD",Asia Express NonStop (576i)
+https://live4dai.antenaplay.ro/live2_sport05/live2_sport05_600k.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="BEATTV.nl@SD",BE@TTV (1080p)
+https://tv.beatfm.nl/live.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="BialogardzkaTelewizjaKablowa.pl@HD",Bialogardzka Telewizja Kablowa (1080p)
+https://bsmbialogard.pl/live/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="black.ru@SD",.black (576p)
+http://stream.mcquack.net/263/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Carac2.ch@SD",Carac 2 (1080p)
+https://onefmhd.vedge.infomaniak.com/livecast/ik:onefmhd/manifest.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Carac3.ch@SD",Carac 3 (1080p)
+https://lfmhd.vedge.infomaniak.com/livecast/lfmhd/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Carac4.ch@SD",Carac 4 (1080p)
+https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Carac5.ch@SD",Carac 5
+https://lfmmd.vedge.infomaniak.com/livecast/ik:carac5/manifest.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Channel8.ru@SD",Channel 8 (576p)
+http://45.11.139.43:8555/8kanal/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Che.ru@SD",Che! (576p)
+http://flussonic.linkintel.ru/che/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CiudadesdelOcioTV.es@SD",Ciudades Del Ocio TV (720p)
+https://cloudvideo.servers10.com:8081/8024/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="eldoTV.lu@SD",eldo.TV (1080p)
+https://stream.eldo.lu/data/live/tele/eldotv/1080p.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ETB2On.es@HD",ETB2 On (1080p)
+https://cdn1.etbon.eus/etb2on/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ETVPlus.ee@SD",ETV+ (720p)
+https://sb.err.ee/live/etvpluss.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ExtraProNews.gr@SD",Extra ProNews (576p)
+http://62.1.176.18:8888/extra/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Friday.ru@SD",Friday! (576p)
+http://stream.mcquack.net/181/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="HappyChannel.ro@SD",Happy Channel
+https://live4dai.antenaplay.ro/live2_aws4_sdi12/live2_aws4_sdi12_600k.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Historia.es@HD",Historia HD (1080p)
+https://d1k3vzh2ivy22k.cloudfront.net/Historia1080.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="HOLAPlay.es@SD",HOLA! Play (1080p)
+https://hola-play-2108fd06-86d4-44e8-9867-c35b4895a1c1-es.fast.rakuten.tv/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6433/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ICTV.ua@SD",ICTV (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/158/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ICTV2.ua@SD",ICTV2 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/368/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Insulanonstop.ro@SD",Insula non stop (576i)
+https://live4dai.antenaplay.ro/live2_sdi05/live2_sdi05_600k.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Jim.fi@SD",Jim (720p)
+https://live-fi.tvkaista.net/jim/live.m3u8?hd=true
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="K1.ua@SD",K1 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/270/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="K2.ua@SD",K2 (1080p)
+http://stream.mcquack.net/324/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LietuvosRytasTV.lt@SD",Lietuvos Rytas TV (1080p)
+https://live.lietuvosryto.tv/live/hls/eteris.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Liv.fi@SD",Liv (720p)
+https://live-fi.tvkaista.net/liv/live.m3u8?hd=true
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="M6.fr@HD",M6 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://99.27.51.147:8080/M6/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MasonTV.ua@SD",Mason TV (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/346/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MCTV.de@HD",MC TV (720p)
+https://rrr.sz.xlcdn.com/?account=mceutv&file=mc2&output=playlist.m3u8&protocol=https&service=wowza&type=live
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NetmaxTV.gr@SD",Netmax TV (720p)
+https://es1.crystalweb.net:1936/netmaxtv/netmaxtv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Nitro.de@SD",Nitro
+https://dash4.antik.sk/live/test_rtl_nitro_tizen/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NovyiChannel.ua@SD",Novyi Channel (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+http://stream.mcquack.net/157/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PeretzInternational.ru@SD",Peretz International (576p)
+http://stream.mcquack.net/121/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="QuizTV.ua@SD",Quiz TV (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/397/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RadiowaCzworka.pl@SD",Radio Czwórka (1080p)
+https://stream14.polskieradio.pl/pr4_video/video_pr4.stream/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RadioMoldovaTineret.md@SD",Radio Moldova Tineret (1080p)
+https://radiolive.trm.md:8001/hls_rmt/tineret.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RadioToppers.nl@SD",RadioToppers (720p)
+https://server-67.stream-server.nl:1936/RadioToppers/RadioToppers/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RAZ1.ua@SD",RAZ 1 (1080p)
+http://stream.mcquack.net/463/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RAZ2.ua@SD",RAZ 2 (1080p)
+http://stream.mcquack.net/464/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="red.ru@HD",.red HD (1080p)
+http://178.134.1.158:8081/red/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RemontyTV.pl@HD",Remonty TV (1080p)
+https://prx-y5cf8.4vod.tv/playout/repl-abr67/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RMCLife.fr@SD",RMC Life (1080p)
+https://d3dcdjv6dx07iz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-eaaww2dyp3iih/RMC_Life_FR.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ROTVValencia.es@SD",ROTV Valencia (720p)
+https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Salto1.nl@SD",Salto 1 (720p)
+https://d11lnfpmek70tc.cloudfront.net/nlpo/clr-nlpo/2103d417/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Smotrim100Prazdnik.ru@SD",Smotrim 100% Prazdnik (720p)
+https://stream.smotrim.ru/hls/fasttv04/playlist_3.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="SoncePlus.ua@SD",Sonce+
+#EXTVLCOPT:http-referrer=http://live.tvstitch.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cDovLzE3Ni4xMjIuMTI1LjIzOjcwMDAvY2g0My90cmFja3MtdjFhMS9tb25vLm0zdTg%2FbGl2ZT0xJmlwPTU3LjEyOC4yMzYuMjIzJmlkPTk0ODg2NSZzZWNyZXQ9bjF1N3VpMDYmc3NsPTEmMjF5bz0wJmU9MTc5MDc1NTE0NiZzdD02SC1HSlEtemw4X1NCQjMzRjVLTUpn&master=1103
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="StarChannelInternational.gr@HD",Star Channel International
+https://livestar.siliconweb.com/starvod/star_int/star_inthd.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="StarChannel.gr@SD",STAR HD (1080p)
+http://livestar.siliconweb.com/starvod/star4/star4.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="StarChannelInternational.gr@HD",STAR International (720p)
+https://livestar.siliconweb.com/starvod/star_int/star_int.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Subbota.ru@HD",Subbota! HD (1080p)
+http://stream.mcquack.net/269/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Svarozhychy.ua@SD",Svarozhychy
+http://svarozhichi.cdn-03.cosmonova.net.ua/mobile-app/main/svarozhichi/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ThisisBulgariaHD.bg@SD",This is Bulgaria HD (1080p)
+https://streamer103.neterra.tv/thisisbulgaria/live.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TNT.ru@SD",TNT (576p)
+http://flussonic.linkintel.ru/tnt/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TNTInternational.ru@Belarus",TNT International Belarus (1080p)
+http://05cea6e8.ucomist.net/iptv/VK7YCHHWNDD8XC/15230/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TNT4.ru@SD",TNT4 (576p)
+http://flussonic.linkintel.ru/tnt4/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TVNova.hr@SD",TV Nova (720p)
+https://stream.agatin.hr:3727/live/tvnovalive.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV3.ru@HD",TV-3 HD (1080p)
+http://stream.mcquack.net/136/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="UniversTV.es@SD",Univers TV (720p)
+https://cloud2.streaminglivehd.com:1936/universfaller/universfaller/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="VerginaTV.gr@SD",Vergina TV (1080p)
+https://verginanews.gr:8443/hls_live/stream1.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="VoprosyiOtvety.ru@SD",Voprosy i Otvety (576p)
+http://stream.mcquack.net/76/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="W9.fr@SD",W9 (1086p)
+http://5.180.164.197:8080/W9/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="XPTV2.es@SD",XPTV2 (720p)
+https://janus.xpbroadcasting.com:8443/hls/xptv2.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Friday.ru@SD",Пятница! (576p)
+https://vod.tuva.ru/friday/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TvoeTV.ru@SD",Твое TV HD (1080p)
+http://tvoetv.space:8080/tvoetv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13Realities.cl@SD",13 Realities (1080p)
+https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="AbejalesTV.ve@HD",AbejalesTV (720p)
+https://183.bozztv.com/giatv/giatv-AbejalesTV/AbejalesTV/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="AmericaTeVe.pr@SD",América TeVé (1080p)
+https://live.gideo.video/americateve2/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ANCTelevision.co@SD",ANC Television (720p)
+https://live.amelbatv.co:81/anctvlive/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="AztecaInternacional.mx@SD",Azteca Internacional (1080p)
+https://azt-mun.otteravision.com/azt/mun/mun.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="BonchesLatinosTV.do@SD",Bonches Latinos TV (720p)
+https://5790d294af2dc.streamlock.net/latinostv/latinostv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Canal9Link.ar@SD",Canal 9 Link
+https://617c5175c970b.streamlock.net:4444/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalChilote.cl@SD",Canal Chilote (720p)
+https://videostream.chileservidores.com:8081/chiloe2/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalPulpoTV.ar@SD",Canal Pulpo TV
+https://vs20.live.opencaster.com/canalpulpotv_bdeee6e2/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChileChannel.cl@SD",Chile Channel (720p)
+https://v2.tustreaming.cl/chilechannel/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChromaTV.br@SD",Chroma TV (480p)
+https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CibaenaTV.do@SD",Cibaeña TV (720p)
+https://streamunoapp.com:3958/live/cibaenatvlive.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ClaroVisionTV.do@SD",Claro Visión TV (720p)
+https://streamunoapp.com:3057/live/clarovisiontvlive.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ColosalTV.cr@SD",Colosal TV
+https://5eac7b031d945.streamlock.net/COLOSAL/COLOSAL/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ConectaMaisTV.br@SD",Conecta Mais TV (720p)
+https://adylnet.streampool.net/10324/live/hls/Conecta/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ElCanalFeliz.cl@SD",El Canal Feliz (720p)
+http://streaming.multicontenidos.cl:8081/live/canalfeliz/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="EmocionTV.cl@SD",Emocion TV (720p)
+https://v1.tustreaming.cl/emociontv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="EstacionLimacheTV.cl@SD",Estacion Limache TV (720p)
+https://v4.tustreaming.cl/limachemovil/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GexTV.cr@HD",Gex TV (1080p)
+https://live20.bozztv.com/akamaissh101/ssh101/gextvaccess/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GirasolTV.hn@SD",Girasol TV (1080i)
+https://s.emisoras.tv:8081/girasoltv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GOTV.py@SD",GO TV (720p)
+https://rds3.desdeparaguay.net/gotv/gotv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GuaroTV.ve@SD",Guaro TV (720p)
+https://stream.guarotv.net:3592/hybrid/play.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="InterTV.ve@SD",interTV (1080p)
+https://streamtv.intervenhosting.net:3439/hybrid/play.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ITVDeportes.mx@SD",ITV Deportes (720p)
+https://thm-it-roku.otteravision.com/thm/it/it.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaMelinkanaTV.cl@SD",La Melinkana TV (720p)
+https://v1.tustreaming.cl/melinkana/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaNuestra.cl@SD",La Nuestra (1080p)
+https://redirector.rudo.video/hls-video/339f69c6122f6d8f4574732c235f09b7683e31a5/ln/ln.smil/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaNuevaRadioTV977.ec@SD",La Nueva Radio TV 97.7 (1080p)
+https://sv72.ecuaradiotv.net/lanuevatv/live/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaPotenteRadioTV.cr@SD",La Potente Radio TV
+https://latamvdo.com:3626/hybrid/play.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaTele.pe@SD",La Tele (1080p)
+http://190.93.224.42/LA-TELE/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaTeleTuya.ve@SD",La Tele Tuya (576p)
+http://181.78.8.199:8000/play/a0fs/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="LaraenRedes.ve@SD",Lara en Redes
+https://streamtv.laraenredes.com:3020/hybrid/play.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MakroDigitalTelevision.ec@SD",MakroDigital Television (1080p)
+#EXTVLCOPT:http-referrer=https://makrodigitaltelevision.com
+https://makrodigitaltv.makrodigital.com/makrodigitaltelevision/iptv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MetroTV.hn@SD",Metro TV (720p)
+https://s.emisoras.tv:8081/metrotv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MiTV.py@SD",MiTV (1080p)
+http://190.128.214.97:64333/play/a02w/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MasTalk.ve@SD",Más Talk (1080p)
+https://vod2live.univtec.com/manifest/89290956-94ab-4950-accb-a54bbd7e176f.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="NadaEsImposibleTV.cl@SD",Nada Es Imposible TV
+https://vdochile.com:3194/live/mvqutymylive.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="NortenaTv.ve@HD",Norteña TV (576p)
+https://lbgo.bozztv.com/ssh101/ssh101/nortenatv1234/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="NTV.br@SD",NTV (720p)
+https://cdn.livespanel.com/nossatv/nossatv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="OPA.cr@SD",¡OPA! (720p)
+https://5f1af61612fb5.streamlock.net/genteopa/videogenteopa_720p/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="PetloversTV.br@SD",Petlovers TV
+https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RadioUniversitariaSanAndres.bo@SD",Radio Universitaria San Andres (720p)
+https://edge.enhdtv.com/8054/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RadioYguazuTV.ar@SD",Radio Yguazú TV (480p)
+https://live.enhdtv.com:8081/radioiguazutv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RCNMas.co@SD",RCN Mas (1080p)
+http://45.226.205.96:48000/play/a0af/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RCNNovelas.co@SD",RCN Novelas (1080p)
+https://cdnlive.klicgo.net/rcnnovelas/live/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RedPlus.co@SD",Red+ (1080p)
+https://inforedvos.lcdn.claro.net.co/Content/HLS_HLS_DIR/Live/channel(REDMASHDWEB)/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RedeNGT.br@SD",Rede NGT (1080p)
+https://isaocorp.cloudecast.com/ngt/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RSVHonduras.hn@SD",RSV Honduras (720p)
+https://stmv2.srvif.com/rsvhonduras/rsvhonduras/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="StreamForce360.co@Main",StreamForce 360 (1080p)
+https://sistemastr.tropicalmoonmedia.com:443/live/9E495C5FDA503D7F71037F2D2C5D3FA3/16.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="SuperCable.cr@SD",Super Cable
+http://191.102.39.254:5000/live/5up3r5/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TeleplaySureste.mx@SD",Teleplay Sureste (720p)
+https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Telerayo.hn@SD",Telerayo (1080p)
+https://s.emisoras.tv:8081/telerayo/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TurismoHD.do@HD",Turismo HD (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208343/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVCentro272HD.hn@SD",TV Centro 27.2 HD (720p)
+https://cloud2.streaminglivehd.com:1936/8004/8004/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVGolfoUraba.co@SD",TV Golfo Uraba
+https://stmv7.voxtvhd.com.br/golfo/golfo/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVKaliente.pe@SD",TV Kaliente (720p)
+https://lbgo.bozztv.com/ssh101/ssh101/kalientecusco/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVNatal.br@SD",TV Natal (1080p)
+http://185.228.163.146:8000/play/a01y/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVParaense.br@HD",TV Paraense (720p)
+https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVVicosa.br@SD",TV Viçosa (480p)
+http://wz4.dnip.com.br/fratevitv/fratevitv.sdp/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVPlusPet.br@SD",TV+Pet
+https://stmv5.samcast.com.br/tvmaispet6354/tvmaispet6354/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="UMATV.br@HD",UMA TV
+https://umatv.nuvemplay.live/hls/stream.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="VBMediaTV.mx@SD",VB Media TV (1080p)
+https://capomo01-enitv.eninetworks.com/locales_vbmedia_publico/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="VePlus.ve@Venezuela",Ve Plus (720p)
+http://186.148.196.100:8000/play/a01d
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="WTVCanal20.ni@SD",WTV Canal 20 (1080p)
+https://cootv.cootel.com.ni:8095/Canal40_WTV/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ZAZ.mx@SD",ZAZ (1080p)
+https://cloud.fastchannel.es/mic/manifiest/hls/zaztv/zaztv.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ZonaPlayTV.cl@SD",Zona Play TV (720p)
+https://tv1.mediacp.eu:3131/live/dilxbgxylive.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="AsianDrama.hk@SD",Asian Drama (1080p)
+http://103.172.187.30:12000/stream/mytv/null-11/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="BIZTV.uz@SD",BIZ TV (1080p)
+https://fl.biztv.media/biz_tv_720_uni8jhub4h8fub4idejswh8dh3j94finbu4nidj39inwsj92in3d/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="BolEntertainment.pk@HD",Bol Entertainment HD
+https://vodzong.mjunoon.tv:8087/streamtest/Channel5-159-4/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="CCTV3.cn@SD",CCTV-3 (720p)
+http://74.91.26.218:82/live/cctv3hd.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="CheksizTV.uz@SD",Cheksiz TV
+https://fl.biztv.media/cheksiz_tv_480_unif7hujidth7f4du83jrhuid3k94j8hfj8d93eubych8eju93n4ubt/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="DongNaiTV2.vn@SD",Dong Nai TV 2 (720p)
+https://vtvgolive-ott3.vtvdigital.vn/live/dongnai2tv/chunklist_2.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="FicomChannel.id@SD",Ficom Channel (720p)
+https://v3.siar.us/ficomchannel/live/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="FortuneTV.mm@SD",FORTUNE TV (720p)
+http://103.215.194.93:8282/hls/fortunetv/vmix.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="HTV2.vn@SD",HTV2 (720p)
+https://dethich.pw/htv2/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="HTV3.vn@SD",HTV3 (720p)
+https://dethich.pw/htv3/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="HumTV.pk@HD",Hum TV (720p)
+https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="HumTV.pk@SD",Hum TV SD
+https://cdn4.mjunoon.tv:8087/streamtest/82M/chunks.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="IndonesianaTV.id@SD",Indonesiana.TV (720p)
+#EXTVLCOPT:http-referrer=https://indonesiana.tv/
+https://tvstreamcast.com/indonesiana.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="Jade.hk@SD",Jade (1080p)
+http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="MakonTV.uz@SD",Makon TV (576i)
+https://stream8.cinerama.uz/1497/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="MY5.uz@SD",MY5 (576p)
+https://stream8.cinerama.uz/1217/tracks-v1a1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="NHKWorldPremium.jp@SD",NHK World Premium (720p)
+https://media-tyo.hls.nhkworld.jp/hls/wp/live/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="NHTV.kr@SD",NHTV (720p)
+http://nonghyup.flive.skcdn.com/nonghyup/_definst_/nhlive/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="ONVieDrama.vn@SD",ON Vie Drama (720p)
+http://dvrfl05.bozztv.com/vch_vchannel18/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="RayTVHD.np@SD",Ray TV HD (576p)
+https://streaming.tvnepal.com:19360/raynewsdaily/480p.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="RupashiBanglaTV.bd@SD",Rupashi Bangla TV (720p)
+https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="TVBSAsia.tw@SD",TVBS Asia (1080p)
+http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="VinhLongTV4.vn@SD",Vinh Long TV 4 (720p)
+https://dethich.pw/thvl4/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آسیا" tvg-id="WorldEntertainmentTV42.th@SD",World Entertainment TV 42
+http://3bb.engatetv.com:25461/hstn/line/147
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="BTV.ug@SD",BTV (480p)
+https://streamfi-alphadgtl1.zettawiseroutes.com:8181/hls/stream.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="EdessaTV.tr@SD",Edessa TV (1080p)
+https://canli.edessatv.com/hls/stream.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="EVITV.cd@SD",EVI TV (720p)
+https://mistserver.evi-tv.com/hls/evi_tv_live/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="FORTTV.ug@SD",FORT TV (480p)
+https://fort.co-works.org/memfs/87017643-274a-4bc0-a786-7767a0d159c2.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="KanalDDrama.tr@SD",Kanal D Drama (1080p)
+http://190.93.224.42/KANAL-D-DRAMA/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="Kurdsat.iq@SD",Kurdsat (1080p)
+https://hlspackager.akamaized.net/live/DB/KURDSAT_HD/HLS/KURDSAT_HD.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="MBC4.ae@SD",MBC 4 (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="MBCDrama.ae@SD",MBC Drama (1080p)
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="NOWTV.tr@SD",NOW TV (720p)
+https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="OTV.gh@SD",OTV (720p)
+https://5dcabf026b188.streamlock.net/OceansTV/livestream/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="RealityChannel.il@SD",Reality Channel
+https://d2dffl3588mvfk.cloudfront.net/out/v1/d8e15050ca4148aab0ee387a5e2eb46b/index_1.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="TalTV.ne@SD",Tal TV (1080p)
+https://mediaserver1.castpin.com/hls/taltv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="TR24Television.cm@SD",TR24 (720p)
+https://stream.it-innov.com/tr24/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - خاورمیانه و آفریقا" tvg-id="VacationChannel.il@SD",Vacation Channel
+https://d1yd8hohnldm33.cloudfront.net/out/v1/19dee23c2cc24f689bd4e1288661ee0c/index_2.m3u8
