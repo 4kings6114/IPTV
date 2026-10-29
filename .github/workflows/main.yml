@@ -1,7 +1,9 @@
 name: Update playlist
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"   # هر روز ساعت ۳ صبح UTC
+  workflow_dispatch:       # امکان اجرای دستی
 
 permissions:
   contents: write
@@ -12,14 +14,51 @@ jobs:
     env:
       TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
-      - name: Telegram message
-        if: env.TG_TOKEN != '' && env.TG_CHAT != ''
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build playlist
+        run: python build_playlist.py | tee build.log
+
+      - name: Commit and push
+        id: commit
         run: |
-          text="ℹ️ پلی‌لیست دستی است و آپدیت خودکار غیرفعال شده.%0Aلینک فعلی:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
+          git config user.name "playlist-bot"
+          git config user.email "playlist-bot@users.noreply.github.com"
+          git add playlist.m3u
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Auto-update playlist $(date -u +%F)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Telegram report
+        if: always() && env.TG_TOKEN != '' && env.TG_CHAT != ''
+        run: |
+          if [ "${{ job.status }}" = "failure" ]; then
+            text="❌ خطا در آپدیت پلی‌لیست%0Ahttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          elif [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+            summary=$(head -n 1 build.log || echo Updated)
+            text="✅ پلی‌لیست آپدیت شد%0A$summary%0A%0Aلینک:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
+          else
+            text="ℹ️ تغییری در پلی‌لیست نبود"
+          fi
+
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${TG_CHAT}" \
             --data-urlencode "text=${text}"
