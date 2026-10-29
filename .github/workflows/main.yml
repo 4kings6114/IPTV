@@ -2,8 +2,8 @@ name: Update playlist
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # هر روز ساعت ۳ صبح UTC
-  workflow_dispatch:       # امکان اجرای دستی
+    - cron: "0 3 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -36,10 +36,9 @@ jobs:
         run: |
           git config user.name "playlist-bot"
           git config user.email "playlist-bot@users.noreply.github.com"
-          git add playlist.m3u
+          git add playlist.m3u playlist-backup.m3u build_stats.txt 2>/dev/null || true
 
           if git diff --cached --quiet; then
-            echo "No changes"
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Auto-update playlist $(date -u +%F)"
@@ -52,11 +51,18 @@ jobs:
         run: |
           if [ "${{ job.status }}" = "failure" ]; then
             text="❌ خطا در آپدیت پلی‌لیست%0Ahttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          elif [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
-            summary=$(head -n 1 build.log || echo Updated)
-            text="✅ پلی‌لیست آپدیت شد%0A$summary%0A%0Aلینک:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u"
           else
-            text="ℹ️ تغییری در پلی‌لیست نبود"
+            if [ -f build_stats.txt ]; then
+              stats=$(head -n 1 build_stats.txt)
+            else
+              stats="Updated"
+            fi
+
+            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
+              text="✅ پلی‌لیست آپدیت شد%0A$stats%0A%0Aلینک:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist.m3u%0A%0Aپشتیبان:%0Ahttps://raw.githubusercontent.com/${{ github.repository }}/main/playlist-backup.m3u"
+            else
+              text="ℹ️ تغییری در پلی‌لیست نبود%0A$stats"
+            fi
           fi
 
           curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
