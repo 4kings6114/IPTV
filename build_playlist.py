@@ -11,7 +11,7 @@ FREETV  = "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
 
 CHECK_LINKS = True
 MAX_WORKERS = 20
-TIMEOUT     = 6
+TIMEOUT     = 7
 DROP_DEAD   = True
 SAVE_BACKUP = True
 
