@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Builds playlist.m3u — فقط فارسی‌زبان + انگلیسی‌زبان + اروپا + آمریکا"""
-import re, sys, time, os, collections, concurrent.futures, urllib.request, shutil
+"""
+جمع‌آوری کانال از چند منبع عمومی + کشورها + Free-TV + manual
+"""
+import re, time, os, collections, concurrent.futures, urllib.request, shutil
 from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -13,18 +15,34 @@ TIMEOUT     = 6
 DROP_DEAD   = True
 SAVE_BACKUP = True
 
-# فقط مناطق درخواستی
+# کشورها: فارسی + انگلیسی + اروپا + آمریکا
 COUNTRIES = [
-    # فارسی‌زبان
     "ir", "af",
-    # انگلیسی‌زبان
     "us", "uk", "ca", "au", "nz", "ie",
-    # اروپا
     "de", "fr", "es", "it", "nl", "pl", "se", "no", "dk", "fi",
-    "be", "at", "ch", "pt", "gr", "cz", "ro", "hu", "ua", "ru",
-    "tr",  # ترکیه (اروپا / منطقه)
-    # آمریکا (شمال و لاتین)
+    "be", "at", "ch", "pt", "gr", "cz", "ro", "hu", "ua", "ru", "tr",
     "mx", "br", "ar", "cl", "co", "pe",
+]
+
+# منابع اضافی عمومی (هر خط = یک پلی‌لیست کامل M3U)
+# هر وقت منبع جدیدی پیدا کردی، همین‌جا اضافه کن
+EXTRA_SOURCES = [
+    FREETV,
+    "https://iptv-org.github.io/iptv/languages/fas.m3u",   # فارسی
+    "https://iptv-org.github.io/iptv/languages/eng.m3u",   # انگلیسی
+    "https://iptv-org.github.io/iptv/categories/news.m3u",
+    "https://iptv-org.github.io/iptv/categories/sports.m3u",
+    "https://iptv-org.github.io/iptv/categories/music.m3u",
+    "https://iptv-org.github.io/iptv/categories/movies.m3u",
+    "https://iptv-org.github.io/iptv/categories/documentary.m3u",
+    "https://iptv-org.github.io/iptv/categories/kids.m3u",
+    "https://iptv-org.github.io/iptv/countries/ir.m3u",
+    "https://iptv-org.github.io/iptv/countries/us.m3u",
+    "https://iptv-org.github.io/iptv/countries/uk.m3u",
+    "https://iptv-org.github.io/iptv/countries/de.m3u",
+    "https://iptv-org.github.io/iptv/countries/fr.m3u",
+    "https://iptv-org.github.io/iptv/countries/tr.m3u",
+    "https://iptv-org.github.io/iptv/countries/ca.m3u",
 ]
 
 EPG_URLS = [
@@ -53,8 +71,8 @@ PERSIAN_CODES = {"ir", "af"}
 def get(url, tries=3):
     for _ in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/3.2"})
-            with urllib.request.urlopen(req, timeout=45) as r:
+            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/3.3"})
+            with urllib.request.urlopen(req, timeout=50) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception:
             time.sleep(1.2)
@@ -102,19 +120,19 @@ def with_group(ext, group):
 
 def classify(name, code=""):
     n = name.lower()
-    if code in PERSIAN_CODES:
-        if any(x in n for x in ("movie", "film", "series", "serial", "cinema", "namayesh", "tamasha")):
+    if code in PERSIAN_CODES or any(x in n for x in ("iran", "irib", "persian", "farsi", "tehran")):
+        if any(x in n for x in ("movie", "film", "series", "serial", "cinema")):
             return FA_MOV
         if any(x in n for x in ("music", "موزیک")):
             return FA_MUS
         if any(x in n for x in ("news", "خبر", "press", "irinn")):
             return FA_NEWS
         return FA_TV
-    if "news" in n or "خبر" in n:
+    if "news" in n:
         return EN_NEWS
-    if "sport" in n or "ورزش" in n:
+    if "sport" in n:
         return SPORT
-    if "music" in n or "mtv" in n or "موزیک" in n:
+    if "music" in n or "mtv" in n:
         return MUSIC
     if "movie" in n or "cinema" in n or "film" in n:
         return MOVIES
@@ -175,6 +193,17 @@ def write_m3u(path, entries, epg=True):
         for g, ext, url in entries:
             f.write("\n".join(ext) + "\n" + url + "\n")
 
+def collect_from_url(url, code=""):
+    txt = get(url)
+    if not txt:
+        return []
+    out = []
+    for ext, stream in parse(txt):
+        name = name_of(ext)
+        g = classify(name, code)
+        out.append((g, with_group(ext, g), stream))
+    return out
+
 def main():
     playlist_path = os.path.join(HERE, "playlist.m3u")
     backup_path   = os.path.join(HERE, "playlist-backup.m3u")
@@ -188,27 +217,23 @@ def main():
 
     entries = []
 
-    print(f"Downloading from iptv-org ({len(COUNTRIES)} countries)...")
+    # 1) کشورها از iptv-org
+    print(f"Countries ({len(COUNTRIES)})...")
     for code in COUNTRIES:
-        txt = get(STREAMS.format(code))
-        if not txt:
-            continue
-        count = 0
-        for ext, url in parse(txt):
-            name = name_of(ext)
-            g = classify(name, code)
-            entries.append((g, with_group(ext, g), url))
-            count += 1
-        if count:
-            print(f"  {code}: {count} channels")
+        got = collect_from_url(STREAMS.format(code), code)
+        if got:
+            print(f"  {code}: {len(got)}")
+            entries.extend(got)
 
-    print("Downloading Free-TV...")
-    for ext, url in parse(get(FREETV)):
-        name = name_of(ext)
-        g = classify(name)
-        entries.append((g, with_group(ext, g), url))
-    print("  Free-TV done")
+    # 2) منابع اضافی
+    print(f"Extra sources ({len(EXTRA_SOURCES)})...")
+    for url in EXTRA_SOURCES:
+        got = collect_from_url(url)
+        short = url.split("/")[-1]
+        print(f"  {short}: {len(got)}")
+        entries.extend(got)
 
+    # 3) manual
     manual = os.path.join(HERE, "manual.m3u")
     if os.path.exists(manual):
         for ext, url in parse(open(manual, encoding="utf-8").read()):
@@ -217,6 +242,7 @@ def main():
             entries.append((g, with_group(ext, g), url))
         print("  manual.m3u added")
 
+    # dedupe با اولویت کیفیت
     best = {}
     for g, ext, url in entries:
         key = (g, base_name(name_of(ext)))
@@ -231,7 +257,7 @@ def main():
             seen.add(item[2])
             deduped.append(item)
 
-    print(f"Collected {len(deduped)} unique links (quality-prioritized)")
+    print(f"Collected {len(deduped)} unique links")
 
     alive, dead_count = check_links(deduped)
     final_entries = alive if DROP_DEAD else deduped
@@ -245,7 +271,7 @@ def main():
         subset = [e for e in final_entries if e[0] in groups]
         if subset:
             write_m3u(os.path.join(HERE, fname), subset, epg=True)
-            print(f"  {fname}: {len(subset)} channels")
+            print(f"  {fname}: {len(subset)}")
 
     new_urls = {url for _, _, url in final_entries}
     added   = len(new_urls - old_urls)
