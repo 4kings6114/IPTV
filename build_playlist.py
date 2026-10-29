@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds playlist.m3u with live-check, quality priority, split playlists and EPG."""
+"""Builds playlist.m3u — فقط فارسی‌زبان + انگلیسی‌زبان + اروپا + آمریکا"""
 import re, sys, time, os, collections, concurrent.futures, urllib.request, shutil
 from datetime import datetime, timezone
 
@@ -13,10 +13,25 @@ TIMEOUT     = 6
 DROP_DEAD   = True
 SAVE_BACKUP = True
 
+# فقط مناطق درخواستی
+COUNTRIES = [
+    # فارسی‌زبان
+    "ir", "af",
+    # انگلیسی‌زبان
+    "us", "uk", "ca", "au", "nz", "ie",
+    # اروپا
+    "de", "fr", "es", "it", "nl", "pl", "se", "no", "dk", "fi",
+    "be", "at", "ch", "pt", "gr", "cz", "ro", "hu", "ua", "ru",
+    "tr",  # ترکیه (اروپا / منطقه)
+    # آمریکا (شمال و لاتین)
+    "mx", "br", "ar", "cl", "co", "pe",
+]
+
 EPG_URLS = [
     "https://epg.pw/xmltv/epg_IR.xml",
     "https://epg.pw/xmltv/epg_US.xml",
     "https://epg.pw/xmltv/epg_GB.xml",
+    "https://epg.pw/xmltv/epg_DE.xml",
 ]
 
 FA_TV, FA_MOV, FA_MUS, FA_NEWS = "فارسی - تلویزیون", "فارسی - فیلم و سریال", "فارسی - موزیک", "اخبار - فارسی"
@@ -33,14 +48,16 @@ SPLIT = {
     "kids.m3u":    {KIDS},
 }
 
+PERSIAN_CODES = {"ir", "af"}
+
 def get(url, tries=3):
     for _ in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/3.0"})
+            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/3.2"})
             with urllib.request.urlopen(req, timeout=45) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception:
-            time.sleep(1.5)
+            time.sleep(1.2)
     return ""
 
 def parse(txt):
@@ -83,6 +100,30 @@ def with_group(ext, group):
         line = re.sub(r'(#EXTINF:-?\d+)', rf'\1 group-title="{group}"', line, 1)
     return [line] + ext[1:]
 
+def classify(name, code=""):
+    n = name.lower()
+    if code in PERSIAN_CODES:
+        if any(x in n for x in ("movie", "film", "series", "serial", "cinema", "namayesh", "tamasha")):
+            return FA_MOV
+        if any(x in n for x in ("music", "موزیک")):
+            return FA_MUS
+        if any(x in n for x in ("news", "خبر", "press", "irinn")):
+            return FA_NEWS
+        return FA_TV
+    if "news" in n or "خبر" in n:
+        return EN_NEWS
+    if "sport" in n or "ورزش" in n:
+        return SPORT
+    if "music" in n or "mtv" in n or "موزیک" in n:
+        return MUSIC
+    if "movie" in n or "cinema" in n or "film" in n:
+        return MOVIES
+    if "kid" in n or "cartoon" in n or "child" in n:
+        return KIDS
+    if "doc" in n or "documentary" in n:
+        return DOC
+    return OTHER
+
 def is_alive(url):
     try:
         req = urllib.request.Request(url, method="HEAD", headers={
@@ -115,7 +156,7 @@ def check_links(entries):
                 alive.append(item)
             else:
                 dead += 1
-            if i % 50 == 0 or i == len(entries):
+            if i % 100 == 0 or i == len(entries):
                 print(f"  {i}/{len(entries)} — alive: {len(alive)}")
     return alive, dead
 
@@ -127,7 +168,7 @@ def load_old_urls(path):
 def write_m3u(path, entries, epg=True):
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         if epg and EPG_URLS:
-            epg_attr = " ".join(f'url-tvg="{u}"' for u in EPG_URLS[:3])
+            epg_attr = " ".join(f'url-tvg="{u}"' for u in EPG_URLS[:4])
             f.write(f"#EXTM3U {epg_attr}\n")
         else:
             f.write("#EXTM3U\n")
@@ -147,46 +188,26 @@ def main():
 
     entries = []
 
-    for code in ("ir", "af"):
-        for ext, url in parse(get(STREAMS.format(code))):
-            name = name_of(ext).lower()
-            g = FA_TV
-            if any(x in name for x in ("movie", "film", "series", "serial", "cinema")):
-                g = FA_MOV
-            elif any(x in name for x in ("music", "موزیک")):
-                g = FA_MUS
-            elif any(x in name for x in ("news", "خبر", "press")):
-                g = FA_NEWS
+    print(f"Downloading from iptv-org ({len(COUNTRIES)} countries)...")
+    for code in COUNTRIES:
+        txt = get(STREAMS.format(code))
+        if not txt:
+            continue
+        count = 0
+        for ext, url in parse(txt):
+            name = name_of(ext)
+            g = classify(name, code)
             entries.append((g, with_group(ext, g), url))
+            count += 1
+        if count:
+            print(f"  {code}: {count} channels")
 
-    for code in ("us", "uk", "de", "fr", "tr", "ru"):
-        for ext, url in parse(get(STREAMS.format(code))):
-            name = name_of(ext).lower()
-            g = OTHER
-            if "news" in name:
-                g = EN_NEWS
-            elif "sport" in name:
-                g = SPORT
-            elif "music" in name or "mtv" in name:
-                g = MUSIC
-            elif "movie" in name or "cinema" in name:
-                g = MOVIES
-            elif "kid" in name or "cartoon" in name:
-                g = KIDS
-            elif "doc" in name:
-                g = DOC
-            entries.append((g, with_group(ext, g), url))
-
+    print("Downloading Free-TV...")
     for ext, url in parse(get(FREETV)):
-        name = name_of(ext).lower()
-        g = OTHER
-        if "news" in name:
-            g = EN_NEWS
-        elif "sport" in name:
-            g = SPORT
-        elif "music" in name:
-            g = MUSIC
+        name = name_of(ext)
+        g = classify(name)
         entries.append((g, with_group(ext, g), url))
+    print("  Free-TV done")
 
     manual = os.path.join(HERE, "manual.m3u")
     if os.path.exists(manual):
@@ -194,6 +215,7 @@ def main():
             m = re.search(r'group-title="([^"]*)"', ext[0])
             g = m.group(1) if m else FA_MOV
             entries.append((g, with_group(ext, g), url))
+        print("  manual.m3u added")
 
     best = {}
     for g, ext, url in entries:
