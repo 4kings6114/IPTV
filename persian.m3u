@@ -1,0 +1,159 @@
+#EXTM3U url-tvg="https://epg.pw/xmltv/epg_IR.xml" url-tvg="https://epg.pw/xmltv/epg_US.xml" url-tvg="https://epg.pw/xmltv/epg_GB.xml" url-tvg="https://epg.pw/xmltv/epg_DE.xml"
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="247BoxTV.ir@SD",247 Box TV
+https://hls.247box.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AFNTV.ir@SD",AFN TV
+https://bozztv.com/1gbw5/tintv2/tintv2/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AlWilayah.ir@SD",Al Wilayah (720p)
+https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
+#EXTINF:-1 tvg-name="Arirang" tvg-logo="https://i.imgur.com/RuHZ6Dx.png" tvg-id="ArirangTV.kr" tvg-chno="18" tvg-country="KR" group-title="فارسی - تلویزیون",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ArirangTV.kr@SD" tvg-logo="https://i.imgur.com/Asu5pE9.png" group-title="فارسی - تلویزیون",Arirang TV (1080p)
+http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ArirangUN.kr@SD" tvg-logo="https://i.imgur.com/Jdy3WNm.png" group-title="فارسی - تلویزیون",Arirang UN (1080p)
+https://amdlive-ch02-ctnd-com.akamaized.net/arirang_2ch/smil:arirang_2ch.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Arirang World" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/67cfa9368d2d135744732a3aed3baecb3fadcf13/countries/international/arirang-int.png" tvg-id="ArirangWorld.kr" tvg-chno="214" tvg-country="GB" group-title="فارسی - تلویزیون",Arirang World
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AsilTV.ir@SD",Asil TV (576p)
+https://live.asil.tv/asiltv/index.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AssiratTV.ir@SD",Assirat TV (576p)
+https://softverse.b-cdn.net/Assirat/assiratobs/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AVAFamily.ir@SD",AVA Family
+https://familyhls.avatv.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="BBCPersian.uk@SD" tvg-logo="https://i.imgur.com/4uTMnPb.png" group-title="فارسی - تلویزیون",BBC Persian (1080p)
+https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="DunyaNawTV.af@SD",Dunya Naw TV (576p)
+https://dunyanhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="EslahTV.af@SD",Eslah TV (720p)
+https://eslahtvhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranInternational.uk@SD",Iran International (1080p)
+https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranJewishTV.ir@SD",Iran Jewish TV
+http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranNationalRevolutionTV.us@HD",Iran National Revolution TV
+https://hls.irannrtv.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IraneFardaTV.uk@SD",IraneFarda TV
+https://iranefardalive.com/stream/live.m3u8
+#EXTINF:-1 tvg-name="IRIB Amoozesh" tvg-logo="https://i.imgur.com/qox2azH.png" tvg-id="AmouzeshTV.ir" tvg-chno="7" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Amoozesh Ⓢ
+https://ncdn.telewebion.ir/amouzesh/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Mostanad" tvg-logo="https://i.imgur.com/lRDgugZ.png" tvg-id="IRIBMostanad.ir" tvg-chno="9" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Mostanad
+https://ncdn.telewebion.ir/mostanad/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Namayesh" tvg-logo="https://i.imgur.com/Nq0pCGr.png" tvg-id="NamayeshTV.ir" tvg-chno="10" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Namayesh
+https://ncdn.telewebion.ir/namayesh/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Nasim" tvg-logo="https://i.imgur.com/EqjQN83.png" tvg-id="Nasim.ir" tvg-chno="15" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Nasim
+https://ncdn.telewebion.ir/nasim/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Ofogh" tvg-logo="https://i.imgur.com/fhqeYGb.png" tvg-id="OfoghTV.ir" tvg-chno="11" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Ofogh
+https://ncdn.telewebion.ir/ofogh/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Omid" tvg-logo="https://i.imgur.com/s9iUe1l.png" tvg-id="IRIBOmid.ir" tvg-chno="16" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Omid Ⓢ
+https://ncdn.telewebion.ir/omid/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Pooya & Nahal" tvg-logo="https://i.imgur.com/hjeQUtg.png" tvg-id="PooyaTV.ir" tvg-chno="13" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Pooya & Nahal
+https://ncdn.telewebion.ir/pooya/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Quran" tvg-logo="https://i.imgur.com/nmOKBaK.png" tvg-id="QuranTV.ir" tvg-chno="8" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Quran
+https://ncdn.telewebion.ir/quran/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Salamat" tvg-logo="https://i.imgur.com/K0YUhne.png" tvg-id="SalamatTV.ir" tvg-chno="14" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Salamat Ⓢ
+https://ncdn.telewebion.ir/salamat/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Tamasha" tvg-logo="https://i.imgur.com/YffSCWH.png" tvg-id="Tamasha.ir" tvg-chno="17" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Tamasha
+https://ncdn.telewebion.ir/hdtest/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB TV1" tvg-logo="https://i.imgur.com/rad9Guw.png" tvg-id="IRIB1.ir" tvg-chno="1" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB TV1
+https://ncdn.telewebion.ir/tv1/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB TV2" tvg-logo="https://i.imgur.com/FKiTd3O.png" tvg-id="IRIB2.ir" tvg-chno="2" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB TV2
+https://ncdn.telewebion.ir/tv2/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB TV3" tvg-logo="https://i.imgur.com/6cIaH0c.png" tvg-id="IRIB3.ir" tvg-chno="3" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB TV3
+https://ncdn.telewebion.ir/tv3/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB TV4" tvg-logo="https://i.imgur.com/fsdz81l.png" tvg-id="IRIB4.ir" tvg-chno="4" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB TV4 Ⓢ
+https://ncdn.telewebion.ir/tv4/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB TV5/Tehran TV" tvg-logo="https://i.imgur.com/VdOFcN4.png" tvg-id="IRIB5.ir" tvg-chno="5" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB TV5/Tehran TV Ⓢ
+https://ncdn.telewebion.ir/tehran/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB UHD-HDR" tvg-logo="https://i.imgur.com/qZ98jaa.png" tvg-id="IRIBUHD.ir" tvg-chno="19" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB UHD-HDR
+https://ncdn.telewebion.ir/faratar/live/playlist.m3u8
+#EXTINF:-1 tvg-name="IRIB Varzesh" tvg-logo="https://i.imgur.com/tRLSrxa.png" tvg-id="VarzeshTV.ir" tvg-chno="12" tvg-country="IR" group-title="فارسی - تلویزیون",IRIB Varzesh
+https://ncdn.telewebion.ir/varzesh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="KayhanTV.af@SD",Kayhan TV (720p)
+https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="LemarTV.af@SD",Lemar TV (720p)
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-lemar/index.m3u8
+#EXTINF:-1 tvg-id="MarjaeyatTVPersian.iq@SD" tvg-logo="https://i.imgur.com/fCj05f0.png" group-title="فارسی - تلویزیون",Marjaeyat TV Persian (240p) [Not 24/7]
+https://livefa.marjaeyattv.com/mtv_fa/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="MihanTV.ir@SD",Mihan TV
+https://iptv.mihantv.com/mihantv/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="MohabatTV.ir@SD",Mohabat TV (540p)
+http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="NationalIranianCongressTV.us@SD",National Iranian Congress TV
+https://tv.iraniancongress.com/stream/tv.m3u8
+#EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/c/ce/Qum_Noor_TV.svg/960px-Qum_Noor_TV.svg.png" group-title="فارسی - تلویزیون",Noor TV (Iran)
+https://ncdn.telewebion.ir/noor/live/playlist.m3u8
+#EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون",Omid e Iran TV
+https://oitnhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="OXIRTV.ir@SD",OXIR TV
+https://hls.oxir.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PayvandTV.ir@SD",Payvand TV (720p) [Not 24/7]
+https://uni6rtmp.tulix.tv/ucur1/Payvand/playlist.m3u8
+#EXTINF:-1 tvg-id="PersianaComedy.fr@SD" tvg-logo="https://i.imgur.com/DBZ3Pi5.png" group-title="فارسی - تلویزیون",Persiana Comedy
+https://comedyhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaDocs.fr@HD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Docs
+https://scihls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaFamily.fr@SD" tvg-logo="https://i.imgur.com/lMZsuWi.png" group-title="فارسی - تلویزیون",Persiana Family
+https://familyhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaFight.fr@HD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Fight
+https://fighthls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaFolk.fr@HD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Folk
+https://sonhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaIranian.fr@SD" tvg-logo="https://i.imgur.com/vqrrpBi.png" group-title="فارسی - تلویزیون",Persiana Iranian
+https://irhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaJunior.fr@SD" tvg-logo="https://i.imgur.com/zeKHZYG.png" group-title="فارسی - تلویزیون",Persiana Junior
+https://junhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaKorea.fr@SD" tvg-logo="https://i.imgur.com/si2ZnIA.png" group-title="فارسی - تلویزیون",Persiana Korea
+https://korhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaMedical.fr@SD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Medical
+https://phd2hls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaNostalgia.fr@SD" tvg-logo="https://i.imgur.com/SWO9CKA.png" group-title="فارسی - تلویزیون",Persiana Nostalgia
+https://noshls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaPlus.fr@SD" tvg-logo="https://i.imgur.com/0xttibX.png" group-title="فارسی - تلویزیون",Persiana Plus
+https://euhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaTravel.fr@SD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Travel
+https://ptravelhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaTurkiye.fr@SD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Turkiye
+https://turkhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaVibe.fr@HD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Vibe
+https://raphls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PooyaTV.ir@SD",Pooya TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="RasoulallahTv.ir@HD",RasoulallahTv (1080p)
+https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
+#EXTINF:-1 tvg-id="RoyaTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/0e3d7425-1a1b-47c4-b020-2e09a5fc2598/default" group-title="فارسی - تلویزیون",Roya TV (Iran)
+https://ncdn.telewebion.ir/iribu/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="RTA.af@SD",RTA (1080p)
+https://rta-tv.akamaized.net/live/SD/RTA-1/RTA/RTA-1.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="RTAEducation.af@SD",RTA Education (1080p)
+https://rta-tv.akamaized.net/live/SD/RTA-4/RTA/RTA-4.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="ShamsTV.af@SD",Shams TV
+https://fflive-darya-educationtv.b-cdn.net/master.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TamadonTV.af@SD",Tamadon TV (720p)
+https://hls.tamadon.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TBNNejatTV.ir@SD",TBN Nejat TV
+https://hls.nejat.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="ToloTV.af@SD",Tolo TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolohd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="VoATVPersian.us@SD",VOA Persian (1080p)
+https://voa-ingest.akamaized.net/hls/live/2033876/tvmc07/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="WiseHumanTv.ir@HD",WiseHumanTv (1080p)
+https://avr.host247.net/live/WiseHumanTv/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="YourTimeTV.ir@SD",YourTime TV
+https://hls.yourtime.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="ZagrosTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/e/e4/Kermanshah_Zaghros.svg/960px-Kermanshah_Zaghros.svg.png" group-title="فارسی - تلویزیون",Zagros TV (Iran)
+https://ncdn.telewebion.ir/zagros/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilm2.ir@SD",iFilm 2
+https://live.presstv.co.uk/hls/ifilm2.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmArabic.ir@SD",iFilm Arabic
+https://live.presstv.co.uk/hls/ifilmar.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmEnglish.ir@SD",iFilm English
+https://live.presstv.co.uk/hls/ifilmen.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmPersian.ir@SD",iFilm Persian
+https://live.presstv.co.uk/hls/ifilmfa.m3u8
+#EXTINF:-1 tvg-id="PersianaCinema.fr@SD" tvg-logo="https://i.imgur.com/hgIro9r.png" group-title="فارسی - فیلم و سریال",Persiana Cinema
+https://cinehls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaSeries.fr@HD" tvg-logo="" group-title="فارسی - فیلم و سریال",Persiana Series
+https://onehls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="IRINN.ir@SD",IRINN (576p)
+http://185.9.2.18/chid_926/index.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="TOLOnews.af@SD",TOLOnews (720p)
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8
