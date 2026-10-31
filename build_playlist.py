@@ -285,29 +285,84 @@ def classify(name, code=""):
     return OTHER
 
 def is_alive(url):
-    try:
-        req = urllib.request.Request(url, method="HEAD", headers={
-            "User-Agent": "Mozilla/5.0", "Range": "bytes=0-1"
-        })
-        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-            return 200 <= r.status < 400
-    except Exception:
-        try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": "Mozilla/5.0", "Range": "bytes=0-1023"
-            })
-            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-                return 200 <= r.status < 500
-        except Exception:
+    """
+    بررسی دقیق‌تر زنده بودن لینک:
+    1) HEAD با Range
+    2) GET محدود (چند بایت اول)
+    3) تشخیص پاسخ‌های HTML خطای CDN به‌جای استریم
+    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; playlist-bot/4.1)",
+        "Range": "bytes=0-2047",
+        "Accept": "*/*",
+    }
+
+    def looks_like_stream(data: bytes, content_type: str) -> bool:
+        ct = (content_type or "").lower()
+        if any(x in ct for x in (
+            "mpegurl", "m3u8", "video/", "audio/", "application/octet-stream",
+            "binary", "dash+xml", "mp2t"
+        )):
+            return True
+        if not data:
+            return True  # بعضی سرورها body خالی با 200 می‌دهند
+        head = data[:200].lstrip().lower()
+        # رد کردن صفحه خطا / HTML
+        if head.startswith(b"<!doctype") or head.startswith(b"<html") or b"<html" in head[:50]:
             return False
+        if b"#extm3u" in head or b"#extinf" in head or b"#ext-x" in head:
+            return True
+        # TS/ magics
+        if data[:4] == b"\x47\x40" or data[:3] == b"ID3" or data[:4] == b"ftyp":
+            return True
+        # اگر text/plain ولی شبیه m3u
+        if b"http" in head and (b".m3u8" in head or b"#ext" in head):
+            return True
+        # content-type نامشخص ولی دیتا داریم
+        if not ct or ct.startswith("text/plain"):
+            return len(data) > 0 and not head.startswith(b"{")  # json error
+        return True
+
+    # تلاش ۱: HEAD
+    try:
+        req = urllib.request.Request(url, method="HEAD", headers=headers)
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            code = getattr(r, "status", 200) or 200
+            if 200 <= code < 400:
+                return True
+            if code in (401, 403):
+                # بعضی استریم‌ها با پلیر کار می‌کنند حتی با 401/403
+                return True
+    except Exception:
+        pass
+
+    # تلاش ۲: GET محدود
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+            code = getattr(r, "status", 200) or 200
+            if code >= 500:
+                return False
+            if code in (401, 403, 405):
+                return True
+            if code >= 400:
+                return False
+            data = r.read(512)
+            ctype = r.headers.get("Content-Type", "")
+            return looks_like_stream(data, ctype)
+    except Exception:
+        return False
 
 def check_links(entries):
+    """برمی‌گرداند: (لیست_سالم, تعداد_مرده, لیست_مرده‌ها)"""
     if not CHECK_LINKS or not entries:
-        return entries, 0
-    print(f"Checking {len(entries)} links...")
-    alive, dead = [], 0
+        return entries, 0, []
+    print(f"Checking {len(entries)} links (timeout={TIMEOUT}s, workers={MAX_WORKERS})...")
+    alive, dead_list = [], []
+
     def worker(item):
         return item, is_alive(item[2])
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         futs = [pool.submit(worker, e) for e in entries]
         for i, fut in enumerate(concurrent.futures.as_completed(futs), 1):
@@ -315,10 +370,10 @@ def check_links(entries):
             if ok:
                 alive.append(item)
             else:
-                dead += 1
+                dead_list.append(item)
             if i % 100 == 0 or i == len(entries):
-                print(f"  {i}/{len(entries)} — alive: {len(alive)}")
-    return alive, dead
+                print(f"  {i}/{len(entries)} — alive: {len(alive)} | dead: {len(dead_list)}")
+    return alive, len(dead_list), dead_list
 
 def load_old_urls(path):
     if not os.path.exists(path):
@@ -423,8 +478,17 @@ def main():
 
     print(f"Collected {len(deduped)} unique links")
 
-    alive, dead_count = check_links(deduped)
+    alive, dead_count, dead_list = check_links(deduped)
     final_entries = alive if DROP_DEAD else deduped
+
+    # ذخیره گزارش لینک‌های مرده
+    dead_path = os.path.join(HERE, "dead_links.txt")
+    with open(dead_path, "w", encoding="utf-8") as df:
+        df.write(f"# dead links — {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n")
+        df.write(f"# count: {dead_count}\n\n")
+        for g, ext, url in dead_list:
+            df.write(f"{name_of(ext)}\n{url}\n\n")
+    print(f"Dead report → dead_links.txt ({dead_count})")
 
     idx = {g: i for i, g in enumerate(ORDER)}
     final_entries.sort(key=lambda x: (idx.get(x[0], 99), name_of(x[1]).lower()))
