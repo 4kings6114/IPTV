@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-جمع‌آوری کانال از چند منبع عمومی + کشورها + Free-TV + manual
+IPTV builder:
+- فقط کشورهای مجاز
+- بدون هند و آفریقا
+- دسته‌بندی شبیه mehdi.m3u (منطقه‌ای + فارسی)
 """
 import re, time, os, collections, concurrent.futures, urllib.request, shutil
 from datetime import datetime, timezone
@@ -15,34 +18,112 @@ TIMEOUT     = 7
 DROP_DEAD   = True
 SAVE_BACKUP = True
 
-# کشورها: فارسی + انگلیسی + اروپا + آمریکا
-COUNTRIES = [
+# فقط این کشورها
+ALLOWED_COUNTRIES = {
     "ir", "af",
     "us", "uk", "ca", "au", "nz", "ie",
     "de", "fr", "es", "it", "nl", "pl", "se", "no", "dk", "fi",
     "be", "at", "ch", "pt", "gr", "cz", "ro", "hu", "ua", "ru", "tr",
     "mx", "br", "ar", "cl", "co", "pe",
+}
+
+# کشورهای ممنوع (هند + آفریقا و ...)
+BLOCKED_COUNTRIES = {
+    "in", "pk", "bd", "lk", "np", "bt", "mv",  # هند و جنوب آسیا
+    "ng", "za", "eg", "ke", "gh", "tz", "ug", "et", "ma", "dz", "tn",
+    "sn", "ci", "cm", "ao", "zw", "mz", "rw", "sd", "ly", "so", "cd",
+    "bj", "bf", "ml", "ne", "td", "cf", "ga", "cg", "bi", "mw", "zm",
+    "na", "bw", "ls", "sz", "gm", "sl", "lr", "gn", "gw", "mr", "dj",
+    "er", "ss", "st", "sc", "km", "mg", "mu", "yt", "re",
+    "cn", "jp", "kr", "tw", "hk", "sg", "th", "vn", "id", "my", "ph",  # آسیای شرقی حذف
+}
+
+# کلمات کلیدی برای رد کردن هند / آفریقا / آسیای شرقی ناخواسته
+BLOCK_KEYWORDS = [
+    "india", "indian", "bollywood", "hindi", "bharat", "doordarshan",
+    "zee ", "sony sab", "colors tv", "star plus", "aaj tak", "ndtv",
+    "africa", "african", "nigeria", "nairobi", "lagos", "ghana",
+    "kenya", "ethiopia", "tanzania", "uganda", "senegal", "cameroon",
+    "south africa", "algerian", "egyptian", "moroccan",
 ]
 
-# منابع اضافی عمومی (هر خط = یک پلی‌لیست کامل M3U)
-# هر وقت منبع جدیدی پیدا کردی، همین‌جا اضافه کن
+# منطقه هر کشور
+REGION = {
+    "ir": "fa", "af": "fa",
+    "us": "en", "uk": "en", "ca": "en", "au": "en", "nz": "en", "ie": "en",
+    "de": "eu", "fr": "eu", "es": "eu", "it": "eu", "nl": "eu", "pl": "eu",
+    "se": "eu", "no": "eu", "dk": "eu", "fi": "eu", "be": "eu", "at": "eu",
+    "ch": "eu", "pt": "eu", "gr": "eu", "cz": "eu", "ro": "eu", "hu": "eu",
+    "ua": "eu", "ru": "eu", "tr": "me",
+    "mx": "latam", "br": "latam", "ar": "latam", "cl": "latam",
+    "co": "latam", "pe": "latam",
+}
+
+# نام گروه‌ها (شبیه mehdi.m3u)
+FA_TV   = "فارسی - تلویزیون"
+FA_MOV  = "فارسی - فیلم و سریال"
+FA_MUS  = "فارسی - موزیک"
+FA_NEWS = "اخبار - فارسی"
+
+EN_NEWS = "اخبار - انگلیسی"
+SPORT   = "ورزشی"
+
+MUS_EN    = "موزیک - انگلیسی‌زبان"
+MUS_EU    = "موزیک - اروپا"
+MUS_LATAM = "موزیک - آمریکای لاتین"
+MUS_ME    = "موزیک - خاورمیانه"
+MUS_ROCK  = "موزیک - راک"
+MUS_MTV   = "موزیک - MTV"
+MUS_HIP   = "موزیک - هیپ‌هاپ و رپ"
+MUS_OTHER = "موزیک - سایر"
+
+MOV_EN    = "فیلم - انگلیسی‌زبان"
+MOV_EU    = "فیلم - اروپا"
+MOV_LATAM = "فیلم - آمریکای لاتین"
+MOV_ME    = "فیلم - خاورمیانه"
+MOV_ACT   = "فیلم اکشن"
+MOV_HOR   = "فیلم ترسناک"
+MOV_CLASS = "کلاسیک (فیلم و سریال قدیمی)"
+SERIES    = "سریال و کمدی"
+
+ENT_EN    = "سرگرمی - انگلیسی‌زبان"
+ENT_EU    = "سرگرمی - اروپا"
+ENT_LATAM = "سرگرمی - آمریکای لاتین"
+ENT_ME    = "سرگرمی - خاورمیانه"
+
+KIDS_EN    = "کودک و کارتون - انگلیسی‌زبان"
+KIDS_EU    = "کودک و کارتون - اروپا"
+KIDS_LATAM = "کودک و کارتون - آمریکای لاتین"
+KIDS_ME    = "کودک و کارتون - خاورمیانه"
+
+DOC     = "مستند و علمی - انگلیسی"
+LIFE    = "سبک زندگی، آشپزی و سفر"
+ANIMALS = "حیوانات و طبیعت"
+OTHER   = "سایر"
+
+ORDER = [
+    FA_TV, FA_MOV, FA_MUS, FA_NEWS,
+    EN_NEWS, SPORT,
+    MUS_EN, MUS_EU, MUS_LATAM, MUS_ME, MUS_ROCK, MUS_MTV, MUS_HIP, MUS_OTHER,
+    MOV_EN, MOV_EU, MOV_LATAM, MOV_ME, MOV_ACT, MOV_HOR, MOV_CLASS, SERIES,
+    ENT_EN, ENT_EU, ENT_LATAM, ENT_ME,
+    KIDS_EN, KIDS_EU, KIDS_LATAM, KIDS_ME,
+    DOC, LIFE, ANIMALS, OTHER,
+]
+
+SPLIT = {
+    "persian.m3u": {FA_TV, FA_MOV, FA_MUS, FA_NEWS},
+    "news.m3u":    {FA_NEWS, EN_NEWS},
+    "music.m3u":   {FA_MUS, MUS_EN, MUS_EU, MUS_LATAM, MUS_ME, MUS_ROCK, MUS_MTV, MUS_HIP, MUS_OTHER},
+    "sports.m3u":  {SPORT},
+    "movies.m3u":  {FA_MOV, MOV_EN, MOV_EU, MOV_LATAM, MOV_ME, MOV_ACT, MOV_HOR, MOV_CLASS, SERIES},
+    "kids.m3u":    {KIDS_EN, KIDS_EU, KIDS_LATAM, KIDS_ME},
+}
+
+# فقط استریم کشورهای مجاز + Free-TV (بعد فیلتر می‌شود)
 EXTRA_SOURCES = [
     FREETV,
-    "https://iptv-org.github.io/iptv/languages/fas.m3u",   # فارسی
-    "https://iptv-org.github.io/iptv/languages/eng.m3u",   # انگلیسی
-    "https://iptv-org.github.io/iptv/categories/news.m3u",
-    "https://iptv-org.github.io/iptv/categories/sports.m3u",
-    "https://iptv-org.github.io/iptv/categories/music.m3u",
-    "https://iptv-org.github.io/iptv/categories/movies.m3u",
-    "https://iptv-org.github.io/iptv/categories/documentary.m3u",
-    "https://iptv-org.github.io/iptv/categories/kids.m3u",
-    "https://iptv-org.github.io/iptv/countries/ir.m3u",
-    "https://iptv-org.github.io/iptv/countries/us.m3u",
-    "https://iptv-org.github.io/iptv/countries/uk.m3u",
-    "https://iptv-org.github.io/iptv/countries/de.m3u",
-    "https://iptv-org.github.io/iptv/countries/fr.m3u",
-    "https://iptv-org.github.io/iptv/countries/tr.m3u",
-    "https://iptv-org.github.io/iptv/countries/ca.m3u",
+    "https://iptv-org.github.io/iptv/languages/fas.m3u",
 ]
 
 EPG_URLS = [
@@ -52,26 +133,10 @@ EPG_URLS = [
     "https://epg.pw/xmltv/epg_DE.xml",
 ]
 
-FA_TV, FA_MOV, FA_MUS, FA_NEWS = "فارسی - تلویزیون", "فارسی - فیلم و سریال", "فارسی - موزیک", "اخبار - فارسی"
-EN_NEWS, SPORT, MUSIC, MOVIES  = "اخبار - انگلیسی", "ورزشی", "موسیقی", "فیلم"
-KIDS, DOC, OTHER               = "کودکان", "مستند", "سایر"
-ORDER = [FA_TV, FA_MOV, FA_MUS, FA_NEWS, EN_NEWS, SPORT, MUSIC, MOVIES, KIDS, DOC, OTHER]
-
-SPLIT = {
-    "persian.m3u": {FA_TV, FA_MOV, FA_MUS, FA_NEWS},
-    "news.m3u":    {FA_NEWS, EN_NEWS},
-    "music.m3u":   {FA_MUS, MUSIC},
-    "sports.m3u":  {SPORT},
-    "movies.m3u":  {FA_MOV, MOVIES},
-    "kids.m3u":    {KIDS},
-}
-
-PERSIAN_CODES = {"ir", "af"}
-
 def get(url, tries=3):
     for _ in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/3.3"})
+            req = urllib.request.Request(url, headers={"User-Agent": "playlist-bot/4.0"})
             with urllib.request.urlopen(req, timeout=50) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception:
@@ -97,6 +162,24 @@ def parse(txt):
 def name_of(ext):
     return ext[0].rsplit(",", 1)[-1].strip()
 
+def attrs_of(ext_line):
+    """استخراج tvg-id و group-title از خط EXTINF"""
+    tvg_id = ""
+    m = re.search(r'tvg-id="([^"]*)"', ext_line)
+    if m:
+        tvg_id = m.group(1)
+    return tvg_id
+
+def country_from_tvg(tvg_id):
+    """مثال: CNN.us@SD → us | IRIB1.ir → ir"""
+    if not tvg_id:
+        return ""
+    # pattern: Name.CC or Name.CC@...
+    m = re.search(r'\.([a-z]{2})(?:@|$)', tvg_id.lower())
+    if m:
+        return m.group(1)
+    return ""
+
 def res_of(name):
     m = re.search(r"(\d{3,4})\s*p", name, re.I)
     if m: return int(m.group(1))
@@ -118,28 +201,87 @@ def with_group(ext, group):
         line = re.sub(r'(#EXTINF:-?\d+)', rf'\1 group-title="{group}"', line, 1)
     return [line] + ext[1:]
 
+def is_blocked_name(name):
+    n = name.lower()
+    return any(k in n for k in BLOCK_KEYWORDS)
+
+def region_of(code):
+    return REGION.get(code, "en")
+
 def classify(name, code=""):
     n = name.lower()
-    if code in PERSIAN_CODES or any(x in n for x in ("iran", "irib", "persian", "farsi", "tehran")):
-        if any(x in n for x in ("movie", "film", "series", "serial", "cinema")):
+    reg = region_of(code)
+
+    # فارسی
+    if code in ("ir", "af") or any(x in n for x in (
+        "iran", "irib", "persian", "farsi", "tehran", "press tv",
+        "ifilm", "manoto", "gem tv", "iran international"
+    )):
+        if any(x in n for x in ("movie", "film", "series", "serial", "cinema", "namayesh", "tamasha", "nasim")):
             return FA_MOV
-        if any(x in n for x in ("music", "موزیک")):
+        if any(x in n for x in ("music", "موزیک", "avang", "navahang")):
             return FA_MUS
-        if any(x in n for x in ("news", "خبر", "press", "irinn")):
+        if any(x in n for x in ("news", "خبر", "press", "irinn", "iran international")):
             return FA_NEWS
         return FA_TV
-    if "news" in n:
+
+    # اخبار
+    if any(x in n for x in ("news", "cnn", "bbc", "sky news", "al jazeera", "euronews", "dw ", "cgtn", "france 24")):
         return EN_NEWS
-    if "sport" in n:
+
+    # ورزش
+    if any(x in n for x in ("sport", "espn", "football", "soccer", "nba", "nfl", "mlb", "nhl", "olymp")):
         return SPORT
-    if "music" in n or "mtv" in n:
-        return MUSIC
-    if "movie" in n or "cinema" in n or "film" in n:
-        return MOVIES
-    if "kid" in n or "cartoon" in n or "child" in n:
-        return KIDS
-    if "doc" in n or "documentary" in n:
+
+    # کودک
+    if any(x in n for x in ("kid", "child", "cartoon", "disney", "nickelodeon", "nick jr", "cartoon network", "boomerang", "pbs kids")):
+        if reg == "eu": return KIDS_EU
+        if reg == "latam": return KIDS_LATAM
+        if reg == "me": return KIDS_ME
+        return KIDS_EN
+
+    # موزیک تخصصی
+    if "mtv" in n:
+        return MUS_MTV
+    if any(x in n for x in ("rock", "metal", "classic rock")):
+        return MUS_ROCK
+    if any(x in n for x in ("hip hop", "hip-hop", "rap", "r&b")):
+        return MUS_HIP
+    if any(x in n for x in ("music", "radio", "hits", "vevo", "clubbing")):
+        if reg == "eu": return MUS_EU
+        if reg == "latam": return MUS_LATAM
+        if reg == "me": return MUS_ME
+        if reg == "en": return MUS_EN
+        return MUS_OTHER
+
+    # فیلم تخصصی
+    if any(x in n for x in ("horror", "terror", "scream")):
+        return MOV_HOR
+    if any(x in n for x in ("action", "thriller")):
+        return MOV_ACT
+    if any(x in n for x in ("classic", "vintage", "retro cinema")):
+        return MOV_CLASS
+    if any(x in n for x in ("series", "comedy", "sitcom", "soap")):
+        return SERIES
+    if any(x in n for x in ("movie", "cinema", "film", "hollywood", "hollywood", "hbo", "cinemax")):
+        if reg == "eu": return MOV_EU
+        if reg == "latam": return MOV_LATAM
+        if reg == "me": return MOV_ME
+        return MOV_EN
+
+    # مستند / طبیعت / سبک زندگی
+    if any(x in n for x in ("animal", "nature", "wildlife", "nat geo", "national geographic")):
+        return ANIMALS
+    if any(x in n for x in ("doc", "documentary", "discovery", "history", "science")):
         return DOC
+    if any(x in n for x in ("lifestyle", "cooking", "food", "travel", "home", "garden", "fashion")):
+        return LIFE
+
+    # سرگرمی عمومی
+    if reg == "eu": return ENT_EU
+    if reg == "latam": return ENT_LATAM
+    if reg == "me": return ENT_ME
+    if reg == "en": return ENT_EN
     return OTHER
 
 def is_alive(url):
@@ -193,13 +335,35 @@ def write_m3u(path, entries, epg=True):
         for g, ext, url in entries:
             f.write("\n".join(ext) + "\n" + url + "\n")
 
-def collect_from_url(url, code=""):
+def collect_from_url(url, forced_code=""):
+    """forced_code: وقتی از streams/{cc}.m3u می‌آید"""
     txt = get(url)
     if not txt:
         return []
     out = []
     for ext, stream in parse(txt):
         name = name_of(ext)
+        if is_blocked_name(name):
+            continue
+
+        tvg = attrs_of(ext[0])
+        code = forced_code or country_from_tvg(tvg)
+
+        # اگر کد کشور معلوم است و مجاز نیست → رد
+        if code:
+            if code in BLOCKED_COUNTRIES:
+                continue
+            if code not in ALLOWED_COUNTRIES:
+                continue
+        else:
+            # بدون کد کشور: فقط اگر نام بلاک نشده باشد و از Free-TV/عمومی باشد
+            # برای ایمنی بیشتر رد می‌کنیم مگر forced
+            if not forced_code and url == FREETV:
+                # Free-TV: تلاش برای حدس از نام
+                pass
+            elif not forced_code:
+                continue
+
         g = classify(name, code)
         out.append((g, with_group(ext, g), stream))
     return out
@@ -217,15 +381,15 @@ def main():
 
     entries = []
 
-    # 1) کشورها از iptv-org
-    print(f"Countries ({len(COUNTRIES)})...")
-    for code in COUNTRIES:
-        got = collect_from_url(STREAMS.format(code), code)
+    # 1) فقط کشورهای مجاز
+    print(f"Countries ({len(ALLOWED_COUNTRIES)})...")
+    for code in sorted(ALLOWED_COUNTRIES):
+        got = collect_from_url(STREAMS.format(code), forced_code=code)
         if got:
             print(f"  {code}: {len(got)}")
             entries.extend(got)
 
-    # 2) منابع اضافی
+    # 2) منابع اضافی (فیلترشده)
     print(f"Extra sources ({len(EXTRA_SOURCES)})...")
     for url in EXTRA_SOURCES:
         got = collect_from_url(url)
@@ -238,7 +402,7 @@ def main():
     if os.path.exists(manual):
         for ext, url in parse(open(manual, encoding="utf-8").read()):
             m = re.search(r'group-title="([^"]*)"', ext[0])
-            g = m.group(1) if m else FA_MOV
+            g = m.group(1) if m else FA_TV
             entries.append((g, with_group(ext, g), url))
         print("  manual.m3u added")
 
@@ -272,6 +436,9 @@ def main():
         if subset:
             write_m3u(os.path.join(HERE, fname), subset, epg=True)
             print(f"  {fname}: {len(subset)}")
+        else:
+            # فایل خالی نماند — حداقل هدر
+            write_m3u(os.path.join(HERE, fname), [], epg=True)
 
     new_urls = {url for _, _, url in final_entries}
     added   = len(new_urls - old_urls)
@@ -286,16 +453,14 @@ def main():
     for g in ORDER:
         if g in c:
             lines.append(f"  {g}: {c[g]}")
-    print("\n".join(lines))
+    for g, n in c.most_common():
+        if g not in ORDER:
+            lines.append(f"  {g}: {n}")
+    lines.append(f"Time: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
 
-    summary = f"OK: {total} | +{added} -{removed} | Dead:{dead_count}"
-    with open(stats_path, "w", encoding="utf-8") as f:
-        f.write(summary + "\n")
-        f.write(f"Total: {total}\nAdded: {added}\nRemoved: {removed}\nDead: {dead_count}\n")
-        f.write(f"Time: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}\n")
-        for g in ORDER:
-            if g in c:
-                f.write(f"{g}: {c[g]}\n")
+    text = "\n".join(lines)
+    open(stats_path, "w", encoding="utf-8").write(text + "\n")
+    print(text)
 
 if __name__ == "__main__":
     main()
