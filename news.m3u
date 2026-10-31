@@ -74,6 +74,8 @@ https://jmp2.uk/plu-5e1f7da4bc7d740009831259.m3u8
 https://server.livelegitpro.in:9899/anbnews/anbnews/index.m3u8
 #EXTINF:-1 tvg-id="AnshunComprehensiveNewsChannel.cn@SD" tvg-logo="https://www.tvchinese.net/uploads/tv/anshun.jpg" group-title="اخبار - انگلیسی",Anshun Comprehensive News Channel
 https://hplayer1.juyun.tv/camera/154379194.m3u8
+#EXTINF:-1 tvg-id="ArgusNews.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ARGUS/images/LOGO_HD/image.png" group-title="اخبار - انگلیسی",Argus News (576p)
+https://mumt05.tangotv.in/87NeALx2ARGUSNEWS/index.m3u8
 #EXTINF:-1 tvg-id="AsharqNews.sa@SD" tvg-logo="https://i.imgur.com/bqRC3sl.png" group-title="اخبار - انگلیسی",Asharq News (1080p)
 https://live-news.asharq.com/asharq.m3u8
 #EXTINF:-1 tvg-id="AshwaveegaNews24x7.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ashwaveega_News_24x7.png" group-title="اخبار - انگلیسی",Ashwaveega News 24x7 (720p)
@@ -199,11 +201,11 @@ https://stream.sun0769.com/dgrtv1/mp4tv1_800/index.m3u8
 https://imob.dunyanews.tv/livehd/ngrp:dunyalivehd_2_all/playlist.m3u8
 #EXTINF:-1 tvg-id="DunyaNewsUK.uk@SD" tvg-logo="https://i.imgur.com/dtrTfZC.png" group-title="اخبار - انگلیسی",Dunya News UK (720p) [Not 24/7]
 https://ukintl.dunyanews.tv/liveuk/ngrp:dunyalive_all/playlist.m3u8
+#EXTINF:-1 tvg-id="EACNewsTV.kh@SD" tvg-logo="https://i.imgur.com/EuYhS9Z.png" group-title="اخبار - انگلیسی",EAC News TV
+https://live.eac-news.com/LiveApp/streams/eacnews.m3u8
 #EXTINF:-1 tvg-id="EagleNews.mn@SD" tvg-logo="https://www.mongolsat.mn/assets/img/channel/13.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="اخبار - انگلیسی",Eagle News (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 https://cdn4.skygo.mn/live/disk1/Eagle/DASH-FTA/Eagle.mpd
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ERTNews.gr@HD",ERT News HD (1080p)
-https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTNews/default/index.m3u8
 #EXTINF:-1 tvg-id="EstrellaNews.us@SD" tvg-logo="https://i.imgur.com/HRrkhLq.png" group-title="اخبار - انگلیسی",Estrella News (1080p)
 https://estrella-news-oando.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ETVNews.in@HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ETV_News.png" group-title="اخبار - انگلیسی",ETV News (1080p)
@@ -371,6 +373,8 @@ https://vcdn.dunyanews.tv/lahorelive/ngrp:lnews_1_all/playlist.m3u8
 https://liveplus.lzr.com.cn/xwzh/HD/live.m3u8
 #EXTINF:-1 tvg-id="LivingIndiaNews.in@SD" tvg-logo="https://i.imgur.com/YikaJvd.png" group-title="اخبار - انگلیسی",Living India News (1080p)
 https://stream.ottlive.co.in/livingindia/index.m3u8
+#EXTINF:-1 tvg-id="LokshahiNews.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_LOKSHAHI/images/LOGO_HD/image.png" group-title="اخبار - انگلیسی",Lokshahi News (576p)
+https://mumt05.tangotv.in/87NeALx2LOKSAAHI/index.m3u8
 #EXTINF:-1 tvg-id="MNews.pk@SD" tvg-logo="https://mnews.pk/wp-content/uploads/2025/10/mnews-logo-news.png" group-title="اخبار - انگلیسی",M News (1080p)
 https://cdn.rabta.stream/M-News/index.m3u8
 #EXTINF:-1 tvg-id="MahaaNews.in@SD" tvg-logo="https://i.imgur.com/buT76vR.png" group-title="اخبار - انگلیسی",Mahaa News (1080p)
@@ -398,6 +402,8 @@ https://d2gvyg6lvauoko.cloudfront.net/230226/naxatranewshindi/playlist.m3u8?hdnt
 https://d368vp0qqzvkid.cloudfront.net/11603/88889704/hls/master.m3u8?ads.xumo_channelId=88889704a&ads.xumo_ifaType=&ads.xumo_providerId=3818&ads.xumo_providerName=NBCNCHI
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NBCNewsNOW.us@SD",NBC News NOW (1080p)
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003
+#EXTINF:-1 tvg-id="NENews.in@SD" tvg-logo="https://i.imgur.com/L5GeJFb.png" group-title="اخبار - انگلیسی",NE News (576p)
+https://mumt05.tangotv.in/87NeALx2NENEWS/index.m3u8
 #EXTINF:-1 tvg-id="News1India.in@SD" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_NEWS_1_INDIA/images/LOGO_HD/image.png" group-title="اخبار - انگلیسی",News 1 India (576p)
 https://mumt07.tangotv.in/zHjX9OFlNEWS1INDIA/index.m3u8
 #EXTINF:-1 tvg-id="News1st.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143587_ld_h15_aa.png?lock=720x540" group-title="اخبار - انگلیسی",News 1st (576p)
@@ -450,8 +456,6 @@ https://cdn.pishow.tv/ott/live/1433/master.m3u8
 https://live-us1.thaimomo.com/live-as/chnews1-2/playlist.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12Bronx.us@SD",News12 Bronx [Geo-blocked]
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12Brooklyn.us@SD",News12 Brooklyn [Geo-blocked]
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/index_new.m3u8?omap=https
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12Conneticut.us@SD",News12 Conneticut [Geo-blocked]
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12CH_FFLD_MILF_A1/index_new.m3u8?omap=https
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12HudsonValley.us@SD",News12 Hudson Valley [Geo-blocked]
@@ -460,12 +464,6 @@ https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8?omap=https
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12NewJersey.us@SD",News12 New Jersey [Geo-blocked]
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/index_new.m3u8?omap=https
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12Westchester.us@SD",News12 Westchester [Geo-blocked]
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12PlusConnecticut.us@HD",News12+ Connecticut (1080p) [Geo-blocked]
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12PlusHudsonValley.us@HD",News12+ Hudson Valley (1080p) [Geo-blocked]
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_WC_A1/index_new.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12PlusLongIsland.us@HD",News12+ Long Island (1080p) [Geo-blocked]
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_LI_A1/index_new.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="News12PlusNewJersey.us@HD",News12+ New Jersey (1080p) [Geo-blocked]
@@ -565,6 +563,8 @@ https://live.palitranews.ge/hls/palitratv/index.m3u8
 https://jmp2.uk/plu-6102e04e9ab1db0007a980a1.m3u8
 #EXTINF:-1 tvg-id="PolimerNews.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143664_ld_h9_aa.png?lock=720x540" group-title="اخبار - انگلیسی",Polimer News (576p)
 https://segment.yuppcdn.net/110322/polimernews/playlist.m3u8
+#EXTINF:-1 tvg-id="PragNews.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143671_ld_h15_aa.png?lock=720x540" group-title="اخبار - انگلیسی",Prag News (576p)
+https://streams.tangotv.in/PRAGNEWS/ORIGIN/index.m3u8
 #EXTINF:-1 tvg-id="PrameyaNews7.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143578_ld_h15_aa.png?lock=720x540" group-title="اخبار - انگلیسی",Prameya News7 (576p)
 https://mumt03.tangotv.in/Dsly5z3HPRAMEYANEWS7/index.m3u8
 #EXTINF:-1 tvg-id="PrathamNews.in@SD" tvg-logo="https://papaji.freetvindia.com/media/channels/Pratham_news.png" group-title="اخبار - انگلیسی",Pratham News (576p)

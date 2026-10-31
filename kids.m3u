@@ -31,6 +31,8 @@ http://212.5.144.156:8080/cartoon/index.m3u8
 https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetwork.pk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="کودکان",Cartoon Network (Pakistan)
 https://vodzong.mjunoon.tv:8087/streamtest/cartoon-network-87/live/87H/chunks.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" group-title="کودکان",Cartoon Network (Turkiye)
+http://176.65.153.40:6002/play/a013/index.m3u8
 #EXTINF:-1 tvg-id="CartoonNetworkAsia.sg@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="کودکان",Cartoon Network Asia (720p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36
 https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8
@@ -79,6 +81,8 @@ http://78.108.244.134:8899/ekids
 https://cc-t8lqe1o99pszu.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-t8lqe1o99pszu/playlist.m3u8
 #EXTINF:-1 tvg-name="ERT Kids" tvg-logo="https://i.imgur.com/XkSR66q.png" tvg-id="ERTKids.gr" tvg-chno="10" tvg-country="GR" group-title="کودکان",ERT Kids Ⓖ
 https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTKids/default/index.mpd
+#EXTINF:-1 tvg-id="ExtremaKidsTV.cr@HD" tvg-logo="https://www.vivalivetv.com/public/files/shows/0/1/3027-294x165-FFFFFF.jpg" group-title="کودکان",Extrema Kids TV [Not 24/7]
+https://627bb251f23c7.streamlock.net:444/ExtremaKids/ExtremaKids/playlist.m3u8
 #EXTINF:-1 tvg-id="ForeverKids.us@SD" tvg-logo="https://i.imgur.com/deeQqYZ.png" group-title="کودکان",Forever Kids
 https://jmp2.uk/plu-56171fafada51f8004c4b40f.m3u8
 #EXTINF:-1 tvg-name="FZTV-4 Children 少儿频道" tvg-logo="https://i.imgur.com/J4WtNTX.png" tvg-id="FZTVkids.cn" tvg-chno="20" tvg-country="CN" group-title="کودکان",FZTV-4 Children 少儿频道
@@ -93,6 +97,8 @@ https://dil9xdvretp0f.cloudfront.net/index.m3u8
 https://amg07653-apmc-amg07653c9-samsung-us-8740.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="کودکان" tvg-id="",Kids Street (1080p)
 http://181.78.121.15:8000/play/a00a/index.m3u8
+#EXTINF:-1 tvg-id="KidsTV.id@SD" tvg-logo="https://i.imgur.com/B5YiUIP.png" group-title="کودکان",Kids TV
+http://origin5.mediacdn.ru/live/kidstv/index.m3u8
 #EXTINF:-1 tvg-name="Kids Ukraine – Pluto TV" tvg-logo="https://i.imgur.com/MrIlypV.png" group-title="کودکان",Kids Ukraine – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/622a2d8da9d8210007d918c2/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 tvg-name="Kids – Pluto TV" tvg-logo="https://i.imgur.com/ybd7A0r.png" group-title="کودکان",Kids – Pluto TV

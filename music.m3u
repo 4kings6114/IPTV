@@ -33,6 +33,8 @@ https://jmp2.uk/plu-632aff5e44111b00076ad9b1.m3u8
 https://jmp2.uk/plu-632afc466699570007ed1106.m3u8
 #EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@SD" tvg-logo="https://i.imgur.com/FyNot5W.png" group-title="موسیقی",California Music Channel (1080p)
 https://cmc-cmctv-cineverse.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="موسیقی" tvg-id="CanalWomtv.co@SD",Canal Womtv (720p)
+https://live.amelbatv.co:81/womtvlive/index.m3u8
 #EXTINF:-1 tvg-id="CCTVStormMusic.cn@HD" tvg-logo="https://i.imgur.com/IiiRmrf.png" group-title="موسیقی",CCTV-Storm Music (1080p)
 http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="CityEdenClassicMusic.ru@HD" tvg-logo="https://i.imgur.com/l7BE8l6.png" group-title="موسیقی",City Eden Classic Music [Not 24/7]
@@ -101,6 +103,12 @@ https://d18fcxaqfnwjhj.cloudfront.net/CDN_Ingest/MCN6_MUSIC.smil/Playlist.m3u8
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 #EXTINF:-1 tvg-id="Mh1Music.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540" group-title="موسیقی",Mh 1 Music (720p)
 https://livestream.jswk.online/playlisttest/live/playlist.m3u8
+#EXTINF:-1 group-title="موسیقی" tvg-id="MiMusicaReggaeton.us@SD",Mi Musica Reggaeton (1080p)
+http://181.78.12.119:16123/play/ch53/index.m3u8
+#EXTINF:-1 group-title="موسیقی" tvg-id="MiMusicaRomantica.us@SD",Mi Musica Romantica (1080p)
+http://181.78.12.119:16123/play/ch54/index.m3u8
+#EXTINF:-1 group-title="موسیقی" tvg-id="MiMusicaSalsa.us@SD",Mi Musica Salsa (1080p)
+http://181.78.12.119:16123/play/ch55/index.m3u8
 #EXTINF:-1 tvg-id="MMTV.mv@SD" tvg-logo="https://i.imgur.com/21tpl5b.png" group-title="موسیقی",MMTV (1080p)
 https://sendlive.online/hls/mmtv.m3u8
 #EXTINF:-1 tvg-name="Mongolia Music" tvg-logo="" tvg-chno="40" tvg-country="MN" group-title="موسیقی",Mongolia Music
@@ -157,8 +165,6 @@ https://jmp2.uk/plu-61c1d66518447e000717e4c2.m3u8
 https://jmp2.uk/plu-5d3609cd6a6c78d7672f2a81.m3u8
 #EXTINF:-1 tvg-id="MTVFlowLatino.us@LatAm" tvg-logo="https://images.pluto.tv/channels/62b218fc511d4b00070ddc0c/colorLogoPNG.png" group-title="موسیقی",MTV Flow Latino LatAm (720p)
 https://jmp2.uk/plu-62b218fc511d4b00070ddc0c.m3u8
-#EXTINF:-1 tvg-id="MTVGuyana.gy@SD" tvg-logo="https://i.imgur.com/Ky70brA.png" group-title="موسیقی",MTV Guyana (1080p) [Not 24/7]
-https://stream.mtvgy.com/mtvguyana/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="MTVJerseyShore.us@CA" tvg-logo="https://images.pluto.tv/channels/68b9b0dbf9cf3d7cb9f56d88/colorLogoPNG_1757455543454.png" group-title="موسیقی",MTV Jersey Shore
 https://jmp2.uk/plu-68b9b0dbf9cf3d7cb9f56d88.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="MTVLatinAmerica.us@Panregional",MTV Latin America (1080p)
@@ -189,8 +195,6 @@ https://jmp2.uk/plu-64f9cccf110545000837912e.m3u8
 https://jmp2.uk/plu-5d14fdb8ca91eedee1633117.m3u8
 #EXTINF:-1 tvg-id="MTVSpankinNew.us@CA" tvg-logo="https://images.pluto.tv/channels/6541010f770cf1000866be98/colorLogoPNG.png" group-title="موسیقی",MTV Spankin' New CA (1080p)
 https://jmp2.uk/plu-6541010f770cf1000866be98.m3u8
-#EXTINF:-1 group-title="موسیقی" tvg-id="MTVSub.fi@SD",MTV Sub (720p)
-https://live-fi.tvkaista.net/sub/live.m3u8
 #EXTINF:-1 tvg-id="MTVTeenMom.se@SE" tvg-logo="https://images.pluto.tv/channels/61c092157e1b8b0007372a35/colorLogoPNG_1748001686588.png" group-title="موسیقی",MTV Teen Mom (Sweden) (720p)
 https://jmp2.uk/plu-61c09342b3a6230007a45119.m3u8
 #EXTINF:-1 tvg-id="MTVTeenMom.se@DK" tvg-logo="https://images.pluto.tv/channels/61c092157e1b8b0007372a35/colorLogoPNG_1748001686588.png" group-title="موسیقی",MTV Teen Mom (Sweden) DK (720p)
@@ -207,8 +211,6 @@ https://jmp2.uk/plu-61c1d56f28e94c0007827bdb.m3u8
 https://live.streaming.a2d.tv/content/channels/uutiset/cmaf.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="MTV2.us@East",MTV2 (720p)
 http://198.58.104.90:8989/mtv2/index.m3u8
-#EXTINF:-1 group-title="موسیقی" tvg-id="MTV3.fi@SD",MTV3 (720p)
-https://live-fi.tvkaista.net/mtv3/live.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="MusicBoxClassic.cz@SD",Music Box Classic
 http://88.212.15.50/live/mb_classic/index.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="MusicBoxDance.cz@SD",Music Box Dance
@@ -223,6 +225,8 @@ http://777905.live.tvstitch.com/playlist.m3u8?source=aHR0cHM6Ly9obHMtY2RuMS5keXZ
 http://88.212.15.50/live/mb_sexy/index.m3u8
 #EXTINF:-1 tvg-name="Music Channel" tvg-logo="http://media.boni-records.com/logo.png" tvg-id="Boni-Records.com.us" tvg-chno="3" tvg-country="US" group-title="موسیقی",Music Channel
 http://media.boni-records.com/index.m3u8
+#EXTINF:-1 tvg-id="MusicIndia.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143563_ld_h15_aa.png?lock=720x540" group-title="موسیقی",Music India (576p)
+https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="MusicTVGranada.es@SD",Music TV Granada (1080p) [Not 24/7]
 https://cloudvideo.servers10.com:8081/8032/index.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="NASHEMusic.ua@SD",NASHE Music (720p)
@@ -283,8 +287,6 @@ https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u
 https://hls.vantagetv.co.uk/vmusicuk_stream/index.m3u8
 #EXTINF:-1 tvg-name="VH1+ Music Legends – Pluto TV" tvg-logo="https://i.imgur.com/kJ1MDVi.png" group-title="موسیقی",VH1+ Music Legends – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e8cc10ca869f00078efca8/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
-#EXTINF:-1 tvg-id="VintageMusic.cr@SD" tvg-logo="https://i.imgur.com/KImqYnN.jpeg" group-title="موسیقی",Vintage Music (720p)
-https://59ef525c24caa.streamlock.net/vmtv/tvvintage/playlist.m3u8
 #EXTINF:-1 group-title="موسیقی" tvg-id="VOXMusicTV.pl@SD",VOX Music TV (1080p)
 http://92.114.85.87:8016/play/a00a/index.m3u8
 #EXTINF:-1 tvg-id="YoMTV.us@SD" tvg-logo="https://images.pluto.tv/channels/654102ed770cf1000866c307/colorLogoPNG.png" group-title="موسیقی",Yo! MTV (1080p)

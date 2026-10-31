@@ -25,8 +25,6 @@ https://mediaserver.abnvideos.com/streams/abnbiblemovies.m3u8
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="AfraFilm.ir@SD" tvg-logo="" group-title="فیلم",Afra Film
 https://afrafhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="AllTimeMovies.in@SD" tvg-logo="https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj" group-title="فیلم",All Time Movies (576p)
-https://tvsen6.aynaott.com/a2cKGQtB/index.m3u8
 #EXTINF:-1 tvg-id="ARTFLIXMovieClassics.us@SD" tvg-logo="https://i.imgur.com/5pOZQB4.png" group-title="فیلم",ARTFLIX Movie Classics (720p)
 https://amogonetworx-artflix-1-nl.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="AsianetMovies.in@SD" tvg-logo="https://i.imgur.com/cps67hs.png" group-title="فیلم",Asianet Movies (396p)
@@ -277,6 +275,8 @@ https://appletree-mytimeuk-rakuten.amagi.tv/playlist.m3u8
 https://appletree-mytimeau-samsung.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="NEWKMOVIES.us@SD" tvg-logo="https://i.imgur.com/wCgirjc.png" group-title="فیلم",NEW K.MOVIES (1080p)
 https://ads.its-newid.net/api/manifest.m3u8?ads.service_id=GB1700007PK&channel_id=newid_343&tp=samsung_tvplus
+#EXTINF:-1 tvg-name="Nova Cinema" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-cinema-cz.png" tvg-id="NovaCinema.cz" tvg-chno="9" tvg-country="CZ" group-title="فیلم",Nova Cinema
+https://sktv.mxnticek.eu/new/stream.php?ch=NovaCinema
 #EXTINF:-1 tvg-id="ONMovies.vn@SD" tvg-logo="https://i.ibb.co/fdbgvtT8/IMG-2523.webp" group-title="فیلم",ON Movies (720p)
 https://freem3u.xyz/api/live/play.m3u8?vid=181
 #EXTINF:-1 tvg-id="OscarMoviesBhojpuri.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s143638_ld_h9_ab.png?lock=720x540" group-title="فیلم",Oscar Movies Bhojpuri (720p)
@@ -403,6 +403,8 @@ https://stream.qazcdn.net/ex6r514/silkwaycinema/index.m3u8
 https://samitaorigin.tangotv.in/SONERICINEMA/SAMITAORIGIN/index.m3u8
 #EXTINF:-1 group-title="فیلم" tvg-id="SonyMovies.br@SD",Sony Movies (720p)
 http://45.162.64.114/SONY_MOVIES/index.m3u8
+#EXTINF:-1 tvg-id="SonyMovies.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Sony_Movies_Logo.svg/500px-Sony_Movies_Logo.svg.png" group-title="فیلم",Sony Movies (United States) (720p)
+https://a-cdn.klowdtv.com/live1/smc_720p/playlist.m3u8
 #EXTINF:-1 group-title="فیلم" tvg-id="StarCinema.ru@SD",Star Cinema
 https://dash2.antik.sk/live/test_star_cinema_atktv/playlist.m3u8
 #EXTINF:-1 tvg-id="StarMaaMovies.in@HD" tvg-logo="https://dtil.tmsimg.com/assets/s143826_ld_h15_aa.png?lock=720x540" group-title="فیلم",Star Maa Movies HD (720p)

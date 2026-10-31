@@ -19,8 +19,6 @@ http://168.196.127.137:6001/play/a06v/index.m3u8
 https://5c7b683162943.streamlock.net/live/ngrp:sportsone_all/playlist.m3u8
 #EXTINF:-1 tvg-id="BahrainSports2.bh@SD" tvg-logo="https://i.imgur.com/ZkuZmIo.png" group-title="ورزشی",Bahrain Sports 2 (720p) [Not 24/7]
 https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8
-#EXTINF:-1 tvg-name="BBC Radio 5 Sports Extra" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd5s-epg.png" tvg-id="BBCRadio5SportsExtra.uk" tvg-chno="9" tvg-country="GB" group-title="ورزشی",BBC Radio 5 Sports Extra
-https://lsn.lv/bbcradio.m3u8?station=bbc_radio_five_live_sports_extra&bitrate=320000
 #EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD",beIN SPORTS XTRA (1080p)
 https://bein-xtra-bein.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="beINSPORTSXTRAenEspanol.us@SD" tvg-logo="https://i.imgur.com/V562tpO.png" group-title="ورزشی",beIN SPORTS XTRA en Espanol (1080p)
@@ -89,8 +87,6 @@ http://88.212.15.50/live/esp_4k_atk/playlist.m3u8
 http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
 http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports2.us@HD",Fox Sports 2 (720p)
-https://tvsen7.aynascope.net/foxsports2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FTFSports.us@SD",FTF Sports (720p)
 https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 tvg-id="FuboSportsNetwork.us@SD" tvg-logo="https://i.imgur.com/qFNRJLb.png" group-title="ورزشی",Fubo Sports Network (1080p)
@@ -292,5 +288,7 @@ https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
 http://cdnua05.hls.tv/946/hls/8743361621b245838bee193c9ec28322/3999/stream.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CTSport.cz@SD",ČT Sport (720p)
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
+#EXTINF:-1 tvg-name="ČT sport Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/ct-sport-cz.png" tvg-chno="7" tvg-country="CZ" group-title="ورزشی",ČT sport Plus
+https://sktv.mxnticek.eu/new/stream.php?ch=%C4%8CT%20sport%20Plus
 #EXTINF:-1 group-title="ورزشی" tvg-id="AstrahanRuSport.ru@SD",Астрахань.Ru Sport (720p)
 https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
