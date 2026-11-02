@@ -1,6 +1,8 @@
 #EXTM3U url-tvg="https://epg.pw/xmltv/epg_IR.xml" url-tvg="https://epg.pw/xmltv/epg_US.xml" url-tvg="https://epg.pw/xmltv/epg_GB.xml" url-tvg="https://epg.pw/xmltv/epg_DE.xml"
 #EXTINF:-1 group-title="ورزشی" tvg-id="ACISportTV.it@SD",ACI Sport TV (1080p)
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="AntenaSport.ro@SD",AntenaSport
+https://stream1.antenaplay.ro/as/AS.ro/chunklist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="AyMSports.mx@SD",AyM Sports (1080p)
 http://168.196.127.137:6001/play/a06v/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD",beIN SPORTS XTRA (1080p)
@@ -11,6 +13,8 @@ https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
 http://168.196.127.137:6001/play/a08r/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="DiviSport.ua@SD",DiviSport (1080p)
 http://stream.mcquack.net/457/index.m3u8
+#EXTINF:-1 tvg-name="Duna World / M4+ Sport" tvg-logo="https://i.imgur.com/DciAdFF.png" tvg-id="DunaWorld.hu" tvg-chno="6" tvg-country="HU" group-title="ورزشی",Duna World / M4+ Sport
+http://141.94.193.53:80/Duna_World_M4_Sport+_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ElevenSports1.pl@SD",Eleven Sports 1
 http://92.114.85.87:8002/play/a00e/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ElevenSports2.pl@SD",Eleven Sports 2 (1080p)
@@ -56,6 +60,8 @@ http://168.228.44.241:9997/play/a06p/index.m3u8
 http://158.172.155.130:8000/play/a0ao/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPNU.us@HD",ESPNU HD (720p)
 http://85.237.89.160:9590/usa-s/ESPN-U-HD/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport1.fr@Germany",Eurosport 1 Germany
+http://90.183.52.46:4000/play/a06v/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport1.fr@Hungary",Eurosport 1 Hungary
 http://88.212.7.14/live/esp1_hun/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport1.fr@Spain",Eurosport 1 Spain (576p)
@@ -67,10 +73,14 @@ http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport4KCzechia.cz@UHD",Eurosport 4K Czechia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.15.50/live/esp_4k_atk/playlist.m3u8
+#EXTINF:-1 tvg-name="EuroSport1" tvg-logo="https://files.cdn.magio.tv/tv_logos/eurosport-1-hd.png" tvg-id="Eurosport1.hu" tvg-chno="29" tvg-country="HU" group-title="ورزشی",EuroSport1
+http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports.ar@SD",Fox Sports (1080p)
 http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
 http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports2.us@HD",Fox Sports 2 (720p)
+https://tvsen7.aynascope.net/foxsports2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FTFSports.us@SD",FTF Sports (720p)
 https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="M4Sport.hu@SD",M4 Sport (1080p)
@@ -112,22 +122,6 @@ http://stream.mcquack.net/234/index.m3u8
 http://stream.mcquack.net/235/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SkyRacing1.au@SD",Sky Racing 1 (720p)
 https://636ffd31f0e12.streamlock.net/RacingStream1/RacingStream1/playlist.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport1.nz@SD",Sky Sport 1
-http://37.49.224.5/stream/44/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport2.nz@SD",Sky Sport 2
-http://37.49.224.5/stream/45/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport3.nz@SD",Sky Sport 3
-http://37.49.224.5/stream/46/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport4.nz@SD",Sky Sport 4
-http://37.49.224.5/stream/51/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport7.nz@SD",Sky Sport 7
-http://37.49.224.5/stream/50/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport8.nz@SD",Sky Sport 8
-http://37.49.224.5/stream/70/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySport9.nz@SD",Sky Sport 9
-http://37.49.224.5/stream/52/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySportSelect.nz@SD",Sky Sport Select
-http://37.49.224.5/stream/53/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SkySports1.mx@SD",Sky Sports 1 (1080p)
 http://45.228.234.9:8000/play/a06b/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sport1.ua@SD",Sport 1 (576p)
@@ -153,12 +147,12 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/608030eff
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sport1.cz@SD",Sport1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://88.212.15.50/live/test_sport1_25p/playlist.m3u8
-#EXTINF:-1 tvg-name="Sport1" tvg-logo="" tvg-id="Sport1.hu" tvg-chno="6" tvg-country="HU" group-title="ورزشی",Sport1 Ⓖ
+#EXTINF:-1 tvg-name="Sport1" tvg-logo="https://www.tvmustra.hu/logok/csatikon/sport1.gif" tvg-id="Sport1.hu" tvg-chno="18" tvg-country="HU" group-title="ورزشی",Sport1 Ⓖ
 http://141.94.193.53:80/Sport_1_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sport2.cz@SD",Sport2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
 http://88.212.15.50/live/test_sport_2/playlist.m3u8
-#EXTINF:-1 tvg-name="Sport2" tvg-logo="" tvg-id="Sport2.hu" tvg-chno="7" tvg-country="HU" group-title="ورزشی",Sport2 Ⓖ
+#EXTINF:-1 tvg-name="Sport2" tvg-logo="https://www.tvmustra.hu/logok/csatikon/sport2.gif" tvg-id="Sport2.hu" tvg-chno="19" tvg-country="HU" group-title="ورزشی",Sport2 Ⓖ
 http://141.94.193.53:80/Sport_2_HD/index.m3u8
 #EXTINF:-1 tvg-name="Sport2U" tvg-logo="https://i.imgur.com/WW0lNk1.png" tvg-chno="3" group-title="ورزشی",Sport2U
 https://stream9.xdevel.com/video0s976916-1685/stream/playlist_dvr.m3u8

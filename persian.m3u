@@ -265,5 +265,7 @@ https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIO
 http://185.9.2.18/chid_926/index.m3u8
 #EXTINF:-1 tvg-id="IRINN2.ir@SD" tvg-logo="https://i.imgur.com/8tzsC9h.png" group-title="اخبار - فارسی",IRINN 2
 https://ncdn.telewebion.ir/irinn2/live/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="SuperExpressTV.pl@FAST",Super Express TV (1080p)
+https://prx-y5cf8.mediatool.tv/playout/sepl-abr67/index.m3u8
 #EXTINF:-1 group-title="اخبار - فارسی" tvg-id="TOLOnews.af@SD",TOLOnews (720p)
 https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8
