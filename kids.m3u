@@ -146,3 +146,5 @@ https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="XtremaCartoons.ar@SD",Xtrema Cartoons
 #EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1390
 https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - خاورمیانه" tvg-id="CartoonNetwork.tr@SD",Cartoon Network
+http://176.65.153.40:6002/play/a013/index.m3u8
