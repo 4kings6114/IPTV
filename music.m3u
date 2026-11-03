@@ -143,8 +143,6 @@ https://musichls.persiana.live/hls/stream.m3u8
 http://stream.mcquack.net/257/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="51RadioTV.it@SD",51 Radio TV (480p) [Geo-blocked]
 http://wms.shared.streamshow.it/canale51/canale51/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="7RadioVisione.it@HD",7 RadioVisione (720p)
-https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="AdriaMusicTelevision.de@SD",Adria Music Television
 https://adriaapp.b-cdn.net/1080p/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BNRNieuwsradio.nl@SD",BNR Nieuwsradio (720p) [Geo-blocked]
@@ -238,8 +236,6 @@ https://radio10.prd1.talpatvcdn.nl/2b725bc7c93f477eaf0e43955ea8a6c1/index.m3u8
 https://live02-seg.msr.cdn.mediaset.net/live/ch-ec/ec-clr.isml/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Radio2.be@SD",Radio 2 (720p)
 https://live.vrtcdn.be/groupa/live/66a9668e-b37b-4de2-878e-0218563b2dd2/live.isml/.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Radio3.es@SD",Radio 3 (720p)
-https://rtvelivestream.rtve.es/rtvesec/rne/rne3_main.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Radio350.nl@SD",Radio 350 (360p) [Not 24/7]
 https://stream.radio350.nl/hls/radio350.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Radio3i.ch@SD",Radio 3i (720p)
@@ -260,16 +256,14 @@ https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S35394734/Z6U2wGoDYANk/p
 https://eu1.servers10.com:8081/8116/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadiowaCzworka.pl@SD",Radio Czwórka (1080p)
 https://stream14.polskieradio.pl/pr4_video/video_pr4.stream/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RADIODISCOuntTV.ch@SD",RADIO DISCOunt TV (1080p)
+https://585b674743bbb.streamlock.net/9030/9030/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Radiofreccia.it@SD",Radio Freccia TV (1080p)
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_video.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioFxNet.ro@HD",Radio Fx Net (720p)
 https://streamlov.alsolnet.com/radiofxnet/live/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioIbizaTV.it@SD",Radio Ibiza TV (720p) [Not 24/7]
 https://5929b138b139d.streamlock.net/RadioIbizaTV/livestream/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioIglesias.it@SD",Radio Iglesias (576p) [Geo-blocked]
-http://wms.shared.streamshow.it/visualradio/mp4:visualradio/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioIglesiasSardegna.it@SD",Radio Iglesias Sardegna (576p) [Geo-blocked]
-https://59d7d6f47d7fc.streamlock.net/visualradio/visualradio/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Italia Trend" tvg-logo="https://i.imgur.com/ecpfn3e.png" tvg-id="RadioItaliaTrendTV.it" tvg-chno="4716" group-title="موزیک - اروپا",Radio Italia Trend
 https://radioitalia-samsungitaly.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RadioJND.nl@SD",Radio JND (1080p)
@@ -398,6 +392,8 @@ https://v2.tustreaming.cl/americamovil/index.m3u8
 https://v2.tustreaming.cl/radioancoatv/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioArmoniaTV.cl@SD",Radio Armonia TV (720p)
 https://v2.tustreaming.cl/armoniamovil/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioConexionWebTV.ar@SD",Radio Conexion Web TV (720p)
+https://tuvideoonline.com.ar:3391/live/radioconexionlive.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioContemporaneaCoihueco.cl@SD",Radio Contemporanea Coihueco (720p)
 https://tv.arkeo.cl:19360/8046/8046.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioDuna.cl@SD",Radio Duna (720p)
@@ -408,14 +404,14 @@ https://vmix.dyndns.biz/Edelweiss/index.m3u8
 https://tv.arkeo.cl:1936/elsembrador/elsembrador/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioFantasiaTV.cl@SD",Radio Fantasia TV (720p)
 https://v2.tustreaming.cl/fantasiatv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioFrecuenciaUno.cl@SD",Radio Frecuencia Uno (720p)
+https://v1.tustreaming.cl/frecuencia1tv/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioLaSerenaTV.cl@SD",Radio La Serena TV (720p)
 https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioMaster.pe@HD",Radio Master (720p)
 https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioNuble.cl@SD",Radio Nuble (720p)
 https://tv.telselec.cl:3376/live/nublefmlive.m3u8
-#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioOndaDigital.pe@SD",Radio Onda Digital (1080p)
-https://live.ondadigitaltv.com/RADIOODTV/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioPanoramica.cl@SD",Radio Panoramica (720p)
 https://v2.tustreaming.cl/alingeproducciones/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioPopularTV.cl@SD",Radio Popular TV
@@ -450,6 +446,8 @@ https://live.tvcontrolcp.com:8081/radiozona/index.m3u8
 http://204.199.3.2/.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadiolaTV.co@SD",Radiola TV (1080p)
 http://158.172.217.18:8000/play/a01k/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Radiotele.mx@SD",Radiotele Morelia (352p)
+http://linkrt.ddns.net:8080/hls/rtmorelia_MID.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTVOriente.pe@SD",RadioTV Oriente (720p)
 https://live.obslivestream.com/tvoriente/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RetromusicaTelevision.cl@SD",Retromusica Television (720p)
