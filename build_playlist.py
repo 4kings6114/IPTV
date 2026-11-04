@@ -205,6 +205,36 @@ def is_blocked_name(name):
     n = name.lower()
     return any(k in n for k in BLOCK_KEYWORDS)
 
+def load_excludes(path=None):
+    """خواندن exclude.txt: هر خط URL یا بخشی از نام کانال"""
+    path = path or os.path.join(HERE, "exclude.txt")
+    names, urls = set(), set()
+    if not os.path.exists(path):
+        return names, urls
+    with open(path, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line.startswith("http://") or line.startswith("https://"):
+                urls.add(line)
+            else:
+                names.add(line.lower())
+    return names, urls
+
+# پر می‌شود در main()
+EXCLUDE_NAMES = set()
+EXCLUDE_URLS = set()
+
+def is_excluded(name, url=""):
+    if url and url in EXCLUDE_URLS:
+        return True
+    n = (name or "").lower()
+    for x in EXCLUDE_NAMES:
+        if x and x in n:
+            return True
+    return False
+
 def region_of(code):
     return REGION.get(code, "en")
 
@@ -240,12 +270,20 @@ def classify(name, code=""):
         if reg == "me": return KIDS_ME
         return KIDS_EN
 
+    # مستند / طبیعت / سبک زندگی — قبل از موزیک تا NatGeo اشتباه دسته‌بندی نشود
+    if any(x in n for x in ("animal", "nature", "wildlife", "nat geo", "national geographic")):
+        return ANIMALS
+    if re.search(r"\b(doc(?:umentary)?|discovery|history|science)\b", n):
+        return DOC
+    if any(x in n for x in ("lifestyle", "cooking", "food", "travel", "home", "garden", "fashion")):
+        return LIFE
+
     # موزیک تخصصی
     if "mtv" in n:
         return MUS_MTV
-    if any(x in n for x in ("rock", "metal", "classic rock")):
+    if re.search(r"\b(rock|metal|classic\s+rock)\b", n):
         return MUS_ROCK
-    if any(x in n for x in ("hip hop", "hip-hop", "rap", "r&b")):
+    if re.search(r"\b(hip[\s\-]?hop|rap|r\s*&\s*b)\b", n):
         return MUS_HIP
     if any(x in n for x in ("music", "radio", "hits", "vevo", "clubbing")):
         if reg == "eu": return MUS_EU
@@ -257,7 +295,7 @@ def classify(name, code=""):
     # فیلم تخصصی
     if any(x in n for x in ("horror", "terror", "scream")):
         return MOV_HOR
-    if any(x in n for x in ("action", "thriller")):
+    if re.search(r"\b(action|thriller)\b", n):
         return MOV_ACT
     if any(x in n for x in ("classic", "vintage", "retro cinema")):
         return MOV_CLASS
@@ -268,14 +306,6 @@ def classify(name, code=""):
         if reg == "latam": return MOV_LATAM
         if reg == "me": return MOV_ME
         return MOV_EN
-
-    # مستند / طبیعت / سبک زندگی
-    if any(x in n for x in ("animal", "nature", "wildlife", "nat geo", "national geographic")):
-        return ANIMALS
-    if any(x in n for x in ("doc", "documentary", "discovery", "history", "science")):
-        return DOC
-    if any(x in n for x in ("lifestyle", "cooking", "food", "travel", "home", "garden", "fashion")):
-        return LIFE
 
     # سرگرمی عمومی
     if reg == "eu": return ENT_EU
@@ -400,33 +430,41 @@ def collect_from_url(url, forced_code=""):
         name = name_of(ext)
         if is_blocked_name(name):
             continue
+        if is_excluded(name, stream):
+            continue
 
         tvg = attrs_of(ext[0])
-        code = forced_code or country_from_tvg(tvg)
+        real_code = country_from_tvg(tvg)
 
-        # اگر کد کشور معلوم است و مجاز نیست → رد
-        if code:
-            if code in BLOCKED_COUNTRIES:
+        # اولویت با کد واقعی tvg-id: حتی داخل streams/{allowed} کشور بلاک‌شده رد شود
+        if real_code:
+            if real_code in BLOCKED_COUNTRIES or real_code not in ALLOWED_COUNTRIES:
                 continue
-            if code not in ALLOWED_COUNTRIES:
-                continue
+            code = real_code
         else:
-            # بدون کد کشور: فقط اگر نام بلاک نشده باشد و از Free-TV/عمومی باشد
-            # برای ایمنی بیشتر رد می‌کنیم مگر forced
-            if not forced_code and url == FREETV:
-                # Free-TV: تلاش برای حدس از نام
-                pass
-            elif not forced_code:
-                continue
+            code = forced_code
+            if code:
+                if code in BLOCKED_COUNTRIES or code not in ALLOWED_COUNTRIES:
+                    continue
+            else:
+                if not forced_code and url == FREETV:
+                    pass  # Free-TV بدون کد مجاز است
+                elif not forced_code:
+                    continue
 
         g = classify(name, code)
         out.append((g, with_group(ext, g), stream))
     return out
 
 def main():
+    global EXCLUDE_NAMES, EXCLUDE_URLS
     playlist_path = os.path.join(HERE, "playlist.m3u")
     backup_path   = os.path.join(HERE, "playlist-backup.m3u")
     stats_path    = os.path.join(HERE, "build_stats.txt")
+
+    EXCLUDE_NAMES, EXCLUDE_URLS = load_excludes()
+    if EXCLUDE_NAMES or EXCLUDE_URLS:
+        print(f"Exclude: {len(EXCLUDE_NAMES)} names, {len(EXCLUDE_URLS)} urls")
 
     old_urls = load_old_urls(playlist_path)
 
@@ -452,14 +490,26 @@ def main():
         print(f"  {short}: {len(got)}")
         entries.extend(got)
 
-    # 3) manual
+    # 3) manual (با فیلتر کشور + keyword + exclude)
     manual = os.path.join(HERE, "manual.m3u")
     if os.path.exists(manual):
+        man_count = 0
+        man_skip = 0
         for ext, url in parse(open(manual, encoding="utf-8").read()):
+            name = name_of(ext)
+            if is_blocked_name(name) or is_excluded(name, url):
+                man_skip += 1
+                continue
+            tvg = attrs_of(ext[0])
+            code = country_from_tvg(tvg)
+            if code and (code in BLOCKED_COUNTRIES or code not in ALLOWED_COUNTRIES):
+                man_skip += 1
+                continue
             m = re.search(r'group-title="([^"]*)"', ext[0])
             g = m.group(1) if m else FA_TV
             entries.append((g, with_group(ext, g), url))
-        print("  manual.m3u added")
+            man_count += 1
+        print(f"  manual.m3u added: {man_count} (skipped {man_skip})")
 
     # dedupe با اولویت کیفیت
     best = {}
