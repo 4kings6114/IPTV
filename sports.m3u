@@ -1,14 +1,14 @@
 #EXTM3U url-tvg="https://epg.pw/xmltv/epg_IR.xml" url-tvg="https://epg.pw/xmltv/epg_US.xml" url-tvg="https://epg.pw/xmltv/epg_GB.xml" url-tvg="https://epg.pw/xmltv/epg_DE.xml"
 #EXTINF:-1 group-title="ورزشی" tvg-id="ACISportTV.it@SD",ACI Sport TV (1080p)
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="AyMSports.mx@SD",AyM Sports (1080p)
-http://168.196.127.137:6001/play/a06v/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD",beIN SPORTS XTRA (1080p)
 https://bein-xtra-bein.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CanalShowsport.ar@SD",Canal Showsport (720p)
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CBSSportsGolazoNetwork.us@SD",CBS Sports Golazo Network (720p)
 https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ClaroSports.mx@SD",Claro Sports (1080p)
+http://168.196.127.137:6001/play/a08r/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="DiviSport.ua@SD",DiviSport (1080p)
 http://stream.mcquack.net/457/index.m3u8
 #EXTINF:-1 tvg-name="Duna World / M4+ Sport" tvg-logo="https://i.imgur.com/DciAdFF.png" tvg-id="DunaWorld.hu" tvg-chno="6" tvg-country="HU" group-title="ورزشی",Duna World / M4+ Sport
@@ -31,6 +31,8 @@ https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports3/default/index.mpd
 https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTSports4/default/index.mpd
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPN.br@SD",ESPN (1080p)
 http://181.78.197.59:8000/play/a07z/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ESPN2.us@HD",ESPN 2 HD (720p)
+http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPN2LatinAmerica.us@South",ESPN 2 Latin America (1080p)
 https://barinaslive1.boldmss.com/ESPN_2/ESPN_2.isml/ESPN_2.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPN2LatinAmerica.us@Colombia",ESPN 2 Latin America Colombia (1080p)
@@ -52,8 +54,12 @@ https://barinaslive1.boldmss.com/ESPN/ESPN.isml/ESPN.mpd?
 https://barinaslive1.boldmss.com/ESPN/ESPN.isml/ESPN.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPNLatinAmerica.us@Colombia",ESPN Latin America Colombia (1080p)
 http://190.61.47.54:8000/play/a004/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ESPNLatinAmerica.us@Mexico",ESPN Latin America Mexico (1080p)
+http://168.228.44.241:9997/play/a06p/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPNPremium.ar@HD",ESPN Premium HD (1080p)
 http://158.172.155.130:8000/play/a0ao/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="ESPNU.us@HD",ESPNU HD (720p)
+http://85.237.89.160:9590/usa-s/ESPN-U-HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport1.fr@Czechia",Eurosport 1 Czechia
 http://88.212.7.14/live/test_esp1_hevc_tizen/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport1.fr@Germany",Eurosport 1 Germany
@@ -77,6 +83,10 @@ http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8
 http://88.212.15.50/live/esp_4k_atk/playlist.m3u8
 #EXTINF:-1 tvg-name="EuroSport1" tvg-logo="https://files.cdn.magio.tv/tv_logos/eurosport-1-hd.png" tvg-id="Eurosport1.hu" tvg-chno="29" tvg-country="HU" group-title="ورزشی",EuroSport1
 http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports.ar@SD",Fox Sports (1080p)
+http://138.59.227.20:8000/play/a085/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
+http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports2.us@HD",Fox Sports 2 (720p)
 https://tvsen7.aynascope.net/foxsports2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FTFSports.us@SD",FTF Sports (720p)
@@ -102,6 +112,8 @@ https://test02.mdn.ors.at/orf/orfs/qxa/manifest.m3u8
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/prima_sport/live_mq?offsetSeconds=0
 #EXTINF:-1 tvg-name="Rai Sport" tvg-logo="https://i.imgur.com/xsGljsb.png" tvg-id="RaiSport.it" tvg-chno="58" tvg-country="IT" group-title="ورزشی",Rai Sport Ⓖ
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 group-title="ورزشی" tvg-id="RealitateaSportiva.ro@SD",Realitatea Sportiva (720p)
+https://stream.realitatea.net/realitatea/sportiva_md/ts:playlist.m3u8
 #EXTINF:-1 tvg-name="Rete 8 Sport" tvg-logo="https://i.imgur.com/uUAjWlF.png" tvg-country="IT" group-title="ورزشی",Rete 8 Sport
 https://64b16f23efbee.streamlock.net/rete8sport/rete8sport/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SetantaSports1Eurasia.ie@SD",Setanta Sports 1 Eurasia (1080p)
@@ -166,6 +178,8 @@ http://141.94.193.53:80/Sport_2_HD/index.m3u8
 https://stream9.xdevel.com/video0s976916-1685/stream/playlist_dvr.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sportitalia.it@SD",Sportitalia (1080p)
 https://edge-001.streamup.eu/sportitalia/sihd_abr/playlist.m3u8
+#EXTINF:-1 tvg-name="Sportitalia Plus" tvg-logo="https://i.imgur.com/hu56Ya5.png" tvg-id="Sportitalia.it" tvg-chno="60" tvg-country="IT" group-title="ورزشی",Sportitalia Plus
+https://sportsitalia-samsungitaly.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sportivnyy.ru@SD",Sportivnyy (1080p)
 https://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:-1 tvg-name="SportOutdoor.tv" tvg-logo="https://i.imgur.com/fwOuEBl.png" tvg-chno="4513" group-title="ورزشی",SportOutdoor.tv
@@ -199,14 +213,30 @@ https://mumbai-edge.smartplaytv.in/TraceSport/index.m3u8
 https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TVRSport.ro@SD",TVR Sport
 https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSClassicSports.us@SD",TVS Classic Sports (360p)
+https://rpn.bozztv.com/gusa/gusa-tvs/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSPinballNetwork.us@SD",TVS Pinball Network (480p)
+https://rpn.bozztv.com/gusa/gusa-TVSCartoonNetwork/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSSports.us@SD",TVS Sports (720p) [Not 24/7]
+https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSSportsBureau.us@SD",TVS Sports Bureau (720p)
+https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSWomenSports.us@SD",TVS Women Sports (720p)
+https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TyCSports.ar@SD",TyC Sports (1080p)
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TyCSportsUSA.ar@SD",TyC Sports USA
+http://45.170.130.224:8000/play/a020/index.m3u8
 #EXTINF:-1 tvg-name="Türkmen Sporty" tvg-logo="" tvg-chno="4" tvg-country="TM" group-title="ورزشی",Türkmen Sporty
 https://alpha.tv.online.tm/hls/ch004.m3u8
 #EXTINF:-1 tvg-name="Unbeaten Sports – Pluto TV" tvg-logo="https://i.imgur.com/UAiv612.png" group-title="ورزشی",Unbeaten Sports – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/64c3b106dac71b00080a26d2/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
+#EXTINF:-1 group-title="ورزشی" tvg-id="vijuPlusSport.ru@HD",viju+ Sport HD (1080p)
+http://46.53.200.153:7777/play/a01l/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="VoyoSport1.ro@HD",Voyo Sport 1 (1080i)
 https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/16677.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="WillowSports.us@SD",Willow Sports (1080p) [Geo-blocked]
+https://amg01269-amg01269c1-firetv-us-5377.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="WinSports.co@SD",Win Sports (1080p)
 http://138.121.15.230:9002/WIN-SPORT/index.m3u8
 #EXTINF:-1 tvg-name="XSport" tvg-logo="https://i.imgur.com/CHDcfrT.png" tvg-id="XSport.ua" tvg-chno="23" tvg-country="UA" group-title="ورزشی",XSport Ⓢ

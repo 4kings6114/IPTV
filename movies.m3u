@@ -61,6 +61,16 @@ http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f4d8594eb979c00077
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5c665db3e6c01b72c4977bc2/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=109&deviceId=5c665db3e6c01b72c4977bc2&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="",Toonami Aftermath Movies (540p)
 http://api.toonamiaftermath.com:3000/movies/playlist.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSDriveInMovie.us@SD",TVS Drive In Movie (360p)
+https://rpn.bozztv.com/gusa/gusa-tvsdriveinmovie/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSFilmNoirNetwork.us@SD",TVS Film Noir Network (720p)
+https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSHollywoodHistory.us@SD",TVS Hollywood History (582p)
+https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSNostalgiaMovies.us@SD",TVS Nostalgia Movies (480p)
+https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSWesternMovie.us@SD",TVS Western Movie (270p)
+https://rpn.bozztv.com/gusa/gusa-tvswesternmovies/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="UniversalCinema.us@SD",Universal Cinema (1080p)
 http://45.167.1.138:8000/play/a06m
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="WhiplashCinema.us@SD",Whiplash Cinema (480p)
@@ -113,6 +123,9 @@ http://92.114.85.87:8008/play/a008/index.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusEmotion.pl@Adria",FILMBOX+ Emotion Adria
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 https://webtvstream.bhtelecom.ba/filmbox_extra.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusEmotion.pl@Bulgaria",FILMBOX+ Emotion Bulgaria
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://213.91.179.28:8000/play/a04r
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusEmotion.pl@Czechia",FILMBOX+ Emotion Czechia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://88.212.15.50/live/test_film_boxextra_hd_hevc/playlist.m3u8
@@ -129,11 +142,17 @@ http://88.212.15.50/live/test_filmbox_plus_atk_1200/playlist.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusLoveCrime.pl@Adria",FILMBOX+ Love & Crime Adria
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 https://webtvstream.bhtelecom.ba/filmbox_stars.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusLoveCrime.pl@Bulgaria",FILMBOX+ Love & Crime Bulgaria
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://213.91.179.28:8000/play/a066
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusLoveCrime.pl@Magyar",FILMBOX+ Love & Crime Magyar
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://88.212.7.14/live/test_filmbox_plus_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusLoveCrime.pl@Romania",FILMBOX+ Love & Crime Romania
 https://nosignal1.antenaplay.ro/hls/fb-love-and-crime-sd/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusOne.pl@Bulgaria",FILMBOX+ One Bulgaria
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://213.91.179.28:8000/play/a06i
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusOne.pl@Czechia",FILMBOX+ One Czechia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://88.212.15.50/live/test_filmbox/playlist.m3u8
@@ -178,6 +197,8 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 tvg-name="Action Hollywood Movies" tvg-logo="" group-title="فیلم اکشن",Action Hollywood Movies
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+#EXTINF:-1 tvg-name="Action24" tvg-logo="https://i.imgur.com/Zi1YohT.png" tvg-id="Action24TV.gr" tvg-chno="31" tvg-country="GR" group-title="فیلم اکشن",Action24
+https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="CanalPlusActionEurope.nl@Magyar",Canal+ Action Europe Magyar
 http://193.33.39.108:9016/play/a02n
 #EXTINF:-1 tvg-name="Film Thriller – Pluto TV" tvg-logo="https://i.imgur.com/hIWMGRW.png" tvg-id="PlutoTVFilmThrillerItaly.it" group-title="فیلم اکشن",Film Thriller – Pluto TV
@@ -190,6 +211,10 @@ https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg0
 https://sktv.mxnticek.eu/new/stream.php?ch=NovaAction
 #EXTINF:-1 tvg-name="Pluto TV Action" tvg-logo="https://i.imgur.com/g8PCdh6.png" group-title="فیلم اکشن",Pluto TV Action
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/561d7d484dc7c8770484914a/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=54&deviceId=561d7d484dc7c8770484914a&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
+#EXTINF:-1 tvg-name="Pluto TV Thrillers" tvg-logo="https://i.imgur.com/jyiFzG4.png" group-title="فیلم اکشن",Pluto TV Thrillers
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e69e08291147bd04a9fd7/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=74&deviceId=5b4e69e08291147bd04a9fd7&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
+#EXTINF:-1 group-title="فیلم اکشن" tvg-id="REVNAction.us@SD",Rev'n Action (720p) [Geo-blocked]
+https://freecast-lukentvlive.vgcdn.net/out/v1/a4f31f297fc5440f814bd2cffd77e689/index.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="TelecineAction.br@SD",Telecine Action (1080p)
 http://46.151.196.223:14326/
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="vijuTV1000action.ru@SD",viju TV1000 action (576p)
@@ -213,6 +238,8 @@ http://stream.mcquack.net/272/index.m3u8
 http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
 #EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="ClassicArtsShowcase.us@SD",Classic Arts Showcase (720p)
 https://classicarts.akamaized.net/hls/live/1024257/CAS/master.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="ClassicCinema.us@SD",Classic Cinema (240p) [Not 24/7]
+https://rpn.bozztv.com/gusa/gusa-classiccinema/index.m3u8
 #EXTINF:-1 tvg-name="Classic Movies" tvg-logo="https://i.imgur.com/feWPHep.png" group-title="کلاسیک (فیلم و سریال قدیمی)",Classic Movies
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/561c5b0dada51f8004c4d855/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=106&deviceId=561c5b0dada51f8004c4d855&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 tvg-name="Film Classici – Pluto TV" tvg-logo="https://i.imgur.com/jNyZPLV.png" tvg-id="PlutoTVFilmClassiciItaly.it" group-title="کلاسیک (فیلم و سریال قدیمی)",Film Classici – Pluto TV
@@ -221,6 +248,10 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/608aa3c44
 https://d2tv4k5moji5m7.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-lu4pzh9l4b57p/master.m3u8
 #EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TalkinLiveClassicsTV.us@SD",Talkin Live Classics TV (480p)
 https://2-fss-1.streamhoster.com/pl_122/206338-3120682-1/playlist.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSClassicMovies.us@SD",TVS Classic Movies (288p)
+https://rpn.bozztv.com/gusa/gusa-tvsclassicmovies/index.m3u8
+#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="TVSVintageNetwork.us@SD",TVS Vintage Network (360p)
+https://rpn.bozztv.com/gusa/gusa-tvsvintage/index.m3u8
 #EXTINF:-1 tvg-name="Ultimate Classic Wrestling – Pluto TV" tvg-logo="https://i.imgur.com/QVN5qv3.png" group-title="کلاسیک (فیلم و سریال قدیمی)",Ultimate Classic Wrestling – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/652516fb7971630008a58e74/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="VClassicTV.cl@SD",V Classic TV (1080p)
@@ -251,6 +282,8 @@ http://88.212.15.50/live/test_filmbox_family_atk_1200/playlist.m3u8
 http://88.212.15.50/live/test_filmbox_family_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="FILMBOXPlusComedy.pl@Romania",FILMBOX+ Comedy Romania
 https://nosignal1.antenaplay.ro/hls/fb-comedy-hd/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="MaxcineComedy.us@HD",Maxcine Comedy (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208730/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="NickComedyCentralPlus1.de@SD",Nick/Comedy Central +1
 http://90.183.52.46:4000/play/a046/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="NTVSeries.ru@SD",NTV Series (576p)
@@ -263,11 +296,15 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6581a09ed
 http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="TF1SeriesFilms.fr@SD",TF1 Series Films
 http://149.62.177.107:9999/TF1_Series_Films/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="TNTSeriesLatinAmerica.us@Panregional",TNT Series Latin America (1080p)
+http://168.196.127.137:6001/play/a095/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="TVSeries.br@SD",TV Series 1 As Panteras (480p)
 https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="TV2Comedy.hu@SD",TV2 Comedy
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/tv2_comedy/index.m3u8
+#EXTINF:-1 group-title="سریال و کمدی" tvg-id="TVSComedyNetwork.us@SD",TVS Comedy Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvscomedy/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="ViasatKinoComedy.ua@SD",Viasat Kino Comedy
 #EXTVLCOPT:http-referrer=http://live.tvstitch.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
