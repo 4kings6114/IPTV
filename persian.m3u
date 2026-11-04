@@ -129,8 +129,6 @@ https://ncdn.telewebion.ir/mahabad/live/playlist.m3u8
 https://iptv.mihantv.com/mihantv/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="MohabatTV.ir@SD",Mohabat TV (540p)
 http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8
-#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="NationalIranianCongressTV.us@SD",National Iranian Congress TV
-https://tv.iraniancongress.com/stream/tv.m3u8
 #EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/c/ce/Qum_Noor_TV.svg/960px-Qum_Noor_TV.svg.png" group-title="فارسی - تلویزیون",Noor TV (Iran)
 https://ncdn.telewebion.ir/noor/live/playlist.m3u8
 #EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون",Omid e Iran TV

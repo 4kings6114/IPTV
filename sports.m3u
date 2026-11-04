@@ -1,6 +1,8 @@
 #EXTM3U url-tvg="https://epg.pw/xmltv/epg_IR.xml" url-tvg="https://epg.pw/xmltv/epg_US.xml" url-tvg="https://epg.pw/xmltv/epg_GB.xml" url-tvg="https://epg.pw/xmltv/epg_DE.xml"
 #EXTINF:-1 group-title="ورزشی" tvg-id="ACISportTV.it@SD",ACI Sport TV (1080p)
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="AntenaSport.ro@SD",AntenaSport
+https://stream1.antenaplay.ro/as/AS.ro/chunklist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD",beIN SPORTS XTRA (1080p)
 https://bein-xtra-bein.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CanalShowsport.ar@SD",Canal Showsport (720p)
