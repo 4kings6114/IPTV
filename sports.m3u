@@ -87,6 +87,8 @@ http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport4KCzechia.cz@UHD",Eurosport 4K Czechia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.15.50/live/esp_4k_atk/playlist.m3u8
+#EXTINF:-1 tvg-name="EuroSport1" tvg-logo="https://files.cdn.magio.tv/tv_logos/eurosport-1-hd.png" tvg-id="Eurosport1.hu" tvg-chno="29" tvg-country="HU" group-title="ورزشی",EuroSport1
+http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports.ar@SD",Fox Sports (1080p)
 http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
@@ -98,8 +100,6 @@ https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="M4Sport.hu@SD",M4 Sport (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/uatlmvixrr/index.m3u8
-#EXTINF:-1 tvg-name="M4 Sport" tvg-logo="https://nb1.hu/uploads/news/3/31023.jpg" tvg-id="M4Sport.hu" tvg-chno="4" tvg-country="HU" group-title="ورزشی",M4 Sport Ⓖ
-http://141.94.193.53:80/M4_Sport_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="MaincastCybersport.ua@SD",Maincast Cybersport (1080p)
 http://stream.mcquack.net/487/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="MaincastSport.ua@SD",Maincast Sport (1080p)
@@ -195,6 +195,8 @@ http://cdnua05.hls.tv/934/hls/8743361621b245838bee193c9ec28322/4856/stream.m3u8
 http://stream.mcquack.net/444/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="talkSPORT.uk@SD",talkSPORT (1080p)
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports1.uk@SD",TNT Sports 1
+http://37.49.224.5/stream/1/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports2.uk@SD",TNT Sports 2
 http://37.49.224.5/stream/2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports3.uk@SD",TNT Sports 3
