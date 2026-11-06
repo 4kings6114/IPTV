@@ -271,6 +271,8 @@ https://ncdn.telewebion.ir/irinn2/live/playlist.m3u8
 https://prx-y5cf8.mediatool.tv/playout/sepl-abr67/index.m3u8
 #EXTINF:-1 group-title="اخبار - فارسی" tvg-id="TOLOnews.af@SD",TOLOnews (720p)
 https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="100NEWS.ua@SD",100% News (576p)
+http://85.238.112.40:8810/hls_sec/239.33.16.32-.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ABCNews.au@Sydney",ABC News (720p)
 https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
 #EXTINF:-1 tvg-name="ABC News (AU)" tvg-logo="https://i.imgur.com/BrW7gk8.png" tvg-id="ABCNews.au" tvg-chno="19" group-title="اخبار - انگلیسی",ABC News (AU) Ⓨ
@@ -320,14 +322,12 @@ https://lsn.lv/bbcradio.m3u8?station=bbc_radio_one&bitrate=320000
 https://lsn.lv/bbcradio.m3u8?station=bbc_1xtra&bitrate=320000
 #EXTINF:-1 tvg-name="BBC Radio 2" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd2-epg.png" tvg-id="BBCRadio2.uk" tvg-chno="2" tvg-country="GB" group-title="اخبار - انگلیسی",BBC Radio 2
 https://lsn.lv/bbcradio.m3u8?station=bbc_radio_two&bitrate=320000
-#EXTINF:-1 tvg-name="BBC Radio 3" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd3-epg.png" tvg-id="BBCRadio3.uk" tvg-chno="3" tvg-country="GB" group-title="اخبار - انگلیسی",BBC Radio 3
-https://lsn.lv/bbcradio.m3u8?station=bbc_radio_three&bitrate=320000
 #EXTINF:-1 tvg-name="BBC Radio 4" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd4-epg.png" tvg-id="BBCRadio4FM.uk" tvg-chno="4" tvg-country="GB" group-title="اخبار - انگلیسی",BBC Radio 4
 https://lsn.lv/bbcradio.m3u8?station=bbc_radio_fourfm&bitrate=320000
+#EXTINF:-1 tvg-name="BBC Radio 5 Sports Extra" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd5s-epg.png" tvg-id="BBCRadio5SportsExtra.uk" tvg-chno="9" tvg-country="GB" group-title="اخبار - انگلیسی",BBC Radio 5 Sports Extra
+https://lsn.lv/bbcradio.m3u8?station=bbc_radio_five_live_sports_extra&bitrate=320000
 #EXTINF:-1 tvg-name="BBC Radio 6 Music" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcrd6-epg.png" tvg-id="BBCRadio6Music.uk" tvg-chno="6" tvg-country="GB" group-title="اخبار - انگلیسی",BBC Radio 6 Music
 https://lsn.lv/bbcradio.m3u8?station=bbc_6music&bitrate=320000
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="BBCUHD4.uk@SD",BBC UHD 4 (720p)
-http://45.14.84.37/bbc4/index.m3u8
 #EXTINF:-1 tvg-name="BBC World Service" tvg-logo="https://experiencersinternational.github.io/tvsetup/tvg-ico/bbcws-epg.png" tvg-id="BBCRadioWorldService.uk" tvg-chno="11" tvg-country="GB" group-title="اخبار - انگلیسی",BBC World Service
 http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_world_service.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="",CBC News BC (1080p) [Geo-blocked]
@@ -438,8 +438,6 @@ https://www.youtube.com/euronewsru/live
 https://www.youtube.com/euronews/live
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ExtraProNews.gr@SD",Extra ProNews (576p)
 http://62.1.176.18:8888/extra/index.m3u8
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FoxNewsChannel.us@SD",Fox News Channel (1080p)
-https://tvsen6.aynaott.com/foxnews/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FoxNewsRadio.us@SD",Fox News Radio (720p)
 https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FoxSportsNews.au@SD",Fox Sports News (1080p)
@@ -662,6 +660,8 @@ http://45.134.141.161:2200/ARG/Eurosport_2_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Eurosport4KCzechia.cz@UHD",Eurosport 4K Czechia
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.15.50/live/esp_4k_atk/playlist.m3u8
+#EXTINF:-1 tvg-name="EuroSport1" tvg-logo="https://files.cdn.magio.tv/tv_logos/eurosport-1-hd.png" tvg-id="Eurosport1.hu" tvg-chno="29" tvg-country="HU" group-title="ورزشی",EuroSport1
+http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports.ar@SD",Fox Sports (1080p)
 http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
@@ -673,8 +673,6 @@ https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="M4Sport.hu@SD",M4 Sport (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/uatlmvixrr/index.m3u8
-#EXTINF:-1 tvg-name="M4 Sport" tvg-logo="https://nb1.hu/uploads/news/3/31023.jpg" tvg-id="M4Sport.hu" tvg-chno="4" tvg-country="HU" group-title="ورزشی",M4 Sport Ⓖ
-http://141.94.193.53:80/M4_Sport_HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="MaincastCybersport.ua@SD",Maincast Cybersport (1080p)
 http://stream.mcquack.net/487/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="MaincastSport.ua@SD",Maincast Sport (1080p)
@@ -770,6 +768,8 @@ http://cdnua05.hls.tv/934/hls/8743361621b245838bee193c9ec28322/4856/stream.m3u8
 http://stream.mcquack.net/444/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="talkSPORT.uk@SD",talkSPORT (1080p)
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports1.uk@SD",TNT Sports 1
+http://37.49.224.5/stream/1/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports2.uk@SD",TNT Sports 2
 http://37.49.224.5/stream/2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports3.uk@SD",TNT Sports 3
@@ -904,8 +904,6 @@ https://tvd-piter.fluid.stream/RadioPiterpanTV/livestream/chunklist_w1866496033.
 https://58d921499d3d3.streamlock.net/RPZ/livestream/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Radiosa Tv" tvg-logo="https://i.imgur.com/8kqyxvz.png" tvg-country="IT" group-title="موزیک - انگلیسی‌زبان",Radio Radiosa Tv
 https://stream7.zivoli.it/radiosatv/radiosatv/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="RadioRitmoFM.cl@SD",Radio Ritmo (1080p) [Not 24/7]
-https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Ritmo 80 TV" tvg-logo="https://hostux.pics/images/2026/09/11/17_radio_ritmo_80_tv695eff878745049b.png" tvg-country="IT" group-title="موزیک - انگلیسی‌زبان",Radio Ritmo 80 TV
 https://tvd-rit80.fluid.stream/Ritmo80TV/livestream/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Studio TV" tvg-logo="https://hostux.pics/images/2026/09/11/18_radio_studio_tv037362682a113768.png" tvg-country="IT" group-title="موزیک - انگلیسی‌زبان",Radio Studio TV
@@ -1238,6 +1236,8 @@ https://v1.tustreaming.cl/frecuencia1tv/index.m3u8
 https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioMaster.pe@HD",Radio Master (720p)
 https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioNuble.cl@SD",Radio Nuble (720p)
+https://tv.telselec.cl:3376/live/nublefmlive.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioOndaDigital.pe@SD",Radio Onda Digital (1080p)
 https://live.ondadigitaltv.com/RADIOODTV/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioPanoramica.cl@SD",Radio Panoramica (720p)
@@ -1248,10 +1248,14 @@ https://tv.arkeo.cl:19360/8052/8052.m3u8
 https://unlimited2-cl-isp.dps.live/pudahueltv/pudahueltv.smil/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRealpolitik.ar@SD",Radio Realpolitik (720p)
 https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRitmoFM.cl@SD",Radio Ritmo (1080p) [Not 24/7]
+https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRumbaTV.pe@SD",Radio Rumba TV (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioSuyaiTV.cl@HD",Radio Suyai TV (1080p)
 https://cl-2.backend.energeek.cl/RadioSuyai-Neo/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTropical.pe@SD",Radio Tropical Tarapoto (480p) [Not 24/7]
+https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTVNeuquen.ar@SD",Radio TV Neuquén (720p) [Not 24/7]
 https://media.neuquen.gov.ar/rtn/television/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioUNIACC.cl@SD",Radio UNIACC (720p)
@@ -1292,14 +1296,10 @@ https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=9999252
 https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="VClassicTV.cl@SD",V Classic TV (720p)
 https://5eaccbab48461.streamlock.net:1936/8112/8112/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - راک" tvg-id="BusinessRockstars.us@SD",Business Rockstars (720p)
-https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2220
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="EskaRockTV.pl@SD",Eska Rock TV (1080p)
 http://92.114.85.87:8016/play/a005/index.m3u8
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="LamoreRockShowWebTV.br@SD",Lamore Rock Show WebTV (720p)
 https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - راک" tvg-id="MetaleitorTV.us@SD",Metaleitor TV
-https://vs20.live.opencaster.com/metaleitortv_423d3342/index.m3u8
 #EXTINF:-1 tvg-name="Now Rock" tvg-logo="https://upload.wikimedia.org/wikipedia/en/8/89/NOW_Rock_logo.png" tvg-id="NowRock.uk" tvg-chno="363" tvg-country="GB" group-title="موزیک - راک",Now Rock
 https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="RockPop.ar@SD",Rock & Pop (1080p)
@@ -1334,32 +1334,8 @@ https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8
 https://bozztv.com/uni10rtmp/ssstv2-cdn/smil:ssstv2web.smil/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="UMTV.mx@SD",UMTV (1080p) [Not 24/7]
 https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="CharapaTV.pe@SD",Charapa TV (720p)
-https://live-evg10.tv360.bitel.com.pe/bitel/charapatvSRT/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="DeluxeRap.de@SD",Deluxe Rap (1080p)
 https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="NationalGeographic.mx@SD",National Geographic (1080p)
-http://138.121.15.230:9002/NAT-GEO/index.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="NationalGeographic.pl@SD",National Geographic (576i)
-http://92.114.85.87:8006/play/a00a/index.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="NationalGeographicLatinAmerica.us@Panregional",National Geographic Latin America (1080p)
-http://15.204.246.24:8080/NatGeoHD/index.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="NationalGeographicWild.pl@SD",National Geographic Wild (576i)
-http://92.114.85.87:8010/play/a005/index.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="RadioTropical.pe@SD",Radio Tropical Tarapoto (480p) [Not 24/7]
-https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="RapsodiaTV.ro@SD",Rapsodia TV
-http://hls02ns.antenaplay.ro/hls/rapsoida-tv-sd/index.m3u8
-#EXTINF:-1 tvg-name="Televallo Trapani" tvg-logo="https://i.imgur.com/P6zuiRH.png" tvg-country="IT" group-title="موزیک - هیپ‌هاپ و رپ",Televallo Trapani
-https://64b16f23efbee.streamlock.net/televallo/televallo/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="TelevisionTarapoto.pe@SD",Television Tarapoto (1080p)
-http://45.5.57.58:8000/play/a038/index.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="TVArapuan.br@SD",TV Arapuan (720p)
-https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="TVGuarapari.br@SD",TV Guarapari (720p)
-#EXTVLCOPT:http-referrer=https://tvguarapari.com/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
-https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8
 #EXTINF:-1 tvg-name="VH1+ Hip Hop & Rap – Pluto TV" tvg-logo="https://i.imgur.com/k1zQpiO.png" group-title="موزیک - هیپ‌هاپ و رپ",VH1+ Hip Hop & Rap – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6465fef47cb4b100086ee7bd/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 tvg-name="70s Cinema" tvg-logo="https://i.imgur.com/wk9Baz9.png" group-title="فیلم - انگلیسی‌زبان",70s Cinema
@@ -1405,8 +1381,6 @@ http://api.toonamiaftermath.com:3000/movies/playlist.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvsdriveinmovie/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSFilmNoirNetwork.us@SD",TVS Film Noir Network (720p)
 https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
-#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSHollywoodHistory.us@SD",TVS Hollywood History (582p)
-https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSNostalgiaMovies.us@SD",TVS Nostalgia Movies (480p)
 https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSWesternMovie.us@SD",TVS Western Movie (270p)
@@ -1577,8 +1551,6 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 tvg-name="Action Hollywood Movies" tvg-logo="" group-title="فیلم اکشن",Action Hollywood Movies
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
-#EXTINF:-1 tvg-name="Action24" tvg-logo="https://i.imgur.com/Zi1YohT.png" tvg-id="Action24TV.gr" tvg-chno="31" tvg-country="GR" group-title="فیلم اکشن",Action24
-https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="CanalPlusActionEurope.nl@Magyar",Canal+ Action Europe Magyar
 http://193.33.39.108:9016/play/a02n
 #EXTINF:-1 tvg-name="Film Thriller – Pluto TV" tvg-logo="https://i.imgur.com/hIWMGRW.png" tvg-id="PlutoTVFilmThrillerItaly.it" group-title="فیلم اکشن",Film Thriller – Pluto TV
@@ -1591,8 +1563,6 @@ https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg0
 https://sktv.mxnticek.eu/new/stream.php?ch=NovaAction
 #EXTINF:-1 tvg-name="Pluto TV Action" tvg-logo="https://i.imgur.com/g8PCdh6.png" group-title="فیلم اکشن",Pluto TV Action
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/561d7d484dc7c8770484914a/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=54&deviceId=561d7d484dc7c8770484914a&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
-#EXTINF:-1 tvg-name="Pluto TV Thrillers" tvg-logo="https://i.imgur.com/jyiFzG4.png" group-title="فیلم اکشن",Pluto TV Thrillers
-http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e69e08291147bd04a9fd7/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=74&deviceId=5b4e69e08291147bd04a9fd7&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="REVNAction.us@SD",Rev'n Action (720p) [Geo-blocked]
 https://freecast-lukentvlive.vgcdn.net/out/v1/a4f31f297fc5440f814bd2cffd77e689/index.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="TelecineAction.br@SD",Telecine Action (1080p)
@@ -1739,8 +1709,6 @@ https://i.mjh.nz/.r/rush-nsw.m3u8
 http://138.121.15.230:9002/A&E/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AELatinAmerica.us@Brazil",A&E Latin America Brazil (720p)
 http://79.127.238.228:14551
-#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AathavanTV.uk@SD",Aathavan TV (720p)
-https://yuppmumfta1.vgcdn.net/211125/athvantv/manifest.mpd
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="ABCEntertains.au@Sydney",ABC Entertains (720p)
 https://c.mjh.nz/abc-me.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="ABCTV.au@ACT",ABC TV ACT (720p)
@@ -1880,6 +1848,8 @@ http://23.237.104.106:8080/USA_AMERICAN_HEROES/index.m3u8
 https://d4whmvwm0rdvi.cloudfront.net/10007/99951318/hls/master.m3u8?ads._fw_app_bundle=web.xumo.com&ads._fw_app_store_url=&ads._fw_content_category=&ads._fw_content_genre=&ads._fw_content_language=en&ads._fw_content_rating=&ads._fw_coppa=0&ads._fw_deviceMake=GitHubAction&ads._fw_deviceType=3-Connected_TV&ads._fw_device_model=PythonScript&ads._fw_did=a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads._fw_is_lat=0&ads._fw_us_privacy=&ads._fw_vcid2=512116:a5090924-15b1-4b7f-b6cd-2f06e2ba51e1&ads.afid=405342864&ads.appName=XumoPlay&ads.appVersion=1.0.0&ads.asnw=169843&ads.channelId=99951318&ads.csid=xumo_web_NBCUAmericanNinjaWarrior_ssai_cro&ads.sfid=19647852&ads.xumo_channelId=99951318&ads.xumo_contentId=4063&ads.xumo_contentName=NBCUAmericanNinjaWarrior&ads.xumo_providerId=4063&ads.xumo_providerName=NBCUAmericanNinjaWarrior
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AMGTV.us@SD",AMG TV (1080p)
 https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AMGATV.us@SD",Amga TV (720p) [Not 24/7]
+https://streamer1.connectto.com/AMGA_WEB_1202/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AmuTV.us@SD",Amu TV
 https://jmc-live.ercdn.net/amutv/amutv.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AnandTV.uk@SD",Anand TV (720p) [Not 24/7]
@@ -1900,6 +1870,8 @@ https://antennasicilialive.cdn.netrw.it/antennasicilialive/hls/ccr/antennasicili
 https://live-antennasud.cdn.netrw.it/antennasud/hls/ccr/antennasud/master.m3u8
 #EXTINF:-1 tvg-name="Antenna Sud Extra" tvg-logo="https://i.imgur.com/6tBv8VD.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Antenna Sud Extra
 https://live-antennasud.cdn.netrw.it/antennasud/hls/ccr/extra/master.m3u8
+#EXTINF:-1 tvg-name="Aristanis SuperTv" tvg-logo="https://i.imgur.com/v8PlAJO.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Aristanis SuperTv
+https://video2.azotosolutions.com:1936/supertvoristano/supertvoristano/playlist.m3u8
 #EXTINF:-1 tvg-name="ARKADAG" tvg-logo="" tvg-chno="8" tvg-country="TM" group-title="سرگرمی - انگلیسی‌زبان",ARKADAG
 https://alpha.tv.online.tm/hls/ch000.m3u8
 #EXTINF:-1 tvg-name="Arte Network Orler" tvg-logo="https://i.imgur.com/DP5y0Er.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Arte Network Orler
@@ -1947,6 +1919,9 @@ http://88.212.15.50/live/test_black/playlist.m3u8
 http://141.94.193.53/axn_black/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AXNBlack.us@Poland",AXN Black Poland (576p)
 http://185.227.34.179:8080/axn-black/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AXNCrime.us@SD",AXN Crime
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://88.212.7.14/live/viasat_film/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AXNLatinAmerica.us@Panregional",AXN Latin America (1080p)
 http://15.204.246.24:8080/AXNHD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AXNLatinAmerica.us@Andes",AXN Latin America Andes (1080p)
@@ -2041,6 +2016,8 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/04
 http://41.205.93.154/BRAVO/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="BritAsiaTV.uk@HD",Brit Asia TV (1080p)
 https://hls.autopo.st/hls/britasiatv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="BusinessRockstars.us@SD",Business Rockstars (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2220
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Buzzr.us@SD",Buzzr (1080p)
 http://23.237.104.106:8080/USA_BUZZR/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="CMalayalamTV.ca@SD",C Malayalam TV (1080p)
@@ -2087,6 +2064,8 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6093f9ed2
 https://catholictvhd-lh.akamaized.net/hls/live/2043390/CTVLiveHD/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="",CBC Heartland (1080p) [Geo-blocked]
 https://amagi-streams.akamaized.net/hls/live/2113391/cbcheartland/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="",CBC Murdoch Mysteries (1080p) [Geo-blocked]
+https://amagi-streams.akamaized.net/hls/live/2113390/cbcmurdoch/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="CBNEspanol.us@SD",CBN Espanol (1080p)
 https://fastly.live.brightcove.com/6383462549112/us-east-1/734546207001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiczFpM3ZpLmVncmVzcy50N2M3emwiLCJhY2NvdW50X2lkIjoiNzM0NTQ2MjA3MDAxIiwiZWhuIjoiZmFzdGx5LmxpdmUuYnJpZ2h0Y292ZS5jb20iLCJpc3MiOiJibGl2ZS1wbGF5YmFjay1zb3VyY2UtYXBpIiwic3ViIjoicGF0aG1hcHRva2VuIiwiYXVkIjpbIjczNDU0NjIwNzAwMSJdLCJqdGkiOiI2MzgzNDYyNTQ5MTEyIn0.g04lznsvgqgIXQt2ZH0H_tWtIeTsMgGjVORsjOJ0T6U/playlist-hls.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="CBNFamily.us@SD",CBN Family (1080p)
@@ -2223,6 +2202,8 @@ http://15.204.246.24:8080/DHEHD/index.m3u8
 https://media2021.rtvweb.com/di_tv_92/live/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="DidgahTV.us@SD",Didgah TV (576p)
 https://media.streambrothers.com:1936/8276/8276/playlist.m3u8
+#EXTINF:-1 tvg-name="Doctor Who – Pluto TV" tvg-logo="https://i.imgur.com/oewPc3b.png" group-title="سرگرمی - انگلیسی‌زبان",Doctor Who – Pluto TV
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e7f8db27ce19000732d1aa/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="DoyelTV.ca@SD",Doyel TV (1080p)
 https://3d46w.doyeltv.com/memfs/aa3aa6f7-ec12-41a2-8183-a891e157bbf8.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="DrGeneScott.us@SD",Dr. Gene Scott (1080p)
@@ -2247,8 +2228,6 @@ http://cdn12.henico.net:8080/live/dncal/index.m3u8
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2226
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="E.us@East",E! (1080p)
 http://23.237.104.106:8080/USA_E/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="ELatinAmerica.us@Mexico",E! Latin America Mexico (720p)
-http://72.1.184.5:8089/play/a05d/index.m3u8
 #EXTINF:-1 tvg-name="East is East – Pluto TV" tvg-logo="https://i.imgur.com/iPGv82f.png" group-title="سرگرمی - انگلیسی‌زبان",East is East – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/654c955683595c00081d9d87/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 tvg-name="Easy Tv Canale 190" tvg-logo="https://i.imgur.com/LKrVuRR.jpg" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Easy Tv Canale 190
@@ -2409,8 +2388,6 @@ https://ott.god.tv/live/us/master.m3u8
 https://d1msejlow1t3l4.cloudfront.net/211125/godtv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="",Golden Boy (1080p)
 https://goldenboy.duckhunting.playout.vju.tv/DuckhuntingTV_GoldenBoy/main.m3u8
-#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Golden.mx@Panregional",Golden TV (240p) [Not 24/7]
-https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GolfChannelLatinAmerica.us@SD",Golf Channel Latin America (1080p)
 http://15.204.246.24:8080/GolfChannelHD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GoodLife45.us@SD",GoodLife 45 (720p) [Not 24/7]
@@ -2435,6 +2412,8 @@ http://cdn12.henico.net:8080/live/gsctv/index.m3u8
 https://e75fc053c0d2406fb74cdd71d77e1a7f.mediatailor.us-east-1.amazonaws.com/v1/master/f4e8c53a8367a5b58e20ce054ea3ce25a3e904d3/RakutenTV-eu_GustoTV/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HalaLondon.uk@SD",Hala London (1080p)
 https://halalondon-live.ercdn.net/halalondon/halalondon.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HallmarkMystery.us@East",Hallmark Mystery (720p) [Geo-blocked]
+http://41.205.93.154/HALLMARK/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HasbroLegends.us@SD",Hasbro Legends (1080p) [Geo-blocked]
 https://amg02713-amg02713c11-amgplt0852.playout.now3.amagi.tv/ts-us-e2-n2/playlist/amg02713-amg02713c11-amgplt0852/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Heartland.us@Eastern",Heartland (720p)
@@ -2475,6 +2454,8 @@ https://jstre.am/live/jsl:cZXINbwrFj6.m3u8
 https://jstre.am/live/jsl:0sUSK6VA7GT.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HorseCountryTV.uk@SD",Horse & Country TV (1080p)
 https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8
+#EXTINF:-1 tvg-name="House of Docs – Pluto TV" tvg-logo="https://i.imgur.com/pFLQ18m.png" group-title="سرگرمی - انگلیسی‌زبان",House of Docs – Pluto TV
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6536608b4f123d000876b78b/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HSN.us@East",HSN (720p)
 https://qvc-amd-live.akamaized.net/hls/live/2034113/lshsn1us/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HSN.us@West",HSN West (720p)
@@ -2527,14 +2508,6 @@ https://itiswrittentv.akamaized.net/xR8gyATuHMVx69u9G79DXnpNRL/playlist.m3u8
 https://content.uplynk.com/channel/b880a791bf95426d917a509e0c44796a.m3u8
 #EXTINF:-1 tvg-name="Italia 7" tvg-logo="https://i.imgur.com/YBXkY4w.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Italia 7
 https://5f11919dca3bd.streamlock.net/italia7/italia7/playlist.m3u8
-#EXTINF:-1 tvg-name="ITV 1" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/ITV1_logo_%282022%29.svg/500px-ITV1_logo_%282022%29.svg.png" tvg-id="ITV1.uk" tvg-chno="3" tvg-country="GB" group-title="سرگرمی - انگلیسی‌زبان",ITV 1
-http://45.14.84.37/itv1/index.m3u8
-#EXTINF:-1 tvg-name="ITV 2" tvg-logo="https://i.imgur.com/Ji65OXG.png" tvg-id="ITV2.uk" tvg-chno="9" tvg-country="GB" group-title="سرگرمی - انگلیسی‌زبان",ITV 2
-http://45.14.84.37/itv2/index.m3u8
-#EXTINF:-1 tvg-name="ITV 3" tvg-logo="https://i.imgur.com/vYNyYGx.png" tvg-id="ITV3.uk" tvg-chno="13" tvg-country="GB" group-title="سرگرمی - انگلیسی‌زبان",ITV 3
-http://45.14.84.37/itv3/index.m3u8
-#EXTINF:-1 tvg-name="ITV 4" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/57/ITV4_logo_%282022%29.svg/500px-ITV4_logo_%282022%29.svg.png" tvg-id="ITV4.uk" tvg-chno="26" tvg-country="GB" group-title="سرگرمی - انگلیسی‌زبان",ITV 4
-http://45.14.84.37/itv4/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="JBS.us@SD",JBS (720p)
 https://rpn3.bozztv.com/jbstv-srt/srt-push/jbstv/playlist.m3u8
 #EXTINF:-1 tvg-name="Jersey Shore – Pluto TV" tvg-logo="https://i.imgur.com/HIlmQEy.png" group-title="سرگرمی - انگلیسی‌زبان",Jersey Shore – Pluto TV
@@ -2549,6 +2522,10 @@ https://82934cf9c8696bd2.mediapackage.us-east-1.amazonaws.com/out/v1/72b5a55e4c3
 https://cdn.jwplayer.com/live/broadcast/0rrJ3kkM.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="JewishLifeTelevision.us@SD",Jewish Life Television (1080p)
 https://jlt-jltv-strimm.otteravision.com/jlt/jltv/jltv.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="JimJamEurope.uk@SD",JimJam Europe (720p)
+http://212.5.144.156:8080/jimjam/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="JonmoBhumiTV.au@SD",JonmoBhumi TV (720p)
+https://jtvs.ncare.live/Gznr84Woj7UEye3OPVeWq2ForboWAgdV/jonmobhumitv.stream/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="JustforLaughsGags.us@SD",Just for Laughs Gags (1080p)
 https://streams2.sofast.tv/ptnr-yupptv/title-JUST_FOR_LAUGHS_GAGS_YUPPTV/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2790d143-5874-4146-bf91-9063c52b2f15/manifest.m3u8
 #EXTINF:-1 tvg-name="Just for laughs – Pluto TV" tvg-logo="https://i.imgur.com/VvEz0XX.png" group-title="سرگرمی - انگلیسی‌زبان",Just for laughs – Pluto TV
@@ -2627,6 +2604,8 @@ https://customer-yzibk50951uq418a.cloudflarestream.com/a58893dee4b9922a75e41b4ec
 http://tvsen7.aynascope.net/laff/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="LaoThaiTV.us@SD",Lao-Thai TV (720p)
 https://livefta.malimarcdn.com/ftaedge00/laothaius.sdp/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="LatestTV.uk@SD",Latest TV (480p)
+https://5a0e89631aa14.streamlock.net/live/LatestTelevision/playlist.m3u8
 #EXTINF:-1 tvg-name="Lazio Tv" tvg-logo="https://i.imgur.com/DAj5Uwb.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Lazio Tv
 https://5f11919dca3bd.streamlock.net/laziotv/laziotv/playlist.m3u8
 #EXTINF:-1 tvg-name="Le Cronache Lucane Tv" tvg-logo="https://i.imgur.com/EBY3IZL.jpg" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Le Cronache Lucane Tv
@@ -2717,6 +2696,8 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-news5-cmaf-rak
 #EXTVLCOPT:http-referrer=https://vaughn.live/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
 https://stream-cdn-iad3.vaughnsoft.net/play/live_mega_extremo.flv
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="MetaleitorTV.us@SD",Metaleitor TV
+https://vs20.live.opencaster.com/metaleitortv_423d3342/index.m3u8
 #EXTINF:-1 tvg-name="Minformo Tv" tvg-logo="https://i.imgur.com/VJNtnZM.jpg" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Minformo Tv
 https://5db313b643fd8.streamlock.net:443/MinformoTV/MinformoTV/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="MinisterioLaVozDeUnRemanenteTV.us@SD",Ministerio La Voz De Un Remanente TV
@@ -2727,6 +2708,8 @@ https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_030/Stream/playlist.m3u
 https://alpha.tv.online.tm/hls/ch003.m3u8
 #EXTINF:-1 tvg-name="Mirror Now" tvg-logo="https://i.imgur.com/R4rxBNu.jpeg" tvg-id="timesnownews.com" tvg-chno="29" tvg-country="IN" group-title="سرگرمی - انگلیسی‌زبان",Mirror Now Ⓨ
 https://www.youtube.com/@mirrornow/live
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="MissionAsia.au@SD",Mission Asia (1080p)
+https://livecdn.live247stream.com/missionasia/tv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="MissionTV.us@SD",Mission TV (1080p) [Not 24/7]
 https://6096a9cf11ae5.streamlock.net:1943/live/missiontv/playlist.m3u8
 #EXTINF:-1 tvg-name="MM Somali TV" tvg-logo="https://www.lyngsat.com/logo/tv/mm/mm-somali-tv-so.png" tvg-id="MMSomaliTV.uk" tvg-country="SO" group-title="سرگرمی - انگلیسی‌زبان",MM Somali TV Ⓨ
@@ -2851,8 +2834,8 @@ https://ntd02.akamaized.net/HD-LA/index.m3u8
 https://www.ntimedia.it/video/S0B/S0B_master.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="NTVPlus.ca@SD",NTV+
 https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8
-#EXTINF:-1 tvg-name="Nuvola Tv" tvg-logo="https://i.imgur.com/EDGez2x.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Nuvola Tv
-https://stream.nuvola.tv:8181/memfs/4aaa6328-1879-4ebf-b18a-498146d0c61c.m3u8
+#EXTINF:-1 tvg-name="Nuova Tv 1" tvg-logo="https://i.imgur.com/1yqTZhR.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Nuova Tv 1
+https://nuovatv.net:8443/tv/stream.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="OANPlus.us@SD",OAN Plus (720p)
 https://a-cdn.herringnetwork.com/affiliate/oane/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="OCNTV.us@SD",OCN TV
@@ -2919,6 +2902,8 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/636a4eaf7
 https://frndlymsl.akamaized.net/hls/live/2006426/pixlmsl/pixlmsl/playlist.m3u8?hdnts=st=1606053234~exp=3216054041~acl=*~hmac=208d261d9f98d76a5ac30aa2ce51751f88ee50cfc24812b7cbea8b0397489a07
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Placid.us@EastHD",Placid (1080p) [Not 24/7]
 https://toy.vcdn.fyi/placid/index.m3u8
+#EXTINF:-1 tvg-name="Pluto TV Documentaries" tvg-logo="https://i.imgur.com/Mr4ZsNZ.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Documentaries
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b85a7582921777994caea63/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=91&deviceId=5b85a7582921777994caea63&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 tvg-name="Pluto TV Drama" tvg-logo="https://i.imgur.com/B9srooj.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Drama
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e92e4694c027be6ecece1/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=60&deviceId=5b4e92e4694c027be6ecece1&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 tvg-name="Pluto TV Fantastic" tvg-logo="https://i.imgur.com/dOfXc5w.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Fantastic
@@ -2929,6 +2914,8 @@ http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5a66795ef91fef2c703
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5ba3fb9c4b078e0f37ad34e8/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=51&deviceId=5ba3fb9c4b078e0f37ad34e8&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 tvg-name="Pluto TV Staff Picks" tvg-logo="https://i.imgur.com/DFDHAT8.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Staff Picks
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5f4d863b98b41000076cd061/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=90&deviceId=5f4d863b98b41000076cd061&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
+#EXTINF:-1 tvg-name="Pluto TV Thrillers" tvg-logo="https://i.imgur.com/jyiFzG4.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Thrillers
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e69e08291147bd04a9fd7/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=74&deviceId=5b4e69e08291147bd04a9fd7&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 tvg-name="Pluto TV Westerns" tvg-logo="https://i.imgur.com/79R7m0b.png" group-title="سرگرمی - انگلیسی‌زبان",Pluto TV Westerns
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e94282d4ec87bdcbb87cd/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=103&deviceId=5b4e94282d4ec87bdcbb87cd&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="PoconoTelevisionNetwork.us@HD",Pocono Television Network (1080p)
@@ -2945,8 +2932,6 @@ https://57068da1deb21.streamlock.net/primatvnapoli/primatvnapoli/playlist.m3u8
 http://primeasia.selfip.net/Samsung/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="PTCPunjabiCanada.ca@SD",PTC Punjabi Canada (1080p)
 https://stream.ottlive.co.in/ptccanada/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="QTV.in@SD",Q TV (576p)
-https://mumt05.tangotv.in/87NeALx2THEQ/index.m3u8
 #EXTINF:-1 tvg-name="Quarto Canale Flegreo" tvg-logo="https://i.imgur.com/8RKY3Du.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Quarto Canale Flegreo
 http://live.mariatvcdn.com/dialogos/171e41deedf405f10c7dd6311387fb43.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="QuoVadisTV.ca@SD",Quo Vadis TV (720p)
@@ -3159,6 +3144,8 @@ https://fffffff110156200.tvustream.com:8298/ryfy.m3u8
 https://cdn16.streamshow.it/cloud-studio100/studio100/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="StudioUniversalLatinAmerica.us@Panregional",Studio Universal Latin America (1080p)
 http://15.204.246.24:8080/StudioUniversalHD/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="StudioUniversalLatinAmerica.us@Brazil",Studio Universal Latin America Brazil (720p)
+http://187.102.210.46/universo/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="StudioUniversalLatinAmerica.us@South",Studio Universal Latin America South
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/53.m3u8
 #EXTINF:-1 tvg-name="STVR :O" tvg-logo=" :" tvg-chno="17" tvg-country="SK" group-title="سرگرمی - انگلیسی‌زبان",STVR :O
@@ -3209,6 +3196,8 @@ https://live.cmr24.fm/TVI/HD/chunks.m3u8
 https://broadcast.tbnpacific.org.au:4430/stream/TBNPacificTV/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TBNUK.uk@SD",TBN UK (1080p)
 https://live-tbn-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/tbn-live/manifest.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TBNUkraine.us@SD",TBN Україна (720p)
+https://5d23269b3ec0c.streamlock.net/WEB_Ukraine24/ngrp:Ukraine24.stream-adaptive/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TBS.us@East",TBS (720p) [Geo-blocked]
 https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TBS.us@West",TBS West (720p) [Geo-blocked]
@@ -3305,6 +3294,8 @@ https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master_7
 https://57068da1deb21.streamlock.net/teletibur/teletibur/playlist.m3u8
 #EXTINF:-1 tvg-name="Teleuniverso" tvg-logo="https://i.imgur.com/u8E9wBb.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Teleuniverso
 https://stream.ets-sistemi.it:19360/teleuniverso/teleuniverso.m3u8
+#EXTINF:-1 tvg-name="Televallo Trapani" tvg-logo="https://i.imgur.com/P6zuiRH.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Televallo Trapani
+https://64b16f23efbee.streamlock.net/televallo/televallo/playlist.m3u8
 #EXTINF:-1 tvg-name="Televisa Telenovelas" tvg-logo="https://i.imgur.com/GaJIRN3.jpg" tvg-chno="4169" group-title="سرگرمی - انگلیسی‌زبان",Televisa Telenovelas
 https://televisa-televisa-1-it.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TelevisionCaribe.us@HD",Television Caribe (1080p)
@@ -3327,6 +3318,8 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e8d5369
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/63eb58aa60bc8f0008caa8f8/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheCountryNetwork.us@SD",The Country Network (1080p)
 https://amg00600-amg00600c1-thecountrynetwork-us-5497.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheDoctors.us@HD",The Doctors (720p) [Geo-blocked]
+https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b/Doctors/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheFirstTV.us@SD",The First TV (1080p)
 https://thefirst-oando.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheGrahamNortonShow.uk@SD",The Graham Norton Show (1080p)
@@ -3373,14 +3366,14 @@ https://fuel-streaming-prod01.fuelmedia.io/v1/sem/cb165faa-41c9-42ad-83ee-ad5ca9
 https://fuel-streaming-prod01.fuelmedia.io/v1/sem/b29d27bb-88af-42d1-937a-5bdf76b71c17.m3u8
 #EXTINF:-1 tvg-name="TN Live" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-cz.png" tvg-chno="14" tvg-country="CZ" group-title="سرگرمی - انگلیسی‌زبان",TN Live
 https://sktv.mxnticek.eu/new/stream.php?ch=Nova%20TN%20Live
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNT.us@East",TNT (720p) [Geo-blocked]
+http://212.5.144.156/tnt/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTLatinAmerica.us@Center",TNT Latin America (1080p)
 http://45.171.64.30:6060/play/a03i/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTLatinAmerica.us@Argentina",TNT Latin America Argentina (1080p)
 http://45.134.141.161:2200/ARG/TNT/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTLatinAmerica.us@Brazil",TNT Latin America Brazil (720p) [Geo-blocked]
 http://15.204.246.24:8080/TNTHD/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTLatinAmerica.us@Colombia",TNT Latin America Colombia (1080p)
-http://181.78.211.244:8005/play/a09g/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTNovelas.us@Panregional",TNT Novelas (1080p)
 http://158.172.155.130:8000/play/a0at/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TNTNovelas.us@Brazil",TNT Novelas Brazil (720p)
@@ -3435,6 +3428,8 @@ http://ts2000tv.streaming.nextware.it:8081/ts2000tv/ts2000tv/chunks.m3u8
 https://livestream.telvue.com/templeuni1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TVHispanic.us@SD",TV Hispanic [Not 24/7]
 https://livetv.305streamhd.com:3504/live/tvhispaniclive.m3u8
+#EXTINF:-1 tvg-name="Tv Luna Napoli" tvg-logo="https://i.imgur.com/jxhuoyE.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Tv Luna Napoli
+https://diretta.arcapuglia.it:8080/live/teleluna/index.m3u8
 #EXTINF:-1 tvg-name="Tv Prato" tvg-logo="https://i.imgur.com/zDeVpZd.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",Tv Prato
 https://live.mariatvcdn.com/tvprato/2db0dd5674586686a867ec52c3aa8e06.sdp/mono.m3u8
 #EXTINF:-1 tvg-name="TVL (TV Libera Pistoia)" tvg-logo="https://i.imgur.com/07geF0L.png" tvg-country="IT" group-title="سرگرمی - انگلیسی‌زبان",TVL (TV Libera Pistoia)
@@ -3473,6 +3468,8 @@ https://rpn.bozztv.com/gusa/gusa-TVStalk/index.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvstallyho/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TVSTavern.us@SD",TVS Tavern (480p)
 https://rpn.bozztv.com/gusa/gusa-tavern/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TVSTelevisionNetwork.us@SD",TVS Television Network (480p)
+https://rpn.bozztv.com/gusa/gusa-tvstn/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TVSTurbo.us@SD",TVS Turbo (360p)
 https://rpn.bozztv.com/gusa/gusa-tvsturbo/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TVSAGovernmentChannel.us@SD",TVSA Government Channel (720p)
@@ -3728,6 +3725,9 @@ https://123tv-mx1.flex-cdn.net/index.m3u8
 https://5db313b643fd8.streamlock.net/111/111/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="12TVParma.it@SD",12 TV Parma (540p) [Not 24/7]
 https://5929b138b139d.streamlock.net/12TVParma/livestream/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="12tv.es@SD",12tv
+#EXTVLCOPT:http-referrer=https://www.12tv.es/
+https://cloud.streamingconnect.tv/hls/12tv/12tv2.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="12tv.es@SD",12TV Alicante (720p)
 #EXTVLCOPT:http-referrer=https://player.streamingconnect.com/
 https://cloud.fastchannel.es/mic/manifiest/hls/12tv/12tv.m3u8
@@ -3791,12 +3791,16 @@ https://load-balancer.azotosolutions.com/cdnedge37/canale50/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="6sotok.ua@SD",6 sotok (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/405/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="6TVGorlovka.ru@SD",6 TV Gorlovka (720p) [Geo-blocked]
+http://91.214.48.158:4022/udp/224.2.2.4:10000
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="6ter.fr@SD",6ter (1080p)
 http://149.62.177.107:9999/6ter/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="7Gold.it@SD",7 Gold (1080p)
 https://streamcdnr6-dddfac816632463dac50b21109dc1bb3.msvdn.net/live/S58803518/OOZape6Nxp4H/playlist.m3u8
 #EXTINF:-1 tvg-name="7 Región de Murcia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/La_7_logo.svg/120px-La_7_logo.svg.png" tvg-id="La7.es" tvg-chno="17" tvg-country="ES" group-title="سرگرمی - اروپا",7 Región de Murcia Ⓢ
 https://rtv-murcia-live.globalmest.com/principal/smil:principal.smil/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Canal7TeleValencia.es@SD",7 TeleValencia (576p)
+https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="7080TV.it@SD",70-80 TV (1080P) (1080p)
 https://585b674743bbb.streamlock.net/9050/9050/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="7TV.es@Sevilla",7TV
@@ -3819,6 +3823,8 @@ http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-progold/live_fullhd?offsetSecon
 https://live77cdn2.antenaplay.ro/live2_fast/ch6/stream.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AcheloosTV.gr@SD",Acheloos TV (576p)
 https://acheloostv.streamings.gr/live/stream/index.m3u8
+#EXTINF:-1 tvg-name="Action24" tvg-logo="https://i.imgur.com/Zi1YohT.png" tvg-id="Action24TV.gr" tvg-chno="31" tvg-country="GR" group-title="سرگرمی - اروپا",Action24
+https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ActivaTV.es@SD",Activa TV (720p)
 https://streamtv.mediasector.es/hls/activatv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ActiveFamily.pl@HD",Active Family HD (1080i)
@@ -3903,8 +3909,6 @@ https://btutzctahuf0wjoq.cdn.streamingserver.io/hls/yjvam8hlp2g3u08z02tv0yz66rq3
 https://api-tv.ipnet.ua/api/v1/manifest/2118742632.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Arsenal.ru@SD",Arsenal (576p)
 https://stream8.cinerama.uz/1414/tracks-v1a1/mono.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="arte.fr@SD",arte (1080p)
-http://5.180.164.197:8080/ARTEFR/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ARTV.pt@SD",ARTV Canal Parlamento (720p) [Not 24/7]
 https://playout172.livextend.cloud/liveiframe/_definst_/liveartvabr/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ASTV.ro@SD",AS TV (576p)
@@ -3947,9 +3951,6 @@ http://88.212.15.50/live/test_axn/playlist.m3u8
 #EXTVLCOPT:http-referrer=https://cool-tv.net/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 VLC/3.0.18 LibVLC/3.0.18
 https://cronos.mangora1.cfd/axy/usergend3h5jkc9rnd.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AXNCrime.us@SD",AXN Crime
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-http://88.212.7.14/live/viasat_film/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AXNPoland.pl@SD",AXN Poland (1080p)
 http://92.114.85.87:8015/play/a00f/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="AXNSpin.hu@SD",AXN Spin
@@ -4105,14 +4106,14 @@ https://videoserver.tmcreativos.com:19360/hkbpjryheu/hkbpjryheu.m3u8
 https://nlb1-live.emitstream.com/hls/625csn5et2iszm9oze65/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Canal56.es@SD",Canal 56 (576p) [Not 24/7]
 https://videos.canal56.com/directe/stream/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Canal9.ch@SD",Canal 9 en Français (1080p)
-https://livehd.vedge.infomaniak.com/livecast/livehd/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalAlphaJura.ch@SD",Canal Alpha Jura (1080p)
 https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalAlphaNeuchatel.ch@SD",Canal Alpha Neuchatel (1080p) [Not 24/7]
 https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalDiocesano.es@SD",Canal Diocesano (576p)
 https://nlb2-live.emitstream.com/hls/5i3pxfuz4az356yu22ij/master.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalDonana.es@SD",Canal Doñana (720p) [Not 24/7]
+https://secure5.todostreaming.es/live/division-alm.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalMotor.no@SD",Canal Motor (720p)
 https://digicom.hls.iptvdc.com/canalmotor/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CanalMalagaRTV.es@SD",Canal Málaga RTV (720p) [Not 24/7]
@@ -4261,8 +4262,6 @@ https://congresodirecto.akamaized.net/hls/live/2038278/canal5/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ContinentE.ua@SD",Continent E (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/449/index.m3u8
-#EXTINF:-1 tvg-name="Cool" tvg-logo="https://media.port.hu/images/001/591/100x100/760.jpg" tvg-id="Cool.hu" tvg-chno="13" tvg-country="HU" group-title="سرگرمی - اروپا",Cool
-http://141.94.193.53:80/Cool_HD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CorfuChannel.gr@SD",Corfu Channel (720p)
 https://itv.streams.ovh:1936/corfuchannel/corfuchannel/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="CostaNoroesteTV.es@SD",Costa Noroeste TV (1080p) [Not 24/7]
@@ -4309,8 +4308,6 @@ http://81.171.10.42:1935/liveD/DStream.sdp/chunklist_w819085920.m3u8
 http://81.171.10.42:554/liveD/DStream.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Deluxe139.it@SD",Deluxe 139 (480p)
 https://59d7d6f47d7fc.streamlock.net/pierstyle/pierstyle/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DeluxeDance.de@SD",Deluxe Dance (1080p)
-https://sdn-global-live-streaming-packager-cache.3qsdn.com/64733/64733_264_live.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DeluxeLounge.de@SD",Deluxe Lounge (720p)
 https://jmp2.uk/stvp-CHAJ0500413A
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DeParintiro.ro@SD",DeParinti.ro (576p)
@@ -4352,6 +4349,12 @@ https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out
 https://d-m-f.iptv-playoutcenter.de/dmf/dmf1/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DniproTV.ua@SD",DniproTV (1080p)
 http://vcdn1.produck.company:1935/out/dtv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Doctor.ru@SD",Doctor (576i)
+https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DocuBox.nl@SD",DocuBox
+https://dash3.antik.sk/live/test_docubox_medium_atk/playlist.m3u8
+#EXTINF:-1 tvg-name="Documentari – Pluto TV" tvg-logo="https://i.imgur.com/0jYrODf.png" tvg-id="PlutoTVDocumentariItaly.it" group-title="سرگرمی - اروپا",Documentari – Pluto TV
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/608aa8a5709d6b0007b132fe/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Dokusat.de@SD",Dokusat (1080p)
 https://muc3.iptv-playoutcenter.de/dokusat/dokusat1/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Domkino.ru@SD",Dom kino (576p)
@@ -4367,8 +4370,6 @@ https://5f11919dca3bd.streamlock.net/donnatv/donnatv/playlist.m3u8
 http://stream.mcquack.net/412/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DottoTV.ro@SD",Dotto TV (1080p)
 https://live.dottotv.ro/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="DreikoTV.pa@SD",Dreiko TV (720p) [Not 24/7]
-https://cloudvideo.servers10.com:8081/8020/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="SachsenFernsehenDresden.de@SD",Dresden Fernsehen (1080p) [Not 24/7]
 https://dresden.iptv-playoutcenter.de/dresden/dresdenfernsehen.stream_1/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Drive.ru@SD",Drive (576i)
@@ -4475,6 +4476,9 @@ http://wms.shared.streamshow.it/esperiatv/esperiatv/playlist.m3u8
 https://api-tv.ipnet.ua/api/v1/manifest/2118742594.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="EsteponaTelevision.es@SD",Estepona Televisión (720p)
 https://cloudvideo.servers10.com:8081/8022/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="EsTuTele.es@SD",EsTuTele (720p)
+#EXTVLCOPT:http-referrer=https://player.streamingconnect.com/
+https://cloud.streamingconnect.tv/hls/estutele/estutele.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ESTV.hu@SD",ESTV (420p)
 https://cloudfront44.lexanetwork.com:1344/relay01/HDE032.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ETB1.es@SD",ETB 1 (1080p) [Geo-blocked]
@@ -4519,8 +4523,6 @@ http://89.38.8.130:39419
 https://cdn0-03837-liveedge0.dna.ip-only.net/03837-liveedge0/smil:03837-tx2/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="FAN.ru@SD",FAN (576p)
 http://stream.mcquack.net/420/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="FarosTV2.gr@SD",Faros TV2 (480p) [Geo-blocked]
-https://s1.cystream.net/live/faros2/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="FastFunBox.nl@SD",Fast&FunBox
 https://dash3.antik.sk/live/test_fast_and_funbox_medium_atk/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Fauna.ua@SD",Fauna (576p)
@@ -4561,8 +4563,6 @@ http://149.62.177.107:9999/France_2/index.m3u8
 http://85.14.32.26:8800/udp/239.100.10.144:5000
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="France3.fr@CotedAzur",France 3 Cote d'Azur (1080p)
 http://89.187.185.76:8080/France3/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="France3.fr@Lorraine",France 3 Lorraine (1080p)
-http://5.180.164.197:8080/FRANCE3/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="France4.fr@SD",France 4 (1080p)
 http://149.62.177.107:9999/France_4/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="France5.fr@SD",France 5 (1080p)
@@ -4633,6 +4633,8 @@ http://web.onair-radio.eu:1935/groovytv/groovytv/playlist.m3u8
 https://balancer.facecast.io/evacoder_hls_hi/UUMLQVAYVlZyH14GRENQVV0G/2/720-3.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="GRPVERATV.it@SD",GRP VERATV (576p)
 https://webstream.multistream.it/memfs/a3195c96-f884-4c74-924f-2648814fc0b5_output_0.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="GuadaTV.es@SD",Guada TV (720p) [Not 24/7]
+https://cloud.streamingconnect.tv/hls/guadatv/guadatv.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Gulli.fr@SD",Gulli (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://99.27.51.147:8080/Gulli/index.m3u8
@@ -4658,6 +4660,9 @@ http://live.streams.ovh:1935/hightv/hightv/playlist.m3u8
 https://vod.tv7.fi/tv7-se/smil:tv7-se.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Historia.es@HD",Historia HD (1080p)
 https://d1k3vzh2ivy22k.cloudfront.net/Historia1080.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="History2.cz@SD",History2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+http://88.212.15.50/live/test_h2/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Hit.ru@HD",Hit HD (1080p)
 http://stream.mcquack.net/363/index.m3u8
 #EXTINF:-1 tvg-name="Hlektra" tvg-logo="https://i.imgur.com/LbogUPS.png" tvg-id="hlektra.gr" tvg-chno="62" tvg-country="GR" group-title="سرگرمی - اروپا",Hlektra
@@ -4776,14 +4781,14 @@ https://5f22d76e220e1.streamlock.net/iuniortv/iuniortv/chunklist_w774879328.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="IzauraTV.hu@SD",Izaura TV (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/izaura/index.m3u8
-#EXTINF:-1 tvg-name="Izaura TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Izaura_TV_logo.svg/250px-Izaura_TV_logo.svg.png" tvg-id="IzauraTV.hu" tvg-chno="31" tvg-country="HU" group-title="سرگرمی - اروپا",Izaura TV Ⓖ
-http://141.94.193.53:80/Izaura_TV_HD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="IzmailTV.ua@SD",Izmail TV (384p)
 https://cdn10.live-tv.cloud/izod/izod-abr-lq/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="JapanimTV.be@SD",Japanim TV (1080p)
 https://foxkidstv.be:3369/stream/play.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Jihoceskatelevize.cz@SD",Jihočeská televize (1080p)
 https://vysilani.zaktv.cz/broadcast/hls/jtv/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Jim.fi@SD",Jim (720p)
+https://live-fi.tvkaista.net/jim/live.m3u8?hd=true
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="JimJam.hu@SD",JimJam
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/jim_jam_hun/index.m3u8
@@ -4900,6 +4905,8 @@ http://176.118.197.101/Komediya/index.m3u8
 http://stream.mcquack.net/74/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KomaromiTelevizio.hu@SD",Komáromi Televízió (400p)
 https://cloudfront44.lexanetwork.com:1344/relay01/HDE017.sdp/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KongressTV.ru@SD",Kongress TV (1080p)
+https://live-3.otcnet.ru/congresstv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KonkurentUkraine.ua@SD",Konkurent Ukraine
 #EXTVLCOPT:http-referrer=http://live.tvstitch.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
@@ -4924,6 +4931,8 @@ http://stream.mcquack.net/179/index.m3u8
 https://api.alpaca.t62a.com/hls/9110/stream0.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KulturMD.de@SD",KulturMD (1080p)
 http://58bd5b7a98e04.streamlock.net/medienasa-live/kulturmd_high/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KuriakosCine.pt@SD",Kuriakos Cine (1080p)
+https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KuriakosTV.pt@SD",Kuriakos TV (1080p)
 https://w1.manasat.com/ktv/smil:ktv.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="KusKus.ua@SD",Kus-Kus
@@ -4978,8 +4987,6 @@ https://tsw.streamingwebtv24.it:1936/eslife1/eslife1/playlist.m3u8
 http://41.205.93.154/LA-UNE/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LA7.it@HD",LA7 HD (1080p)
 https://d3k8wzt41aflvx.cloudfront.net/LA7HD/Live.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="labor14.de@HD",labor14 (720p)
-https://5acade5fc0c29.streamlock.net/OKGera/tmbz_live_high.stream/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Lale.ua@SD",Lale
 #EXTVLCOPT:http-user-agent=curl/8.16.0
 https://ext.cdn.nashnet.tv/228.0.0.50/index.m3u8
@@ -5015,6 +5022,10 @@ http://193.225.32.62:8890/live.m3u8
 http://88.212.7.14/live/lifetv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LightChannel.de@SD",Light Channel (576p) [Not 24/7]
 http://streamer1.streamhost.org:1935/salive/lctvde/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LiraTV.es@SD",LiraTV (720p)
+https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Liv.fi@SD",Liv (720p)
+https://live-fi.tvkaista.net/liv/live.m3u8?hd=true
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LogosTV.es@SD",Logos TV (1080p) [Not 24/7]
 https://streamer1.streamhost.org/salive/logosH/master.m3u8
 #EXTINF:-1 tvg-name="Lokal-TV Uddevalla / Fyrbodal-TV" tvg-logo="https://i.imgur.com/cnLkbOT.png" tvg-id="LTVU.se" tvg-chno="36" tvg-country="SE" group-title="سرگرمی - اروپا",Lokal-TV Uddevalla / Fyrbodal-TV Ⓨ
@@ -5033,18 +5044,15 @@ http://777905.live.tvstitch.com/stream.m3u8?channel=431&m=aHR0cHM6Ly9obHMtY2RuMS
 https://thor.mental-media.gr:19360/imp/imp.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LandleTV.at@SD",Ländle TV (1080p) [Not 24/7]
 https://streaming13.huberwebmedia.at/LiveApp/streams/985585225397790082777809.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="LemanBleu.ch@SD",Léman Bleu (1080p)
-http://livevideo.infomaniak.com/streaming/livecast/naxoo/playlist.m3u8
-#EXTINF:-1 tvg-name="M1" tvg-logo="https://i.imgur.com/neddXUd.png" tvg-id="M1.hu" tvg-chno="1" tvg-country="HU" group-title="سرگرمی - اروپا",M1 Ⓖ
-http://141.94.193.53:80/M1_HD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="M2.hu@SD",M2 (1080p)
 http://88.212.7.14/live/m2_hun/index.m3u8
-#EXTINF:-1 tvg-name="M2 / Petőfi TV" tvg-logo="https://i.imgur.com/CzaDhmA.png" tvg-id="M2.hu" tvg-chno="2" tvg-country="HU" group-title="سرگرمی - اروپا",M2 / Petőfi TV Ⓖ
-http://141.94.193.53:80/M2_HD/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="m2oTV.it@SD",m2o TV (1080p)
 https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="M5.hu@SD",M5 (1080p)
 http://88.212.7.14/live/test_m_5_hun_atk_1200/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="M6.fr@HD",M6 (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
+http://99.27.51.147:8080/M6/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="M95TelevisionMarbella.es@SD",M95 Televisión Marbella (1080p) [Not 24/7]
 https://limited2.todostreaming.es/live/m95-livestream.m3u8
 #EXTINF:-1 tvg-name="Mad" tvg-logo="https://i.imgur.com/OTTxxGe.png" tvg-id="Mad.gr" tvg-chno="37" tvg-country="GR" group-title="سرگرمی - اروپا",Mad Ⓨ
@@ -5128,8 +5136,6 @@ https://rtmp.streams.ovh:8081/mtv/index.m3u8
 https://www.livemetropolatv.ro/MetropolaTV/Metro/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MezzoLive.fr@SD",Mezzo Live (1080p)
 http://stream.mcquack.net/276/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MezokovesdiTelevizio.hu@SD",Mezőkövesdi Televízió (360p)
-https://cloudfront44.lexanetwork.com:1344/freerelay/mezokovesdvtv.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Mijas340TV.es@SD",Mijas 3.40TV (720p)
 https://streaming004.gestec-video.com/hls/MIJAS.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MilanTV.it@SD",Milan TV (720p)
@@ -5152,8 +5158,8 @@ http://176.118.197.101/MirSeriala/index.m3u8
 https://live.miracleonline.org/hls/miracle1.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Mireasa.ro@SD",Mireasa (720p)
 https://stream1.antenaplay.ro/live/MireasaExtra/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MissionAsia.au@SD",Mission Asia (1080p)
-https://livecdn.live247stream.com/missionasia/tv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MISATV.ro@SD",MISA TV (720p)
+https://vidl.misatv.ro:5050/MSTV/romanian_720p_baseline/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="MonteCarloDigitalTelevision.fr@HD",Monte Carlo Digital Television (1080p)
 https://fl718492-exthls-p1.flovp.com/fl718492/live/live.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Moskva24.ru@SD",Moskva 24 (1080p)
@@ -5315,8 +5321,6 @@ http://novapress.ro:2022/live/nova/playlist.m3u8
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/NOVE/CMAF/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NOVO19.fr@HD",NOVO19 (1080p)
 http://149.62.177.107:9999/NOVO19/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NovorossiyaTV.ru@SD",Novorossiya TV (1080p) [Geo-blocked]
-http://31.131.139.253:9002/novoros/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NovyiChannel.ua@SD",Novyi Channel (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/157/index.m3u8
@@ -5448,8 +5452,6 @@ https://ms2.mx-cd.net/tv/141-573555/OPEN_Rotterdam.smil/playlist.m3u8
 https://liveopen.siliconweb.com/openTvLive/liveopen/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Oplot2.ru@SD",Oplot 2 (720p) [Geo-blocked]
 http://91.224.16.9:7779/Oplot_2/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="OplotTV.ru@SD",Oplot TV (1080p) [Geo-blocked]
-http://31.131.139.253:9002/oplot_hd/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ORF1.at@SD",ORF 1
 https://test02.mdn.ors.at/orf/orf1/qxa/manifest.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ORF2.at@SD",ORF 2 (720p)
@@ -5489,10 +5491,10 @@ https://5f22d76e220e1.streamlock.net/pacicontemporarychannel/pacicontemporarycha
 https://600f07e114306.streamlock.net/PadrePioTV/livestream/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PanikTV.gr@SD",Panik TV (1080p)
 https://livetv.streams.ovh:1936/paniktv/paniktv/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PannonTV.rs@SD",Pannon RTV (648p)
-https://stream.nmih.hu:4102/live.m3u8
 #EXTINF:-1 tvg-name="Paramount Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Paramount_Network.svg/500px-Paramount_Network.svg.png" tvg-id="ParamountNetwork.es" tvg-chno="20" tvg-country="ES" group-title="سرگرمی - اروپا",Paramount Network
 https://jmp2.uk/plu-68d566603d3a9580eb461251.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ParlamentodeNavarra.es@SD",Parlamento de Navarra (368p) [Not 24/7]
+https://broadcasting.parlamentodenavarra.es/live/canal1/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Parlamentsfernsehen1.de@SD",Parlamentsfernsehen 1 (1080p) [Not 24/7]
 https://cldf-hlsgw.r53.cdn.tv1.eu/1000153copo/hk1.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ParolediVita.it@SD",Parole di Vita (1080p)
@@ -5584,9 +5586,6 @@ http://88.212.15.50/live/prima_cool_cz_avc/index.m3u8
 http://88.212.15.50/live/test_prima_krimi_cz/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PrimaLove.cz@SD",Prima Love
 http://88.212.15.50/live/prima_love_cz_avc/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PrimaloveSK.sk@SD",Prima love SK (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
-http://88.212.15.50/live/prima_love_avc_25p/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PrimaMax.cz@SD",Prima Max
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.15.50/live/test_prima_max_cz/playlist.m3u8
@@ -5625,6 +5624,8 @@ https://media2021.rtvweb.com/promovideo_web/promovideo/playlist.m3u8
 https://s6.hopslan.com/pro7maxxX/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Prosveshchenie.ru@SD",Prosveshchenie (576p)
 http://cdn-01.bonus-tv.ru/prosveschenie_edge/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PTV.ua@SD",PTV (720p)
+https://cdn15.live-tv.cloud/ua_infinitas_tv/hrpl-abr/playlist.m3u8
 #EXTINF:-1 tvg-name="Public Sénat" tvg-logo="https://i.imgur.com/bJOdFT1.png" tvg-id="PublicSenat.fr" tvg-chno="13" tvg-country="FR" group-title="سرگرمی - اروپا",Public Sénat
 https://www.publicsenat.fr/direct
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="PuissanceTV.fr@SD",Puissance TV
@@ -5725,6 +5726,8 @@ https://d3k8wzt41aflvx.cloudfront.net/RAIP/Live.m3u8
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=rainet/4.0.5
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RAN1.de@SD",RAN1 (1080p)
 http://58bd5b7a98e04.streamlock.net/medienasa-live/ran1_high/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RapsodiaTV.ro@SD",Rapsodia TV
+http://hls02ns.antenaplay.ro/hls/rapsoida-tv-sd/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RAZ1.ua@SD",RAZ 1 (1080p)
 http://stream.mcquack.net/463/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RAZ2.ua@SD",RAZ 2 (1080p)
@@ -5801,8 +5804,6 @@ http://176.118.197.101/Retro/index.m3u8
 http://58bd5b7a98e04.streamlock.net/medienasa-live/RFH_high/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RFPtv.pt@SD",RFPtv (360p)
 https://video03.logicahost.com.br/rfptv/rfptv/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RhoneTV.ch@SD",Rhône TV (1080p) [Geo-blocked]
-https://edge14.vedge.infomaniak.com/livecast/ik:rhonetv/manifest.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RiberaTV.es@SD",Ribera TV (576p)
 https://common01.todostreaming.es/live/ribera-livestream.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="RiC.de@SD",RiC (1080p)
@@ -6241,10 +6242,10 @@ https://cloudfront44.lexanetwork.com:1344/relay01/broadcast006.sdp/playlist.m3u8
 https://5f22d76e220e1.streamlock.net/taurianovatv/taurianovatv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TBNEspana.es@SD",TBN España (576p)
 https://edge.xn--tbnespaa-j3a.es/LiveApp/streams/tbnlive.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TBNUkraine.us@SD",TBN Україна (720p)
-https://5d23269b3ec0c.streamlock.net/WEB_Ukraine24/ngrp:Ukraine24.stream-adaptive/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TebeoTV.fr@SD",Tebeo TV (576i)
 https://tebeo.streamakaci.tv/tebeo/tebeo-multi/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TeenNick.pl@SD",TeenNick (576i)
+http://92.114.85.87:8010/play/a009/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TELE5.de@SD",TELE 5 (576p)
 https://s6.hopslan.com/tele5X/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Tele7.es@SD",Tele 7 (720p)
@@ -6347,6 +6348,8 @@ http://ts2000tv.streaming.nextware.it:8081/ts2000tv/ts2000tv/playlist.m3u8
 https://cloud.fastchannel.es/mic/manifiest/hls/televigo/televigo.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelevisionCanaria.es@SD",Television Canaria (1080p)
 https://rtvclive.flumotion.cloud/rtvc1live/smil:channel1PRG.smil/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelevisionAranda.es@SD",Televisión Aranda (720p)
+https://cloud.streamingconnect.tv/hls/telearanda/telearanda.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelevisionConsciente.es@SD",Televisión Consciente (1080p)
 https://cdn318.fractalmedia.es/318/live/hls/tvc/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelevizeSeznam.cz@SD",Televize Seznam (1080p)
@@ -6357,6 +6360,8 @@ https://s-pl-01.mediatool.tv/playout/tbpl-abr/index.m3u8
 https://5d84fe297ee2b.streamlock.net/sercanie/scj_florek.stream_aac/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelewizjaJaslo.pl@SD",Telewizja Jaslo (720p)
 https://cdn01.aztv.pl/live_tvjaslo/live_tvjaslo.stream/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelewizjaLuban.pl@SD",Telewizja Lubań (720p) [Not 24/7]
+http://stream.herissons.cloud/hls/tvluban.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TelewizjaRelax.pl@SD",Telewizja Relax (1080p)
 https://srv1.streamingo.pl/memfs/be50f17e-6579-4bdf-86b1-31207aec85b8.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="teltOwkanal.de@SD",teltOwkanal (1080p)
@@ -6431,6 +6436,8 @@ http://stream.mcquack.net/357/index.m3u8
 https://av.hellasnet.tv/rst/trt/main_stream.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TsargradTV.ru@SD",Tsargrad TV (1080p) [Geo-blocked]
 https://bl.rutube.ru/livestream/91815da4edb167b5bd617bae490e57da/index.m3u8?e=2070278263&s=is_mLq_kjPYLsOJ4qj85tw&scheme=https
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV1Oberosterreich.at@SD",TV 1 Oberösterreich (1080p)
+https://streaming10.huberwebmedia.at/LiveApp/streams/238985177034727564068269_adaptive.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV100.gr@SD",TV 100 (720p)
 https://gwebstream.net/hls/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV2Bornholm.dk@SD",TV 2/Bornholm (1080p) [Not 24/7]
@@ -6566,8 +6573,6 @@ https://tv3v.live-kd.com/live/tv3v/livestream/index.m3u8
 https://live-fi.tvkaista.net/tv5/live.m3u8?src=freetv
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV5MONDEChefs.fr@SD",TV5MONDE Chefs (1080p)
 https://tvf-tv5ch.otteravision.com/tvf/tv5ch/tv5ch.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV5MondeEurope.fr@SD",TV5Monde Europe (1080p)
-http://5.180.164.197:8080/TV5MONDE/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="TV5MondeStyle.fr@SD",TV5Monde Style (1080p) [Geo-blocked]
 https://ott.tv5monde.com/Content/HLS/Live/channel(style1)/variant.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="7TV.hu@SD",TV7 Bekescsaba (360p)
@@ -6755,8 +6760,6 @@ http://92.114.85.87:8010/play/a00a/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Viasat2.hu@SD",Viasat2
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/viasat2/index.m3u8
-#EXTINF:-1 tvg-name="Viasat3." tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/ad/Viasat3_%281%29.png?utm_source=hu.wikipedia.org&utm_campaign=index&utm_content=original" tvg-id="Viasat3.hu" tvg-chno="20" tvg-country="HU" group-title="سرگرمی - اروپا",Viasat3.
-http://141.94.193.53:80/VIASAT3_HD/index.m3u8
 #EXTINF:-1 tvg-name="Video Calabria" tvg-logo="https://i.imgur.com/Bc2AvIm.png" tvg-id="VideoCalabria.it" tvg-country="IT" group-title="سرگرمی - اروپا",Video Calabria
 https://a8a02dd9a49a4fc9810743615c65ab73.msvdn.net/live/S76734991/i6NeNqLYaspb/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="vijuExplore.ru@SD",viju Explore (576p)
@@ -6784,8 +6787,6 @@ https://streaming.proceso.info:8888/vision6-web/stream.m3u8
 https://live-11cinema.cdnvideo.ru/11cinema/11cinema/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="VIVARussia.ru@SD",VIVA Russia
 https://live20.bozztv.com/akamaissh101/ssh101/vivarussia/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ViaMatele.fr@SD",ViàMatélé (1080p)
-https://5dd226f8f01e8.streamlock.net/via-matele-live/matelelive_1080/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="viaTelePaese.fr@SD",viàTéléPaese (720p)
 https://srv.webtvmanager.fr:3970/live/viatelepaeselive.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="VmesteRF.ru@SD",Vmeste-RF (576p) [Geo-blocked]
@@ -6815,8 +6816,6 @@ https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8
 https://str.onnetwork.tv/hls/onnet-358726_hi/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="W24.at@SD",W24 (720p) [Not 24/7]
 https://ms01.w24.at/W24/smil:liveevent.smil/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="W9.fr@SD",W9 (1086p)
-http://5.180.164.197:8080/W9/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="WarnerTV.cz@SD",Warner TV
 http://88.212.15.50/live/warner_tv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="WDR1Live.de@SD",WDR 1 Live (720p)
@@ -6887,8 +6886,6 @@ https://live.yoltv.com/hls/stream.m3u8
 http://185.57.68.33/40/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ZalaegerszegiTV.hu@SD",Zalaegerszegi TV (360p)
 https://cloudfront44.lexanetwork.com:1344/freerelay/zegtv.sdp/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ZDFneo.de@SD",ZDFneo (720p)
-http://5.180.164.197:8080/ZDFNEO/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ZdorovoeTV.ru@SD",Zdorovoe TV (576p)
 https://stream8.cinerama.uz/1428/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="Zenebutik.hu@SD",Zenebutik
@@ -6913,8 +6910,6 @@ http://92.114.85.87:8001/play/a00y/index.m3u8
 https://stream8.cinerama.uz/1417/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ZouglaTV.gr@HD",Zougla TV (720p)
 https://zouglacam-mdc-secure.akamaized.net/zouglalive/backup/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ZugloTV.hu@SD",Zuglo TV (360p)
-https://cloudfront44.lexanetwork.com:1344/freerelay/zuglotv.sdp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="VivaLatino.ua@SD",¡Viva Latino! (1080p)
 http://stream.mcquack.net/285/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="OzdiVarosiTV.hu@SD",Ózdi Városi TV (720p) [Not 24/7]
@@ -7027,6 +7022,8 @@ https://stream.ntktv.ua/s/ntk/ntk.m3u8
 https://live-ntm13.cdnvideo.ru/ntm13/smil:ntm13.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="NTS.ru@SD",НТС (Севастополь) (1080p) [Not 24/7]
 https://peqk71plnjy.a.trbcdn.net/livemaster/w4kz7pki62_nts_tv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="ObshchestvennoeNezavisimoeTelevidenie.ua@SD",Общественное Независимое Телевидение (576p)
+http://85.238.112.40:8810/hls_sec/239.33.75.33-.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="OrbitaTV.ua@SD",Орбіта ТВ (360p) [Not 24/7]
 http://ftp.orbita.dn.ua/hls/orbita.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="OSN.ru@SD",ОСН
@@ -7132,12 +7129,12 @@ https://live-saha.cdnvideo.ru/saha2/yak24rtmp_live.smil/playlist.m3u8
 https://stream.ichibansys.com:3230/hybrid/play.m3u8
 #EXTINF:-1 tvg-name="+Perfil" tvg-logo="https://i.imgur.com/3wZdPwN.png" tvg-id="MasPerfil.ar" tvg-chno="25.6" tvg-country="AR" group-title="سرگرمی - آمریکای لاتین",+Perfil
 https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/perfiltv/livestream2/chunks.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13E.cl@SD",13 Entretención (720p)
+https://origin.dpsgo.com/ssai/event/BBp0VeP6QtOOlH8nu3bWTg/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13Festival.cl@SD",13 Festival (1080p)
 https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13Humor.cl@SD",13 Humor (1080p)
 https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13P.cl@SD",13 Prime (720p)
-https://origin.dpsgo.com/ssai/event/p4mmBxEzSmKAxY1GusOHrw/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13Realities.cl@SD",13 Realities (1080p)
 https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="13C.cl@SD",13C (1080p)
@@ -7146,6 +7143,8 @@ https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8
 https://v2.tustreaming.cl/enlacebpbtv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="247CanaldeNoticias.ar@SD",24/7 Canal de Noticias (360p)
 https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="36TVHuacho.pe@SD",36 TV Huacho (720p)
+https://live-evg10.tv360.bitel.com.pe/bitel/36tvSRT/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="5tv.ar@SD",5tv
 https://617c5175c970b.streamlock.net:4444/tvcinco/live1/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="5tv.ar@SD",5TV Corrientes (480p) [Not 24/7]
@@ -7262,8 +7261,6 @@ https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
 https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="BAMOSTV.mx@SD",BAMOS TV (1080p) [Not 24/7]
 https://video2.getstreamhosting.com:19360/8092/8092.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Bandamax.mx@SD",Bandamax (1080p)
-http://181.78.106.127:5000/play/ca064/index.m3u8
 #EXTINF:-1 tvg-name="Barricada TV" tvg-logo="https://www.barricadatv.org/?p=23082" tvg-id="BarricadaTV.ar" tvg-chno="32.1" tvg-country="AR" group-title="سرگرمی - آمریکای لاتین",Barricada TV
 https://www.youtube.com/channel/UC6YundoLrEuBJaPp_oEPWaA/live
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="BellaAbanquinaTV.pe@SD",Bella Abanquina TV (720p)
@@ -7363,6 +7360,8 @@ https://stream.arcast.com.ar/canal4esquel/canal4esquel/playlist.m3u8
 https://5cd577a3dd8ec.streamlock.net/CANAL4/smil:CANAL4.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Canal4Posadas.ar@SD",Canal 4 Posadas (1080p)
 http://190.128.214.97:64333/play/a06l/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Canal4SanJuan.ar@SD",Canal 4 San Juan (576p)
+https://streamlov.alsolnet.com/canal4sanjuan/live/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Canal4Teleaire.ar@SD",Canal 4 Teleaire
 https://stmvideo6.livecastv.com/canal4/canal4/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Canal4VillaDolores.ar@SD",Canal 4 Villa Dolores
@@ -7429,6 +7428,8 @@ https://vivo.solumedia.com:19360/cardinal/cardinal.m3u8
 https://movil.ejeserver.com/live/calimatv.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalCapital.co@SD",Canal Capital (1080p)
 http://138.121.15.230:9002/CANAL-CAPITAL/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalCHD.co@SD",Canal CHD
+https://vs20.live.opencaster.com/canalchd2025_8d99626c/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalCineDios.co@SD",Canal Cine Dios
 https://canal.mediaserver.com.co/live/cinedios.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CanalClaro.cl@SD",Canal Claro
@@ -7529,14 +7530,14 @@ https://freya.mivideo.pro/centraltv/video.m3u8
 https://wowzasrv.chaco.gov.ar/Streamtv/chacotv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChamameTV.ar@SD",Chamame TV
 https://srv4.zcast.com.br/chamametv/chamametv/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CharapaTV.pe@SD",Charapa TV (720p)
+https://live-evg10.tv360.bitel.com.pe/bitel/charapatvSRT/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Chikitoonz.pe@SD",Chikitoonz (1080p)
 http://45.70.201.81:8000/play/a00p/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChileChannel.cl@SD",Chile Channel (720p)
 https://v2.tustreaming.cl/chilechannel/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChileVision.cl@SD",ChileVision (1080p)
 http://15.204.246.24:8080/CHVHD/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChiloeRed25.cl@SD",Chiloe Red 25 (720p)
-https://v2.tustreaming.cl/chiloered/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChinaChannel.cl@SD",China Channel (720p)
 https://v2.tustreaming.cl/chinachannel/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="ChocolateFM.cl@SD",Chocolate FM (720p)
@@ -7605,6 +7606,8 @@ https://v2.tustreaming.cl/coyhaiquetv/index.m3u8
 https://live.obslivestream.com/crtvmux/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CreaLaTV.mx@SD",CreaLaTV (1080p)
 https://stream.crealatv.com/live.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Cristovision.co@SD",Cristovision (720p)
+https://5fc584f3f19c9.streamlock.net/cristovision/videocristovision/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="CRTV.cl@SD",CRTV (720p)
 https://stmv2.voxtvhd.com.br/crtvchile/crtvchile/playlist.m3u8
 #EXTINF:-1 tvg-name="Crónica TV" tvg-logo="https://i.imgur.com/k2Ku8Ib.png" tvg-id="CronicaTV.ar" tvg-chno="24.4" tvg-country="AR" group-title="سرگرمی - آمریکای لاتین",Crónica TV Ⓨ
@@ -7637,6 +7640,8 @@ https://br.conectmy.com.br/DespertarTV/index.m3u8
 http://15.204.142.109:22880/TELEVISA-PROVEEDOR-DISTRITO-COMEDIA/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="DobleCTelevision.pe@SD",Doble C Television (720p)
 https://live20.bozztv.com/giatv/giatv-doblec1/doblec1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Docevision.cl@SD",Docevision (720p)
+https://live20.bozztv.com/giatvplayout7/giatv-208729/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="DTV.pe@SD",DTV (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/sabormixtvSRT/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="DumDum.br@SD",DumDum (720p)
@@ -7752,6 +7757,8 @@ http://45.5.118.152:8000/play/a03p/index.m3u8
 http://200.57.28.141:8540/play/a0ln
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GoldenPremier2.mx@SD",Golden Premier 2 (1080p)
 http://200.57.28.141:8540/play/a0lo
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Golden.mx@Panregional",Golden TV (240p) [Not 24/7]
+https://rpn.bozztv.com/gusa/gusa-goldentv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="GVision.cl@SD",GVision (288p)
 https://videostream.chileservidores.com:8081/tome/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="HogarTV.co@SD",Hogar TV (1080p)
@@ -7803,8 +7810,6 @@ http://187.102.210.46/KARIBENA/index.m3u8
 https://cloud.tvomix.com/KPOPMIX/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="KpopTVPlay.br@SD",KpopTV Play (576p)
 https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="KuriakosCine.pt@SD",Kuriakos Cine (1080p)
-https://w2.manasat.com/kcine/smil:kcine.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Lke.br@SD",L!ke (1080p)
 https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="L1Max.pe@SD",L1 Max (1080p)
@@ -7868,8 +7873,6 @@ https://play.mbcbrasil.tv.br/playlist.m3u8
 http://168.196.127.137:6001/play/a070/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MCITelevision.co@SD",MCI Televisión (1080p)
 https://video.ejeserver.com/live/mcitelevision.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="MediaTV.pe@SD",Media TV (720p)
-https://live-evg5.tv360.bitel.com.pe/bitel/mediatv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Mega.cl@SD",Mega (1080p)
 http://tr.live.clarovtrcdn.vtrplay.com/megahdchi/vxfmt=dp/playlist.m3u8?device_profile=STB_HLS_VCAS_LIVE_HD
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Mega2.cl@SD",Mega 2 (1080p)
@@ -8105,8 +8108,6 @@ https://live-evg11.tv360.bitel.com.pe/bitel/selvaticaSRT/playlist.m3u8
 https://scl.edge.grupoz.cl/rtcstreaming/live/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RTN.ar@SD",RTN (Neuquén) (720p) [Not 24/7]
 https://media.neuquen.gov.ar/rtn/television/media.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RTP.pe@SD",RTP (720p)
-https://live-evg7.tv360.bitel.com.pe/bitel/rtp/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RTQQueretaro.mx@SD",RTQ Querétaro (1080p)
 https://59d39900ebfb8.streamlock.net/rytqrolive/rytqrolive/chunklist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="RTVNuble.cl@SD",RTV Nuble (1080p)
@@ -8191,8 +8192,6 @@ https://5790d294af2dc.streamlock.net/streamtv/streamtv/playlist.m3u8
 https://live20.bozztv.com/akamaissh101/ssh101/somosentrerios/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="SonyChannel.ar@SD",Sony Channel (1080p)
 http://138.121.15.230:9002/SONY/index.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="SoonaTV.co@SD",Soona TV
-https://vs20.live.opencaster.com/soonatv_a1a564a9/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Space.ar@Panregional",Space (1080p)
 http://45.171.64.30:6060/play/a04n/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="SqalaTV.pe@SD",Sqala TV (720p)
@@ -8264,8 +8263,6 @@ http://138.121.15.230:9002/TELEPACIFICO/index.m3u8
 https://play.cdn.enetres.net/6E5C615AA5FF4123ACAF0DAB57B7B8DC021/022/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TeleplaySureste.mx@SD",Teleplay Sureste (720p)
 https://player.tvstream.mx/livestream/teleplay/livehd/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TeleQuindio.co@SD",TeleQuindio (1080p)
-https://live20.bozztv.com/akamaissh101/ssh101/telequindio/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Telesangil.co@SD",Telesangil (720p)
 https://live20.bozztv.com/akamaissh101/ssh101/telesangil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Teleselva.pe@SD",Teleselva (720p)
@@ -8274,6 +8271,8 @@ https://live-evg7.tv360.bitel.com.pe/bitel/teleselva/playlist.m3u8
 https://live-evg5.tv360.bitel.com.pe/bitel/telesystemSRT/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Televida.cl@SD",Televida (1080p)
 https://tls-cl.cdnz.cl/televida/live/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TelevisionTarapoto.pe@SD",Television Tarapoto (1080p)
+http://45.5.57.58:8000/play/a038/index.m3u8
 #EXTINF:-1 tvg-name="Televisión Pública" tvg-logo="https://i.imgur.com/4hYYpiu.png" tvg-id="TVPublica.ar" tvg-chno="23.1" tvg-country="AR" group-title="سرگرمی - آمریکای لاتین",Televisión Pública Ⓨ
 https://www.youtube.com/user/TVPublicaArgentina/live
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TendenciasPrime.cl@SD",Tendencias Prime (720p)
@@ -8296,8 +8295,6 @@ https://unlimited1-us.dps.live/thema/thema.smil/playlist.m3u8
 https://ssai2-ads.api.leiniao.com/global-adinsertion-api/hls/live/v2/21fdb6dd7491406bba86497a24390a25/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TIVTelevision.ar@SD",TIV Television (720p)
 https://videohd.live:19360/8008/8008.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TlaxcalaTV.mx@SD",Tlaxcala Televisión (360p) [Not 24/7]
-https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TlnovelasLatinAmerica.mx@SD",Tlnovelas Latin America (1080p)
 http://138.121.15.230:9002/TELENOVELAS/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TlnovelasMexico.mx@SD",Tlnovelas Mexico (1080p)
@@ -8306,8 +8303,6 @@ http://167.249.23.102:8000/play/a0g8/index.m3u8
 http://158.172.155.130:8000/play/a0dp/index.m3u8
 #EXTINF:-1 tvg-name="TN Todo Noticias" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/TN_todo_noticias_logo.svg/250px-TN_todo_noticias_logo.svg.png" tvg-id="TodoNoticias.ar" tvg-chno="3" tvg-country="AR" group-title="سرگرمی - آمریکای لاتین",TN Todo Noticias Ⓨ
 https://www.youtube.com/c/todonoticias/live
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TNE.cl@SD",TNE (720p) [Not 24/7]
-https://v2.tustreaming.cl/tnetv/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TopTV.pe@SD",Top FM TV (240p) [Not 24/7]
 https://tvdatta.com:3084/live/toptvaguaytialive.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TopLatinoTV.pe@SD",Top Latino TV
@@ -8340,6 +8335,8 @@ https://video01.logicahost.com.br/tvalianca/tvalianca/playlist.m3u8
 https://stmv5.samcast.com.br/wagner7919/wagner7919/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVAparecida.br@SD",TV Aparecida (1080p) [Not 24/7]
 https://cdn.jmvstream.com/w/LVW-9716/LVW9716_HbtQtezcaw/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVArapuan.br@SD",TV Arapuan (720p)
+https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVBahia.br@HD",TV Bahia (1080i)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 http://hls1.sua.tv/live/globotvbahiafhdbr2/s.m3u8
@@ -8382,10 +8379,16 @@ http://79.127.238.228:14173
 https://stmv7.voxtvhd.com.br/golfo/golfo/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVGRANDENATALHDTVBRASIL.br@SD",TV Grande Natal (1080p)
 http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVGuarapari.br@SD",TV Guarapari (720p)
+#EXTVLCOPT:http-referrer=https://tvguarapari.com/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36
+https://video.welltecnologia.com.br/tvguarapari/tvguarapari/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVGuara.br@SD",TV Guará (720p) [Not 24/7]
 https://video02.logicahost.com.br/tvguara23/tvguara23/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVJustica.br@SD",TV Justica (720p)
 http://45.162.64.114/TV_JUSTICA/index.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVKaliente.pe@SD",TV Kaliente (720p)
+https://lbgo.bozztv.com/ssh101/ssh101/kalientecusco/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVLifeAmerica.br@HD",TV Life America (720p)
 https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVLobo.mx@SD",TV Lobo Durango (720p)
@@ -8480,8 +8483,10 @@ http://190.61.47.54:8000/play/a01k/index.m3u8
 https://5b7f3c45ab7c2.streamlock.net/8008/smil:8008.smil/playlist.m3u8?DVR=
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVCOMMaceio.br@SD",TVCOM Maceió (480p)
 https://srv5.zcast.com.br/tvcommaceio/tvcommaceio/playlist.m3u8
-#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVitape.br@SD",TVitapé (720p)
-https://stream01.msolutionbrasil.com.br/hls/tvitape/live.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVEBahia.br@SD",TVE RS (1080p)
+http://streaming.procergs.com.br:1935/tve/stve/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVGracia.co@SD",TVGracia
+https://vs20.live.opencaster.com/diego_57244803/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVLatinaSat.br@HD",TVLatinaSat (720p)
 https://www.latinasat.com.br/hls/live/stream/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="XHGVTDT.mx@SD",TVMÁS (XHGV-TDT) (360p) [Not 24/7]
@@ -8492,6 +8497,9 @@ http://15.204.246.24:8080/TVNHD/index.m3u8
 https://mdstrm.com/live-stream-playlist/5653641561b4eba30a7e4929.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVNBN.br@SD",TVNBN (720p)
 https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVOSanVicente.cl@SD",TVO San Vicente (720p)
+#EXTVLCOPT:http-referrer=http://www.tvosanvicente.cl/
+https://5ff3d9babae13.streamlock.net/8014/8014/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVPCuliacan.mx@SD",TVP Culiacán (720p) [Not 24/7]
 https://5ca3e84a76d30.streamlock.net/gpacifico1/smil:gpculiacan.smil/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="TVPLosMochis.mx@SD",TVP Los Mochis (720p) [Not 24/7]
@@ -8566,6 +8574,9 @@ http://45.170.130.224:8000/play/a025/index.m3u8
 https://micanal.ovh/livestreams/515.AUTOOAAZ721F.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="Vision.pe@SD",Vision (480p)
 https://lbgo.bozztv.com/ssh101/ssh101/visiononline/playlist.m3u8
+#EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="VisionPlusTV.cl@SD",Vision Plus TV (1080i)
+#EXTVLCOPT:http-referrer=https://visionplustv.cl/
+https://5ff3d9babae13.streamlock.net/jwagpqxehu/jwagpqxehu/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="VisionSur.pe@SD",Vision Sur (720p)
 https://live-evg8.tv360.bitel.com.pe/bitel/visionsur/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - آمریکای لاتین" tvg-id="VisionTelevision.mx@SD",Visión Televisión (720p)
@@ -8788,8 +8799,6 @@ https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
 https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - خاورمیانه" tvg-id="QafTV.tr@SD",Qaf TV (1080p)
 https://customer-9vqui33qma2rownb.cloudflarestream.com/7792e558fe54e23bdd4b462ec275cdba/manifest/video.m3u8
-#EXTINF:-1 group-title="سرگرمی - خاورمیانه" tvg-id="Sat7Turk.cy@SD",Sat7 Türk (1080p)
-https://live.artidijitalmedya.com/artidijital_sat7turk/sat7turk/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - خاورمیانه" tvg-id="BricveSatrancTV.tr@SD",Satranç TV (480p) [Not 24/7]
 http://139.162.182.79/live/test/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - خاورمیانه" tvg-id="SemerkandTV.tr@SD",Semerkand TV (1080p) [Not 24/7]
@@ -8881,6 +8890,8 @@ https://live.artidijitalmedya.com/artidijital_ciftcitv/ciftcitv/playlist.m3u8
 https://c.mjh.nz/abc-kids.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Boomerang.us@SD",Boomerang (720p)
 http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CartoonNetwork.us@East",Cartoon Network (720p) [Geo-blocked]
+http://212.5.144.156:8080/cartoon/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CartoonNetworkCEE.uk@Hungary",Cartoon Network CEE
 http://193.33.39.108:9007/play/a00l
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="CartoonNetworkCEE.uk@CzechRepublic",Cartoon Network CEE Czech Republic
@@ -8913,6 +8924,8 @@ http://15.204.246.24:8080/DiscoveryKidsHD/index.m3u8
 http://38.224.231.176:8000/play/a01j/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DisneyChannel.us@East",Disney Channel (720p)
 http://4.30.180.36:8420/disneychannel/index.m3u8?token=test
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DisneyJunior.us@East",Disney Junior (576p) [Geo-blocked]
+http://212.5.144.156/disneyjr/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DisneyXD.us@East",Disney XD (720p)
 http://89.187.179.148:826/1368/gXwiagaXda/1672
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="GiggleMug.us@SD",Giggle Mug (576p)
@@ -8929,6 +8942,8 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62444e195
 https://live20.bozztv.com/giatvplayout7/giatv-209909/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="MoonbugKids.uk@SD",Moonbug Kids (720p)
 https://mumbai-edge.smartplaytv.in/Moonbug/index.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJr.us@East",Nick Jr. (720p)
+http://212.5.144.156:8080/nickjr/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJr.us@EastHD",Nick Jr. East HD (720p)
 http://107.167.16.138/nickjr/index.m3u8?token=test
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJrLatinAmerica.us@Panregional",Nick Jr. Latin America (1080p)
@@ -8962,6 +8977,8 @@ http://88.212.15.50/live/test_disney_junior/playlist.m3u8
 http://185.227.34.179:8080/disney-xd/index.m3u8
 #EXTINF:-1 tvg-name="ERT Kids" tvg-logo="https://i.imgur.com/XkSR66q.png" tvg-id="ERTKids.gr" tvg-chno="10" tvg-country="GR" group-title="کودک و کارتون - اروپا",ERT Kids Ⓖ
 https://ert-ucdn.broadpeak-aas.com/bpk-tv/ERTKids/default/index.mpd
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="KuriakosKids.pt@SD",Kuriakos Kids (1080p)
+https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="LogosTVKids.es@SD",Logos TV Kids (720p) [Not 24/7]
 https://streamer1.streamhost.org/salive/logoskidsH/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Mama.ru@SD",Mama (576p)
@@ -9010,8 +9027,6 @@ http://181.78.14.26:4000/play/a073/index.m3u8
 http://45.185.163.75:8000/play/a016/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="GospelCartoon.br@SD",Gospel Cartoon (360p)
 https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="KuriakosKids.pt@SD",Kuriakos Kids (1080p)
-https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="Nickelodeon.br@SD",Nickelodeon (480p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
@@ -9028,8 +9043,6 @@ https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8
 http://176.65.153.40:6002/play/a013/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="AutenticHistory.de@SD",Autentic History (1080p)
 https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="",CBC Murdoch Mysteries (1080p) [Geo-blocked]
-https://amagi-streams.akamaized.net/hls/live/2113390/cbcmurdoch/master.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DiscoveryChannel.it@SD",Discovery Channel (1080p)
 https://streaming.aurora.enhanced.live/live/mpc/enl0eG1mLmVncmVzcy5mZDJ2eHI=/out/v1/IT_SIMULCAST/DISCOVERYCHANNEL/CMAF/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DiscoveryChannelLatinAmerica.us@Panregional",Discovery Channel Latin America (1080p)
@@ -9058,16 +9071,6 @@ http://38.134.250.110:8000/play/a01y/index.m3u8
 http://168.196.127.137:6001/play/a097/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DiscoveryWorld.us@Brazil",Discovery World Brazil (720p) [Geo-blocked]
 http://15.204.246.24:8080/DiscoveryWorldHD/index.m3u8
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="Docevision.cl@SD",Docevision (720p)
-https://live20.bozztv.com/giatvplayout7/giatv-208729/playlist.m3u8
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="Doctor.ru@SD",Doctor (576i)
-https://stream8.cinerama.uz/1409/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="Doctor Who – Pluto TV" tvg-logo="https://i.imgur.com/oewPc3b.png" group-title="مستند و علمی - انگلیسی",Doctor Who – Pluto TV
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/62e7f8db27ce19000732d1aa/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocuBox.nl@SD",DocuBox
-https://dash3.antik.sk/live/test_docubox_medium_atk/playlist.m3u8
-#EXTINF:-1 tvg-name="Documentari – Pluto TV" tvg-logo="https://i.imgur.com/0jYrODf.png" tvg-id="PlutoTVDocumentariItaly.it" group-title="مستند و علمی - انگلیسی",Documentari – Pluto TV
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/608aa8a5709d6b0007b132fe/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocumentaryPlus.us@US",Documentary+ (1080p)
 https://ef79b15c8c7c46c7a9de9d33001dbd07.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-859-DOCUMENTARYPLUS-DOCUMENTARYPLUS/mt/documentaryplus/859/hls/master/playlist.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="GenesisScienceNetwork.us@SD",Genesis Science Network (720p)
@@ -9082,25 +9085,18 @@ https://freem3u.xyz/api/live/play.m3u8?vid=9856
 http://15.204.246.24:8080/HistoryHD/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="HistoryLatinAmerica.us@South",History Latin America South
 http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/37.m3u8
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="History2.cz@SD",History2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
-http://88.212.15.50/live/test_h2/playlist.m3u8
-#EXTINF:-1 tvg-name="House of Docs – Pluto TV" tvg-logo="https://i.imgur.com/pFLQ18m.png" group-title="مستند و علمی - انگلیسی",House of Docs – Pluto TV
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/6536608b4f123d000876b78b/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="InvestigationDiscovery.ru@SD",Investigation Discovery (1080p)
 http://stream.mcquack.net/205/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="MilitaryHistory.us@SD",Military History (720p)
 #EXTVLCOPT:http-referrer=https://bhoomtv.org/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0 Win64 x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/154.0.0.0 Safari/537.36
 https://frndly.keralive.workers.dev/v1/master/840a24ccd7c75076211d060179b3ad0c64fdc6ca/militaryhistory_live_nr/ab44a8245afe413db1169317ee5cda08/index.m3u8?type=ae2
-#EXTINF:-1 tvg-name="Pluto TV Documentaries" tvg-logo="https://i.imgur.com/Mr4ZsNZ.png" group-title="مستند و علمی - انگلیسی",Pluto TV Documentaries
-http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b85a7582921777994caea63/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=91&deviceId=5b85a7582921777994caea63&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="PolsatViasatHistory.pl@SD",Polsat Viasat History (1080p)
 http://185.227.34.179:8080/polsat-viasat-history-hd/index.m3u8
 #EXTINF:-1 tvg-name="RT Documentary English" tvg-logo="https://i.imgur.com/ZEi1Wgn.png" tvg-id="RTDoc.ru" group-title="مستند و علمی - انگلیسی",RT Documentary English Ⓖ
 https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8
-#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="TheDoctors.us@HD",The Doctors (720p) [Geo-blocked]
-https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b/Doctors/index.m3u8
+#EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="TVSHollywoodHistory.us@SD",TVS Hollywood History (582p)
+https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="vijuHistory.ru@SD",viju History (576p)
 http://46.53.200.153:7777/play/a01j/index.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AutenticTravel.de@SD",Autentic Travel (1080p)
@@ -9172,6 +9168,14 @@ https://mumbai-edge.smartplaytv.in/LoveNature/index.m3u8
 http://141.94.193.53:80/Nat_Geo_HD/index.m3u8
 #EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NatGeoPeople.pl@SD",Nat Geo People (576i)
 http://92.114.85.87:8016/play/a003/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NationalGeographic.mx@SD",National Geographic (1080p)
+http://138.121.15.230:9002/NAT-GEO/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NationalGeographic.pl@SD",National Geographic (576i)
+http://92.114.85.87:8006/play/a00a/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NationalGeographicLatinAmerica.us@Panregional",National Geographic Latin America (1080p)
+http://15.204.246.24:8080/NatGeoHD/index.m3u8
+#EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NationalGeographicWild.pl@SD",National Geographic Wild (576i)
+http://92.114.85.87:8010/play/a005/index.m3u8
 #EXTINF:-1 tvg-name="Naturescape – Pluto TV" tvg-logo="https://i.imgur.com/CGB6qiV.png" group-title="حیوانات و طبیعت",Naturescape – Pluto TV
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/610a9ebe8c2ac2000734776e/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="حیوانات و طبیعت" tvg-id="NatureTime.ca@ES",NatureTime (1080p)

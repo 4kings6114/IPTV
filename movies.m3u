@@ -37,6 +37,8 @@ https://mediaserver.abnvideos.com/streams/abnbiblemovies.m3u8
 http://141.94.193.53:80/axn_black/index.m3u8
 #EXTINF:-1 tvg-name="Black Cinema" tvg-logo="https://i.imgur.com/Zh1QGW9.png" group-title="فیلم - انگلیسی‌زبان",Black Cinema
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/58af4c093a41ca9d4ecabe96/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=80&deviceId=58af4c093a41ca9d4ecabe96&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxLatinAmerica.us@HD",Cinemax Latin America HD (1080p)
+http://38.65.175.84:8000/play/a093/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Cinemax.us@West",Cinemax West (720p)
 http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
 #EXTINF:-1 tvg-name="Film d'azione – Rakuten TV" tvg-logo="https://i.imgur.com/KDmDQM6.jpg" tvg-chno="4999" group-title="فیلم - انگلیسی‌زبان",Film d'azione – Rakuten TV
@@ -47,8 +49,6 @@ https://d4a4999341764c67a67e9ec9eb3790ab.mediatailor.eu-west-1.amazonaws.com/v1/
 https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HallmarkMoviesMore.us@SD",Hallmark Movies & More (1080p)
 https://dbrb49pjoymg4.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/master.m3u8?ads.xumo_channelId=99991709
-#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HBO.us@East",HBO (720p)
-http://tvsen7.aynascope.net/hbo/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HBO2LatinAmerica.us@HD",HBO 2 Latin America HD (1080p)
 http://45.171.64.30:6060/play/a00i/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HBOFamilyLatinAmerica.us@SD",HBO Family Latin America (1080p)
