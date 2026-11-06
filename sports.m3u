@@ -95,6 +95,8 @@ http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
 http://138.59.227.20:8000/play/a085/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports1.us@HD",Fox Sports 1 (720p)
 http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="FoxSports2.us@HD",Fox Sports 2 (720p)
+https://tvsen7.aynascope.net/foxsports2/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FTFSports.us@SD",FTF Sports (720p)
 https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="M4Sport.hu@SD",M4 Sport (1080p)
@@ -146,8 +148,6 @@ http://37.49.224.5/stream/70/index.m3u8
 http://37.49.224.5/stream/52/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SkySportSelect.nz@SD",Sky Sport Select
 http://37.49.224.5/stream/53/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="SkySports1.mx@SD",Sky Sports 1 (1080p)
-http://45.228.234.9:8000/play/a06b/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sport1.ua@SD",Sport 1 (576p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/391/index.m3u8
@@ -186,8 +186,6 @@ https://stream9.xdevel.com/video0s976916-1685/stream/playlist_dvr.m3u8
 https://edge-001.streamup.eu/sportitalia/sihd_abr/playlist.m3u8
 #EXTINF:-1 tvg-name="Sportitalia Plus" tvg-logo="https://i.imgur.com/hu56Ya5.png" tvg-id="Sportitalia.it" tvg-chno="60" tvg-country="IT" group-title="ورزشی",Sportitalia Plus
 https://sportsitalia-samsungitaly.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="Sportivnyy.ru@SD",Sportivnyy (1080p)
-https://live-3.otcnet.ru/sportivny/index.m3u8
 #EXTINF:-1 tvg-name="SportOutdoor.tv" tvg-logo="https://i.imgur.com/fwOuEBl.png" tvg-chno="4513" group-title="ورزشی",SportOutdoor.tv
 https://gto2000-sportoutdoortv-1-it.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SportyTV.cz@SD",Sporty TV
@@ -249,7 +247,5 @@ http://138.121.15.230:9002/WIN-SPORT/index.m3u8
 http://cdnua05.hls.tv/946/hls/8743361621b245838bee193c9ec28322/3999/stream.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CTSport.cz@SD",ČT Sport (720p)
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
-#EXTINF:-1 tvg-name="ČT sport Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/ct-sport-cz.png" tvg-chno="7" tvg-country="CZ" group-title="ورزشی",ČT sport Plus
-https://sktv.mxnticek.eu/new/stream.php?ch=%C4%8CT%20sport%20Plus
 #EXTINF:-1 group-title="ورزشی" tvg-id="AstrahanRuSport.ru@SD",Астрахань.Ru Sport (720p)
 https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8
