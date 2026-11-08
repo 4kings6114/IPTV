@@ -79,6 +79,8 @@ http://api.toonamiaftermath.com:3000/movies/playlist.m3u8
 https://rpn.bozztv.com/gusa/gusa-tvsdriveinmovie/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSFilmNoirNetwork.us@SD",TVS Film Noir Network (720p)
 https://rpn.bozztv.com/trn01/gusa-TVSFilmNoir/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSHollywoodHistory.us@SD",TVS Hollywood History (582p)
+https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSNostalgiaMovies.us@SD",TVS Nostalgia Movies (480p)
 https://rpn.bozztv.com/gusa/gusa-tvsNostalgiaMovies/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="TVSWesternMovie.us@SD",TVS Western Movie (270p)
@@ -199,6 +201,8 @@ http://185.227.34.179:8080/hbo-3-hd/index.m3u8
 http://102.129.186.182:81/la7d/index.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="MyCinemaEurope.ch@SD",My Cinema Europe
 https://op-group1-densxvisionhd-1.dens.tv/h/h18/index.m3u8
+#EXTINF:-1 tvg-name="Nova Cinema" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-cinema-cz.png" tvg-id="NovaCinema.cz" tvg-chno="9" tvg-country="CZ" group-title="فیلم - اروپا",Nova Cinema
+https://sktv.mxnticek.eu/new/stream.php?ch=NovaCinema
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ProCinema.ro@SD",Pro Cinema (1080p)
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="RaiMovie.it@HD",Rai Movie HD (1080p)
@@ -249,6 +253,8 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 tvg-name="Action Hollywood Movies" tvg-logo="" group-title="فیلم اکشن",Action Hollywood Movies
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+#EXTINF:-1 tvg-name="Action24" tvg-logo="https://i.imgur.com/Zi1YohT.png" tvg-id="Action24TV.gr" tvg-chno="31" tvg-country="GR" group-title="فیلم اکشن",Action24
+https://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="CanalPlusActionEurope.nl@Magyar",Canal+ Action Europe Magyar
 http://193.33.39.108:9016/play/a02n
 #EXTINF:-1 tvg-name="Film Thriller – Pluto TV" tvg-logo="https://i.imgur.com/hIWMGRW.png" tvg-id="PlutoTVFilmThrillerItaly.it" group-title="فیلم اکشن",Film Thriller – Pluto TV
@@ -257,8 +263,12 @@ https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/608aa5e99
 http://92.114.85.87:8008/play/a007/index.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="MrBeanLiveAction.uk@English",Mr Bean Live Action (1080p)
 https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/playlist.m3u8
+#EXTINF:-1 tvg-name="Nova Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/nova-action-cz.png" tvg-id="NovaAction.cz" tvg-chno="10" tvg-country="CZ" group-title="فیلم اکشن",Nova Action
+https://sktv.mxnticek.eu/new/stream.php?ch=NovaAction
 #EXTINF:-1 tvg-name="Pluto TV Action" tvg-logo="https://i.imgur.com/g8PCdh6.png" group-title="فیلم اکشن",Pluto TV Action
 http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/561d7d484dc7c8770484914a/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=54&deviceId=561d7d484dc7c8770484914a&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
+#EXTINF:-1 tvg-name="Pluto TV Thrillers" tvg-logo="https://i.imgur.com/jyiFzG4.png" group-title="فیلم اکشن",Pluto TV Thrillers
+http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5b4e69e08291147bd04a9fd7/master.m3u8?terminate=false&deviceType=web&deviceMake=web&deviceModel=web&sid=74&deviceId=5b4e69e08291147bd04a9fd7&deviceVersion=DNT&appVersion=DNT&deviceDNT=0&userId=&advertisingId=&deviceLat=&deviceLon=&app_name=&appName=web&buildVersion=&appStoreUrl=&architecture=&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="REVNAction.us@SD",Rev'n Action (720p) [Geo-blocked]
 https://freecast-lukentvlive.vgcdn.net/out/v1/a4f31f297fc5440f814bd2cffd77e689/index.m3u8
 #EXTINF:-1 group-title="فیلم اکشن" tvg-id="TelecineAction.br@SD",Telecine Action (1080p)
@@ -278,8 +288,6 @@ https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2246
 #EXTINF:-1 group-title="فیلم ترسناک" tvg-id="XtremaTerror.ar@SD",Xtrema Terror
 #EXTVLCOPT:http-referrer=https://xtrematv.com/?p=1456
 https://stmv6.voxtvhd.com.br/cineterror/cineterror/playlist.m3u8
-#EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="BRIDGEClassic.ru@SD",BRIDGE Classic (576p)
-http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 #EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="CinemaxClassics.us@East",Cinemax Classics (1080p)
 http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
 #EXTINF:-1 group-title="کلاسیک (فیلم و سریال قدیمی)" tvg-id="ClassicArtsShowcase.us@SD",Classic Arts Showcase (720p)
@@ -330,8 +338,6 @@ http://88.212.15.50/live/test_filmbox_family_atk_1200/playlist.m3u8
 http://88.212.15.50/live/test_filmbox_family_hun_atk_1200/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="FILMBOXPlusComedy.pl@Romania",FILMBOX+ Comedy Romania
 https://nosignal1.antenaplay.ro/hls/fb-comedy-hd/index.m3u8
-#EXTINF:-1 group-title="سریال و کمدی" tvg-id="MaxcineComedy.us@HD",Maxcine Comedy (720p)
-https://live20.bozztv.com/giatvplayout7/giatv-208730/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="NickComedyCentralPlus1.de@SD",Nick/Comedy Central +1
 http://90.183.52.46:4000/play/a046/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="NTVSeries.ru@SD",NTV Series (576p)
