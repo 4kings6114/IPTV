@@ -31,9 +31,23 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Explicitly bypass only the percentage-drop guard (never the minimum/source guards)",
     )
+    parser.add_argument(
+        "--force-check",
+        action="store_true",
+        help="Ignore cached healthy results and check every candidate",
+    )
+    parser.add_argument(
+        "--playback-checks",
+        action="store_true",
+        help="Enable bounded optional ffmpeg/ffprobe samples",
+    )
     args = parser.parse_args(argv)
     try:
         settings = load_settings(args.config)
+        if args.force_check:
+            settings = replace(settings, health_cache=replace(settings.health_cache, hours=0))
+        if args.playback_checks:
+            settings = replace(settings, playback=replace(settings.playback, enabled=True))
         if args.allow_large_drop:
             print("WARNING: percentage-drop guard disabled for this run.", file=sys.stderr)
             settings = replace(settings, max_drop_ratio=1)

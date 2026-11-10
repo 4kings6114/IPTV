@@ -23,6 +23,8 @@ def message_text(
         title,
         f"کانال‌ها: {report.get('channels', '?')}",
         f"اضافه: {report.get('added', 0)} | حذف: {report.get('removed', 0)}",
+        f"تغییر آدرس: {report.get('changed_urls', 0)} | کیفیت بهتر/کمتر: {report.get('upgraded', 0)}/{report.get('downgraded', 0)}",
+        f"بازیابی‌شده: {report.get('recovered', 0)} | نتیجهٔ سلامت از کش: {report.get('cached_links', 0)}",
         f"لینک‌های ناموفق: {len(report.get('unavailable_links', []))}",
         f"نگه‌داری موقت بدون تأیید سلامت: {report.get('retained_unverified', 0)}",
     ]

@@ -9,7 +9,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from iptv_builder.builder import run_build
-from iptv_builder.config import Source, load_settings
+from iptv_builder.config import EPGOptions, MetadataOptions, Source, load_settings
 from iptv_builder.m3u import parse, render_m3u, validate_output
 from iptv_builder.sources import SourceResult
 from tests.helpers import ROOT
@@ -40,6 +40,8 @@ class RepositoryDataTests(unittest.TestCase):
             stream_template="",
             extra_sources=(source,),
             check_links=False,
+            metadata=MetadataOptions(),
+            epg=EPGOptions(),
         )
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp)

@@ -6,14 +6,25 @@ on:
       - "**.py"
       - "config.json"
       - "overrides.json"
+      - "epg_aliases.json"
+      - "favorites.json"
+      - "profiles.json"
       - ".github/workflows/**"
   pull_request:
     paths:
       - "**.py"
       - "config.json"
       - "overrides.json"
+      - "epg_aliases.json"
+      - "favorites.json"
+      - "profiles.json"
       - ".github/workflows/**"
   workflow_dispatch:
+    inputs:
+      live_check:
+        description: Run isolated public-network diagnostics (12 channels, 2 decoder samples)
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,3 +45,40 @@ jobs:
         run: python -m compileall -q build_playlist.py iptv_builder tests
       - name: Offline unit and local-HTTP integration tests
         run: python -m unittest discover -s tests -v
+
+  live-check:
+    if: github.event_name == 'workflow_dispatch' && inputs.live_check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bounded live validation in scratch output only
+        run: |
+          set -euo pipefail
+          python -m iptv_builder.diagnostics --limit 12 --playback-samples 2 2>&1 | tee live-validation.log
+          git diff --exit-code
+      - name: Upload isolated reports (no production publication or Telegram)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            live-validation.log
+            .cache/live-validation/validation_summary.json
+            .cache/live-validation/first_run.json
+            .cache/live-validation/second_run.json
+            .cache/live-validation/dry_run.json
+            .cache/live-validation/output/*.m3u
+            .cache/live-validation/output/index.html
+            .cache/live-validation/output/build_report.json
+            .cache/live-validation/output/build_stats.txt
+            .cache/live-validation/output/.cache/iptv/link-health.json
+            .cache/live-validation/output/.cache/iptv/last_run.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14

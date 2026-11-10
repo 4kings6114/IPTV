@@ -7,3 +7,4 @@ htmlcov/
 .iptv-build.lock
 build.log
 .venv/
+live-validation.log

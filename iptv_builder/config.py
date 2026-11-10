@@ -2,7 +2,7 @@
 
 import json
 import re
-from dataclasses import dataclass, fields
+from dataclasses import dataclass, field, fields
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -32,6 +32,113 @@ class Source:
     country: str = ""
     language: str = ""
     allow_unknown_country: bool = False
+
+
+@dataclass(frozen=True)
+class MetadataOptions:
+    urls: tuple[str, ...] = ()
+    file: str = ""
+    cache_hours: float = 168
+    refresh_hours: float = 24
+    max_bytes: int = 33554432
+
+
+@dataclass(frozen=True)
+class EPGOptions:
+    enabled: bool = False
+    cache_hours: float = 24
+    freshness_hours: float = 24
+    max_bytes: int = 33554432
+    aliases_file: str = "epg_aliases.json"
+    keep_unverified: bool = True
+
+
+@dataclass(frozen=True)
+class PlaybackOptions:
+    enabled: bool = False
+    max_channels: int = 10
+    seconds: float = 3
+    timeout: float = 20
+    ffmpeg: str = "ffmpeg"
+    ffprobe: str = "ffprobe"
+
+
+@dataclass(frozen=True)
+class HealthCacheOptions:
+    hours: float = 0
+    max_hours: float = 24
+    successes_per_step: int = 3
+
+
+@dataclass(frozen=True)
+class HostLimitOptions:
+    concurrent: int = 2
+    interval: float = 0
+    max_retry_after: float = 10
+
+
+@dataclass(frozen=True)
+class PersonalizationOptions:
+    favorites_file: str = "favorites.json"
+    profiles_file: str = "profiles.json"
+
+
+_OPTION_TYPES = {
+    "metadata": MetadataOptions,
+    "epg": EPGOptions,
+    "playback": PlaybackOptions,
+    "health_cache": HealthCacheOptions,
+    "host_limit": HostLimitOptions,
+    "personalization": PersonalizationOptions,
+}
+
+
+def _load_options(name: str, data: dict):
+    cls = _OPTION_TYPES[name]
+    if not isinstance(data, dict) or set(data) - {item.name for item in fields(cls)}:
+        raise ValueError(f"Invalid {name} configuration keys")
+    data = dict(data)
+    for item in fields(cls):
+        if item.name not in data:
+            continue
+        value = data[item.name]
+        label = f"{name}.{item.name}"
+        if item.type == tuple[str, ...]:
+            if not isinstance(value, list) or not all(
+                isinstance(part, str) and http_url(part) for part in value
+            ):
+                raise ValueError(f"{label} must be a list of HTTP(S) URLs")
+            data[item.name] = tuple(value)
+        elif item.type is bool:
+            if type(value) is not bool:
+                raise ValueError(f"{label} must be a boolean")
+        elif item.type is str:
+            if not isinstance(value, str) or any(char in value for char in "\r\n\x00"):
+                raise ValueError(f"{label} must be a string without control characters")
+            if not value.strip() and (name, item.name) not in {
+                ("metadata", "file"),
+                ("playback", "ffprobe"),
+            }:
+                raise ValueError(f"{label} must not be empty")
+        else:
+            if type(value) not in (int, float) or not 0 <= value < float("inf"):
+                raise ValueError(f"{label} must be a finite non-negative number")
+            if item.type is int and type(value) is not int:
+                raise ValueError(f"{label} must be an integer")
+            if item.name not in {"hours", "interval", "max_retry_after"} and value <= 0:
+                raise ValueError(f"{label} must be positive")
+    options = cls(**data)
+    if name == "health_cache" and options.hours > options.max_hours:
+        raise ValueError("health_cache.hours must not exceed max_hours")
+    if name == "metadata" and options.refresh_hours > options.cache_hours:
+        raise ValueError("metadata.refresh_hours must not exceed cache_hours")
+    if name in {"epg", "metadata"} and options.max_bytes < 512:
+        raise ValueError(f"{name}.max_bytes must be at least 512")
+    if name == "playback" and (
+        options.seconds > 30 or options.timeout > 120 or options.max_channels > 100
+    ):
+        raise ValueError("Playback limits: seconds <= 30, timeout <= 120, max_channels <= 100")
+    return options
 
 
 @dataclass(frozen=True)
@@ -66,6 +173,14 @@ class Settings:
     manual_file: str = "manual.m3u"
     exclude_file: str = "exclude.txt"
     overrides_file: str = "overrides.json"
+    metadata: MetadataOptions = field(default_factory=MetadataOptions)
+    epg: EPGOptions = field(default_factory=EPGOptions)
+    playback: PlaybackOptions = field(default_factory=PlaybackOptions)
+    health_cache: HealthCacheOptions = field(default_factory=HealthCacheOptions)
+    host_limit: HostLimitOptions = field(default_factory=HostLimitOptions)
+    personalization: PersonalizationOptions = field(default_factory=PersonalizationOptions)
+    preferred_sources: tuple[str, ...] = ()
+    dashboard: bool = True
 
     def sources(self) -> tuple[Source, ...]:
         countries = ()
@@ -123,8 +238,18 @@ def load_settings(path: Path) -> Settings:
             sources.append(Source(**item))
         data["extra_sources"] = tuple(sources)
 
+    for name in _OPTION_TYPES:
+        if name in data:
+            data[name] = _load_options(name, data[name])
+    if "preferred_sources" in data:
+        if not isinstance(data["preferred_sources"], list) or not all(
+            isinstance(item, str) and item.strip() and not any(char.isspace() for char in item)
+            for item in data["preferred_sources"]
+        ):
+            raise ValueError("preferred_sources must be a list of URL prefixes or hostnames")
+        data["preferred_sources"] = tuple(data["preferred_sources"])
     settings = Settings(**data)
-    for key in ("check_links", "drop_dead", "check_segments", "save_backup"):
+    for key in ("check_links", "drop_dead", "check_segments", "save_backup", "dashboard"):
         if type(getattr(settings, key)) is not bool:
             raise ValueError(f"{key} must be a boolean")
     for key in (

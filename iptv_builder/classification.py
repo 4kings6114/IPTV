@@ -6,7 +6,7 @@ from dataclasses import replace
 from pathlib import Path
 
 from . import catalog as g
-from .config import Settings, Source, country_code
+from .config import Settings, Source, country_code, http_url
 from .m3u import Channel, base_name, country_from_tvg, parse, stable_id
 
 _LANGUAGE_ALIASES = {
@@ -68,6 +68,8 @@ def load_overrides(path: Path) -> dict:
                 "language",
                 "country",
                 "disabled",
+                "logo",
+                "category",
             }:
                 raise ValueError(f"Invalid override for {key}")
             for field, value in item.items():
@@ -82,6 +84,8 @@ def load_overrides(path: Path) -> dict:
                     raise ValueError(f"Invalid {field} override for {key}")
             if "country" in item and not re.fullmatch(r"[a-zA-Z]{2}", item["country"]):
                 raise ValueError(f"Invalid country override for {key}")
+            if "logo" in item and not http_url(item["logo"]):
+                raise ValueError(f"Invalid logo URL override for {key}")
             normalized = override_id(key) if section == "channels" else base_name(key)
             result[section][normalized] = item
     return result
@@ -102,7 +106,7 @@ def load_excludes(path: Path) -> tuple[set[str], set[str]]:
 
 def override_for(channel: Channel, overrides: dict) -> dict:
     result = dict(overrides["names"].get(base_name(channel.name), {}))
-    identifier = override_id(channel.attrs.get("tvg-id", ""))
+    identifier = override_id(channel.channel_id)
     result.update(overrides["channels"].get(identifier.split("@", 1)[0], {}))
     result.update(overrides["channels"].get(identifier, {}))
     return result
@@ -240,6 +244,7 @@ def prepare_channels(
     overrides: dict,
     excludes: tuple[set[str], set[str]],
     manual: bool = False,
+    reference=None,
 ) -> list[Channel]:
     names, urls = excludes
     result = []
@@ -248,13 +253,26 @@ def prepare_channels(
         override = override_for(channel, overrides)
         if override.get("disabled"):
             continue
+        metadata = reference.lookup(channel) if reference else {}
         if "name" in override:
             channel = channel.renamed(override["name"])
+        elif metadata.get("name") and not manual:
+            from .m3u import res_of
+
+            resolution = res_of(channel.name)
+            name = metadata["name"]
+            if resolution and not res_of(name):
+                name += f" ({resolution}p)"
+            channel = channel.renamed(name)
+        logo = override.get("logo") or channel.attrs.get("tvg-logo") or metadata.get("logo")
+        if logo:
+            channel = channel.with_attribute("tvg-logo", logo)
         attrs = channel.attrs
         code = country_code(
             override.get("country")
-            or country_from_tvg(attrs.get("tvg-id", ""))
+            or country_from_tvg(channel.channel_id)
             or re.split(r"[,;]", attrs.get("tvg-country", ""))[0]
+            or metadata.get("country")
             or source.country
         )
         if code and (code not in settings.allowed_countries or code in settings.blocked_countries):
@@ -272,12 +290,24 @@ def prepare_channels(
             continue
         if code:
             channel = channel.with_attribute("tvg-country", code)
-        language = override.get("language") or attrs.get("tvg-language") or source.language
+        language = (
+            override.get("language")
+            or attrs.get("tvg-language")
+            or metadata.get("language")
+            or source.language
+        )
         if language:
             channel = channel.with_attribute("tvg-language", language_code(language))
         group = override.get("group") or (attrs.get("group-title") if manual else "")
         if not group:
-            group = classify(channel.name, code, language, attrs.get("group-title", ""))
+            group = classify(
+                channel.name,
+                code,
+                language,
+                override.get("category")
+                or metadata.get("category")
+                or attrs.get("group-title", ""),
+            )
         # Resolve conflicting classifications across duplicate source entries:
         # explicit group override > manual group > upstream/override language
         # > source language hint > name-only inference.
@@ -287,7 +317,7 @@ def prepare_channels(
             else 3
             if manual and attrs.get("group-title")
             else 2
-            if override.get("language") or attrs.get("tvg-language")
+            if override.get("language") or attrs.get("tvg-language") or metadata.get("language")
             else 1
             if source.language
             else 0

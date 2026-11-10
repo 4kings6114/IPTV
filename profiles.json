@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "fa-en": {
+      "languages": [
+        "fa",
+        "en"
+      ]
+    },
+    "low-bandwidth": {
+      "max_resolution": 720,
+      "include_unknown_resolution": false
+    }
+  }
+}
