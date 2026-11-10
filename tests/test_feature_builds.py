@@ -67,6 +67,14 @@ class FeatureBuildTests(unittest.TestCase):
             2,
         )
 
+    def test_dashboard_code_revision_forces_one_meaningful_snapshot_update(self):
+        with patch("iptv_builder.builder.dashboard_revision", return_value="first"):
+            self.build([channel()])
+        with patch("iptv_builder.builder.dashboard_revision", return_value="second"):
+            self.assertEqual(self.build([channel()])["status"], "published")
+            self.assertEqual(self.build([channel()])["status"], "unchanged")
+        self.assertEqual(read_json(self.root / "build_report.json")["dashboard_revision"], "second")
+
     def test_build_reports_url_swap_without_fake_new_channel(self):
         old = channel(url="https://s.test/zold")
         new = channel(url="https://s.test/anew")

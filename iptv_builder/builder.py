@@ -13,7 +13,7 @@ from .catalog import ORDER, SPLIT
 from .changes import channel_changes, remember_channels
 from .classification import load_excludes, load_overrides, prepare_channels
 from .config import Settings, Source
-from .dashboard import render_dashboard
+from .dashboard import dashboard_revision, render_dashboard
 from .epg import validate_epg
 from .health import ProbeResult, check_candidates
 from .m3u import Channel, parse, render_m3u, res_of, valid_source, validate_output
@@ -437,6 +437,7 @@ def _build(
         )
     report = {
         "schema_version": 2,
+        "dashboard_revision": dashboard_revision() if settings.dashboard else "",
         "generated_at": runtime["generated_at"],
         "channels": len(final),
         "previous_channels": len(old_channels),

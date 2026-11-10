@@ -58,6 +58,8 @@ class BitrateTests(unittest.TestCase):
         )
         self.assertEqual(parse(outputs["profile-slow.m3u"])[0].url, "https://streams.test/low.m3u8")
         self.assertEqual(report["profiles"]["slow"]["channels"], 1)
+        self.assertIn("(360p)", parse(outputs["profile-slow.m3u"])[0].name)
+        self.assertNotIn("720p", parse(outputs["profile-slow.m3u"])[0].name)
         self.assertEqual(len(expanded), 3)
         self.assertTrue(all(value.healthy for value in results.values()))
 
@@ -136,6 +138,16 @@ class BitrateTests(unittest.TestCase):
         output, report = personalized_outputs(*args)
         self.assertEqual(len(parse(output["profile-slow.m3u"])), 1)
         self.assertEqual(report["profiles"]["slow"]["unknown_bitrate_included"], 1)
+
+    @patch("iptv_builder.health.urlopen")
+    def test_untrusted_manifest_numeric_fields_cannot_crash_integer_conversion(self, opened):
+        huge = "9" * 5000
+        master = f"#EXTM3U\n#EXT-X-STREAM-INF:BANDWIDTH={huge},RESOLUTION=1920x{huge}\nlow.m3u8\n".encode()
+        opened.side_effect = [Response(master), Response(HLS)]
+        result = probe(channel(), settings())
+        self.assertTrue(result.healthy)
+        self.assertEqual(result.bitrate, 0)
+        self.assertEqual(result.resolution, 0)
 
     def test_profile_bitrate_limits_are_validated_without_coercion(self):
         with tempfile.TemporaryDirectory() as tmp:

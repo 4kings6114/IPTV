@@ -253,12 +253,12 @@ def _inspect(
             if line.startswith("#EXT-X-STREAM-INF:"):
                 awaiting_variant = True
                 match = re.search(
-                    r"(?:^|,)RESOLUTION=\d+x(\d+)(?:,|$)", line.split(":", 1)[1], re.I
+                    r"(?:^|,)RESOLUTION=\d{1,6}x(\d{1,5})(?:,|$)", line.split(":", 1)[1], re.I
                 )
-                height = int(match[1]) if match else 0
-                peak = re.search(r"(?:^|,)BANDWIDTH=(\d+)(?:,|$)", line.split(":", 1)[1], re.I)
+                height = int(match[1]) if match and int(match[1]) <= 16384 else 0
+                peak = re.search(r"(?:^|,)BANDWIDTH=(\d{1,10})(?:,|$)", line.split(":", 1)[1], re.I)
                 average = re.search(
-                    r"(?:^|,)AVERAGE-BANDWIDTH=(\d+)(?:,|$)", line.split(":", 1)[1], re.I
+                    r"(?:^|,)AVERAGE-BANDWIDTH=(\d{1,10})(?:,|$)", line.split(":", 1)[1], re.I
                 )
                 bandwidth = int((peak or average)[1]) if peak or average else 0
                 bandwidth = bandwidth if 0 < bandwidth <= 1000000000 else 0

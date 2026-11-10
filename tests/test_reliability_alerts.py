@@ -75,6 +75,18 @@ class ReliabilityTests(unittest.TestCase):
         mixed = {"daily": [days(1)["daily"][0], {"date": "2026-10-15", "ok": 0, "failed": 1}]}
         self.assertGreater(reliability(mixed, NOW.isoformat())["score"], 50)
 
+    def test_duplicate_daily_buckets_cannot_fake_several_observed_days(self):
+        record = {"daily": [days(1)["daily"][0]] * 100}
+        self.assertEqual(reliability(record, NOW.isoformat())["observed_days"], 1)
+
+    def test_temporarily_absent_link_history_is_bounded_and_retained_for_thirty_days(self):
+        old = {
+            "recent": {"checked_at": (NOW - timedelta(days=2)).isoformat()},
+            "expired": {"checked_at": (NOW - timedelta(days=31)).isoformat()},
+            "future": {"checked_at": (NOW + timedelta(days=1)).isoformat()},
+        }
+        self.assertEqual(set(update_history({}, old, NOW.isoformat())), {"recent"})
+
     def test_stability_breaks_healthy_alternative_ties_before_resolution_but_not_health(self):
         high = channel(name="High 1080p", url="https://unstable.test/high")
         low = channel(name="Low 480p", url="https://stable.test/low")

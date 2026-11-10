@@ -12,7 +12,7 @@ rows = [{'identity':f'id:channel{i}.us','name':f'Channel {i}', 'url':f'https://s
 rows[1]['name'] = '</script><img src=x onerror="window.injected=true">'
 variants = [{'identity':'id:channel0.us','name':'Channel 0','country':'us','language':'en','resolution':height,'bitrate':rate,'status':'healthy','stability':10,'m3u':f'#EXTINF:-1 tvg-id="Channel0.us",Channel 0\\nhttps://streams.test/{height}.m3u8\\n'} for height,rate in [(1080,4000000),(360,800000)]]
 variants.append({'identity':'id:unknown.us','name':'Unknown','country':'us','language':'en','resolution':480,'bitrate':0,'status':'healthy','stability':10,'m3u':'#EXTINF:-1 tvg-id="Unknown.us",Unknown\\nhttps://streams.test/unknown.m3u8\\n'})
-report = {'channels':205,'generated_at':'2026-11-09T00:00:00Z','last_run':{'generated_at':'2026-11-10T00:00:00Z','status':'unchanged'},'channel_catalog':rows,'editor':{'channels':variants,'favorites':[],'epg_urls':[],'profiles':{'slow':{'languages':[],'countries':[],'max_resolution':720,'max_bitrate':1000000}}},'personalization':{'profiles':{'slow':{'file':'profile-slow.m3u','channels':1}}}}
+report = {'channels':205,'generated_at':'2026-11-09T00:00:00Z','last_run':{'generated_at':'2026-11-10T00:00:00Z','status':'unchanged'},'channel_catalog':rows,'editor':{'channels':variants,'favorites':[],'epg_urls':[],'profiles':{'slow':{'languages':[],'countries':[],'max_resolution':720,'max_bitrate':1000000},'custom':{'languages':[],'countries':[],'max_resolution':540,'max_bitrate':1234567,'preferred_sources':['streams.test']}}},'personalization':{'profiles':{'slow':{'file':'profile-slow.m3u','channels':1}}}}
 print(render_dashboard(report))
 `], {encoding: 'utf8', maxBuffer: 10 * 1024 * 1024});
 const errors = [], downloads = [];
@@ -54,6 +54,12 @@ function tick() { return new Promise(resolve => setTimeout(resolve, 0)); }
   assert.deepEqual(downloads, ['personal.m3u', 'favorites.json', 'profiles.json']);
   $('edit-name').value = '../../bad'; $('download-profile').click();
   assert.equal(downloads.length, 3); assert.ok($('editor-error').textContent);
+  change('edit-profile', 'custom');
+  assert.equal(window.iptvEditor.editorOptions().max_resolution, 540);
+  assert.equal(window.iptvEditor.editorOptions().max_bitrate, 1234567);
+  assert.deepEqual([...window.iptvEditor.editorOptions().preferred_sources], ['streams.test']);
+  $('download-profile').click();
+  assert.deepEqual([...window.iptvEditor.editorOptions().preferred_sources], ['streams.test']);
   const file = {size: 32, text: async () => JSON.stringify({channels: ['Channel0.gb@HD', 'Local.us@East']})};
   Object.defineProperty($('import-favorites'), 'files', {configurable: true, value: [file]});
   $('import-favorites').dispatchEvent(new window.Event('change')); await tick();

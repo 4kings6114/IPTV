@@ -221,6 +221,11 @@ def expand_variants(candidates: list[Channel], results: dict, history: dict):
                     )
                 ),
             )
+            if variant.resolution:
+                name = re.sub(r"\s*\(?\d{3,4}\s*p\)?", "", channel.name, flags=re.I)
+                name = re.sub(r"\b(?:FHD|UHD|HD|4K|SD)\b", "", name, flags=re.I)
+                name = re.sub(r"\s+", " ", name).strip()
+                child = child.renamed(f"{name} ({variant.resolution}p)")
             if (child.identity, child.probe_key) in seen:
                 continue
             seen.add((child.identity, child.probe_key))

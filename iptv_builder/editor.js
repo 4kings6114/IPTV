@@ -91,13 +91,15 @@ $('download-profile').addEventListener('click', () => {
   profileDefinitions[name] = editorOptions();
   if (Object.keys(profileDefinitions).length > 20) { delete profileDefinitions[name]; $('editor-error').textContent = 'حداکثر ۲۰ پروفایل پشتیبانی می‌شود.'; return; }
   $('editor-error').textContent = '';
-  downloadLocal('profiles.json', JSON.stringify({profiles: profileDefinitions}, null, 2) + '\n', 'application/json'); profileMenu();
+  downloadLocal('profiles.json', JSON.stringify({profiles: profileDefinitions}, null, 2) + '\n', 'application/json'); profileMenu(); $('edit-profile').value = name;
 });
 $('download-personal').addEventListener('click', () => downloadLocal('personal.m3u', personalPlaylist(), 'audio/x-mpegurl'));
 $('edit-profile').addEventListener('change', () => {
   const name = $('edit-profile').value, options = profileDefinitions[name] || {};
   $('edit-name').value = name || 'personal'; selectOptions('edit-language', options.languages || []); selectOptions('edit-country', options.countries || []);
-  $('edit-resolution').value = String(options.max_resolution || 0); $('edit-bitrate').value = String((options.max_bitrate || 0) / 1000);
+  const height = String(options.max_resolution || 0);
+  if (![...$('edit-resolution').options].some(option => option.value === height)) { const option = node('option', height + 'p'); option.value = height; $('edit-resolution').append(option); }
+  $('edit-resolution').value = height; $('edit-bitrate').value = String((options.max_bitrate || 0) / 1000);
   for (const [id, key] of [['edit-unknown-quality','include_unknown_resolution'], ['edit-unknown-bitrate','include_unknown_bitrate'], ['edit-favorites-only','favorites_only']]) $(id).checked = Boolean(options[key]);
   updateEditor();
 });

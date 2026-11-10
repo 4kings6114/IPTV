@@ -182,6 +182,18 @@ class DashboardTests(unittest.TestCase):
         self.assertIn('id="health"', html)
         self.assertIn('id="epg"', html)
 
+    def test_template_markers_and_csp_text_in_channel_names_remain_literal_data(self):
+        report = {
+            "channel_catalog": [
+                {"name": "__EDITOR_SCRIPT__ __REPORT_JSON__ script-src 'unsafe-inline'"}
+            ]
+        }
+        html = render_dashboard(report)
+        payload = html.split('<script id="report" type="application/json">', 1)[1].split(
+            "</script>", 1
+        )[0]
+        self.assertEqual(json.loads(payload), report)
+
     @unittest.skipUnless(shutil.which("node"), "Node is only used for optional JS syntax QA")
     def test_dashboard_javascript_parses(self):
         html = render_dashboard({})

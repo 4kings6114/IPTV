@@ -74,7 +74,11 @@ def parse_xmltv_stream(stream, max_expanded_bytes: int) -> dict:
                 continue
             if element.tag == "channel":
                 identifier = element.get("id", "").strip()
-                if identifier and not any(char in identifier for char in '\r\n\x00"'):
+                if (
+                    identifier
+                    and len(identifier) <= 256
+                    and not any(char in identifier for char in '\r\n\x00"')
+                ):
                     channels[identifier] = {
                         "names": [
                             child.text.strip()[:160]
@@ -90,7 +94,7 @@ def parse_xmltv_stream(stream, max_expanded_bytes: int) -> dict:
                 identifier = element.get("channel", "").strip()
                 start = xmltv_time(element.get("start", ""))
                 stop = xmltv_time(element.get("stop", ""))
-                if identifier and start and stop and stop > start:
+                if identifier and len(identifier) <= 256 and start and stop and stop > start:
                     start_text, stop_text = start.isoformat(), stop.isoformat()
                     item = programmes.setdefault(identifier, {"count": 0, "windows": []})
                     item["count"] += 1

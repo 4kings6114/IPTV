@@ -6,6 +6,11 @@ import json
 from pathlib import Path
 
 
+def dashboard_revision() -> str:
+    body = _TEMPLATE + Path(__file__).with_name("editor.js").read_text(encoding="utf-8")
+    return hashlib.sha256(body.encode()).hexdigest()[:16]
+
+
 def render_dashboard(report: dict) -> str:
     payload = json.dumps(report, ensure_ascii=False, separators=(",", ":"))
     payload = (
@@ -15,12 +20,15 @@ def render_dashboard(report: dict) -> str:
         .replace("\u2028", "\\u2028")
         .replace("\u2029", "\\u2029")
     )
-    html = _TEMPLATE.replace("__REPORT_JSON__", payload).replace(
-        "__EDITOR_SCRIPT__", Path(__file__).with_name("editor.js").read_text(encoding="utf-8")
+    # Expand trusted code/CSP first, then insert user data exactly once. A
+    # channel name containing a template marker must remain literal data.
+    template = _TEMPLATE.replace(
+        "__EDITOR_SCRIPT__", Path(__file__).with_name("editor.js").read_text(encoding="utf-8"), 1
     )
-    script = html.rsplit("<script>", 1)[1].split("</script>", 1)[0]
+    script = template.rsplit("<script>", 1)[1].split("</script>", 1)[0]
     digest = base64.b64encode(hashlib.sha256(script.encode()).digest()).decode()
-    return html.replace("script-src 'unsafe-inline'", f"script-src 'sha256-{digest}'")
+    template = template.replace("script-src 'unsafe-inline'", f"script-src 'sha256-{digest}'", 1)
+    return template.replace("__REPORT_JSON__", payload, 1)
 
 
 _TEMPLATE = """<!doctype html>
@@ -70,9 +78,9 @@ function date(value){if(!value)return 'نامشخص';const d=new Date(value);ret
 function age(value){if(!value)return 'بررسی نشده';const seconds=(Date.now()-new Date(value))/1000;if(!Number.isFinite(seconds)||seconds<0)return 'نامشخص';if(seconds<3600)return Math.floor(seconds/60)+' دقیقه';if(seconds<86400)return Math.floor(seconds/3600)+' ساعت';return Math.floor(seconds/86400)+' روز'}
 $('published').textContent=date(report.generated_at);
 $('last-run').textContent=report.last_run?date(report.last_run.generated_at):'در این تصویر ثبت نشده';
-$('site-notice').textContent=report.site&&report.site.preview?'پیش‌نمایش آزمایشیِ نمونهٔ محدود؛ این صفحه انتشار یا جایگزینی پلی‌لیست اصلی نیست.':report.last_run?'آخرین وضعیت اجرا: '+report.last_run.status+' · انتشار خودکار صفحه پس از ساخت موفق؛ بدون نیاز به کامیت روزانهٔ گزارش.':'این فایل یک تصویر آفلاین است؛ برای اجرای جدیدتر گزارش Actions را بررسی کنید.';
+$('site-notice').textContent=report.site&&report.site.offline?'پیش‌نمایش آفلاین از فایل موجود مخزن؛ هیچ لینک یا برنامه‌ای در این تصویر بررسی نشده و پلی‌لیست اصلی تغییر نکرده است.':report.site&&report.site.preview?'پیش‌نمایش آزمایشیِ نمونهٔ محدود؛ این صفحه انتشار یا جایگزینی پلی‌لیست اصلی نیست.':report.last_run?'آخرین وضعیت اجرا: '+report.last_run.status+' · انتشار خودکار صفحه پس از ساخت موفق؛ بدون نیاز به کامیت روزانهٔ گزارش.':'این فایل یک تصویر آفلاین است؛ برای اجرای جدیدتر گزارش Actions را بررسی کنید.';
 if(report.site&&report.site.omitted_sensitive_streams)$('site-notice').textContent+=' لینک دارای اطلاعات حساس از دانلودهای عمومی این صفحه کنار گذاشته شده است.';
-for(const [value,label] of [[report.channels,'کانال منتشرشده'],[report.checked_links,'درخواست بررسی‌شده در این اجرا'],[report.cached_links||0,'پاسخ سالم از کش'],[report.added||0,'کانال جدید'],[report.removed||0,'کانال حذف‌شده'],[report.recovered||0,'کانال بازیابی‌شده']]){const card=node('div',undefined,'card');card.append(node('div',value,'number'),node('div',label,'label'));$('cards').append(card)}
+for(const [value,label] of [[report.channels,'کانال موجود در این تصویر'],[report.checked_links,'درخواست بررسی‌شده در این اجرا'],[report.cached_links||0,'پاسخ سالم از کش'],[report.added||0,'کانال جدید'],[report.removed||0,'کانال حذف‌شده'],[report.recovered||0,'کانال بازیابی‌شده']]){const card=node('div',undefined,'card');card.append(node('div',value,'number'),node('div',label,'label'));$('cards').append(card)}
 const downloads=[['playlist.m3u','همهٔ کانال‌ها'],['persian.m3u','فارسی'],['news.m3u','اخبار'],['music.m3u','موسیقی'],['sports.m3u','ورزش'],['movies.m3u','فیلم'],['kids.m3u','کودک'],['favorites.m3u','علاقه‌مندی‌ها']];
 for(const [name,profile] of Object.entries((report.personalization||{}).profiles||{}))if(/^profile-[a-z0-9][a-z0-9-]{0,39}\\.m3u$/.test(profile.file))downloads.push([profile.file,name+' · '+profile.channels]);
 for(const [file,label] of downloads){const a=node('a',label,'download');a.href=file;a.setAttribute('download',file);$('downloads').append(a)}
