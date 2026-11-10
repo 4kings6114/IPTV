@@ -34,7 +34,7 @@ Application ID: `io.github.fourkings6114.iptv.trial` (debug); display name is pr
 
 ## Security / privacy boundaries
 
-- `INTERNET` only at application-source level; file import uses a user-picked URI, not broad storage access. No account, advertising, analytics, location or Telegram integration.
+- `INTERNET` plus the library-merged `ACCESS_NETWORK_STATE` normal permission; the unused Media3 `WAKE_LOCK` permission is explicitly removed because playback is foreground-only; file import uses a user-picked URI, not broad storage access. No account, advertising, analytics, location or Telegram integration.
 - HTTP disabled in app policy by default, with persistent opt-in only after a warning. Manifest-level cleartext support is required for arbitrary IPTV hosts, but the shared OkHttp application and network interceptors enforce policy for playlists, media manifests, redirects, segments, keys and logos. Pure HTTP data sources prevent manifest access to local files.
 - HTTPS uses normal system certificate/hostname verification; no trust-all manager or custom CA bypass. User-imported raw URLs with user-info are rejected.
 - Stream-specific headers are sanitized and scoped to exact scheme/host/port. They are removed on cross-origin redirects/child requests. Some providers requiring credential sharing with another CDN therefore need a future explicit, narrowly scoped configuration, not indiscriminate header forwarding.

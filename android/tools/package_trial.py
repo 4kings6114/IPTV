@@ -7,8 +7,18 @@ import os
 from pathlib import Path
 import re
 import shutil
+import sys
+import traceback
+from ci_report import publish
 import xml.etree.ElementTree as ET
 import zipfile
+
+def report_failure(kind, error, trace):
+    publish("Android APK package details", 1, "".join(traceback.format_exception(kind, error, trace)))
+    sys.__excepthook__(kind, error, trace)
+
+
+sys.excepthook = report_failure
 
 root = Path(__file__).resolve().parents[1]
 app = root / "app"
@@ -77,5 +87,4 @@ shutil.copyfile(root / "INSTALL-fa.md", output / "INSTALL-fa.md")
 info["signature_verification"] = (build / "signature.txt").read_text()
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
-from ci_report import publish
 publish("Android APK package details", 0, json.dumps(info, indent=2))
