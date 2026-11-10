@@ -166,6 +166,10 @@ class StabilityTest {
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
             awaitText("گزارش اشکال برنامه")
             ui.onNodeWithText("کپی گزارش کرش").performClick()
+            // Touch injection and ActivityScenario use different synchronization paths.
+            // Observe the post-write Compose state before reading the Android clipboard.
+            awaitText("کپی شد")
+            ui.onNodeWithText("کپی شد").assertIsDisplayed()
             scenario.onActivity { activity ->
                 val clipboard = activity.getSystemService(ClipboardManager::class.java).primaryClip
                 assertNotNull(clipboard)
