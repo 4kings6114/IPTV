@@ -178,8 +178,11 @@ class PlaybackActivity : ComponentActivity() {
         failure = null
         copied = false
         buffering = true
+        // Capture the application-owned settings, not this Activity's app getter, in
+        // the client retained briefly by application-lifetime background cleanup.
+        val playbackSettings = app.settings
         val client = NetworkClients.create(
-            allowHttp = { app.settings.state.value.allowHttp },
+            allowHttp = { playbackSettings.state.value.allowHttp },
             origin = item.url.toHttpUrl(), headers = item.headers, playback = true,
         )
         playbackClient = client
