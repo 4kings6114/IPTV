@@ -142,7 +142,7 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                         Text("فهرست فعلی", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
                         Text(source?.title ?: "در حال آماده‌سازی…", style = MaterialTheme.typography.titleMedium)
                         source?.let { info ->
-                            val date = remember(info.updatedAt) { DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Locale("fa")).format(Date(info.updatedAt)) }
+                            val date = remember(info.updatedAt) { DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, Locale.forLanguageTag("fa")).format(Date(info.updatedAt)) }
                             Text("${persianNumber(info.count)} کانال · ذخیره در $date", style = MaterialTheme.typography.bodySmall)
                             if (info.skipped > 0) Text("${persianNumber(info.skipped)} ورودی نامعتبر کنار گذاشته شد.", style = MaterialTheme.typography.bodySmall)
                         }

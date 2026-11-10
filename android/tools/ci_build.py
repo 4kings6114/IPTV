@@ -33,7 +33,19 @@ for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     for case in suite.findall("testcase"):
         for failure in list(case.findall("failure")) + list(case.findall("error")):
             problems.append(f"{case.get('classname')}.{case.get('name')}: {failure.get('message')}\n{(failure.text or '')[:1600]}")
-summary = ("Gradle exit status: " + str(status) + "\n\n" + "\n".join(problems + important + lines[-130:]))[-54000:]
+lint_path = build / "reports/lint-results-debug.xml"
+if lint_path.exists():
+    for issue in ET.parse(lint_path).getroot().findall("issue"):
+        if issue.get("severity") in {"Fatal", "Error"}:
+            location = issue.find("location")
+            where = "" if location is None else f"{location.get('file')}:{location.get('line')}"
+            problems.append(f"LINT {issue.get('id')} {where}: {issue.get('message')}")
+counts = {"tests": 0, "failures": 0, "errors": 0, "skipped": 0}
+for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
+    suite = ET.parse(path).getroot()
+    for name in counts:
+        counts[name] += int(suite.get(name, "0"))
+summary = ("Gradle exit status: " + str(status) + "\nUnit tests: " + str(counts) + "\n\n" + "\n".join(problems + important + lines[-70:]))[:54000]
 # No runtime data is collected. Be defensive about URL query credentials in build-tool diagnostics.
 summary = re.sub(r"(https?://[^\s?]+)\?[^\s]+", r"\1?[redacted]", summary)
 report = {"exit_status": status, "summary": summary}

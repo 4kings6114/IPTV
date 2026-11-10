@@ -31,13 +31,13 @@ try:
     log("JAVA_HOME: " + str(os.environ.get("JAVA_HOME")))
     run(["java", "-version"])
     manager = shutil.which("sdkmanager")
-    sdk = Path(os.environ.get("ANDROID_SDK_ROOT") or os.environ.get("ANDROID_HOME") or Path(os.environ["RUNNER_TEMP"]) / "android-sdk")
+    sdk = Path(os.environ.get("ANDROID_SDK_ROOT") or os.environ.get("ANDROID_HOME") or Path.home() / ".android/sdk-trial")
     if manager is None:
         candidates = list(sdk.glob("cmdline-tools/*/bin/sdkmanager"))
         if candidates:
             manager = str(candidates[0])
     if manager is None:
-        sdk = Path(os.environ["RUNNER_TEMP"]) / "android-sdk"
+        sdk = Path.home() / ".android/sdk-trial"
         url = "https://dl.google.com/android/repository/commandlinetools-linux-12266719_latest.zip"
         archive = Path(os.environ["RUNNER_TEMP"]) / "android-commandline-tools.zip"
         log("Downloading official command-line tools: " + url)
@@ -56,7 +56,6 @@ try:
         manager = str(destination / "16.0/bin/sdkmanager")
         archive.unlink()
     log("Android SDK directory: " + str(sdk))
-    run([manager, f"--sdk_root={sdk}", "--licenses"], input_text="y\n" * 100)
     run([manager, f"--sdk_root={sdk}", "platforms;android-36", "build-tools;36.0.0"], input_text="y\n" * 100)
     with open(os.environ["GITHUB_ENV"], "a") as output:
         output.write(f"ANDROID_HOME={sdk}\nANDROID_SDK_ROOT={sdk}\n")
@@ -65,5 +64,5 @@ try:
 except Exception as error:
     status = 1
     log(type(error).__name__ + ": " + str(error))
-publish("Android SDK setup details", status, "\n".join(messages))
+publish("Android SDK setup details", status, "\n".join(messages) if status else "Official SDK setup completed.\n" + "\n".join(messages[:3]) + "\n" + messages[-1][-2000:])
 sys.exit(status)

@@ -34,7 +34,8 @@ jobs:
       - name: Check the pinned official Gradle wrapper
         run: echo '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f  gradle/wrapper/gradle-wrapper.jar' | sha256sum -c -
       - name: Cache Gradle downloads
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        id: gradle-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: |
             ~/.gradle/caches
@@ -46,7 +47,14 @@ jobs:
         with:
           path: ~/.android/debug.keystore
           key: android-trial-signing-v1
+      - name: Restore selected SDK packages
+        id: sdk-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.android/sdk-trial
+          key: android-sdk-${{ runner.os }}-36-buildtools36-commandline12266719
       - name: Set up official Android SDK with bounded diagnostics
+        id: sdk
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/setup_sdk.py
@@ -84,3 +92,17 @@ jobs:
             android/app/schemas/
           if-no-files-found: ignore
           retention-days: 14
+      - name: Save SDK downloads after successful setup
+        if: always() && steps.sdk.outcome == 'success' && steps.sdk-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.android/sdk-trial
+          key: ${{ steps.sdk-cache.outputs.cache-primary-key }}
+      - name: Save Gradle downloads even when a source check needs fixing
+        if: always() && steps.gradle-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ steps.gradle-cache.outputs.cache-primary-key }}

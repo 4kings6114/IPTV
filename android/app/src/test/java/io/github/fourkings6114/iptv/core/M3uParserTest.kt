@@ -128,7 +128,7 @@ class M3uParserTest {
         assertTrue(channels.any { it.headers.isNotEmpty() })
     }
     @Test fun importsEveryEntryInCurrentProjectPlaylistOffline() {
-        val root = generateSequence(File(System.getProperty("user.dir"))) { it.parentFile }
+        val root = generateSequence(File(requireNotNull(System.getProperty("user.dir")))) { it.parentFile }
             .first { File(it, "playlist.m3u").isFile }
         val text = File(root, "playlist.m3u").readText()
         val expected = text.lineSequence().count { it.startsWith("#EXTINF:") }
