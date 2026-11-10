@@ -9,3 +9,9 @@ build.log
 .venv/
 live-validation.log
 full-audit.log
+.env
+.env.*
+!.env.example
+bot.env
+.tg_offset
+.tg_offset.*
