@@ -2,6 +2,16 @@
 
 An isolated Kotlin/Compose/Media3 client for the existing catalog. **Experimental, not a production/Play release, and not yet tested on a physical phone.** Intended first test: Poco X3 running Android 13 (API 33). This does not change the Python builder, production playlists, Telegram notifier, Pages, or `main`.
 
+## 0.1.1 crash investigation
+
+The user reports an Android/MIUI process crash after roughly one minute, not merely a Media3 `PlaybackException`. The precise cause is **not yet known without the phone's exception/native-crash summary**. Do not describe the screenshot alone as proof of a codec, VPN, memory or network fault.
+
+This diagnostic patch adds a bounded, private, manually copied Java/Kotlin fatal-exception report (classes/frames and technical device/heap metadata only; no Throwable messages, thread names, source-file paths, URLs, headers or channel data). Android's original uncaught handler is always delegated to; the app never attempts to recover a damaged process. No telemetry is sent. Native crashes/OS kills and some OOM events cannot be captured this way. The report can be copied or deleted in the next run.
+
+A separate foreground-resume bug is fixed: `Lifecycle.currentState` can still be `CREATED` inside `onStart`, so checking for `STARTED` there could suppress player recreation. The player now tracks actual start/stop callbacks. This is not, by itself, confirmation of the reported one-minute crash's cause.
+
+The optional manual **Android API33 stability smoke** workflow tests prolonged browsing and actual generated AVC/AAC video over loopback, including rotation, release in background, and recreation on resume. It does not access provider streams or logos, and the synthetic fixture belongs only to the instrumentation APK, never the application APK. An emulator result is not a Poco X3/MIUI result. See the workflow run for whether these tests actually completed; adding a test is not evidence that it passed.
+
 ## Current scope
 
 - Android 8+ (`minSdk 26`), `compileSdk/targetSdk 36`, phone layout, Persian RTL dark UI.

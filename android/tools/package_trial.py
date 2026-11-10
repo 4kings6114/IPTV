@@ -28,7 +28,7 @@ metadata = json.loads((apk.parent / "output-metadata.json").read_text())
 element = metadata["elements"][0]
 assert metadata["applicationId"] == "io.github.fourkings6114.iptv.trial"
 assert element["versionName"].endswith("-trial")
-assert element["versionCode"] == 1
+assert element["versionCode"] == 2
 badging = (build / "badging.txt").read_text()
 assert "sdkVersion:'26'" in badging
 assert "targetSdkVersion:'36'" in badging

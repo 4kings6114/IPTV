@@ -1,0 +1,78 @@
+name: Android API33 stability smoke
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+
+concurrency:
+  group: android-smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+        working-directory: android
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Verify official wrapper
+        run: echo '81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f  gradle/wrapper/gradle-wrapper.jar' | sha256sum -c -
+      - uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: android-gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle.kts', 'android/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: android-gradle-${{ runner.os }}-
+      - name: Set up compile SDK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/setup_sdk.py
+      - name: Enable emulator acceleration
+        run: |
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - name: Generate synthetic video (never shipped in application APK)
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --yes ffmpeg
+          fi
+          python3 tools/generate_smoke_fixture.py
+      - name: Run API 33 device tests beyond one minute
+        uses: ReactiveCircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        with:
+          api-level: 33
+          arch: x86_64
+          target: google_apis
+          profile: pixel_2
+          emulator-boot-timeout: 300
+          disable-animations: true
+          working-directory: android
+          emulator-options: -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -camera-back none
+          script: python3 tools/run_device_smoke.py
+      - name: Upload runtime evidence (synthetic/local test only)
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-api33-smoke-${{ github.run_id }}
+          path: |
+            android/app/build/device-smoke/
+            android/app/build/reports/androidTests/
+            android/app/build/outputs/androidTest-results/
+          if-no-files-found: ignore
+          retention-days: 14

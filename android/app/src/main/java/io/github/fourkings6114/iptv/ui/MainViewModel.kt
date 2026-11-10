@@ -14,6 +14,8 @@ import java.net.UnknownHostException
 import javax.net.ssl.SSLException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -43,12 +45,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptySet())
     val history = dao.observeHistory().map { rows -> rows.map { it.channel() } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    val crashReport = MutableStateFlow<String?>(null)
     val busy = MutableStateFlow(false)
     val error = MutableStateFlow<String?>(null)
     val notice = MutableStateFlow<String?>(null)
     private var activeLoad: Job? = null
 
     init {
+        viewModelScope.launch { crashReport.value = withContext(Dispatchers.IO) { app.crashReports.read() } }
         viewModelScope.launch { selectedSource.collect { load(it, force = false) } }
     }
 
@@ -83,6 +87,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             settings.first { it.allowHttp == allow }
             onDone()
         }
+    }
+    fun clearCrashReport() {
+        viewModelScope.launch { withContext(Dispatchers.IO) { app.crashReports.clear() }; crashReport.value = null }
     }
     fun dismissNotice() { notice.value = null }
 

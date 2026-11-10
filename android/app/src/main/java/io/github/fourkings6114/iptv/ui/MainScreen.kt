@@ -1,5 +1,8 @@
 package io.github.fourkings6114.iptv.ui
 
+import android.content.ClipData
+import android.content.ClipboardManager
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -50,6 +53,9 @@ private enum class Pane(val label: String, val icon: ImageVector) {
 
 @Composable
 fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel) -> Unit) {
+    val crashReport by model.crashReport.collectAsStateWithLifecycle()
+    var showCrashReport by remember { mutableStateOf(true) }
+    var crashCopied by remember { mutableStateOf(false) }
     val settings by model.settings.collectAsStateWithLifecycle()
     val channels by model.channels.collectAsStateWithLifecycle()
     val favorites by model.favorites.collectAsStateWithLifecycle()
@@ -167,6 +173,12 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                         Text("برای دریافت فهرست، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
                         OutlinedButton(onClick = { clearHistory = true }) { Text("پاک‌کردن سابقهٔ پخش") }
                     }
+                    if (crashReport != null) SettingsCard {
+                        Text("گزارش بسته‌شدن قبلی", style = MaterialTheme.typography.titleMedium)
+                        Text("فقط روی همین گوشی نگه‌داری می‌شود و خودکار ارسال نمی‌شود.", style = MaterialTheme.typography.bodySmall)
+                        TextButton(onClick = { showCrashReport = true }) { Text("مشاهده و کپی گزارش کرش") }
+                        TextButton(onClick = { model.clearCrashReport() }) { Text("پاک‌کردن گزارش کرش") }
+                    }
                     SettingsCard {
                         Text("دربارهٔ این نسخه", style = MaterialTheme.typography.titleMedium)
                         Text("نسخهٔ ${BuildConfig.VERSION_NAME} · اندروید ۸ به بالا\nموتور: Media3 · بدون FFmpeg و VLC\nبا خروج از صفحهٔ پخش، پخش متوقف می‌شود.", style = MaterialTheme.typography.bodySmall)
@@ -231,6 +243,23 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
         }
     }
 
+    if (showCrashReport && crashReport != null) {
+        AlertDialog(
+            onDismissRequest = { showCrashReport = false },
+            title = { Text("گزارش اشکال برنامه") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Text("یک خطای ثبت‌شده از اجرای قبلی موجود است. گزارش فقط شامل کلاس خطا، محل کد و مشخصات فنی است؛ متن خطا، آدرس و هدرها ثبت نمی‌شوند. می‌توانی آن را پس از بررسی دستی کپی کنی؛ چیزی خودکار ارسال نمی‌شود.", style = MaterialTheme.typography.bodySmall)
+                    Text(crashReport.orEmpty(), Modifier.heightIn(max = 240.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall)
+                }
+            },
+            confirmButton = { TextButton(onClick = {
+                context.getSystemService(ClipboardManager::class.java).setPrimaryClip(ClipData.newPlainText("IPTV crash report", crashReport.orEmpty()))
+                crashCopied = true
+            }) { Text(if (crashCopied) "کپی شد" else "کپی گزارش کرش") } },
+            dismissButton = { TextButton(onClick = { showCrashReport = false }) { Text("بستن") } },
+        )
+    }
     if (chooseSource) {
         val extra = availableSources.filter { item -> SOURCE_PRESETS.none { it.id == item.id } }
         AlertDialog(

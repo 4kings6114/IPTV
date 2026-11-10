@@ -29,7 +29,6 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
@@ -75,6 +74,7 @@ class PlaybackActivity : ComponentActivity() {
     private var resumePosition = C.TIME_UNSET
     private var wasPlaying = true
     private var historyRecorded = false
+    private var started = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -149,7 +149,7 @@ class PlaybackActivity : ComponentActivity() {
                 if (channel == null) {
                     buffering = false
                     failure = PlaybackFailure("اطلاعات این کانال در حافظهٔ برنامه پیدا نشد. به فهرست برگرد و دوباره انتخاب کن.", "CHANNEL_NOT_FOUND")
-                } else if (lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) startPlayer()
+                } else if (started) startPlayer()
             } catch (cancelled: CancellationException) { throw cancelled
             } catch (_: Exception) {
                 buffering = false
@@ -160,6 +160,7 @@ class PlaybackActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
+        started = true
         if (channel != null && player == null) startPlayer()
     }
 
@@ -173,7 +174,7 @@ class PlaybackActivity : ComponentActivity() {
 
     private fun createPlayer() {
         val item = channel ?: return
-        if (player != null || !lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) return
+        if (player != null || !started) return
         failure = null
         copied = false
         buffering = true
@@ -269,6 +270,7 @@ class PlaybackActivity : ComponentActivity() {
     }
 
     override fun onStop() {
+        started = false
         releasePlayer()
         super.onStop()
     }
