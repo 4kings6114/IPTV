@@ -7,11 +7,14 @@ import os
 import shutil
 from collections import Counter
 from dataclasses import replace
+from datetime import datetime, timezone
 from pathlib import Path
 
 from .builder import BuildError, run_build
 from .config import load_settings
 from .diagnostics import _actions_notices
+from .epg import _coverage
+from .m3u import parse
 from .resources import resource_path
 from .storage import atomic_write, json_text, read_json
 
@@ -35,6 +38,7 @@ def full_audit(config: Path, directory: Path) -> dict:
             "favorites.json",
             "profiles.json",
             "epg_aliases.json",
+            "important_channels.json",
         )
     ]
     before = {
@@ -92,18 +96,32 @@ def full_audit(config: Path, directory: Path) -> dict:
                 for name in item.get("names", [])
             ):
                 guide_evidence.append(
-                    {"url": url, "id": identifier, "names": item.get("names", [])}
+                    {
+                        "url": url,
+                        "id": identifier,
+                        "names": item.get("names", []),
+                        "coverage": _coverage(
+                            item, datetime.now(timezone.utc), settings.epg.freshness_hours
+                        ),
+                        "programmes": item.get("count", 0),
+                    }
                 )
     failures = runtime.get("unavailable_links", [])
     reasons = Counter((item.get("status", "unknown"), item.get("reason", "")) for item in failures)
     summary = {
         "status": runtime.get("status", "failed"),
         "analysis_completed": "channels" in runtime,
-        "publication_allowed": runtime.get("status") == "dry_run",
+        "guard_checks_passed": runtime.get("status") == "dry_run",
         "production_modified": not preserved,
         "history_preserved": no_history,
+        "publication_authorized": False,
         "generated_at": runtime.get("generated_at"),
         "channels": runtime.get("channels", 0),
+        "previous_entries": runtime.get("previous_channels", 0),
+        "previous_unique_identities": len({item.identity for item in parse(baseline.read_text())})
+        if baseline.is_file()
+        else 0,
+        "budget": runtime.get("budget", {}),
         "checked_links": runtime.get("checked_links", 0),
         "cached_links": runtime.get("cached_links", 0),
         "health": runtime.get("health", {}),
@@ -123,13 +141,13 @@ def full_audit(config: Path, directory: Path) -> dict:
         "metadata": runtime.get("metadata", {}),
         "epg": runtime.get("epg", {}),
         "guard_error": error,
-        "note": "Full candidate-link audit, not all-channel decoding. A blocked result is NOT publication approval. No commit, push, Pages deployment or Telegram.",
+        "note": "Full candidate-link audit, not all-channel decoding. Guard success is NOT publication authorization. No commit, push, Pages deployment or Telegram.",
     }
     summary["guide_evidence"] = guide_evidence[:20]
     atomic_write(directory / "audit_summary.json", json_text(summary))
     if not preserved or not no_history:
         raise RuntimeError("Audit changed a protected file or health/playback history")
-    if runtime.get("status") not in {"dry_run", "blocked"}:
+    if not summary["analysis_completed"] or runtime.get("status") not in {"dry_run", "blocked"}:
         raise RuntimeError("Full audit did not complete; inspect the diagnostics")
     return summary
 
@@ -160,7 +178,7 @@ def main(argv: list[str] | None = None) -> int:
                     for key in (
                         "status",
                         "analysis_completed",
-                        "publication_allowed",
+                        "guard_checks_passed",
                         "channels",
                         "checked_links",
                         "health",

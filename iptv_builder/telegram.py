@@ -6,7 +6,8 @@ import sys
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from .storage import read_json
+from .alerts import alert_plan
+from .storage import atomic_write, json_text, read_json
 
 
 def message_text(
@@ -68,15 +69,22 @@ def main() -> int:
         print("Telegram secrets are not configured; skipping notification.")
         return 0
     report = read_json(Path(".cache/iptv/last_run.json"))
-    text = message_text(
-        report,
-        os.environ["GITHUB_REPOSITORY"],
-        os.environ["GITHUB_RUN_ID"],
-        os.environ.get("BUILD_JOB_STATUS") != "success",
-        os.environ.get("PLAYLIST_CHANGED") == "true",
+    state_path = Path(".cache/iptv/alerts.json")
+    events, state = alert_plan(
+        report, read_json(state_path), os.environ.get("BUILD_JOB_STATUS") != "success"
     )
+    if not events:
+        atomic_write(state_path, json_text(state))
+        print("No new targeted incident; Telegram notification suppressed.")
+        return 0
+    text = "⚠️ هشدار هدفمند IPTV\n" + "\n".join(event["title"][:250] for event in events[:10])
+    if len(events) > 10:
+        text += f"\nو {len(events) - 10} مورد دیگر؛ گزارش اجرا را ببینید."
+    text += f"\nhttps://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
     try:
         send_message(token, chat, text)
+        # Record delivery only after Telegram accepted it; failed delivery can retry.
+        atomic_write(state_path, json_text(state))
     except Exception as error:
         # Do not print Request/HTTPError URLs: they contain the bot token.
         print(f"Telegram notification failed ({type(error).__name__}).", file=sys.stderr)

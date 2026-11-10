@@ -7,6 +7,7 @@ import tempfile
 import time
 from datetime import datetime, timezone
 
+from . import budget
 from .config import Settings
 from .m3u import Channel
 
@@ -20,7 +21,7 @@ def _run(command: list[str], timeout: float) -> tuple[int, bytes]:
             stdin=subprocess.DEVNULL,
             stdout=output,
             stderr=errors,
-            timeout=max(0.01, timeout),
+            timeout=budget.timeout(max(0.01, timeout)),
             check=False,
         )
         output.seek(0)
@@ -185,6 +186,7 @@ def sample_channels(
         {key: value for key, value in previous.items() if key in known and isinstance(value, dict)},
     )
     for channel in selected:
+        budget.check()
         result = sample(channel, settings)
         checked_at = datetime.now(timezone.utc).isoformat()
         records.append(

@@ -4,7 +4,6 @@ import gzip
 import hashlib
 import io
 import tempfile
-import time
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -13,6 +12,7 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from . import budget
 from .config import Settings, http_url
 from .storage import atomic_write, json_text, read_json
 
@@ -80,9 +80,13 @@ def fetch_resource(
                 # Disk-backed compressed spool, at most 1 MiB in memory. The
                 # streaming XML parser enforces its own expanded-byte limit.
                 with tempfile.SpooledTemporaryFile(max_size=1048576) as spool:
-                    with urlopen(request, timeout=settings.source_timeout) as response:
+                    with urlopen(
+                        request, timeout=budget.timeout(settings.source_timeout)
+                    ) as response:
                         total = 0
-                        while chunk := response.read(min(65536, max_bytes - total + 1)):
+                        while chunk := budget.read_chunk(
+                            response, min(65536, max_bytes - total + 1)
+                        ):
                             total += len(chunk)
                             if total > max_bytes:
                                 raise ResourceValidationError("Resource exceeds byte limit")
@@ -97,8 +101,8 @@ def fetch_resource(
                     else:
                         value = stream_parser(spool)
             else:
-                with urlopen(request, timeout=settings.source_timeout) as response:
-                    body = response.read(max_bytes + 1)
+                with urlopen(request, timeout=budget.timeout(settings.source_timeout)) as response:
+                    body = budget.read_response(response, max_bytes + 1)
                     encoding = response.headers.get("Content-Encoding", "").lower()
                 if len(body) > max_bytes:
                     raise ResourceValidationError("Resource exceeds byte limit")
@@ -135,7 +139,7 @@ def fetch_resource(
             error_text = "Resource connection, timeout or decoding failure"
         if not retryable or attempt + 1 == settings.source_attempts:
             break
-        time.sleep(settings.retry_delay * (2**attempt))
+        budget.pause(settings.retry_delay * (2**attempt))
     if cached is not None:
         return Resource(url, cached, "cached", error_text)
     return Resource(url, None, "failed", error_text)

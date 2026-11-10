@@ -2,10 +2,13 @@
 
 import re
 from collections import Counter, defaultdict
-from dataclasses import dataclass
-from datetime import datetime, timezone
+from copy import deepcopy
+from dataclasses import asdict, dataclass
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from . import budget
+from .alerts import load_watch_ids, watched_failures
 from .catalog import ORDER, SPLIT
 from .changes import channel_changes, remember_channels
 from .classification import load_excludes, load_overrides, prepare_channels
@@ -17,11 +20,14 @@ from .m3u import Channel, parse, render_m3u, res_of, valid_source, validate_outp
 from .metadata import load_metadata
 from .personalization import (
     channel_language,
+    editor_manifest,
     load_personalization,
     personalized_outputs,
     source_rank,
 )
 from .playback import sample_channels
+from .privacy import public_data, public_url
+from .reliability import daily_observation, reliability, stability_rank
 from .sources import fetch_sources
 from .storage import archive_playlist, atomic_write, build_lock, json_text, publish_files, read_json
 
@@ -38,6 +44,21 @@ class Selection:
 
 def update_history(results: dict[str, ProbeResult], previous: dict, now: str) -> dict:
     history = {}
+    try:
+        stamp = datetime.fromisoformat(now)
+    except ValueError:
+        stamp = None
+    for key, old in previous.items():
+        if not isinstance(old, dict):
+            continue
+        try:
+            if (
+                stamp is not None
+                and stamp - timedelta(days=30) <= datetime.fromisoformat(old["checked_at"]) <= stamp
+            ):
+                history[key] = old
+        except (KeyError, TypeError, ValueError):
+            pass
     for key, result in results.items():
         old = previous.get(key, {})
         if not isinstance(old, dict):
@@ -59,11 +80,22 @@ def update_history(results: dict[str, ProbeResult], previous: dict, now: str) ->
             "checked_at": checked_at,
             "last_success": checked_at if result.healthy else old.get("last_success"),
             "resolution": result.resolution,
+            "bitrate": result.bitrate,
+            "bitrate_source": result.bitrate_source,
+            "variants": [asdict(item) for item in result.variants],
+            "daily": daily_observation(old, checked_at, result.healthy),
             "consecutive_successes": successes + 1 if result.healthy else 0,
             # Attempts within one build count as one failed observation.
             "consecutive_failures": 0 if result.healthy else failures + 1,
         }
-    return history
+    # Current requests first, then bounded recently absent alternatives.
+    return dict(
+        sorted(
+            history.items(),
+            key=lambda item: (item[0] in results, str(item[1].get("checked_at", ""))),
+            reverse=True,
+        )[:25000]
+    )
 
 
 def select_channels(
@@ -84,6 +116,7 @@ def select_channels(
         resolution = results[channel.probe_key].resolution or res_of(channel.name)
         return (
             source_rank(channel, settings.preferred_sources),
+            -stability_rank(history.get(channel.probe_key, {})),
             -resolution,
             not channel.manual,
             channel.source == "__previous__",
@@ -209,7 +242,7 @@ def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
-def _catalog(channels, results, epg_status, now):
+def _catalog(channels, results, epg_status, now, history=None):
     return [
         {
             "identity": channel.identity,
@@ -221,6 +254,9 @@ def _catalog(channels, results, epg_status, now):
             "language": channel_language(channel),
             "logo": channel.attrs.get("tvg-logo", ""),
             "resolution": results[channel.probe_key].resolution or res_of(channel.name),
+            "bitrate": results[channel.probe_key].bitrate,
+            "bitrate_source": results[channel.probe_key].bitrate_source,
+            "reliability": reliability((history or {}).get(channel.probe_key, {}), now),
             "status": results[channel.probe_key].status,
             "reason": results[channel.probe_key].reason,
             "cached": results[channel.probe_key].cached,
@@ -246,10 +282,35 @@ def _stable_report(report: dict) -> dict:
         "recovered",
         "returned_unverified",
         "changes",
+        "previous_channels",
+        "previous_unique_identities",
+        "watched_failures",
+        "fresh_healthy_watched",
+        "budget",
+        "checked_links",
+        "cached_links",
     }
-    stable = {key: value for key, value in report.items() if key not in excluded}
+    stable = deepcopy({key: value for key, value in report.items() if key not in excluded})
+    for resources in (
+        stable.get("sources", []),
+        stable.get("metadata", {}).get("sources", []),
+        stable.get("epg", {}).get("guides", []),
+    ):
+        for resource in resources:
+            if resource.get("status") in {"fresh", "cached"}:
+                resource["status"] = "available"
+    for item in stable.get("unavailable_links", []):
+        item.pop("last_success", None)
     stable["channel_catalog"] = [
-        {key: value for key, value in item.items() if key != "checked_at"}
+        {
+            key: (
+                {k: v for k, v in value.items() if k != "observations"}
+                if key == "reliability"
+                else value
+            )
+            for key, value in item.items()
+            if key not in {"checked_at", "cached"}
+        }
         for item in report.get("channel_catalog", [])
     ]
     if isinstance(report.get("playback"), dict):
@@ -273,6 +334,7 @@ def _build(
     overrides = load_overrides(input_dir / settings.overrides_file)
     excludes = load_excludes(input_dir / settings.exclude_file)
     favorites, profiles = load_personalization(settings, input_dir)
+    watched = favorites | load_watch_ids(input_dir / settings.personalization.important_file)
     old_text = _read_text(output_dir / "playlist.m3u")
     old_channels = parse(old_text)
     old_report = read_json(output_dir / "build_report.json")
@@ -302,8 +364,8 @@ def _build(
     ]
     for item in sources:
         print(
-            f"Source [{item.status}]: {item.source.url}"
-            + (f" ({item.error})" if item.error else "")
+            f"Source [{item.status}]: {public_url(item.source.url)}"
+            + (f" ({public_data(item.error)})" if item.error else "")
         )
     available = sum(item.status != "failed" for item in sources)
     if sources and available / len(sources) < settings.min_available_source_ratio:
@@ -377,6 +439,25 @@ def _build(
         "schema_version": 2,
         "generated_at": runtime["generated_at"],
         "channels": len(final),
+        "previous_channels": len(old_channels),
+        "previous_unique_identities": len({channel.identity for channel in old_channels}),
+        "watched_failures": watched_failures(
+            channels,
+            results,
+            history,
+            watched,
+            None,
+            max(2, settings.failure_threshold),
+        ),
+        "fresh_healthy_watched": sorted(
+            {
+                channel.identity
+                for channel in channels
+                if channel.identity in watched
+                and results[channel.probe_key].healthy
+                and not results[channel.probe_key].cached
+            }
+        ),
         "groups": dict(Counter(channel.group for channel in final)),
         "checked_links": sum(
             result.status != "unchecked" and not result.cached for result in results.values()
@@ -396,8 +477,9 @@ def _build(
         "downgraded": sum(item["direction"] == "down" for item in changes["quality_changes"]),
         "metadata": metadata_report,
         "epg": epg_report,
-        "channel_catalog": _catalog(final, results, epg_status, runtime["generated_at"]),
+        "channel_catalog": _catalog(final, results, epg_status, runtime["generated_at"], history),
     }
+    report = public_data(report)
     runtime.update(report)
     guard_output(settings, len(old_channels), len(final))
     playback_state = read_json(cache_dir / "playback.json")
@@ -433,6 +515,8 @@ def _build(
     for name in managed:
         personal_outputs.setdefault(name, render_m3u([], epg_urls))
     report["personalization"] = personal_report
+    report["editor"] = editor_manifest(channels, results, history, epg_urls, favorites, profiles)
+    report = public_data(report)
     runtime.update(report)
     outputs = {"playlist.m3u": render_m3u(final, epg_urls), **personal_outputs}
     validate_output(outputs["playlist.m3u"], len(final))
@@ -440,7 +524,7 @@ def _build(
         subset = [channel for channel in final if channel.group in groups]
         outputs[filename] = render_m3u(subset, epg_urls)
         validate_output(outputs[filename], len(subset))
-    outputs["dead_links.txt"] = _dead_text(failures)
+    outputs["dead_links.txt"] = _dead_text(report["unavailable_links"])
     content_changed = any(_read_text(output_dir / name) != text for name, text in outputs.items())
     if (
         content_changed
@@ -456,6 +540,7 @@ def _build(
     main_changed = outputs["playlist.m3u"] != old_text
     if settings.save_backup and main_changed and valid_source(old_text):
         outputs["playlist-backup.m3u"] = old_text
+    budget.check()
     if dry_run:
         runtime["status"] = "dry_run"
         runtime["changed_files"] = [
@@ -471,7 +556,7 @@ def _build(
             cache_dir / "link-health.json",
             json_text(
                 {
-                    "schema_version": 2,
+                    "schema_version": 3,
                     "links": history,
                     "channels": remember_channels(
                         previous_channels, final, results, runtime["generated_at"]
@@ -493,13 +578,19 @@ def run_build(
     input_dir = (input_dir or output_dir).resolve()
     cache_dir = output_dir / settings.cache_dir
     runtime = {"generated_at": datetime.now(timezone.utc).isoformat(), "status": "running"}
-    with build_lock(output_dir):
+    with build_lock(output_dir), budget.build_budget(settings.budget) as meter:
         try:
             return _build(settings, output_dir, input_dir, cache_dir, dry_run, runtime)
         except Exception as error:
             runtime.update(
-                status="blocked" if isinstance(error, BuildError) else "failed", error=str(error)
+                status="blocked"
+                if isinstance(error, (BuildError, budget.BudgetExceeded))
+                else "failed",
+                error=str(error),
             )
+            if isinstance(error, budget.BudgetExceeded):
+                raise BuildError(str(error)) from error
             raise
         finally:
-            atomic_write(cache_dir / "last_run.json", json_text(runtime))
+            runtime["budget"] = meter.summary()
+            atomic_write(cache_dir / "last_run.json", json_text(public_data(runtime)))

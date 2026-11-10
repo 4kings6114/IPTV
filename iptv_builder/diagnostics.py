@@ -11,7 +11,8 @@ from pathlib import Path
 from .builder import BuildError, run_build
 from .classification import load_excludes, load_overrides, prepare_channels
 from .config import MetadataOptions, load_settings
-from .m3u import render_m3u
+from .epg import load_aliases
+from .m3u import render_m3u, stable_id
 from .metadata import load_metadata
 from .sources import fetch_sources
 from .storage import atomic_write, json_text
@@ -25,12 +26,25 @@ def _hashes(root: Path) -> dict:
     }
 
 
-def _sample(candidates, limit):
+def _sample(candidates, limit, preferred_ids=()):
     # Spread countries and hosts, rather than testing 12 variants of one URL.
     ordered = sorted(
         candidates, key=lambda channel: hashlib.sha256(channel.identity.encode()).hexdigest()
     )
     selected, identities, hosts = [], set(), set()
+    for identifier in preferred_ids:
+        chosen = next(
+            (
+                item
+                for item in ordered
+                if stable_id(item.channel_id) == identifier and item.identity not in identities
+            ),
+            None,
+        )
+        if chosen is not None and len(selected) < min(4, max(1, limit // 2)):
+            selected.append(chosen)
+            identities.add(chosen.identity)
+            hosts.add(chosen.request_url.split("/", 3)[2])
     for country in ("ir", "us", "uk", "de", ""):
         for channel in ordered:
             if len(selected) == limit:
@@ -114,7 +128,10 @@ def validate(
                         reference=reference,
                     )
                 )
-        selected = _sample(candidates, limit)
+        aliases = (
+            load_aliases(input_root / settings.epg.aliases_file) if settings.epg.enabled else {}
+        )
+        selected = _sample(candidates, limit, sorted(aliases))
         if not selected:
             raise BuildError("No eligible public-source diagnostic candidates")
         summary["eligible_source_identities"] = len({channel.identity for channel in candidates})
@@ -128,6 +145,7 @@ def validate(
             (settings.epg.aliases_file, "epg_aliases.json"),
             (settings.personalization.favorites_file, "favorites.json"),
             (settings.personalization.profiles_file, "profiles.json"),
+            (settings.personalization.important_file, "important_channels.json"),
         ):
             path = input_root / original
             if path.exists():
@@ -149,6 +167,7 @@ def validate(
                 settings.personalization,
                 favorites_file="favorites.json",
                 profiles_file="profiles.json",
+                important_file="important_channels.json",
             ),
             playback=replace(
                 settings.playback,
@@ -223,7 +242,7 @@ def validate(
 def _actions_notices(result: dict) -> None:
     # GitHub truncates individual annotation messages. Keep valid, small JSON
     # per topic; the complete reports remain in the downloadable artifact.
-    large = {"sources", "sample", "metadata", "epg", "playback"}
+    large = {"sources", "sample", "metadata", "epg", "playback", "budget"}
     topics = {"metrics": {key: value for key, value in result.items() if key not in large}}
     sources = result.get("sources", [])
     topics["sources"] = {
@@ -234,6 +253,7 @@ def _actions_notices(result: dict) -> None:
         ("metadata", {"missing_examples", "ambiguous_examples"}),
         ("epg", {"missing_channels"}),
         ("playback", set()),
+        ("budget", set()),
     ):
         if name in result:
             topics[name] = {key: value for key, value in result[name].items() if key not in omitted}

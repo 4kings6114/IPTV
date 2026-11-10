@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from . import budget
 from .classification import override_id
 from .config import Settings
 from .m3u import Channel, stable_id
@@ -37,6 +38,7 @@ class _XMLReader:
         self.tail = ""
 
     def read(self, size=-1):
+        budget.check()
         body = self.stream.read(min(65536, size) if size >= 0 else 65536)
         self.total += len(body)
         if self.total > self.maximum:
@@ -208,6 +210,7 @@ def validate_epg(
             parse_xmltv,
             options.max_bytes,
             options.cache_hours,
+            refresh_hours=options.refresh_hours,
             stream_parser=lambda stream: parse_xmltv_stream(stream, options.max_expanded_bytes),
         )
 

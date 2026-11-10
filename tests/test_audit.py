@@ -33,7 +33,7 @@ class FullAuditTests(unittest.TestCase):
             with redirect_stdout(io.StringIO()):
                 result = full_audit(path, root / "audit")
             self.assertTrue(result["analysis_completed"])
-            self.assertTrue(result["publication_allowed"])
+            self.assertTrue(result["guard_checks_passed"])
             self.assertFalse(result["production_modified"])
             self.assertTrue(result["history_preserved"])
             self.assertGreater(result["checked_links"], 0)
@@ -65,7 +65,7 @@ class FullAuditTests(unittest.TestCase):
                 result = full_audit(path, root / "audit")
             self.assertTrue(result["analysis_completed"])
             self.assertEqual(result["status"], "blocked")
-            self.assertFalse(result["publication_allowed"])
+            self.assertFalse(result["guard_checks_passed"])
             self.assertIn("drop limit", result["guard_error"])
             self.assertEqual((root / "playlist.m3u").read_text(), previous)
             self.assertTrue(result["history_preserved"])
@@ -82,3 +82,28 @@ class FullAuditTests(unittest.TestCase):
             redirect_stdout(io.StringIO()),
         ):
             self.assertEqual(main([]), 1)
+
+    def test_source_guard_without_complete_analysis_is_not_a_successful_full_audit(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path = root / "config.json"
+            path.write_text(
+                '{"stream_template":"","extra_sources":["https://missing.test/playlist"]}'
+            )
+            from iptv_builder.config import Source
+            from iptv_builder.sources import SourceResult
+
+            with (
+                patch(
+                    "iptv_builder.builder.fetch_sources",
+                    return_value=[
+                        SourceResult(Source("https://missing.test/playlist"), "", "failed")
+                    ],
+                ),
+                redirect_stdout(io.StringIO()),
+                self.assertRaises(RuntimeError),
+            ):
+                full_audit(path, root / "audit")
+            result = json.loads((root / "audit/audit_summary.json").read_text())
+            self.assertFalse(result["analysis_completed"])
+            self.assertFalse(result["production_modified"])

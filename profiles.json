@@ -8,7 +8,8 @@
     },
     "low-bandwidth": {
       "max_resolution": 720,
-      "include_unknown_resolution": false
+      "include_unknown_resolution": false,
+      "max_bitrate": 2000000
     }
   }
 }

@@ -47,6 +47,7 @@ class MetadataOptions:
 class EPGOptions:
     enabled: bool = False
     cache_hours: float = 24
+    refresh_hours: float = 6
     freshness_hours: float = 24
     max_bytes: int = 33554432
     max_expanded_bytes: int = 536870912
@@ -79,9 +80,16 @@ class HostLimitOptions:
 
 
 @dataclass(frozen=True)
+class BudgetOptions:
+    max_seconds: float = 6000
+    max_http_bytes: int = 1073741824
+
+
+@dataclass(frozen=True)
 class PersonalizationOptions:
     favorites_file: str = "favorites.json"
     profiles_file: str = "profiles.json"
+    important_file: str = "important_channels.json"
 
 
 _OPTION_TYPES = {
@@ -91,6 +99,7 @@ _OPTION_TYPES = {
     "health_cache": HealthCacheOptions,
     "host_limit": HostLimitOptions,
     "personalization": PersonalizationOptions,
+    "budget": BudgetOptions,
 }
 
 
@@ -129,12 +138,14 @@ def _load_options(name: str, data: dict):
             if item.name not in {"hours", "interval", "max_retry_after"} and value <= 0:
                 raise ValueError(f"{label} must be positive")
     options = cls(**data)
+    if name == "budget" and (options.max_seconds > 86400 or options.max_http_bytes > 4294967296):
+        raise ValueError("budget limits: max_seconds <= 86400, max_http_bytes <= 4 GiB")
     if name == "health_cache" and options.hours > options.max_hours:
         raise ValueError("health_cache.hours must not exceed max_hours")
-    if name == "metadata" and options.refresh_hours > options.cache_hours:
-        raise ValueError("metadata.refresh_hours must not exceed cache_hours")
-    if name in {"epg", "metadata"} and options.max_bytes < 512:
-        raise ValueError(f"{name}.max_bytes must be at least 512")
+    if name in {"metadata", "epg"} and options.refresh_hours > options.cache_hours:
+        raise ValueError(f"{name}.refresh_hours must not exceed cache_hours")
+    if name in {"epg", "metadata"} and not 512 <= options.max_bytes <= 67108864:
+        raise ValueError(f"{name}.max_bytes must be between 512 and 64 MiB")
     if name == "epg" and not options.max_bytes <= options.max_expanded_bytes <= 536870912:
         raise ValueError("epg.max_expanded_bytes must be between max_bytes and 512 MiB")
     if name == "playback" and (
@@ -184,6 +195,7 @@ class Settings:
     personalization: PersonalizationOptions = field(default_factory=PersonalizationOptions)
     preferred_sources: tuple[str, ...] = ()
     dashboard: bool = True
+    budget: BudgetOptions = field(default_factory=BudgetOptions)
 
     def sources(self) -> tuple[Source, ...]:
         countries = ()
@@ -268,8 +280,16 @@ def load_settings(path: Path) -> Settings:
         value = getattr(settings, key)
         if type(value) is not int or value < 1:
             raise ValueError(f"{key} must be a positive integer")
-    if settings.probe_bytes < 512:
-        raise ValueError("probe_bytes must be at least 512")
+    if not 512 <= settings.probe_bytes <= 1048576:
+        raise ValueError("probe_bytes must be between 512 and 1 MiB")
+    for key, maximum in (
+        ("max_workers", 64),
+        ("source_workers", 16),
+        ("link_attempts", 5),
+        ("source_attempts", 5),
+    ):
+        if getattr(settings, key) > maximum:
+            raise ValueError(f"{key} must not exceed {maximum}")
     for key in ("timeout", "source_timeout", "source_cache_max_age_hours"):
         value = getattr(settings, key)
         if type(value) not in (int, float) or not 0 < value < float("inf"):
