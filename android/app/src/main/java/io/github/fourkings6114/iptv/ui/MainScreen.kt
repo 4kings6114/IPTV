@@ -30,6 +30,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -54,8 +55,8 @@ private enum class Pane(val label: String, val icon: ImageVector) {
 @Composable
 fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel) -> Unit) {
     val crashReport by model.crashReport.collectAsStateWithLifecycle()
-    var showCrashReport by remember { mutableStateOf(true) }
-    var crashCopied by remember { mutableStateOf(false) }
+    var showCrashReport by rememberSaveable { mutableStateOf(true) }
+    var crashCopied by rememberSaveable { mutableStateOf(false) }
     val settings by model.settings.collectAsStateWithLifecycle()
     val channels by model.channels.collectAsStateWithLifecycle()
     val favorites by model.favorites.collectAsStateWithLifecycle()
@@ -250,7 +251,7 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
             text = {
                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text("یک خطای ثبت‌شده از اجرای قبلی موجود است. گزارش فقط شامل کلاس خطا، محل کد و مشخصات فنی است؛ متن خطا، آدرس و هدرها ثبت نمی‌شوند. می‌توانی آن را پس از بررسی دستی کپی کنی؛ چیزی خودکار ارسال نمی‌شود.", style = MaterialTheme.typography.bodySmall)
-                    Text(crashReport.orEmpty(), Modifier.heightIn(max = 240.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall)
+                    Text(crashReport.orEmpty(), Modifier.heightIn(max = 240.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall.copy(textDirection = TextDirection.Ltr))
                 }
             },
             confirmButton = { TextButton(onClick = {

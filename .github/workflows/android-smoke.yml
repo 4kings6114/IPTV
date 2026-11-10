@@ -3,6 +3,7 @@ name: Android API33 stability smoke
 on:
   push:
     paths:
+      - "android/**"
       - ".github/workflows/android-smoke.yml"
   workflow_dispatch:
 

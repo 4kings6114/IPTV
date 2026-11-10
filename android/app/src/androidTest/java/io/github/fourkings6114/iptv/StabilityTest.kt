@@ -1,7 +1,10 @@
 package io.github.fourkings6114.iptv
 
+import android.content.ClipboardManager
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.content.res.Configuration
+import android.os.Build
 import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
@@ -12,8 +15,8 @@ import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.lifecycle.Lifecycle
-import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
@@ -24,10 +27,12 @@ import androidx.test.platform.app.InstrumentationRegistry
 import io.github.fourkings6114.iptv.core.Channel
 import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
 import io.github.fourkings6114.iptv.data.SourceEntity
+import io.github.fourkings6114.iptv.diagnostics.RecordingExceptionHandler
 import io.github.fourkings6114.iptv.player.PlaybackActivity
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -39,7 +44,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/** Actual Android API-33 runtime, synthetic localhost media only; NOT a Poco/MIUI test. */
+/** Actual Android API-33 runtime, synthetic loopback media only; NOT a Poco/MIUI test. */
 @RunWith(AndroidJUnit4::class)
 @androidx.annotation.OptIn(UnstableApi::class)
 class StabilityTest {
@@ -47,18 +52,25 @@ class StabilityTest {
     private val app get() = ApplicationProvider.getApplicationContext<IPTVApplication>()
 
     @Before fun preparePrivateTestData() = runBlocking {
+        assertEquals("This stability suite targets Android 13", 33, Build.VERSION.SDK_INT)
         app.crashReports.clear()
-        app.settings.showLogos(false) // no third-party network requests during this test
-        app.settings.selectSource(SAMPLE_SOURCE_ID)
-        app.settings.state.first { it.loaded && !it.showLogos && it.sourceId == SAMPLE_SOURCE_ID }
-        app.repository.ensureSource(SAMPLE_SOURCE_ID)
+        withTimeout(20_000) {
+            app.settings.showLogos(false) // no third-party network requests during this test
+            app.settings.allowHttp(false)
+            app.settings.selectSource(SAMPLE_SOURCE_ID)
+            app.settings.state.first { it.loaded && !it.showLogos && !it.allowHttp && it.sourceId == SAMPLE_SOURCE_ID }
+            app.repository.ensureSource(SAMPLE_SOURCE_ID)
+            val sample = app.database.channels().observeSource(SAMPLE_SOURCE_ID).first()
+            sample.forEach { app.database.channels().removeFavorite(it.id) }
+        }
     }
 
     @Test fun browsingFavoritesAndRecreationSurviveSeventySeconds() {
         ActivityScenario.launch(MainActivity::class.java).use { scenario ->
-            ui.waitUntil(20_000) { ui.onAllNodesWithText("IRIB TV1").fetchSemanticsNodes(atLeastOneRootRequired = false).isNotEmpty() }
+            awaitText("IRIB TV1")
             ui.onAllNodesWithContentDescription("افزودن به علاقه‌مندی‌ها").onFirst().performClick()
             ui.onNodeWithText("علاقه‌مندی‌ها").performClick()
+            awaitText("IRIB TV1")
             ui.onNodeWithText("IRIB TV1").assertIsDisplayed()
             ui.onNodeWithText("کانال‌ها").performClick()
             repeat(7) {
@@ -68,7 +80,10 @@ class StabilityTest {
                 SystemClock.sleep(10_000)
             }
             scenario.recreate()
-            ui.waitUntil(20_000) { ui.onAllNodesWithText("IRIB TV1").fetchSemanticsNodes(atLeastOneRootRequired = false).isNotEmpty() }
+            awaitText("IRIB TV1")
+            ui.onNodeWithText("IRIB TV1").assertIsDisplayed()
+            ui.onNodeWithText("علاقه‌مندی‌ها").performClick()
+            awaitText("IRIB TV1")
             ui.onNodeWithText("IRIB TV1").assertIsDisplayed()
             assertNull(app.crashReports.read())
         }
@@ -92,9 +107,11 @@ class StabilityTest {
             server.start()
             val channel = Channel("local-stability-fixture", "Synthetic AVC AAC", "Local test", server.url("/stability.mp4").toString())
             runBlocking {
-                app.settings.allowHttp(true) // test-only opt-in, not a production default change
-                app.settings.state.first { it.allowHttp }
-                app.database.channels().replaceSource(SourceEntity("local-test", "Local test", updatedAt = 1, count = 1), listOf(channel))
+                withTimeout(20_000) {
+                    app.settings.allowHttp(true) // test-only opt-in, not a production default change
+                    app.settings.state.first { it.allowHttp }
+                    app.database.channels().replaceSource(SourceEntity("local-test", "Local test", updatedAt = 1, count = 1), listOf(channel))
+                }
             }
             val intent = Intent(app, PlaybackActivity::class.java).putExtra(PlaybackActivity.CHANNEL_ID, channel.id)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -114,16 +131,67 @@ class StabilityTest {
                     assertTrue(playerView(activity.window.decorView)!!.player!!.currentPosition >= 60_000)
                     activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
                 }
+                var landscape = false
+                val rotationDeadline = SystemClock.elapsedRealtime() + 10_000
+                while (!landscape && SystemClock.elapsedRealtime() < rotationDeadline) {
+                    scenario.onActivity { landscape = it.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE }
+                    if (!landscape) SystemClock.sleep(150)
+                }
+                assertTrue("The device must actually enter landscape", landscape)
                 waitForDecodedVideo(scenario)
-                lateinit var stoppedRoot: View
-                scenario.onActivity { stoppedRoot = it.window.decorView }
+                lateinit var stoppedView: PlayerView
+                lateinit var oldEngine: ExoPlayer
+                scenario.onActivity {
+                    stoppedView = playerView(it.window.decorView)!!
+                    oldEngine = stoppedView.player as ExoPlayer
+                }
                 scenario.moveToState(Lifecycle.State.CREATED)
-                InstrumentationRegistry.getInstrumentation().runOnMainSync { assertNull(playerView(stoppedRoot)?.player) }
+                InstrumentationRegistry.getInstrumentation().runOnMainSync { assertNull(stoppedView.player) }
                 scenario.moveToState(Lifecycle.State.RESUMED)
                 waitForDecodedVideo(scenario) // regression: old onStart guard could leave player null
+                scenario.onActivity { assertNotSame("Resume must create a new engine", oldEngine, playerView(it.window.decorView)!!.player) }
                 assertNull(app.crashReports.read())
             }
         }
+    }
+
+    @Test fun localFatalReportCanBeCopiedReopenedAndDeletedWithoutLeakingMessages() {
+        val privateMessage = "https://private.invalid/channel?token=DO_NOT_COPY_THIS"
+        var delegated: Throwable? = null
+        val synthetic = IllegalStateException(privateMessage)
+        // Exercise the real handler with a test delegate, without killing the instrumentation process.
+        RecordingExceptionHandler(app.crashReports) { _, error -> delegated = error }
+            .uncaughtException(Thread.currentThread(), synthetic)
+        assertSame(synthetic, delegated)
+        ActivityScenario.launch(MainActivity::class.java).use { scenario ->
+            awaitText("گزارش اشکال برنامه")
+            ui.onNodeWithText("کپی گزارش کرش").performClick()
+            scenario.onActivity { activity ->
+                val clipboard = activity.getSystemService(ClipboardManager::class.java).primaryClip
+                assertNotNull(clipboard)
+                val copied = clipboard!!.getItemAt(0).text.toString()
+                assertTrue(copied.contains("java.lang.IllegalStateException"))
+                assertFalse(copied.contains("private.invalid"))
+                assertFalse(copied.contains("DO_NOT_COPY_THIS"))
+            }
+            ui.onNodeWithText("بستن").performClick()
+            ui.onNodeWithText("تنظیمات").performClick()
+            ui.onNodeWithText("مشاهده و کپی گزارش کرش").performScrollTo().performClick()
+            ui.onNodeWithText("گزارش اشکال برنامه").assertIsDisplayed()
+            ui.onNodeWithText("بستن").performClick()
+            ui.onNodeWithText("پاک‌کردن گزارش کرش").performScrollTo().performClick()
+            ui.waitUntil(10_000) {
+                ui.onAllNodesWithText("مشاهده و کپی گزارش کرش").fetchSemanticsNodes(atLeastOneRootRequired = false).isEmpty()
+            }
+            assertNull(app.crashReports.read())
+            scenario.recreate()
+            awaitText("منبع و حریم خصوصی")
+            ui.onNodeWithText("گزارش اشکال برنامه").assertDoesNotExist()
+        }
+    }
+
+    private fun awaitText(text: String) {
+        ui.waitUntil(20_000) { ui.onAllNodesWithText(text).fetchSemanticsNodes(atLeastOneRootRequired = false).isNotEmpty() }
     }
 
     private fun waitForDecodedVideo(scenario: ActivityScenario<PlaybackActivity>) {
@@ -133,12 +201,15 @@ class StabilityTest {
             scenario.onActivity { activity ->
                 val engine = playerView(activity.window.decorView)?.player as? ExoPlayer
                 assertNull(engine?.playerError)
-                decoded = engine?.isPlaying == true && (engine.videoDecoderCounters?.renderedOutputBufferCount ?: 0) > 0
+                engine?.videoDecoderCounters?.ensureUpdated()
+                engine?.audioDecoderCounters?.ensureUpdated()
+                decoded = engine?.isPlaying == true && (engine.videoDecoderCounters?.renderedOutputBufferCount ?: 0) > 0 &&
+                    (engine.audioDecoderCounters?.renderedOutputBufferCount ?: 0) > 0
             }
             if (decoded) return
             SystemClock.sleep(150)
         }
-        fail("Player did not start/render a video frame within 25 seconds")
+        fail("Player did not start/render video and audio within 25 seconds")
     }
 
     private fun playerView(view: View): PlayerView? {
@@ -146,5 +217,4 @@ class StabilityTest {
         if (view is ViewGroup) for (index in 0 until view.childCount) playerView(view.getChildAt(index))?.let { return it }
         return null
     }
-
 }

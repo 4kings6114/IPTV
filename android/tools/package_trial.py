@@ -42,6 +42,7 @@ with zipfile.ZipFile(apk) as archive:
     assert archive.testzip() is None
     assert "AndroidManifest.xml" in archive.namelist()
     assert "classes.dex" in archive.namelist()
+    assert "assets/stability.mp4" not in archive.namelist(), "Instrumentation fixture must not ship in app APK"
     assert len([line for line in archive.read("assets/trial.m3u").decode().splitlines()
                 if line.startswith("#EXTINF:")]) == 20
     assert not any(name.endswith((".keystore", ".jks", ".env")) for name in archive.namelist())
@@ -52,8 +53,8 @@ for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     suite = ET.parse(path).getroot()
     for name in counts:
         counts[name] += int(suite.get(name, "0"))
-assert counts["tests"] >= 30, counts
-assert counts["failures"] == counts["errors"] == 0, counts
+assert counts["tests"] >= 38, counts
+assert counts["failures"] == counts["errors"] == counts["skipped"] == 0, counts
 lint = ET.parse(build / "reports/lint-results-debug.xml").getroot()
 assert not any(issue.get("severity") in {"Fatal", "Error"} for issue in lint.findall("issue"))
 
@@ -85,6 +86,13 @@ info = {
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 shutil.copyfile(root / "INSTALL-fa.md", output / "INSTALL-fa.md")
 info["signature_verification"] = (build / "signature.txt").read_text()
+# Public certificate digest from the APK actually supplied to the user, not a key.
+previous_signer = "aa088f89aacd9f4e1e9642088ed7fa82dfeedc302c0ecb1e089effc34a365cb9"
+current_signer = re.search(r"Signer #1 certificate SHA-256 digest: ([0-9a-f]{64})", info["signature_verification"])
+assert current_signer, "Missing verified signer fingerprint"
+info["signer_sha256"] = current_signer.group(1)
+info["updates_original_0_1_0_trial"] = current_signer.group(1) == previous_signer
+info["installation_warning"] = "If signer differs, Android cannot update the original trial in place. Uninstalling it erases local playlists, favorites, history and preferences. Save needed source information and the MIUI crash summary first."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

@@ -1,6 +1,6 @@
 # IPTV همراه — Android phone trial
 
-An isolated Kotlin/Compose/Media3 client for the existing catalog. **Experimental, not a production/Play release, and not yet tested on a physical phone.** Intended first test: Poco X3 running Android 13 (API 33). This does not change the Python builder, production playlists, Telegram notifier, Pages, or `main`.
+An isolated Kotlin/Compose/Media3 client for the existing catalog. **Experimental, not a production/Play release.** The original 0.1.0 trial installed on the user's Poco X3 / Android 13 (API 33), but the user reports a crash after about one minute. This diagnostic build still requires physical-device retesting. This does not change the Python builder, production playlists, Telegram notifier, Pages, or `main`.
 
 ## 0.1.1 crash investigation
 
@@ -10,7 +10,7 @@ This diagnostic patch adds a bounded, private, manually copied Java/Kotlin fatal
 
 A separate foreground-resume bug is fixed: `Lifecycle.currentState` can still be `CREATED` inside `onStart`, so checking for `STARTED` there could suppress player recreation. The player now tracks actual start/stop callbacks. This is not, by itself, confirmation of the reported one-minute crash's cause.
 
-The optional manual **Android API33 stability smoke** workflow tests prolonged browsing and actual generated AVC/AAC video over loopback, including rotation, release in background, and recreation on resume. It does not access provider streams or logos, and the synthetic fixture belongs only to the instrumentation APK, never the application APK. An emulator result is not a Poco X3/MIUI result. See the workflow run for whether these tests actually completed; adding a test is not evidence that it passed.
+The **Android API33 stability smoke** workflow (automatic on Android/workflow changes, also manually runnable) tests prolonged browsing and actual generated AVC/AAC video over loopback, including verified rotation, release in background, and a new engine on resume. It also tests reading, copying, reopening, and deleting a synthetic local fatal report. It does not access provider streams or logos, and the synthetic fixture belongs only to the instrumentation APK, never the application APK. An emulator result is not a Poco X3/MIUI result. See the workflow run for whether these tests actually completed; adding a test is not evidence that it passed.
 
 ## Current scope
 
