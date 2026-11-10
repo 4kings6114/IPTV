@@ -46,10 +46,10 @@ jobs:
         with:
           path: ~/.android/debug.keystore
           key: android-trial-signing-v1
-      - name: Set up Android command-line tools explicitly
-        uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
-      - name: Install the selected Android SDK packages
-        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Set up official Android SDK with bounded diagnostics
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/setup_sdk.py
       - name: Unit tests, Android lint, and installable debug APK
         env:
           GH_TOKEN: ${{ github.token }}

@@ -6,12 +6,10 @@ without relying on a separate signed log-blob download service. Never dump env/s
 from __future__ import annotations
 
 import json
-import os
 from pathlib import Path
 import re
 import subprocess
 import sys
-import urllib.request
 import xml.etree.ElementTree as ET
 
 root = Path(__file__).resolve().parents[1]
@@ -41,29 +39,6 @@ summary = re.sub(r"(https?://[^\s?]+)\?[^\s]+", r"\1?[redacted]", summary)
 report = {"exit_status": status, "summary": summary}
 (build / "verification-summary.json").write_text(json.dumps(report, indent=2))
 
-token = os.environ.get("GH_TOKEN")
-if token:
-    payload = {
-        "name": "Android verification details",
-        "head_sha": os.environ["GITHUB_SHA"],
-        "status": "completed",
-        "conclusion": "success" if status == 0 else "failure",
-        "details_url": f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
-        "output": {
-            "title": "Android build/tests passed" if status == 0 else "Android build diagnostics",
-            "summary": "```text\n" + summary.replace("```", "'''") + "\n```",
-        },
-    }
-    request = urllib.request.Request(
-        f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/check-runs",
-        data=json.dumps(payload).encode(),
-        headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            print("Published bounded Android verification details:", json.load(response)["html_url"])
-    except Exception as error:
-        # Diagnostics reporting must not hide the original Gradle exit status.
-        print("::warning::Could not publish verification details:", type(error).__name__)
+from ci_report import publish
+publish("Android verification details", status, summary)
 sys.exit(status)
