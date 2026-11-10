@@ -51,12 +51,16 @@ http://23.237.104.106:8080/USA_CMT/index.m3u8
 http://45.167.1.138:8000/play/a04i
 #EXTINF:-1 tvg-id="DGRadio.au@HD" tvg-logo="https://cdn.dg.church/media/objects/tile-dgradio.jpg" tvg-country="au" tvg-language="en" group-title="موزیک - انگلیسی‌زبان",DG:Radio (1080p)
 https://mdn.dg.church/683c0cb036885-1/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="FolkKlubTV.au@SD" tvg-logo="https://i.imgur.com/Seq7Od7.png" tvg-country="au" tvg-language="mkd",Folk Klub (720p)
+http://tv1.intv.mk:1935/live2/folkklub/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HarmonyGospelMusicTV.us@SD" tvg-logo="https://i.imgur.com/iDiGBE3.png" tvg-country="us" tvg-language="en",Harmony Gospel Music TV (1080p)
 https://tgn.bozztv.com/watc57/watc57-harmony/watc57-harmony/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HMIPROMZNEWS.us@SD" tvg-logo="https://i.imgur.com/gwPaw3v.png" tvg-country="us" tvg-language="fr",HMI PROMZ NEWS (720p)
 https://video1.getstreamhosting.com:1936/8326/8326/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HTV.us@SD" tvg-logo="https://i.imgur.com/NlKFNHS.png" tvg-country="us" tvg-language="es",HTV (720p)
 http://45.171.64.30:6060/play/a012/index.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="INTVAustralia.au@SD" tvg-logo="https://i.imgur.com/1nJl0Pv.png" tvg-country="au" tvg-language="mkd",INTV Australia (720p)
+http://tv1.intv.mk:1935/live/intv/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="LIVExLIVE.us@SD" tvg-logo="https://i.imgur.com/KFzEoed.png" tvg-country="us" tvg-language="en",LiveXLive (1080p)
 https://livestream.liveone.com/lc1/p1.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MetaleitorTV.us@SD" tvg-logo="https://new.opencaster.com/uploads/logos/logo_14_1752798826.png" tvg-country="us" tvg-language="es",Metaleitor TV
@@ -154,12 +158,14 @@ http://stream.mcquack.net/283/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BoomTV.ro@HD" tvg-logo="https://live.radioboom.ro/live-tv/poster.jpg" tvg-country="ro" tvg-language="ron",Boom TV (1080p)
 #EXTVLCOPT:http-referrer=https://tvboom.ro/
 https://tvboom.ro/live-tv/live.m3u8
-#EXTINF:-1 tvg-id="BRIDGE.ru@SD" tvg-logo="https://i.imgur.com/qYObfrG.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE (576p)
-http://178.134.1.158:8081/BRIDGE/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGE.ru@SD" tvg-logo="https://i.imgur.com/qYObfrG.png" tvg-country="ru" tvg-language="rus",BRIDGE (576p)
+http://stream.mcquack.net/318/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEClassic.ru@SD" tvg-logo="https://i.imgur.com/JJTQq81.png" tvg-country="ru" tvg-language="rus",BRIDGE Classic (576p)
 http://stream.mcquack.net/272/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEDeluxe.ru@HD" tvg-logo="https://i.imgur.com/EazL8w7.png" tvg-country="ru" tvg-language="rus",BRIDGE Deluxe HD (576p)
 http://stream.mcquack.net/92/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEHits.ru@SD" tvg-logo="https://i.imgur.com/sIW9oR4.png" tvg-country="ru" tvg-language="rus",BRIDGE Hits (576p)
+http://stream.mcquack.net/320/index.m3u8
 #EXTINF:-1 tvg-id="CadenaElite.es@SD" tvg-logo="https://i.imgur.com/3yeGDTP.png" tvg-country="es" tvg-language="es" group-title="موزیک - اروپا",Cadena Elite (720p)
 https://cloudvideo.servers10.com:8081/8004/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ClassicMusic.ru@SD" tvg-logo="https://i.imgur.com/TpXs1qA.png" tvg-country="ru" tvg-language="rus",Classic Music (1080p)
@@ -170,8 +176,6 @@ https://5929b138b139d.streamlock.net/CompanyTV/smil:CompanyTV.smil/master.m3u8
 https://m1b2.worldcast.tv/dancetelevisionone/2/dancetelevisionone.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DanceHits80.ru@SD" tvg-logo="https://i.imgur.com/uMw3kks.png" tvg-country="ru" tvg-language="en",DanceHits80
 http://dancehits80.denvs.ru:8080/index.m3u8
-#EXTINF:-1 tvg-id="DASDING908.de@SD" tvg-logo="https://i.imgur.com/BmklHs8.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",DASDING 90.8 (720p)
-https://swrdasdingvr-hls.akamaized.net/hls/live/2018681/dasdingvr/master.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DBMTV.fr@SD" tvg-logo="https://i.imgur.com/ab6p2SW.png" tvg-country="fr" tvg-language="fr",DBM TV (1080p)
 https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="DeluxeDance.de@SD" tvg-logo="https://i.imgur.com/Qu7t15Y.png" tvg-country="de" tvg-language="en",Deluxe Dance (1080p)
@@ -375,8 +379,6 @@ http://stream7.xdevel.com/video0s975758-1051/stream/playlist.m3u8
 https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S35394734/Z6U2wGoDYANk/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioCarnavalTV.es@SD" tvg-logo="https://i.imgur.com/cdpbkSo.png" tvg-country="es" tvg-language="es" group-title="موزیک - اروپا",Radio Carnaval TV (720p)
 https://eu1.servers10.com:8081/8116/index.m3u8
-#EXTINF:-1 tvg-name="Radio Colonna Tv" tvg-logo="https://i.imgur.com/EcQvDfq.png" tvg-country="it" group-title="موزیک - اروپا",Radio Colonna Tv Ⓨ
-https://www.youtube.com/radiocolonna/live
 #EXTINF:-1 tvg-name="Radio Delta 1 TV" tvg-logo="https://hostux.pics/images/2026/09/11/07_radio_delta_1_tvc17419f8a8df1da6.png" tvg-country="it" group-title="موزیک - اروپا",Radio Delta 1 TV
 https://stream6.xdevel.com/video0s976486-1271/stream/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Digiesse TV" tvg-logo="https://hostux.pics/images/2026/09/11/08_radio_digiesse_tv62f4f919c0d901ef.png" tvg-country="it" group-title="موزیک - اروپا",Radio Digiesse TV
@@ -506,8 +508,6 @@ https://stream-13.mazana.tv/slagroriginal.m3u8s
 #EXTINF:-1 tvg-id="SlagerTV.hu@SD" tvg-logo="https://i.imgur.com/qDNRgSQ.png" tvg-country="hu" tvg-language="hun" group-title="موزیک - اروپا",Slager TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/test_slager_tv_hungary_1200_atk/playlist.m3u8
-#EXTINF:-1 tvg-id="SmartRadio.ro@SD" tvg-logo="https://www.smartradio.ro/wp-content/themes/smart-radio/img/Logo_SmartRadio.png" tvg-country="ro" tvg-language="ron" group-title="موزیک - اروپا",Smart Radio (576p)
-https://streamw.m.ro/Regie/radio.stream/chunklist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SolMusica.es@SD" tvg-logo="https://i.imgur.com/rbJrmPw.png" tvg-country="es" tvg-language="es",Sol Música (720p)
 https://d2glyu450vvghm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-21u4g5cjglv02/sm.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SONGTVRussia.ru@SD" tvg-logo="https://i.imgur.com/nM7LbmV.png" tvg-country="ru" tvg-language="rus",SONGTV Russia
@@ -520,8 +520,6 @@ http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/playlist.m3u8
 https://live.vrtcdn.be/groupb/live/450aa9d1-7173-47f3-aaaa-9701426f8ddd/live.isml/.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SuperTV.ro@SD" tvg-logo="https://i.imgur.com/pzxUE0O.png" tvg-country="ro" tvg-language="ron",Super TV (576p)
 http://iptv.supertv.ro:8000/play/a001/index.m3u8
-#EXTINF:-1 tvg-id="SWR3VisualRadio.de@SD" tvg-logo="https://i.imgur.com/PxSgxRO.jpg" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",SWR 3 Visual Radio (720p)
-https://swrswr3vr-hls.akamaized.net/hls/live/2018683/swr3vr/master.m3u8
 #EXTINF:-1 tvg-name="Tele Radio Ercolano" tvg-logo="https://i.imgur.com/YPuoy8N.jpg" tvg-country="it" group-title="موزیک - اروپا",Tele Radio Ercolano
 https://rst2.saiuzwebnetwork.it:8081/teleradioercolano/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Tele7music.ro@SD" tvg-logo="https://i.imgur.com/11b5W8u.png" tvg-country="ro" tvg-language="ron",Tele7music (576i)
@@ -736,8 +734,8 @@ https://live-evg5.tv360.bitel.com.pe/bitel/mixtvSRT/playlist.m3u8
 https://v1.tustreaming.cl/sabortv/index.m3u8
 #EXTINF:-1 tvg-id="SensacionCosta.cl@SD" tvg-logo="https://i.imgur.com/oYQoWAB.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Sensacion Costa (1080p)
 https://tvcosta.gleeze.com/memfs/4d48db09-0b1e-4803-8da7-22be388bdd7e.m3u8
-#EXTINF:-1 tvg-id="SoloBailalo.cl@SD" tvg-logo="https://i.imgur.com/SImJE7c.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Solo Bailalo (480p)
-https://5ff3d9babae13.streamlock.net/8016/8016/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SoloBailalo.cl@SD" tvg-logo="https://i.imgur.com/SImJE7c.png" tvg-country="cl" tvg-language="es",SoloBáilalo (480p)
+https://5ff3d9babae13.streamlock.net/8000/8000/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SupermusicaTV.co@SD" tvg-logo="https://i.imgur.com/MiVs42N.jpeg" tvg-country="co" tvg-language="es",Supermúsica TV (720p)
 https://backupmaxmedia.hvmultiplay.com/hls/stream4/supermusica.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TeleangolRadio.cl@SD" tvg-logo="https://i.imgur.com/nhPFGs8.png" tvg-country="cl" tvg-language="es",Teleangol Radio (720p)
@@ -760,8 +758,6 @@ https://5eaccbab48461.streamlock.net:1936/8112/8112/playlist.m3u8
 https://cloudvideo.servers10.com:8081/8016/index.m3u8
 #EXTINF:-1 tvg-id="DreamTurk.tr@SD" tvg-logo="https://i.imgur.com/vJ8VaZi.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",Dream Turk (720p)
 https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8
-#EXTINF:-1 tvg-id="KralPopTV.tr@SD" tvg-logo="https://i.imgur.com/ch365lh.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",Kral Pop TV (720p)
-https://dogus-live.daioncdn.net/kralpoptv/playlist.m3u8
 #EXTINF:-1 tvg-id="MedMuzik.tr@SD" tvg-logo="https://i.imgur.com/gtUFmCD.png" tvg-country="tr" tvg-language="kur" group-title="موزیک - خاورمیانه",Med Muzik (1080p)
 http://54.36.110.140/live3/live3.m3u8
 #EXTINF:-1 tvg-id="Number1Ask.tr@SD" tvg-logo="https://i.imgur.com/slwbux7.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",Number 1 Ask (720p)
@@ -823,8 +819,8 @@ http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 https://live-fi.tvkaista.net/sub/live.m3u8
 #EXTINF:-1 tvg-id="MTVVolgograd.ru@SD" tvg-logo="https://i.imgur.com/pdCAUrP.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - MTV",MTV Volgograd (720p)
 http://hls.volgograd1vtv.cdnvideo.ru/volgograd1vtv/volgograd1vtv.sdp/playlist.m3u8
-#EXTINF:-1 tvg-name="MTV3" tvg-logo="https://i.imgur.com/C5rQbBM.png" tvg-id="MTV3.fi" tvg-chno="3" tvg-country="fi" group-title="موزیک - MTV" tvg-language="fin",MTV3
-https://live-fi.tvkaista.net/mtv3/live.m3u8?src=freetv
+#EXTINF:-1 tvg-id="MTV3.fi@SD" tvg-logo="https://i.imgur.com/C5rQbBM.png" tvg-country="fi" tvg-language="fin" group-title="موزیک - MTV",MTV3 (720p)
+https://live-fi.tvkaista.net/mtv3/live.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvEnglish.us@SD" tvg-logo="https://i.imgur.com/hp1rJjX.png" tvg-country="us" tvg-language="en",SUMtv English (1080p)
 https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvLatino.us@SD" tvg-logo="https://i.imgur.com/ZObFN8Z.png" tvg-country="us" tvg-language="es",SUMtv Latino (1080p)
