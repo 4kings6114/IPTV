@@ -115,3 +115,20 @@ class DiagnosticTests(unittest.TestCase):
             redirect_stdout(io.StringIO()),
         ):
             self.assertEqual(main([]), 0)
+
+
+class DiagnosticSampleTests(unittest.TestCase):
+    def test_verified_alias_identities_are_included_without_conflating_regional_feeds(self):
+        from iptv_builder.diagnostics import _sample
+        from tests.helpers import channel
+
+        items = [
+            channel(tvg_id="Example.us@East", url="https://regional.test/live"),
+            channel(tvg_id="Example.us@HD", url="https://national.test/live"),
+            channel(tvg_id="Other.de", url="https://other.test/live"),
+        ]
+        chosen = _sample(items, 2, ["example.us"])
+        self.assertEqual(len(chosen), 2)
+        self.assertEqual(chosen[0].channel_id, "Example.us@HD")
+        self.assertEqual(len({item.identity for item in chosen}), 2)
+        self.assertEqual(len(_sample(items, 1, ["example.us", "other.de"])), 1)

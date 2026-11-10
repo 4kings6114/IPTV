@@ -8,3 +8,4 @@ htmlcov/
 build.log
 .venv/
 live-validation.log
+full-audit.log

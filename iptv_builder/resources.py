@@ -3,7 +3,7 @@
 import gzip
 import hashlib
 import io
-import time
+import tempfile
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from . import budget
 from .config import Settings, http_url
 from .storage import atomic_write, json_text, read_json
 
@@ -60,6 +61,7 @@ def fetch_resource(
     max_bytes: int,
     cache_hours: float,
     refresh_hours: float = 0,
+    stream_parser: Callable | None = None,
 ) -> Resource:
     if not http_url(url):
         return Resource(url, None, "failed", "Non-HTTP resource URL")
@@ -74,17 +76,42 @@ def fetch_resource(
             request = Request(
                 url, headers={"User-Agent": "playlist-bot/6.0", "Accept-Encoding": "gzip"}
             )
-            with urlopen(request, timeout=settings.source_timeout) as response:
-                body = response.read(max_bytes + 1)
-                encoding = response.headers.get("Content-Encoding", "").lower()
-            if len(body) > max_bytes:
-                raise ResourceValidationError("Resource exceeds byte limit")
-            if body.startswith(b"\x1f\x8b") or encoding == "gzip":
-                with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
-                    body = compressed.read(max_bytes + 1)
+            if stream_parser is not None:
+                # Disk-backed compressed spool, at most 1 MiB in memory. The
+                # streaming XML parser enforces its own expanded-byte limit.
+                with tempfile.SpooledTemporaryFile(max_size=1048576) as spool:
+                    with urlopen(
+                        request, timeout=budget.timeout(settings.source_timeout)
+                    ) as response:
+                        total = 0
+                        while chunk := budget.read_chunk(
+                            response, min(65536, max_bytes - total + 1)
+                        ):
+                            total += len(chunk)
+                            if total > max_bytes:
+                                raise ResourceValidationError("Resource exceeds byte limit")
+                            spool.write(chunk)
+                        encoding = response.headers.get("Content-Encoding", "").lower()
+                    spool.seek(0)
+                    compressed = spool.read(2) == b"\x1f\x8b" or encoding == "gzip"
+                    spool.seek(0)
+                    if compressed:
+                        with gzip.GzipFile(fileobj=spool, mode="rb") as expanded:
+                            value = stream_parser(expanded)
+                    else:
+                        value = stream_parser(spool)
+            else:
+                with urlopen(request, timeout=budget.timeout(settings.source_timeout)) as response:
+                    body = budget.read_response(response, max_bytes + 1)
+                    encoding = response.headers.get("Content-Encoding", "").lower()
                 if len(body) > max_bytes:
-                    raise ResourceValidationError("Expanded resource exceeds byte limit")
-            value = parser(body)
+                    raise ResourceValidationError("Resource exceeds byte limit")
+                if body.startswith(b"\x1f\x8b") or encoding == "gzip":
+                    with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
+                        body = compressed.read(max_bytes + 1)
+                    if len(body) > max_bytes:
+                        raise ResourceValidationError("Expanded resource exceeds byte limit")
+                value = parser(body)
             if not isinstance(value, dict) or value.get("schema_version") != 1:
                 raise ResourceValidationError("Invalid parsed resource")
             atomic_write(
@@ -112,7 +139,7 @@ def fetch_resource(
             error_text = "Resource connection, timeout or decoding failure"
         if not retryable or attempt + 1 == settings.source_attempts:
             break
-        time.sleep(settings.retry_delay * (2**attempt))
+        budget.pause(settings.retry_delay * (2**attempt))
     if cached is not None:
         return Resource(url, cached, "cached", error_text)
     return Resource(url, None, "failed", error_text)

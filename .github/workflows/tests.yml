@@ -4,20 +4,26 @@ on:
   push:
     paths:
       - "**.py"
+      - "iptv_builder/**.js"
       - "config.json"
       - "overrides.json"
       - "epg_aliases.json"
       - "favorites.json"
       - "profiles.json"
+      - "important_channels.json"
+      - "tests/**.cjs"
       - ".github/workflows/**"
   pull_request:
     paths:
       - "**.py"
+      - "iptv_builder/**.js"
       - "config.json"
       - "overrides.json"
       - "epg_aliases.json"
       - "favorites.json"
       - "profiles.json"
+      - "important_channels.json"
+      - "tests/**.cjs"
       - ".github/workflows/**"
   workflow_dispatch:
     inputs:
@@ -26,19 +32,30 @@ on:
         type: boolean
         default: false
 
+      pages_preview:
+        description: Deploy a clearly labelled 12-channel diagnostic Pages preview (never production publication)
+        type: boolean
+        default: false
+      full_audit:
+        description: Full isolated candidate-link audit with production guards (no publication)
+        type: boolean
+        default: false
+
 permissions:
   contents: read
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     strategy:
       matrix:
-        python-version: ["3.10", "3.12", "3.13"]
+        python-version: ["3.10", "3.12", "3.13", "3.14"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile Python modules
@@ -47,14 +64,14 @@ jobs:
         run: python -m unittest discover -s tests -v
 
   live-check:
-    if: github.event_name == 'workflow_dispatch' && inputs.live_check
-    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && (inputs.live_check || inputs.pages_preview)
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
       - name: Ensure optional decoder tools for the requested live samples
@@ -69,9 +86,18 @@ jobs:
           set -euo pipefail
           python -m iptv_builder.diagnostics --limit 12 --playback-samples 2 2>&1 | tee live-validation.log
           git diff --exit-code
+      - name: Stage diagnostic Pages preview only
+        if: inputs.pages_preview
+        run: python -m iptv_builder.site --root .cache/live-validation/output --runtime .cache/live-validation/second_run.json --output .cache/pages-site --preview
+      - name: Upload diagnostic Pages artifact
+        if: inputs.pages_preview
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: .cache/pages-site
+          retention-days: 1
       - name: Upload isolated reports (no production publication or Telegram)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: live-validation-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
@@ -80,12 +106,89 @@ jobs:
             .cache/live-validation/first_run.json
             .cache/live-validation/second_run.json
             .cache/live-validation/dry_run.json
-            .cache/live-validation/output/*.m3u
             .cache/live-validation/output/index.html
             .cache/live-validation/output/build_report.json
             .cache/live-validation/output/build_stats.txt
-            .cache/live-validation/output/.cache/iptv/link-health.json
             .cache/live-validation/output/.cache/iptv/last_run.json
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 14
+
+  full-audit:
+    if: github.event_name == 'workflow_dispatch' && inputs.full_audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 115
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Full dry-run audit (never replace production outputs)
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=30s 105m python -u -m iptv_builder.audit 2>&1 | tee full-audit.log
+          git diff --exit-code
+      - name: Upload aggregate audit evidence only
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: full-audit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            full-audit.log
+            .cache/full-audit/audit_summary.json
+          include-hidden-files: true
+          retention-days: 14
+
+  deploy-preview:
+    if: github.event_name == 'workflow_dispatch' && inputs.pages_preview
+    needs: live-check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+      actions: read
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check one-time Pages setup
+        id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if mode=$(gh api "repos/$REPOSITORY/pages" --jq '.build_type' 2>/dev/null) && [ "$mode" = workflow ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Pages is not enabled for Actions or is inaccessible. The owner must select Settings > Pages > Source: GitHub Actions. No site was deployed."
+          fi
+      - name: Deploy labelled diagnostic preview
+        id: deployment
+        if: steps.pages.outputs.ready == 'true'
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  dashboard-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+      - name: Install test-only DOM implementation (no runtime dependency)
+        run: npm install --prefix .cache/ui-test --no-audit --no-fund jsdom@26.1.0
+      - name: Verify static dashboard and local editor behaviour
+        run: node tests/dashboard_browser.cjs

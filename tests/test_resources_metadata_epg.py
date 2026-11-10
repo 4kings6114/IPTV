@@ -371,3 +371,48 @@ class EPGTests(unittest.TestCase):
         result = validate_epg(settings(), [channel()], self.root, self.root)
         self.assertFalse(result[2]["enabled"])
         opened.assert_not_called()
+
+
+class StreamingXMLTVTests(unittest.TestCase):
+    def test_streamed_gzip_can_exceed_old_expansion_limit_but_not_new_expanded_cap(self):
+        import io
+
+        from iptv_builder.epg import parse_xmltv_stream
+
+        raw = xmltv().replace(b"</tv>", b"<!--" + b"padding " * 10000 + b"--></tv>")
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch("iptv_builder.resources.urlopen") as opened,
+        ):
+            opened.return_value = Response(gzip.compress(raw))
+            result = fetch_resource(
+                "https://guide.test/big.gz",
+                "stream",
+                settings(source_attempts=1),
+                Path(tmp),
+                parse_xmltv,
+                4096,
+                24,
+                stream_parser=lambda stream: parse_xmltv_stream(stream, 100000),
+            )
+            self.assertEqual(result.status, "fresh")
+            self.assertEqual(result.value["channels"]["guide.one"]["count"], 1)
+            self.assertEqual(result.value["channels"]["guide.one"]["names"], ["Example"])
+            with self.assertRaisesRegex(ValueError, "Expanded"):
+                parse_xmltv_stream(io.BytesIO(raw), 500)
+
+    def test_split_declaration_and_invalid_utf8_are_rejected_before_parsing(self):
+        import io
+
+        from iptv_builder.epg import parse_xmltv_stream
+
+        class Chunks(io.BytesIO):
+            def read(self, size=-1):
+                return super().read(min(3, size))
+
+        for body in (
+            b'<!DOCTYPE tv [<!ENTITY x "x">]><tv><channel id="x"/></tv>',
+            b'<tv><channel id="x"/>\xff</tv>',
+        ):
+            with self.assertRaises(ValueError):
+                parse_xmltv_stream(Chunks(body), 2048)

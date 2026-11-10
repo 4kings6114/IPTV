@@ -1,7 +1,6 @@
 """Source downloads with validation and expiring last-success caches."""
 
 import hashlib
-import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -10,6 +9,7 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from . import budget
 from .config import Settings, Source
 from .m3u import valid_source
 from .storage import atomic_write, json_text, read_json
@@ -37,8 +37,8 @@ def fetch_source(source: Source, settings: Settings, cache_dir: Path) -> SourceR
             request = Request(
                 source.url, headers={"User-Agent": "playlist-bot/5.0", "Accept": "*/*"}
             )
-            with urlopen(request, timeout=settings.source_timeout) as response:
-                data = response.read(MAX_SOURCE_BYTES + 1)
+            with urlopen(request, timeout=budget.timeout(settings.source_timeout)) as response:
+                data = budget.read_response(response, MAX_SOURCE_BYTES + 1)
             if len(data) > MAX_SOURCE_BYTES:
                 raise ValueError("Source exceeds 16 MiB limit")
             text = data.decode("utf-8-sig", "replace")
@@ -65,7 +65,7 @@ def fetch_source(source: Source, settings: Settings, cache_dir: Path) -> SourceR
             error_text = "Connection, timeout or cache I/O failure"
         if not retryable or attempt + 1 == settings.source_attempts:
             break
-        time.sleep(settings.retry_delay * (2**attempt))
+        budget.pause(settings.retry_delay * (2**attempt))
 
     cached = read_json(cache_path(cache_dir, source.url))
     try:

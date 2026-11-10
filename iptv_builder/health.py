@@ -14,8 +14,17 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
+from . import budget
 from .config import Settings, http_url
 from .m3u import Channel
+
+
+@dataclass(frozen=True)
+class MediaVariant:
+    url: str
+    resolution: int = 0
+    bitrate: int = 0
+    bitrate_source: str = ""
 
 
 @dataclass(frozen=True)
@@ -25,6 +34,9 @@ class ProbeResult:
     resolution: int = 0
     cached: bool = False
     checked_at: str = ""
+    bitrate: int = 0
+    bitrate_source: str = ""
+    variants: tuple[MediaVariant, ...] = ()
 
     @property
     def healthy(self) -> bool:
@@ -67,7 +79,7 @@ class HostLimiter:
                     if wait <= 0:
                         state[1] = time.monotonic() + self.options.interval
                         break
-                time.sleep(wait)
+                budget.pause(wait)
             yield
 
     def defer(self, url: str, seconds: float) -> None:
@@ -106,8 +118,8 @@ def _open_read(url: str, headers: dict, settings: Settings, limiter: HostLimiter
         try:
             request = Request(url, headers=headers, method="GET")
             with limiter.request(url):
-                with urlopen(request, timeout=settings.timeout) as response:
-                    data = response.read(settings.probe_bytes + 1)
+                with urlopen(request, timeout=budget.timeout(settings.timeout)) as response:
+                    data = budget.read_response(response, settings.probe_bytes + 1)
                     return (
                         data[: settings.probe_bytes],
                         response.headers.get("Content-Type", ""),
@@ -200,6 +212,19 @@ def _binary_stream(data: bytes, content_type: str, segment: bool = False) -> boo
     return False
 
 
+def child_request_headers(headers: dict, parent: str, child: str) -> dict:
+    if (urlsplit(parent).scheme, urlsplit(parent).netloc.casefold()) == (
+        urlsplit(child).scheme,
+        urlsplit(child).netloc.casefold(),
+    ):
+        return headers
+    return {
+        key: value
+        for key, value in headers.items()
+        if key.casefold() not in {"authorization", "cookie", "proxy-authorization"}
+    }
+
+
 def _inspect(
     url: str,
     headers: dict,
@@ -211,6 +236,7 @@ def _inspect(
     if url in seen or len(seen) >= 4:
         raise ProbeFailure("invalid", "Cyclic or excessively nested HLS playlist")
     data, content_type, final_url, truncated = _fetch(url, headers, settings, limiter)
+    headers = child_request_headers(headers, url, final_url)
     stripped = data.lstrip(b"\xef\xbb\xbf \r\n\t")
     if not segment and stripped.startswith(b"#EXTM3U"):
         if truncated:
@@ -221,28 +247,59 @@ def _inspect(
             if line.strip()
         ]
         variants = []
-        height = 0
+        height, bandwidth, bandwidth_source = 0, 0, ""
         awaiting_variant = False
         for line in lines:
             if line.startswith("#EXT-X-STREAM-INF:"):
                 awaiting_variant = True
-                match = re.search(r"RESOLUTION=\d+x(\d+)", line, re.I)
-                height = int(match[1]) if match else 0
+                match = re.search(
+                    r"(?:^|,)RESOLUTION=\d{1,6}x(\d{1,5})(?:,|$)", line.split(":", 1)[1], re.I
+                )
+                height = int(match[1]) if match and int(match[1]) <= 16384 else 0
+                peak = re.search(r"(?:^|,)BANDWIDTH=(\d{1,10})(?:,|$)", line.split(":", 1)[1], re.I)
+                average = re.search(
+                    r"(?:^|,)AVERAGE-BANDWIDTH=(\d{1,10})(?:,|$)", line.split(":", 1)[1], re.I
+                )
+                bandwidth = int((peak or average)[1]) if peak or average else 0
+                bandwidth = bandwidth if 0 < bandwidth <= 1000000000 else 0
+                bandwidth_source = ("hls_peak" if peak else "hls_average") if bandwidth else ""
             elif not line.startswith("#") and awaiting_variant:
-                variants.append((height, urljoin(final_url, line)))
+                variants.append(
+                    MediaVariant(urljoin(final_url, line), height, bandwidth, bandwidth_source)
+                )
                 awaiting_variant = False
         if variants:
-            last_error = None
-            for height, child in sorted(variants, reverse=True)[:3]:
+            last_error, verified = None, []
+            ordered = sorted(
+                variants, key=lambda item: (item.resolution, item.bitrate, item.url), reverse=True
+            )
+            # Highest, middle and lowest: bounded real child GETs, not merely
+            # advertised URLs. A profile can only export a verified child.
+            choices = list(dict.fromkeys([ordered[0], ordered[len(ordered) // 2], ordered[-1]]))
+            chosen_height = 0
+            for variant in choices:
+                child_headers = child_request_headers(headers, final_url, variant.url)
                 try:
-                    result = _inspect(child, headers, settings, seen | {url}, limiter=limiter)
-                    return ProbeResult(
-                        "healthy",
-                        "Valid HLS master and media playlist",
-                        result.resolution or height,
+                    result = _inspect(
+                        variant.url, child_headers, settings, seen | {url}, limiter=limiter
                     )
+                    chosen_height = chosen_height or result.resolution or variant.resolution
+                    if result.variants:
+                        verified.extend(result.variants)
+                    else:
+                        verified.append(variant)
                 except ProbeFailure as error:
                     last_error = error
+            if verified:
+                known = all(item.bitrate for item in variants)
+                return ProbeResult(
+                    "healthy",
+                    "Valid HLS master and sampled media playlists",
+                    chosen_height,
+                    bitrate=max(item.bitrate for item in variants) if known else 0,
+                    bitrate_source="hls_master_max" if known else "",
+                    variants=tuple(verified[:9]),
+                )
             if last_error:
                 raise last_error
         segments = [urljoin(final_url, line) for line in lines if not line.startswith("#")]
@@ -251,7 +308,14 @@ def _inspect(
         if any(not http_url(child) for child in segments):
             raise ProbeFailure("invalid", "Non-HTTP HLS segment URL")
         if settings.check_segments:
-            _inspect(segments[0], headers, settings, seen | {url}, segment=True, limiter=limiter)
+            _inspect(
+                segments[0],
+                child_request_headers(headers, final_url, segments[0]),
+                settings,
+                seen | {url},
+                segment=True,
+                limiter=limiter,
+            )
             return ProbeResult("healthy", "Valid HLS playlist and sampled segment")
         return ProbeResult("healthy", "Valid HLS media playlist (segments not sampled)")
     if not segment and (b"<MPD" in stripped[:500] or "dash+xml" in content_type.lower()):
@@ -283,7 +347,7 @@ def probe(channel: Channel, settings: Settings, limiter: HostLimiter | None = No
         except ProbeFailure as error:
             if not error.retryable or attempt + 1 == settings.link_attempts:
                 return error.result
-            time.sleep(max(error.retry_after, settings.retry_delay * (2**attempt)))
+            budget.pause(max(error.retry_after, settings.retry_delay * (2**attempt)))
     raise AssertionError("link_attempts must be positive")
 
 
@@ -303,7 +367,39 @@ def _cached_result(old: dict, settings: Settings, now: datetime) -> ProbeResult 
         if type(resolution) is not int or resolution < 0 or not isinstance(old.get("reason"), str):
             return None
         if 0 <= age < hours * 3600:
-            return ProbeResult("healthy", old["reason"], resolution, True, old["checked_at"])
+            variants = []
+            for item in (
+                old.get("variants", [])[:9] if isinstance(old.get("variants"), list) else []
+            ):
+                if (
+                    isinstance(item, dict)
+                    and set(item) == {"url", "resolution", "bitrate", "bitrate_source"}
+                    and http_url(item.get("url", ""))
+                    and all(
+                        type(item.get(key)) is int and 0 <= item[key] <= 1000000000
+                        for key in ("resolution", "bitrate")
+                    )
+                    and item["bitrate_source"] in {"", "hls_peak", "hls_average"}
+                ):
+                    variants.append(MediaVariant(**item))
+            bitrate = old.get("bitrate", 0)
+            source = old.get("bitrate_source", "")
+            if (
+                type(bitrate) is not int
+                or not 0 <= bitrate <= 1000000000
+                or source not in {"", "hls_peak", "hls_average", "hls_master_max", "ffprobe"}
+            ):
+                return None
+            return ProbeResult(
+                "healthy",
+                old["reason"],
+                resolution,
+                True,
+                old["checked_at"],
+                bitrate,
+                source,
+                tuple(variants),
+            )
     except (KeyError, TypeError, ValueError, OverflowError):
         pass
     return None

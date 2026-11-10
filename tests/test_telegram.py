@@ -60,7 +60,7 @@ class TelegramTests(unittest.TestCase):
             "TG_CHAT": "chat",
             "GITHUB_REPOSITORY": "owner/repo",
             "GITHUB_RUN_ID": "1",
-            "BUILD_JOB_STATUS": "success",
+            "BUILD_JOB_STATUS": "failure",
         }
         with (
             patch.dict("os.environ", env, clear=True),
@@ -74,7 +74,12 @@ class TelegramTests(unittest.TestCase):
             ):
                 self.assertEqual(main(), 1)
                 self.assertNotIn(env["TG_TOKEN"], output.getvalue())
-        with patch.dict("os.environ", env, clear=True), patch("iptv_builder.telegram.send_message"):
+        with (
+            patch.dict("os.environ", env, clear=True),
+            patch("iptv_builder.telegram.send_message"),
+            patch("iptv_builder.telegram.read_json", return_value={}),
+            patch("iptv_builder.telegram.atomic_write"),
+        ):
             self.assertEqual(main(), 0)
 
     @patch("iptv_builder.telegram.urlopen")
