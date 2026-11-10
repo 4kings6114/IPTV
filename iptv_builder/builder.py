@@ -1,15 +1,27 @@
 """Build orchestration: collect -> probe alternatives -> guard -> publish."""
 
+import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
 from .catalog import ORDER, SPLIT
+from .changes import channel_changes, remember_channels
 from .classification import load_excludes, load_overrides, prepare_channels
 from .config import Settings, Source
+from .dashboard import render_dashboard
+from .epg import validate_epg
 from .health import ProbeResult, check_candidates
 from .m3u import Channel, parse, render_m3u, res_of, valid_source, validate_output
+from .metadata import load_metadata
+from .personalization import (
+    channel_language,
+    load_personalization,
+    personalized_outputs,
+    source_rank,
+)
+from .playback import sample_channels
 from .sources import fetch_sources
 from .storage import archive_playlist, atomic_write, build_lock, json_text, publish_files, read_json
 
@@ -30,18 +42,24 @@ def update_history(results: dict[str, ProbeResult], previous: dict, now: str) ->
         old = previous.get(key, {})
         if not isinstance(old, dict):
             old = {}
-        if result.status == "unchecked":
+        if result.status == "unchecked" or result.cached:
             if old:
                 history[key] = old
             continue
         failures = old.get("consecutive_failures", 0)
         if type(failures) is not int or failures < 0:
             failures = 0
+        successes = old.get("consecutive_successes", 0)
+        if type(successes) is not int or successes < 0:
+            successes = 0
+        checked_at = result.checked_at or now
         history[key] = {
             "status": result.status,
             "reason": result.reason,
-            "checked_at": now,
-            "last_success": now if result.healthy else old.get("last_success"),
+            "checked_at": checked_at,
+            "last_success": checked_at if result.healthy else old.get("last_success"),
+            "resolution": result.resolution,
+            "consecutive_successes": successes + 1 if result.healthy else 0,
             # Attempts within one build count as one failed observation.
             "consecutive_failures": 0 if result.healthy else failures + 1,
         }
@@ -64,7 +82,13 @@ def select_channels(
 
     def rank(channel: Channel):
         resolution = results[channel.probe_key].resolution or res_of(channel.name)
-        return (-resolution, not channel.manual, channel.source == "__previous__", channel.url)
+        return (
+            source_rank(channel, settings.preferred_sources),
+            -resolution,
+            not channel.manual,
+            channel.source == "__previous__",
+            channel.url,
+        )
 
     for identity in sorted(groups):
         candidates = sorted(groups[identity], key=rank)
@@ -102,8 +126,9 @@ def select_channels(
             ),
         )
         chosen = chosen.with_group(metadata.group)
-        if metadata.attrs.get("tvg-language"):
-            chosen = chosen.with_attribute("tvg-language", metadata.attrs["tvg-language"])
+        for key in ("tvg-language", "tvg-country", "tvg-logo"):
+            if metadata.attrs.get(key):
+                chosen = chosen.with_attribute(key, metadata.attrs[key])
         selected.append(chosen)
         seen_urls.add(chosen.url)
         retained += int(unverified)
@@ -169,6 +194,8 @@ def _stats_text(report: dict) -> str:
     lines = [
         f"OK: {report['channels']} channels",
         f"Added: {report['added']} | Removed: {report['removed']} | Unavailable links: {len(report['unavailable_links'])}",
+        f"URL changes: {report.get('changed_urls', 0)} | Quality up/down: {report.get('upgraded', 0)}/{report.get('downgraded', 0)} | Recovered: {report.get('recovered', 0)}",
+        f"Checked now: {report['checked_links']} | Cached successes: {report.get('cached_links', 0)}",
         f"Retained unverified: {report['retained_unverified']}",
     ]
     known = [group for group in ORDER if group in report["groups"]]
@@ -182,6 +209,59 @@ def _read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
+def _catalog(channels, results, epg_status, now):
+    return [
+        {
+            "identity": channel.identity,
+            "name": channel.name,
+            "url": channel.url,
+            "source": channel.source,
+            "group": channel.group,
+            "country": channel.attrs.get("tvg-country", ""),
+            "language": channel_language(channel),
+            "logo": channel.attrs.get("tvg-logo", ""),
+            "resolution": results[channel.probe_key].resolution or res_of(channel.name),
+            "status": results[channel.probe_key].status,
+            "reason": results[channel.probe_key].reason,
+            "cached": results[channel.probe_key].cached,
+            "checked_at": (results[channel.probe_key].checked_at or now)
+            if results[channel.probe_key].status != "unchecked"
+            else None,
+            "epg": epg_status.get(channel.identity, "unchecked"),
+        }
+        for channel in channels
+    ]
+
+
+def _stable_report(report: dict) -> dict:
+    # Publication timestamps, per-run observation times and deltas must not
+    # force daily Git commits when the underlying result is identical.
+    excluded = {
+        "generated_at",
+        "added",
+        "removed",
+        "changed_urls",
+        "upgraded",
+        "downgraded",
+        "recovered",
+        "returned_unverified",
+        "changes",
+    }
+    stable = {key: value for key, value in report.items() if key not in excluded}
+    stable["channel_catalog"] = [
+        {key: value for key, value in item.items() if key != "checked_at"}
+        for item in report.get("channel_catalog", [])
+    ]
+    if isinstance(report.get("playback"), dict):
+        stable["playback"] = {**report["playback"]}
+        if "samples" in report["playback"]:
+            stable["playback"]["samples"] = [
+                {key: value for key, value in item.items() if key != "checked_at"}
+                for item in report["playback"]["samples"]
+            ]
+    return stable
+
+
 def _build(
     settings: Settings,
     output_dir: Path,
@@ -192,9 +272,30 @@ def _build(
 ) -> dict:
     overrides = load_overrides(input_dir / settings.overrides_file)
     excludes = load_excludes(input_dir / settings.exclude_file)
+    favorites, profiles = load_personalization(settings, input_dir)
     old_text = _read_text(output_dir / "playlist.m3u")
     old_channels = parse(old_text)
-    old_urls = {channel.url for channel in old_channels}
+    old_report = read_json(output_dir / "build_report.json")
+    state = read_json(cache_dir / "link-health.json")
+    previous_history = state.get("links", {})
+    previous_channels = state.get("channels", {})
+    if not isinstance(previous_history, dict):
+        previous_history = {}
+    if not isinstance(previous_channels, dict):
+        previous_channels = {}
+    # Seed identities from legacy published M3Us as well as the new cache.
+    # Otherwise a channel removed on the very first v2 build would later be
+    # mislabeled new when it returned, despite having been published before.
+    for channel in old_channels:
+        prior_link = previous_history.get(channel.probe_key, {})
+        old_status = (
+            prior_link.get("status", "unchecked") if isinstance(prior_link, dict) else "unchecked"
+        )
+        previous_channels[channel.identity] = {
+            "last_seen": runtime["generated_at"],
+            "status": old_status,
+            "probe_key": channel.probe_key,
+        }
     sources = fetch_sources(settings, cache_dir)
     runtime["sources"] = [
         dict(url=item.source.url, status=item.status, error=item.error) for item in sources
@@ -210,10 +311,15 @@ def _build(
             f"Only {available}/{len(sources)} sources available (including valid caches). Previous output preserved."
         )
 
+    reference = load_metadata(settings, cache_dir, input_dir)
     channels = []
     for item in sources:
         if item.text:
-            channels.extend(prepare_channels(item.text, item.source, settings, overrides, excludes))
+            channels.extend(
+                prepare_channels(
+                    item.text, item.source, settings, overrides, excludes, reference=reference
+                )
+            )
     manual_path = input_dir / settings.manual_file
     if manual_path.exists():
         manual = prepare_channels(
@@ -223,71 +329,133 @@ def _build(
             overrides,
             excludes,
             manual=True,
+            reference=reference,
         )
         print(f"Manual: {len(manual)} candidates")
         channels.extend(manual)
-
-    # Reuse previously published alternatives only for channels still present
-    # in the current (or cached) inputs, and reapply excludes/disabled policy.
+    metadata_report = reference.summary(channels)
+    runtime["metadata"] = metadata_report
     current_ids = {channel.identity for channel in channels}
     previous = prepare_channels(
-        old_text, Source("__previous__", allow_unknown_country=True), settings, overrides, excludes
+        old_text,
+        Source("__previous__", allow_unknown_country=True),
+        settings,
+        overrides,
+        excludes,
+        reference=reference,
     )
     channels.extend(channel for channel in previous if channel.identity in current_ids)
     if not channels:
         raise BuildError("No eligible channel candidates. Previous output preserved.")
-    results = check_candidates(channels, settings)
-    state = read_json(cache_dir / "link-health.json")
-    previous_history = state.get("links", {})
-    if not isinstance(previous_history, dict):
-        previous_history = {}
+    channels, epg_urls, epg_report, epg_status = validate_epg(
+        settings, channels, cache_dir, input_dir
+    )
+    runtime["epg"] = epg_report
+    results = check_candidates(channels, settings, previous_history)
     history = update_history(results, previous_history, runtime["generated_at"])
     selection = select_channels(channels, results, history, previous, settings)
     final = selection.channels
     failures = _unavailable(channels, results, history)
-    new_urls = {channel.url for channel in final}
-    semantic = {
-        "schema_version": 1,
+    changes = channel_changes(old_channels, final, results, previous_history, previous_channels)
+    if epg_report["enabled"]:
+        selected_ids = {channel.identity for channel in final}
+        epg_report["missing_channels"] = list(
+            {
+                item["identity"]: item
+                for item in epg_report["missing_channels"]
+                if item["identity"] in selected_ids
+            }.values()
+        )
+        epg_report["missing"] = len(epg_report["missing_channels"])
+        epg_report["covered"] = sum(
+            epg_status.get(channel.identity) == "covered" for channel in final
+        )
+        epg_report["rewritten_ids"] = sum(
+            bool(channel.attrs.get("x-original-tvg-id")) for channel in final
+        )
+    report = {
+        "schema_version": 2,
+        "generated_at": runtime["generated_at"],
         "channels": len(final),
         "groups": dict(Counter(channel.group for channel in final)),
-        "checked_links": sum(result.status != "unchecked" for result in results.values()),
+        "checked_links": sum(
+            result.status != "unchecked" and not result.cached for result in results.values()
+        ),
+        "cached_links": sum(result.cached for result in results.values()),
         "health": dict(sorted(Counter(result.status for result in results.values()).items())),
         "retained_unverified": selection.retained_unverified,
         "sources": runtime["sources"],
         "unavailable_links": failures,
-    }
-    report = {
-        **semantic,
-        "generated_at": runtime["generated_at"],
-        "added": len(new_urls - old_urls),
-        "removed": len(old_urls - new_urls),
+        "changes": changes,
+        "added": len(changes["added_channels"]),
+        "removed": len(changes["removed_channels"]),
+        "changed_urls": len(changes["url_changes"]),
+        "recovered": len(changes["recovered_channels"]),
+        "returned_unverified": len(changes["returned_unverified_channels"]),
+        "upgraded": sum(item["direction"] == "up" for item in changes["quality_changes"]),
+        "downgraded": sum(item["direction"] == "down" for item in changes["quality_changes"]),
+        "metadata": metadata_report,
+        "epg": epg_report,
+        "channel_catalog": _catalog(final, results, epg_status, runtime["generated_at"]),
     }
     runtime.update(report)
     guard_output(settings, len(old_channels), len(final))
-
-    outputs = {"playlist.m3u": render_m3u(final, settings.epg_urls)}
+    playback_state = read_json(cache_dir / "playback.json")
+    playback, next_playback_state = sample_channels(final, settings, playback_state)
+    report["playback"] = playback
+    personal_outputs, personal_report = personalized_outputs(
+        settings,
+        channels,
+        final,
+        results,
+        history,
+        previous,
+        favorites,
+        profiles,
+        epg_urls,
+        select_channels,
+    )
+    old_personalization = old_report.get("personalization", {})
+    old_managed = (
+        old_personalization.get("managed_files", [])
+        if isinstance(old_personalization, dict)
+        else []
+    )
+    if not isinstance(old_managed, list):
+        old_managed = []
+    managed = {
+        name
+        for name in old_managed
+        if isinstance(name, str) and re.fullmatch(r"profile-[a-z0-9][a-z0-9-]{0,39}\.m3u", name)
+    }
+    managed.update(name for name in personal_outputs if name.startswith("profile-"))
+    personal_report["managed_files"] = sorted(managed)
+    for name in managed:
+        personal_outputs.setdefault(name, render_m3u([], epg_urls))
+    report["personalization"] = personal_report
+    runtime.update(report)
+    outputs = {"playlist.m3u": render_m3u(final, epg_urls), **personal_outputs}
     validate_output(outputs["playlist.m3u"], len(final))
     for filename, groups in SPLIT.items():
         subset = [channel for channel in final if channel.group in groups]
-        outputs[filename] = render_m3u(subset, settings.epg_urls)
+        outputs[filename] = render_m3u(subset, epg_urls)
         validate_output(outputs[filename], len(subset))
     outputs["dead_links.txt"] = _dead_text(failures)
-    old_report = read_json(output_dir / "build_report.json")
-    old_semantic = {
-        key: value
-        for key, value in old_report.items()
-        if key not in {"generated_at", "added", "removed"}
-    }
     content_changed = any(_read_text(output_dir / name) != text for name, text in outputs.items())
-    if content_changed or old_semantic != semantic or not (output_dir / "build_stats.txt").exists():
+    if (
+        content_changed
+        or _stable_report(old_report) != _stable_report(report)
+        or not (output_dir / "build_stats.txt").exists()
+        or settings.dashboard
+        and not (output_dir / "index.html").exists()
+    ):
         outputs["build_report.json"] = json_text(report)
         outputs["build_stats.txt"] = _stats_text(report)
-    # Otherwise keep the last published summary, including its publication
-    # time/delta. Current per-run numbers live in ignored last_run.json.
+        if settings.dashboard:
+            outputs["index.html"] = render_dashboard(report)
     main_changed = outputs["playlist.m3u"] != old_text
     if settings.save_backup and main_changed and valid_source(old_text):
         outputs["playlist-backup.m3u"] = old_text
-
     if dry_run:
         runtime["status"] = "dry_run"
         runtime["changed_files"] = [
@@ -300,8 +468,19 @@ def _build(
         runtime["changed_files"] = changed
         runtime["status"] = "published" if changed else "unchanged"
         atomic_write(
-            cache_dir / "link-health.json", json_text({"schema_version": 1, "links": history})
+            cache_dir / "link-health.json",
+            json_text(
+                {
+                    "schema_version": 2,
+                    "links": history,
+                    "channels": remember_channels(
+                        previous_channels, final, results, runtime["generated_at"]
+                    ),
+                }
+            ),
         )
+        if settings.playback.enabled:
+            atomic_write(cache_dir / "playback.json", json_text(next_playback_state))
     print(_stats_text(report), end="")
     print(f"Build status: {runtime['status']}")
     return runtime

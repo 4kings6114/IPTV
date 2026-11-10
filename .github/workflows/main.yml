@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
+    inputs:
+      force_check:
+        description: Ignore cached healthy link results
+        type: boolean
+        default: false
+      playback_checks:
+        description: Enable bounded ffmpeg playback samples
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -50,9 +59,15 @@ jobs:
 
       - name: Build playlist
         id: build
+        env:
+          FORCE_CHECK: ${{ inputs.force_check }}
+          PLAYBACK_CHECKS: ${{ inputs.playback_checks }}
         run: |
           set -euo pipefail
-          python build_playlist.py 2>&1 | tee build.log
+          args=()
+          if [[ "$FORCE_CHECK" == 'true' ]]; then args+=(--force-check); fi
+          if [[ "$PLAYBACK_CHECKS" == 'true' ]]; then args+=(--playback-checks); fi
+          python build_playlist.py "${args[@]}" 2>&1 | tee build.log
 
       - name: Commit and push generated files only
         id: commit
@@ -60,8 +75,22 @@ jobs:
           set -euo pipefail
           git config user.name "playlist-bot"
           git config user.email "playlist-bot@users.noreply.github.com"
-          git add -- playlist.m3u playlist-backup.m3u build_stats.txt build_report.json \
-                     persian.m3u news.m3u music.m3u sports.m3u movies.m3u kids.m3u dead_links.txt
+          python - <<'PY'
+          import json
+          import re
+          import subprocess
+          from pathlib import Path
+
+          names = ["playlist.m3u", "playlist-backup.m3u", "build_stats.txt", "build_report.json",
+                   "persian.m3u", "news.m3u", "music.m3u", "sports.m3u", "movies.m3u", "kids.m3u",
+                   "dead_links.txt", "favorites.m3u", "index.html"]
+          report = json.loads(Path("build_report.json").read_text(encoding="utf-8"))
+          for name in report["personalization"]["managed_files"]:
+              if not re.fullmatch(r"profile-[a-z0-9][a-z0-9-]{0,39}\.m3u", name):
+                  raise ValueError("Unsafe generated profile filename")
+              names.append(name)
+          subprocess.run(["git", "add", "--", *[name for name in names if Path(name).is_file()]], check=True)
+          PY
 
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -97,6 +126,9 @@ jobs:
           path: |
             build.log
             .cache/iptv/last_run.json
+            .cache/iptv/link-health.json
+            build_report.json
+            index.html
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 14

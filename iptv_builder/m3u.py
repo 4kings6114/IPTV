@@ -105,8 +105,13 @@ class Channel:
         return self.attrs.get("group-title", "")
 
     @property
+    def channel_id(self) -> str:
+        # A guide-specific ID must not change the channel's stable identity.
+        return self.attrs.get("x-original-tvg-id") or self.attrs.get("tvg-id", "")
+
+    @property
     def identity(self) -> str:
-        tvg_id = self.attrs.get("tvg-id", "")
+        tvg_id = self.channel_id
         if tvg_id:
             return "id:" + stable_id(tvg_id)
         code = country_code(self.attrs.get("tvg-country", ""))
