@@ -24,7 +24,6 @@ import java.util.concurrent.atomic.AtomicReference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import okhttp3.Call
 import okhttp3.Connection
@@ -56,12 +55,15 @@ class PlaybackTlsTeardownTest {
     private val serverCertificates = HandshakeCertificates.Builder().heldCertificate(certificate).build()
     private val testTrust = HandshakeCertificates.Builder().addTrustedCertificate(certificate.certificate).build()
 
-    @Before fun prepare() = runBlocking {
-        assertTrue("Supported regression images are Android API 31 and 33", Build.VERSION.SDK_INT in listOf(31, 33))
-        app.crashReports.clear()
-        withTimeout(20_000) {
-            app.settings.showLogos(false)
-            app.settings.state.first { it.loaded && !it.showLogos }
+    @Before fun prepare() {
+        // A block body guarantees JVM void, as required by JUnit4; Flow.first returns Settings.
+        runBlocking {
+            assertTrue("Supported regression images are Android API 31 and 33", Build.VERSION.SDK_INT in listOf(31, 33))
+            app.crashReports.clear()
+            withTimeout(20_000) {
+                app.settings.showLogos(false)
+                app.settings.state.first { it.loaded && !it.showLogos }
+            }
         }
     }
 
