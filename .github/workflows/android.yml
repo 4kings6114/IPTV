@@ -6,12 +6,6 @@ on:
       - "android/**"
       - ".github/workflows/android.yml"
   workflow_dispatch:
-    inputs:
-      workspace_delivery_url:
-        description: Optional one-time Arena workspace APK upload URL (leave empty for artifacts only)
-        type: string
-        required: false
-        default: ""
 
 permissions:
   contents: read
@@ -95,12 +89,6 @@ jobs:
             android/app/build/deliverables/*.sha256
           if-no-files-found: error
           retention-days: 30
-      - name: Optional one-time handoff of verified trial APK to Arena workspace
-        if: github.event_name == 'workflow_dispatch' && inputs.workspace_delivery_url != ''
-        continue-on-error: true
-        env:
-          WORKSPACE_DELIVERY_URL: ${{ inputs.workspace_delivery_url }}
-        run: python3 tools/upload_workspace.py
       - name: Upload test, lint, schema, and signature evidence
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
