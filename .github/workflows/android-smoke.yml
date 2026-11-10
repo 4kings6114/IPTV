@@ -1,4 +1,4 @@
-name: Android API33 stability smoke
+name: Android API31 and API33 stability
 
 on:
   push:
@@ -17,6 +17,11 @@ concurrency:
 
 jobs:
   runtime:
+    name: API ${{ matrix.api-level }} runtime
+    strategy:
+      fail-fast: false
+      matrix:
+        api-level: [31, 33]
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     defaults:
@@ -55,12 +60,13 @@ jobs:
             sudo apt-get install --yes ffmpeg
           fi
           python3 tools/generate_smoke_fixture.py
-      - name: Run API 33 device tests beyond one minute
+      - name: Run strict TLS teardown regression and prolonged playback
         uses: ReactiveCircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
         env:
           GH_TOKEN: ${{ github.token }}
+          EXPECTED_ANDROID_API: ${{ matrix.api-level }}
         with:
-          api-level: 33
+          api-level: ${{ matrix.api-level }}
           arch: x86_64
           target: google_apis
           profile: pixel_2
@@ -73,7 +79,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: android-api33-smoke-${{ github.run_id }}
+          name: android-api${{ matrix.api-level }}-smoke-${{ github.run_id }}
           path: |
             android/app/build/device-smoke/
             android/app/build/reports/androidTests/

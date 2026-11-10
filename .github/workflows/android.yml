@@ -42,11 +42,14 @@ jobs:
             ~/.gradle/wrapper
           key: android-gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle.kts', 'android/gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: android-gradle-${{ runner.os }}-
-      - name: Preserve trial signing identity in the branch-scoped cache only
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: Restore expendable trial key from branch cache only
+        id: trial-key-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.android/debug.keystore
           key: android-trial-signing-v1
+      - name: Prepare debug signing at the actual cached path
+        run: python3 tools/prepare_trial_signing.py
       - name: Restore selected SDK packages
         id: sdk-cache
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -72,6 +75,12 @@ jobs:
           "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk > app/build/signature.txt
           "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging app/build/outputs/apk/debug/app-debug.apk > app/build/badging.txt
           python3 tools/package_trial.py
+      - name: Save only the trial key in branch cache, never artifacts
+        if: steps.trial-key-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.android/debug.keystore
+          key: ${{ steps.trial-key-cache.outputs.cache-primary-key }}
       - name: Upload actual APK file without ZIP wrapping (not a public Release)
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:

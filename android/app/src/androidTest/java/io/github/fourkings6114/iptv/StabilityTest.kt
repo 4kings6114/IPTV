@@ -44,7 +44,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/** Actual Android API-33 runtime, synthetic loopback media only; NOT a Poco/MIUI test. */
+/** Actual Android API-31/API-33 runtimes, synthetic loopback media only; NOT a Poco/MIUI test. */
 @RunWith(AndroidJUnit4::class)
 @androidx.annotation.OptIn(UnstableApi::class)
 class StabilityTest {
@@ -52,7 +52,7 @@ class StabilityTest {
     private val app get() = ApplicationProvider.getApplicationContext<IPTVApplication>()
 
     @Before fun preparePrivateTestData() = runBlocking {
-        assertEquals("This stability suite targets Android 13", 33, Build.VERSION.SDK_INT)
+        assertTrue("Supported stability images are Android API 31 and 33", Build.VERSION.SDK_INT in listOf(31, 33))
         app.crashReports.clear()
         withTimeout(20_000) {
             app.settings.showLogos(false) // no third-party network requests during this test

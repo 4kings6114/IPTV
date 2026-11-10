@@ -13,9 +13,14 @@ android {
         applicationId = "io.github.fourkings6114.iptv"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 3
+        versionName = "0.1.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    // CI explicitly sets this path, so the cache contains the key actually used by AGP.
+    // Local development retains Android's default debug-key behavior.
+    providers.environmentVariable("IPTV_TRIAL_KEYSTORE").orNull?.let { path ->
+        signingConfigs.getByName("debug").storeFile = file(path)
     }
     buildTypes {
         debug {
@@ -84,6 +89,7 @@ dependencies {
     androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.test:core:1.6.1")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    androidTestImplementation("com.squareup.okhttp3:okhttp-tls:4.12.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.16")

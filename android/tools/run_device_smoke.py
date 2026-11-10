@@ -1,6 +1,7 @@
 """Run real-emulator tests; publish bounded, independently gated runtime evidence."""
 from pathlib import Path
 import json
+import os
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
@@ -10,6 +11,8 @@ EXPECTED_TESTS = {
     'browsingFavoritesAndRecreationSurviveSeventySeconds': 70.0,
     'actualAvcAacPlaybackSurvivesSeventyFiveSecondsRotationAndBackgroundResume': 75.0,
     'localFatalReportCanBeCopiedReopenedAndDeletedWithoutLeakingMessages': 0.0,
+    'httpsPoolEvictionOnMainReproducesReportedCrash': 0.0,
+    'httpsPooledSocketsSurvivePlayerStopResumeAndDestroyWithStrictMode': 0.0,
 }
 
 
@@ -53,6 +56,8 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     api = subprocess.run(['adb', 'shell', 'getprop', 'ro.build.version.sdk'], text=True, capture_output=True, timeout=20)
     actual_api = api.stdout.strip()
+    expected_api = os.environ.get('EXPECTED_ANDROID_API', '31')
+    assert expected_api in ('31', '33'), 'Unsupported runtime target'
     with (out / 'gradle.log').open('w') as log:
         process = subprocess.Popen(['./gradlew', '--no-daemon', '--stacktrace', ':app:connectedDebugAndroidTest'], cwd=root, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         for line in process.stdout:
@@ -61,8 +66,8 @@ def main():
         status = process.wait()
     counts, cases, failures = collect_results(root / 'app/build/outputs/androidTest-results')
     errors = verification_errors(counts, cases)
-    if actual_api != '33' or api.returncode:
-        errors.append(f'Expected runtime API 33, got {actual_api!r} (adb status {api.returncode}).')
+    if actual_api != expected_api or api.returncode:
+        errors.append(f'Expected runtime API {expected_api}, got {actual_api!r} (adb status {api.returncode}).')
     if errors:
         status = status or 1
     try:
@@ -71,13 +76,13 @@ def main():
         logcat = 'Runtime log collection timed out; rely on the instrumentation results.'
     (out / 'android-runtime.log').write_text(logcat)
     report = {
-        'status': status, 'api': actual_api, 'environment': 'Android emulator, not a Poco X3/MIUI',
+        'status': status, 'api': actual_api, 'expected_api': expected_api, 'environment': 'Android emulator, not a Poco X3/MIUI',
         'tests': counts, 'cases': cases, 'failures': failures, 'verification_errors': errors,
-        'scope': '70s UI; 75s generated loopback AVC/AAC video/audio, actual rotation, stop/new engine on resume; synthetic local-report UI',
+        'scope': '70s UI; 75s generated loopback AVC/AAC video/audio, actual rotation, stop/new engine on resume; synthetic local-report UI; negative TLS main-thread control plus strict-mode real player TLS-pool stop/destroy',
     }
     (out / 'summary.json').write_text(json.dumps(report, indent=2))
     tail = (out / 'gradle.log').read_text().splitlines()[-70:]
-    publish('Android API33 runtime stability', status, json.dumps(report, indent=2) + '\n' + '\n'.join(tail) + '\n' + logcat)
+    publish(f'Android API{expected_api} runtime stability', status, json.dumps(report, indent=2) + '\n' + '\n'.join(tail) + '\n' + logcat)
     return status
 
 

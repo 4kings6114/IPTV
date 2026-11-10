@@ -246,16 +246,21 @@ class PlaybackActivity : ComponentActivity() {
             resumePosition = if (engine.isCurrentMediaItemLive) C.TIME_UNSET else engine.currentPosition
             wasPlaying = engine.playWhenReady
         }
-        videoView?.player = null
-        engine?.release()
-        player = null
-        playbackClient?.let { client ->
-            client.dispatcher.cancelAll()
-            client.connectionPool.evictAll()
-            client.dispatcher.executorService.shutdown()
-        }
+        // Detach ownership on main before asynchronous cleanup; a retry/resume can now
+        // create a new client without the outgoing cleanup ever touching its resources.
+        val outgoingClient = playbackClient
         playbackClient = null
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        player = null
+        videoView?.player = null
+        try {
+            // Media3/PlayerView must still be accessed/released on their main looper.
+            engine?.release()
+        } finally {
+            // Conscrypt can write TLS close_notify in cancelAll/evictAll. Never do it
+            // on main, or in lifecycleScope (which is cancelled during onDestroy).
+            outgoingClient?.let { app.playbackClientCleanup.release(it) }
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
     }
 
     private fun rotateScreen() {

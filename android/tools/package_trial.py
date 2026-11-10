@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import sys
 import traceback
 from ci_report import publish
@@ -28,7 +29,7 @@ metadata = json.loads((apk.parent / "output-metadata.json").read_text())
 element = metadata["elements"][0]
 assert metadata["applicationId"] == "io.github.fourkings6114.iptv.trial"
 assert element["versionName"].endswith("-trial")
-assert element["versionCode"] == 2
+assert element["versionCode"] == 3
 badging = (build / "badging.txt").read_text()
 assert "sdkVersion:'26'" in badging
 assert "targetSdkVersion:'36'" in badging
@@ -53,7 +54,7 @@ for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     suite = ET.parse(path).getroot()
     for name in counts:
         counts[name] += int(suite.get(name, "0"))
-assert counts["tests"] >= 38, counts
+assert counts["tests"] >= 43, counts
 assert counts["failures"] == counts["errors"] == counts["skipped"] == 0, counts
 lint = ET.parse(build / "reports/lint-results-debug.xml").getroot()
 assert not any(issue.get("severity") in {"Fatal", "Error"} for issue in lint.findall("issue"))
@@ -80,8 +81,8 @@ info = {
     "permissions": sorted(permissions),
     "native_libraries": native_libraries,
     "signing": "DEBUG/TRIAL ONLY; branch cache identity; not a production release key",
-    "physical_device_test": "NOT PERFORMED; intended first test: Poco X3 / Android 13",
-    "stream_playback_tests": "NOT PERFORMED",
+    "physical_device_test": "0.1.2 NOT YET RETESTED; user crash report for 0.1.1 is Xiaomi / Android API 31",
+    "stream_playback_tests": "Provider streams NOT TESTED; separate API31/API33 synthetic runtime workflow",
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 shutil.copyfile(root / "INSTALL-fa.md", output / "INSTALL-fa.md")
@@ -91,8 +92,17 @@ previous_signer = "aa088f89aacd9f4e1e9642088ed7fa82dfeedc302c0ecb1e089effc34a365
 current_signer = re.search(r"Signer #1 certificate SHA-256 digest: ([0-9a-f]{64})", info["signature_verification"])
 assert current_signer, "Missing verified signer fingerprint"
 info["signer_sha256"] = current_signer.group(1)
+# Check that the APK really used the file that Actions is caching, not AGP's alternate default.
+key_path = Path(os.environ["IPTV_TRIAL_KEYSTORE"])
+certificate = subprocess.check_output([
+    "keytool", "-exportcert", "-keystore", str(key_path), "-storepass", "android", "-alias", "androiddebugkey",
+], stderr=subprocess.PIPE, timeout=20)
+assert hashlib.sha256(certificate).hexdigest() == current_signer.group(1), "APK signer differs from cached trial key"
+info["signing_cache_path_verified"] = True
 info["updates_original_0_1_0_trial"] = current_signer.group(1) == previous_signer
-info["installation_warning"] = "If signer differs, Android cannot update the original trial in place. Uninstalling it erases local playlists, favorites, history and preferences. Save needed source information and the MIUI crash summary first."
+previous_0_1_1_signer = "f73be34704f68399ada9b3a8d3d8ce82b585cd508beb68929e6a93063250da2a"
+info["updates_delivered_0_1_1_trial"] = current_signer.group(1) == previous_0_1_1_signer
+info["installation_warning"] = "If signer differs, Android cannot update the previously delivered trial in place. Uninstalling it erases local playlists, favorites, history and preferences. Save needed source information and the MIUI crash summary first."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

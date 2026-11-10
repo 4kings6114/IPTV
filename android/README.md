@@ -1,16 +1,30 @@
 # IPTV همراه — Android phone trial
 
-An isolated Kotlin/Compose/Media3 client for the existing catalog. **Experimental, not a production/Play release.** The original 0.1.0 trial installed on the user's Poco X3 / Android 13 (API 33), but the user reports a crash after about one minute. This diagnostic build still requires physical-device retesting. This does not change the Python builder, production playlists, Telegram notifier, Pages, or `main`.
+An isolated Kotlin/Compose/Media3 client for the existing catalog. **Experimental, not a production/Play release.** The user's 0.1.1 report identifies a Xiaomi phone running **Android API 31 (Android 12)**; an earlier description said Android 13. Test both API 31 and 33, and still retest the corrected APK on the physical phone. This does not change the Python builder, production playlists, Telegram notifier, Pages, or `main`.
 
-## 0.1.1 crash investigation
+## 0.1.2: confirmed TLS teardown crash
 
-The user reports an Android/MIUI process crash after roughly one minute, not merely a Media3 `PlaybackException`. The precise cause is **not yet known without the phone's exception/native-crash summary**. Do not describe the screenshot alone as proof of a codec, VPN, memory or network fault.
+The supplied private local report identifies `NetworkOnMainThreadException`, wrapped by `ActivityThread.callActivityOnStop`, from `PlaybackActivity.releasePlayer -> ConnectionPool.evictAll -> ConscryptEngineSocket.close`. Closing an **idle HTTPS** socket can write TLS `close_notify`. Calling cancel/evict from `onStop` on main was therefore unsafe. It is not evidence of an unsupported codec, RAM shortage, or a bad stream.
 
-This diagnostic patch adds a bounded, private, manually copied Java/Kotlin fatal-exception report (classes/frames and technical device/heap metadata only; no Throwable messages, thread names, source-file paths, URLs, headers or channel data). Android's original uncaught handler is always delegated to; the app never attempts to recover a damaged process. No telemetry is sent. Native crashes/OS kills and some OOM events cannot be captured this way. The report can be copied or deleted in the next run.
+The outgoing client is now detached on main and handed to an **application-owned IO cleanup coroutine**, not `lifecycleScope`, so destruction does not cancel scheduled cleanup. Cancellation, pool eviction, and executor shutdown all run on IO and independently attempt completion. Cleanup captures only the outgoing client, never the activity or a later retry/resume client's resources. Media3 release and PlayerView detachment remain on the main looper. StrictMode and normal TLS validation are not weakened.
 
-A separate foreground-resume bug is fixed: `Lifecycle.currentState` can still be `CREATED` inside `onStart`, so checking for `STARTED` there could suppress player recreation. The player now tracks actual start/stop callbacks. This is not, by itself, confirmation of the reported one-minute crash's cause.
+The earlier 0.1.1 lifecycle-start correction and bounded, private, manually copied Java/Kotlin fatal report remain. No messages, URLs, credentials, thread names, or source-file paths are recorded; no telemetry is sent. Android's original uncaught handler is delegated to. Native faults, OS kills and some OOM events cannot be captured. A previous report remains until manually deleted; its version identifies which build actually crashed.
 
-The **Android API33 stability smoke** workflow (automatic on Android/workflow changes, also manually runnable) tests prolonged browsing and actual generated AVC/AAC video over loopback, including verified rotation, release in background, and a new engine on resume. It also tests reading, copying, reopening, and deleting a synthetic local fatal report. It does not access provider streams or logos, and the synthetic fixture belongs only to the instrumentation APK, never the application APK. An emulator result is not a Poco X3/MIUI result. See the workflow run for whether these tests actually completed; adding a test is not evidence that it passed.
+### Regression coverage
+
+The **Android API31 and API33 stability** workflow runs on Android/workflow changes and manually. Each image must execute all five device tests without skips:
+
+- At least 70 seconds of catalog/favorite UI activity and recreation.
+- At least 75 seconds of generated loopback AVC/AAC playback, actual rotation, stop and a new engine on resume.
+- Local-report read/copy/reopen/delete, with private-message omission.
+- A **negative control** reproducing the old main-thread TLS pool-eviction exception on real Android Conscrypt; the test catches it inside its callback rather than crashing the process.
+- Actual player `onStop`/resume/`onDestroy` with an idle TLS socket in the owned pool and main-thread StrictMode network death enabled. A test-only clone trusts a generated localhost certificate and shares the actual player's pool/dispatcher. This avoids adding a TLS bypass or injectable test hook to shipped code. Both outgoing cleanup completion and the next client's independence are checked.
+
+The synthetic media belongs only to the instrumentation APK, never the application APK. Tests do not contact provider streams/logos and do not imply physical Poco/MIUI or live-provider compatibility. Consult the specific workflow run for results; defining a test is not evidence that it passed. Unit tests separately check IO socket closure, in-flight cancellation, repeated release, independent clients, and cleanup surviving owner-scope cancellation.
+
+### Trial signing
+
+The earlier installed debug key was not present in the signing cache at investigation time; do not promise an in-place update. CI now explicitly prepares/signs with the **same path it caches**, and packaging compares the APK signer to that key's public certificate. Private key material is never committed or uploaded in artifacts. The branch cache remains expendable, not production signing. `BUILD-INFO.json` reports compatibility with the previously delivered 0.1.0 and 0.1.1 certificate digests. Uninstalling a mismatched trial erases its local data; save needed source/favorite information privately first.
 
 ## Current scope
 

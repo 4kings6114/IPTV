@@ -14,6 +14,7 @@ import io.github.fourkings6114.iptv.data.AppDatabase
 import io.github.fourkings6114.iptv.data.PlaylistRepository
 import io.github.fourkings6114.iptv.data.SettingsStore
 import io.github.fourkings6114.iptv.network.NetworkClients
+import io.github.fourkings6114.iptv.player.PlaybackClientCleanup
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -28,6 +29,7 @@ class IPTVApplication : Application(), ImageLoaderFactory {
                 "Heap bytes max=${runtime.maxMemory()} total=${runtime.totalMemory()} free=${runtime.freeMemory()}"
         }
     }
+    internal val playbackClientCleanup by lazy { PlaybackClientCleanup(applicationScope) }
     val settings by lazy { SettingsStore(this, applicationScope) }
     val database by lazy { Room.databaseBuilder(this, AppDatabase::class.java, "iptv.db").build() }
     val network by lazy { NetworkClients.create(allowHttp = { settings.state.value.allowHttp }) }
