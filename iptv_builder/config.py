@@ -49,6 +49,7 @@ class EPGOptions:
     cache_hours: float = 24
     freshness_hours: float = 24
     max_bytes: int = 33554432
+    max_expanded_bytes: int = 536870912
     aliases_file: str = "epg_aliases.json"
     keep_unverified: bool = True
 
@@ -134,6 +135,8 @@ def _load_options(name: str, data: dict):
         raise ValueError("metadata.refresh_hours must not exceed cache_hours")
     if name in {"epg", "metadata"} and options.max_bytes < 512:
         raise ValueError(f"{name}.max_bytes must be at least 512")
+    if name == "epg" and not options.max_bytes <= options.max_expanded_bytes <= 536870912:
+        raise ValueError("epg.max_expanded_bytes must be between max_bytes and 512 MiB")
     if name == "playback" and (
         options.seconds > 30 or options.timeout > 120 or options.max_channels > 100
     ):

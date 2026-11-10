@@ -37,12 +37,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 1
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
 
@@ -50,7 +50,7 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Restore last-known-good sources and link history
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: .cache/iptv
           key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
@@ -113,14 +113,14 @@ jobs:
 
       - name: Save source caches, link history and snapshots
         if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: .cache/iptv
           key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Upload build diagnostics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: playlist-build-${{ github.run_id }}-${{ github.run_attempt }}
           path: |

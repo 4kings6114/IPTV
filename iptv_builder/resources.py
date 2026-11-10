@@ -3,6 +3,7 @@
 import gzip
 import hashlib
 import io
+import tempfile
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -60,6 +61,7 @@ def fetch_resource(
     max_bytes: int,
     cache_hours: float,
     refresh_hours: float = 0,
+    stream_parser: Callable | None = None,
 ) -> Resource:
     if not http_url(url):
         return Resource(url, None, "failed", "Non-HTTP resource URL")
@@ -74,17 +76,38 @@ def fetch_resource(
             request = Request(
                 url, headers={"User-Agent": "playlist-bot/6.0", "Accept-Encoding": "gzip"}
             )
-            with urlopen(request, timeout=settings.source_timeout) as response:
-                body = response.read(max_bytes + 1)
-                encoding = response.headers.get("Content-Encoding", "").lower()
-            if len(body) > max_bytes:
-                raise ResourceValidationError("Resource exceeds byte limit")
-            if body.startswith(b"\x1f\x8b") or encoding == "gzip":
-                with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
-                    body = compressed.read(max_bytes + 1)
+            if stream_parser is not None:
+                # Disk-backed compressed spool, at most 1 MiB in memory. The
+                # streaming XML parser enforces its own expanded-byte limit.
+                with tempfile.SpooledTemporaryFile(max_size=1048576) as spool:
+                    with urlopen(request, timeout=settings.source_timeout) as response:
+                        total = 0
+                        while chunk := response.read(min(65536, max_bytes - total + 1)):
+                            total += len(chunk)
+                            if total > max_bytes:
+                                raise ResourceValidationError("Resource exceeds byte limit")
+                            spool.write(chunk)
+                        encoding = response.headers.get("Content-Encoding", "").lower()
+                    spool.seek(0)
+                    compressed = spool.read(2) == b"\x1f\x8b" or encoding == "gzip"
+                    spool.seek(0)
+                    if compressed:
+                        with gzip.GzipFile(fileobj=spool, mode="rb") as expanded:
+                            value = stream_parser(expanded)
+                    else:
+                        value = stream_parser(spool)
+            else:
+                with urlopen(request, timeout=settings.source_timeout) as response:
+                    body = response.read(max_bytes + 1)
+                    encoding = response.headers.get("Content-Encoding", "").lower()
                 if len(body) > max_bytes:
-                    raise ResourceValidationError("Expanded resource exceeds byte limit")
-            value = parser(body)
+                    raise ResourceValidationError("Resource exceeds byte limit")
+                if body.startswith(b"\x1f\x8b") or encoding == "gzip":
+                    with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
+                        body = compressed.read(max_bytes + 1)
+                    if len(body) > max_bytes:
+                        raise ResourceValidationError("Expanded resource exceeds byte limit")
+                value = parser(body)
             if not isinstance(value, dict) or value.get("schema_version") != 1:
                 raise ResourceValidationError("Invalid parsed resource")
             atomic_write(

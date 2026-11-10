@@ -26,6 +26,11 @@ on:
         type: boolean
         default: false
 
+      full_audit:
+        description: Full isolated candidate-link audit with production guards (no publication)
+        type: boolean
+        default: false
+
 permissions:
   contents: read
 
@@ -37,8 +42,8 @@ jobs:
       matrix:
         python-version: ["3.10", "3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile Python modules
@@ -51,10 +56,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
       - name: Ensure optional decoder tools for the requested live samples
@@ -71,7 +76,7 @@ jobs:
           git diff --exit-code
       - name: Upload isolated reports (no production publication or Telegram)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: live-validation-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
@@ -88,4 +93,31 @@ jobs:
             .cache/live-validation/output/.cache/iptv/last_run.json
           include-hidden-files: true
           if-no-files-found: ignore
+          retention-days: 14
+
+  full-audit:
+    if: github.event_name == 'workflow_dispatch' && inputs.full_audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 115
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Full dry-run audit (never replace production outputs)
+        run: |
+          set -euo pipefail
+          python -u -m iptv_builder.audit 2>&1 | tee full-audit.log
+          git diff --exit-code
+      - name: Upload aggregate audit evidence only
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: full-audit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            full-audit.log
+            .cache/full-audit/audit_summary.json
+          include-hidden-files: true
           retention-days: 14

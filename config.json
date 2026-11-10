@@ -152,7 +152,7 @@
     }
   ],
   "epg_urls": [
-    "https://epg.pw/xmltv/epg_IR.xml",
+    "https://raw.githubusercontent.com/SandObserver/live-tv-guide/main/output/iranintl.xml",
     "https://epg.pw/xmltv/epg_US.xml",
     "https://epg.pw/xmltv/epg_GB.xml",
     "https://epg.pw/xmltv/epg_DE.xml"
@@ -195,7 +195,8 @@
     "freshness_hours": 24,
     "max_bytes": 67108864,
     "aliases_file": "epg_aliases.json",
-    "keep_unverified": true
+    "keep_unverified": true,
+    "max_expanded_bytes": 536870912
   },
   "playback": {
     "enabled": false,
