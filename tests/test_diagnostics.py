@@ -76,6 +76,27 @@ class DiagnosticTests(unittest.TestCase):
         self.assertIn("100%25", notice)
         self.assertNotIn("\n::warning", notice)
 
+    def test_large_source_lists_do_not_truncate_or_invalidate_actions_summary_json(self):
+        from iptv_builder.diagnostics import _actions_notices
+
+        result = {
+            "status": "passed",
+            "source_count": 60,
+            "sources": [{"url": "https://source.test/" + "x" * 100, "status": "fresh"}] * 60,
+            "metadata": {"matched": 12, "missing_examples": ["x"] * 50},
+            "epg": {"covered": 0, "missing": 12, "missing_channels": ["x"] * 12},
+            "playback": {"samples": [{"reason": "x" * 4000}]},
+        }
+        with redirect_stdout(io.StringIO()) as output:
+            _actions_notices(result)
+        notices = output.getvalue().splitlines()
+        self.assertEqual(len(notices), 5)
+        for notice in notices:
+            self.assertLess(len(notice.encode()), 3500)
+            json.loads(notice.split("::", 2)[2])
+        self.assertIn('"source_count":60', notices[0])
+        self.assertIn('"fresh":60', notices[1])
+
     def test_cli_reports_failure_without_publishing(self):
         with (
             patch("iptv_builder.diagnostics.validate", side_effect=ValueError("bad config")),

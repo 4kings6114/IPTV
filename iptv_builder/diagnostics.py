@@ -220,6 +220,31 @@ def validate(
         atomic_write(directory / "validation_summary.json", json_text(summary))
 
 
+def _actions_notices(result: dict) -> None:
+    # GitHub truncates individual annotation messages. Keep valid, small JSON
+    # per topic; the complete reports remain in the downloadable artifact.
+    large = {"sources", "sample", "metadata", "epg", "playback"}
+    topics = {"metrics": {key: value for key, value in result.items() if key not in large}}
+    sources = result.get("sources", [])
+    topics["sources"] = {
+        status: sum(item.get("status") == status for item in sources)
+        for status in ("fresh", "cached", "failed")
+    }
+    for name, omitted in (
+        ("metadata", {"missing_examples", "ambiguous_examples"}),
+        ("epg", {"missing_channels"}),
+        ("playback", set()),
+    ):
+        if name in result:
+            topics[name] = {key: value for key, value in result[name].items() if key not in omitted}
+    for title, value in topics.items():
+        payload = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+        if len(payload.encode("utf-8")) > 3000:
+            payload = json.dumps({"details_in_artifact": True, "file": "validation_summary.json"})
+        payload = payload.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print(f"::notice title=IPTV validation {title}::" + payload)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=Path("config.json"))
@@ -232,9 +257,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         result = validate(args.config, args.output_dir, args.limit, args.playback_samples)
         if os.environ.get("GITHUB_ACTIONS") == "true":
-            payload = json.dumps(result, ensure_ascii=False, separators=(",", ":"))
-            payload = payload.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
-            print("::notice title=IPTV isolated validation summary::" + payload)
+            _actions_notices(result)
         print(
             json_text(
                 {
