@@ -74,4 +74,8 @@ info = {
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 shutil.copyfile(root / "INSTALL-fa.md", output / "INSTALL-fa.md")
+info["signature_verification"] = (build / "signature.txt").read_text()
+(output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
+from ci_report import publish
+publish("Android APK package details", 0, json.dumps(info, indent=2))
