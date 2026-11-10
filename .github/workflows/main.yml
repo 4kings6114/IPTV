@@ -8,9 +8,20 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: playlist-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   update:
+    # Dispatching an experimental branch must never publish its data to main.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     env:
       TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -19,90 +30,80 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
+          fetch-depth: 1
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Build playlist
-        run: python build_playlist.py | tee build.log
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
 
-      - name: Commit and push
+      - name: Restore last-known-good sources and link history
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/iptv
+          key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            iptv-state-${{ github.ref_name }}-
+
+      - name: Build playlist
+        id: build
+        run: |
+          set -euo pipefail
+          python build_playlist.py 2>&1 | tee build.log
+
+      - name: Commit and push generated files only
         id: commit
         run: |
-          set -e
+          set -euo pipefail
           git config user.name "playlist-bot"
           git config user.email "playlist-bot@users.noreply.github.com"
-
-          STAGE=$(mktemp -d)
-          for f in playlist.m3u playlist-backup.m3u build_stats.txt \
-                   persian.m3u news.m3u music.m3u sports.m3u movies.m3u kids.m3u \
-                   manual.m3u dead_links.txt; do
-            [ -f "$f" ] && cp -a "$f" "$STAGE/" || true
-          done
-
-          git fetch origin main
-          git reset --hard origin/main
-          cp -a "$STAGE"/. .
-
-          git add playlist.m3u playlist-backup.m3u build_stats.txt \
-                  persian.m3u news.m3u music.m3u sports.m3u movies.m3u kids.m3u \
-                  manual.m3u dead_links.txt 2>/dev/null || true
+          git add -- playlist.m3u playlist-backup.m3u build_stats.txt build_report.json \
+                     persian.m3u news.m3u music.m3u sports.m3u movies.m3u kids.m3u dead_links.txt
 
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No changes to commit"
+            echo "No content changes to publish"
             exit 0
           fi
 
+          # Never reset/rebase and replay stale outputs over a newer manual,
+          # exclude, config or code change. A fresh run must rebuild that input.
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            echo "main changed during the build; refusing to publish stale outputs"
+            exit 1
+          fi
+
           git commit -m "Auto-update playlist $(date -u +%F)"
+          # A concurrent human push after the check is safely rejected by Git.
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-          for i in 1 2 3 4 5; do
-            if git push origin HEAD:main; then
-              echo "changed=true" >> "$GITHUB_OUTPUT"
-              echo "Pushed OK"
-              exit 0
-            fi
-            echo "Push rejected (attempt $i) — sync and retry..."
-            git fetch origin main
-            git reset --hard origin/main
-            cp -a "$STAGE"/. .
-            git add playlist.m3u playlist-backup.m3u build_stats.txt \
-                    persian.m3u news.m3u music.m3u sports.m3u movies.m3u kids.m3u \
-                    manual.m3u dead_links.txt 2>/dev/null || true
-            if git diff --cached --quiet; then
-              echo "changed=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            git commit -m "Auto-update playlist $(date -u +%F)" || true
-            sleep 2
-          done
+      - name: Save source caches, link history and snapshots
+        if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/iptv
+          key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
 
-          echo "Push failed after retries"
-          exit 1
+      - name: Upload build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playlist-build-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build.log
+            .cache/iptv/last_run.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Telegram report
         if: always() && env.TG_TOKEN != '' && env.TG_CHAT != ''
-        run: |
-          REPO="${{ github.repository }}"
-          BASE="https://raw.githubusercontent.com/${REPO}/main"
-
-          if [ "${{ job.status }}" = "failure" ]; then
-            text="❌ خطا در آپدیت%0Ahttps://github.com/${REPO}/actions/runs/${{ github.run_id }}"
-          else
-            stats=$(head -n 1 build_stats.txt 2>/dev/null || echo Updated)
-            if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
-              text="✅ پلی‌لیست آپدیت شد%0A$stats%0A%0A📥 همه کانال‌ها:%0A${BASE}/playlist.m3u%0A%0A🇮🇷 فارسی:%0A${BASE}/persian.m3u%0A📰 اخبار:%0A${BASE}/news.m3u%0A🎵 موزیک:%0A${BASE}/music.m3u%0A⚽ ورزشی:%0A${BASE}/sports.m3u%0A🎬 فیلم:%0A${BASE}/movies.m3u%0A👶 کودک:%0A${BASE}/kids.m3u"
-            else
-              text="ℹ️ تغییری نبود%0A$stats"
-            fi
-          fi
-
-          curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TG_CHAT}" \
-            --data-urlencode "text=${text}" \
-            --data-urlencode "disable_web_page_preview=true"
+        env:
+          BUILD_JOB_STATUS: ${{ job.status }}
+          PLAYLIST_CHANGED: ${{ steps.commit.outputs.changed }}
+        run: python -m iptv_builder.telegram

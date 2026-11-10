@@ -1,0 +1,25 @@
+{
+  "channels": {
+    "SuperExpressTV.pl": {
+      "group": "اخبار - سایر زبان‌ها",
+      "language": "pl"
+    },
+    "CinemaxHits.us": {
+      "group": "فیلم - انگلیسی‌زبان",
+      "language": "en"
+    },
+    "PressTV.ir": {
+      "group": "اخبار - انگلیسی",
+      "language": "en"
+    },
+    "iFilmArabic.ir": {
+      "group": "فیلم - خاورمیانه",
+      "language": "ar"
+    },
+    "iFilmEnglish.ir": {
+      "group": "فیلم - انگلیسی‌زبان",
+      "language": "en"
+    }
+  },
+  "names": {}
+}
