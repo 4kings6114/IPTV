@@ -1,0 +1,36 @@
+name: Tests
+
+on:
+  push:
+    paths:
+      - "**.py"
+      - "config.json"
+      - "overrides.json"
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - "**.py"
+      - "config.json"
+      - "overrides.json"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile Python modules
+        run: python -m compileall -q build_playlist.py iptv_builder tests
+      - name: Offline unit and local-HTTP integration tests
+        run: python -m unittest discover -s tests -v
