@@ -1,0 +1,2 @@
+run_bot.sh text eol=lf
+run_bot.bat text eol=crlf
