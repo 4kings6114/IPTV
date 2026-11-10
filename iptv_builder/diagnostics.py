@@ -2,6 +2,8 @@
 
 import argparse
 import hashlib
+import json
+import os
 import shutil
 from dataclasses import replace
 from pathlib import Path
@@ -229,6 +231,10 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("limit must be 1..50; playback-samples must be 0..5")
     try:
         result = validate(args.config, args.output_dir, args.limit, args.playback_samples)
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            payload = json.dumps(result, ensure_ascii=False, separators=(",", ":"))
+            payload = payload.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+            print("::notice title=IPTV isolated validation summary::" + payload)
         print(
             json_text(
                 {

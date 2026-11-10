@@ -55,6 +55,27 @@ class DiagnosticTests(unittest.TestCase):
         with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
             main(["--playback-samples", "6"])
 
+    def test_actions_summary_is_machine_readable_and_escapes_workflow_commands(self):
+        result = {
+            "status": "passed",
+            "source_count": 1,
+            "available_sources": 1,
+            "channels": 1,
+            "second_run_cached_links": 1,
+            "note": "100%\n::warning::not-a-command",
+        }
+        with (
+            patch("iptv_builder.diagnostics.validate", return_value=result),
+            patch.dict("os.environ", {"GITHUB_ACTIONS": "true"}),
+            redirect_stdout(io.StringIO()) as output,
+        ):
+            self.assertEqual(main([]), 0)
+        notice = next(
+            line for line in output.getvalue().splitlines() if line.startswith("::notice")
+        )
+        self.assertIn("100%25", notice)
+        self.assertNotIn("\n::warning", notice)
+
     def test_cli_reports_failure_without_publishing(self):
         with (
             patch("iptv_builder.diagnostics.validate", side_effect=ValueError("bad config")),
