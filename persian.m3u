@@ -5,6 +5,8 @@ https://hls.247box.live/hls/stream.m3u8
 https://ncdn.telewebion.ir/abadan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AflakTV.ir@SD" tvg-logo="https://i.imgur.com/LkLCHpf.png" group-title="فارسی - تلویزیون",Aflak TV
 https://ncdn.telewebion.ir/aflak/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AFNTV.ir@SD",AFN TV (720p)
+https://bozztv.com/1gbw5/tintv2/tintv2/playlist.m3u8
 #EXTINF:-1 tvg-id="AftabTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/6/6e/Arak_AFTAB.svg/960px-Arak_AFTAB.svg.png" group-title="فارسی - تلویزیون",Aftab TV
 https://ncdn.telewebion.ir/aftab/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AlWilayah.ir@SD",Al Wilayah (720p)
@@ -119,6 +121,8 @@ https://ncdn.telewebion.ir/kish/live/playlist.m3u8
 https://ncdn.telewebion.ir/kordestan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="LabbaykTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/ZDVlODRiYjI3NWUyOTFmOGJmYjIwOTQyMDAyMzRkMmUzYjVmOGUyMTBhNTE0MGI5ZDAyOTMzZDdmZDQyNDM5OA/default" group-title="فارسی - تلویزیون",LabbaykTV
 https://ncdn.telewebion.ir/labbayk/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="LemarTV.af@SD",Lemar TV (720p)
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-lemar/index.m3u8
 #EXTINF:-1 tvg-id="MahabadTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/c/cb/Mahabad_tv.png" group-title="فارسی - تلویزیون",Mahabad TV
 https://ncdn.telewebion.ir/mahabad/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="MihanTV.ir@SD",Mihan TV
@@ -129,6 +133,8 @@ http://204.11.235.251:1935/live_transcoder/ngrp:mohabat.stream_all/playlist.m3u8
 https://tv.iraniancongress.com/stream/tv.m3u8
 #EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/c/ce/Qum_Noor_TV.svg/960px-Qum_Noor_TV.svg.png" group-title="فارسی - تلویزیون",Noor TV (Iran)
 https://ncdn.telewebion.ir/noor/live/playlist.m3u8
+#EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون",Omid e Iran TV
+https://oitnhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="OXIRTV.ir@SD",OXIR TV
 https://hls.oxir.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="Palestinetv.ir@SD" tvg-logo="https://i.ibb.co/svrZNZTX/Palestine.png" group-title="فارسی - تلویزیون",Palestinetv
@@ -163,6 +169,8 @@ https://ptravelhls.persiana.live/hls/stream.m3u8
 https://turkhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaVibe.fr@HD" tvg-logo="" group-title="فارسی - تلویزیون",Persiana Vibe
 https://raphls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PooyaTV.ir@SD",Pooya TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="PooyaTVPlus.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/5/5a/POOYA_tv_2.png" group-title="فارسی - تلویزیون",Pooya TV Plus
 https://ncdn.telewebion.ir/javaneh/live/playlist.m3u8
 #EXTINF:-1 tvg-id="QazvinTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/QazvinTV.svg/960px-QazvinTV.svg.png" group-title="فارسی - تلویزیون",Qazvin TV
@@ -203,6 +211,8 @@ https://ncdn.telewebion.ir/tabarestan/live/playlist.m3u8
 https://hls.tamadon.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TBNNejatTV.ir@SD",TBN Nejat TV
 https://hls.nejat.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="ToloTV.af@SD",Tolo TV
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolohd/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD" tvg-logo="https://i.imgur.com/U4sKHWy.png" group-title="فارسی - تلویزیون",TV ITN
 https://itnhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVANava.ir@SD" tvg-logo="https://i.imgur.com/JRxrsrw.png" group-title="فارسی - تلویزیون",TVA Nava
@@ -247,6 +257,8 @@ https://metafilmhls.wns.live/hls/stream.m3u8
 https://cinehls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaSeries.fr@HD" tvg-logo="" group-title="فارسی - فیلم و سریال",Persiana Series
 https://onehls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="TinTV.us@SD",Tin TV (720p) [Not 24/7]
+https://bozztv.com/1gbw5/tintv/tintv/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="YourTimeTV.ir@SD",YourTime TV
 https://live.yourtime.tv/hls/stream.m3u8
 #EXTINF:-1 group-title="اخبار - فارسی" tvg-id="IranInternational.uk@SD",Iran International (1080p)
@@ -257,3 +269,5 @@ http://185.9.2.18/chid_926/index.m3u8
 https://ncdn.telewebion.ir/irinn2/live/playlist.m3u8
 #EXTINF:-1 group-title="اخبار - فارسی" tvg-id="SuperExpressTV.pl@FAST",Super Express TV (1080p)
 https://prx-y5cf8.mediatool.tv/playout/sepl-abr67/index.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="TOLOnews.af@SD",TOLOnews (720p)
+https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8

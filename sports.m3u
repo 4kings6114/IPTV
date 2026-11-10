@@ -11,15 +11,6 @@ https://bein-xtra-bein.amagi.tv/playlist.m3u8
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CanalPlusSport.fr@SD",Canal+ Sport (1080p) [Geo-blocked]
 http://tv.streambox.fr/live/testlivestream/testlivestream/31.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="CanalPlusSport2.pl@SD",Canal+ Sport 2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
-http://57.129.96.133:888/stream/94/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="CanalPlusSport3.pl@SD",Canal+ Sport 3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
-http://57.129.96.133:888/stream/93/index.m3u8
-#EXTINF:-1 group-title="ورزشی" tvg-id="CanalPlusSport4.pl@SD",Canal+ Sport 4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
-http://57.129.96.133:888/stream/95/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CBSSportsGolazoNetwork.us@SD",CBS Sports Golazo Network (720p)
 https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ClaroSports.mx@SD",Claro Sports (1080p)
@@ -149,8 +140,6 @@ https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_cha
 https://test02.mdn.ors.at/orf/orfs/qxa/manifest.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="PrimaSportCzechia.cz@SD",Prima Sport Czechia
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/prima_sport/live_mq?offsetSeconds=0
-#EXTINF:-1 group-title="ورزشی" tvg-id="PXSports.mx@SD",PX Sports (1080p)
-http://38.65.175.84:8000/play/a0ku/index.m3u8
 #EXTINF:-1 tvg-name="Rai Sport" tvg-logo="https://i.imgur.com/xsGljsb.png" tvg-id="RaiSport.it" tvg-chno="58" tvg-country="IT" group-title="ورزشی",Rai Sport Ⓖ
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025&output=7&forceUserAgent=rainet/4.0.5
 #EXTINF:-1 group-title="ورزشی" tvg-id="RealitateaSportiva.ro@SD",Realitatea Sportiva (720p)
@@ -201,6 +190,8 @@ http://stream.mcquack.net/394/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="Sport5.ua@SD",Sport 5 (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://stream.mcquack.net/212/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="SportExtra.ro@HD",Sport Extra HD
+http://92.180.26.103:80/stream/93/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SportTotalFM.ro@SD",Sport Total FM (576i)
 https://livesptfm.com/SPTFM/Live/playlist.m3u8
 #EXTINF:-1 tvg-name="Sport – Pluto TV" tvg-logo="https://i.imgur.com/o2psAYW.png" tvg-id="PlutoTVSportItaly.it" group-title="ورزشی",Sport – Pluto TV
@@ -242,6 +233,8 @@ http://37.49.224.5/stream/3/index.m3u8
 http://37.49.224.5/stream/4/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSportsPremium.cl@ArgentinaHD",TNT Sports Premium ArgentinaHD (1080p)
 http://181.78.79.131:8000/play/a0q9
+#EXTINF:-1 group-title="ورزشی" tvg-id="TNTSportsPremium.cl@HD",TNT Sports Premium HD (1080p)
+http://205.235.6.29:8000/play/a104/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TNTSports.ar@SD",TNT Sports SD (576p)
 http://181.78.79.131:8000/play/a0mo
 #EXTINF:-1 group-title="ورزشی" tvg-id="TRSport.it@SD",TR Sport (480p)
@@ -252,8 +245,20 @@ https://mumbai-edge.smartplaytv.in/TraceSport/index.m3u8
 https://stream8.cinerama.uz/1274/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TVRSport.ro@SD",TVR Sport (1440p)
 https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSClassicSports.us@SD",TVS Classic Sports (360p)
+https://rpn.bozztv.com/gusa/gusa-tvs/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSPinballNetwork.us@SD",TVS Pinball Network (480p)
+https://rpn.bozztv.com/gusa/gusa-TVSCartoonNetwork/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSSports.us@SD",TVS Sports (720p) [Not 24/7]
+https://rpn.bozztv.com/gusa/gusa-tvssports/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSSportsBureau.us@SD",TVS Sports Bureau (720p)
+https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TVSWomenSports.us@SD",TVS Women Sports (720p)
+https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TyCSports.ar@SD",TyC Sports (1080p)
 https://amg26268-amg26268c14-freelivesports-emea-10267.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg26268-sportsstudio-tycsports-freelivesportsemea/playlist.m3u8
+#EXTINF:-1 group-title="ورزشی" tvg-id="TyCSportsUSA.ar@SD",TyC Sports USA
+http://45.170.130.224:8000/play/a020/index.m3u8
 #EXTINF:-1 tvg-name="Türkmen Sporty" tvg-logo="" tvg-chno="4" tvg-country="TM" group-title="ورزشی",Türkmen Sporty
 https://alpha.tv.online.tm/hls/ch004.m3u8
 #EXTINF:-1 tvg-name="Unbeaten Sports – Pluto TV" tvg-logo="https://i.imgur.com/UAiv612.png" group-title="ورزشی",Unbeaten Sports – Pluto TV
@@ -270,7 +275,5 @@ http://138.121.15.230:9002/WIN-SPORT/index.m3u8
 http://cdnua05.hls.tv/946/hls/8743361621b245838bee193c9ec28322/3999/stream.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CTSport.cz@SD",ČT Sport (720p)
 http://88.212.15.50/live/test_ctsport_25p/playlist.m3u8
-#EXTINF:-1 tvg-name="ČT sport Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/ct-sport-cz.png" tvg-chno="7" tvg-country="CZ" group-title="ورزشی",ČT sport Plus
-https://sktv.mxnticek.eu/new/stream.php?ch=%C4%8CT%20sport%20Plus
 #EXTINF:-1 group-title="ورزشی" tvg-id="AstrahanRuSport.ru@SD",Астрахань.Ru Sport (720p)
 https://streaming.astrakhan.ru/astrakhanrusporthd/playlist.m3u8

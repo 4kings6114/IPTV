@@ -15,10 +15,10 @@ https://cmc-ono.amagi.tv/hls/amagi_hls_data_cmcAAAAAA-cmc-ono/CDN/playlist.m3u8
 https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="DGRadio.au@HD",DG:Radio (1080p)
 https://mdn.dg.church/683c0cb036885-1/index.m3u8
-#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="FolkKlubTV.au@SD",Folk Klub (720p)
-http://tv1.intv.mk:1935/live2/folkklub/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="FMTV.uk@SD",Frecuencia Musical TV [Not 24/7]
 https://s2.tvdatta.com:3307/hybrid/play.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="HarmonyGospelMusicTV.us@SD",Harmony Gospel Music TV (1080p)
+https://tgn.bozztv.com/watc57/watc57-harmony/watc57-harmony/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MiMusicaHits.us@SD",Mi Musica Hits (720p)
 http://38.188.186.47:4000/play/a04n/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="MiMusicaPopular.us@SD",Mi Musica Popular (1080p)
@@ -93,6 +93,8 @@ https://59d39900ebfb8.streamlock.net/radiotelesentinel/radiotelesentinel/playlis
 https://stream.ejatv.com/memfs/dff807e1-b3b2-49f5-92d6-5b178be4eb6d.m3u8
 #EXTINF:-1 tvg-name="Radio Tivù Azzurra" tvg-logo="https://hostux.pics/images/2026/09/11/21_radio_tivu_azzurra44ecaf55746f67ba.png" tvg-country="IT" group-title="موزیک - انگلیسی‌زبان",Radio Tivù Azzurra
 https://video.azotosolutions.com:9553/radiotivuazzurralive/radiotivuazzurralive/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="RadioyTelevisionMarti.us@SD",Radio y Televisión Martí (720p)
+https://ocb-ingest.akamaized.net/hls/live/2037032/tvmc01/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayGreatestHolidayHits.us@SD",Stingray Greatest Holiday Hits
 https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/54947915-6504-4548-aaef-eabd451f8607/1.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="StingrayTikTokRadio.ca@HD",Stingray TikTok Radio (1080p)
@@ -115,6 +117,8 @@ https://cdn.global.elektamedia.com/live/c7eds/Totalmusic_Dance/SA_LIVE_hls_enc/m
 https://5db313b643fd8.streamlock.net/TRL/TRL/playlist.m3u8
 #EXTINF:-1 tvg-name="TRSP Tele Radio San Pietro" tvg-logo="https://hostux.pics/images/2026/09/11/31_trsp_tele_radio_san_pietroe201f062394d1eaa.png" tvg-chno="86" tvg-country="IT" group-title="موزیک - انگلیسی‌زبان",TRSP Tele Radio San Pietro
 https://5a1178b42cc03.streamlock.net/trsptv/trsptv/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="TVSMusicNetwork.us@SD",TVS Music Network (720p)
+https://rpn.bozztv.com/gusa/gusa-tvsmusic/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="VevoPop.us@SD",Vevo Pop (1080p)
 https://amg00056-amg00056c6-rakuten-uk-3235.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-name="VH1+ Music Legends – Pluto TV" tvg-logo="https://i.imgur.com/kJ1MDVi.png" group-title="موزیک - انگلیسی‌زبان",VH1+ Music Legends – Pluto TV
@@ -209,8 +213,6 @@ http://88.212.15.50/live/mb_hits/index.m3u8
 http://777905.live.tvstitch.com/playlist.m3u8?master=57&source=aHR0cHM6Ly9obHMtY2RuMS5keXZ5YXBwLmNvbS9NdXNpYy1Cb3gvdHJhY2tzLXYxYTEvbW9uby50cy5tM3U4P3Rva2VuPWV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpqYUdGdWJtVnNYMmxrSWpvMU55d2lZMmhoYm01bGJGOXVZVzFsSWpvaVRYVnphV01nUW05NElpd2lhWEFpT2lJeE56Z3VNVE0yTGpReUxqSXlNQ0lzSW1OdmRXNTBjbmtpT2lKVmEzSmhhVzVsSWl3aWRYTmxjbDlwWkNJNk56UXdOeXdpZFhObGNsOXdhRzl1WlNJNklpc3pPREE1TXpBNU5qYzBNak1pTENKMWMyVnlYM0p2YkdWeklqcGJJbU5zYVdWdWRDSmRMQ0p3Y205bWFXeGxYMmxrSWpvMk5EY3hMQ0p6WlhOemFXOXVYMmxrSWpvaVpEQXdPVFppWmpndE1qTmxOUzAwWldVMkxXSmxNelV0Wmpnd09ETTVaV1k1WkRnMElpd2laVzUyYVhKdmJtMWxiblFpT2lKd2NtOWtkV04wYVc5dUlpd2ljR3hoZEdadmNtMGlPaUpFWlhOcmRHOXdJaXdpZFhObGNsOWhaMlZ1ZENJNklrMXZlbWxzYkdGY0x6VXVNQ0FvVjJsdVpHOTNjeUJPVkNBeE1DNHdPeUJYYVc0Mk5Ec2dlRFkwS1NCQmNIQnNaVmRsWWt0cGRGd3ZOVE0zTGpNMklDaExTRlJOVEN3Z2JHbHJaU0JIWldOcmJ5a2dRMmh5YjIxbFhDOHhOVEl1TUM0d0xqQWdVMkZtWVhKcFhDODFNemN1TXpZaUxDSmxlSEFpT2pFM09EZ3hPRFV4TmpkOS5nYUo1WGRxTjJ3djY2SnFxYldnX0dGUzY3V3lZVEVOc0JQa3VpcU1sNTVN
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MusicBoxSexy.cz@SD",Music Box Sexy
 http://88.212.15.50/live/mb_sexy/index.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MusicTVGranada.es@SD",Music TV Granada (1080p) [Not 24/7]
-https://cloudvideo.servers10.com:8081/8032/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MuzykaPervogo.ru@SD",Muzyka Pervogo (576p)
 http://stream.mcquack.net/153/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="NASHEMusic.ua@SD",NASHE Music (720p)
@@ -401,6 +403,8 @@ https://mdstrm.com/live-stream-playlist/67ed8a8d6db4af9a0188555c.m3u8
 https://tv.arkeo.cl:1936/elsembrador/elsembrador/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioFantasiaTV.cl@SD",Radio Fantasia TV (720p)
 https://v2.tustreaming.cl/fantasiatv/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioFrecuenciaUno.cl@SD",Radio Frecuencia Uno (720p)
+https://v1.tustreaming.cl/frecuencia1tv/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioLaSerenaTV.cl@SD",Radio La Serena TV (720p)
 https://5ff3d9babae13.streamlock.net/chrgkqgkyb/chrgkqgkyb/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioMaster.pe@HD",Radio Master (720p)
@@ -421,6 +425,8 @@ https://tv.arkeo.cl:1936/radiorancagua/radiorancagua/playlist.m3u8
 https://vivo.solumedia.com:19360/realpolitik/realpolitik.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRitmoFM.cl@SD",Radio Ritmo (1080p) [Not 24/7]
 https://panel.tvstream.cl:1936/8046/8046/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioRumbaTV.pe@SD",Radio Rumba TV (720p)
+https://live-evg7.tv360.bitel.com.pe/bitel/rumba/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioSuyaiTV.cl@HD",Radio Suyai TV (1080p)
 https://cl-2.backend.energeek.cl/RadioSuyai-Neo/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTropical.pe@SD",Radio Tropical Tarapoto (480p) [Not 24/7]
@@ -431,8 +437,6 @@ https://media.neuquen.gov.ar/rtn/television/playlist.m3u8
 https://scl.edge.grupoz.cl/uniaccastream/live/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioUniversal.cl@SD",Radio Universal (720p)
 https://videostream.chileservidores.com:8081/universal/index.m3u8
-#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioUnoTacna.pe@SD",Radio Uno Tacna (720p)
-https://live-evg7.tv360.bitel.com.pe/bitel/radiounotv/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioUP.ar@SD",Radio UP (1080p)
 https://iptv.ixfo.com.ar:30443/live/RadioUpTvStreaming/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioUSACH.cl@SD",Radio USACH (720p)
@@ -447,6 +451,8 @@ https://live.tvcontrolcp.com:8081/radiozona/index.m3u8
 http://204.199.3.2/.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadiolaTV.co@SD",Radiola TV (1080p)
 http://158.172.217.18:8000/play/a01k/index.m3u8
+#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="Radiotele.mx@SD",Radiotele Morelia (352p)
+http://linkrt.ddns.net:8080/hls/rtmorelia_MID.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioTVOriente.pe@SD",RadioTV Oriente (720p)
 https://live.obslivestream.com/tvoriente/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RetromusicaTelevision.cl@SD",Retromusica Television (720p)
@@ -455,8 +461,6 @@ https://vdochile.com:3864/stream/play.m3u8
 http://186.148.196.100:8000/play/a02h
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TeleangolRadio.cl@SD",Teleangol Radio (720p)
 https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TeleHit.mx@SD",TeleHit (1080p)
-http://190.61.47.54:8000/play/a029/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TikTokRadioBrasil.br@HD",TikTok Radio Brasil (1080p)
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99992529
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TurboMixRadioTV.pe@SD",Turbo Mix Radio TV (720p)
@@ -481,8 +485,6 @@ https://tv.broadcasting.ro/rocktv/85c83a80-4f71-4f2d-a8d6-43f676896bcb.m3u8
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/636a4173e34fd50007534542/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="XITERockxMetal.nl@US",XITE Rock x Metal (1080p) [Geo-blocked]
 https://amg01243-xite-amg01243c21-tcl-us-6483.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTV.us@East",MTV (1080p)
-http://23.237.104.106:8080/USA_MTV/index.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVGlobal.uk@SD",MTV Global
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://85.14.32.26:8800/udp/239.100.10.67:5000
@@ -496,6 +498,10 @@ https://live-fi.tvkaista.net/sub/live.m3u8
 https://live.streaming.a2d.tv/content/channels/uutiset/cmaf.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTV3.fi@SD",MTV3 (720p)
 https://live-fi.tvkaista.net/mtv3/live.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvEnglish.us@SD",SUMtv English (1080p)
+https://bozztv.com/uni10rtmp/ssstv1-cdn/smil:ssstv1web.smil/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="SUMtvLatino.us@SD",SUMtv Latino (1080p)
+https://bozztv.com/uni10rtmp/ssstv2-cdn/smil:ssstv2web.smil/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="UMTV.mx@SD",UMTV (1080p) [Not 24/7]
 https://60417ddeaf0d9.streamlock.net/montemorelos/videomontemorelos/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - هیپ‌هاپ و رپ" tvg-id="DeluxeRap.de@SD",Deluxe Rap (1080p)
