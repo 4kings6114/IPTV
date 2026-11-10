@@ -12,11 +12,4 @@
 - Workflow actions are pinned to reviewed official release SHAs with weekly Dependabot PRs. Checkout does not persist credentials. Only the main publisher has contents-write; only deployment jobs have Pages-write/OIDC. Telegram credentials are scoped to its step. Experimental branches cannot invoke the production publisher. Preview Pages publication is explicit and labelled, and may need owner approval under the `github-pages` environment rules.
 - One-time Pages enablement needs owner permissions beyond the current integration's capabilities (the API returned 403 in this session). Enable **Settings → Pages → Source: GitHub Actions**, or review/reconnect the GitHub integration with the appropriate permissions. Never paste credentials into chat or add them to workflows.
 
-## Interactive Telegram bot
-
-- `telegram_bot.py` is separate from the scheduled notification sender. It is private by default: missing chat IDs fail configuration, not open access. Group access allows all group members unless `BOT_ALLOWED_USER_IDS` further restricts them. Public mode must be explicitly enabled; in-memory rate/session limits are not a distributed anti-abuse system.
-- Keep the bot token in the environment or an owner-readable `.env`, never in launchers, browser URLs, issues, or Git. The sample has no credentials or personal chat IDs. Environment files are parsed as literals, never sourced/evaluated. API failures are logged without token-bearing URLs, response bodies, or user messages; redirects are disabled.
-- Chat discovery, command registration and webhook deletion are explicit owner CLI actions. Normal startup never deletes a webhook or drops pending updates. Offline config checking and cursor migration make no network calls. State uses a per-bot namespace, a local process lock and atomic cursor writes; no exact-once or cross-server lock guarantee is made.
-- The bot never fetches arbitrary chat-supplied URLs, probes video streams, rebuilds playlists or writes repository inputs. Its known project downloads have size/time limits and validated, age-bounded cache fallback. Search sessions live only in memory and are scoped to their user/chat. Cursor/lock files contain no token or message text.
-
 Report suspected secret exposure privately to the repository owner and rotate exposed credentials; do not reproduce them in public issues or test fixtures.

@@ -12,9 +12,6 @@ on:
       - "profiles.json"
       - "important_channels.json"
       - "tests/**.cjs"
-      - "run_bot.sh"
-      - "run_bot.bat"
-      - ".env.example"
       - ".github/workflows/**"
   pull_request:
     paths:
@@ -27,9 +24,6 @@ on:
       - "profiles.json"
       - "important_channels.json"
       - "tests/**.cjs"
-      - "run_bot.sh"
-      - "run_bot.bat"
-      - ".env.example"
       - ".github/workflows/**"
   workflow_dispatch:
     inputs:
@@ -65,26 +59,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile Python modules
-        run: python -m compileall -q build_playlist.py telegram_bot.py iptv_builder iptv_bot tests
-      - name: Check interactive-bot launcher syntax
-        run: bash -n run_bot.sh
+        run: python -m compileall -q build_playlist.py iptv_builder tests
       - name: Offline unit and local-HTTP integration tests
         run: python -m unittest discover -s tests -v
-
-  bot-windows:
-    runs-on: windows-2025
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: "3.12"
-      - name: Compile interactive bot
-        run: python -m compileall -q telegram_bot.py iptv_bot tests/bot
-      - name: Offline bot, Windows launcher and process-lock tests
-        run: python -m unittest discover -s tests/bot -t . -v
 
   live-check:
     if: github.event_name == 'workflow_dispatch' && (inputs.live_check || inputs.pages_preview)
