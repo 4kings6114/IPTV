@@ -283,6 +283,19 @@ def _build(
         previous_history = {}
     if not isinstance(previous_channels, dict):
         previous_channels = {}
+    # Seed identities from legacy published M3Us as well as the new cache.
+    # Otherwise a channel removed on the very first v2 build would later be
+    # mislabeled new when it returned, despite having been published before.
+    for channel in old_channels:
+        prior_link = previous_history.get(channel.probe_key, {})
+        old_status = (
+            prior_link.get("status", "unchecked") if isinstance(prior_link, dict) else "unchecked"
+        )
+        previous_channels[channel.identity] = {
+            "last_seen": runtime["generated_at"],
+            "status": old_status,
+            "probe_key": channel.probe_key,
+        }
     sources = fetch_sources(settings, cache_dir)
     runtime["sources"] = [
         dict(url=item.source.url, status=item.status, error=item.error) for item in sources

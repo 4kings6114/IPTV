@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .config import Settings, country_code, http_url
 from .m3u import Channel, base_name, stable_id
-from .resources import Resource, fetch_resource
+from .resources import Resource, ResourceValidationError, fetch_resource
 
 
 def _text(value) -> str:
@@ -22,7 +22,7 @@ def _text(value) -> str:
 def parse_metadata(body: bytes) -> dict:
     data = json.loads(body.decode("utf-8-sig"))
     if not isinstance(data, list) or not data:
-        raise ValueError("Metadata must be a non-empty JSON array")
+        raise ResourceValidationError("Metadata must be a non-empty JSON array")
     records = []
     for item in data:
         if not isinstance(item, dict):
@@ -72,7 +72,7 @@ def parse_metadata(body: bytes) -> dict:
                 }
             )
     if not records:
-        raise ValueError("Metadata contains no recognized records")
+        raise ResourceValidationError("Metadata contains no recognized records")
     return {"schema_version": 1, "records": records}
 
 
@@ -122,10 +122,14 @@ class ReferenceCatalog:
         languages = [
             value for value in languages if re.fullmatch(r"[a-zA-Z]{2,3}(?:-[a-zA-Z0-9]+)*", value)
         ]
+        feed_ids = {str(feed.get("id", "")).casefold() for feed in candidates}
         logos = [
             logo
             for logo in self.logos.get(key, [])
-            if not logo.get("feed") or str(logo["feed"]).casefold() == variant.casefold()
+            if not logo.get("feed")
+            or str(logo["feed"]).casefold() == variant.casefold()
+            or len(feed_ids) == 1
+            and str(logo["feed"]).casefold() in feed_ids
         ]
         logos.sort(
             key=lambda logo: (

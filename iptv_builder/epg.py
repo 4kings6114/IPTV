@@ -11,7 +11,7 @@ from pathlib import Path
 from .classification import override_id
 from .config import Settings
 from .m3u import Channel, stable_id
-from .resources import fetch_resource
+from .resources import ResourceValidationError, fetch_resource
 
 
 def xmltv_time(value: str) -> datetime | None:
@@ -35,16 +35,16 @@ def parse_xmltv(body: bytes) -> dict:
     try:
         text = body.decode("utf-8-sig")
     except UnicodeError as error:
-        raise ValueError("XMLTV must be UTF-8") from error
+        raise ResourceValidationError("XMLTV must be UTF-8") from error
     if re.search(r"<!\s*(?:DOCTYPE|ENTITY)\b", text, re.I):
-        raise ValueError("DTD/entity declarations are not allowed")
+        raise ResourceValidationError("DTD/entity declarations are not allowed")
     channels, programmes = {}, {}
     invalid_times = 0
     try:
         parser = ET.iterparse(io.StringIO(text), events=("start", "end"))
         _, root = next(parser)
         if root.tag != "tv":
-            raise ValueError("Expected XMLTV tv root")
+            raise ResourceValidationError("Expected XMLTV tv root")
         for event, element in parser:
             if event != "end":
                 continue
@@ -60,22 +60,28 @@ def parse_xmltv(body: bytes) -> dict:
                 stop = xmltv_time(element.get("stop", ""))
                 if identifier and start and stop and stop > start:
                     start_text, stop_text = start.isoformat(), stop.isoformat()
-                    item = programmes.setdefault(
-                        identifier, {"count": 0, "start": start_text, "stop": stop_text}
-                    )
+                    item = programmes.setdefault(identifier, {"count": 0, "windows": []})
                     item["count"] += 1
-                    item["start"] = min(item["start"], start_text)
-                    item["stop"] = max(item["stop"], stop_text)
+                    item["windows"].append([start_text, stop_text])
                 else:
                     invalid_times += 1
                 element.clear()
                 root.clear()
     except (ET.ParseError, StopIteration) as error:
-        raise ValueError("Malformed XMLTV") from error
+        raise ResourceValidationError("Malformed XMLTV") from error
     if not channels:
-        raise ValueError("XMLTV has no declared channels")
+        raise ResourceValidationError("XMLTV has no declared channels")
     for identifier in channels:
-        channels[identifier] = programmes.get(identifier, {})
+        item = programmes.get(identifier, {})
+        if item:
+            windows = []
+            for start, stop in sorted(item["windows"]):
+                if windows and start <= windows[-1][1]:
+                    windows[-1][1] = max(stop, windows[-1][1])
+                else:
+                    windows.append([start, stop])
+            item["windows"] = windows
+        channels[identifier] = item
     return {
         "schema_version": 1,
         "channels": channels,
@@ -117,12 +123,18 @@ def _coverage(item: dict, now: datetime, freshness_hours: float) -> str:
     if not item or not item.get("count"):
         return "no_programmes"
     try:
-        start, stop = datetime.fromisoformat(item["start"]), datetime.fromisoformat(item["stop"])
-        if stop <= now:
-            return "stale"
-        if start > now + timedelta(hours=freshness_hours):
-            return "future"
-        return "covered"
+        windows = [
+            (datetime.fromisoformat(start), datetime.fromisoformat(stop))
+            for start, stop in item["windows"]
+        ]
+        if not windows:
+            return "no_programmes"
+        if any(
+            stop > now and start <= now + timedelta(hours=freshness_hours)
+            for start, stop in windows
+        ):
+            return "covered"
+        return "stale" if all(stop <= now for _, stop in windows) else "future"
     except (KeyError, TypeError, ValueError):
         return "invalid"
 
@@ -148,7 +160,7 @@ def validate_epg(
     def fetch(url):
         return fetch_resource(
             url,
-            "xmltv-v1",
+            "xmltv-v2",
             settings,
             cache_dir,
             parse_xmltv,

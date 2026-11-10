@@ -16,6 +16,10 @@ from .config import Settings, http_url
 from .storage import atomic_write, json_text, read_json
 
 
+class ResourceValidationError(ValueError):
+    """A controlled validation reason safe for reports, never response bodies."""
+
+
 @dataclass(frozen=True)
 class Resource:
     url: str
@@ -74,15 +78,15 @@ def fetch_resource(
                 body = response.read(max_bytes + 1)
                 encoding = response.headers.get("Content-Encoding", "").lower()
             if len(body) > max_bytes:
-                raise ValueError("Resource exceeds byte limit")
+                raise ResourceValidationError("Resource exceeds byte limit")
             if body.startswith(b"\x1f\x8b") or encoding == "gzip":
                 with gzip.GzipFile(fileobj=io.BytesIO(body)) as compressed:
                     body = compressed.read(max_bytes + 1)
                 if len(body) > max_bytes:
-                    raise ValueError("Expanded resource exceeds byte limit")
+                    raise ResourceValidationError("Expanded resource exceeds byte limit")
             value = parser(body)
             if not isinstance(value, dict) or value.get("schema_version") != 1:
-                raise ValueError("Invalid parsed resource")
+                raise ResourceValidationError("Invalid parsed resource")
             atomic_write(
                 path,
                 json_text(
@@ -98,6 +102,9 @@ def fetch_resource(
             error_text = f"HTTP {error.code}"
             retryable = error.code == 429 or error.code >= 500
             error.close()
+        except ResourceValidationError as error:
+            error_text = str(error)
+            retryable = False
         except (ValueError, EOFError):
             error_text = "Malformed, empty or oversized resource"
             retryable = False

@@ -213,6 +213,15 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(catalog.lookup(channel(tvg_id="Example.us@West"))["language"], "spa")
         self.assertEqual(catalog.lookup(channel(tvg_id="Example.us@Unknown"))["language"], "")
 
+    def test_quality_alias_can_use_the_single_main_feed_logo_without_guessing_other_regions(self):
+        catalog = self.catalog()
+        catalog.feeds["example.us"] = [{"id": "Main", "languages": ["eng"], "is_main": True}]
+        catalog.logos["example.us"] = [
+            {"feed": "Main", "url": "https://logos.test/main.png", "in_use": True}
+        ]
+        self.assertEqual(catalog.lookup(channel())["logo"], "https://logos.test/main.png")
+        self.assertEqual(catalog.lookup(channel(tvg_id="Example.us@East"))["logo"], "")
+
     def test_local_reference_validation_and_offline_metadata_configuration(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -299,6 +308,29 @@ class EPGTests(unittest.TestCase):
         self.assertEqual(final[0].attrs["tvg-id"], "guide.one")
         self.assertEqual(report["covered"], 1)
         self.assertEqual(final[0].identity, item.identity)
+
+    @patch("iptv_builder.resources.urlopen")
+    def test_past_and_far_future_programmes_do_not_fake_current_guide_coverage(self, opened):
+        past = xmltv(start=NOW - timedelta(days=10), stop=NOW - timedelta(days=9))
+        future = xmltv(start=NOW + timedelta(days=10), stop=NOW + timedelta(days=11))
+        body = past.replace(b"</tv>", future.split(b"<programme", 1)[1].join([b"<programme", b""]))
+        opened.return_value = Response(body)
+        _, _, report, coverage = validate_epg(
+            self.config, [channel(tvg_id="guide.one")], self.root, self.root, NOW
+        )
+        self.assertEqual(report["covered"], 0)
+        self.assertEqual(coverage[channel(tvg_id="guide.one").identity], "future")
+
+    def test_adjacent_programme_windows_are_compacted_but_gaps_are_preserved(self):
+        from iptv_builder.epg import _coverage
+
+        summary = parse_xmltv(
+            b'<tv><channel id="one"/><programme channel="one" start="20261110110000 +0000" stop="20261110120000 +0000"/><programme channel="one" start="20261110120000 +0000" stop="20261110130000 +0000"/></tv>'
+        )
+        item = summary["channels"]["one"]
+        self.assertEqual(len(item["windows"]), 1)
+        self.assertEqual(item["count"], 2)
+        self.assertEqual(_coverage(item, NOW, 24), "covered")
 
     def test_structural_validation_rejects_dtd_entity_and_non_xmltv(self):
         for body in (

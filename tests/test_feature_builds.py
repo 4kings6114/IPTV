@@ -83,6 +83,14 @@ class FeatureBuildTests(unittest.TestCase):
         result = self.build([first, second])
         self.assertEqual((result["added"], result["recovered"]), (0, 1))
 
+    def test_legacy_playlist_identity_survives_first_removal_without_a_v2_cache(self):
+        first = channel(tvg_id="One.us", url="https://s.test/one")
+        second = channel(tvg_id="Two.us", url="https://s.test/two")
+        (self.root / "playlist.m3u").write_text(render_m3u([first, second]))
+        self.assertEqual(self.build([second])["removed"], 1)
+        result = self.build([first, second])
+        self.assertEqual((result["added"], result["recovered"]), (0, 1))
+
     def test_retired_managed_profile_is_cleared_without_touching_unmanaged_files(self):
         profiles = self.root / "profiles.json"
         profiles.write_text('{"profiles":{"example":{}}}')
