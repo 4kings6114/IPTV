@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dynamic IPTV hosts require manifest-level HTTP capability. The shared OkHttp
+     policy rejects HTTP by default, including redirects/segments/keys/logos;
+     only an explicit, persistent user opt-in enables it. TLS is never bypassed. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors><certificates src="system" /></trust-anchors>
+    </base-config>
+</network-security-config>

@@ -9,3 +9,15 @@ build.log
 .venv/
 live-validation.log
 full-audit.log
+
+# Android tooling, private signing material and generated deliverables
+android/.gradle/
+android/.kotlin/
+android/**/build/
+android/local.properties
+android/.idea/
+*.jks
+*.keystore
+*.apk
+*.aab
+android-deliverables/

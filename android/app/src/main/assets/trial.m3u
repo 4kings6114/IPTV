@@ -1,0 +1,44 @@
+#EXTM3U
+# Snapshot from playlist.m3u at eb813fff5ff1e0ed668d8b2ef47b410538809cdb (2026-11-10).
+# Selection is for device testing, NOT verified playback or a content-rights endorsement.
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB TV1" tvg-logo="https://i.imgur.com/rad9Guw.png" tvg-id="IRIB1.ir" tvg-chno="1" tvg-country="ir"  tvg-language="fa",IRIB TV1
+https://ncdn.telewebion.ir/tv1/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Varzesh" tvg-logo="https://i.imgur.com/tRLSrxa.png" tvg-id="VarzeshTV.ir" tvg-chno="12" tvg-country="ir"  tvg-language="fa",IRIB Varzesh
+https://ncdn.telewebion.ir/varzesh/live/playlist.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-name="IRIB Mostanad" tvg-logo="https://i.imgur.com/lRDgugZ.png" tvg-id="IRIBMostanad.ir" tvg-chno="9" tvg-country="ir"  tvg-language="fa",IRIB Mostanad
+https://ncdn.telewebion.ir/mostanad/live/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - فارسی" tvg-id="iranintl.iitv" tvg-logo="https://i.imgur.com/55RpaF3.png" tvg-country="uk" tvg-language="fa" x-original-tvg-id="IranInternational.uk@SD",Iran International (1080p)
+https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
+#EXTINF:-1 tvg-id="BBCPersian.uk@SD" tvg-logo="https://i.imgur.com/4uTMnPb.png" group-title="اخبار - فارسی" tvg-country="uk" tvg-language="fa",BBC Persian (1080p)
+https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="4UTV.tr@SD" tvg-logo="https://i.imgur.com/PexhKwp.png" tvg-country="tr" tvg-language="fa" group-title="فارسی - تلویزیون",4U TV (720p)
+https://hls.4utv.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="GanjeHozourTV.us@SD" tvg-logo="https://i.imgur.com/TnQYtKh.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Ganj e Hozour TV (1080p)
+https://media.parvizshahbazi.com/ganjehozour/Main_tv/playlist.m3u8
+#EXTINF:-1 tvg-id="ICnet1.ca@SD" tvg-logo="https://i.imgur.com/aeS4Sjv.png" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",ICnet 1
+https://icnet1hls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="PersianaTurkiye.fr@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="fr" tvg-language="fa",Persiana Turkiye
+https://turkhls.persiana.live/hls/stream.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="DW.de@English" tvg-logo="https://i.imgur.com/8MRNFb9.png" tvg-country="de" tvg-language="en",DW English (1080p)
+https://amg01644-amg01644c1-amgplt0343.playout.now3.amagi.tv/ts-eu-w1-n2/playlist/amg01644-amg01644c1-amgplt0343/playlist.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="France24.fr@English" tvg-logo="https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540" tvg-country="fr" tvg-language="en",France 24 English (1080p)
+https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8
+#EXTINF:-1 tvg-name="Bloomberg" tvg-logo="https://i.imgur.com/VnCcH73.png" tvg-id="BloombergTelevision.us" tvg-chno="3" tvg-country="us" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg
+https://bloomberg.com/media-manifest/streams/us.m3u8
+#EXTINF:-1 tvg-id="76674" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/ARD_Dachmarke_2014.svg/960px-ARD_Dachmarke_2014.svg.png" tvg-country="de" tvg-language="de" group-title="سرگرمی - اروپا" x-original-tvg-id="DasErste.de@HD",Das Erste (1080p)
+https://daserste-live.ard-mcdn.de/daserste/live/hls/de/master.m3u8
+#EXTINF:-1 tvg-id="76627" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/ZDF_logo.svg/500px-ZDF_logo.svg.png" tvg-country="de" tvg-language="de" group-title="سرگرمی - اروپا" x-original-tvg-id="ZDF.de@SD",ZDF
+https://dash4.antik.sk/live/test_zdf_avc_25p/playlist.m3u8
+#EXTINF:-1 tvg-id="RedBullTV.at@SD" tvg-logo="https://i.postimg.cc/8c78JM28/image.png" tvg-country="at" tvg-language="en" group-title="ورزشی",Red Bull TV (1080p)
+https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
+#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="TRTWorld.tr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" tvg-country="tr" tvg-language="en",TRT World (720p)
+https://mumbai-edge.smartplaytv.in/TRTWorld/index.m3u8
+#EXTINF:-1 tvg-id="PressTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Press_TV_logo.svg/960px-Press_TV_logo.svg.png" tvg-country="ir" tvg-language="en" group-title="اخبار - انگلیسی",Press TV (720p)
+#EXTVLCOPT:http-referrer=https://odysee.com/
+https://cloud.odysee.live/content/26bcbcc342a5b143578f27dbfaf000201f06e417/master.m3u8
+#EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranJewishTV.ir@SD" tvg-logo="https://i.ibb.co/JWXs7csN/en.png" tvg-country="ir" tvg-language="fa",Iran Jewish TV
+http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
+#EXTINF:-1 tvg-id="AlborzTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Alborz_TV_logo.svg/960px-Alborz_TV_logo.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Alborz TV
+https://ncdn.telewebion.ir/alborz/live/playlist.m3u8
+#EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arax TV
+https://araxhls.wns.live/hls/stream.m3u8
