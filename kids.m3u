@@ -78,12 +78,15 @@ https://livestream.pbskids.org/out/v1/aa31792fee094b24b09045483f04d150/hast.m3u8
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=71
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SmurfTV.us@SD" tvg-logo="https://img.static-ottera.com/prod/tg/linear_channel/thumbnails/widescreen/EJIyYyBMkbW5UntSCAkGp-uLla7Z8KWHvDjyEqoOf3k.jpg" tvg-country="us" tvg-language="en",Smurf TV (480p)
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=4065
-#EXTINF:-1 tvg-id="SonicTV.us@SD" tvg-logo="https://i.imgur.com/TKhRlrR.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Sonic TV (720p)
-https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=16764
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="SonicTV.us@SD" tvg-logo="https://i.imgur.com/TKhRlrR.png" tvg-country="us" tvg-language="en",Sonic TV (720p)
+https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2260
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="StarzKidsFamily.us@East" tvg-logo="https://i.imgur.com/eE9FzEP.png" tvg-country="us" tvg-language="en",Starz Kids & Family (1080p)
 http://23.237.104.106:8080/USA_STARZ_FAMILY/index.m3u8
 #EXTINF:-1 tvg-id="TinyPop.uk@SD" tvg-logo="https://i.imgur.com/zCTf71x.png" tvg-country="uk" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Tiny Pop (1080p)
 https://amg01753-narrativeuk-amg01753c1-lg-gb-1830.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-tinypop-lggb/playlist.m3u8
+#EXTINF:-1 tvg-id="TomSingsTV.us@HD" tvg-logo="https://videocdn.bamboo-cloud.com/p/11389/sp/1138900/thumbnail/entry_id/0_osv1x0bp/version/100002/width/1920" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Tom Sings TV (1080p)
+#EXTVLCOPT:http-referrer=https://tomsings.bamboo-cloud.com/channel/6af043956f49ecefd30d7fd4
+https://vodcdn.bamboo-cloud.com/livehls/6af043956f49ecefd30d7fd4/master.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonamiAftermath.us@East" tvg-logo="https://i.imgur.com/aSjhZK7.png" tvg-country="us" tvg-language="en",Toonami Aftermath East (480p)
 http://api.toonamiaftermath.com:3000/est/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonamiAftermath.us@West" tvg-logo="https://i.imgur.com/aSjhZK7.png" tvg-country="us" tvg-language="en",Toonami Aftermath West (480p)
@@ -114,10 +117,13 @@ http://178.134.1.158:8081/babytime/index.m3u8
 https://stream.paroledivita.org/bejoy.m3u8
 #EXTINF:-1 tvg-id="Boing.it@HD" tvg-logo="https://i.imgur.com/rabKj9i.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Boing (1080p)
 https://boing.akamaized.net/6380392800112/eu-central-1/6284318116001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0Ijoib3dwbnN1LmVncmVzcy5haGc3NmwiLCJhY2NvdW50X2lkIjoiNjI4NDMxODExNjAwMSIsImVobiI6ImJvaW5nLmFrYW1haXplZC5uZXQiLCJpc3MiOiJibGl2ZS1wbGF5YmFjay1zb3VyY2UtYXBpIiwic3ViIjoicGF0aG1hcHRva2VuIiwiYXVkIjpbIjYyODQzMTgxMTYwMDEiXSwianRpIjoiNjM4MDM5MjgwMDExMiJ9.0RWQ0yZrauU0cHSnbpBYhgyRPeq1Lyw6nOn_fo7_cg0/playlist-hls.m3u8
+#EXTINF:-1 tvg-id="BoingPlus.it@SD" tvg-logo="https://i.imgur.com/STbfHwE.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Boing Plus
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
+http://95.141.36.9:8080/stream/181/index.m3u8
+#EXTINF:-1 tvg-id="Carousel.ru@SD" tvg-logo="https://i.imgur.com/4wmnx1W.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Carousel (576p)
+http://31.148.5.241/kanal_8/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Carousel.ru@Plus4" tvg-logo="https://i.imgur.com/4wmnx1W.png" tvg-country="ru" tvg-language="rus",Carousel (720p)
 http://185.37.150.46/Karusel/index.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Carousel.ru@SD" tvg-logo="https://i.imgur.com/4wmnx1W.png" tvg-country="ru" tvg-language="rus",Carousel SD (576p)
-http://stream.mcquack.net/120/index.m3u8
 #EXTINF:-1 tvg-id="CartoonClassics.ru@SD" tvg-logo="https://sales.planbkino.tv//b/c/471.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Cartoon Classics
 http://88.218.242.237:8001/Cartoon_Classics
 #EXTINF:-1 tvg-id="CartoonNetwork.it@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Cartoon Network
@@ -191,8 +197,8 @@ https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8
 https://ext.cdn.nashnet.tv/228.0.0.50/index.m3u8
 #EXTINF:-1 tvg-id="LogosTVKids.es@SD" tvg-logo="https://i.imgur.com/Kr3U3Ub.png" tvg-country="es" tvg-language="es" group-title="کودک و کارتون - اروپا",Logos TV Kids (720p)
 https://streamer1.streamhost.org/salive/logoskidsH/playlist.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Mama.ru@SD" tvg-logo="https://i.imgur.com/kmMIjjf.png" tvg-country="ru" tvg-language="rus",Mama (576p)
-http://stream.mcquack.net/79/index.m3u8
+#EXTINF:-1 tvg-id="Mama.ru@SD" tvg-logo="https://i.imgur.com/kmMIjjf.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Mama (576p)
+https://stream8.cinerama.uz/1244/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="Minimax.hu@SD" tvg-logo="https://www.tvmustra.hu/logok/csatikon/minimax3d.gif" tvg-country="hu" tvg-language="hun" group-title="کودک و کارتون - اروپا",Minimax
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/minimax_hun/index.m3u8
@@ -263,8 +269,9 @@ http://stream.mcquack.net/339/index.m3u8
 http://185.227.34.179:8080/jimjam/index.m3u8
 #EXTINF:-1 tvg-id="RadostMoya.ru@SD" tvg-logo="https://i.imgur.com/B5FA62o.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Radost Moya (576p)
 https://radm.mediacdn.ru/cdn/radost/playlist_sdhigh.m3u8
-#EXTINF:-1 tvg-name="Rai YoYo" tvg-logo="https://i.imgur.com/DRSa3ys.png" tvg-id="RaiYoyo.it" tvg-chno="43" tvg-country="it" group-title="کودک و کارتون - اروپا" tvg-language="ita",Rai Yoyo
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899&output=7&forceUserAgent=rainet/4.0.5
+#EXTINF:-1 tvg-id="RaiYoyo.it@SD" tvg-logo="https://i.imgur.com/9gCxiDy.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Rai Yoyo
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
+http://95.141.36.9:8080/stream/156/index.m3u8
 #EXTINF:-1 tvg-id="RiC.de@SD" tvg-logo="https://i.imgur.com/4wMZ8Em.png" tvg-country="de" tvg-language="de" group-title="کودک و کارتون - اروپا",RiC (1080p)
 https://rictv.iptv-playoutcenter.de/rictv/rictv-web/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Ryzhiy.ru@SD" tvg-logo="https://i.imgur.com/acrU2IE.png" tvg-country="ru" tvg-language="rus",Ryzhiy (576i)

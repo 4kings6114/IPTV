@@ -151,6 +151,8 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 https://live.presstv.co.uk/hls/ifilm2.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmPersian.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" tvg-country="ir" tvg-language="fa",iFilm Persian
 https://live.presstv.co.uk/hls/ifilmfa.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB TV2" tvg-logo="https://i.imgur.com/FKiTd3O.png" tvg-id="IRIB2.ir" tvg-chno="2" tvg-country="ir"  tvg-language="fa",IRIB TV2
+https://ncdn.telewebion.ir/tv2/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MetaFilmTV.ir@SD" tvg-logo="" group-title="فارسی - فیلم و سریال" tvg-country="ir" tvg-language="fa",Meta Film TV
 https://metafilmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="OXIRTV.ir@SD" tvg-logo="https://i.imgur.com/MGMhUDx.png" tvg-country="ir" tvg-language="fa",OXIR TV

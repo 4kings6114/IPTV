@@ -158,8 +158,8 @@ http://stream.mcquack.net/283/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BoomTV.ro@HD" tvg-logo="https://live.radioboom.ro/live-tv/poster.jpg" tvg-country="ro" tvg-language="ron",Boom TV (1080p)
 #EXTVLCOPT:http-referrer=https://tvboom.ro/
 https://tvboom.ro/live-tv/live.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGE.ru@SD" tvg-logo="https://i.imgur.com/qYObfrG.png" tvg-country="ru" tvg-language="rus",BRIDGE (576p)
-http://stream.mcquack.net/318/index.m3u8
+#EXTINF:-1 tvg-id="BRIDGE.ru@SD" tvg-logo="https://i.imgur.com/qYObfrG.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE (576p)
+http://178.134.1.158:8081/BRIDGE/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEClassic.ru@SD" tvg-logo="https://i.imgur.com/JJTQq81.png" tvg-country="ru" tvg-language="rus",BRIDGE Classic (576p)
 http://stream.mcquack.net/272/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEDeluxe.ru@HD" tvg-logo="https://i.imgur.com/EazL8w7.png" tvg-country="ru" tvg-language="rus",BRIDGE Deluxe HD (576p)
@@ -249,6 +249,8 @@ https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8
 http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="Lausitzwelle.de@SD" tvg-logo="https://i.imgur.com/4kYF4bK.png" tvg-country="de" tvg-language="de",Lausitzwelle (1080p)
 https://h056.video-stream-hosting.de/easycast11-live/_definst_/mp4:livestreamhd2/playlist.m3u8?ref=
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="LiraTV.es@SD" tvg-logo="https://i.imgur.com/hBswXYZ.png" tvg-country="es" tvg-language="ron",LiraTV (720p)
+https://cloud2.streaminglivehd.com:1936/liratv/liratv/playlist.m3u8
 #EXTINF:-1 tvg-id="LiveMusicChannel.ru@HD" tvg-logo="https://i.imgur.com/9qJkxV9.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",Live Music Channel (1080p)
 http://46.53.200.153:7777/play/Live_music_channel/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="M1.ua@SD" tvg-logo="https://i.imgur.com/wbRdUw8.png" tvg-country="ua" tvg-language="ukr",M1 (1080p)
@@ -411,7 +413,7 @@ https://5926fc9c7c5b2.streamlock.net/9108/9108/playlist.m3u8
 https://58f12ffd2447a.streamlock.net/KKTV01/livestream/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Libertà" tvg-logo="https://i.imgur.com/HRvPlf5.png" tvg-country="it" group-title="موزیک - اروپا",Radio Libertà
 https://router.xdevel.com/video0s975360-67/stream/playlist_dvr.m3u8
-#EXTINF:-1 tvg-name="Radio Montecarlo TV" tvg-logo="https://i.imgur.com/3TMMXmS.png" tvg-id="RadioMonteCarloTV.it" tvg-chno="67" tvg-country="it" group-title="موزیک - اروپا" tvg-language="ita",Radio Monte Carlo TV
+#EXTINF:-1 tvg-name="Radio Montecarlo TV" tvg-logo="https://i.imgur.com/by9XvWF.png" tvg-id="RadioMonteCarloTV.it" tvg-chno="67" tvg-country="it" group-title="موزیک - اروپا" tvg-language="ita",Radio Monte Carlo TV
 https://live02-seg.msr.cdn.mediaset.net/live/ch-bb/bb-clr.isml/index.m3u8
 #EXTINF:-1 tvg-name="Radio Monte Kronio Tv (R.M.K.)" tvg-logo="https://i.imgur.com/t0I2Shi.jpg" tvg-country="it" group-title="موزیک - اروپا",Radio Monte Kronio Tv (R.M.K.)
 https://648026e87a75e.streamlock.net/rmktv/rmktv/playlist.m3u8
