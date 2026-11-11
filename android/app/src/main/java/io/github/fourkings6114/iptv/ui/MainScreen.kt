@@ -39,6 +39,7 @@ import io.github.fourkings6114.iptv.core.normalizeSearch
 import io.github.fourkings6114.iptv.core.persianNumber
 import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
 import io.github.fourkings6114.iptv.data.isFileSource
+import io.github.fourkings6114.iptv.data.isBuiltInSource
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
@@ -132,9 +133,10 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                 }
                 if (pane == Pane.Channels) {
                     IconButton(onClick = {
-                        val current = source
+                        // Source info and settings are separate flows: never target a stale file row.
+                        val current = source?.takeIf { it.id == settings.sourceId }
                         if (current?.isFileSource == true) onImportFile(FileImportRequest(current.title, current.id)) else model.refresh()
-                    }, enabled = !busy && settings.loaded) {
+                    }, enabled = !busy && settings.loaded && (isBuiltInSource(settings.sourceId) || source?.id == settings.sourceId)) {
                         Icon(Icons.Default.Refresh, "به‌روزرسانی فهرست")
                     }
                 }

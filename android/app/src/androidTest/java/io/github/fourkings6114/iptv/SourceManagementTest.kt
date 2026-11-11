@@ -108,6 +108,7 @@ class SourceManagementTest {
                 await { dao.source(two.id)?.title == "آزمون دوم تازه" }
                 awaitIdle(scenario)
                 ui.onNodeWithText("بستن").performClick()
+                ui.onNodeWithText("کانال‌ها").performClick()
                 scenario.recreate()
                 awaitText("Only first")
                 assertEquals(one.id, app.settings.state.value.sourceId)
