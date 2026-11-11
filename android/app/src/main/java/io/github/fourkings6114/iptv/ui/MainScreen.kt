@@ -133,15 +133,20 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
-        snackbarHost = { SnackbarHost(snackbar) },
         bottomBar = {
-            NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
-                Pane.entries.forEach { item ->
-                    NavigationBarItem(
-                        selected = pane == item, onClick = { pane = item; query = "" },
-                        icon = { Icon(item.icon, contentDescription = null) },
-                        label = { Text(item.label, maxLines = 1) },
-                    )
+            // Reserve real layout space for notices. An overlaid Snackbar can
+            // otherwise intercept a freshly scrolled settings button's touch,
+            // especially immediately after saving an XMLTV URL on a small phone.
+            Column {
+                SnackbarHost(snackbar)
+                NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
+                    Pane.entries.forEach { item ->
+                        NavigationBarItem(
+                            selected = pane == item, onClick = { pane = item; query = "" },
+                            icon = { Icon(item.icon, contentDescription = null) },
+                            label = { Text(item.label, maxLines = 1) },
+                        )
+                    }
                 }
             }
         },

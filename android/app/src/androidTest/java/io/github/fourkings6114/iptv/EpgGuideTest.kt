@@ -2,6 +2,8 @@ package io.github.fourkings6114.iptv
 
 import android.net.Uri
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.ComposeTimeoutException
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -110,8 +112,8 @@ class EpgGuideTest {
                 await { app.settings.state.value.epgUrl == url }
                 awaitIdle(scenario)
                 assertEquals("Saving/reopening settings must not make an automatic guide request", 0, requests.size)
-                ui.onNodeWithText("دریافت راهنما").performScrollTo().performClick()
-                await { app.epg.cached(first, url) != null }
+                ui.onNodeWithText("دریافت راهنما").performScrollTo().assertIsEnabled().performClick()
+                awaitEpg(scenario, "Explicit guide download did not populate its cache") { app.epg.cached(first, url) != null }
                 awaitIdle(scenario)
                 ui.onNodeWithText("کانال‌ها").performClick()
                 awaitText(currentText())
@@ -203,8 +205,8 @@ class EpgGuideTest {
                 runBlocking { app.settings.allowHttp(true); app.settings.state.first { it.allowHttp } }
                 mode.set("slow")
                 ui.onNodeWithText("تنظیمات").performClick()
-                ui.onNodeWithText("دریافت راهنما").performScrollTo().performClick()
-                await { requests.size > beforeHttp }
+                ui.onNodeWithText("دریافت راهنما").performScrollTo().assertIsEnabled().performClick()
+                awaitEpg(scenario, "Explicit slow guide refresh did not reach the loopback server") { requests.size > beforeHttp }
                 ui.onNodeWithText("لغو دریافت راهنما").performScrollTo().performClick()
                 awaitIdle(scenario)
                 assertEquals(previous.programmes, runBlocking { app.epg.cached(id, url) }!!.programmes)
@@ -253,6 +255,17 @@ class EpgGuideTest {
     private fun model(activity: MainActivity) = ViewModelProvider(activity)[MainViewModel::class.java]
     private fun awaitText(text: String) = ui.waitUntil(20_000) { ui.onAllNodesWithText(text).fetchSemanticsNodes().isNotEmpty() }
     private fun await(check: suspend () -> Boolean) = ui.waitUntil(20_000) { runBlocking { check() } }
+    private fun awaitEpg(scenario: ActivityScenario<MainActivity>, message: String, check: suspend () -> Boolean) {
+        try { await(check)
+        } catch (timeout: ComposeTimeoutException) {
+            var state = ""
+            scenario.onActivity {
+                val model = model(it)
+                state = "sourceBusy=${model.busy.value}; guideBusy=${model.epgBusy.value}; error=${model.epgError.value}"
+            }
+            throw AssertionError("$message; $state", timeout)
+        }
+    }
     private fun awaitIdle(scenario: ActivityScenario<MainActivity>) {
         var busy = true
         ui.waitUntil(20_000) { scenario.onActivity { busy = model(it).epgBusy.value || model(it).busy.value }; !busy }

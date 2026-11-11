@@ -312,7 +312,13 @@ class PictureInPictureTest {
         // above the app. It steals focus and consumes Back; it is NOT a PiP or
         // runtime permission. Acknowledge only this known system education button.
         device.wait(Until.findObject(By.pkg("android").res("android", "ok").text("Got it")), 2_000)?.click()
-        waitFor("Fullscreen player must own input focus before a real UI action", 5_000) {
+        // WindowManager/Shell focus restoration can lag decoded frames and the
+        // expanded toolbar. Keep the actual focus postcondition, with a bounded
+        // transition wait; a late known tutorial is the only dialog acknowledged.
+        waitFor("Fullscreen player must own input focus before a real UI action", 15_000) {
+            if (!main { activity.hasWindowFocus() }) {
+                device.findObject(By.pkg("android").res("android", "ok").text("Got it"))?.click()
+            }
             main { activity.hasWindowFocus() }
         }
     }
