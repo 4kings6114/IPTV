@@ -1,0 +1,8 @@
+{
+  "format": 1,
+  "repository": "4kings6114/IPTV",
+  "branch": "arena/df65ff7a-iptv",
+  "application_id": "io.github.fourkings6114.iptv.trial",
+  "certificate_sha256": "eba2f7bdb4cfea267f4c30cedba8b2956f9c86ed3d5363512291fd3d6bd29c48",
+  "required_source": "legacy-cache-during-owner-setup"
+}

@@ -21,3 +21,15 @@ android/.idea/
 *.apk
 *.aab
 android-deliverables/
+
+# Generated synthetic emulator fixture; never shipped in the app APK
+android/app/src/androidTest/assets/stability.mp4
+
+# Owner recovery belongs outside the checkout, even when encrypted
+.iptv-hamrah-signing/
+owner-state.json
+*.age
+*.p12
+*.pfx
+private-verify-*/
+key-proof-*/

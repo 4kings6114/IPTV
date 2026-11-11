@@ -42,11 +42,21 @@ jobs:
             ~/.gradle/wrapper
           key: android-gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle.kts', 'android/gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: android-gradle-${{ runner.os }}-
-      - name: Preserve trial signing identity in the branch-scoped cache only
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+      - name: Select signing source without exposing its value
+        id: signing-source
+        env:
+          IPTV_SIGNING_KEYSTORE_B64: ${{ secrets.IPTV_SIGNING_KEYSTORE_B64 }}
+        run: python3 tools/prepare_trial_signing.py --inspect
+      - name: Restore legacy key ONLY while owner migration is pending
+        if: steps.signing-source.outputs.use_legacy_cache == 'true'
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/.android/debug.keystore
           key: android-trial-signing-v1
+      - name: Verify retained signer and load it outside all caches
+        env:
+          IPTV_SIGNING_KEYSTORE_B64: ${{ secrets.IPTV_SIGNING_KEYSTORE_B64 }}
+        run: python3 tools/prepare_trial_signing.py
       - name: Restore selected SDK packages
         id: sdk-cache
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -58,7 +68,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/setup_sdk.py
-      - name: Unit tests, Android lint, and installable debug APK
+      - name: Unit tests, Android lint, app and instrumentation compilation
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/ci_build.py
@@ -72,6 +82,9 @@ jobs:
           "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk > app/build/signature.txt
           "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging app/build/outputs/apk/debug/app-debug.apk > app/build/badging.txt
           python3 tools/package_trial.py
+      - name: Remove temporary signing material even on failure
+        if: always()
+        run: python3 tools/prepare_trial_signing.py --cleanup
       - name: Upload actual APK file without ZIP wrapping (not a public Release)
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:

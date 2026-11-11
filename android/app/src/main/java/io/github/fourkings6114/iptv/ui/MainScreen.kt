@@ -1,5 +1,8 @@
 package io.github.fourkings6114.iptv.ui
 
+import android.content.ClipData
+import android.content.ClipboardManager
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -10,7 +13,6 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -26,17 +28,27 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.delay
 import coil.compose.AsyncImage
 import io.github.fourkings6114.iptv.BuildConfig
 import io.github.fourkings6114.iptv.core.Channel
 import io.github.fourkings6114.iptv.core.normalizeSearch
 import io.github.fourkings6114.iptv.core.persianNumber
+import io.github.fourkings6114.iptv.core.sha256
+import io.github.fourkings6114.iptv.epg.NowNext
+import io.github.fourkings6114.iptv.epg.epgClock
 import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
-import io.github.fourkings6114.iptv.data.SOURCE_PRESETS
+import io.github.fourkings6114.iptv.data.isFileSource
+import io.github.fourkings6114.iptv.data.isBuiltInSource
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
@@ -49,8 +61,27 @@ private enum class Pane(val label: String, val icon: ImageVector) {
 }
 
 @Composable
-fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel) -> Unit) {
+fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, onPlay: (Channel) -> Unit) {
+    val crashReport by model.crashReport.collectAsStateWithLifecycle()
+    var showCrashReport by rememberSaveable { mutableStateOf(true) }
+    var crashCopied by rememberSaveable { mutableStateOf(false) }
     val settings by model.settings.collectAsStateWithLifecycle()
+    val epg by model.epg.collectAsStateWithLifecycle()
+    val epgBusy by model.epgBusy.collectAsStateWithLifecycle()
+    val epgError by model.epgError.collectAsStateWithLifecycle()
+    var editEpg by remember { mutableStateOf(false) }
+    var now by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(lifecycle) {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            while (true) { now = System.currentTimeMillis(); delay(30_000) }
+        }
+    }
+    val activeEpg = epg.takeIf { it.sourceId == settings.sourceId && it.feedKey == sha256(settings.epgUrl) }
+    val guide = activeEpg?.guide?.takeIf { it.usable(now) }
+    val guideChannels = remember(guide, activeEpg?.idsByChannel) {
+        activeEpg?.idsByChannel?.values?.count { guide?.byChannel?.containsKey(it) == true } ?: 0
+    }
     val channels by model.channels.collectAsStateWithLifecycle()
     val favorites by model.favorites.collectAsStateWithLifecycle()
     val favoriteIds by model.favoriteIds.collectAsStateWithLifecycle()
@@ -63,8 +94,10 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
     var pane by rememberSaveable { mutableStateOf(Pane.Channels) }
     var query by rememberSaveable { mutableStateOf("") }
     var group by remember(settings.sourceId) { mutableStateOf<String?>(null) }
-    var chooseSource by remember { mutableStateOf(false) }
-    var importUrl by remember { mutableStateOf(false) }
+    var chooseSource by rememberSaveable { mutableStateOf(false) }
+    var sourceImportIsFile by rememberSaveable { mutableStateOf<Boolean?>(null) }
+    var renameSourceId by rememberSaveable { mutableStateOf<String?>(null) }
+    var deleteSourceId by rememberSaveable { mutableStateOf<String?>(null) }
     var httpConfirm by remember { mutableStateOf(false) }
     var pendingHttpChannel by remember { mutableStateOf<Channel?>(null) }
     var licenses by remember { mutableStateOf(false) }
@@ -100,15 +133,20 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
-        snackbarHost = { SnackbarHost(snackbar) },
         bottomBar = {
-            NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
-                Pane.entries.forEach { item ->
-                    NavigationBarItem(
-                        selected = pane == item, onClick = { pane = item; query = "" },
-                        icon = { Icon(item.icon, contentDescription = null) },
-                        label = { Text(item.label, maxLines = 1) },
-                    )
+            // Reserve real layout space for notices. An overlaid Snackbar can
+            // otherwise intercept a freshly scrolled settings button's touch,
+            // especially immediately after saving an XMLTV URL on a small phone.
+            Column {
+                SnackbarHost(snackbar)
+                NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
+                    Pane.entries.forEach { item ->
+                        NavigationBarItem(
+                            selected = pane == item, onClick = { pane = item; query = "" },
+                            icon = { Icon(item.icon, contentDescription = null) },
+                            label = { Text(item.label, maxLines = 1) },
+                        )
+                    }
                 }
             }
         },
@@ -124,7 +162,11 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                     Text("نسخهٔ آزمایشی · پخش مستقیم از منبع", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 if (pane == Pane.Channels) {
-                    IconButton(onClick = { if (settings.sourceId == "file") onImportFile() else model.refresh() }, enabled = !busy) {
+                    IconButton(onClick = {
+                        // Source info and settings are separate flows: never target a stale file row.
+                        val current = source?.takeIf { it.id == settings.sourceId }
+                        if (current?.isFileSource == true) onImportFile(FileImportRequest(current.title, current.id)) else model.refresh()
+                    }, enabled = !busy && settings.loaded && (isBuiltInSource(settings.sourceId) || source?.id == settings.sourceId)) {
                         Icon(Icons.Default.Refresh, "به‌روزرسانی فهرست")
                     }
                 }
@@ -133,6 +175,11 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
             if (error != null) {
                 Surface(color = MaterialTheme.colorScheme.errorContainer, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), shape = RoundedCornerShape(12.dp)) {
                     Text(error.orEmpty(), Modifier.padding(14.dp), style = MaterialTheme.typography.bodySmall)
+                }
+            }
+            if (epgError != null && pane != Pane.Settings) {
+                Surface(color = MaterialTheme.colorScheme.errorContainer, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), shape = RoundedCornerShape(12.dp)) {
+                    Text(epgError.orEmpty(), Modifier.padding(14.dp), style = MaterialTheme.typography.bodySmall)
                 }
             }
             if (pane == Pane.Settings) {
@@ -147,36 +194,57 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                             if (info.skipped > 0) Text("${persianNumber(info.skipped)} ورودی نامعتبر کنار گذاشته شد.", style = MaterialTheme.typography.bodySmall)
                         }
                         Text("زمان بالا مربوط به دریافت فهرست است، نه تأیید سلامت پخش.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        OutlinedButton(onClick = { chooseSource = true }, enabled = !busy, modifier = Modifier.fillMaxWidth()) { Text("تغییر فهرست") }
+                        OutlinedButton(onClick = { chooseSource = true }, enabled = !busy && settings.loaded, modifier = Modifier.fillMaxWidth()) { Text("مدیریت فهرست‌ها") }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            OutlinedButton(onClick = { importUrl = true }, enabled = !busy, modifier = Modifier.weight(1f)) { Text("ورود لینک M3U") }
-                            OutlinedButton(onClick = onImportFile, enabled = !busy, modifier = Modifier.weight(1f)) { Text("انتخاب فایل") }
+                            OutlinedButton(onClick = { sourceImportIsFile = false }, enabled = !busy && settings.loaded, modifier = Modifier.weight(1f)) { Text("افزودن لینک") }
+                            OutlinedButton(onClick = { sourceImportIsFile = true }, enabled = !busy && settings.loaded, modifier = Modifier.weight(1f)) { Text("افزودن فایل") }
                         }
                         Text("پروفایل کم‌مصرف، فهرستی از نسخه‌های انتخاب‌شده است؛ ویدئو را تبدیل نمی‌کند و مصرف ثابت را تضمین نمی‌کند.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                     SettingsCard {
-                        SettingToggle("اجازهٔ HTTP بدون رمزنگاری", "پیش‌فرض خاموش؛ روی تمام درخواست‌های بعدی رسانه و فهرست اعمال می‌شود.", settings.allowHttp) { allow ->
+                        EpgSettingsContent(source?.takeIf { it.id == settings.sourceId }?.title ?: "در حال آماده‌سازی…",
+                            settings.epgUrl.isNotBlank(), guide, guideChannels, now, epgBusy, epgError,
+                            enabled = !busy && settings.loaded && source?.id == settings.sourceId,
+                            onConfigure = { editEpg = true }, onRefresh = model::refreshEpg, onCancel = model::cancelEpg)
+                    }
+                    SettingsCard {
+                        SettingToggle("اجازهٔ HTTP بدون رمزنگاری", "پیش‌فرض خاموش؛ روی درخواست‌های بعدی رسانه، فهرست و راهنما اعمال می‌شود.", settings.allowHttp) { allow ->
                             if (allow) httpConfirm = true else model.allowHttp(false)
                         }
                         HorizontalDivider()
                         SettingToggle("نمایش لوگوها", "دریافت تصویر از میزبان لوگوی هر کانال؛ ممکن است ترافیک مصرف کند.", settings.showLogos, model::showLogos)
                     }
                     SettingsCard {
+                        Text("پنجرهٔ شناور پخش", style = MaterialTheme.typography.titleMedium)
+                        if (context.packageManager.hasSystemFeature(android.content.pm.PackageManager.FEATURE_PICTURE_IN_PICTURE)) {
+                            SettingToggle("شناور شدن با دکمهٔ Home", "پیش‌فرض خاموش؛ فقط پس از شروع تصویر و هنگام پخش. دکمهٔ «شناور» داخل پلیر مستقل از این گزینه کار می‌کند.", settings.autoPictureInPicture, model::automaticPictureInPicture)
+                            Text("پنجره با کنترل‌های خود اندروید مکث، ادامه، بزرگ یا بسته می‌شود. بستن آن پخش را متوقف می‌کند؛ بازگشت به فهرست هم پنجرهٔ شناور را فعال نمی‌کند.", style = MaterialTheme.typography.bodySmall)
+                        } else {
+                            Text("این دستگاه پشتیبانی تصویر در تصویر را اعلام نکرده است؛ پخش تمام‌صفحه همچنان قابل استفاده است.", style = MaterialTheme.typography.bodySmall)
+                        }
+                    }
+                    SettingsCard {
                         Text("اطلاعات فقط روی این گوشی", style = MaterialTheme.typography.titleMedium)
                         Text("علاقه‌مندی‌ها، سابقه و لینک‌های واردشده در فضای خصوصی برنامه ذخیره می‌شوند. حساب، تبلیغات، تحلیل‌گر و همگام‌سازی نداریم؛ پشتیبان‌گیری برنامه غیرفعال است.", style = MaterialTheme.typography.bodySmall)
-                        Text("برای دریافت فهرست، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
+                        Text("برای دریافت فهرست، راهنما، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
                         OutlinedButton(onClick = { clearHistory = true }) { Text("پاک‌کردن سابقهٔ پخش") }
+                    }
+                    if (crashReport != null) SettingsCard {
+                        Text("گزارش بسته‌شدن قبلی", style = MaterialTheme.typography.titleMedium)
+                        Text("فقط روی همین گوشی نگه‌داری می‌شود و خودکار ارسال نمی‌شود.", style = MaterialTheme.typography.bodySmall)
+                        TextButton(onClick = { showCrashReport = true }) { Text("مشاهده و کپی گزارش کرش") }
+                        TextButton(onClick = { model.clearCrashReport() }) { Text("پاک‌کردن گزارش کرش") }
                     }
                     SettingsCard {
                         Text("دربارهٔ این نسخه", style = MaterialTheme.typography.titleMedium)
-                        Text("نسخهٔ ${BuildConfig.VERSION_NAME} · اندروید ۸ به بالا\nموتور: Media3 · بدون FFmpeg و VLC\nبا خروج از صفحهٔ پخش، پخش متوقف می‌شود.", style = MaterialTheme.typography.bodySmall)
+                        Text("نسخهٔ ${BuildConfig.VERSION_NAME} · اندروید ۸ به بالا\nموتور: Media3 · بدون FFmpeg و VLC\nپخش فقط در صفحهٔ پلیر یا پنجرهٔ شناور ادامه دارد؛ پخش صوتیِ مخفی و سرویس پس‌زمینه نداریم.", style = MaterialTheme.typography.bodySmall)
                         Text("این برنامه مالک یا میزبان محتوای کانال‌ها نیست. عمومی‌بودن یک لینک، مجوز استفاده از محتوای آن را ثابت نمی‌کند؛ فقط از منابع مجاز استفاده کن. پخش به منبع، اتصال و قابلیت‌های گوشی وابسته است.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         TextButton(onClick = { licenses = true }) { Text("کتابخانه‌ها و مجوزها") }
                     }
                 }
             } else {
                 if (pane == Pane.Channels) {
-                    TextButton(onClick = { chooseSource = true }, enabled = !busy, modifier = Modifier.padding(horizontal = 12.dp)) {
+                    TextButton(onClick = { chooseSource = true }, enabled = !busy && settings.loaded, modifier = Modifier.padding(horizontal = 12.dp)) {
                         Text(source?.title ?: "آماده‌سازی فهرست…", maxLines = 1, overflow = TextOverflow.Ellipsis)
                         Spacer(Modifier.width(8.dp))
                         Icon(Icons.Default.ArrowDropDown, null)
@@ -199,7 +267,19 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                         }
                     }
                 }
-                Text("${persianNumber(visible.size)} کانال", Modifier.padding(horizontal = 20.dp, vertical = 8.dp), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                if (pane == Pane.Channels) {
+                    Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text("${persianNumber(visible.size)} کانال" + when {
+                            epgBusy -> " · دریافت راهنما…"
+                            guide != null -> if (guide.stale(now)) " · راهنمای قدیمی، ساعت محلی" else " · برنامه‌ها به ساعت محلی"
+                            settings.epgUrl.isNotBlank() -> " · راهنما را دریافت کن"
+                            else -> ""
+                        }, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        if (settings.epgUrl.isNotBlank()) IconButton(onClick = model::refreshEpg, enabled = !epgBusy && !busy) {
+                            Icon(Icons.Default.Refresh, "به‌روزرسانی راهنما")
+                        } else TextButton(onClick = { pane = Pane.Settings }) { Text("تنظیم راهنما") }
+                    }
+                } else Text("${persianNumber(visible.size)} کانال", Modifier.padding(horizontal = 20.dp, vertical = 8.dp), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 if (visible.isEmpty() && !busy) {
                     Box(Modifier.fillMaxWidth().weight(1f).padding(32.dp), contentAlignment = Alignment.Center) {
                         Text(when {
@@ -222,7 +302,8 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                             }
                         }
                         items(visible, key = { it.id }) { channel ->
-                            ChannelRow(channel, channel.id in favoriteIds, settings.showLogos,
+                            val programme = activeEpg?.idsByChannel?.get(channel.id)?.let { guide?.at(it, now) } ?: NowNext()
+                            ChannelRow(channel, channel.id in favoriteIds, settings.showLogos, programme, now,
                                 onPlay = { openChannel(channel) }, onFavorite = { model.toggleFavorite(channel.id) })
                         }
                     }
@@ -231,37 +312,68 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
         }
     }
 
-    if (chooseSource) {
-        val extra = availableSources.filter { item -> SOURCE_PRESETS.none { it.id == item.id } }
-        AlertDialog(
-            onDismissRequest = { chooseSource = false }, title = { Text("فهرست کانال‌ها") },
-            text = {
-                Column(Modifier.verticalScroll(rememberScrollState())) {
-                    (SOURCE_PRESETS.map { it.id to it.title } + extra.map { it.id to it.title }).forEach { (id, title) ->
-                        Row(Modifier.fillMaxWidth().clickable(enabled = !busy) { model.selectSource(id); chooseSource = false }.padding(vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-                            RadioButton(selected = settings.sourceId == id, onClick = null)
-                            Spacer(Modifier.width(8.dp)); Text(title, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
-                    Text("فهرست‌های آنلاین از مخزن پروژه دریافت می‌شوند. این انتخاب، صحت پخش یا حق دسترسی به محتوا را تضمین نمی‌کند.", style = MaterialTheme.typography.bodySmall)
-                }
-            },
-            confirmButton = { TextButton(onClick = { chooseSource = false }) { Text("بستن") } },
-        )
+    if (editEpg) {
+        val current = source?.takeIf { it.id == settings.sourceId }
+        if (current != null) EpgUrlDialog(current.id, current.title, settings.epgUrl,
+            onSave = { url -> model.configureEpg(current.id, url); editEpg = false }, onDismiss = { editEpg = false })
+        else LaunchedEffect(Unit) { editEpg = false }
     }
-    if (importUrl) {
-        var url by remember { mutableStateOf("") }
+    if (showCrashReport && crashReport != null) {
         AlertDialog(
-            onDismissRequest = { importUrl = false }, title = { Text("ورود لینک فهرست M3U") },
+            onDismissRequest = { showCrashReport = false },
+            title = { Text("گزارش اشکال برنامه") },
             text = {
                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text("لینک فهرست کانال‌ها را وارد کن، نه آدرس یک استریم. لینک فقط روی گوشی ذخیره می‌شود؛ اطلاعات حساب را برای کسی نفرست.", style = MaterialTheme.typography.bodySmall)
-                    OutlinedTextField(value = url, onValueChange = { url = it }, singleLine = true, label = { Text("HTTP / HTTPS") }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri))
+                    Text("یک خطای ثبت‌شده از اجرای قبلی موجود است. گزارش فقط شامل کلاس خطا، محل کد و مشخصات فنی است؛ متن خطا، آدرس و هدرها ثبت نمی‌شوند. می‌توانی آن را پس از بررسی دستی کپی کنی؛ چیزی خودکار ارسال نمی‌شود.", style = MaterialTheme.typography.bodySmall)
+                    Text(crashReport.orEmpty(), Modifier.heightIn(max = 240.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall.copy(textDirection = TextDirection.Ltr))
                 }
             },
-            confirmButton = { TextButton(enabled = url.isNotBlank(), onClick = { model.importUrl(url); importUrl = false; pane = Pane.Channels }) { Text("دریافت") } },
-            dismissButton = { TextButton(onClick = { importUrl = false }) { Text("انصراف") } },
+            confirmButton = { TextButton(onClick = {
+                context.getSystemService(ClipboardManager::class.java).setPrimaryClip(ClipData.newPlainText("IPTV crash report", crashReport.orEmpty()))
+                crashCopied = true
+            }) { Text(if (crashCopied) "کپی شد" else "کپی گزارش کرش") } },
+            dismissButton = { TextButton(onClick = { showCrashReport = false }) { Text("بستن") } },
         )
+    }
+    if (chooseSource) {
+        SourcesDialog(
+            sources = availableSources, selectedId = settings.sourceId, busy = busy, error = error,
+            onSelect = { model.selectSource(it); chooseSource = false; pane = Pane.Channels },
+            onRefresh = { item ->
+                if (item.isFileSource) onImportFile(FileImportRequest(item.title, item.id)) else model.refreshSource(item.id)
+            },
+            onRename = { chooseSource = false; renameSourceId = it },
+            onDelete = { chooseSource = false; deleteSourceId = it },
+            onAddUrl = { chooseSource = false; sourceImportIsFile = false },
+            onAddFile = { chooseSource = false; sourceImportIsFile = true },
+            onDismiss = { chooseSource = false },
+        )
+    }
+    sourceImportIsFile?.let { isFile ->
+        SourceImportDialog(
+            isFile = isFile,
+            onSubmit = { title, url ->
+                sourceImportIsFile = null
+                if (isFile) onImportFile(FileImportRequest(title)) else { model.importUrl(url, title); pane = Pane.Channels }
+            },
+            onDismiss = { sourceImportIsFile = null },
+        )
+    }
+    renameSourceId?.let { id ->
+        availableSources.find { it.id == id }?.let { item ->
+            SourceRenameDialog(item,
+                onSave = { model.renameSource(id, it); renameSourceId = null; chooseSource = true },
+                onDismiss = { renameSourceId = null; chooseSource = true },
+            )
+        }
+    }
+    deleteSourceId?.let { id ->
+        availableSources.find { it.id == id }?.let { item ->
+            SourceDeleteDialog(item,
+                onDelete = { model.deleteSource(id); deleteSourceId = null; chooseSource = true },
+                onDismiss = { deleteSourceId = null; chooseSource = true },
+            )
+        }
     }
     if (httpConfirm) {
         AlertDialog(
@@ -288,7 +400,8 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
 }
 
 @Composable
-private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, onPlay: () -> Unit, onFavorite: () -> Unit) {
+private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, programmes: NowNext, now: Long,
+                       onPlay: () -> Unit, onFavorite: () -> Unit) {
     Surface(onClick = onPlay, shape = RoundedCornerShape(16.dp), color = MaterialTheme.colorScheme.surface) {
         Row(Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Box(Modifier.size(48.dp).clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.surfaceVariant), contentAlignment = Alignment.Center) {
@@ -299,6 +412,12 @@ private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, o
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(channel.name, style = MaterialTheme.typography.bodyLarge, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(channel.group, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                programmes.current?.let { Text("اکنون · ${epgClock(it.start, now)} · ${it.title}",
+                    style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.primary) }
+                programmes.next?.let { Text("بعدی · ${epgClock(it.start, now)} · ${it.title}",
+                    style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant) }
                 if (channel.isCleartext) Text("HTTP · بدون رمزنگاری", style = MaterialTheme.typography.labelSmall, color = Color(0xFFFFCF80))
             }
             IconButton(onClick = onFavorite) { Icon(if (favorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, if (favorite) "حذف از علاقه‌مندی‌ها" else "افزودن به علاقه‌مندی‌ها", tint = if (favorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant) }
@@ -321,6 +440,7 @@ private fun SettingToggle(title: String, description: String, checked: Boolean, 
             Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Spacer(Modifier.width(12.dp))
-        Switch(checked = checked, onCheckedChange = onChange)
+        Switch(checked = checked, onCheckedChange = onChange,
+            modifier = Modifier.semantics { contentDescription = title })
     }
 }

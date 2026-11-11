@@ -1,13 +1,18 @@
 package io.github.fourkings6114.iptv.player
 
+import android.app.PictureInPictureUiState
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.Toast
+import androidx.activity.addCallback
+import androidx.annotation.RequiresApi
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -25,11 +30,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
@@ -40,6 +46,7 @@ import androidx.media3.common.MimeTypes
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.Tracks
+import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.okhttp.OkHttpDataSource
 import androidx.media3.exoplayer.DefaultRenderersFactory
@@ -55,6 +62,8 @@ import io.github.fourkings6114.iptv.network.NetworkClients
 import io.github.fourkings6114.iptv.ui.IPTVTheme
 import java.net.URI
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import okhttp3.HttpUrl.Companion.toHttpUrl
@@ -75,6 +84,10 @@ class PlaybackActivity : ComponentActivity() {
     private var resumePosition = C.TIME_UNSET
     private var wasPlaying = true
     private var historyRecorded = false
+    private var started = false
+    private var videoReady by mutableStateOf(false)
+    private var channelJob: Job? = null
+    private lateinit var pip: PlaybackPipController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,6 +99,16 @@ class PlaybackActivity : ComponentActivity() {
             hide(WindowInsetsCompat.Type.systemBars())
             systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
+        resumePosition = savedInstanceState?.getLong("playback_position", C.TIME_UNSET) ?: C.TIME_UNSET
+        wasPlaying = savedInstanceState?.getBoolean("play_when_ready", true) ?: true
+        historyRecorded = savedInstanceState?.getBoolean("history_recorded", false) ?: false
+        pip = PlaybackPipController(
+            this, { player }, { videoView }, ::pipEligibility,
+            { app.settings.state.value.let { it.loaded && it.autoPictureInPicture } },
+            { Toast.makeText(this, "پنجرهٔ شناور باز نشد؛ اجازهٔ تصویر در تصویر را در تنظیمات اندروید بررسی کن. پخش فعلی ادامه دارد.", Toast.LENGTH_LONG).show() },
+        )
+        onBackPressedDispatcher.addCallback(this) { pip.finishPlayback() }
+        lifecycleScope.launch { app.settings.state.collect { pip.update() } }
         setContent {
             IPTVTheme {
                 Box(Modifier.fillMaxSize().background(Color.Black)) {
@@ -100,27 +123,32 @@ class PlaybackActivity : ComponentActivity() {
                                 setShowShuffleButton(false)
                                 layoutDirection = android.view.View.LAYOUT_DIRECTION_LTR
                                 videoView = this
+                                addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> pip.update() }
                             }
                         },
                         update = { view ->
                             view.player = player
-                            view.resizeMode = if (zoom) AspectRatioFrameLayout.RESIZE_MODE_ZOOM else AspectRatioFrameLayout.RESIZE_MODE_FIT
+                            view.useController = !pip.hideControls
+                            if (pip.hideControls) view.hideController()
+                            view.resizeMode = if (zoom && !pip.hideControls) AspectRatioFrameLayout.RESIZE_MODE_ZOOM else AspectRatioFrameLayout.RESIZE_MODE_FIT
                         },
                         modifier = Modifier.fillMaxSize(),
                     )
-                    if (buffering && failure == null) {
+                    if (!pip.hideControls && buffering && failure == null) {
                         Column(Modifier.align(Alignment.Center).background(Color.Black.copy(alpha = 0.8f), RoundedCornerShape(16.dp)).padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             CircularProgressIndicator()
                             Text("در حال اتصال به رسانه…", color = Color.White)
                         }
                     }
-                    Row(Modifier.fillMaxWidth().background(Color.Black.copy(alpha = 0.7f)).safeDrawingPadding().padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                        IconButton(onClick = { finish() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "بازگشت به کانال‌ها", tint = Color.White) }
+                    if (!pip.hideControls) Row(Modifier.fillMaxWidth().background(Color.Black.copy(alpha = 0.7f)).safeDrawingPadding().padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                        IconButton(onClick = { pip.finishPlayback() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "بازگشت به کانال‌ها", tint = Color.White) }
                         Text(channel?.name ?: "پخش کانال", Modifier.weight(1f), color = Color.White, maxLines = 2, style = MaterialTheme.typography.titleSmall)
+                        TextButton(onClick = { pip.enter() }, enabled = pip.available,
+                            modifier = Modifier.semantics { contentDescription = "پخش در پنجرهٔ شناور" }) { Text("شناور") }
                         TextButton(onClick = { zoom = !zoom }) { Text(if (zoom) "نمای کامل" else "برش تصویر") }
                         TextButton(onClick = ::rotateScreen) { Text("چرخش") }
                     }
-                    failure?.let { problem ->
+                    if (!pip.hideControls) failure?.let { problem ->
                         Surface(
                             color = MaterialTheme.colorScheme.surface,
                             shape = RoundedCornerShape(20.dp),
@@ -142,14 +170,39 @@ class PlaybackActivity : ComponentActivity() {
                 }
             }
         }
-        lifecycleScope.launch {
+        loadChannel(resetPlayback = false)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        // singleTask reuses/expands an existing PiP instead of creating a second player.
+        if (intent.getStringExtra(CHANNEL_ID) != channel?.id || failure != null) loadChannel(resetPlayback = true)
+    }
+
+    private fun loadChannel(resetPlayback: Boolean) {
+        channelJob?.cancel()
+        if (resetPlayback) {
+            releasePlayer()
+            channel = null
+            resumePosition = C.TIME_UNSET
+            wasPlaying = true
+            historyRecorded = false
+            formatInfo = ""
+        }
+        buffering = true
+        failure = null
+        val id = intent.getStringExtra(CHANNEL_ID)
+        channelJob = lifecycleScope.launch {
             try {
                 app.settings.state.first { it.loaded }
-                channel = intent.getStringExtra(CHANNEL_ID)?.let { app.database.channels().channel(it)?.channel() }
+                val loaded = id?.let { app.database.channels().channel(it)?.channel() }
+                coroutineContext.ensureActive()
+                channel = loaded
                 if (channel == null) {
                     buffering = false
                     failure = PlaybackFailure("اطلاعات این کانال در حافظهٔ برنامه پیدا نشد. به فهرست برگرد و دوباره انتخاب کن.", "CHANNEL_NOT_FOUND")
-                } else if (lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) startPlayer()
+                } else if (started) startPlayer()
             } catch (cancelled: CancellationException) { throw cancelled
             } catch (_: Exception) {
                 buffering = false
@@ -160,6 +213,7 @@ class PlaybackActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
+        started = true
         if (channel != null && player == null) startPlayer()
     }
 
@@ -173,12 +227,15 @@ class PlaybackActivity : ComponentActivity() {
 
     private fun createPlayer() {
         val item = channel ?: return
-        if (player != null || !lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) return
+        if (player != null || !started) return
         failure = null
         copied = false
         buffering = true
+        // Capture the application-owned settings, not this Activity's app getter, in
+        // the client retained briefly by application-lifetime background cleanup.
+        val playbackSettings = app.settings
         val client = NetworkClients.create(
-            allowHttp = { app.settings.state.value.allowHttp },
+            allowHttp = { playbackSettings.state.value.allowHttp },
             origin = item.url.toHttpUrl(), headers = item.headers, playback = true,
         )
         playbackClient = client
@@ -193,17 +250,22 @@ class PlaybackActivity : ComponentActivity() {
         engine.setHandleAudioBecomingNoisy(true)
         engine.addListener(object : Player.Listener {
             override fun onPlaybackStateChanged(state: Int) {
+                if (player !== engine) return
                 buffering = state == Player.STATE_BUFFERING || state == Player.STATE_IDLE && failure == null
                 if (state == Player.STATE_ENDED) {
                     failure = PlaybackFailure("پخش این رسانه به پایان رسید. می‌توانی دوباره تلاش کنی یا به فهرست برگردی.", "PLAYBACK_ENDED")
                 }
+                pip.update()
             }
             override fun onPlayerError(error: PlaybackException) {
+                if (player !== engine) return
                 failure = describePlaybackError(error)
                 buffering = false
                 window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                pip.update()
             }
             override fun onIsPlayingChanged(isPlaying: Boolean) {
+                if (player !== engine) return
                 if (isPlaying) {
                     window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
                     if (!historyRecorded) {
@@ -211,8 +273,21 @@ class PlaybackActivity : ComponentActivity() {
                         lifecycleScope.launch { app.database.channels().recordPlayback(item.id) }
                     }
                 } else window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                pip.update()
+            }
+            override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                if (player === engine) pip.update()
+            }
+            override fun onVideoSizeChanged(videoSize: VideoSize) {
+                if (player === engine) pip.update()
+            }
+            override fun onRenderedFirstFrame() {
+                if (player !== engine) return
+                videoReady = true
+                pip.update()
             }
             override fun onTracksChanged(tracks: Tracks) {
+                if (player !== engine) return
                 val selected = tracks.groups.flatMap { group ->
                     (0 until group.length).filter { group.isTrackSelected(it) }.map { group.getTrackFormat(it) }
                 }
@@ -245,16 +320,70 @@ class PlaybackActivity : ComponentActivity() {
             resumePosition = if (engine.isCurrentMediaItemLive) C.TIME_UNSET else engine.currentPosition
             wasPlaying = engine.playWhenReady
         }
-        videoView?.player = null
-        engine?.release()
-        player = null
-        playbackClient?.let { client ->
-            client.dispatcher.cancelAll()
-            client.connectionPool.evictAll()
-            client.dispatcher.executorService.shutdown()
-        }
+        // Detach ownership on main before asynchronous cleanup; a retry/resume can now
+        // create a new client without the outgoing cleanup ever touching its resources.
+        val outgoingClient = playbackClient
         playbackClient = null
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        player = null
+        videoReady = false
+        videoView?.player = null
+        try {
+            // Media3/PlayerView must still be accessed/released on their main looper.
+            engine?.release()
+        } finally {
+            // Conscrypt can write TLS close_notify in cancelAll/evictAll. Never do it
+            // on main, or in lifecycleScope (which is cancelled during onDestroy).
+            outgoingClient?.let { app.playbackClientCleanup.release(it) }
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            if (::pip.isInitialized) pip.update()
+        }
+    }
+
+    private fun pipEligibility(): PipEligibility {
+        val engine = player
+        return PipEligibility(
+            supported = ::pip.isInitialized && pip.supported,
+            started = started,
+            videoReady = videoReady && (engine?.videoSize?.width ?: 0) > 0 && (engine?.videoSize?.height ?: 0) > 0,
+            failed = failure != null || engine?.playerError != null,
+            finishing = isFinishing || isDestroyed,
+            playWhenReady = engine?.playWhenReady == true && engine.playbackState in listOf(Player.STATE_READY, Player.STATE_BUFFERING),
+        )
+    }
+
+    override fun onResume() {
+        super.onResume()
+        pip.onResume()
+    }
+
+    override fun onUserLeaveHint() {
+        super.onUserLeaveHint()
+        pip.onUserLeaveHint()
+    }
+
+    override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
+        pip.onModeChanged(isInPictureInPictureMode)
+        if (!isInPictureInPictureMode) WindowCompat.getInsetsController(window, window.decorView).hide(WindowInsetsCompat.Type.systemBars())
+    }
+
+    @RequiresApi(31)
+    override fun onPictureInPictureUiStateChanged(pipState: PictureInPictureUiState) {
+        super.onPictureInPictureUiStateChanged(pipState)
+        if (Build.VERSION.SDK_INT >= 35 && pipState.isTransitioningToPip) pip.onTransitionStarted()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        pip.update()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        val engine = player
+        outState.putLong("playback_position", if (engine == null) resumePosition else if (engine.isCurrentMediaItemLive) C.TIME_UNSET else engine.currentPosition)
+        outState.putBoolean("play_when_ready", engine?.playWhenReady ?: wasPlaying)
+        outState.putBoolean("history_recorded", historyRecorded)
+        super.onSaveInstanceState(outState)
     }
 
     private fun rotateScreen() {
@@ -269,12 +398,16 @@ class PlaybackActivity : ComponentActivity() {
     }
 
     override fun onStop() {
+        // Visible PiP is paused/STARTED, not stopped. A real stop (including PiP
+        // dismissal) ALWAYS releases; never keep invisible/background audio alive.
+        started = false
         releasePlayer()
         super.onStop()
     }
 
     override fun onDestroy() {
         releasePlayer()
+        pip.dispose()
         videoView = null
         super.onDestroy()
     }

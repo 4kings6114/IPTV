@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("com.google.devtools.ksp")
+    id("androidx.room")
 }
 
 android {
@@ -13,8 +14,26 @@ android {
         applicationId = "io.github.fourkings6114.iptv"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 6
+        versionName = "0.1.5"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    // CI loads the retained identity into RUNNER_TEMP, never a new debug key.
+    // Fail before AGP could silently generate its default on a misconfigured job.
+    val trialKeystore = providers.environmentVariable("IPTV_TRIAL_KEYSTORE").orNull
+    if (providers.environmentVariable("GITHUB_ACTIONS").orNull == "true") {
+        require(!trialKeystore.isNullOrBlank()) { "Verified trial signing setup is required in CI; no replacement identity is allowed" }
+    }
+    // Local development may use a different default debug identity, NOT an update
+    // for the delivered APK. Production release signing remains separate.
+    trialKeystore?.let { path ->
+        signingConfigs.getByName("debug").apply {
+            storeFile = file(path)
+            storeType = "JKS"
+            keyAlias = "androiddebugkey"
+            storePassword = "android"
+            keyPassword = "android"
+        }
     }
     buildTypes {
         debug {
@@ -45,7 +64,9 @@ android {
 
 kotlin { compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17) } }
 
-ksp { arg("room.schemaLocation", "$projectDir/schemas") }
+// The Room plugin declares schema exports as task inputs/outputs. A bare KSP
+// argument loses these files on FROM-CACHE builds and cannot verify upgrade safety.
+room { schemaDirectory("$projectDir/schemas") }
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.10.01"))
@@ -61,6 +82,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.9.4")
     implementation("androidx.room:room-runtime:2.8.3")
     implementation("androidx.room:room-ktx:2.8.3")
     ksp("androidx.room:room-compiler:2.8.3")
@@ -76,6 +98,15 @@ dependencies {
     implementation("androidx.media3:media3-ui:$media3")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("io.coil-kt:coil-compose:2.7.0")
+
+    androidTestImplementation(platform("androidx.compose:compose-bom:2025.10.01"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+    androidTestImplementation("com.squareup.okhttp3:okhttp-tls:4.12.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.16")

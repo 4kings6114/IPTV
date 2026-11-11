@@ -1,6 +1,7 @@
 package io.github.fourkings6114.iptv
 
 import android.content.Intent
+import android.content.ActivityNotFoundException
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,7 +17,7 @@ import io.github.fourkings6114.iptv.ui.MainViewModel
 class MainActivity : ComponentActivity() {
     private val model by viewModels<MainViewModel>()
     private val chooseFile = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        uri?.let(model::importFile)
+        model.fileChosen(uri)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,13 @@ class MainActivity : ComponentActivity() {
             IPTVTheme {
                 MainScreen(
                     model = model,
-                    onImportFile = { chooseFile.launch(arrayOf("*/*")) },
+                    onImportFile = { request ->
+                        if (model.prepareFileImport(request.title, request.sourceId)) {
+                            try { chooseFile.launch(arrayOf("*/*")) }
+                            catch (_: ActivityNotFoundException) { model.filePickerUnavailable() }
+                            catch (_: SecurityException) { model.filePickerUnavailable() }
+                        }
+                    },
                     onPlay = { channel ->
                         startActivity(Intent(this, PlaybackActivity::class.java)
                             .putExtra(PlaybackActivity.CHANNEL_ID, channel.id))
