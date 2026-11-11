@@ -47,7 +47,7 @@ class UpgradeSeedTest {
 class UpgradePreservationTest {
     @Test fun legacy012SourcesSelectionFavoritesAndHistorySurviveInPlaceUpdate() = runBlocking {
         val app = ApplicationProvider.getApplicationContext<IPTVApplication>()
-        assertEquals(5L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
+        assertEquals(6L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
         withTimeout(20_000) {
             val dao = app.database.channels()
             assertEquals(1, app.database.openHelper.writableDatabase.version)
@@ -63,6 +63,7 @@ class UpgradePreservationTest {
             assertEquals("custom", settings.sourceId)
             assertFalse(settings.allowHttp)
             assertFalse(settings.showLogos)
+            assertEquals("", settings.epgUrl)
             assertFalse("Existing installations must not silently opt into Home-to-PiP", settings.autoPictureInPicture)
             assertEquals("written by versionCode 3 before package update", File(app.filesDir, UPGRADE_SENTINEL).readText())
             assertNull(app.crashReports.read())
@@ -108,7 +109,7 @@ class CatalogUpgradeSeedTest {
 class CatalogUpgradePreservationTest {
     @Test fun named013CatalogsSelectionFavoritesHistoryAndSettingsSurviveInPlaceUpdate() = runBlocking {
         val app = ApplicationProvider.getApplicationContext<IPTVApplication>()
-        assertEquals(5L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
+        assertEquals(6L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
         withTimeout(20_000) {
             val dao = app.database.channels()
             assertEquals(1, app.database.openHelper.writableDatabase.version)
@@ -125,8 +126,72 @@ class CatalogUpgradePreservationTest {
             assertEquals(NAMED_013_SOURCES.last().id, settings.sourceId)
             assertTrue(settings.allowHttp)
             assertFalse(settings.showLogos)
+            assertEquals("", settings.epgUrl)
             assertFalse("The new Home behavior requires consent after an upgrade too", settings.autoPictureInPicture)
             assertEquals("written by versionCode 4 before package update", File(app.filesDir, UPGRADE_SENTINEL).readText())
+            assertNull(app.crashReports.read())
+        }
+    }
+}
+
+
+private val PIP_014_SOURCES = NAMED_013_SOURCES.mapIndexed { index, source ->
+    source.copy(updatedAt = 2000L + index, title = "${source.title} · شناور")
+}
+
+private fun pip014Channels(index: Int) = M3uParser.parse(
+    "#EXTM3U\n#EXTINF:-1 tvg-id=Rewritten.Shared x-original-tvg-id=Legacy.Shared,Shared guide identity\nhttps://example.invalid/pip-shared.mp4\n" +
+        "#EXTINF:-1 tvg-id=Guide.$index x-original-tvg-id=Legacy.$index,Independent PiP channel $index\nhttps://example.invalid/pip-$index.mp4\n"
+).channels
+
+/** Latest delivered PiP version, with Home opt-in deliberately enabled before update. */
+@RunWith(AndroidJUnit4::class)
+class PipUpgradeSeedTest {
+    @Test fun seed014CatalogsAndEnabledHomePictureInPictureBeforeInPlaceUpdate() = runBlocking {
+        val app = ApplicationProvider.getApplicationContext<IPTVApplication>()
+        assertEquals(5L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
+        withTimeout(20_000) {
+            val dao = app.database.channels()
+            PIP_014_SOURCES.forEachIndexed { index, source -> dao.replaceSource(source, pip014Channels(index)) }
+            dao.toggleFavorite(pip014Channels(0).first().id)
+            dao.toggleFavorite(pip014Channels(3).last().id)
+            dao.recordPlayback(pip014Channels(1).last().id)
+            app.settings.allowHttp(false)
+            app.settings.showLogos(false)
+            app.settings.automaticPictureInPicture(true)
+            app.settings.selectSource(PIP_014_SOURCES.last().id)
+            app.settings.state.first { it.loaded && it.sourceId == PIP_014_SOURCES.last().id && !it.allowHttp && !it.showLogos && it.autoPictureInPicture }
+            File(app.filesDir, UPGRADE_SENTINEL).writeText("written by versionCode 5 before EPG update")
+        }
+    }
+}
+
+@RunWith(AndroidJUnit4::class)
+class PipUpgradePreservationTest {
+    @Test fun delivered014DataStableChannelKeysAndEnabledPipSurviveTheEpgUpdate() = runBlocking {
+        val app = ApplicationProvider.getApplicationContext<IPTVApplication>()
+        assertEquals(6L, app.packageManager.getPackageInfo(app.packageName, 0).longVersionCode)
+        withTimeout(20_000) {
+            val dao = app.database.channels()
+            assertEquals(1, app.database.openHelper.writableDatabase.version)
+            PIP_014_SOURCES.forEachIndexed { index, source ->
+                assertEquals(source, dao.source(source.id))
+                assertEquals(index >= 2, dao.source(source.id)!!.isFileSource)
+                assertEquals(pip014Channels(index), dao.observeSource(source.id).first().map { it.channel() })
+                assertEquals("", app.settings.epgUrlFor(source.id))
+            }
+            assertEquals(PIP_014_SOURCES.map { it.id }.toSet(), dao.observeSources().first().map { it.id }.toSet())
+            assertTrue(dao.isFavorite(pip014Channels(0).first().id))
+            assertTrue(dao.isFavorite(pip014Channels(3).last().id))
+            assertEquals("Legacy.Shared", dao.channel(pip014Channels(0).first().id)!!.tvgId)
+            assertEquals(pip014Channels(1).last().id, dao.observeHistory().first().single().id)
+            val settings = app.settings.state.first { it.loaded }
+            assertEquals(PIP_014_SOURCES.last().id, settings.sourceId)
+            assertFalse(settings.allowHttp)
+            assertFalse(settings.showLogos)
+            assertTrue("An existing Home-to-PiP opt-in must not be reset by EPG", settings.autoPictureInPicture)
+            assertEquals("", settings.epgUrl)
+            assertEquals("written by versionCode 5 before EPG update", File(app.filesDir, UPGRADE_SENTINEL).readText())
             assertNull(app.crashReports.read())
         }
     }

@@ -25,6 +25,8 @@ EXPECTED_TESTS = {
     'independentLinksCanBeNamedRefreshedRenamedDeletedAndReopened': 0.0,
     'fileReimportKeepsItsTargetAcrossRecreationAndRejectsDeletedTargets': 0.0,
     'missingSelectionRecoversToOfflineSampleWithoutErasingSavedChannels': 0.0,
+    'xmltvSettingsShowExactNowNextTimesAndReopenOffline': 0.0,
+    'failedAndCancelledGuideRefreshKeepGoodDataAndHidePrivateTokens': 0.0,
     'manualPictureInPictureKeepsDecodedPlaybackAndRestoresFullscreen': 8.0,
     'automaticPictureInPictureRequiresOptInAndDismissalReleasesThePlayer': 6.0,
     'pictureInPictureActionsPauseResumeAndNewChannelReusesTheActivity': 2.0,
@@ -64,6 +66,17 @@ def verification_errors(counts, cases):
             errors.append(f'Missing test: {name}')
         elif case['seconds'] < minimum:
             errors.append(f'{name} ran for {case["seconds"]} seconds; minimum is {minimum}.')
+    return errors
+
+
+def upgrade_verification_errors(upgrade):
+    errors = []
+    if not upgrade or upgrade.get('status') != 'success':
+        errors.append('The source-rebuilt 0.1.2, 0.1.3 and 0.1.4 -> current install -r preservation tests must pass.')
+    if not upgrade or (upgrade.get('from_0_1_3') or {}).get('status') != 'success':
+        errors.append('Named multi-catalog 0.1.3 upgrade preservation must pass independently.')
+    if not upgrade or (upgrade.get('from_0_1_4') or {}).get('status') != 'success':
+        errors.append('Delivered PiP 0.1.4 catalog/settings/identity preservation must pass independently.')
     return errors
 
 
@@ -112,7 +125,7 @@ def main():
             raise RuntimeError('Native PiP instrumentation failed; see pip-gradle.log and runtime-results/pip.')
         upgrade = verify_upgrade(root, out / 'upgrade')
         # Seeds/verifiers ran mandatorily against their own app versions above;
-        # the five PiP cases already ran on current. Run all eight older cases now.
+        # the five PiP cases already ran on current. Run all eight older and two EPG cases now.
         excluded = ','.join((*UPGRADE_TEST_CLASSES, PIP_TEST_CLASS))
         status = run_runtime_phase(root, out, 'ordinary',
             '-Pandroid.testInstrumentationRunnerArguments.notClass=' + excluded)
@@ -127,10 +140,7 @@ def main():
         saved = out / 'upgrade/summary.json'
         if saved.exists():
             upgrade = json.loads(saved.read_text())
-    if not upgrade or upgrade.get('status') != 'success':
-        errors.append('The source-rebuilt 0.1.2 and 0.1.3 -> current install -r preservation tests must pass.')
-    if not upgrade or (upgrade.get('from_0_1_3') or {}).get('status') != 'success':
-        errors.append('Named multi-catalog 0.1.3 upgrade preservation must pass independently.')
+    errors.extend(upgrade_verification_errors(upgrade))
     if actual_api != expected_api or api.returncode:
         errors.append(f'Expected runtime API {expected_api}, got {actual_api!r} (adb status {api.returncode}).')
     if errors:
@@ -145,7 +155,7 @@ def main():
         'signing_source': os.environ.get('IPTV_SIGNING_SOURCE', 'unknown'),
         'commit': os.environ.get('GITHUB_SHA'), 'run_id': os.environ.get('GITHUB_RUN_ID'),
         'upgrade': upgrade, 'tests': counts, 'cases': cases, 'failures': failures, 'verification_errors': errors,
-        'scope': 'Source-rebuilt 0.1.2 and 0.1.3 signed in-place upgrades, legacy and named-catalog data/selection preservation; independent URL/file catalogs, naming, rename, refresh, cancel, delete and recreation; 70s UI; 75s generated loopback AVC/AAC, rotation, stop/resume; real native PiP manual/opted-in Home, decoded playback, expand, dismiss, pause/play system actions, channel reuse, denied permission and explicit Back; private reports; old TLS main-thread negative control and strict-mode real player TLS-pool teardown',
+        'scope': 'Source-rebuilt 0.1.2, 0.1.3 and 0.1.4 signed in-place upgrades, legacy/named-catalog data, stable channel identity and existing Home-PiP preference preservation; real EPG settings/exact-ID now-next/local times/XMLTV/gzip/offline reopen/failure/cancellation/HTTP policy and token-free errors; independent URL/file catalogs, naming, rename, refresh, cancel, delete and recreation; 70s UI; 75s generated loopback AVC/AAC, rotation, stop/resume; real native PiP manual/opted-in Home, decoded playback, expand, dismiss, pause/play system actions, channel reuse, denied permission and explicit Back; private reports; old TLS main-thread negative control and strict-mode real player TLS-pool teardown',
     }
     (out / 'summary.json').write_text(json.dumps(report, indent=2))
     gradle_log = out / 'gradle.log'

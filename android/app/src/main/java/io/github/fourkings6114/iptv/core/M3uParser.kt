@@ -13,7 +13,8 @@ class PlaylistParseException(val reason: Reason) : Exception(reason.name) {
     enum class Reason { EMPTY, HLS_MANIFEST, TOO_MANY_CHANNELS }
 }
 
-data class ParsedPlaylist(val channels: List<Channel>, val skipped: Int)
+data class ParsedPlaylist(val channels: List<Channel>, val skipped: Int,
+                          val xmltvIds: Map<String, String> = emptyMap())
 
 /** Pure Kotlin: playlist ingestion is deliberately separate from Media3 playback. */
 object M3uParser {
@@ -35,6 +36,7 @@ object M3uParser {
         var headers = linkedMapOf<String, String>()
         var skipped = 0
         val channels = linkedMapOf<String, Channel>()
+        val xmltvIds = linkedMapOf<String, String>()
         for (raw in text.removePrefix("\uFEFF").lineSequence()) {
             val line = raw.trim()
             when {
@@ -92,6 +94,10 @@ object M3uParser {
                                 url = url, logo = httpUrl(metadata["tvg-logo"].orEmpty()).orEmpty(),
                                 tvgId = tvgId, headers = headers.toMap(),
                             ))
+                            // Keep legacy identity untouched; matching uses the actual
+                            // (possibly rewritten) tvg-id, never a channel-name guess.
+                            val actual = (metadata["tvg-id"] ?: metadata["x-original-tvg-id"]).orEmpty().trim()
+                            xmltvIds.putIfAbsent(id, actual.takeIf { it.length <= 512 }.orEmpty())
                             if (channels.size > MAX_CHANNELS) {
                                 throw PlaylistParseException(PlaylistParseException.Reason.TOO_MANY_CHANNELS)
                             }
@@ -104,7 +110,7 @@ object M3uParser {
         }
         if (pending != null) skipped++
         if (channels.isEmpty()) throw PlaylistParseException(PlaylistParseException.Reason.EMPTY)
-        return ParsedPlaylist(channels.values.toList(), skipped)
+        return ParsedPlaylist(channels.values.toList(), skipped, xmltvIds)
     }
 
     fun httpUrl(value: String, baseUrl: String? = null): String? = runCatching {

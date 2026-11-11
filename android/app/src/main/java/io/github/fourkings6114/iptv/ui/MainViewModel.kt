@@ -7,6 +7,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import io.github.fourkings6114.iptv.IPTVApplication
 import io.github.fourkings6114.iptv.core.PlaylistParseException
+import io.github.fourkings6114.iptv.core.persianNumber
+import io.github.fourkings6114.iptv.core.sha256
+import io.github.fourkings6114.iptv.epg.EpgSnapshot
 import io.github.fourkings6114.iptv.data.FileSourceSelectionRequiredException
 import io.github.fourkings6114.iptv.data.InvalidSourceNameException
 import io.github.fourkings6114.iptv.data.NotAFileSourceException
@@ -23,6 +26,7 @@ import java.net.UnknownHostException
 import javax.net.ssl.SSLException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -45,6 +49,14 @@ class MainViewModel(application: Application, private val savedState: SavedState
     val channels = selectedSource.flatMapLatest { dao.observeSource(it).onStart { emit(emptyList()) } }
         .map { rows -> rows.map { it.channel() } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    val epg = settings.filter { it.loaded }.map { it.sourceId to it.epgUrl }.distinctUntilChanged()
+        .flatMapLatest { (id, url) -> app.epg.observe(id, url).onStart { emit(EpgSnapshot(id, sha256(url))) } }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), EpgSnapshot())
+    val epgBusy = MutableStateFlow(false)
+    val epgError = MutableStateFlow<String?>(null)
+    private var epgJob: Job? = null
+    private var epgSourceId: String? = null
+    private var epgSequence = 0L
     val availableSources = dao.observeSources()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val source = selectedSource.flatMapLatest { dao.observeSourceInfo(it).onStart { emit(null) } }
@@ -64,6 +76,8 @@ class MainViewModel(application: Application, private val savedState: SavedState
         viewModelScope.launch { crashReport.value = withContext(Dispatchers.IO) { app.crashReports.read() } }
         viewModelScope.launch {
             selectedSource.collect { id ->
+                if (epgSourceId != null && epgSourceId != id) cancelEpgOperation()
+                epgError.value = null
                 try {
                     if (dao.source(id) == null) {
                         if (isBuiltInSource(id)) {
@@ -74,6 +88,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
                         } else {
                             // Recover a process death between Room deletion and the DataStore update.
                             // Do not invent/re-download an absent personal source or erase saved channels.
+                            app.epg.remove(id)
                             app.settings.forgetSource(id)
                             notice.value = "فهرست انتخاب‌شده موجود نیست؛ فهرست نمونه نمایش داده شد."
                         }
@@ -102,6 +117,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
     }
     fun refresh() = refreshSource(settings.value.sourceId)
     fun refreshSource(id: String) = runSourceOperation {
+        if (epgSourceId == id) cancelEpgOperation()
         repository.refresh(id)
         notice.value = "فهرست به‌روز شد؛ این نتیجه، تأیید پخش کانال‌ها نیست."
     }
@@ -118,7 +134,9 @@ class MainViewModel(application: Application, private val savedState: SavedState
         // Asset-backed fallback needs no network. Prepare it before deleting the selected list.
         // stateIn may lag a committed selection; always prepare the cheap offline fallback.
         repository.ensureSource(SAMPLE_SOURCE_ID)
+        if (epgSourceId == id) cancelEpgOperation()
         repository.deleteSource(id)
+        app.epg.remove(id)
         app.settings.forgetSource(id)
         notice.value = "فهرست حذف شد؛ علاقه‌مندی‌ها و سابقهٔ پخش حفظ شدند."
     }
@@ -157,6 +175,54 @@ class MainViewModel(application: Application, private val savedState: SavedState
     fun filePickerUnavailable() {
         fileChosen(null)
         error.value = "انتخاب‌گر فایل باز نشد؛ دوباره از بخش فهرست‌ها امتحان کن."
+    }
+
+    private fun cancelEpgOperation() {
+        epgSequence++
+        epgJob?.cancel()
+        epgJob = null
+        epgSourceId = null
+        epgBusy.value = false
+    }
+
+    fun cancelEpg() {
+        if (epgBusy.value) { cancelEpgOperation(); notice.value = "دریافت راهنما لغو شد." }
+    }
+
+    private fun runEpgOperation(id: String, action: suspend () -> Unit) {
+        if (epgBusy.value || busy.value || !settings.value.loaded) return
+        val sequence = ++epgSequence
+        epgSourceId = id
+        epgBusy.value = true
+        epgError.value = null
+        epgJob = viewModelScope.launch {
+            try { action()
+            } catch (cancelled: CancellationException) { throw cancelled
+            } catch (failure: Exception) {
+                if (sequence == epgSequence && settings.value.sourceId == id) epgError.value = epgFailureMessage(failure)
+            } finally {
+                if (sequence == epgSequence) {
+                    epgBusy.value = false
+                    epgSourceId = null
+                    epgJob = null
+                }
+            }
+        }
+    }
+
+    /** Saving a URL never starts a request; download has its own explicit button. */
+    fun configureEpg(id: String, url: String) = runEpgOperation(id) {
+        app.epg.configure(id, url)
+        notice.value = if (url.isBlank()) "لینک و راهنمای این فهرست حذف شد؛ کانال‌ها و انتخاب‌های تو باقی ماندند."
+            else "لینک XMLTV ذخیره شد؛ حالا «دریافت راهنما» را بزن."
+    }
+
+    fun refreshEpg() {
+        val id = settings.value.sourceId
+        runEpgOperation(id) {
+            val guide = app.epg.refresh(id)
+            notice.value = "راهنما دریافت شد؛ برای ${persianNumber(guide.byChannel.size)} شناسهٔ منطبق برنامه ذخیره شد."
+        }
     }
 
     fun toggleFavorite(id: String) { viewModelScope.launch { dao.toggleFavorite(id) } }

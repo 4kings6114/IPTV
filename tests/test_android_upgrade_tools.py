@@ -56,7 +56,7 @@ class AndroidUpgradeVerifierTests(unittest.TestCase):
                     patch.object(upgrade, "apk_identity", return_value={"apk_sha256": upgrade.DELIVERED_013_APK_SHA256}):
                 result = upgrade.verify_source_upgrade(root, root / "evidence", revision=upgrade.PREVIOUS_REVISION,
                     code=4, version="0.1.3-trial", reference_sha256=upgrade.DELIVERED_013_APK_SHA256,
-                    test_classes=upgrade.UPGRADE_TEST_CLASSES[2:], current={"version_code": 5})
+                    test_classes=upgrade.UPGRADE_TEST_CLASSES[2:4], current={"version_code": 6})
             seed = next(index for index, command in enumerate(calls) if upgrade.UPGRADE_TEST_CLASSES[2] in command)
             verify = next(index for index, command in enumerate(calls) if upgrade.UPGRADE_TEST_CLASSES[3] in command)
             self.assertEqual(calls[seed + 1:verify], [["adb", "install", "-r", str(root / "app/build/outputs/apk/debug/app-debug.apk")]])
@@ -77,8 +77,41 @@ class AndroidUpgradeVerifierTests(unittest.TestCase):
             self.assertEqual(phases.call_count, 2)
             self.assertEqual(phases.call_args_list[0].kwargs["revision"], upgrade.BASELINE_REVISION)
             self.assertEqual(phases.call_args_list[1].kwargs["revision"], upgrade.PREVIOUS_REVISION)
-            self.assertEqual(phases.call_args_list[1].kwargs["test_classes"], upgrade.UPGRADE_TEST_CLASSES[2:])
+            self.assertEqual(phases.call_args_list[1].kwargs["test_classes"], upgrade.UPGRADE_TEST_CLASSES[2:4])
             self.assertEqual(json.loads((out / "summary.json").read_text())["status"], "failure")
+
+
+    def test_delivered_014_pip_upgrade_is_required_after_both_older_paths(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "android"
+            out = root / "evidence"
+            with patch.object(upgrade, "run_logged"), patch.object(upgrade, "apk_identity", return_value={}), \
+                    patch.object(upgrade, "verify_source_upgrade", side_effect=[{"status": "success"}, {"status": "success"}, RuntimeError("PiP preference not preserved")]) as phases:
+                with self.assertRaisesRegex(RuntimeError, "PiP preference"):
+                    upgrade.verify_upgrade(root, out)
+            self.assertEqual(phases.call_count, 3)
+            latest = phases.call_args_list[2].kwargs
+            self.assertEqual(latest["revision"], "b48e15512b9a41a8d76c5cec3dcc99e06e2ba8ed")
+            self.assertEqual(latest["reference_sha256"], upgrade.DELIVERED_014_APK_SHA256)
+            self.assertEqual(latest["code"], 5)
+            self.assertEqual(latest["version"], "0.1.4-trial")
+            self.assertEqual(latest["test_classes"], upgrade.UPGRADE_TEST_CLASSES[4:6])
+            report = json.loads((out / "summary.json").read_text())
+            self.assertEqual(report["status"], "failure")
+            self.assertEqual(report["from_0_1_3"]["status"], "success")
+
+    def test_success_report_contains_all_three_independent_immutable_baselines(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "android"
+            with patch.object(upgrade, "run_logged"), patch.object(upgrade, "apk_identity", return_value={}), \
+                    patch.object(upgrade, "verify_source_upgrade", return_value={"status": "success"}) as phases:
+                report = upgrade.verify_upgrade(root, root / "evidence")
+            self.assertEqual("success", report["status"])
+            self.assertEqual("success", report["from_0_1_3"]["status"])
+            self.assertEqual("success", report["from_0_1_4"]["status"])
+            self.assertEqual([upgrade.BASELINE_REVISION, upgrade.PREVIOUS_REVISION, upgrade.PIP_REVISION],
+                             [call.kwargs["revision"] for call in phases.call_args_list])
+            self.assertEqual((6, "0.1.5-trial"), (upgrade.CURRENT_VERSION_CODE, upgrade.CURRENT_VERSION_NAME))
 
 
 if __name__ == "__main__":

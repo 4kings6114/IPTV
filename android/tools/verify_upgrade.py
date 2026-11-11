@@ -1,8 +1,8 @@
-"""Verify real in-place updates from immutable delivered 0.1.2/0.1.3 sources.
+"""Verify real in-place updates from immutable delivered 0.1.2/0.1.3/0.1.4 sources.
 
 The baseline is rebuilt with the SAME verified retained trial key, not claimed to be the
 byte-identical previously downloaded APK. No private key is copied or uploaded.
-Separate immutable 0.1.2 and 0.1.3 baselines verify legacy and named catalogs.
+Separate immutable baselines verify legacy/named catalogs and the existing PiP preference.
 No uninstall/clear-data is allowed between each seed and its current-version check.
 """
 from __future__ import annotations
@@ -20,8 +20,10 @@ DELIVERED_012_SIGNER = "eba2f7bdb4cfea267f4c30cedba8b2956f9c86ed3d5363512291fd3d
 DELIVERED_012_APK_SHA256 = "97c14c706c1288f2a47ef2da0be4fbbc2aac442ed56091e44c9cdcd611b86d5a"
 PREVIOUS_REVISION = "4332f07e3e6b3fd3c0b324434d28a35245664130"
 DELIVERED_013_APK_SHA256 = "fe4a044ebabd55d89b577842f0c15cdcbe4471d7e127285c8df9c83a61fe99a5"
-CURRENT_VERSION_CODE = 5
-CURRENT_VERSION_NAME = "0.1.4-trial"
+PIP_REVISION = "b48e15512b9a41a8d76c5cec3dcc99e06e2ba8ed"
+DELIVERED_014_APK_SHA256 = "55b7a68822217ca94e7b40aa9dc27202a6c75f4709d5275692426da65483b858"
+CURRENT_VERSION_CODE = 6
+CURRENT_VERSION_NAME = "0.1.5-trial"
 PACKAGE = "io.github.fourkings6114.iptv.trial"
 TEST_PACKAGE = PACKAGE + ".test/androidx.test.runner.AndroidJUnitRunner"
 UPGRADE_TEST_CLASSES = (
@@ -29,6 +31,8 @@ UPGRADE_TEST_CLASSES = (
     "io.github.fourkings6114.iptv.UpgradePreservationTest",
     "io.github.fourkings6114.iptv.CatalogUpgradeSeedTest",
     "io.github.fourkings6114.iptv.CatalogUpgradePreservationTest",
+    "io.github.fourkings6114.iptv.PipUpgradeSeedTest",
+    "io.github.fourkings6114.iptv.PipUpgradePreservationTest",
 )
 SCHEMA_PATH = "app/schemas/io.github.fourkings6114.iptv.data.AppDatabase/1.json"
 
@@ -169,7 +173,10 @@ def verify_upgrade(root: Path, out: Path) -> dict:
         report["status"] = "in_progress"
         report["from_0_1_3"] = verify_source_upgrade(root, out / "from-013", revision=PREVIOUS_REVISION,
             code=4, version="0.1.3-trial", reference_sha256=DELIVERED_013_APK_SHA256,
-            test_classes=UPGRADE_TEST_CLASSES[2:], current=current)
+            test_classes=UPGRADE_TEST_CLASSES[2:4], current=current)
+        report["from_0_1_4"] = verify_source_upgrade(root, out / "from-014", revision=PIP_REVISION,
+            code=5, version="0.1.4-trial", reference_sha256=DELIVERED_014_APK_SHA256,
+            test_classes=UPGRADE_TEST_CLASSES[4:6], current=current)
         report["status"] = "success"
         return report
     except Exception as error:

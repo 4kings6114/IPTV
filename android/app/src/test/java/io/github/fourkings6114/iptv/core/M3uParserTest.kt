@@ -105,6 +105,19 @@ class M3uParserTest {
         val channel = parse("#EXTM3U\n#EXTINF:-1 tvg-id=123 x-original-tvg-id=One.de,One\nhttps://example.com/a").single()
         assertEquals("One.de", channel.tvgId)
     }
+    @Test fun rewrittenXmltvIdDoesNotAlterLegacyKeyOrBecomeARequestHeader() {
+        val text = "#EXTM3U url-tvg=\"https://example.invalid/guide\"\n#EXTINF:-1 tvg-id=Guide.One x-original-tvg-id=Legacy.ID,One\nhttps://example.com/a"
+        val first = M3uParser.parse(text)
+        val changed = M3uParser.parse(text.replace("Guide.One", "Guide.Two"))
+        val channel = first.channels.single()
+        assertEquals("Legacy.ID", channel.tvgId)
+        assertEquals(channel.id, changed.channels.single().id)
+        assertEquals("Guide.One", first.xmltvIds[channel.id])
+        assertEquals("Guide.Two", changed.xmltvIds[channel.id])
+        assertTrue(channel.headers.isEmpty())
+        val oversized = M3uParser.parse(text.replace("Guide.One", "x".repeat(513)))
+        assertEquals("", oversized.xmltvIds[channel.id])
+    }
     @Test fun supportsPersianArabicSearchNormalization() {
         assertEquals("شبکه یک", normalizeSearch("شَبكه‌يـك"))
         assertEquals("news world", normalizeSearch(" NEWS   WORLD "))

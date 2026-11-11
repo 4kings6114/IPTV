@@ -29,8 +29,8 @@ metadata = json.loads((apk.parent / "output-metadata.json").read_text())
 element = metadata["elements"][0]
 assert metadata["applicationId"] == "io.github.fourkings6114.iptv.trial"
 assert element["versionName"].endswith("-trial")
-assert element["versionCode"] == 5
-assert element["versionName"] == "0.1.4-trial"
+assert element["versionCode"] == 6
+assert element["versionName"] == "0.1.5-trial"
 badging = (build / "badging.txt").read_text()
 assert "sdkVersion:'26'" in badging
 assert "targetSdkVersion:'36'" in badging
@@ -53,6 +53,7 @@ with zipfile.ZipFile(apk) as archive:
 counts = {"tests": 0, "failures": 0, "errors": 0, "skipped": 0}
 source_test_suites = {}
 pip_test_suites = {}
+epg_test_suites = {}
 executed_cases = set()
 for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     suite = ET.parse(path).getroot()
@@ -63,6 +64,8 @@ for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
         source_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
     if suite.get("name", "").rsplit(".", 1)[-1] in {"PipRulesTest", "SettingsStoreTest"}:
         pip_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
+    if suite.get("name", "").rsplit(".", 1)[-1] in {"EpgGuideTest", "XmlTvParserTest", "EpgCacheTest", "EpgNetworkTest", "EpgRepositoryTest"}:
+        epg_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
 required_source_cases = {
     "repeatedUrlAddsAreIndependentAndDoNotOverwriteLegacyCustom",
     "repeatedFileAddsAreIndependentAndDoNotOverwriteLegacyFile",
@@ -94,7 +97,32 @@ required_pip_cases = {
     "automaticPictureInPictureDefaultsOffAndPersistsIndependently",
 }
 assert required_pip_cases <= executed_cases, required_pip_cases - executed_cases
-assert counts["tests"] >= 80, counts
+required_epg_cases = {
+    "xmltvOffsetsAndMissingZoneDoNotDependOnThePhoneZone",
+    "nowNextUsesStartInclusiveStopExclusiveAndSortedFutureStarts",
+    "exactCaseSensitiveIdsDoNotGuessFromNamesOrPrefixes",
+    "xmltvSupportsPlainGzipHttpDoubleGzipAndUtf16WithoutEncodingGuesses",
+    "xmltvRejectsInternalDtdEntitiesAndUtf16XxeBeforeExpansion",
+    "xmltvExternalDoctypeIsIgnoredAndNeverFetched",
+    "compressedAndExpandedByteLimitsAreEnforcedIndependently",
+    "giantTagsAttributesTextAndDeepNestingHitBoundedLimits",
+    "cancelledAtomicCacheWritesPreserveTheLastKnownGoodGuide",
+    "failedGuideRefreshPreservesGoodCacheCatalogFavoritesHistoryAndPreferences",
+    "cancelledGuideBodyCannotReplaceTheLastKnownGoodCache",
+    "lateGuideResponseCannotRestoreAnOldUrlAfterAnAToBToAConfigurationChange",
+    "lateGuideResponseCannotResurrectADeletedCatalog",
+    "catalogRefreshDuringGuideDownloadDiscardsTheOldCatalogResult",
+    "rewrittenM3uGuideIdsPersistWithoutChangingFavoritesOrLeakingMediaHeaders",
+    "sameSharedChannelCanUseIndependentXmltvIdsInTwoCatalogs",
+    "guideRequestsUseNoStreamCredentialsAndDecodeHttpAndFileGzipExplicitly",
+    "disabledHttpGuideNeverReachesTheServer",
+    "guideHttpsValidationIsNotBypassedAndDowngradeRedirectsStillObeyHttpPolicy",
+    "guideCancellationStillWorksAfterResponseHeadersWereReceived",
+    "xmltvUrlsAreIndependentPerCatalogAndForgetDoesNotResetPipOrOtherUrls",
+    "rewrittenXmltvIdDoesNotAlterLegacyKeyOrBecomeARequestHeader",
+}
+assert required_epg_cases <= executed_cases, required_epg_cases - executed_cases
+assert counts["tests"] >= 129, counts
 assert counts["failures"] == counts["errors"] == counts["skipped"] == 0, counts
 lint = ET.parse(build / "reports/lint-results-debug.xml").getroot()
 assert not any(issue.get("severity") in {"Fatal", "Error"} for issue in lint.findall("issue"))
@@ -120,12 +148,22 @@ info = {
     "unit_tests": counts,
     "source_management_test_suites": source_test_suites,
     "picture_in_picture_test_suites": pip_test_suites,
+    "epg_test_suites": epg_test_suites,
     "permissions": sorted(permissions),
     "native_libraries": native_libraries,
     "signing": "Retained DEBUG/TRIAL identity; protected storage migration is separate from production key generation",
     "signing_source": os.environ["IPTV_SIGNING_SOURCE"],
-    "physical_device_test": "0.1.4 NOT YET TESTED on a physical device; user reported 0.1.3 stable on their phone",
+    "physical_device_test": "0.1.5 EPG NOT YET TESTED on a physical device; user confirmed 0.1.4 manual PiP and reported 0.1.3 stable on their phone",
     "picture_in_picture": "Native Activity PiP (API26+ if supported); manual entry after decoded video; optional Home auto-entry defaults OFF; system pause/play/expand/dismiss; no overlay permission or background service",
+    "epg": {
+        "scope": "Explicit per-catalog XMLTV URL setting and manual download; current/next titles and local start times on matched selected-catalog channels; no invented/name-guessed data",
+        "formats": "Streaming UTF-8/UTF-16 XMLTV; gzip file/HTTP encoding, at most two layers; DTD never fetched, internal entities rejected",
+        "limits": {"download_bytes": 8 * 1024 * 1024, "expanded_bytes": 32 * 1024 * 1024,
+                   "parsed_programmes": 250000, "saved_programmes": 20000, "saved_characters": 2000000,
+                   "cache_hours": 48, "stale_warning_hours": 24},
+        "storage": "Private per-source URL preferences; bounded evictable guide cache with only a URL hash; derived alias sidecar, unchanged Room v1 and legacy channel identities",
+        "network": "Normal shared HTTP/TLS/redirect policy, no media credentials or request logging; no periodic/background download; failed/cancelled refresh preserves same-feed good cache",
+    },
     "stream_playback_tests": "Provider streams NOT TESTED; separate API31/API33 synthetic runtime workflow",
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
@@ -152,6 +190,7 @@ info["updates_delivered_0_1_1_trial"] = current_signer.group(1) == previous_0_1_
 previous_0_1_2_signer = EXPECTED_SIGNER_SHA256
 info["updates_delivered_0_1_2_trial"] = current_signer.group(1) == previous_0_1_2_signer
 info["updates_delivered_0_1_3_trial"] = current_signer.group(1) == previous_0_1_2_signer
+info["updates_delivered_0_1_4_trial"] = current_signer.group(1) == previous_0_1_2_signer
 # Never silently deliver another incompatible trial after the user has saved local data.
 assert info["updates_delivered_0_1_2_trial"], "Trial signer changed: stop; do not replace the user's installed app or erase data"
 schema = json.loads((app / "schemas/io.github.fourkings6114.iptv.data.AppDatabase/1.json").read_text())["database"]
@@ -159,7 +198,7 @@ assert schema["version"] == 1
 info["room_schema_version"] = schema["version"]
 info["room_schema_identity_hash"] = schema["identityHash"]
 info["source_management"] = "Independent URL/file catalog IDs; named imports; rename/refresh/transactional delete; legacy custom/file IDs retained"
-info["installation_warning"] = "Verified same signer as delivered 0.1.2/0.1.3: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. Retained trial identity; consult signing_source/stable_secret_storage_active and the owner backup guide. No new key is silently generated."
+info["installation_warning"] = "Verified same signer as delivered 0.1.2/0.1.3/0.1.4: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. Retained trial identity; consult signing_source/stable_secret_storage_active and the owner backup guide. No new key is silently generated."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

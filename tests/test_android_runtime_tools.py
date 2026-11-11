@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from android.tools.run_device_smoke import EXPECTED_TESTS, collect_results, verification_errors, run_runtime_phase
+from android.tools.run_device_smoke import EXPECTED_TESTS, collect_results, verification_errors, run_runtime_phase, upgrade_verification_errors
 
 
 class AndroidRuntimeGateTests(unittest.TestCase):
@@ -15,12 +15,26 @@ class AndroidRuntimeGateTests(unittest.TestCase):
         self.counts = dict(tests=len(EXPECTED_TESTS), failures=0, errors=0, skipped=0)
         self.cases = [dict(name=name, seconds=max(1.0, minimum)) for name, minimum in EXPECTED_TESTS.items()]
 
-    def test_all_previous_and_new_native_pip_tests_are_required(self):
-        self.assertEqual(13, len(EXPECTED_TESTS))
+    def test_all_previous_pip_and_new_epg_tests_are_required(self):
+        self.assertEqual(15, len(EXPECTED_TESTS))
         self.assertEqual([], verification_errors(self.counts, self.cases))
         for name in EXPECTED_TESTS:
             with self.subTest(name=name):
                 self.assertTrue(verification_errors(self.counts, [case for case in self.cases if case['name'] != name]))
+
+    def test_all_three_upgrade_paths_are_independently_required(self):
+        report = dict(status='success', from_0_1_3=dict(status='success'), from_0_1_4=dict(status='success'))
+        self.assertEqual([], upgrade_verification_errors(report))
+        self.assertTrue(upgrade_verification_errors(None))
+        for key in report:
+            missing = deepcopy(report)
+            del missing[key]
+            with self.subTest(key=key):
+                self.assertTrue(upgrade_verification_errors(missing))
+            failed = deepcopy(report)
+            failed[key] = 'failure' if key == 'status' else dict(status='failure')
+            with self.subTest(key=key, failed=True):
+                self.assertTrue(upgrade_verification_errors(failed))
 
     def test_no_failure_error_or_skipped_case_is_accepted(self):
         for key in ('failures', 'errors', 'skipped'):

@@ -34,11 +34,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.delay
 import coil.compose.AsyncImage
 import io.github.fourkings6114.iptv.BuildConfig
 import io.github.fourkings6114.iptv.core.Channel
 import io.github.fourkings6114.iptv.core.normalizeSearch
 import io.github.fourkings6114.iptv.core.persianNumber
+import io.github.fourkings6114.iptv.core.sha256
+import io.github.fourkings6114.iptv.epg.NowNext
+import io.github.fourkings6114.iptv.epg.epgClock
 import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
 import io.github.fourkings6114.iptv.data.isFileSource
 import io.github.fourkings6114.iptv.data.isBuiltInSource
@@ -59,6 +66,22 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
     var showCrashReport by rememberSaveable { mutableStateOf(true) }
     var crashCopied by rememberSaveable { mutableStateOf(false) }
     val settings by model.settings.collectAsStateWithLifecycle()
+    val epg by model.epg.collectAsStateWithLifecycle()
+    val epgBusy by model.epgBusy.collectAsStateWithLifecycle()
+    val epgError by model.epgError.collectAsStateWithLifecycle()
+    var editEpg by remember { mutableStateOf(false) }
+    var now by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(lifecycle) {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            while (true) { now = System.currentTimeMillis(); delay(30_000) }
+        }
+    }
+    val activeEpg = epg.takeIf { it.sourceId == settings.sourceId && it.feedKey == sha256(settings.epgUrl) }
+    val guide = activeEpg?.guide?.takeIf { it.usable(now) }
+    val guideChannels = remember(guide, activeEpg?.idsByChannel) {
+        activeEpg?.idsByChannel?.values?.count { guide?.byChannel?.containsKey(it) == true } ?: 0
+    }
     val channels by model.channels.collectAsStateWithLifecycle()
     val favorites by model.favorites.collectAsStateWithLifecycle()
     val favoriteIds by model.favoriteIds.collectAsStateWithLifecycle()
@@ -149,6 +172,11 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     Text(error.orEmpty(), Modifier.padding(14.dp), style = MaterialTheme.typography.bodySmall)
                 }
             }
+            if (epgError != null && pane != Pane.Settings) {
+                Surface(color = MaterialTheme.colorScheme.errorContainer, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), shape = RoundedCornerShape(12.dp)) {
+                    Text(epgError.orEmpty(), Modifier.padding(14.dp), style = MaterialTheme.typography.bodySmall)
+                }
+            }
             if (pane == Pane.Settings) {
                 Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                     Text("منبع و حریم خصوصی", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
@@ -169,7 +197,13 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                         Text("پروفایل کم‌مصرف، فهرستی از نسخه‌های انتخاب‌شده است؛ ویدئو را تبدیل نمی‌کند و مصرف ثابت را تضمین نمی‌کند.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                     SettingsCard {
-                        SettingToggle("اجازهٔ HTTP بدون رمزنگاری", "پیش‌فرض خاموش؛ روی تمام درخواست‌های بعدی رسانه و فهرست اعمال می‌شود.", settings.allowHttp) { allow ->
+                        EpgSettingsContent(source?.takeIf { it.id == settings.sourceId }?.title ?: "در حال آماده‌سازی…",
+                            settings.epgUrl.isNotBlank(), guide, guideChannels, now, epgBusy, epgError,
+                            enabled = !busy && settings.loaded && source?.id == settings.sourceId,
+                            onConfigure = { editEpg = true }, onRefresh = model::refreshEpg, onCancel = model::cancelEpg)
+                    }
+                    SettingsCard {
+                        SettingToggle("اجازهٔ HTTP بدون رمزنگاری", "پیش‌فرض خاموش؛ روی درخواست‌های بعدی رسانه، فهرست و راهنما اعمال می‌شود.", settings.allowHttp) { allow ->
                             if (allow) httpConfirm = true else model.allowHttp(false)
                         }
                         HorizontalDivider()
@@ -187,7 +221,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     SettingsCard {
                         Text("اطلاعات فقط روی این گوشی", style = MaterialTheme.typography.titleMedium)
                         Text("علاقه‌مندی‌ها، سابقه و لینک‌های واردشده در فضای خصوصی برنامه ذخیره می‌شوند. حساب، تبلیغات، تحلیل‌گر و همگام‌سازی نداریم؛ پشتیبان‌گیری برنامه غیرفعال است.", style = MaterialTheme.typography.bodySmall)
-                        Text("برای دریافت فهرست، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
+                        Text("برای دریافت فهرست، راهنما، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
                         OutlinedButton(onClick = { clearHistory = true }) { Text("پاک‌کردن سابقهٔ پخش") }
                     }
                     if (crashReport != null) SettingsCard {
@@ -228,7 +262,19 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                         }
                     }
                 }
-                Text("${persianNumber(visible.size)} کانال", Modifier.padding(horizontal = 20.dp, vertical = 8.dp), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                if (pane == Pane.Channels) {
+                    Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text("${persianNumber(visible.size)} کانال" + when {
+                            epgBusy -> " · دریافت راهنما…"
+                            guide != null -> if (guide.stale(now)) " · راهنمای قدیمی، ساعت محلی" else " · برنامه‌ها به ساعت محلی"
+                            settings.epgUrl.isNotBlank() -> " · راهنما را دریافت کن"
+                            else -> ""
+                        }, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        if (settings.epgUrl.isNotBlank()) IconButton(onClick = model::refreshEpg, enabled = !epgBusy && !busy) {
+                            Icon(Icons.Default.Refresh, "به‌روزرسانی راهنما")
+                        } else TextButton(onClick = { pane = Pane.Settings }) { Text("تنظیم راهنما") }
+                    }
+                } else Text("${persianNumber(visible.size)} کانال", Modifier.padding(horizontal = 20.dp, vertical = 8.dp), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 if (visible.isEmpty() && !busy) {
                     Box(Modifier.fillMaxWidth().weight(1f).padding(32.dp), contentAlignment = Alignment.Center) {
                         Text(when {
@@ -251,7 +297,8 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                             }
                         }
                         items(visible, key = { it.id }) { channel ->
-                            ChannelRow(channel, channel.id in favoriteIds, settings.showLogos,
+                            val programme = activeEpg?.idsByChannel?.get(channel.id)?.let { guide?.at(it, now) } ?: NowNext()
+                            ChannelRow(channel, channel.id in favoriteIds, settings.showLogos, programme, now,
                                 onPlay = { openChannel(channel) }, onFavorite = { model.toggleFavorite(channel.id) })
                         }
                     }
@@ -260,6 +307,12 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
         }
     }
 
+    if (editEpg) {
+        val current = source?.takeIf { it.id == settings.sourceId }
+        if (current != null) EpgUrlDialog(current.id, current.title, settings.epgUrl,
+            onSave = { url -> model.configureEpg(current.id, url); editEpg = false }, onDismiss = { editEpg = false })
+        else LaunchedEffect(Unit) { editEpg = false }
+    }
     if (showCrashReport && crashReport != null) {
         AlertDialog(
             onDismissRequest = { showCrashReport = false },
@@ -342,7 +395,8 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
 }
 
 @Composable
-private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, onPlay: () -> Unit, onFavorite: () -> Unit) {
+private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, programmes: NowNext, now: Long,
+                       onPlay: () -> Unit, onFavorite: () -> Unit) {
     Surface(onClick = onPlay, shape = RoundedCornerShape(16.dp), color = MaterialTheme.colorScheme.surface) {
         Row(Modifier.fillMaxWidth().padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Box(Modifier.size(48.dp).clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.surfaceVariant), contentAlignment = Alignment.Center) {
@@ -353,6 +407,12 @@ private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, o
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(channel.name, style = MaterialTheme.typography.bodyLarge, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 Text(channel.group, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                programmes.current?.let { Text("اکنون · ${epgClock(it.start, now)} · ${it.title}",
+                    style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.primary) }
+                programmes.next?.let { Text("بعدی · ${epgClock(it.start, now)} · ${it.title}",
+                    style = MaterialTheme.typography.bodySmall, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant) }
                 if (channel.isCleartext) Text("HTTP · بدون رمزنگاری", style = MaterialTheme.typography.labelSmall, color = Color(0xFFFFCF80))
             }
             IconButton(onClick = onFavorite) { Icon(if (favorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, if (favorite) "حذف از علاقه‌مندی‌ها" else "افزودن به علاقه‌مندی‌ها", tint = if (favorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant) }

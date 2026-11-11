@@ -39,6 +39,35 @@ class SettingsStoreTest {
         } finally { scope.cancel() }
     }
 
+    @Test fun xmltvUrlsAreIndependentPerCatalogAndForgetDoesNotResetPipOrOtherUrls() = runBlocking {
+        assertEquals("", AppSettings().epgUrl)
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        try {
+            val context = ApplicationProvider.getApplicationContext<Application>()
+            val store = SettingsStore(context, scope)
+            withTimeout(20_000) {
+                store.state.first { it.loaded }
+                store.automaticPictureInPicture(true)
+                store.epgUrl("first", "https://example.invalid/first.xml?token=local-only")
+                store.epgUrl("second", "https://example.invalid/second.xml.gz")
+                store.selectSource("first")
+                assertEquals("https://example.invalid/first.xml?token=local-only", store.state.first { it.sourceId == "first" && it.epgUrl.isNotBlank() }.epgUrl)
+                store.selectSource("second")
+                assertEquals("https://example.invalid/second.xml.gz", store.state.first { it.sourceId == "second" && it.epgUrl.isNotBlank() }.epgUrl)
+                store.forgetSource("first")
+                assertEquals("", store.epgUrlFor("first"))
+                assertEquals("https://example.invalid/second.xml.gz", store.epgUrlFor("second"))
+                val reopened = SettingsStore(context, scope).state.first { it.loaded }
+                assertEquals("second", reopened.sourceId)
+                assertEquals("https://example.invalid/second.xml.gz", reopened.epgUrl)
+                assertTrue(reopened.autoPictureInPicture)
+                store.forgetSource("second")
+                assertEquals("", store.state.first { it.sourceId == SAMPLE_SOURCE_ID }.epgUrl)
+                assertTrue(store.state.value.autoPictureInPicture)
+            }
+        } finally { scope.cancel() }
+    }
+
     @Test fun forgettingOnlyTheSelectedSourcePreservesOtherSelectionsAndPreferences() = runBlocking {
         val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
         try {

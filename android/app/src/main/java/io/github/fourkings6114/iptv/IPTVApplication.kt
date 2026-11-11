@@ -14,6 +14,9 @@ import io.github.fourkings6114.iptv.data.AppDatabase
 import io.github.fourkings6114.iptv.data.PlaylistRepository
 import io.github.fourkings6114.iptv.data.SettingsStore
 import io.github.fourkings6114.iptv.network.NetworkClients
+import io.github.fourkings6114.iptv.epg.EpgCache
+import io.github.fourkings6114.iptv.epg.EpgChannelIds
+import io.github.fourkings6114.iptv.epg.EpgRepository
 import io.github.fourkings6114.iptv.player.PlaybackClientCleanup
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -33,7 +36,9 @@ class IPTVApplication : Application(), ImageLoaderFactory {
     val settings by lazy { SettingsStore(this, applicationScope) }
     val database by lazy { Room.databaseBuilder(this, AppDatabase::class.java, "iptv.db").build() }
     val network by lazy { NetworkClients.create(allowHttp = { settings.state.value.allowHttp }) }
-    val repository by lazy { PlaylistRepository(this, database.channels(), network) }
+    private val epgIds by lazy { EpgChannelIds(File(filesDir, "epg-channel-ids")) }
+    val repository by lazy { PlaylistRepository(this, database.channels(), network, epgIds) }
+    val epg by lazy { EpgRepository(EpgCache(File(cacheDir, "epg")), settings, database.channels(), network, epgIds) }
 
     @androidx.annotation.OptIn(UnstableApi::class)
     override fun onCreate() {

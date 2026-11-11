@@ -3,6 +3,7 @@ package io.github.fourkings6114.iptv.data
 import android.content.Context
 import android.net.Uri
 import io.github.fourkings6114.iptv.core.M3uParser
+import io.github.fourkings6114.iptv.epg.EpgChannelIds
 import io.github.fourkings6114.iptv.network.downloadPlaylist
 import io.github.fourkings6114.iptv.network.readPlaylist
 import java.io.IOException
@@ -19,6 +20,7 @@ class PlaylistRepository(
     private val context: Context,
     val dao: ChannelDao,
     private val client: OkHttpClient,
+    private val epgIds: EpgChannelIds? = null,
 ) {
     // Serializes refresh/rename/delete: an in-flight refresh must not resurrect a deleted source.
     private val sourceLock = Mutex()
@@ -82,6 +84,8 @@ class PlaylistRepository(
     suspend fun deleteSource(id: String) = edit {
         personalSource(id)
         dao.removeSource(id)
+        // Derived guide aliases do not own any favorite/history records.
+        try { epgIds?.remove(id) } catch (_: IOException) { /* derived metadata only */ }
     }
 
     private suspend fun personalSource(id: String): SourceEntity {
@@ -97,9 +101,14 @@ class PlaylistRepository(
     private suspend fun save(id: String, title: String, url: String, text: String, baseUrl: String? = null) {
         val parsed = M3uParser.parse(text, baseUrl)
         coroutineContext.ensureActive()
-        dao.replaceSource(
-            SourceEntity(id, title, url, System.currentTimeMillis(), parsed.channels.size, parsed.skipped),
-            parsed.channels,
-        )
+        // A monotonic per-source revision prevents a failed/stale sidecar from
+        // matching a later catalog, even when refreshes occur in one millisecond.
+        val revision = maxOf(System.currentTimeMillis(), (dao.source(id)?.updatedAt ?: 0L) + 1L)
+        val source = SourceEntity(id, title, url, revision, parsed.channels.size, parsed.skipped)
+        dao.replaceSource(source, parsed.channels)
+        // Best-effort derived metadata cannot turn a committed catalog import into
+        // a reported failure. On disk errors the original Room TVG IDs still work;
+        // a later explicit catalog refresh can recover rewritten guide aliases.
+        try { epgIds?.save(source, parsed.channels, parsed.xmltvIds) } catch (_: IOException) { /* recover on explicit refresh */ }
     }
 }
