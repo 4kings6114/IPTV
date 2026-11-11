@@ -23,14 +23,19 @@ if __name__ == "__main__":
     original = signing_support.checked_tool
 
     def public_acl_tool(command, *, env=None, input_data=None, timeout=60):
-        if os.name != "nt" or command[0] != "powershell.exe":
+        if os.name != "nt" or command[0] not in ("powershell.exe", "icacls.exe"):
             return original(command, env=env, input_data=input_data, timeout=timeout)
         result = subprocess.run(command, input=input_data, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                 env=env, timeout=timeout)
         if result.returncode:
             # These commands reference only a disposable test directory/SID and
             # static ACL code, never private data or token/environment listings.
-            output.write("Synthetic-only Windows ACL diagnostic:\n" + result.stderr.decode("utf-8", errors="replace")[:6000] + "\n")
+            if command[0] == "icacls.exe":
+                phase = "icacls " + " ".join(command[2:])
+            else:
+                phase = "ACL verification" if "-EncodedCommand" in command else "SID lookup"
+            output.write(f"Synthetic-only Windows {phase} failed with exit code {result.returncode}.\n")
+            output.write("Synthetic-only Windows ACL diagnostic:\n" + result.stdout.decode("utf-8", errors="replace")[:1000] + result.stderr.decode("utf-8", errors="replace")[:6000] + "\n")
             raise signing_support.SigningError("Synthetic Windows ACL command failed.")
         return result.stdout
 
