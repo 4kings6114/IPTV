@@ -7,6 +7,7 @@ on:
       - "android/tools/*signing*.py"
       - "android/tools/install_ci_age.py"
       - "tests/test_android_signing*.py"
+      - "tests/run_signing_tools_ci.py"
       - ".github/workflows/android-signing-backup.yml"
 
 permissions:
@@ -50,7 +51,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify real NTFS permissions and synthetic offline owner-tool contracts
-        run: python -B -m unittest tests.test_android_signing -v
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -B tests/run_signing_tools_ci.py
 
   owner-backup:
     needs: [tooling-tests, windows-owner-tools]
