@@ -223,7 +223,8 @@ class SourceManagementTest {
         ui.onNodeWithText("افزودن لینک").performScrollTo().performClick()
         ui.onNodeWithText("نام فهرست").performTextInput(title)
         ui.onNodeWithText("لینک HTTP / HTTPS").performTextInput(url)
-        ui.onNodeWithText("افزودن فهرست").performScrollTo().performClick()
+        // AlertDialog actions live outside its scrollable text body.
+        ui.onNodeWithText("افزودن فهرست").assertIsDisplayed().performClick()
     }
     private fun openManager() {
         ui.onNodeWithText("تنظیمات").performClick()

@@ -114,6 +114,7 @@ def verify_upgrade(root: Path, out: Path) -> dict:
         new_apk = root / "app/build/outputs/apk/debug/app-debug.apk"
         test_apk = root / "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
         report["baseline"] = apk_identity(old_apk, 3, "0.1.2-trial", out, "baseline")
+        report["baseline_binary_matches_delivered_sha256"] = report["baseline"]["apk_sha256"] == DELIVERED_012_APK_SHA256
         report["current"] = apk_identity(new_apk, 4, "0.1.3-trial", out, "current")
         report["same_as_delivered_0_1_2_signer"] = True
         report["room_v1_identity_hash"] = compare_schemas(
