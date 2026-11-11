@@ -98,15 +98,16 @@ def private_directory(path: Path) -> Path:
         # request SeSecurityPrivilege for a new DirectorySecurity object's SACL,
         # which ordinary owner accounts do not have. icacls edits only the DACL.
         # SID syntax is language-independent; no localized account names or shell
-        # interpolation are used. The newly-created directory is already owned by
-        # the current user; reset inherited/explicit ACEs, disable inheritance, and
-        # grant only the owner and SYSTEM before writing any private material.
+        # interpolation are used. Set the directory owner to the current user,
+        # reset inherited/explicit ACEs, disable inheritance, and grant only the
+        # owner and SYSTEM before writing any private material.
         env = powershell_environment()
         sid = checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command",
                             "[System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value"],
                            env=env).decode("ascii").strip()
         if not re.fullmatch(r"S-1-[0-9-]+", sid):
             raise SigningError("Cannot determine the Windows owner SID safely.")
+        checked_tool(["icacls.exe", str(path), "/setowner", f"*{sid}"])
         checked_tool(["icacls.exe", str(path), "/reset"])
         checked_tool(["icacls.exe", str(path), "/inheritance:r"])
         checked_tool(["icacls.exe", str(path), "/grant:r", f"*{sid}:(OI)(CI)F", "*S-1-5-18:(OI)(CI)F"])
@@ -116,12 +117,12 @@ def private_directory(path: Path) -> Path:
 $ErrorActionPreference = 'Stop'
 $acl = Get-Acl -LiteralPath $env:IPTV_OWNER_DIRECTORY
 $sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
-if ($acl.GetOwner([System.Security.Principal.SecurityIdentifier]).Value -ne $sid) { exit 1 }
-if (-not $acl.AreAccessRulesProtected) { exit 2 }
+if ($acl.GetOwner([System.Security.Principal.SecurityIdentifier]).Value -ne $sid) { [Console]::Error.WriteLine('ACL owner mismatch'); exit 1 }
+if (-not $acl.AreAccessRulesProtected) { [Console]::Error.WriteLine('ACL inheritance is enabled'); exit 2 }
 $rules = $acl.GetAccessRules($true, $true, [System.Security.Principal.SecurityIdentifier])
-if ($rules.Count -ne 2) { exit 3 }
+if ($rules.Count -ne 2) { [Console]::Error.WriteLine('Unexpected ACL entry count'); exit 3 }
 foreach ($rule in $rules) {
-    if ($rule.IdentityReference.Value -notin @($sid, 'S-1-5-18') -or $rule.AccessControlType -ne 'Allow' -or $rule.IsInherited) { exit 4 }
+    if ($rule.IdentityReference.Value -notin @($sid, 'S-1-5-18') -or $rule.AccessControlType -ne 'Allow' -or $rule.IsInherited) { [Console]::Error.WriteLine('Unexpected ACL entry'); exit 4 }
 }
 """
         encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
