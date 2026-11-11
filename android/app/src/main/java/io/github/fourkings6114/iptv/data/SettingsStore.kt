@@ -29,6 +29,10 @@ class SettingsStore(context: Context, scope: CoroutineScope) {
     }.stateIn(scope, SharingStarted.Eagerly, AppSettings())
 
     suspend fun selectSource(id: String) { store.edit { it[source] = id } }
+    suspend fun forgetSource(id: String) {
+        // Compare inside DataStore's transaction so a newer selection is not overwritten.
+        store.edit { if (it[source] == id) it[source] = SAMPLE_SOURCE_ID }
+    }
     suspend fun allowHttp(allow: Boolean) { store.edit { it[http] = allow } }
     suspend fun showLogos(show: Boolean) { store.edit { it[logos] = show } }
 }

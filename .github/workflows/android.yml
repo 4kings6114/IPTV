@@ -61,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/setup_sdk.py
-      - name: Unit tests, Android lint, and installable debug APK
+      - name: Unit tests, Android lint, app and instrumentation compilation
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 tools/ci_build.py

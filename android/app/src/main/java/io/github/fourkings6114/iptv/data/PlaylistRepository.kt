@@ -6,6 +6,7 @@ import io.github.fourkings6114.iptv.core.M3uParser
 import io.github.fourkings6114.iptv.network.downloadPlaylist
 import io.github.fourkings6114.iptv.network.readPlaylist
 import java.io.IOException
+import java.util.UUID
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.sync.Mutex
@@ -19,46 +20,79 @@ class PlaylistRepository(
     val dao: ChannelDao,
     private val client: OkHttpClient,
 ) {
-    private val refreshLock = Mutex()
-
-    suspend fun ensureSource(id: String) {
-        if (dao.source(id) == null) refresh(id)
+    // Serializes refresh/rename/delete: an in-flight refresh must not resurrect a deleted source.
+    private val sourceLock = Mutex()
+    private suspend fun <T> edit(action: suspend () -> T): T = sourceLock.withLock {
+        withContext(Dispatchers.IO) { action() }
     }
 
-    suspend fun refresh(id: String) = refreshLock.withLock {
-        withContext(Dispatchers.IO) {
-            if (id == SAMPLE_SOURCE_ID) {
-                val text = context.assets.open("trial.m3u").use { it.readPlaylist() }
-                save(id, SOURCE_PRESETS.first().title, "", text)
-            } else {
-                val preset = SOURCE_PRESETS.find { it.id == id }
-                val stored = dao.source(id)
-                val url = preset?.url ?: stored?.url?.takeIf { it.isNotBlank() }
-                    ?: throw IOException("No refresh URL")
-                val downloaded = client.downloadPlaylist(url)
-                coroutineContext.ensureActive()
-                save(id, preset?.title ?: stored!!.title, url, downloaded.text, downloaded.finalUrl)
-            }
-        }
+    suspend fun ensureSource(id: String) = edit {
+        if (dao.source(id) == null) refreshLocked(id)
     }
 
-    suspend fun importUrl(raw: String) = refreshLock.withLock {
-        withContext(Dispatchers.IO) {
-            val url = M3uParser.httpUrl(raw.trim()) ?: throw IllegalArgumentException("Invalid HTTP(S) playlist URL")
+    suspend fun refresh(id: String) = edit { refreshLocked(id) }
+
+    private suspend fun refreshLocked(id: String) {
+        if (id == SAMPLE_SOURCE_ID) {
+            val text = context.assets.open("trial.m3u").use { it.readPlaylist() }
+            save(id, SOURCE_PRESETS.first().title, "", text)
+        } else {
+            val preset = SOURCE_PRESETS.find { it.id == id }
+            val stored = dao.source(id)
+            if (preset == null && stored == null) throw SourceMissingException()
+            val url = preset?.url ?: stored!!.url.takeIf { it.isNotBlank() }
+                ?: throw FileSourceSelectionRequiredException()
             val downloaded = client.downloadPlaylist(url)
-            coroutineContext.ensureActive()
-            save("custom", "فهرست از لینک شخصی", url, downloaded.text, downloaded.finalUrl)
+            save(id, preset?.title ?: stored!!.title, url, downloaded.text, downloaded.finalUrl)
         }
     }
 
-    suspend fun importFile(uri: Uri) = refreshLock.withLock {
-        withContext(Dispatchers.IO) {
-            val text = context.contentResolver.openInputStream(uri)?.use { it.readPlaylist() }
-                ?: throw IOException("Unable to open the selected file")
-            coroutineContext.ensureActive()
-            save("file", "فایل واردشده", "", text)
-        }
+    /** Each successful add gets a new ID, including repeated imports of the same URL/file. */
+    suspend fun importUrl(raw: String, title: String = DEFAULT_LINK_SOURCE_TITLE): String = edit {
+        val name = sourceTitle(title)
+        val url = M3uParser.httpUrl(raw.trim()) ?: throw IllegalArgumentException("Invalid HTTP(S) playlist URL")
+        val downloaded = client.downloadPlaylist(url)
+        val id = newSourceId()
+        save(id, name, url, downloaded.text, downloaded.finalUrl)
+        id
     }
+
+    suspend fun importFile(uri: Uri, title: String = DEFAULT_FILE_SOURCE_TITLE): String = edit {
+        val name = sourceTitle(title)
+        val text = readFile(uri)
+        val id = newSourceId()
+        save(id, name, "", text)
+        id
+    }
+
+    /** SAF is requested again explicitly; never persist an unreliable/broad file permission. */
+    suspend fun replaceFile(id: String, uri: Uri): String = edit {
+        val stored = personalSource(id)
+        if (!stored.isFileSource) throw NotAFileSourceException()
+        save(id, stored.title, "", readFile(uri))
+        id
+    }
+
+    suspend fun renameSource(id: String, rawTitle: String) = edit {
+        personalSource(id)
+        val name = sourceTitle(rawTitle)
+        if (dao.renameSourceRecord(id, name) != 1) throw SourceMissingException()
+    }
+
+    suspend fun deleteSource(id: String) = edit {
+        personalSource(id)
+        dao.removeSource(id)
+    }
+
+    private suspend fun personalSource(id: String): SourceEntity {
+        if (isBuiltInSource(id)) throw ProtectedSourceException()
+        return dao.source(id) ?: throw SourceMissingException()
+    }
+
+    private fun readFile(uri: Uri): String = context.contentResolver.openInputStream(uri)?.use { it.readPlaylist() }
+        ?: throw IOException("Unable to open the selected file")
+
+    private fun newSourceId() = "user-${UUID.randomUUID()}"
 
     private suspend fun save(id: String, title: String, url: String, text: String, baseUrl: String? = null) {
         val parsed = M3uParser.parse(text, baseUrl)

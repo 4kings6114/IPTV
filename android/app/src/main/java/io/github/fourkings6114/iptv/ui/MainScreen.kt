@@ -13,7 +13,6 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -29,7 +28,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -40,7 +38,7 @@ import io.github.fourkings6114.iptv.core.Channel
 import io.github.fourkings6114.iptv.core.normalizeSearch
 import io.github.fourkings6114.iptv.core.persianNumber
 import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
-import io.github.fourkings6114.iptv.data.SOURCE_PRESETS
+import io.github.fourkings6114.iptv.data.isFileSource
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
@@ -53,7 +51,7 @@ private enum class Pane(val label: String, val icon: ImageVector) {
 }
 
 @Composable
-fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel) -> Unit) {
+fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, onPlay: (Channel) -> Unit) {
     val crashReport by model.crashReport.collectAsStateWithLifecycle()
     var showCrashReport by rememberSaveable { mutableStateOf(true) }
     var crashCopied by rememberSaveable { mutableStateOf(false) }
@@ -70,8 +68,10 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
     var pane by rememberSaveable { mutableStateOf(Pane.Channels) }
     var query by rememberSaveable { mutableStateOf("") }
     var group by remember(settings.sourceId) { mutableStateOf<String?>(null) }
-    var chooseSource by remember { mutableStateOf(false) }
-    var importUrl by remember { mutableStateOf(false) }
+    var chooseSource by rememberSaveable { mutableStateOf(false) }
+    var sourceImportIsFile by rememberSaveable { mutableStateOf<Boolean?>(null) }
+    var renameSourceId by rememberSaveable { mutableStateOf<String?>(null) }
+    var deleteSourceId by rememberSaveable { mutableStateOf<String?>(null) }
     var httpConfirm by remember { mutableStateOf(false) }
     var pendingHttpChannel by remember { mutableStateOf<Channel?>(null) }
     var licenses by remember { mutableStateOf(false) }
@@ -131,7 +131,10 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                     Text("نسخهٔ آزمایشی · پخش مستقیم از منبع", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 if (pane == Pane.Channels) {
-                    IconButton(onClick = { if (settings.sourceId == "file") onImportFile() else model.refresh() }, enabled = !busy) {
+                    IconButton(onClick = {
+                        val current = source
+                        if (current?.isFileSource == true) onImportFile(FileImportRequest(current.title, current.id)) else model.refresh()
+                    }, enabled = !busy && settings.loaded) {
                         Icon(Icons.Default.Refresh, "به‌روزرسانی فهرست")
                     }
                 }
@@ -154,10 +157,10 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                             if (info.skipped > 0) Text("${persianNumber(info.skipped)} ورودی نامعتبر کنار گذاشته شد.", style = MaterialTheme.typography.bodySmall)
                         }
                         Text("زمان بالا مربوط به دریافت فهرست است، نه تأیید سلامت پخش.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        OutlinedButton(onClick = { chooseSource = true }, enabled = !busy, modifier = Modifier.fillMaxWidth()) { Text("تغییر فهرست") }
+                        OutlinedButton(onClick = { chooseSource = true }, enabled = !busy && settings.loaded, modifier = Modifier.fillMaxWidth()) { Text("مدیریت فهرست‌ها") }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            OutlinedButton(onClick = { importUrl = true }, enabled = !busy, modifier = Modifier.weight(1f)) { Text("ورود لینک M3U") }
-                            OutlinedButton(onClick = onImportFile, enabled = !busy, modifier = Modifier.weight(1f)) { Text("انتخاب فایل") }
+                            OutlinedButton(onClick = { sourceImportIsFile = false }, enabled = !busy && settings.loaded, modifier = Modifier.weight(1f)) { Text("افزودن لینک") }
+                            OutlinedButton(onClick = { sourceImportIsFile = true }, enabled = !busy && settings.loaded, modifier = Modifier.weight(1f)) { Text("افزودن فایل") }
                         }
                         Text("پروفایل کم‌مصرف، فهرستی از نسخه‌های انتخاب‌شده است؛ ویدئو را تبدیل نمی‌کند و مصرف ثابت را تضمین نمی‌کند.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
@@ -189,7 +192,7 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
                 }
             } else {
                 if (pane == Pane.Channels) {
-                    TextButton(onClick = { chooseSource = true }, enabled = !busy, modifier = Modifier.padding(horizontal = 12.dp)) {
+                    TextButton(onClick = { chooseSource = true }, enabled = !busy && settings.loaded, modifier = Modifier.padding(horizontal = 12.dp)) {
                         Text(source?.title ?: "آماده‌سازی فهرست…", maxLines = 1, overflow = TextOverflow.Ellipsis)
                         Spacer(Modifier.width(8.dp))
                         Icon(Icons.Default.ArrowDropDown, null)
@@ -262,36 +265,44 @@ fun MainScreen(model: MainViewModel, onImportFile: () -> Unit, onPlay: (Channel)
         )
     }
     if (chooseSource) {
-        val extra = availableSources.filter { item -> SOURCE_PRESETS.none { it.id == item.id } }
-        AlertDialog(
-            onDismissRequest = { chooseSource = false }, title = { Text("فهرست کانال‌ها") },
-            text = {
-                Column(Modifier.verticalScroll(rememberScrollState())) {
-                    (SOURCE_PRESETS.map { it.id to it.title } + extra.map { it.id to it.title }).forEach { (id, title) ->
-                        Row(Modifier.fillMaxWidth().clickable(enabled = !busy) { model.selectSource(id); chooseSource = false }.padding(vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-                            RadioButton(selected = settings.sourceId == id, onClick = null)
-                            Spacer(Modifier.width(8.dp)); Text(title, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
-                    Text("فهرست‌های آنلاین از مخزن پروژه دریافت می‌شوند. این انتخاب، صحت پخش یا حق دسترسی به محتوا را تضمین نمی‌کند.", style = MaterialTheme.typography.bodySmall)
-                }
+        SourcesDialog(
+            sources = availableSources, selectedId = settings.sourceId, busy = busy, error = error,
+            onSelect = { model.selectSource(it); chooseSource = false; pane = Pane.Channels },
+            onRefresh = { item ->
+                if (item.isFileSource) onImportFile(FileImportRequest(item.title, item.id)) else model.refreshSource(item.id)
             },
-            confirmButton = { TextButton(onClick = { chooseSource = false }) { Text("بستن") } },
+            onRename = { chooseSource = false; renameSourceId = it },
+            onDelete = { chooseSource = false; deleteSourceId = it },
+            onAddUrl = { chooseSource = false; sourceImportIsFile = false },
+            onAddFile = { chooseSource = false; sourceImportIsFile = true },
+            onDismiss = { chooseSource = false },
         )
     }
-    if (importUrl) {
-        var url by remember { mutableStateOf("") }
-        AlertDialog(
-            onDismissRequest = { importUrl = false }, title = { Text("ورود لینک فهرست M3U") },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text("لینک فهرست کانال‌ها را وارد کن، نه آدرس یک استریم. لینک فقط روی گوشی ذخیره می‌شود؛ اطلاعات حساب را برای کسی نفرست.", style = MaterialTheme.typography.bodySmall)
-                    OutlinedTextField(value = url, onValueChange = { url = it }, singleLine = true, label = { Text("HTTP / HTTPS") }, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri))
-                }
+    sourceImportIsFile?.let { isFile ->
+        SourceImportDialog(
+            isFile = isFile,
+            onSubmit = { title, url ->
+                sourceImportIsFile = null
+                if (isFile) onImportFile(FileImportRequest(title)) else { model.importUrl(url, title); pane = Pane.Channels }
             },
-            confirmButton = { TextButton(enabled = url.isNotBlank(), onClick = { model.importUrl(url); importUrl = false; pane = Pane.Channels }) { Text("دریافت") } },
-            dismissButton = { TextButton(onClick = { importUrl = false }) { Text("انصراف") } },
+            onDismiss = { sourceImportIsFile = null },
         )
+    }
+    renameSourceId?.let { id ->
+        availableSources.find { it.id == id }?.let { item ->
+            SourceRenameDialog(item,
+                onSave = { model.renameSource(id, it); renameSourceId = null; chooseSource = true },
+                onDismiss = { renameSourceId = null; chooseSource = true },
+            )
+        }
+    }
+    deleteSourceId?.let { id ->
+        availableSources.find { it.id == id }?.let { item ->
+            SourceDeleteDialog(item,
+                onDelete = { model.deleteSource(id); deleteSourceId = null; chooseSource = true },
+                onDismiss = { deleteSourceId = null; chooseSource = true },
+            )
+        }
     }
     if (httpConfirm) {
         AlertDialog(

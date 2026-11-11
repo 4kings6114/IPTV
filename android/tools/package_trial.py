@@ -29,7 +29,8 @@ metadata = json.loads((apk.parent / "output-metadata.json").read_text())
 element = metadata["elements"][0]
 assert metadata["applicationId"] == "io.github.fourkings6114.iptv.trial"
 assert element["versionName"].endswith("-trial")
-assert element["versionCode"] == 3
+assert element["versionCode"] == 4
+assert element["versionName"] == "0.1.3-trial"
 badging = (build / "badging.txt").read_text()
 assert "sdkVersion:'26'" in badging
 assert "targetSdkVersion:'36'" in badging
@@ -50,11 +51,29 @@ with zipfile.ZipFile(apk) as archive:
     native_libraries = sorted(name for name in archive.namelist() if name.endswith(".so"))
 
 counts = {"tests": 0, "failures": 0, "errors": 0, "skipped": 0}
+source_test_suites = {}
+executed_cases = set()
 for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     suite = ET.parse(path).getroot()
     for name in counts:
         counts[name] += int(suite.get(name, "0"))
-assert counts["tests"] >= 43, counts
+    executed_cases.update(case.get("name") for case in suite.findall("testcase"))
+    if suite.get("name", "").rsplit(".", 1)[-1] in {"AppDatabaseTest", "PlaylistRepositoryTest", "SettingsStoreTest", "SourceRulesTest"}:
+        source_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
+required_source_cases = {
+    "repeatedUrlAddsAreIndependentAndDoNotOverwriteLegacyCustom",
+    "repeatedFileAddsAreIndependentAndDoNotOverwriteLegacyFile",
+    "targetedFileRefreshRetainsIdentityNameAndSavedChannels",
+    "failedUrlRefreshPreservesLastGoodMetadataReferencesFavoritesAndHistory",
+    "cancelledRefreshKeepsTheLastKnownGoodSource",
+    "deletionPreservesOtherSourcesSharedChannelsFavoritesAndHistory",
+    "deletingTheLastPersonalSourceDoesNotDeleteSavedChannels",
+    "refreshAndDeleteAreSerializedSoACompletedDeleteCannotBeResurrected",
+    "sourceDeletionRollsBackReferencesWhenTheTransactionFails",
+    "forgettingOnlyTheSelectedSourcePreservesOtherSelectionsAndPreferences",
+}
+assert required_source_cases <= executed_cases, required_source_cases - executed_cases
+assert counts["tests"] >= 65, counts
 assert counts["failures"] == counts["errors"] == counts["skipped"] == 0, counts
 lint = ET.parse(build / "reports/lint-results-debug.xml").getroot()
 assert not any(issue.get("severity") in {"Fatal", "Error"} for issue in lint.findall("issue"))
@@ -78,10 +97,11 @@ info = {
     "bytes": destination.stat().st_size,
     "sha256": digest,
     "unit_tests": counts,
+    "source_management_test_suites": source_test_suites,
     "permissions": sorted(permissions),
     "native_libraries": native_libraries,
     "signing": "DEBUG/TRIAL ONLY; branch cache identity; not a production release key",
-    "physical_device_test": "0.1.2 NOT YET RETESTED; user crash report for 0.1.1 is Xiaomi / Android API 31",
+    "physical_device_test": "0.1.3 NOT YET TESTED on a physical device; user reported stable audio/video and exit/return on 0.1.2",
     "stream_playback_tests": "Provider streams NOT TESTED; separate API31/API33 synthetic runtime workflow",
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
@@ -102,7 +122,16 @@ info["signing_cache_path_verified"] = True
 info["updates_original_0_1_0_trial"] = current_signer.group(1) == previous_signer
 previous_0_1_1_signer = "f73be34704f68399ada9b3a8d3d8ce82b585cd508beb68929e6a93063250da2a"
 info["updates_delivered_0_1_1_trial"] = current_signer.group(1) == previous_0_1_1_signer
-info["installation_warning"] = "If signer differs, Android cannot update the previously delivered trial in place. Uninstalling it erases local playlists, favorites, history and preferences. Save needed source information and the MIUI crash summary first."
+previous_0_1_2_signer = "eba2f7bdb4cfea267f4c30cedba8b2956f9c86ed3d5363512291fd3d6bd29c48"
+info["updates_delivered_0_1_2_trial"] = current_signer.group(1) == previous_0_1_2_signer
+# Never silently deliver another incompatible trial after the user has saved local data.
+assert info["updates_delivered_0_1_2_trial"], "Trial signer changed: stop; do not replace the user's installed app or erase data"
+schema = json.loads((app / "schemas/io.github.fourkings6114.iptv.data.AppDatabase/1.json").read_text())["database"]
+assert schema["version"] == 1
+info["room_schema_version"] = schema["version"]
+info["room_schema_identity_hash"] = schema["identityHash"]
+info["source_management"] = "Independent URL/file catalog IDs; named imports; rename/refresh/transactional delete; legacy custom/file IDs retained"
+info["installation_warning"] = "Verified same signer as delivered 0.1.2: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. The trial key cache is expendable, not production signing."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

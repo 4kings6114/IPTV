@@ -16,7 +16,7 @@ root = Path(__file__).resolve().parents[1]
 build = root / "app/build"
 build.mkdir(parents=True, exist_ok=True)
 log_path = build / "gradle.log"
-command = ["./gradlew", "--no-daemon", "--stacktrace", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug"]
+command = ["./gradlew", "--no-daemon", "--stacktrace", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug", ":app:assembleDebugAndroidTest"]
 with log_path.open("w", encoding="utf-8") as log:
     process = subprocess.Popen(command, cwd=root, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     assert process.stdout is not None

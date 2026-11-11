@@ -3,9 +3,18 @@ package io.github.fourkings6114.iptv.ui
 import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import io.github.fourkings6114.iptv.IPTVApplication
 import io.github.fourkings6114.iptv.core.PlaylistParseException
+import io.github.fourkings6114.iptv.data.FileSourceSelectionRequiredException
+import io.github.fourkings6114.iptv.data.InvalidSourceNameException
+import io.github.fourkings6114.iptv.data.NotAFileSourceException
+import io.github.fourkings6114.iptv.data.ProtectedSourceException
+import io.github.fourkings6114.iptv.data.SAMPLE_SOURCE_ID
+import io.github.fourkings6114.iptv.data.SourceMissingException
+import io.github.fourkings6114.iptv.data.isBuiltInSource
+import io.github.fourkings6114.iptv.data.sourceTitle
 import io.github.fourkings6114.iptv.network.CleartextDisabledException
 import io.github.fourkings6114.iptv.network.PlaylistTooLargeException
 import io.github.fourkings6114.iptv.network.SourceHttpException
@@ -13,9 +22,7 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import javax.net.ssl.SSLException
 import kotlinx.coroutines.CancellationException
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -23,21 +30,24 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class MainViewModel(application: Application, private val savedState: SavedStateHandle) : AndroidViewModel(application) {
     private val app = application as IPTVApplication
     private val repository = app.repository
     private val dao = repository.dao
     val settings = app.settings.state
     private val selectedSource = settings.filter { it.loaded }.map { it.sourceId }.distinctUntilChanged()
-    val channels = selectedSource.flatMapLatest { dao.observeSource(it) }.map { rows -> rows.map { it.channel() } }
+    val channels = selectedSource.flatMapLatest { dao.observeSource(it).onStart { emit(emptyList()) } }
+        .map { rows -> rows.map { it.channel() } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val availableSources = dao.observeSources()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-    val source = selectedSource.flatMapLatest { dao.observeSourceInfo(it) }
+    val source = selectedSource.flatMapLatest { dao.observeSourceInfo(it).onStart { emit(null) } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
     val favorites = dao.observeFavorites().map { rows -> rows.map { it.channel() } }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
@@ -49,33 +59,106 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val busy = MutableStateFlow(false)
     val error = MutableStateFlow<String?>(null)
     val notice = MutableStateFlow<String?>(null)
-    private var activeLoad: Job? = null
 
     init {
         viewModelScope.launch { crashReport.value = withContext(Dispatchers.IO) { app.crashReports.read() } }
-        viewModelScope.launch { selectedSource.collect { load(it, force = false) } }
+        viewModelScope.launch {
+            selectedSource.collect { id ->
+                try {
+                    if (dao.source(id) == null) {
+                        if (isBuiltInSource(id)) {
+                            // A file result/import can arrive while preferences are first loading.
+                            // Wait rather than losing the initial load because busy was true.
+                            busy.first { !it }
+                            if (settings.value.sourceId == id) runSourceOperation { repository.ensureSource(id) }
+                        } else {
+                            // Recover a process death between Room deletion and the DataStore update.
+                            // Do not invent/re-download an absent personal source or erase saved channels.
+                            app.settings.forgetSource(id)
+                            notice.value = "فهرست انتخاب‌شده موجود نیست؛ فهرست نمونه نمایش داده شد."
+                        }
+                    }
+                } catch (cancelled: CancellationException) { throw cancelled
+                } catch (failure: Exception) { error.value = sourceError(failure) }
+            }
+        }
     }
 
-    private fun load(id: String, force: Boolean) {
-        activeLoad?.cancel()
-        activeLoad = viewModelScope.launch {
-            busy.value = true
-            error.value = null
-            try {
-                if (force) repository.refresh(id) else repository.ensureSource(id)
-                if (force) notice.value = "فهرست به‌روز شد؛ این نتیجه، تأیید پخش کانال‌ها نیست."
-            } catch (cancelled: CancellationException) {
-                throw cancelled
-            } catch (failure: Exception) {
-                error.value = sourceError(failure)
+    /** Set busy before launch, so rapid clicks cannot start overlapping source mutations. */
+    private fun runSourceOperation(action: suspend () -> Unit) {
+        if (busy.value) return
+        busy.value = true
+        error.value = null
+        viewModelScope.launch {
+            try { action()
+            } catch (cancelled: CancellationException) { throw cancelled
+            } catch (failure: Exception) { error.value = sourceError(failure)
             } finally { busy.value = false }
         }
     }
 
     fun selectSource(id: String) {
-        if (!busy.value) viewModelScope.launch { app.settings.selectSource(id) }
+        if (!busy.value) viewModelScope.launch { error.value = null; app.settings.selectSource(id) }
     }
-    fun refresh() { if (!busy.value) load(settings.value.sourceId, force = true) }
+    fun refresh() = refreshSource(settings.value.sourceId)
+    fun refreshSource(id: String) = runSourceOperation {
+        repository.refresh(id)
+        notice.value = "فهرست به‌روز شد؛ این نتیجه، تأیید پخش کانال‌ها نیست."
+    }
+    fun importUrl(url: String, title: String) = runSourceOperation {
+        val id = repository.importUrl(url, title)
+        app.settings.selectSource(id)
+        notice.value = "فهرست جدید جداگانه اضافه شد؛ فهرست‌های قبلی باقی ماندند."
+    }
+    fun renameSource(id: String, title: String) = runSourceOperation {
+        repository.renameSource(id, title)
+        notice.value = "نام فهرست تغییر کرد."
+    }
+    fun deleteSource(id: String) = runSourceOperation {
+        // Asset-backed fallback needs no network. Prepare it before deleting the selected list.
+        // stateIn may lag a committed selection; always prepare the cheap offline fallback.
+        repository.ensureSource(SAMPLE_SOURCE_ID)
+        repository.deleteSource(id)
+        app.settings.forgetSource(id)
+        notice.value = "فهرست حذف شد؛ علاقه‌مندی‌ها و سابقهٔ پخش حفظ شدند."
+    }
+
+    fun prepareFileImport(title: String, sourceId: String? = null): Boolean {
+        if (busy.value) return false
+        val name = try { sourceTitle(title) } catch (failure: InvalidSourceNameException) {
+            error.value = sourceError(failure); return false
+        }
+        // Only action metadata is saved, never a URI/credential. The system result supplies the URI.
+        savedState["file_pick_pending"] = true
+        savedState["file_pick_title"] = name
+        savedState["file_pick_target"] = sourceId
+        return true
+    }
+
+    fun fileChosen(uri: Uri?) {
+        if (savedState.get<Boolean>("file_pick_pending") != true) return
+        val title = savedState.get<String>("file_pick_title") ?: return
+        val target = savedState.get<String>("file_pick_target")
+        savedState["file_pick_pending"] = false
+        savedState.remove<String>("file_pick_title")
+        savedState.remove<String>("file_pick_target")
+        if (uri == null) return // Cancelling SAF must not add, replace, or rename anything.
+        viewModelScope.launch {
+            settings.first { it.loaded }
+            busy.first { !it }
+            runSourceOperation {
+                val id = if (target == null) repository.importFile(uri, title) else repository.replaceFile(target, uri)
+                if (target == null) app.settings.selectSource(id)
+                notice.value = if (target == null) "فایل به‌عنوان یک فهرست جدید اضافه شد." else "فهرست فایل به‌روز شد؛ نام و انتخاب‌های قبلی حفظ شدند."
+            }
+        }
+    }
+
+    fun filePickerUnavailable() {
+        fileChosen(null)
+        error.value = "انتخاب‌گر فایل باز نشد؛ دوباره از بخش فهرست‌ها امتحان کن."
+    }
+
     fun toggleFavorite(id: String) { viewModelScope.launch { dao.toggleFavorite(id) } }
     fun clearHistory() {
         viewModelScope.launch { dao.clearHistory(); notice.value = "سابقهٔ پخش روی این گوشی پاک شد." }
@@ -92,28 +175,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch { withContext(Dispatchers.IO) { app.crashReports.clear() }; crashReport.value = null }
     }
     fun dismissNotice() { notice.value = null }
-
-    fun importUrl(url: String) = importSource("custom") { repository.importUrl(url) }
-    fun importFile(uri: Uri) = importSource("file") { repository.importFile(uri) }
-
-    private fun importSource(id: String, action: suspend () -> Unit) {
-        if (busy.value) return
-        activeLoad?.cancel()
-        activeLoad = viewModelScope.launch {
-            busy.value = true
-            error.value = null
-            try {
-                action()
-                notice.value = "فهرست وارد شد. اطلاعات و علاقه‌مندی‌ها فقط روی گوشی ذخیره می‌شوند."
-                app.settings.selectSource(id)
-            } catch (cancelled: CancellationException) { throw cancelled
-            } catch (failure: Exception) { error.value = sourceError(failure)
-            } finally { busy.value = false }
-        }
-    }
 }
 
 fun sourceError(error: Exception): String = when (error) {
+    is InvalidSourceNameException -> "نام فهرست باید بین ۱ تا ۸۰ نویسه باشد."
+    is SourceMissingException -> "این فهرست دیگر موجود نیست. از بخش فهرست‌ها یک منبع دیگر انتخاب کن."
+    is ProtectedSourceException -> "فهرست‌های آمادهٔ پروژه قابل تغییر نام یا حذف نیستند. فهرست‌های شخصی را می‌توانی مدیریت کنی."
+    is FileSourceSelectionRequiredException -> "برای به‌روزرسانی این فهرست، فایل را دوباره از انتخاب‌گر فایل انتخاب کن."
+    is NotAFileSourceException -> "این منبع لینک است؛ برای تغییر محتوای آن از به‌روزرسانی فهرست استفاده کن."
     is CleartextDisabledException -> "این منبع از HTTP بدون رمزنگاری استفاده می‌کند. برای منابع مورداعتماد می‌توانی آن را در تنظیمات مجاز کنی."
     is SourceHttpException -> when (error.status) {
         401, 403 -> "سرور اجازهٔ دریافت فهرست را نداد (${error.status}). مجوز، اعتبار لینک و محدودیت منبع را بررسی کن."
@@ -131,5 +200,5 @@ fun sourceError(error: Exception): String = when (error) {
     is SocketTimeoutException -> "دریافت فهرست طول کشید. اتصال را بررسی کن و دوباره تلاش کن."
     is UnknownHostException -> "نام سرور پیدا نشد. اینترنت، DNS و آدرس منبع را بررسی کن."
     is SSLException -> "اتصال امن منبع تأیید نشد. تاریخ گوشی و گواهی سرور را بررسی کن؛ بررسی گواهی غیرفعال نمی‌شود."
-    else -> "دریافت فهرست انجام نشد. اتصال و منبع را بررسی کن؛ فهرست ذخیره‌شده حفظ شده است."
+    else -> "عملیات فهرست انجام نشد. اتصال و منبع را بررسی کن؛ اطلاعات ذخیره‌شده حفظ شده است."
 }

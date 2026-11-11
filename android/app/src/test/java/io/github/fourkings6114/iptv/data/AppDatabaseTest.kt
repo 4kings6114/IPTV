@@ -73,6 +73,29 @@ class AppDatabaseTest {
         assertTrue(dao.observeHistory().first().isEmpty())
         assertEquals(1, dao.observeFavorites().first().size)
     }
+    @Test fun renameChangesOnlyTitleNotIdentityTimestampOrReferences() = runBlocking {
+        val original = source("custom")
+        dao.replaceSource(original, listOf(one))
+        dao.toggleFavorite(one.id)
+        dao.recordPlayback(one.id)
+        assertEquals(1, dao.renameSourceRecord("custom", "New name"))
+        assertEquals(original.copy(title = "New name"), dao.source("custom"))
+        assertEquals(listOf(one.id), dao.observeSource("custom").first().map { it.id })
+        assertEquals(listOf(one.id), dao.observeFavorites().first().map { it.id })
+        assertEquals(listOf(one.id), dao.observeHistory().first().map { it.id })
+        assertEquals(0, dao.renameSourceRecord("missing", "Name"))
+    }
+    @Test fun sourceDeletionRollsBackReferencesWhenTheTransactionFails() = runBlocking {
+        dao.replaceSource(source(), listOf(one))
+        // Force failure after clearReferences, proving removal is one Room/SQLite transaction.
+        database.openHelper.writableDatabase.execSQL("CREATE TRIGGER reject_source_delete BEFORE DELETE ON sources BEGIN SELECT RAISE(ABORT, 'test rollback'); END")
+        var rejected = false
+        try { dao.removeSource("test") } catch (_: android.database.sqlite.SQLiteException) { rejected = true }
+        assertTrue(rejected)
+        assertEquals(source(), dao.source("test"))
+        assertEquals(listOf(one.id), dao.observeSource("test").first().map { it.id })
+        assertNotNull(dao.channel(one.id))
+    }
     @Test fun headersRoundTripWithoutLoggingOrLosingValues() {
         val channel = one.copy(headers = mapOf("authorization" to "Bearer test", "user-agent" to "IPTV"))
         assertEquals(channel, channel.entity().channel())

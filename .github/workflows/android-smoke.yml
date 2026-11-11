@@ -23,7 +23,7 @@ jobs:
       matrix:
         api-level: [31, 33]
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 40
     defaults:
       run:
         shell: bash
@@ -45,6 +45,13 @@ jobs:
             ~/.gradle/wrapper
           key: android-gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle.kts', 'android/gradle/wrapper/gradle-wrapper.properties') }}
           restore-keys: android-gradle-${{ runner.os }}-
+      - name: Restore the same trial signer used by the delivered APK
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.android/debug.keystore
+          key: android-trial-signing-v1
+      - name: Use the cached key for current and upgrade-baseline builds
+        run: python3 tools/prepare_trial_signing.py
       - name: Set up compile SDK
         env:
           GH_TOKEN: ${{ github.token }}
@@ -60,7 +67,7 @@ jobs:
             sudo apt-get install --yes ffmpeg
           fi
           python3 tools/generate_smoke_fixture.py
-      - name: Run strict TLS teardown regression and prolonged playback
+      - name: Verify in-place upgrade, independent catalogs, TLS teardown and prolonged playback
         uses: ReactiveCircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
         env:
           GH_TOKEN: ${{ github.token }}

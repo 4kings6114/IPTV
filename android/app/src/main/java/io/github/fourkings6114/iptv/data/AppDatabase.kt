@@ -95,6 +95,20 @@ abstract class ChannelDao {
     @Query("DELETE FROM source_channels WHERE sourceId = :sourceId")
     abstract suspend fun clearReferences(sourceId: String)
 
+    @Query("UPDATE sources SET title = :title WHERE id = :sourceId")
+    abstract suspend fun renameSourceRecord(sourceId: String, title: String): Int
+
+    @Query("DELETE FROM sources WHERE id = :sourceId")
+    abstract suspend fun deleteSourceRecord(sourceId: String)
+
+    /** Delete only this source. Shared channels, favorites and playback history survive. */
+    @Transaction
+    open suspend fun removeSource(sourceId: String) {
+        clearReferences(sourceId)
+        deleteSourceRecord(sourceId)
+        pruneOrphans()
+    }
+
     @Query("DELETE FROM channels WHERE id NOT IN (SELECT channelId FROM source_channels) AND id NOT IN (SELECT channelId FROM favorites) AND id NOT IN (SELECT channelId FROM history)")
     abstract suspend fun pruneOrphans()
 
