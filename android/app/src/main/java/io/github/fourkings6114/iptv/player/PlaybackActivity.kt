@@ -188,6 +188,7 @@ class PlaybackActivity : ComponentActivity() {
             resumePosition = C.TIME_UNSET
             wasPlaying = true
             historyRecorded = false
+            formatInfo = ""
         }
         buffering = true
         failure = null

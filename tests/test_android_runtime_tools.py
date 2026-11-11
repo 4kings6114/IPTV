@@ -1,10 +1,13 @@
 """Offline gates for required emulator evidence; these do not claim to run Android."""
 from copy import deepcopy
 from pathlib import Path
+from types import SimpleNamespace
+import io
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from android.tools.run_device_smoke import EXPECTED_TESTS, collect_results, verification_errors
+from android.tools.run_device_smoke import EXPECTED_TESTS, collect_results, verification_errors, run_runtime_phase
 
 
 class AndroidRuntimeGateTests(unittest.TestCase):
@@ -35,6 +38,26 @@ class AndroidRuntimeGateTests(unittest.TestCase):
             next(case for case in cases if case['name'] == name)['seconds'] = minimum - 0.01
             with self.subTest(name=name):
                 self.assertTrue(verification_errors(self.counts, cases))
+
+    def test_separate_real_instrumentation_results_are_preserved_and_aggregated(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / 'android'
+            out = root / 'app/build/device-smoke'
+            out.mkdir(parents=True)
+            xml = root / 'app/build/outputs/androidTest-results/TEST-device.xml'
+            xml.parent.mkdir(parents=True)
+            for phase in ('pip', 'ordinary'):
+                xml.write_text(f'<testsuite tests="1"><testcase name="{phase}" time="1" /></testsuite>')
+                process = SimpleNamespace(stdout=io.StringIO(), wait=lambda: 0)
+                argument = '-Pandroid.testInstrumentationRunnerArguments.class=synthetic.' + phase
+                with patch('android.tools.run_device_smoke.subprocess.Popen', return_value=process) as start:
+                    self.assertEqual(0, run_runtime_phase(root, out, phase, argument))
+                self.assertIn(argument, start.call_args.args[0])
+                self.assertIn(':app:connectedDebugAndroidTest', start.call_args.args[0])
+            counts, cases, failures = collect_results(out / 'runtime-results')
+            self.assertEqual(2, counts['tests'])
+            self.assertEqual({'pip', 'ordinary'}, {case['name'] for case in cases})
+            self.assertEqual([], failures)
 
     def test_xml_collection_reports_real_cases_failures_and_skips(self):
         with tempfile.TemporaryDirectory() as temp:

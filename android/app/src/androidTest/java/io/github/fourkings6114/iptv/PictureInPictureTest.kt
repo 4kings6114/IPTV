@@ -7,6 +7,7 @@ import android.graphics.Rect
 import android.os.ParcelFileDescriptor
 import android.os.StrictMode
 import android.os.SystemClock
+import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.media3.common.util.UnstableApi
@@ -59,7 +60,7 @@ class PictureInPictureTest {
                 scenario.onActivity { activity = it }
                 waitForVideo(activity)
                 val engine = main { view(activity)!!.player as ExoPlayer }
-                clickManualPip()
+                clickManualPip(activity)
                 waitFor("Native PiP did not open") { main { activity.isInPictureInPictureMode } }
                 assertContinuousPip(activity, engine, 8_000)
                 assertFalse(main { view(activity)!!.useController })
@@ -83,7 +84,7 @@ class PictureInPictureTest {
                 waitForVideo(activity)
                 val oldView = main { view(activity)!! }
                 val oldClient = client(activity)
-                assertTrue(device.pressHome())
+                assertTrue("HOME key injection failed", device.pressKeyCode(KeyEvent.KEYCODE_HOME))
                 waitFor("Home without consent must stop, not minimize") { main { !activity.isInPictureInPictureMode && oldView.player == null } }
                 waitForCleanup(oldClient)
             }
@@ -96,7 +97,7 @@ class PictureInPictureTest {
                 val engine = main { view(activity)!!.player as ExoPlayer }
                 val oldView = main { view(activity)!! }
                 val oldClient = client(activity)
-                assertTrue(device.pressHome())
+                assertTrue("HOME key injection failed", device.pressKeyCode(KeyEvent.KEYCODE_HOME))
                 waitFor("Opted-in Home must enter native PiP") { main { activity.isInPictureInPictureMode } }
                 assertContinuousPip(activity, engine, 6_000)
                 clickSystemPipControl(activity, "dismiss")
@@ -115,7 +116,7 @@ class PictureInPictureTest {
                 waitForVideo(activity)
                 val original = main { view(activity)!!.player as ExoPlayer }
                 val originalClient = client(activity)
-                clickManualPip()
+                clickManualPip(activity)
                 waitFor("PiP must open before system actions") { main { activity.isInPictureInPictureMode } }
                 val pause = actionFor(activity, playing = true)
                 assertTrue("PiP actions must be immutable", pause.actionIntent.isImmutable)
@@ -157,12 +158,12 @@ class PictureInPictureTest {
                     val engine = main { view(activity)!!.player as ExoPlayer }
                     val oldView = main { view(activity)!! }
                     val oldClient = client(activity)
-                    clickManualPip()
+                    clickManualPip(activity)
                     SystemClock.sleep(1_000)
                     assertFalse(main { activity.isInPictureInPictureMode })
                     assertSame(engine, main { oldView.player })
                     assertTrue(main { engine.isPlaying && oldView.useController })
-                    assertTrue(device.pressHome())
+                    assertTrue("HOME key injection failed", device.pressKeyCode(KeyEvent.KEYCODE_HOME))
                     waitFor("A denied PiP must not continue invisible audio") { main { oldView.player == null } }
                     waitForCleanup(oldClient)
                     assertNull(app.crashReports.read())
@@ -180,7 +181,7 @@ class PictureInPictureTest {
                 waitForVideo(activity)
                 val oldView = main { view(activity)!! }
                 val oldClient = client(activity)
-                assertTrue(device.pressBack())
+                assertTrue("BACK key injection failed", device.pressKeyCode(KeyEvent.KEYCODE_BACK))
                 waitFor("Explicit Back must finish, not leave a floating or hidden player") {
                     main { activity.isFinishing && !activity.isInPictureInPictureMode && oldView.player == null }
                 }
@@ -221,12 +222,23 @@ class PictureInPictureTest {
         }
     }
 
+    // Generic key injection does not require the unrelated accessibility content-
+    // changed event that pressHome()/pressBack() wait for. Native postconditions
+    // below still have to prove the actual Home/Back behavior, with no fake callbacks.
     private fun intent(channel: Channel) = Intent(app, PlaybackActivity::class.java)
         .putExtra(PlaybackActivity.CHANNEL_ID, channel.id).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
-    private fun clickManualPip() {
-        val button = device.wait(Until.findObject(By.desc("پخش در پنجرهٔ شناور").enabled(true)), 10_000)
-        assertNotNull("An enabled, user-visible PiP button is required", button)
+    private fun clickManualPip(activity: PlaybackActivity) {
+        val button = device.wait(Until.findObject(By.descContains("پخش در پنجرهٔ شناور").enabled(true)), 10_000)
+        if (button == null) {
+            val state = main {
+                val controller = PlaybackActivity::class.java.getDeclaredField("pip").apply { isAccessible = true }.get(activity)
+                val available = controller.javaClass.getDeclaredMethod("getAvailable").invoke(controller)
+                "entry=$available; lifecycle=${activity.lifecycle.currentState}; focus=${activity.hasWindowFocus()}; " +
+                    "video=${view(activity)?.player?.videoSize}"
+            }
+            fail("An enabled, user-visible PiP button is required; $state; ${systemUiSummary()}")
+        }
         button!!.click() // UI Automator, not Espresso synchronization on a paused PiP Activity
     }
 
@@ -323,8 +335,9 @@ class PictureInPictureTest {
     }
 
     private fun systemUiSummary(): String = "display=${device.displayWidth}x${device.displayHeight}; " +
-        device.findObjects(By.res(Pattern.compile(".*:id/(expand_button|dismiss|actions_group|pip.*)")))
-            .take(12).joinToString { "${it.resourceName} ${it.visibleBounds}" }
+        "foreground=${device.currentPackageName}; " +
+        device.findObjects(By.clickable(true)).take(18)
+            .joinToString { "${it.resourceName} desc=${it.contentDescription} text=${it.text} enabled=${it.isEnabled} ${it.visibleBounds}" }
 
     private fun strictMain(test: () -> Unit) {
         val previous = main { StrictMode.getThreadPolicy().also { StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.Builder(it).detectNetwork().penaltyDeathOnNetwork().build()) } }

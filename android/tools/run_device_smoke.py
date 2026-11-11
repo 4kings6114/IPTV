@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import os
+import shutil
 import subprocess
 import sys
 import traceback
@@ -12,6 +13,8 @@ if __package__:
 else:
     from ci_report import publish
     from verify_upgrade import UPGRADE_TEST_CLASSES, verify_upgrade
+
+PIP_TEST_CLASS = 'io.github.fourkings6114.iptv.PictureInPictureTest'
 
 EXPECTED_TESTS = {
     'browsingFavoritesAndRecreationSurviveSeventySeconds': 70.0,
@@ -64,10 +67,33 @@ def verification_errors(counts, cases):
     return errors
 
 
+def run_runtime_phase(root: Path, out: Path, label: str, runner_argument: str) -> int:
+    """Keep each real instrumentation phase's XML, even when a later run replaces outputs."""
+    assert label in ('pip', 'ordinary')
+    log_path = out / ('pip-gradle.log' if label == 'pip' else 'gradle.log')
+    with log_path.open('w') as log:
+        process = subprocess.Popen([
+            './gradlew', '--no-daemon', '--stacktrace', runner_argument,
+            ':app:connectedDebugAndroidTest',
+        ], cwd=root, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        for line in process.stdout:
+            print(line, end='', flush=True)
+            log.write(line)
+        status = process.wait()
+    source = root / 'app/build/outputs/androidTest-results'
+    destination = out / 'runtime-results' / label
+    for path in source.rglob('*.xml'):
+        copied = destination / path.relative_to(source)
+        copied.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(path, copied)
+    return status
+
+
 def main():
     root = Path(__file__).resolve().parents[1]
     out = root / 'app/build/device-smoke'
     out.mkdir(parents=True, exist_ok=True)
+    shutil.rmtree(out / 'runtime-results', ignore_errors=True) # generated results, never app/user data
     api = subprocess.run(['adb', 'shell', 'getprop', 'ro.build.version.sdk'], text=True, capture_output=True, timeout=20)
     actual_api = api.stdout.strip()
     expected_api = os.environ.get('EXPECTED_ANDROID_API', '31')
@@ -77,24 +103,23 @@ def main():
     try:
         assert expected_api in ('31', '33'), 'Unsupported runtime target'
         assert actual_api == expected_api and api.returncode == 0, f'Expected runtime API {expected_api}, got {actual_api!r}'
+        # Run system-window automation in its own instrumentation process, before
+        # the slower upgrade phases. No Compose/Espresso rule owns its accessibility
+        # connection. A failure is still fatal; all previous regressions remain required.
+        status = run_runtime_phase(root, out, 'pip',
+            '-Pandroid.testInstrumentationRunnerArguments.class=' + PIP_TEST_CLASS)
+        if status:
+            raise RuntimeError('Native PiP instrumentation failed; see pip-gradle.log and runtime-results/pip.')
         upgrade = verify_upgrade(root, out / 'upgrade')
-        # Seeds/verifiers are REQUIRED in separate version-specific upgrade phases above,
-        # not ignored/skipped in a mixed-version suite on the current application.
-        excluded = ','.join(UPGRADE_TEST_CLASSES)
-        with (out / 'gradle.log').open('w') as log:
-            process = subprocess.Popen([
-                './gradlew', '--no-daemon', '--stacktrace',
-                '-Pandroid.testInstrumentationRunnerArguments.notClass=' + excluded,
-                ':app:connectedDebugAndroidTest',
-            ], cwd=root, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            for line in process.stdout:
-                print(line, end='', flush=True)
-                log.write(line)
-            status = process.wait()
+        # Seeds/verifiers ran mandatorily against their own app versions above;
+        # the five PiP cases already ran on current. Run all eight older cases now.
+        excluded = ','.join((*UPGRADE_TEST_CLASSES, PIP_TEST_CLASS))
+        status = run_runtime_phase(root, out, 'ordinary',
+            '-Pandroid.testInstrumentationRunnerArguments.notClass=' + excluded)
     except Exception:
         phase_error = traceback.format_exc()[-12000:]
         print(phase_error, flush=True)
-    counts, cases, failures = collect_results(root / 'app/build/outputs/androidTest-results')
+    counts, cases, failures = collect_results(out / 'runtime-results')
     errors = verification_errors(counts, cases)
     if phase_error:
         errors.append(phase_error)
@@ -124,6 +149,8 @@ def main():
     }
     (out / 'summary.json').write_text(json.dumps(report, indent=2))
     gradle_log = out / 'gradle.log'
+    if not gradle_log.exists():
+        gradle_log = out / 'pip-gradle.log'
     tail = gradle_log.read_text().splitlines()[-70:] if gradle_log.exists() else []
     publish(f'Android API{expected_api} runtime stability', status, json.dumps(report, indent=2) + '\n' + '\n'.join(tail) + '\n' + logcat)
     return status
