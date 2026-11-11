@@ -7,10 +7,10 @@ import os
 from pathlib import Path
 import re
 import shutil
-import subprocess
 import sys
 import traceback
 from ci_report import publish
+from signing_support import EXPECTED_SIGNER_SHA256, certificate_digest
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -100,29 +100,33 @@ info = {
     "source_management_test_suites": source_test_suites,
     "permissions": sorted(permissions),
     "native_libraries": native_libraries,
-    "signing": "DEBUG/TRIAL ONLY; branch cache identity; not a production release key",
+    "signing": "Retained DEBUG/TRIAL identity; protected storage migration is separate from production key generation",
+    "signing_source": os.environ["IPTV_SIGNING_SOURCE"],
     "physical_device_test": "0.1.3 NOT YET TESTED on a physical device; user reported stable audio/video and exit/return on 0.1.2",
     "stream_playback_tests": "Provider streams NOT TESTED; separate API31/API33 synthetic runtime workflow",
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 shutil.copyfile(root / "INSTALL-fa.md", output / "INSTALL-fa.md")
+shutil.copyfile(root / "SIGNING-fa.md", output / "SIGNING-fa.md")
 info["signature_verification"] = (build / "signature.txt").read_text()
 # Public certificate digest from the APK actually supplied to the user, not a key.
 previous_signer = "aa088f89aacd9f4e1e9642088ed7fa82dfeedc302c0ecb1e089effc34a365cb9"
 current_signer = re.search(r"Signer #1 certificate SHA-256 digest: ([0-9a-f]{64})", info["signature_verification"])
 assert current_signer, "Missing verified signer fingerprint"
 info["signer_sha256"] = current_signer.group(1)
-# Check that the APK really used the file that Actions is caching, not AGP's alternate default.
-key_path = Path(os.environ["IPTV_TRIAL_KEYSTORE"])
-certificate = subprocess.check_output([
-    "keytool", "-exportcert", "-keystore", str(key_path), "-storepass", "android", "-alias", "androiddebugkey",
-], stderr=subprocess.PIPE, timeout=20)
-assert hashlib.sha256(certificate).hexdigest() == current_signer.group(1), "APK signer differs from cached trial key"
-info["signing_cache_path_verified"] = True
+# The APK must use our verified temporary key, never AGP's alternate default.
+key_path = Path(os.environ["IPTV_TRIAL_KEYSTORE"]).resolve()
+assert key_path.is_relative_to(Path(os.environ["RUNNER_TEMP"]).resolve() / "iptv-private-signing")
+assert certificate_digest(key_path) == current_signer.group(1), "APK signer differs from the prepared trial key"
+info["signing_key_path_verified"] = True
+info["private_signing_material_written_to_cache"] = False
+info["legacy_signing_cache_restored"] = info["signing_source"] == "legacy-cache-transitional"
+info["stable_secret_storage_active"] = info["signing_source"] == "actions-secret"
+assert info["signing_source"] in {"actions-secret", "legacy-cache-transitional"}
 info["updates_original_0_1_0_trial"] = current_signer.group(1) == previous_signer
 previous_0_1_1_signer = "f73be34704f68399ada9b3a8d3d8ce82b585cd508beb68929e6a93063250da2a"
 info["updates_delivered_0_1_1_trial"] = current_signer.group(1) == previous_0_1_1_signer
-previous_0_1_2_signer = "eba2f7bdb4cfea267f4c30cedba8b2956f9c86ed3d5363512291fd3d6bd29c48"
+previous_0_1_2_signer = EXPECTED_SIGNER_SHA256
 info["updates_delivered_0_1_2_trial"] = current_signer.group(1) == previous_0_1_2_signer
 # Never silently deliver another incompatible trial after the user has saved local data.
 assert info["updates_delivered_0_1_2_trial"], "Trial signer changed: stop; do not replace the user's installed app or erase data"
@@ -131,7 +135,7 @@ assert schema["version"] == 1
 info["room_schema_version"] = schema["version"]
 info["room_schema_identity_hash"] = schema["identityHash"]
 info["source_management"] = "Independent URL/file catalog IDs; named imports; rename/refresh/transactional delete; legacy custom/file IDs retained"
-info["installation_warning"] = "Verified same signer as delivered 0.1.2: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. The trial key cache is expendable, not production signing."
+info["installation_warning"] = "Verified same signer as delivered 0.1.2: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. Retained trial identity; consult signing_source/stable_secret_storage_active and the owner backup guide. No new key is silently generated."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

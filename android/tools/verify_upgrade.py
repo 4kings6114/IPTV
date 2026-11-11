@@ -1,6 +1,6 @@
 """Verify a real in-place package update from the immutable delivered 0.1.2 source.
 
-The baseline is rebuilt with the SAME cached trial key, not claimed to be the
+The baseline is rebuilt with the SAME verified retained trial key, not claimed to be the
 byte-identical previously downloaded APK. No private key is copied or uploaded.
 No uninstall/clear-data is allowed between seeding v3 and validating v4.
 """

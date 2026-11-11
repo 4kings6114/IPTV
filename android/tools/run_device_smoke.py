@@ -106,6 +106,8 @@ def main():
     (out / 'android-runtime.log').write_text(logcat)
     report = {
         'status': status, 'api': actual_api, 'expected_api': expected_api, 'environment': 'Android emulator, not a Poco X3/MIUI',
+        'signing_source': os.environ.get('IPTV_SIGNING_SOURCE', 'unknown'),
+        'commit': os.environ.get('GITHUB_SHA'), 'run_id': os.environ.get('GITHUB_RUN_ID'),
         'upgrade': upgrade, 'tests': counts, 'cases': cases, 'failures': failures, 'verification_errors': errors,
         'scope': 'Source-rebuilt 0.1.2 signed in-place upgrade, legacy data/selection preservation; independent URL/file catalogs, naming, rename, refresh, cancel, delete and recreation; 70s UI; 75s generated loopback AVC/AAC, rotation, stop/resume; private reports; old TLS main-thread negative control and strict-mode real player TLS-pool teardown',
     }

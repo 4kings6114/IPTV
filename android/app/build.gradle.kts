@@ -18,10 +18,22 @@ android {
         versionName = "0.1.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    // CI explicitly sets this path, so the cache contains the key actually used by AGP.
-    // Local development retains Android's default debug-key behavior.
-    providers.environmentVariable("IPTV_TRIAL_KEYSTORE").orNull?.let { path ->
-        signingConfigs.getByName("debug").storeFile = file(path)
+    // CI loads the retained identity into RUNNER_TEMP, never a new debug key.
+    // Fail before AGP could silently generate its default on a misconfigured job.
+    val trialKeystore = providers.environmentVariable("IPTV_TRIAL_KEYSTORE").orNull
+    if (providers.environmentVariable("GITHUB_ACTIONS").orNull == "true") {
+        require(!trialKeystore.isNullOrBlank()) { "Verified trial signing setup is required in CI; no replacement identity is allowed" }
+    }
+    // Local development may use a different default debug identity, NOT an update
+    // for the delivered APK. Production release signing remains separate.
+    trialKeystore?.let { path ->
+        signingConfigs.getByName("debug").apply {
+            storeFile = file(path)
+            storeType = "JKS"
+            keyAlias = "androiddebugkey"
+            storePassword = "android"
+            keyPassword = "android"
+        }
     }
     buildTypes {
         debug {

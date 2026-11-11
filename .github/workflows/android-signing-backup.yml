@@ -1,0 +1,96 @@
+name: Android owner signing recovery
+
+on:
+  push:
+    paths:
+      - "android/signing/**"
+      - "android/tools/*signing*.py"
+      - "android/tools/install_ci_age.py"
+      - "tests/test_android_signing*.py"
+      - ".github/workflows/android-signing-backup.yml"
+
+permissions:
+  contents: read
+  checks: write
+
+concurrency:
+  group: android-owner-signing-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  tooling-tests:
+    name: Synthetic signing recovery tests (no live key)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Verify and install pinned official age tools
+        run: python3 android/tools/install_ci_age.py
+      - name: Real encryption, recovery, wrong-key rejection and private-key proof
+        env:
+          IPTV_SIGNING_INTEGRATION: '1'
+          GH_TOKEN: ${{ github.token }}
+        run: python3 android/tools/test_signing_integration.py
+
+  owner-backup:
+    needs: tooling-tests
+    name: Export ONLY an owner-encrypted backup
+    if: github.repository == '4kings6114/IPTV' && github.ref == 'refs/heads/arena/df65ff7a-iptv'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 2
+      - name: Require a valid public owner request before touching a signing key
+        id: request
+        run: python3 android/tools/export_signing_backup.py --inspect
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5
+        if: steps.request.outputs.ready == 'true'
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Select signing source without exposing its value
+        if: steps.request.outputs.ready == 'true'
+        id: signing-source
+        env:
+          IPTV_SIGNING_KEYSTORE_B64: ${{ secrets.IPTV_SIGNING_KEYSTORE_B64 }}
+        run: python3 android/tools/prepare_trial_signing.py --inspect
+      - name: Restore legacy cache ONLY before Secret activation
+        if: steps.request.outputs.ready == 'true' && steps.signing-source.outputs.use_legacy_cache == 'true'
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.android/debug.keystore
+          key: android-trial-signing-v1
+      - name: Load and verify retained signer outside caches
+        if: steps.request.outputs.ready == 'true'
+        env:
+          IPTV_SIGNING_KEYSTORE_B64: ${{ secrets.IPTV_SIGNING_KEYSTORE_B64 }}
+        run: python3 android/tools/prepare_trial_signing.py
+      - name: Install verified official age tools
+        if: steps.request.outputs.ready == 'true'
+        run: python3 android/tools/install_ci_age.py
+      - name: Encrypt directly to the owner's public recipient
+        if: steps.request.outputs.ready == 'true'
+        id: encrypted
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 android/tools/export_signing_backup.py
+      - name: Remove temporary signing material even on failure
+        if: always()
+        run: python3 android/tools/prepare_trial_signing.py --cleanup
+      - name: Upload ciphertext ONLY (never a plaintext keystore or recovery identity)
+        if: steps.encrypted.outcome == 'success'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          path: ${{ steps.encrypted.outputs.artifact_path }}
+          archive: false
+          if-no-files-found: error
+          retention-days: 7
