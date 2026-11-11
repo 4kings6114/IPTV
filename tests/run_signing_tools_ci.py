@@ -30,6 +30,8 @@ if __name__ == "__main__":
         if result.returncode:
             # These commands reference only a disposable test directory/SID and
             # static ACL code, never private data or token/environment listings.
+            phase = "ACL verification" if "-EncodedCommand" in command else "SID lookup"
+            output.write(f"Synthetic-only Windows {phase} failed with exit code {result.returncode}.\n")
             output.write("Synthetic-only Windows ACL diagnostic:\n" + result.stderr.decode("utf-8", errors="replace")[:6000] + "\n")
             raise signing_support.SigningError("Synthetic Windows ACL command failed.")
         return result.stdout
