@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import argparse
 import base64
-import csv
 import hashlib
 import io
 import json
@@ -88,9 +87,9 @@ def private_directory(path: Path) -> Path:
     if os.name == "nt":
         # Restrict NTFS ACLs before any private material is written. SID syntax is
         # language-independent; account names and shell interpolation are not used.
-        raw = checked_tool(["whoami", "/user", "/fo", "csv", "/nh"]).decode(errors="strict")
-        rows = list(csv.reader(io.StringIO(raw)))
-        sid = rows[0][1] if len(rows) == 1 and len(rows[0]) >= 2 else ""
+        # Read only an ASCII SID, not a localized/OEM-encoded account name.
+        sid = checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command",
+                            "[System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value"]).decode("ascii").strip()
         if not re.fullmatch(r"S-1-[0-9-]+", sid):
             raise SigningError("Cannot determine the Windows owner SID safely.")
         # Replace the DACL, rather than retaining unexpected pre-existing explicit

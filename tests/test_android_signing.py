@@ -219,6 +219,31 @@ class AndroidSigningUnitTests(unittest.TestCase):
             with self.assertRaises(support.SigningError):
                 owner.private_directory(root / "private")
 
+    def test_real_owner_directory_permissions_before_any_material_is_written(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = owner.private_directory(Path(temp) / "private")
+            self.assertTrue(path.is_dir())
+            if os.name != "nt":
+                self.assertEqual(path.stat().st_mode & 0o777, 0o700)
+            else:
+                # Real Windows/NTFS check, exercised by the synthetic-only job.
+                script = """
+$ErrorActionPreference = 'Stop'
+$acl = Get-Acl -LiteralPath $env:IPTV_OWNER_DIRECTORY
+$sid = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
+if (-not $acl.AreAccessRulesProtected) { exit 1 }
+$rules = $acl.GetAccessRules($true, $true, [System.Security.Principal.SecurityIdentifier])
+if ($rules.Count -ne 2) { exit 2 }
+foreach ($rule in $rules) {
+    if ($rule.IdentityReference.Value -notin @($sid, 'S-1-5-18') -or $rule.AccessControlType -ne 'Allow' -or $rule.IsInherited) { exit 3 }
+}
+"""
+                encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
+                env = dict(os.environ, IPTV_OWNER_DIRECTORY=str(path))
+                support.checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded], env=env)
+            support.private_write(path / "fixture.txt", b"synthetic non-secret fixture")
+            self.assertEqual((path / "fixture.txt").read_bytes(), b"synthetic non-secret fixture")
+
     def test_signing_file_writes_are_exclusive_and_posix_private(self):
         with tempfile.TemporaryDirectory() as temp:
             file = Path(temp) / "key.jks"
@@ -304,7 +329,7 @@ class AndroidSigningUnitTests(unittest.TestCase):
         backup = (root / ".github/workflows/android-signing-backup.yml").read_text()
         self.assertNotIn("pull_request", backup)
         self.assertIn("fetch-depth: 2", backup)
-        self.assertIn("needs: tooling-tests", backup)
+        self.assertIn("needs: [tooling-tests, windows-owner-tools]", backup)
         self.assertIn("archive: false", backup)
         gradle = (root / "android/app/build.gradle.kts").read_text()
         self.assertIn('environmentVariable("GITHUB_ACTIONS")', gradle)
