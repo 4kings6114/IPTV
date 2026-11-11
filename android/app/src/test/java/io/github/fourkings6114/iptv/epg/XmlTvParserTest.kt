@@ -49,7 +49,11 @@ class XmlTvParserTest {
         val documents = listOf(plain, gzip(plain), gzip(gzip(plain)), byteArrayOf(0xef.toByte(), 0xbb.toByte(), 0xbf.toByte()) + plain,
             ("\uFEFF" + guideXml(title = "برنامهٔ آزمایشی")).toByteArray(Charsets.UTF_16LE),
             ("\uFEFF" + guideXml(title = "برنامهٔ آزمایشی")).toByteArray(Charsets.UTF_16BE))
-        documents.forEach { assertEquals(expected.programmes, XmlTvParser.parse(it.inputStream(), setOf("Exact.ID"), GUIDE_NOW).programmes) }
+        documents.forEachIndexed { index, bytes ->
+            val actual = try { XmlTvParser.parse(bytes.inputStream(), setOf("Exact.ID"), GUIDE_NOW)
+            } catch (failure: IOException) { throw AssertionError("Supported XMLTV encoding fixture $index failed", failure) }
+            assertEquals("Encoding fixture $index", expected.programmes, actual.programmes)
+        }
     }
 
     @Test fun encodingSniffingSurvivesSingleByteNetworkChunks() {
@@ -88,7 +92,10 @@ class XmlTvParserTest {
 
     @Test fun malformedWrongRootAndNamespacedDocumentsCannotReplaceAGuide() {
         listOf("<html>not XMLTV</html>", "<tv>", "<tv></tv><tv></tv>", "<tv xmlns=\"urn:other\">${programme()}</tv>",
-            "<tv>${programme().replace("</title>", "</wrong>")}</tv>").forEach { reason(EpgException.Reason.INVALID_XML, it) }
+            "<tv>${programme().replace("</title>", "</wrong>")}</tv>").forEachIndexed { index, text ->
+            assertEquals("Malformed XML fixture $index", EpgException.Reason.INVALID_XML,
+                assertThrows(EpgException::class.java) { parse(text) }.reason)
+        }
     }
 
     @Test fun invalidStopTimesExpiredEntriesAndFarFutureDataAreNotInvented() {

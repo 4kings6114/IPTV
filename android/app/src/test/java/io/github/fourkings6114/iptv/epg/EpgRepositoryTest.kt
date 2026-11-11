@@ -63,6 +63,9 @@ class EpgRepositoryTest {
         scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
         settings = SettingsStore(context, scope)
         settings.state.first { it.loaded }
+        // DataStore's on-disk preferences outlive a repository instance. Each test
+        // uses fixed synthetic IDs, so reset only those fixture configurations.
+        listOf("one", "two", "empty").forEach { settings.epgUrl(it, "") }
         cache = EpgCache(temporary.newFolder())
         ids = EpgChannelIds(temporary.newFolder())
         client = NetworkClients.create({ true }) // Synthetic loopback sources only.

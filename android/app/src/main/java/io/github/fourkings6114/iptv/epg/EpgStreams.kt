@@ -50,6 +50,14 @@ internal fun epgReader(input: InputStream, limits: EpgLimits): Reader {
         byte(0) == 0x3c && byte(1) == 0 -> "UTF-16LE"
         else -> "UTF-8"
     }
+    // Reader-based XmlPullParser input does not consistently consume a BOM.
+    // Strip only an actual leading BOM, after sniffing and before decoding.
+    val bomBytes = when {
+        (byte(0) == 0xff && byte(1) == 0xfe) || (byte(0) == 0xfe && byte(1) == 0xff) -> 2
+        byte(0) == 0xef && byte(1) == 0xbb && byte(2) == 0xbf -> 3
+        else -> 0
+    }
+    repeat(bomBytes) { decoded.read() }
     val decoder = java.nio.charset.Charset.forName(encoding).newDecoder()
         .onMalformedInput(CodingErrorAction.REPORT).onUnmappableCharacter(CodingErrorAction.REPORT)
     return EpgXmlReader(InputStreamReader(decoded, decoder))

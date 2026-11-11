@@ -60,7 +60,7 @@ class AndroidRuntimeGateTests(unittest.TestCase):
             out.mkdir(parents=True)
             xml = root / 'app/build/outputs/androidTest-results/TEST-device.xml'
             xml.parent.mkdir(parents=True)
-            for phase in ('pip', 'ordinary'):
+            for phase in ('pip', 'epg', 'ordinary'):
                 xml.write_text(f'<testsuite tests="1"><testcase name="{phase}" time="1" /></testsuite>')
                 process = SimpleNamespace(stdout=io.StringIO(), wait=lambda: 0)
                 argument = '-Pandroid.testInstrumentationRunnerArguments.class=synthetic.' + phase
@@ -69,8 +69,8 @@ class AndroidRuntimeGateTests(unittest.TestCase):
                 self.assertIn(argument, start.call_args.args[0])
                 self.assertIn(':app:connectedDebugAndroidTest', start.call_args.args[0])
             counts, cases, failures = collect_results(out / 'runtime-results')
-            self.assertEqual(2, counts['tests'])
-            self.assertEqual({'pip', 'ordinary'}, {case['name'] for case in cases})
+            self.assertEqual(3, counts['tests'])
+            self.assertEqual({'pip', 'epg', 'ordinary'}, {case['name'] for case in cases})
             self.assertEqual([], failures)
 
     def test_xml_collection_reports_real_cases_failures_and_skips(self):

@@ -22,9 +22,12 @@ object XmlTvParser {
                 val cursor = Cursor(parser, checkCancelled)
                 val kept = mutableListOf<EpgProgramme>()
                 var seenRoot = false
+                var closedRoot = false
                 var seenProgrammes = 0
                 var savedCharacters = 0L
                 while (cursor.next() != XmlPullParser.END_DOCUMENT) {
+                    if (parser.eventType == XmlPullParser.END_TAG && parser.depth == 1) closedRoot = true
+                    if (parser.eventType == XmlPullParser.TEXT && parser.depth == 0 && !parser.isWhitespace) invalid()
                     if (parser.eventType != XmlPullParser.START_TAG) continue
                     if (parser.depth == 1) {
                         if (seenRoot || parser.name != "tv" || !parser.namespace.isNullOrEmpty()) invalid()
@@ -47,7 +50,7 @@ object XmlTvParser {
                         kept += EpgProgramme(channel, title, start!!, stop)
                     }
                 }
-                if (!seenRoot) invalid()
+                if (!seenRoot || !closedRoot) invalid()
                 if (seenProgrammes == 0) throw EpgException(EpgException.Reason.NO_PROGRAMMES)
                 if (kept.isEmpty()) throw EpgException(EpgException.Reason.NO_MATCH)
                 // Missing stop can be inferred only from the next distinct start on

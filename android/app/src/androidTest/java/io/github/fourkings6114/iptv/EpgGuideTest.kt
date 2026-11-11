@@ -58,7 +58,7 @@ class EpgGuideTest {
     private fun currentText() = "اکنون · ${epgClock(start, System.currentTimeMillis())} · $currentTitle"
     private fun nextText() = "بعدی · ${epgClock(stop, System.currentTimeMillis())} · $nextTitle"
 
-    @Before fun prepare() = runBlocking {
+    @Before fun prepare(): Unit = runBlocking {
         withTimeout(20_000) {
             app.crashReports.clear()
             app.settings.showLogos(false)
@@ -70,7 +70,7 @@ class EpgGuideTest {
         }
     }
 
-    @After fun restore() = runBlocking {
+    @After fun restore(): Unit = runBlocking {
         withTimeout(20_000) {
             app.settings.selectSource(SAMPLE_SOURCE_ID)
             added.forEach { id ->

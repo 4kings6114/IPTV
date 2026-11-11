@@ -15,6 +15,7 @@ else:
     from verify_upgrade import UPGRADE_TEST_CLASSES, verify_upgrade
 
 PIP_TEST_CLASS = 'io.github.fourkings6114.iptv.PictureInPictureTest'
+EPG_TEST_CLASS = 'io.github.fourkings6114.iptv.EpgGuideTest'
 
 EXPECTED_TESTS = {
     'browsingFavoritesAndRecreationSurviveSeventySeconds': 70.0,
@@ -82,8 +83,8 @@ def upgrade_verification_errors(upgrade):
 
 def run_runtime_phase(root: Path, out: Path, label: str, runner_argument: str) -> int:
     """Keep each real instrumentation phase's XML, even when a later run replaces outputs."""
-    assert label in ('pip', 'ordinary')
-    log_path = out / ('pip-gradle.log' if label == 'pip' else 'gradle.log')
+    assert label in ('pip', 'epg', 'ordinary')
+    log_path = out / ('gradle.log' if label == 'ordinary' else label + '-gradle.log')
     with log_path.open('w') as log:
         process = subprocess.Popen([
             './gradlew', '--no-daemon', '--stacktrace', runner_argument,
@@ -123,10 +124,14 @@ def main():
             '-Pandroid.testInstrumentationRunnerArguments.class=' + PIP_TEST_CLASS)
         if status:
             raise RuntimeError('Native PiP instrumentation failed; see pip-gradle.log and runtime-results/pip.')
+        status = run_runtime_phase(root, out, 'epg',
+            '-Pandroid.testInstrumentationRunnerArguments.class=' + EPG_TEST_CLASS)
+        if status:
+            raise RuntimeError('EPG instrumentation failed; see epg-gradle.log and runtime-results/epg.')
         upgrade = verify_upgrade(root, out / 'upgrade')
         # Seeds/verifiers ran mandatorily against their own app versions above;
-        # the five PiP cases already ran on current. Run all eight older and two EPG cases now.
-        excluded = ','.join((*UPGRADE_TEST_CLASSES, PIP_TEST_CLASS))
+        # five PiP and two EPG cases already ran on current. All eight older cases remain required.
+        excluded = ','.join((*UPGRADE_TEST_CLASSES, PIP_TEST_CLASS, EPG_TEST_CLASS))
         status = run_runtime_phase(root, out, 'ordinary',
             '-Pandroid.testInstrumentationRunnerArguments.notClass=' + excluded)
     except Exception:
@@ -159,6 +164,8 @@ def main():
     }
     (out / 'summary.json').write_text(json.dumps(report, indent=2))
     gradle_log = out / 'gradle.log'
+    if not gradle_log.exists():
+        gradle_log = out / 'epg-gradle.log'
     if not gradle_log.exists():
         gradle_log = out / 'pip-gradle.log'
     tail = gradle_log.read_text().splitlines()[-70:] if gradle_log.exists() else []
