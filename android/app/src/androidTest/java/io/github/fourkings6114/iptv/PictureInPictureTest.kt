@@ -297,14 +297,23 @@ class PictureInPictureTest {
         assertTrue(main { (engine.videoDecoderCounters?.also { it.ensureUpdated() }?.renderedOutputBufferCount ?: 0) > frames })
     }
 
-    private fun waitForVideo(activity: PlaybackActivity) = waitFor("Synthetic video/audio did not render", 25_000) {
-        main {
-            val engine = view(activity)?.player as? ExoPlayer
-            assertNull(engine?.playerError)
-            engine?.videoDecoderCounters?.ensureUpdated()
-            engine?.audioDecoderCounters?.ensureUpdated()
-            engine?.isPlaying == true && (engine.videoDecoderCounters?.renderedOutputBufferCount ?: 0) > 0 &&
-                (engine.audioDecoderCounters?.renderedOutputBufferCount ?: 0) > 0
+    private fun waitForVideo(activity: PlaybackActivity) {
+        waitFor("Synthetic video/audio did not render", 25_000) {
+            main {
+                val engine = view(activity)?.player as? ExoPlayer
+                assertNull(engine?.playerError)
+                engine?.videoDecoderCounters?.ensureUpdated()
+                engine?.audioDecoderCounters?.ensureUpdated()
+                engine?.isPlaying == true && (engine.videoDecoderCounters?.renderedOutputBufferCount ?: 0) > 0 &&
+                    (engine.audioDecoderCounters?.renderedOutputBufferCount ?: 0) > 0
+            }
+        }
+        // A fresh emulator shows Android's one-time immersive-fullscreen tutorial
+        // above the app. It steals focus and consumes Back; it is NOT a PiP or
+        // runtime permission. Acknowledge only this known system education button.
+        device.wait(Until.findObject(By.pkg("android").res("android", "ok").text("Got it")), 2_000)?.click()
+        waitFor("Fullscreen player must own input focus before a real UI action", 5_000) {
+            main { activity.hasWindowFocus() }
         }
     }
 
