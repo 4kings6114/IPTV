@@ -108,7 +108,9 @@ def verify_upgrade(root: Path, out: Path) -> dict:
         run_logged(["./gradlew", "--no-daemon", "--stacktrace", ":app:assembleDebug", ":app:assembleDebugAndroidTest"],
                    root, out / "current-build.log")
         baseline = extract_baseline(root.parent, root / "app/build/upgrade-baseline-source")
-        run_logged(["./gradlew", "--no-daemon", "--stacktrace", ":app:assembleDebug"],
+        # Historical 0.1.2 used a bare KSP schema argument without declared outputs.
+        # Its immutable source must actually run KSP, not restore only class outputs.
+        run_logged(["./gradlew", "--no-daemon", "--no-build-cache", "--stacktrace", ":app:assembleDebug"],
                    baseline, out / "baseline-build.log")
         old_apk = baseline / "app/build/outputs/apk/debug/app-debug.apk"
         new_apk = root / "app/build/outputs/apk/debug/app-debug.apk"

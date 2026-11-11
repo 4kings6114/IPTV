@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("com.google.devtools.ksp")
+    id("androidx.room")
 }
 
 android {
@@ -51,7 +52,9 @@ android {
 
 kotlin { compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17) } }
 
-ksp { arg("room.schemaLocation", "$projectDir/schemas") }
+// The Room plugin declares schema exports as task inputs/outputs. A bare KSP
+// argument loses these files on FROM-CACHE builds and cannot verify upgrade safety.
+room { schemaDirectory("$projectDir/schemas") }
 
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.10.01"))
