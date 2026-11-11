@@ -29,8 +29,8 @@ metadata = json.loads((apk.parent / "output-metadata.json").read_text())
 element = metadata["elements"][0]
 assert metadata["applicationId"] == "io.github.fourkings6114.iptv.trial"
 assert element["versionName"].endswith("-trial")
-assert element["versionCode"] == 4
-assert element["versionName"] == "0.1.3-trial"
+assert element["versionCode"] == 5
+assert element["versionName"] == "0.1.4-trial"
 badging = (build / "badging.txt").read_text()
 assert "sdkVersion:'26'" in badging
 assert "targetSdkVersion:'36'" in badging
@@ -52,6 +52,7 @@ with zipfile.ZipFile(apk) as archive:
 
 counts = {"tests": 0, "failures": 0, "errors": 0, "skipped": 0}
 source_test_suites = {}
+pip_test_suites = {}
 executed_cases = set()
 for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     suite = ET.parse(path).getroot()
@@ -60,6 +61,8 @@ for path in (build / "test-results/testDebugUnitTest").glob("TEST-*.xml"):
     executed_cases.update(case.get("name") for case in suite.findall("testcase"))
     if suite.get("name", "").rsplit(".", 1)[-1] in {"AppDatabaseTest", "PlaylistRepositoryTest", "SettingsStoreTest", "SourceRulesTest"}:
         source_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
+    if suite.get("name", "").rsplit(".", 1)[-1] in {"PipRulesTest", "SettingsStoreTest"}:
+        pip_test_suites[suite.get("name")] = int(suite.get("tests", "0"))
 required_source_cases = {
     "repeatedUrlAddsAreIndependentAndDoNotOverwriteLegacyCustom",
     "repeatedFileAddsAreIndependentAndDoNotOverwriteLegacyFile",
@@ -73,7 +76,25 @@ required_source_cases = {
     "forgettingOnlyTheSelectedSourcePreservesOtherSelectionsAndPreferences",
 }
 assert required_source_cases <= executed_cases, required_source_cases - executed_cases
-assert counts["tests"] >= 65, counts
+required_pip_cases = {
+    "manualEntryDoesNotRequireAutomaticHomeOptIn",
+    "pausedVideoCanBeManuallyMinimizedButCannotAutoEnter",
+    "unsupportedDeviceNeverEntersPip",
+    "stoppedPlaybackCannotBeResurrectedByPip",
+    "missingVideoOrAudioOnlyPlaybackNeverEntersPip",
+    "failedPlaybackDoesNotAutomaticallyLeaveAnErrorWindow",
+    "explicitBackOrFinishNeverAutoEntersPip",
+    "normalVideoRatioIsPreservedWithinRoundingTolerance",
+    "anamorphicPixelAspectRatioIsApplied",
+    "ultraWideRatioIsClampedToThePlatformMaximum",
+    "extremelyTallRatioRoundsInsideThePlatformMinimum",
+    "invalidOrUnknownDimensionsUseASafeFallback",
+    "invalidPixelRatiosCannotProduceAnInvalidPlatformRational",
+    "extremeFinitePixelRatiosStayWithinBothPlatformBounds",
+    "automaticPictureInPictureDefaultsOffAndPersistsIndependently",
+}
+assert required_pip_cases <= executed_cases, required_pip_cases - executed_cases
+assert counts["tests"] >= 80, counts
 assert counts["failures"] == counts["errors"] == counts["skipped"] == 0, counts
 lint = ET.parse(build / "reports/lint-results-debug.xml").getroot()
 assert not any(issue.get("severity") in {"Fatal", "Error"} for issue in lint.findall("issue"))
@@ -98,11 +119,13 @@ info = {
     "sha256": digest,
     "unit_tests": counts,
     "source_management_test_suites": source_test_suites,
+    "picture_in_picture_test_suites": pip_test_suites,
     "permissions": sorted(permissions),
     "native_libraries": native_libraries,
     "signing": "Retained DEBUG/TRIAL identity; protected storage migration is separate from production key generation",
     "signing_source": os.environ["IPTV_SIGNING_SOURCE"],
-    "physical_device_test": "0.1.3 NOT YET TESTED on a physical device; user reported stable audio/video and exit/return on 0.1.2",
+    "physical_device_test": "0.1.4 NOT YET TESTED on a physical device; user reported 0.1.3 stable on their phone",
+    "picture_in_picture": "Native Activity PiP (API26+ if supported); manual entry after decoded video; optional Home auto-entry defaults OFF; system pause/play/expand/dismiss; no overlay permission or background service",
     "stream_playback_tests": "Provider streams NOT TESTED; separate API31/API33 synthetic runtime workflow",
 }
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
@@ -128,6 +151,7 @@ previous_0_1_1_signer = "f73be34704f68399ada9b3a8d3d8ce82b585cd508beb68929e6a930
 info["updates_delivered_0_1_1_trial"] = current_signer.group(1) == previous_0_1_1_signer
 previous_0_1_2_signer = EXPECTED_SIGNER_SHA256
 info["updates_delivered_0_1_2_trial"] = current_signer.group(1) == previous_0_1_2_signer
+info["updates_delivered_0_1_3_trial"] = current_signer.group(1) == previous_0_1_2_signer
 # Never silently deliver another incompatible trial after the user has saved local data.
 assert info["updates_delivered_0_1_2_trial"], "Trial signer changed: stop; do not replace the user's installed app or erase data"
 schema = json.loads((app / "schemas/io.github.fourkings6114.iptv.data.AppDatabase/1.json").read_text())["database"]
@@ -135,7 +159,7 @@ assert schema["version"] == 1
 info["room_schema_version"] = schema["version"]
 info["room_schema_identity_hash"] = schema["identityHash"]
 info["source_management"] = "Independent URL/file catalog IDs; named imports; rename/refresh/transactional delete; legacy custom/file IDs retained"
-info["installation_warning"] = "Verified same signer as delivered 0.1.2: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. Retained trial identity; consult signing_source/stable_secret_storage_active and the owner backup guide. No new key is silently generated."
+info["installation_warning"] = "Verified same signer as delivered 0.1.2/0.1.3: install as an update without uninstalling or clearing data. Older 0.1.0/0.1.1 trials have different signers; stop and review rather than deleting needed local data. Retained trial identity; consult signing_source/stable_secret_storage_active and the owner backup guide. No new key is silently generated."
 (output / "BUILD-INFO.json").write_text(json.dumps(info, indent=2) + "\n")
 print(json.dumps(info, indent=2))
 publish("Android APK package details", 0, json.dumps(info, indent=2))

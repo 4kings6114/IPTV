@@ -75,7 +75,7 @@ jobs:
             sudo apt-get install --yes ffmpeg
           fi
           python3 tools/generate_smoke_fixture.py
-      - name: Verify in-place upgrade, independent catalogs, TLS teardown and prolonged playback
+      - name: Verify 0.1.2/0.1.3 upgrades, native PiP, catalogs, TLS teardown and playback
         uses: ReactiveCircus/android-emulator-runner@a421e43855164a8197daf9d8d40fe71c6996bb0d # v2
         env:
           GH_TOKEN: ${{ github.token }}

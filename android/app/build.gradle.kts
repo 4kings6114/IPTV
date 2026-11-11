@@ -14,8 +14,8 @@ android {
         applicationId = "io.github.fourkings6114.iptv"
         minSdk = 26
         targetSdk = 36
-        versionCode = 4
-        versionName = "0.1.3"
+        versionCode = 5
+        versionName = "0.1.4"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     // CI loads the retained identity into RUNNER_TEMP, never a new debug key.
@@ -104,6 +104,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     androidTestImplementation("com.squareup.okhttp3:okhttp-tls:4.12.0")
 

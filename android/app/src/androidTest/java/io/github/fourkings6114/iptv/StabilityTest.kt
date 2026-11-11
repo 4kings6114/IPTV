@@ -57,6 +57,7 @@ class StabilityTest {
         withTimeout(20_000) {
             app.settings.showLogos(false) // no third-party network requests during this test
             app.settings.allowHttp(false)
+            app.settings.automaticPictureInPicture(false)
             app.settings.selectSource(SAMPLE_SOURCE_ID)
             app.settings.state.first { it.loaded && !it.showLogos && !it.allowHttp && it.sourceId == SAMPLE_SOURCE_ID }
             app.repository.ensureSource(SAMPLE_SOURCE_ID)

@@ -31,6 +31,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import io.github.fourkings6114.iptv.BuildConfig
@@ -174,6 +176,15 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                         SettingToggle("نمایش لوگوها", "دریافت تصویر از میزبان لوگوی هر کانال؛ ممکن است ترافیک مصرف کند.", settings.showLogos, model::showLogos)
                     }
                     SettingsCard {
+                        Text("پنجرهٔ شناور پخش", style = MaterialTheme.typography.titleMedium)
+                        if (context.packageManager.hasSystemFeature(android.content.pm.PackageManager.FEATURE_PICTURE_IN_PICTURE)) {
+                            SettingToggle("شناور شدن با دکمهٔ Home", "پیش‌فرض خاموش؛ فقط پس از شروع تصویر و هنگام پخش. دکمهٔ «شناور» داخل پلیر مستقل از این گزینه کار می‌کند.", settings.autoPictureInPicture, model::automaticPictureInPicture)
+                            Text("پنجره با کنترل‌های خود اندروید مکث، ادامه، بزرگ یا بسته می‌شود. بستن آن پخش را متوقف می‌کند؛ بازگشت به فهرست هم پنجرهٔ شناور را فعال نمی‌کند.", style = MaterialTheme.typography.bodySmall)
+                        } else {
+                            Text("این دستگاه پشتیبانی تصویر در تصویر را اعلام نکرده است؛ پخش تمام‌صفحه همچنان قابل استفاده است.", style = MaterialTheme.typography.bodySmall)
+                        }
+                    }
+                    SettingsCard {
                         Text("اطلاعات فقط روی این گوشی", style = MaterialTheme.typography.titleMedium)
                         Text("علاقه‌مندی‌ها، سابقه و لینک‌های واردشده در فضای خصوصی برنامه ذخیره می‌شوند. حساب، تبلیغات، تحلیل‌گر و همگام‌سازی نداریم؛ پشتیبان‌گیری برنامه غیرفعال است.", style = MaterialTheme.typography.bodySmall)
                         Text("برای دریافت فهرست، لوگو و ویدئو، گوشی مستقیماً با میزبان آن‌ها ارتباط می‌گیرد و میزبان می‌تواند IP را ببیند. فهرست ذخیره‌شده آفلاین باز می‌شود، اما پخش ویدئو اینترنت می‌خواهد.", style = MaterialTheme.typography.bodySmall)
@@ -187,7 +198,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     }
                     SettingsCard {
                         Text("دربارهٔ این نسخه", style = MaterialTheme.typography.titleMedium)
-                        Text("نسخهٔ ${BuildConfig.VERSION_NAME} · اندروید ۸ به بالا\nموتور: Media3 · بدون FFmpeg و VLC\nبا خروج از صفحهٔ پخش، پخش متوقف می‌شود.", style = MaterialTheme.typography.bodySmall)
+                        Text("نسخهٔ ${BuildConfig.VERSION_NAME} · اندروید ۸ به بالا\nموتور: Media3 · بدون FFmpeg و VLC\nپخش فقط در صفحهٔ پلیر یا پنجرهٔ شناور ادامه دارد؛ پخش صوتیِ مخفی و سرویس پس‌زمینه نداریم.", style = MaterialTheme.typography.bodySmall)
                         Text("این برنامه مالک یا میزبان محتوای کانال‌ها نیست. عمومی‌بودن یک لینک، مجوز استفاده از محتوای آن را ثابت نمی‌کند؛ فقط از منابع مجاز استفاده کن. پخش به منبع، اتصال و قابلیت‌های گوشی وابسته است.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         TextButton(onClick = { licenses = true }) { Text("کتابخانه‌ها و مجوزها") }
                     }
@@ -364,6 +375,7 @@ private fun SettingToggle(title: String, description: String, checked: Boolean, 
             Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Spacer(Modifier.width(12.dp))
-        Switch(checked = checked, onCheckedChange = onChange)
+        Switch(checked = checked, onCheckedChange = onChange,
+            modifier = Modifier.semantics { contentDescription = title })
     }
 }

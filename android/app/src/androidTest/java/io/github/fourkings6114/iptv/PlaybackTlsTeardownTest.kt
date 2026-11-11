@@ -132,6 +132,7 @@ class PlaybackTlsTeardownTest {
                 val channel = Channel("tls-teardown-fixture", "Synthetic teardown test", "Local test", media.url("/stability.mp4").toString())
                 runBlocking {
                     withTimeout(20_000) {
+                        app.settings.automaticPictureInPicture(false)
                         app.settings.allowHttp(true) // loopback media only, not a production policy change
                         app.settings.state.first { it.allowHttp }
                         app.database.channels().replaceSource(SourceEntity("tls-test", "Local test", updatedAt = 1, count = 1), listOf(channel))

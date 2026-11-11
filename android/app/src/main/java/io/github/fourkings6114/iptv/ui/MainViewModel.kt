@@ -164,6 +164,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
         viewModelScope.launch { dao.clearHistory(); notice.value = "سابقهٔ پخش روی این گوشی پاک شد." }
     }
     fun showLogos(show: Boolean) { viewModelScope.launch { app.settings.showLogos(show) } }
+    fun automaticPictureInPicture(allow: Boolean) { viewModelScope.launch { app.settings.automaticPictureInPicture(allow) } }
     fun allowHttp(allow: Boolean, onDone: () -> Unit = {}) {
         viewModelScope.launch {
             app.settings.allowHttp(allow)

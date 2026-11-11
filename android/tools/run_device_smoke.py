@@ -6,8 +6,12 @@ import subprocess
 import sys
 import traceback
 import xml.etree.ElementTree as ET
-from ci_report import publish
-from verify_upgrade import UPGRADE_TEST_CLASSES, verify_upgrade
+if __package__:
+    from .ci_report import publish
+    from .verify_upgrade import UPGRADE_TEST_CLASSES, verify_upgrade
+else:
+    from ci_report import publish
+    from verify_upgrade import UPGRADE_TEST_CLASSES, verify_upgrade
 
 EXPECTED_TESTS = {
     'browsingFavoritesAndRecreationSurviveSeventySeconds': 70.0,
@@ -18,6 +22,11 @@ EXPECTED_TESTS = {
     'independentLinksCanBeNamedRefreshedRenamedDeletedAndReopened': 0.0,
     'fileReimportKeepsItsTargetAcrossRecreationAndRejectsDeletedTargets': 0.0,
     'missingSelectionRecoversToOfflineSampleWithoutErasingSavedChannels': 0.0,
+    'manualPictureInPictureKeepsDecodedPlaybackAndRestoresFullscreen': 8.0,
+    'automaticPictureInPictureRequiresOptInAndDismissalReleasesThePlayer': 6.0,
+    'pictureInPictureActionsPauseResumeAndNewChannelReusesTheActivity': 2.0,
+    'deniedPictureInPictureKeepsFullscreenUsableAndStopsOnHome': 0.0,
+    'explicitBackNeverAutoEntersPictureInPictureEvenWithHomeOptIn': 0.0,
 }
 
 
@@ -69,7 +78,7 @@ def main():
         assert expected_api in ('31', '33'), 'Unsupported runtime target'
         assert actual_api == expected_api and api.returncode == 0, f'Expected runtime API {expected_api}, got {actual_api!r}'
         upgrade = verify_upgrade(root, out / 'upgrade')
-        # Seed/verify are REQUIRED in the two separate version-specific phases above,
+        # Seeds/verifiers are REQUIRED in separate version-specific upgrade phases above,
         # not ignored/skipped in a mixed-version suite on the current application.
         excluded = ','.join(UPGRADE_TEST_CLASSES)
         with (out / 'gradle.log').open('w') as log:
@@ -94,7 +103,9 @@ def main():
         if saved.exists():
             upgrade = json.loads(saved.read_text())
     if not upgrade or upgrade.get('status') != 'success':
-        errors.append('The source-rebuilt 0.1.2 -> current install -r preservation test must pass.')
+        errors.append('The source-rebuilt 0.1.2 and 0.1.3 -> current install -r preservation tests must pass.')
+    if not upgrade or (upgrade.get('from_0_1_3') or {}).get('status') != 'success':
+        errors.append('Named multi-catalog 0.1.3 upgrade preservation must pass independently.')
     if actual_api != expected_api or api.returncode:
         errors.append(f'Expected runtime API {expected_api}, got {actual_api!r} (adb status {api.returncode}).')
     if errors:
@@ -109,7 +120,7 @@ def main():
         'signing_source': os.environ.get('IPTV_SIGNING_SOURCE', 'unknown'),
         'commit': os.environ.get('GITHUB_SHA'), 'run_id': os.environ.get('GITHUB_RUN_ID'),
         'upgrade': upgrade, 'tests': counts, 'cases': cases, 'failures': failures, 'verification_errors': errors,
-        'scope': 'Source-rebuilt 0.1.2 signed in-place upgrade, legacy data/selection preservation; independent URL/file catalogs, naming, rename, refresh, cancel, delete and recreation; 70s UI; 75s generated loopback AVC/AAC, rotation, stop/resume; private reports; old TLS main-thread negative control and strict-mode real player TLS-pool teardown',
+        'scope': 'Source-rebuilt 0.1.2 and 0.1.3 signed in-place upgrades, legacy and named-catalog data/selection preservation; independent URL/file catalogs, naming, rename, refresh, cancel, delete and recreation; 70s UI; 75s generated loopback AVC/AAC, rotation, stop/resume; real native PiP manual/opted-in Home, decoded playback, expand, dismiss, pause/play system actions, channel reuse, denied permission and explicit Back; private reports; old TLS main-thread negative control and strict-mode real player TLS-pool teardown',
     }
     (out / 'summary.json').write_text(json.dumps(report, indent=2))
     gradle_log = out / 'gradle.log'
