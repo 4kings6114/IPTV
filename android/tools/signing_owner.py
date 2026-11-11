@@ -76,6 +76,15 @@ def api(endpoint: str, *, method: str = "GET", body: dict | None = None):
     return json.loads(output) if output.strip() else None
 
 
+def powershell_environment(**values: str) -> dict:
+    # A parent PowerShell 7 session exports its own module search path. Passing
+    # it to Windows PowerShell 5.1 can break Microsoft.PowerShell.Security
+    # autoload (Set-Acl/Get-Acl). Let powershell.exe construct its native path.
+    env = {key: value for key, value in os.environ.items() if key.upper() != "PSMODULEPATH"}
+    env.update(values)
+    return env
+
+
 def private_directory(path: Path) -> Path:
     path = path.expanduser()
     if path.is_symlink():
@@ -89,7 +98,8 @@ def private_directory(path: Path) -> Path:
         # language-independent; account names and shell interpolation are not used.
         # Read only an ASCII SID, not a localized/OEM-encoded account name.
         sid = checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-Command",
-                            "[System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value"]).decode("ascii").strip()
+                            "[System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value"],
+                           env=powershell_environment()).decode("ascii").strip()
         if not re.fullmatch(r"S-1-[0-9-]+", sid):
             raise SigningError("Cannot determine the Windows owner SID safely.")
         # Replace the DACL, rather than retaining unexpected pre-existing explicit
@@ -108,7 +118,7 @@ foreach ($principal in @($owner, $system)) {
 Set-Acl -LiteralPath $env:IPTV_OWNER_DIRECTORY -AclObject $acl
 """
         encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
-        env = dict(os.environ, IPTV_OWNER_SID=sid, IPTV_OWNER_DIRECTORY=str(path))
+        env = powershell_environment(IPTV_OWNER_SID=sid, IPTV_OWNER_DIRECTORY=str(path))
         checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded], env=env)
     else:
         path.chmod(0o700)

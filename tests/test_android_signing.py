@@ -219,6 +219,12 @@ class AndroidSigningUnitTests(unittest.TestCase):
             with self.assertRaises(support.SigningError):
                 owner.private_directory(root / "private")
 
+    def test_windows_powershell_does_not_inherit_a_core_only_module_search_path(self):
+        with patch.dict(os.environ, {"PSMODULEPATH": "core-only-path", "PSModulePath": "another-core-path"}):
+            env = owner.powershell_environment(IPTV_OWNER_DIRECTORY="synthetic directory")
+        self.assertFalse(any(key.upper() == "PSMODULEPATH" for key in env))
+        self.assertEqual(env["IPTV_OWNER_DIRECTORY"], "synthetic directory")
+
     def test_real_owner_directory_permissions_before_any_material_is_written(self):
         with tempfile.TemporaryDirectory() as temp:
             path = owner.private_directory(Path(temp) / "private")
@@ -239,7 +245,7 @@ foreach ($rule in $rules) {
 }
 """
                 encoded = base64.b64encode(script.encode("utf-16-le")).decode("ascii")
-                env = dict(os.environ, IPTV_OWNER_DIRECTORY=str(path))
+                env = owner.powershell_environment(IPTV_OWNER_DIRECTORY=str(path))
                 support.checked_tool(["powershell.exe", "-NoProfile", "-NonInteractive", "-EncodedCommand", encoded], env=env)
             support.private_write(path / "fixture.txt", b"synthetic non-secret fixture")
             self.assertEqual((path / "fixture.txt").read_bytes(), b"synthetic non-secret fixture")
