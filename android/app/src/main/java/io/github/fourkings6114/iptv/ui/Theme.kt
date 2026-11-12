@@ -7,7 +7,9 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 
 /** Palette selections shown in Settings. IDs are persisted in private DataStore preferences. */
@@ -86,7 +88,23 @@ fun IPTVTheme(content: @Composable () -> Unit) = provideTheme(playerPalette, con
 
 /** Browse/settings screens use the selected dark palette and keep Persian RTL layout. */
 @Composable
-fun IPTVMainTheme(style: AppThemeStyle, content: @Composable () -> Unit) = provideTheme(style.colorScheme(), content)
+fun IPTVMainTheme(
+    style: AppThemeStyle,
+    textScale: Float = 1f,
+    screenScale: Float = 1f,
+    content: @Composable () -> Unit,
+) {
+    val density = LocalDensity.current
+    CompositionLocalProvider(
+        LocalLayoutDirection provides LayoutDirection.Rtl,
+        LocalDensity provides Density(
+            density = density.density * screenScale.coerceIn(0.85f, 1.3f),
+            fontScale = density.fontScale * textScale.coerceIn(0.85f, 1.3f),
+        ),
+    ) {
+        MaterialTheme(colorScheme = style.colorScheme(), typography = Typography(), content = content)
+    }
+}
 
 @Composable
 private fun provideTheme(colors: ColorScheme, content: @Composable () -> Unit) {

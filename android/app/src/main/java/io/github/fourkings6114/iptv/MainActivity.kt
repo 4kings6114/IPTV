@@ -31,7 +31,11 @@ class MainActivity : ComponentActivity() {
         )
         setContent {
             val settings by model.settings.collectAsStateWithLifecycle()
-            IPTVMainTheme(AppThemeStyle.fromId(settings.themeStyle)) {
+            IPTVMainTheme(
+                AppThemeStyle.fromId(settings.themeStyle),
+                textScale = settings.textScale,
+                screenScale = settings.screenScale,
+            ) {
                 MainScreen(
                     model = model,
                     onImportFile = { request ->

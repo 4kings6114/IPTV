@@ -35,6 +35,62 @@ class SettingsStoreTest {
         } finally { scope.cancel() }
     }
 
+    @Test fun playbackPreferencesPersistAndRejectUnknownValues() = runBlocking {
+        assertEquals("normal", AppSettings().bufferProfile)
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        try {
+            val context = ApplicationProvider.getApplicationContext<Application>()
+            val store = SettingsStore(context, scope)
+            withTimeout(20_000) {
+                store.state.first { it.loaded }
+                store.bufferProfile("very_large")
+                store.playerOrientation("landscape")
+                store.sleepTimerMinutes(45)
+                store.rewindSeconds(30)
+                store.fullScreenResizeMode("zoom")
+                store.windowedResizeMode("fill")
+                store.controllerTimeoutMs(10_000)
+                store.showPlayerClock(true)
+                store.audioDecoderFallback(false)
+                store.textScale(1.2f)
+                store.screenScale(0.9f)
+                store.bufferProfile("unknown")
+                store.playerOrientation("upside_down")
+                store.sleepTimerMinutes(-1)
+                store.rewindSeconds(7)
+                store.fullScreenResizeMode("unknown")
+                val saved = SettingsStore(context, scope).state.first {
+                    it.loaded && it.bufferProfile == "very_large" && it.playerOrientation == "landscape" &&
+                        it.sleepTimerMinutes == 45 && it.rewindSeconds == 30 && it.showPlayerClock && !it.audioDecoderFallback
+                }
+                assertEquals("zoom", saved.fullScreenResizeMode)
+                assertEquals("fill", saved.windowedResizeMode)
+                assertEquals(10_000, saved.controllerTimeoutMs)
+                assertEquals(1.2f, saved.textScale)
+                assertEquals(0.9f, saved.screenScale)
+                store.bufferProfile("auto")
+                assertEquals("auto", store.state.first { it.bufferProfile == "auto" }.bufferProfile)
+            }
+        } finally { scope.cancel() }
+    }
+
+    @Test fun parentalPinPersistsAsVerifierAndControlsFilter() = runBlocking {
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        try {
+            val store = SettingsStore(ApplicationProvider.getApplicationContext<Application>(), scope)
+            withTimeout(20_000) {
+                store.state.first { it.loaded }
+                store.setParentalPin("4815")
+                val secured = store.state.first { it.parentalControlEnabled && it.parentalPinHash.isNotBlank() }
+                assertNotEquals("4815", secured.parentalPinHash)
+                assertTrue(store.verifyParentalPin("4815"))
+                assertFalse(store.verifyParentalPin("5814"))
+                store.parentalControl(false)
+                assertFalse(store.state.first { !it.parentalControlEnabled }.parentalControlEnabled)
+            }
+        } finally { scope.cancel() }
+    }
+
     @Test fun automaticPictureInPictureDefaultsOffAndPersistsIndependently() = runBlocking {
         assertFalse(AppSettings().autoPictureInPicture)
         val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)

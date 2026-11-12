@@ -232,6 +232,23 @@ class MainViewModel(application: Application, private val savedState: SavedState
     fun showLogos(show: Boolean) { viewModelScope.launch { app.settings.showLogos(show) } }
     fun automaticPictureInPicture(allow: Boolean) { viewModelScope.launch { app.settings.automaticPictureInPicture(allow) } }
     fun themeStyle(style: String) { viewModelScope.launch { app.settings.themeStyle(style) } }
+    fun bufferProfile(id: String) { viewModelScope.launch { app.settings.bufferProfile(id) } }
+    fun playerOrientation(id: String) { viewModelScope.launch { app.settings.playerOrientation(id) } }
+    fun hideSourceSelector(hide: Boolean) { viewModelScope.launch { app.settings.hideSourceSelector(hide) } }
+    fun sleepTimerMinutes(minutes: Int) { viewModelScope.launch { app.settings.sleepTimerMinutes(minutes) } }
+    fun rewindSeconds(seconds: Int) { viewModelScope.launch { app.settings.rewindSeconds(seconds) } }
+    fun fullScreenResizeMode(id: String) { viewModelScope.launch { app.settings.fullScreenResizeMode(id) } }
+    fun windowedResizeMode(id: String) { viewModelScope.launch { app.settings.windowedResizeMode(id) } }
+    fun controllerTimeoutMs(timeout: Int) { viewModelScope.launch { app.settings.controllerTimeoutMs(timeout) } }
+    fun showPlayerClock(show: Boolean) { viewModelScope.launch { app.settings.showPlayerClock(show) } }
+    fun audioDecoderFallback(enabled: Boolean) { viewModelScope.launch { app.settings.audioDecoderFallback(enabled) } }
+    fun textScale(scale: Float) { viewModelScope.launch { app.settings.textScale(scale) } }
+    fun screenScale(scale: Float) { viewModelScope.launch { app.settings.screenScale(scale) } }
+    fun setParentalPin(pin: String) { viewModelScope.launch { app.settings.setParentalPin(pin) } }
+    fun verifyParentalPin(pin: String, result: (Boolean) -> Unit) {
+        viewModelScope.launch { result(app.settings.verifyParentalPin(pin)) }
+    }
+    fun parentalControl(enabled: Boolean) { viewModelScope.launch { app.settings.parentalControl(enabled) } }
     fun allowHttp(allow: Boolean, onDone: () -> Unit = {}) {
         viewModelScope.launch {
             app.settings.allowHttp(allow)

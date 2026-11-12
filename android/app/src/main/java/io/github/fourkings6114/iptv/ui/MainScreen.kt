@@ -29,6 +29,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -106,6 +108,13 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
     var helpInfo by remember { mutableStateOf(false) }
     var deleteDataInfo by remember { mutableStateOf(false) }
     var themePicker by remember { mutableStateOf(false) }
+    var settingsSelection by remember { mutableStateOf<SettingsSelection?>(null) }
+    var parentalPinSetup by remember { mutableStateOf(false) }
+    var parentalPinVerify by remember { mutableStateOf(false) }
+    var parentalTargetEnabled by remember { mutableStateOf(false) }
+    var parentalPin by remember { mutableStateOf("") }
+    var parentalPinConfirm by remember { mutableStateOf("") }
+    var parentalPinError by remember { mutableStateOf<String?>(null) }
     val snackbar = remember { SnackbarHostState() }
     val listState = rememberLazyListState()
     val context = LocalContext.current
@@ -120,10 +129,19 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
         Pane.History -> history
         else -> channels
     }
-    val visible = remember(original, group, pane) {
-        original.filter { channel -> pane != Pane.Channels || group == null || channel.group == group }
+    val visible = remember(original, group, pane, settings.parentalControlEnabled) {
+        original.filter { channel ->
+            (!settings.parentalControlEnabled || !channel.isAdultContent()) &&
+                (pane != Pane.Channels || group == null || channel.group == group)
+        }
     }
-    val groups = remember(channels) { channels.groupingBy { it.group }.eachCount().toSortedMap() }
+    val groups = remember(channels, settings.parentalControlEnabled) {
+        channels.filter { !settings.parentalControlEnabled || !it.isAdultContent() }
+            .groupingBy { it.group }.eachCount().toSortedMap()
+    }
+    LaunchedEffect(settings.parentalControlEnabled, groups.keys) {
+        if (group != null && group !in groups.keys) group = null
+    }
     val openChannel: (Channel) -> Unit = { channel ->
         if (channel.isCleartext && !settings.allowHttp) {
             pendingHttpChannel = channel
@@ -232,12 +250,87 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     }
                     if (showAdditionalSettings) {
                         SettingsCard {
-                            Text("اتصال و نمایش", style = MaterialTheme.typography.titleMedium)
+                            Text("اتصال ویدیو", style = MaterialTheme.typography.titleMedium)
                             SettingToggle("اجازهٔ HTTP بدون رمزنگاری", "پیش‌فرض خاموش؛ فقط برای منبع مورداعتماد روشنش کن.", settings.allowHttp) { allow ->
                                 if (allow) httpConfirm = true else model.allowHttp(false)
                             }
-                            HorizontalDivider()
-                            SettingToggle("نمایش لوگوها", "دریافت تصویر از میزبان لوگوی هر کانال؛ ممکن است ترافیک مصرف کند.", settings.showLogos, model::showLogos)
+                            SettingToggle("نمایش لوگوها", "تصویرها از میزبان لوگوی هر کانال دریافت می‌شوند.", settings.showLogos, model::showLogos)
+                            SettingsMenuRow(
+                                "اندازه بافر شبکه",
+                                trailing = io.github.fourkings6114.iptv.player.BufferProfile.fromId(settings.bufferProfile).label,
+                                onClick = {
+                                    settingsSelection = SettingsSelection(
+                                        title = "اندازه بافر شبکه",
+                                        selected = settings.bufferProfile,
+                                        options = io.github.fourkings6114.iptv.player.BufferProfile.entries.map { it.id to it.label },
+                                        note = "خودکار از تنظیم Media3 استفاده می‌کند. اندازهٔ دستی برای پخش‌های بعدی اعمال می‌شود و ممکن است مصرف RAM را بالا ببرد.",
+                                        onSelect = model::bufferProfile,
+                                    )
+                                },
+                            )
+                            Text("بافر بزرگ‌تر می‌تواند قطعی‌های کوتاه شبکه را پوشش دهد، اما شروع و تغییر کانال را کندتر و مصرف حافظه را بیشتر می‌کند.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                        SettingsCard {
+                            Text("پخش ویدیو", style = MaterialTheme.typography.titleMedium)
+                            SettingsMenuRow("جهت صفحه", trailing = orientationLabel(settings.playerOrientation), onClick = {
+                                settingsSelection = SettingsSelection("جهت صفحه", settings.playerOrientation,
+                                    listOf("auto" to "خودکار", "landscape" to "افقی", "portrait" to "عمودی"),
+                                    "روی پخش بعدی اعمال می‌شود.", model::playerOrientation)
+                            })
+                            SettingsMenuRow("تایمر خواب", trailing = sleepTimerLabel(settings.sleepTimerMinutes), onClick = {
+                                settingsSelection = SettingsSelection("تایمر خواب", settings.sleepTimerMinutes.toString(),
+                                    listOf(0, 15, 30, 45, 60, 90, 120).map { it.toString() to sleepTimerLabel(it) },
+                                    "با پایان زمان، پخشگر بسته می‌شود؛ شمارش از انتخاب زمان آغاز می‌شود و با تغییر کانال از نو شروع می‌شود.", { model.sleepTimerMinutes(it.toInt()) })
+                            })
+                            SettingsMenuRow("مرحلهٔ عقب‌بردن و جلو‌بردن", trailing = "${persianNumber(settings.rewindSeconds)} ثانیه", onClick = {
+                                settingsSelection = SettingsSelection("مرحلهٔ عقب‌بردن و جلو‌بردن", settings.rewindSeconds.toString(),
+                                    listOf(5, 10, 15, 30, 60).map { it.toString() to "${persianNumber(it)} ثانیه" },
+                                    "برای دکمه‌های جابه‌جایی پلیر اعمال می‌شود.", { model.rewindSeconds(it.toInt()) })
+                            })
+                            SettingsMenuRow("مقیاس پیش‌فرض ویدیو · تمام‌صفحه", trailing = resizeLabel(settings.fullScreenResizeMode), onClick = {
+                                settingsSelection = resizeSelection("تمام‌صفحه", settings.fullScreenResizeMode, model::fullScreenResizeMode)
+                            })
+                            SettingsMenuRow("مقیاس پیش‌فرض ویدیو · پنجره شناور", trailing = resizeLabel(settings.windowedResizeMode), onClick = {
+                                settingsSelection = resizeSelection("پنجره شناور", settings.windowedResizeMode, model::windowedResizeMode)
+                            })
+                            SettingsMenuRow("مدت نمایش کنترل‌های پلیر", trailing = timeoutLabel(settings.controllerTimeoutMs), onClick = {
+                                settingsSelection = SettingsSelection("مدت نمایش کنترل‌های پلیر", settings.controllerTimeoutMs.toString(),
+                                    listOf(2_000 to "۲ ثانیه", 5_000 to "۵ ثانیه", 10_000 to "۱۰ ثانیه", 20_000 to "۲۰ ثانیه", 0 to "همیشه").map { it.first.toString() to it.second },
+                                    null, { model.controllerTimeoutMs(it.toInt()) })
+                            })
+                            SettingToggle("نمایش ساعت روی ویدیو", "ساعت در نوار بالای پلیر نمایش داده می‌شود.", settings.showPlayerClock, model::showPlayerClock)
+                            SettingToggle("تلاش با رمزگشای جایگزین", "برای پخش بعدی؛ در صورت ناسازگاری، پلیر رمزگشای جایگزین دستگاه را برای صدا یا تصویر امتحان می‌کند.", settings.audioDecoderFallback, model::audioDecoderFallback)
+                        }
+                        SettingsCard {
+                            Text("گروه‌ها و ویدیوها", style = MaterialTheme.typography.titleMedium)
+                            SettingToggle("پنهان‌کردن انتخاب فهرست در صفحهٔ اصلی", "مدیریت فهرست‌ها از تنظیمات همچنان در دسترس می‌ماند.", settings.hideSourceSelector, model::hideSourceSelector)
+                            Text("فیلترهای گروه در صفحهٔ کانال‌ها در دسترس‌اند و علاقه‌مندی‌ها، سابقه و پخش تغییر نمی‌کنند.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                        SettingsCard {
+                            Text("کنترل والدین", style = MaterialTheme.typography.titleMedium)
+                            SettingToggle("فیلتر گروه‌های بزرگسال", "گروه‌ها و کانال‌هایی که برچسب بزرگسال، ۱۸+، پورن یا مشابه دارند از کانال‌ها، علاقه‌مندی‌ها و سابقه پنهان می‌شوند. این فیلتر جایگزین کنترل محتوای منبع نیست.", settings.parentalControlEnabled) { enabled ->
+                                parentalPinError = null
+                                parentalPin = ""
+                                parentalPinConfirm = ""
+                                parentalTargetEnabled = enabled
+                                if (settings.parentalPinHash.isBlank()) parentalPinSetup = true else parentalPinVerify = true
+                            }
+                            if (settings.parentalPinHash.isNotBlank()) Text("رمز والدین روی همین دستگاه ذخیره شده است؛ فراموشی رمز با پاک‌کردن داده‌های برنامه برطرف می‌شود.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                        SettingsCard {
+                            Text("اندازه و نمایش صفحه", style = MaterialTheme.typography.titleMedium)
+                            SettingsMenuRow("اندازهٔ متن", trailing = scaleLabel(settings.textScale), onClick = {
+                                settingsSelection = scaleSelection("اندازهٔ متن", settings.textScale, model::textScale)
+                            })
+                            SettingsMenuRow("مقیاس صفحه نمایش", trailing = scaleLabel(settings.screenScale), onClick = {
+                                settingsSelection = scaleSelection("مقیاس صفحه نمایش", settings.screenScale, model::screenScale)
+                            })
+                        }
+                        SettingsCard {
+                            Text("ویژگی‌های پریمیوم", style = MaterialTheme.typography.titleMedium)
+                            SettingsMenuRow("بازشدن خودکار ویدیو هنگام اجرای برنامه", trailing = "فقط نسخهٔ پریمیوم", enabled = false, onClick = {})
+                            SettingsMenuRow("پخش در پس‌زمینه", trailing = "در این نسخه در دسترس نیست", enabled = false, onClick = {})
+                            SettingsMenuRow("ادامه از آرشیو پخش", trailing = "در این نسخه در دسترس نیست", enabled = false, onClick = {})
                         }
                         SettingsCard {
                             Text("پنجرهٔ شناور پخش", style = MaterialTheme.typography.titleMedium)
@@ -263,7 +356,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                         style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             } else {
-                if (pane == Pane.Channels) {
+                if (pane == Pane.Channels && !settings.hideSourceSelector) {
                     SourcePickerCard(
                         title = source?.title ?: "آماده‌سازی فهرست…",
                         channelCount = source?.count,
@@ -478,11 +571,122 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
             confirmButton = { TextButton(onClick = { themePicker = false }) { Text("بستن") } },
         )
     }
+    settingsSelection?.let { selection ->
+        SettingsSelectionDialog(selection, onDismiss = { settingsSelection = null })
+    }
+    if (parentalPinSetup) {
+        AlertDialog(
+            onDismissRequest = { parentalPinSetup = false; parentalPin = ""; parentalPinConfirm = "" },
+            title = { Text("تنظیم رمز والدین") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("یک رمز عددی ۴ تا ۸ رقمی انتخاب کن. فقط هشِ نمک‌دار رمز روی دستگاه ذخیره می‌شود.", style = MaterialTheme.typography.bodySmall)
+                    OutlinedTextField(parentalPin, { value -> parentalPin = value.filter(Char::isDigit).take(8) },
+                        label = { Text("رمز والدین") }, singleLine = true,
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword))
+                    OutlinedTextField(parentalPinConfirm, { value -> parentalPinConfirm = value.filter(Char::isDigit).take(8) },
+                        label = { Text("تکرار رمز") }, singleLine = true,
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword))
+                    parentalPinError?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+                }
+            },
+            confirmButton = { TextButton(onClick = {
+                if (!parentalPin.matches(Regex("[0-9]{4,8}"))) parentalPinError = "رمز باید ۴ تا ۸ رقم باشد."
+                else if (parentalPin != parentalPinConfirm) parentalPinError = "رمزها یکسان نیستند."
+                else { model.setParentalPin(parentalPin); parentalPinSetup = false; parentalPin = ""; parentalPinConfirm = "" }
+            }) { Text("ذخیره و فعال‌سازی") } },
+            dismissButton = { TextButton(onClick = { parentalPinSetup = false; parentalPin = ""; parentalPinConfirm = "" }) { Text("انصراف") } },
+        )
+    }
+    if (parentalPinVerify) {
+        AlertDialog(
+            onDismissRequest = { parentalPinVerify = false; parentalPin = "" },
+            title = { Text("تأیید رمز والدین") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text(if (parentalTargetEnabled) "برای فعال‌کردن فیلتر، رمز را وارد کن." else "برای خاموش‌کردن فیلتر، رمز را وارد کن.")
+                    OutlinedTextField(parentalPin, { value -> parentalPin = value.filter(Char::isDigit).take(8) },
+                        label = { Text("رمز والدین") }, singleLine = true,
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.NumberPassword))
+                    parentalPinError?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+                }
+            },
+            confirmButton = { TextButton(onClick = {
+                model.verifyParentalPin(parentalPin) { valid ->
+                    if (valid) { model.parentalControl(parentalTargetEnabled); parentalPinVerify = false; parentalPin = "" }
+                    else parentalPinError = "رمز درست نیست."
+                }
+            }) { Text("تأیید") } },
+            dismissButton = { TextButton(onClick = { parentalPinVerify = false; parentalPin = "" }) { Text("انصراف") } },
+        )
+    }
     if (licenses) {
         val text = remember { context.assets.open("open_source_licenses.txt").bufferedReader().use { it.readText() } }
         AlertDialog(onDismissRequest = { licenses = false }, title = { Text("کتابخانه‌ها و مجوزها") }, text = { Text(text, Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall) }, confirmButton = { TextButton(onClick = { licenses = false }) { Text("بستن") } })
     }
 }
+
+private data class SettingsSelection(
+    val title: String,
+    val selected: String,
+    val options: List<Pair<String, String>>,
+    val note: String? = null,
+    val onSelect: (String) -> Unit,
+)
+
+@Composable
+private fun SettingsSelectionDialog(selection: SettingsSelection, onDismiss: () -> Unit) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(selection.title) },
+        text = {
+            Column(Modifier.heightIn(max = 460.dp).verticalScroll(rememberScrollState())) {
+                selection.note?.let { Text(it, Modifier.padding(bottom = 10.dp), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+                selection.options.forEach { (id, label) ->
+                    Row(
+                        Modifier.fillMaxWidth().heightIn(min = 52.dp).semantics { contentDescription = label }
+                            .padding(horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        RadioButton(selected = selection.selected == id, onClick = { selection.onSelect(id); onDismiss() })
+                        TextButton(onClick = { selection.onSelect(id); onDismiss() }, modifier = Modifier.weight(1f)) {
+                            Text(label, Modifier.fillMaxWidth(), textAlign = androidx.compose.ui.text.style.TextAlign.Start)
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("بستن") } },
+    )
+}
+
+private fun orientationLabel(id: String) = when (id) {
+    "landscape" -> "افقی"
+    "portrait" -> "عمودی"
+    else -> "خودکار"
+}
+
+private fun sleepTimerLabel(minutes: Int) = if (minutes == 0) "خاموش" else "${persianNumber(minutes)} دقیقه"
+
+private fun resizeLabel(id: String) = when (id) {
+    "fill" -> "کشیده"
+    "zoom" -> "برش"
+    else -> "متناسب"
+}
+
+private fun timeoutLabel(timeout: Int) = if (timeout == 0) "همیشه" else "${persianNumber(timeout / 1000)} ثانیه"
+
+private fun scaleLabel(scale: Float) = "${(scale * 100).toInt()}٪"
+
+private fun resizeSelection(title: String, current: String, onSelect: (String) -> Unit) =
+    SettingsSelection("مقیاس ویدیو · $title", current,
+        listOf("fit" to "متناسب با قاب", "fill" to "کشیده برای پرکردن", "zoom" to "برش برای پرکردن"),
+        "در حالت پنجرهٔ شناور تنظیم جداگانه دارد.", onSelect)
+
+private fun scaleSelection(title: String, current: Float, onSelect: (Float) -> Unit) =
+    SettingsSelection(title, current.toString(),
+        listOf(0.85f, 0.9f, 1.0f, 1.1f, 1.2f, 1.3f).map { it.toString() to "${(it * 100).toInt()}٪" },
+        "این گزینه فقط در رابط اصلی برنامه اعمال می‌شود.", { value -> onSelect(value.toFloat()) })
 
 @Composable
 private fun FeaturedPlaybackCard(channel: Channel?, modifier: Modifier = Modifier, onPlay: () -> Unit) {
@@ -597,6 +801,12 @@ private fun ChannelRow(channel: Channel, favorite: Boolean, showLogo: Boolean, p
             }
         }
     }
+}
+
+private fun Channel.isAdultContent(): Boolean {
+    val normalized = "$name $group".lowercase()
+    return listOf("adult", "porn", "xxx", "erotic", "18+", "بزرگسال", "پورن", "جنسی")
+        .any(normalized::contains)
 }
 
 @Composable
