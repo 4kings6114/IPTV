@@ -629,7 +629,7 @@ private fun SettingsMenuRow(
                 maxLines = 1, overflow = TextOverflow.Ellipsis)
             trailing?.let { Text(it, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
             Spacer(Modifier.width(8.dp))
-            Icon(Icons.Default.ChevronLeft, contentDescription = null,
+            Icon(Icons.Default.ArrowDropDown, contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(22.dp))
         }
     }
