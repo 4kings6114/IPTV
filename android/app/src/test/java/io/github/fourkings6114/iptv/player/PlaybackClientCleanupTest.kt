@@ -100,6 +100,8 @@ class PlaybackClientCleanupTest {
                 withTimeout(10_000) { PlaybackClientCleanup(scope).release(client).join() }
                 assertTrue(call.isCanceled())
                 assertTrue(finished.await(5, TimeUnit.SECONDS))
+                assertEquals(0, client.dispatcher.runningCallsCount())
+                assertEquals(0, client.connectionPool.connectionCount())
                 assertTrue(client.dispatcher.executorService.isShutdown)
             }
         } finally { scope.cancel() }

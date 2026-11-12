@@ -327,8 +327,16 @@ class PictureInPictureTest {
         PlaybackActivity::class.java.getDeclaredField("playbackClient").apply { isAccessible = true }.get(activity) as OkHttpClient
     }
 
-    private fun waitForCleanup(client: OkHttpClient) = waitFor("PiP client cleanup did not complete on IO", 15_000) {
-        client.connectionPool.connectionCount() == 0 && client.dispatcher.executorService.isShutdown
+    private fun waitForCleanup(client: OkHttpClient) {
+        val deadline = SystemClock.elapsedRealtime() + 20_000
+        while (SystemClock.elapsedRealtime() < deadline) {
+            if (client.connectionPool.connectionCount() == 0 && client.dispatcher.runningCallsCount() == 0 &&
+                client.dispatcher.queuedCallsCount() == 0 && client.dispatcher.executorService.isShutdown) return
+            SystemClock.sleep(50)
+        }
+        fail("PiP client cleanup did not complete on IO; connections=${client.connectionPool.connectionCount()}, " +
+            "idle=${client.connectionPool.idleConnectionCount()}, running=${client.dispatcher.runningCallsCount()}, " +
+            "queued=${client.dispatcher.queuedCallsCount()}, executorShutdown=${client.dispatcher.executorService.isShutdown}; " + systemUiSummary())
     }
 
     private fun setPipPermission(mode: String) {
