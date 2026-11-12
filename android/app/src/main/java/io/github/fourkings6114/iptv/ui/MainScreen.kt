@@ -426,7 +426,7 @@ private fun FeaturedPlaybackCard(channel: Channel?, modifier: Modifier = Modifie
         modifier = modifier,
     ) {
         Box(
-            Modifier.fillMaxWidth().height(148.dp).background(
+            Modifier.fillMaxWidth().height(96.dp).background(
                 Brush.linearGradient(listOf(Color(0xFF171A35), Color(0xFF5148B8))),
             ),
         ) {
