@@ -268,7 +268,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     leadingIcon = { Icon(Icons.Default.Search, null) },
                     trailingIcon = { if (query.isNotEmpty()) IconButton(onClick = { query = "" }) { Icon(Icons.Default.Close, "پاک‌کردن جست‌وجو") } },
                 )
-                if (pane == Pane.Channels && query.isBlank() && group == null) {
+                if (pane == Pane.Channels && query.isBlank() && group == null && channels.size > 1) {
                     val featuredChannel = history.firstOrNull()
                     FeaturedPlaybackCard(
                         channel = featuredChannel,
