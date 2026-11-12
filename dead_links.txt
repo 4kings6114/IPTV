@@ -1,15 +1,10 @@
 # Unavailable links (not necessarily dead)
-# count: 2728
+# count: 2519
 
 .red (576p)
 http://5.188.159.128:8070/RED/index.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-.sci-fi (576p)
-http://stream.mcquack.net/180/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:29.269643+00:00
 
 1+1 International
 http://158.101.222.193:88/georgia_play.php?[redacted]
@@ -79,7 +74,7 @@ last_success: unknown
 2+2
 http://stream.mcquack.net/173/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:41:33.532935+00:00
+last_success: 2026-11-11T23:19:10.338990+00:00
 
 20
 https://live02-seg.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/index.m3u8
@@ -90,11 +85,6 @@ last_success: unknown
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-20 Minutes TV (1080p)
-https://live-20minutestv.digiteka.com/1961167769/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:09:37.682501+00:00
 
 24 Horas
 https://mdstrm.com/live-stream-playlist/689ba606ecfe7915e1f8f741.m3u8
@@ -124,11 +114,6 @@ last_success: unknown
 2GB (1080p)
 https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-365 days TV (576p)
-http://stream.mcquack.net/70/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 365 days TV (576p)
@@ -191,20 +176,15 @@ http://stream.mcquack.net/258/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: 2026-11-10T15:21:50.967760+00:00
 
-5 minut tishiny (1080p)
-https://cdn-dvr.ntv.ru/5_minut_tishiny/index.m3u8
+4ever Drama (1080p)
+http://stream.mcquack.net/260/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:07:55.733077+00:00
+last_success: 2026-11-11T10:12:47.175839+00:00
 
-5tv
-https://617c5175c970b.streamlock.net:4444/tvcinco/live1/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:17:58.203495+00:00
-
-5tv (480p)
-http://www.coninfo.net:1935/tvcinco/live1/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:15:14.518624+00:00
+4ever Theater (1080p)
+http://stream.mcquack.net/259/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:12:46.552457+00:00
 
 5USA (360p)
 https://lb.iptvnetwork.net/ls28/10115/playlist.m3u8
@@ -319,15 +299,10 @@ last_success: unknown
 ABC Teleshow (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/abctv/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:39:02.835145+00:00
+last_success: 2026-11-11T23:19:55.880279+00:00
 
 Abc Tv
 https://diretta.arcapuglia.it:8080/live/abctv/index.m3u8
-http_error: HTTP 404
-last_success: unknown
-
-Acasa HD
-http://eb4b8dcf.kablakaka.ru/iptv/AE8BY6FHF5ZGAG/6988/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
@@ -355,11 +330,6 @@ ACTV
 https://tvlocales-live.freecaster.com/live/95d2f733-1bc2-4bd5-9b96-c53ed3fc450f/95d2f733-1bc2-4bd5-9b96-c53ed3fc450f.isml/master.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Adesso TV (720p)
-https://cdn.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:08:21.240962+00:00
 
 Adnkronos (720p)
 https://5e73cf528f404.streamlock.net/GR_sport/livestream/playlist.m3u8
@@ -481,11 +451,6 @@ https://live20.bozztv.com/giatv/giatv-alternativatv/alternativatv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-AlternaTV (720p)
-https://tv.alterna.ar/stream/hls/live.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:07:49.007391+00:00
-
 Altura TV (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/urbanatv/playlist.m3u8
 http_error: HTTP 404
@@ -516,19 +481,9 @@ https://amc-amcespanol-1-us.lg.wurl.tv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-AMC Europe
-http://213.91.179.28:8000/play/a0by
-timeout: Request timed out
-last_success: 2026-11-10T15:15:39.511048+00:00
-
 AMC Latin America (1080p)
 http://45.171.108.253:8888/AMC/index.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-Amedia Hit (1080p)
-http://stream.mcquack.net/162/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 Amedia Hit (576p)
@@ -718,7 +673,7 @@ last_success: unknown
 
 Arktika 24
 https://vk.com/video-213370539_456239018
-invalid: Too many HTTP redirects
+invalid: Invalid or cyclic HTTP redirect
 last_success: unknown
 
 Arpegio TV (720p)
@@ -789,7 +744,7 @@ last_success: unknown
 Atlantis Radio TV (720p)
 https://live-evg8.tv360.bitel.com.pe/bitel/atlantisSRT/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:20:04.071445+00:00
+last_success: 2026-11-11T23:20:27.044232+00:00
 
 ATR (720p)
 https://atr-live.cdn-01.cosmonova.net.ua/hls/atr_ua_hi/index.m3u8
@@ -909,7 +864,7 @@ last_success: unknown
 Avto24 (576p)
 http://stream.mcquack.net/78/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
+last_success: 2026-11-11T23:22:42.872057+00:00
 
 Avto24 (576p)
 https://fs.uplink.kz/avto24/mono.m3u8?[redacted]
@@ -936,11 +891,6 @@ http://85.11.144.9:4222/AXN
 timeout: Request timed out
 last_success: unknown
 
-AXN Latin America (1080p)
-http://181.78.8.199:8000/play/a0cu/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:07:51.463778+00:00
-
 AXN Movies
 https://cdn.stmify.com/zapitv/stream/AXN_MOVIES/axn_white.mpd
 http_error: HTTP 404
@@ -948,7 +898,7 @@ last_success: unknown
 
 AXN Spin
 http://92.114.85.87:8010/play/a00b/index.m3u8
-http_error: HTTP 404
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 AXN Spin
@@ -1009,12 +959,12 @@ last_success: unknown
 B15 Fresnillo (1080p)
 https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:39:00.905932+00:00
+last_success: 2026-11-11T23:19:47.630156+00:00
 
 B15 Zacatecas (1080p)
 https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:36:03.204797+00:00
+last_success: 2026-11-11T23:19:33.795344+00:00
 
 BabyTV
 https://saran-live.ercdn.net/babytv/index.m3u8
@@ -1158,7 +1108,7 @@ last_success: unknown
 
 BBC Earth
 https://nord.ayakkabiparti.lol/bbc/index.m3u8
-timeout: Request timed out
+invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 BBC Four
@@ -1190,11 +1140,6 @@ BBC News (576p)
 http://46.32.176.50/bbcworld/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-BBC News (576p)
-http://stream.mcquack.net/85/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:42:42.962740+00:00
 
 BBC NL (360p)
 https://lb.iptvnetwork.net/ls28/10021/playlist.m3u8
@@ -1261,11 +1206,6 @@ https://bel-live-hls.akamaized.net/hls/live/2038650/BEL-Live-HLS/master.m3u8
 http_error: HTTP 400
 last_success: unknown
 
-Bella Abanquina TV (720p)
-https://live-evg8.tv360.bitel.com.pe/bitel/bellaabanquinaSRT/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:19:56.016005+00:00
-
 Belsat TV
 http://78.62.9.23:55555/Belsat
 timeout: Request timed out
@@ -1316,6 +1256,11 @@ https://fs.uplink.kz/big_planet/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
+Bigudi (576p)
+http://stream.mcquack.net/340/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:12:46.320176+00:00
+
 Biosfera TV (720p)
 https://tvdatta.com:3021/live/biosferatvlive.m3u8
 network_error: Connection or DNS/TLS failure
@@ -1328,7 +1273,7 @@ last_success: unknown
 
 bitMe (1080p)
 https://cablered.iptvperu.tv:1936/cablered/bitme-srt_new/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 bitMe (576p)
@@ -1338,7 +1283,7 @@ last_success: unknown
 
 bitMe Latin America (1080p)
 https://cablered.iptvperu.tv:1936/cablered/bitme_new/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 Bizzarro Movies
@@ -1376,11 +1321,6 @@ https://58bd5b7a98e04.streamlock.net/medienasa-live/_definst_/mp4:BLKonline_high
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Blokbaster (1080p)
-http://stream.mcquack.net/364/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 Bloomberg HT (720p)
 https://ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8
 restricted: HTTP 403
@@ -1396,14 +1336,14 @@ https://pe-ak-lp01a-9c9media.akamaized.net/live/News1BNNDigi/p/dash/00000001/1bb
 http_error: HTTP 400
 last_success: unknown
 
+Boas Novas (1080p)
+https://cdn.jmvstream.com/w/LVW-9375/LVW9375_6i0wPBCHYc/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:10:30.673560+00:00
+
 Bober (576p)
 https://fs.uplink.kz/bober/mono.m3u8?[redacted]
 restricted: HTTP 403
-last_success: unknown
-
-Boing
-http://digisat.ddns.net:4022/udp/239.0.5.177:8208
-http_error: HTTP 503
 last_success: unknown
 
 Boing
@@ -1416,20 +1356,10 @@ https://mdslivehls-i.akamaihd.net/hls/live/571647/boing/bitrate_1.m3u8
 http_error: HTTP 400
 last_success: unknown
 
-Bolt (1080p)
-http://stream.mcquack.net/73/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:55:57.688227+00:00
-
 Bom Cine
 https://tsw.streamingwebtv24.it:1936/inteccdn3/inteccdn3/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Boomerang (720p)
-http://212.5.144.156:8080/boomerang/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:45.824865+00:00
 
 Bouke
 https://tvlocales-live.freecaster.com/live/95d2f70d-9229-478b-9aed-bc4fa220316d/95d2f70d-9229-478b-9aed-bc4fa220316d.isml/master.m3u8
@@ -1466,11 +1396,6 @@ https://redirector.rudo.video/hls-video/c54ac2799874375c81c1672abb700870537c5223
 http_error: HTTP 404
 last_success: unknown
 
-BRIDGE (576p)
-http://stream.mcquack.net/318/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:32.456644+00:00
-
 BRIDGE Classic (576p)
 http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8
 http_error: HTTP 404
@@ -1494,7 +1419,7 @@ last_success: unknown
 BRIDGE Hits (576p)
 http://stream.mcquack.net/320/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:18.479637+00:00
+last_success: 2026-11-11T23:22:41.377198+00:00
 
 Brit Asia TV (576p)
 http://51.75.127.199:3141/britasia/index.m3u8
@@ -1516,6 +1441,11 @@ https://emisja.btb.j00r.us/[redacted]
 invalid: HLS playlist has no playable variants or segments
 last_success: 2026-11-10T15:11:01.945422+00:00
 
+BTB 3 (1080p)
+https://emisja3.btb.j00r.us/[redacted]
+invalid: HLS playlist has no playable variants or segments
+last_success: 2026-11-11T10:02:04.898812+00:00
+
 BTL TV (1080p)
 https://cdn.liveplustv.com/v1/live/btl-tv/master.m3u8
 restricted: HTTP 403
@@ -1525,11 +1455,6 @@ BTV (360p)
 https://cloudfront44.lexanetwork.com:1344/freerelay/babolnatv.sdp/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Buenisima Radio TV
-https://canal.mediaserver.com.co/live/buenisimatv.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:15:30.437924+00:00
 
 Buin Somos Todos (720p)
 https://bst.buin.cl/0.m3u8
@@ -1616,11 +1541,6 @@ https://s5.mexside.net:1936/medios/medios/playlist.m3u8
 http_error: HTTP 404
 last_success: 2026-11-10T15:18:42.978938+00:00
 
-Canaf54 TV (480p)
-https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:10:35.797218+00:00
-
 Canal 1 (1080p)
 http://200.122.223.13:55000/play/canal-1-tdt/index.m3u8
 timeout: Request timed out
@@ -1654,7 +1574,7 @@ last_success: unknown
 Canal 10 Durango (1080p)
 https://5e50264bd6766.streamlock.net/canal10durango/videocanal10durango/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:18:15.385093+00:00
+last_success: 2026-11-11T23:18:51.933753+00:00
 
 Canal 10 Mar del Plata
 https://g1.mc-hor.transport.edge-access.net/a12/ngrp:canal10mdq-100044_all/Playlist.m3u8?[redacted]
@@ -1744,7 +1664,7 @@ last_success: unknown
 Canal 25 Ayacucho (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/canal25ayacucho/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:18:36.221643+00:00
+last_success: 2026-11-11T23:19:08.439705+00:00
 
 Canal 25 Jundiai (720p)
 https://cdn-tiva-stream01-msolutionbrasil-com-br.smartbit.co/hls/canal25/live.m3u8
@@ -1766,20 +1686,15 @@ https://stream.castr.com/653d77dcde70014f52ad1e19/live_bf24d4208d8611eeb116dbe87
 http_error: HTTP 404
 last_success: unknown
 
+Canal 3 Pinamar
+http://intelincloud01.com.ar/hls/cn3/index.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T09:58:34.702198+00:00
+
 Canal 30 Cintalapa (720p)
 https://rpn3.bozztv.com/ssh101/ssh101/canal30mx/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Canal 30 Loncomilla (720p)
-https://v1.tustreaming.cl/canal30loncomilla/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:19:16.306434+00:00
-
-Canal 38 (720p)
-https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:41:32.278084+00:00
 
 Canal 4 Catalunya (1080p)
 https://limited35.todostreaming.es/live/mitjans-livestream.m3u8
@@ -1816,11 +1731,6 @@ https://mdstrm.com/live-stream-playlist/5d56ed29c92dd106ff01543b.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Canal 7 TeleValencia (576p)
-https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
-restricted: HTTP 401
-last_success: 2026-11-10T15:13:53.473239+00:00
-
 Canal 7 TV (576p)
 https://k-fra32.x10.network/Clrs/test/hls/1158394/playlist.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
@@ -1831,30 +1741,15 @@ https://live20.bozztv.com/akamaissh101/ssh101/canal8sanjuan/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Canal 8 Sincelejo (720p)
-http://181.78.21.38:8000/play/a0df/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:13:52.233801+00:00
-
 Canal 9 (1080p)
 https://livehd.vedge.infomaniak.com/livecast/livehd/master.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Canal 9 Link
-https://617c5175c970b.streamlock.net:4444/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:17:18.809951+00:00
-
 Canal 9 Litoral (720p)
 https://stream.arcast.live/ahora/ahora/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Canal 9 Resistencia (720p)
-http://coninfo.net:1935/9linklivert/smil:9linkmultibr.smil/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:07:55.220415+00:00
 
 Canal 9 Rio Cuarto (1080p)
 https://tv.streamcasthd.com:3249/live/canal9riocuartolive.m3u8
@@ -1874,11 +1769,6 @@ last_success: unknown
 Canal Capital (1080p)
 https://mdstrm.com/live-stream-playlist/6952dc88cb62083467eb6ab4.m3u8
 restricted: HTTP 403
-last_success: unknown
-
-Canal CHD
-https://vs20.live.opencaster.com/canalchd2025_8d99626c/index.m3u8
-http_error: HTTP 404
 last_success: unknown
 
 Canal Coin TV (1080p)
@@ -1969,7 +1859,7 @@ last_success: unknown
 Canal Mas TV (720p)
 https://live-evg11.tv360.bitel.com.pe/bitel/mastvSRT/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:20:36.811003+00:00
+last_success: 2026-11-11T23:20:54.699933+00:00
 
 Canal Mundo Vision (720p)
 https://movil.ejeserver.com/live/mundovisiontv.m3u8
@@ -1996,16 +1886,6 @@ https://video.ejeserver.com/live/nets.m3u8
 http_error: HTTP 404
 last_success: 2026-11-10T15:18:06.735038+00:00
 
-Canal Parlamento (360p)
-https://congresodirecto.akamaized.net/hls/live/2037973/canalparlamento/master.m3u8
-invalid: HLS manifest exceeds probe_bytes
-last_success: unknown
-
-Canal Pulpo TV
-https://vs20.live.opencaster.com/canalpulpotv_bdeee6e2/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:25.864778+00:00
-
 Canal PyC (720p)
 https://live20.bozztv.com/akamaissh101/ssh101/pyctelevision/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -2018,7 +1898,7 @@ last_success: unknown
 
 Canal Reus TV (720p)
 https://liveingesta318.cdnmedia.tv/canalreustvlive/smil:live.smil/playlist.m3u8
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
 
 Canal Ricos (480p)
@@ -2176,30 +2056,10 @@ http://flussonic.linkintel.ru/Karusel/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Carousel (576p)
-http://stream.mcquack.net/120/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:26.095182+00:00
-
 Carousel International (576p)
 https://fs.uplink.kz/karusel/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
-
-Cartoon Network
-https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:19:24.077949+00:00
-
-Cartoon Network (720p)
-http://212.5.144.156:8080/cartoon/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:38.013609+00:00
-
-Cartoon Network CEE
-http://213.91.179.28:8000/play/a08g
-timeout: Request timed out
-last_success: 2026-11-10T15:14:05.538222+00:00
 
 Cartoon Network Latin America
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/cartoonnetwork.stream/chunks.m3u8
@@ -2210,11 +2070,6 @@ Cartoonito
 https://live02-seg.msf.cdn.mediaset.net/live/ch-la/la-clr.isml/index.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Cartoonito CEE
-http://213.91.179.28:8000/play/a0c7
-timeout: Request timed out
-last_success: 2026-11-10T15:09:18.116409+00:00
 
 Castrovillari Tv
 http://msh0062.stream.seeweb.it/live/flv:stream00.sdp/playlist.m3u8
@@ -2381,20 +2236,10 @@ http://193.46.58.239:8080/Channel5/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Channel 5 (1080p)
-http://stream.mcquack.net/291/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:49.649666+00:00
-
 Channel 5 (360p)
 https://lb.iptvnetwork.net/ls28/10105/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Channel 5 (576p)
-http://31.148.5.241/kanal_5/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:20:49.421075+00:00
 
 Channel 5 International (576p)
 https://fs.uplink.kz/5_kanal/mono.m3u8?[redacted]
@@ -2441,11 +2286,6 @@ https://pemirateshls.persiana.live/hls/stream.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Channel One (576p)
-http://45.153.24.78/1TV/index.m3u8
-http_error: HTTP 503
-last_success: 2026-11-10T15:17:47.545935+00:00
-
 Channel One CIS (576p)
 https://fs.uplink.kz/perviy_kanal_sng/mono.m3u8?[redacted]
 restricted: HTTP 403
@@ -2454,7 +2294,7 @@ last_success: unknown
 Charapa TV (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/charapatvSRT/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:17:25.827360+00:00
+last_success: 2026-11-11T23:18:08.229025+00:00
 
 CHCH
 http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/222841
@@ -2499,7 +2339,7 @@ last_success: unknown
 Chiloe Red 25 (720p)
 https://v2.tustreaming.cl/chiloered/index.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:20:43.642571+00:00
+last_success: 2026-11-11T23:21:01.695701+00:00
 
 ChP info (576p)
 http://edge3.iptv.macc.com.ua/life/magnolia_3/index.m3u8
@@ -2616,11 +2456,6 @@ https://lbgo.bozztv.com/ssh101/ssh101/verycoolfgr/playlist.m3u8
 http_error: HTTP 502
 last_success: unknown
 
-Ciudad TV Resistencia (720p)
-https://617c5175c970b.streamlock.net:4444/chacodxdtv/livenew/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:16:23.354448+00:00
-
 Clan
 https://rtvelivestream.rtve.es/rtvesec/clan/clan_main_dvr.m3u8
 invalid: HLS manifest exceeds probe_bytes
@@ -2636,11 +2471,6 @@ http://168.228.44.241:9999/play/a04j/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Classic Music (1080p)
-http://stream.mcquack.net/312/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T20:44:18.274700+00:00
-
 Classico – Rakuten TV
 https://rakuten-classico-1-eu.rakuten.wurl.tv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -2655,11 +2485,6 @@ Clubbing TV
 https://d1j2csarxnwazk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-uze1m6xh4fiyr-ssai-prd/master.m3u8
 http_error: HTTP 504
 last_success: unknown
-
-CMB Television (1080p)
-https://hls-m9hrfayq-livepush.akamaized.net/live_cdn/nsxlDfnVmUyEy/eme2QCj5oX02cY/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:08:50.987161+00:00
 
 CMM TV (1080p)
 https://cdnapisec.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_gnz6ity9/protocol/https/format/applehttp/flavorIds/1_a9gxgxzy,1_v71ryg4b,1_vbfvtjw6,1_obo1bqsx,1_3shk3s5d/a.m3u8
@@ -2686,14 +2511,9 @@ https://www.dailymotion.com/video/x3b68jn
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
-CNN (720p)
-http://212.5.144.156:8080/cnn/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:23.327116+00:00
-
 CNN Prima News
 https://sktv.mxnticek.eu/new/stream.php?[redacted]
-http_error: HTTP 404
+timeout: Request timed out
 last_success: 2026-11-10T20:42:06.501745+00:00
 
 CNV/Montreal
@@ -2756,25 +2576,10 @@ https://congresodirecto.akamaized.net/hls/live/2038278/canal5/master.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Continent E (1080p)
-http://stream.mcquack.net/449/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:47.992234+00:00
-
-Cooperativa (720p)
-https://unlimited1-cl-isp.dps.live/coopetv/coopetv.smil/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:17:28.761037+00:00
-
 Correa Radiovision
 https://stream.arcast.net:4443/correadigital/canal12/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Corrientes TV
-https://617c5175c970b.streamlock.net:4444/13max2/live13maxtv2026/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:15:14.920431+00:00
 
 Corts Valencianes (480p)
 https://streamserver3.seneca.tv/cval_live/cdn_enc_3/master.m3u8
@@ -2823,7 +2628,7 @@ last_success: unknown
 
 Crimea 24
 https://cdn.1tvcrimea.ru/24tvcrimea.m3u8
-network_error: Connection or DNS/TLS failure
+timeout: Request timed out
 last_success: unknown
 
 Cristovision
@@ -2843,12 +2648,12 @@ last_success: unknown
 
 CS Film
 https://sktv.mxnticek.eu/new/stream.php?[redacted]
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
 
 CS History
 https://sktv.mxnticek.eu/new/stream.php?[redacted]
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
 
 CS Mystery
@@ -2883,7 +2688,7 @@ last_success: unknown
 
 CTB Perth Movies Channel (720p)
 https://movies.ctbperth.net.au/hls/stream.m3u8
-network_error: Connection or DNS/TLS failure
+timeout: Request timed out
 last_success: unknown
 
 CTV (720p)
@@ -2913,13 +2718,8 @@ last_success: unknown
 
 Cugat TV (1080p)
 https://liveingesta318.cdnmedia.tv/cugatcatlive/smil:rtmp01.smil/playlist.m3u8
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
-
-Cultura 24 (720p)
-https://www.opencaster.com/resources/hls_stream/cultura24.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:10:57.748631+00:00
 
 Cultura Para (480p)
 http://www.portalcultura.com.br/playerhtml/funtelpa/tv_funtelpa/playlist.m3u8
@@ -3011,11 +2811,6 @@ https://eu-nl-012.worldcast.tv/dancetelevisiontwo/dancetelevisiontwo.m3u8
 timeout: Request timed out
 last_success: unknown
 
-DellaTV (720p)
-https://live20.bozztv.com/giatvplayout7/giatv-211474/playlist.m3u8
-network_error: Connection or DNS/TLS failure
-last_success: unknown
-
 Deluxe Lounge HD
 https://d46c0ebf9ef94053848fdd7b1f2f6b90.mediatailor.eu-central-1.amazonaws.com/v1/master/81bfcafb76f9c947b24574657a9ce7fe14ad75c0/live-prod/9f58b8c3-80c1-11eb-908d-533d39655269/0/master.m3u8
 http_error: HTTP 404
@@ -3068,7 +2863,7 @@ last_success: unknown
 
 DHE (1080p)
 https://cablered.iptvperu.tv:1936/cablered/dhe_new/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 Diaspora TV
@@ -3089,17 +2884,12 @@ last_success: unknown
 Dikaya rybalka (1080p)
 http://stream.mcquack.net/275/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:16.948977+00:00
+last_success: 2026-11-11T23:22:40.321097+00:00
 
 DikhTv Ⓨ
 http://88.212.7.14/live/dikh/playlist.m3u8
 http_error: HTTP 503
 last_success: unknown
-
-DIM (576p)
-http://stream.mcquack.net/383/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:51.626379+00:00
 
 Dion TV
 https://www.youtube.com/@diontileorash/live
@@ -3120,16 +2910,6 @@ Discovery Channel
 http://37.49.224.5/stream/11/index.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Discovery Channel (1080p)
-http://212.5.144.156:8080/discovery/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:07.392946+00:00
-
-Discovery Channel (1080p)
-http://stream.mcquack.net/177/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:16.746539+00:00
 
 Discovery Channel (360p)
 https://lb.iptvnetwork.net/ls28/10015/playlist.m3u8
@@ -3196,11 +2976,6 @@ https://lb.iptvnetwork.net/ls28/10014/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Disney Channel (576p)
-https://s6.hopslan.com/disneyX/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:19:13.357321+00:00
-
 Disney Channel (720p)
 http://109.85.181.77:9981/stream/channelid/652495718?[redacted]
 timeout: Request timed out
@@ -3251,11 +3026,6 @@ http://tvsen7.aynascope.net/disneyjr/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Disney Junior (576p)
-http://212.5.144.156/disneyjr/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:15:03.630473+00:00
-
 Distrito Comedia (1080p)
 http://45.5.57.58:8000/play/a07n/index.m3u8
 http_error: HTTP 404
@@ -3271,18 +3041,8 @@ https://stream.diyatvinc.com/diya.m3u8
 timeout: Request timed out
 last_success: unknown
 
-DMAX
-http://90.163.85.113:8093/stream/51/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:09:33.885016+00:00
-
 DMAX (576p)
 http://5.180.164.197:8080/DMAX/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
-DMAX (576p)
-https://s6.hopslan.com/dmaxX/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
@@ -3317,18 +3077,8 @@ network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 Dom kino (576p)
-http://stream.mcquack.net/236/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:24.144367+00:00
-
-Dom kino (576p)
 https://fs.uplink.kz/dom_kino/mono.m3u8?[redacted]
 restricted: HTTP 403
-last_success: unknown
-
-Dom kino Premium (1080p)
-http://stream.mcquack.net/108/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 Dom kino Premium (1080p)
@@ -3347,11 +3097,6 @@ timeout: Request timed out
 last_success: unknown
 
 Domashniy (576p)
-http://stream.mcquack.net/227/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:33.218860+00:00
-
-Domashniy (576p)
 https://fs.uplink.kz/domashniy/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
@@ -3368,18 +3113,13 @@ last_success: unknown
 
 Donna TV (480p)
 https://streaming.softwarecreation.it/DonnaTv/DonnaTv/playlist.m3u8
-timeout: Request timed out
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 Doraemon (720p)
 https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Dorama (1080p)
-http://stream.mcquack.net/412/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:15.384797+00:00
 
 DR Ramasjang
 https://drlive03texthls.akamaized.net/hls/live/2014191/drlive03text/master.m3u8
@@ -3398,7 +3138,7 @@ last_success: unknown
 
 DR1 (1080p)
 https://drlivedr1hls.akamaized.net/hls/live/2113625/drlivedr1/master.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
+restricted: HTTP 403
 last_success: 2026-11-10T15:09:20.263853+00:00
 
 DR2
@@ -3431,16 +3171,6 @@ https://cdn-5.nxplay.com.br/DREAMWORKS/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-DRTV (1080p)
-https://drlivedrtvahls.akamaized.net/hls/live/2113613/drlivedrtva/master.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:09:19.873411+00:00
-
-DSports
-http://45.186.254.75:8000/play/a0en/index.m3u8
-http_error: HTTP 404
-last_success: unknown
-
 DSports (1080p)
 http://38.187.7.252:8000/play/a03d/index.m3u8
 network_error: Connection or DNS/TLS failure
@@ -3471,11 +3201,6 @@ http://45.162.64.114/ZOOMOO_KIDS/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Dushevnoe (1080p)
-http://stream.mcquack.net/213/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 DW (576p)
 https://cdn-7.pishow.tv/live/431/master.m3u8
 http_error: HTTP 404
@@ -3484,17 +3209,17 @@ last_success: unknown
 DW (576p)
 https://mumt05.tangotv.in/87NeALx2DWTV/index.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:34:58.353871+00:00
+last_success: 2026-11-11T23:10:16.440222+00:00
+
+DW (576p)
+https://tvsen6.aynaott.com/Qq3s5WR2/index.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:11:03.665129+00:00
 
 DW (720p)
 http://45.162.231.38:7779/DW/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Dynamo Kyiv TV (1080p)
-http://stream.mcquack.net/396/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:11:26.800262+00:00
 
 E! Latin America (1080p)
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/entertainment.stream/playlist.m3u8
@@ -3530,11 +3255,6 @@ EEN
 https://live-vrt.rabah.net/groupc/live/8edf3bdf-7db3-41c3-a318-72cb7f82de66/live_aes.isml/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Egnatia TV (576p)
-https://video.streams.ovh:1936/egnatiatv/egnatiatv/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:16:50.623331+00:00
 
 Egyker TV (1080p)
 https://iptv01.eurocable.co.hu/EC-EGYKERTVHD/index.m3u8
@@ -3591,14 +3311,9 @@ https://5d82644094cc0.streamlock.net/8116/8116/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Ellinikos FM (720p)
-https://rtmp.win:3603/live/ellinikosfmlive.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:09:51.693254+00:00
-
 ElyTV (360p)
 https://stmv1.srvsite.com/ely/ely/playlist.m3u8
-restricted: HTTP 403
+http_error: HTTP 404
 last_success: unknown
 
 Eman Channel (576p)
@@ -3635,11 +3350,6 @@ Energy
 https://ncdn.telewebion.ir/baenergy/live/playlist.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
-
-Enter-Film
-http://stream.mcquack.net/322/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:34:48.138604+00:00
 
 Epic Drama
 http://82.78.243.219:45739/play/a01p/index.m3u8
@@ -3710,11 +3420,6 @@ ESPN (720p)
 http://190.83.2.182:8090/ESPN/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-ESPN (720p)
-http://212.5.144.156:8080/espn/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:18:47.072260+00:00
 
 ESPN 2 (360p)
 https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8
@@ -3806,11 +3511,6 @@ https://live.ipstream.it/etv/etv.stream/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-EU Music (1080p)
-http://stream.mcquack.net/261/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:46.149894+00:00
-
 Eureka (1080p)
 https://mdstrm.com/live-stream-playlist/6952e02d19eabace52e2885f.m3u8
 restricted: HTTP 403
@@ -3892,11 +3592,6 @@ restricted: HTTP 403
 last_success: unknown
 
 Eurosport 1
-http://213.91.179.28:8000/play/a05y
-timeout: Request timed out
-last_success: 2026-11-10T15:19:31.312073+00:00
-
-Eurosport 1
 http://87.238.211.217:2209/stream/99/index.m3u8
 timeout: Request timed out
 last_success: unknown
@@ -3910,11 +3605,6 @@ Eurosport 1 Polska (1080p)
 http://57.128.210.196:8080/264/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Eurosport 2
-http://213.91.179.28:8000/play/a04b
-timeout: Request timed out
-last_success: 2026-11-10T15:19:18.590366+00:00
 
 Eurosport 2
 https://andro.mangeinde4.lat/checklist/androstreamlivees2.m3u8
@@ -3935,21 +3625,6 @@ EUTV
 https://video01.logicahost.com.br/ypetv/ypetv/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-EUTV (720p)
-https://cdn.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:52:16.853400+00:00
-
-Eveo
-https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?[redacted]
-invalid: HLS manifest exceeds probe_bytes
-last_success: 2026-11-10T15:15:46.076833+00:00
-
-Eveo (720p)
-https://live-fi.tvkaista.net/eveo/live.m3u8?[redacted]
-invalid: HLS manifest exceeds probe_bytes
-last_success: 2026-11-10T15:21:34.939622+00:00
 
 Evolucion TV (576p)
 https://edgectc.com/CTC_SAN_RAFAEL/index.m3u8
@@ -3996,15 +3671,10 @@ https://5cbd3bc28341f.streamlock.net:444/fanotv_live/_definst_/43DA-3923-9C72-4E
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Fashion (1080p)
-http://stream.mcquack.net/288/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:45.740226+00:00
-
-Fashion&LifeStyle (1080p)
-http://stream.mcquack.net/119/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:21.743155+00:00
+Faros TV2 (480p)
+https://s1.cystream.net/live/faros2/playlist.m3u8
+restricted: HTTP 403
+last_success: 2026-11-11T10:00:45.013464+00:00
 
 FashionTV Europe
 https://fashiontv-fashiontv-3-it.samsung.wurl.com/manifest/playlist.m3u8
@@ -4030,11 +3700,6 @@ Fibwi (1080p)
 https://hostcdn3.fibwi.com/fibwi_diario/index.fmp4.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Fierro a Fondo TV (1080p)
-http://45.70.201.81:8000/play/a00x/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:10:57.142983+00:00
 
 Fight Network (1080p)
 https://d12a2vxqkkh1bo.cloudfront.net/hls/main.m3u8
@@ -4092,11 +3757,6 @@ restricted: HTTP 403
 last_success: unknown
 
 FILMBOX+ Emotion
-http://213.91.179.28:8000/play/a04r
-timeout: Request timed out
-last_success: 2026-11-10T15:19:01.453655+00:00
-
-FILMBOX+ Emotion
 https://onyx1.mofta1.cfd/fboye/usergendlg8sl1ks0tv7sr8n.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
@@ -4105,16 +3765,6 @@ FILMBOX+ Hits
 https://onyx1.mofta1.cfd/fboyp/usergendl2kx0ta67js9c.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-FILMBOX+ Love & Crime
-http://213.91.179.28:8000/play/a066
-timeout: Request timed out
-last_success: 2026-11-10T15:18:39.401240+00:00
-
-FILMBOX+ One
-http://213.91.179.28:8000/play/a06i
-timeout: Request timed out
-last_success: 2026-11-10T15:18:09.501011+00:00
 
 FILMBOX+ One
 http://46.149.191.219:9100/play/a015
@@ -4201,11 +3851,6 @@ http://flash.softhost.com.br:1935/fonte/fontetv/live.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Food Network (720p)
-http://212.5.144.156:8080/foodnetwork/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:18:21.568992+00:00
-
 Fora Tedio TV (720p)
 https://stmv2.srvif.com/foratedio/foratedio/playlist.m3u8
 http_error: HTTP 404
@@ -4230,11 +3875,6 @@ Fox Deportes (720p)
 http://23.237.104.106:8080/USA_FOX_DEPORTES/index.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Fox Life (576p)
-http://stream.mcquack.net/129/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:30.952517+00:00
 
 Fox Sports 1 (720p)
 https://tvsen7.aynascope.net/foxsports1/index.m3u8
@@ -4351,6 +3991,11 @@ https://fs.uplink.kz/bolshaya_pyatnica/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
+Frii
+https://live-fi.tvkaista.net/frii/live.m3u8?[redacted]
+http_error: HTTP 404
+last_success: 2026-11-11T10:07:54.461874+00:00
+
 Frikanalen
 https://frikanalen.no/stream/index.m3u8
 network_error: Connection or DNS/TLS failure
@@ -4409,7 +4054,7 @@ last_success: 2026-11-10T20:52:35.814698+00:00
 Galactica TV
 https://stream.neux.site/memfs/e3f59eec-6b93-45e1-a2ab-c82381c2a9ec.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:10:57.367673+00:00
+last_success: 2026-11-11T23:12:04.149566+00:00
 
 GarganoTv
 https://cdn80-ger.azotosolutions.com:8443/cdnedge3/smil:live3.smil/playlist.m3u8
@@ -4588,7 +4233,7 @@ last_success: unknown
 
 Global TV (1080p)
 https://cablered.iptvperu.tv:1936/cablered/global.stream/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 Globo TV (720p)
@@ -4628,7 +4273,7 @@ last_success: unknown
 
 Gold TV (576p)
 https://streaming.softwarecreation.it/GoldTv/GoldTv/playlist.m3u8
-timeout: Request timed out
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 Gold TV Sat (576p)
@@ -4740,16 +4385,6 @@ Habib TV
 https://ncdn.telewebion.ir/habib/live/playlist.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
-
-Hala London (1080p)
-https://halalondon-live.ercdn.net/halalondon/halalondon.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T21:06:11.859965+00:00
-
-Hallmark Mystery (720p)
-http://41.205.93.154/HALLMARK/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:13:33.765142+00:00
 
 Hamburg 1 (1080p)
 https://stream.hamburg1.de/live_abr/hamburg1_abr/playlist.m3u8
@@ -4877,11 +4512,6 @@ network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 History (720p)
-http://212.5.144.156:8080/history/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:17:48.408859+00:00
-
-History (720p)
 http://45.177.114.114/HISTORY/index.m3u8
 timeout: Request timed out
 last_success: unknown
@@ -4900,6 +4530,11 @@ History2 Ukraine (360p)
 http://dtv.vol.net.ua/H2-HD/index.m3u8
 http_error: HTTP 404
 last_success: unknown
+
+Hit (1080p)
+http://stream.mcquack.net/363/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:13:16.093968+00:00
 
 Hlektra
 https://live20.bozztv.com/giatv/giatv-hlektratv/hlektratv/playlist.m3u8
@@ -4959,11 +4594,6 @@ last_success: unknown
 HTR TV (720p)
 https://ms7.mx-cd.net/tv/286-3043214/HTR_Media_TV.smil/playlist.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-Huacho Peru TV
-https://tv.huachotv.com/stream.m3u8
-http_error: HTTP 530
 last_success: unknown
 
 Huelva TV (720p)
@@ -5086,11 +4716,6 @@ https://rcavlive.akamaized.net/hls/live/704026/canrdi/master.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-ICTV (1080p)
-http://stream.mcquack.net/158/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:44.851601+00:00
-
 Idea Plus
 https://rst.saiuzwebnetwork.it:19360/teleidea/teleidea.m3u8
 http_error: HTTP 404
@@ -5100,6 +4725,11 @@ Ideaal TV (480p)
 https://ms2.mx-cd.net/dtv-09/236-2051366/Ideaal_TV.smil/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
+
+ILTV (720p)
+https://live.creacast.com/iltv/smil:iltv.smil/playlist.m3u8
+restricted: HTTP 403
+last_success: 2026-11-11T10:06:45.836141+00:00
 
 Iman TV (480p)
 https://live.relentlessinnovations.net:1936/imantv/imantv/playlist.m3u8
@@ -5114,7 +4744,7 @@ last_success: unknown
 Indiyskoye Kino (576p)
 http://stream.mcquack.net/104/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:19.331968+00:00
+last_success: 2026-11-11T23:22:34.766641+00:00
 
 Indiyskoye Kino (576p)
 https://fs.uplink.kz/indiyskoe_kino/mono.m3u8?[redacted]
@@ -5141,11 +4771,6 @@ https://aprende-usea.streaming.media.azure.net/9317ea3f-03a0-4266-9292-ac97a0e41
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-InRating TV (1080p)
-http://stream.mcquack.net/147/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:43.926225+00:00
-
 Inside Crime (1080p)
 https://blaze-fast-inside-crime-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/blaze-fast-inside-crime-amagi/playlist.m3u8
 restricted: HTTP 403
@@ -5155,21 +4780,6 @@ Insula non stop (576i)
 https://live4dai.antenaplay.ro/live2_sdi05/live2_sdi05_600k.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Inter
-http://stream.mcquack.net/174/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:19:30.882491+00:00
-
-Inter (1080p)
-http://stream.mcquack.net/174/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:43.207381+00:00
-
-Investigation Discovery (1080p)
-http://212.5.144.156:8080/id/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:17:04.161612+00:00
 
 InWonder (1080p)
 https://amg00861-amg00861c14-rlaxx-uk-3954.playouts.now.amagi.tv/playlist.m3u8
@@ -5210,6 +4820,11 @@ IRIB 1
 https://ncdn.telewebion.ir/tv1/live/playlist.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
+
+IRIB 2
+https://ncdn.telewebion.ir/tv2/live/playlist.m3u8
+invalid: HLS manifest exceeds probe_bytes
+last_success: 2026-11-11T10:12:42.559715+00:00
 
 IRIB 3
 https://ncdn.telewebion.ir/tv3/live/playlist.m3u8
@@ -5291,11 +4906,6 @@ https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ki)/
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-IRR-TV
-https://irrtv2.digitacdn.net/live/ott/irrtv/playlist.m3u8?[redacted]
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:12:49.824252+00:00
-
 Islam Channel (576p)
 https://live.islamchannel.tv/live11/islamtv_english/bitrate1.isml/live.m3u8
 network_error: Connection or DNS/TLS failure
@@ -5356,11 +4966,6 @@ https://itftv-italianfishingtv-1-it.samsung.wurl.tv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Itel TV Canal 2
-https://proxystream.iteltv.com.ar/output/iteltv/playlist.m3u8
-http_error: HTTP 502
-last_success: 2026-11-10T15:07:53.264466+00:00
-
 ITV1
 http://45.14.84.37/itv1/index.m3u8
 timeout: Request timed out
@@ -5406,16 +5011,6 @@ http://158.160.149.81:8080/269/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-JimJam Europe (576p)
-http://stream.mcquack.net/150/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:20:09.480389+00:00
-
-JimJam Europe (720p)
-http://212.5.144.156:8080/jimjam/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:19:57.374960+00:00
-
 JN 19 (1080p)
 https://servilive.com:3028/live/jntv19live.m3u8
 timeout: Request timed out
@@ -5438,7 +5033,7 @@ last_success: unknown
 
 JOJ Cinema
 https://sktv.mxnticek.eu/new/stream.php?[redacted]
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
 
 Jovem Pan News (1080p)
@@ -5473,7 +5068,7 @@ last_success: unknown
 
 Justicia TV (1080p)
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/justicia.stream/playlist.m3u8
-http_error: HTTP 404
+restricted: HTTP 403
 last_success: unknown
 
 Juwelo (480p)
@@ -5491,20 +5086,10 @@ https://1853185335.rsc.cdn77.org/K192/tv/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-K2 (1080p)
-http://stream.mcquack.net/324/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:42.218148+00:00
-
 kabel eins Doku
 http://178.27.12.3:9981/stream/channelid/1958526590?[redacted]
 timeout: Request timed out
 last_success: unknown
-
-kabel eins Doku (720p)
-https://s6.hopslan.com/dokuX/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:18:55.391110+00:00
 
 Kalemeh TV
 https://kalemeh.tv/live/hls/gate.php?[redacted]
@@ -5637,11 +5222,6 @@ restricted: HTTP 403
 last_success: unknown
 
 KHL Prime (1080p)
-http://stream.mcquack.net/178/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-KHL Prime (1080p)
 https://fs.uplink.kz/khl_prime/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
@@ -5661,11 +5241,6 @@ https://kikahls.akamaized.net/hls/live/2022690/livetvkika_ww/master.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
 
-Kino 2 (1080p)
-http://stream.mcquack.net/465/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:41.363168+00:00
-
 Kino 24 (720p)
 http://sirius.greenhosting.ru/Kino24Ru/video.m3u8
 network_error: Connection or DNS/TLS failure
@@ -5676,25 +5251,20 @@ http://flussonic.linkintel.ru/kino-tv/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-KinoHit (576p)
-http://stream.mcquack.net/126/index.m3u8
+Kino TV (576p)
+http://stream.mcquack.net/221/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:31.084657+00:00
+last_success: 2026-11-11T23:22:33.268852+00:00
 
 KinoHit (576p)
 https://fs.uplink.kz/kinohit/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-KinoKazka (1080p)
-http://stream.mcquack.net/167/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:21.571474+00:00
-
 Kinokomedija (576p)
 http://stream.mcquack.net/265/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:16.921910+00:00
+last_success: 2026-11-11T23:22:32.665241+00:00
 
 Kinokomedija (576p)
 https://fs.uplink.kz/kinokomedia/mono.m3u8?[redacted]
@@ -5710,11 +5280,6 @@ Kinomix (576p)
 https://fs.uplink.kz/kinomix/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
-
-Kinopokaz (576p)
-http://stream.mcquack.net/64/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:10.942430+00:00
 
 Kinopremyera (1080p)
 http://5.188.159.128:8070/KINOPREMIERA/index.m3u8
@@ -5747,11 +5312,6 @@ restricted: HTTP 403
 last_success: unknown
 
 Kinouzhas (576p)
-http://stream.mcquack.net/278/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-Kinouzhas (576p)
 https://fs.uplink.kz/kinouzhas/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
@@ -5781,15 +5341,10 @@ https://live-radio-cf-vrt.akamaized.net/groupb/live/eee20dc8-158a-4194-8d92-0c5a
 http_error: HTTP 400
 last_success: unknown
 
-Komedia (576p)
-http://stream.mcquack.net/68/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:10.179445+00:00
-
 Komediynoe (1080p)
 http://stream.mcquack.net/74/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:14.820186+00:00
+last_success: 2026-11-11T23:22:30.714396+00:00
 
 Komlos TV
 https://stream.streaming4u.hu/KomlosTV/tracks-v1a1/mono.m3u8
@@ -5799,7 +5354,7 @@ last_success: unknown
 Kora TV
 https://s3.tvdatta.com:3700/live/jjrtvlive.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:10:57.911251+00:00
+last_success: 2026-11-11T23:12:12.501348+00:00
 
 KpopTV Play (576p)
 https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
@@ -5830,11 +5385,6 @@ Kuban 24
 https://ok.ru/video/4157442498242
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
-
-Kuhnya (576p)
-http://stream.mcquack.net/179/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:30.266014+00:00
 
 Kunskapskanalen
 https://svt-live-channel.akamaized.net/l6/se/svtk/manifest.mpd?[redacted]
@@ -5878,7 +5428,7 @@ last_success: unknown
 
 L1 Max
 https://cablered.iptvperu.tv:1936/cablered/liga1max.stream/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 La 1
@@ -5941,11 +5491,6 @@ https://rtv-murcia-live.globalmest.com/principal/smil:principal.smil/playlist.m3
 restricted: HTTP 403
 last_success: unknown
 
-La Comarca TV (720p)
-https://v2.tustreaming.cl/lcomarcatv/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:20:01.932778+00:00
-
 La Hermandad Salsera (1080p)
 https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8
 http_error: HTTP 404
@@ -5960,6 +5505,11 @@ La Nacion +
 https://www.youtube.com/c/LaNacionMas/live
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
+
+La Nuova Tv
+https://5dcabf026b188.streamlock.net/lanuovatvbas/livestream/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:01:11.101436+00:00
 
 La Que Buena Atlanta
 https://streamyes.alsolnet.com/quebuenaatlanta/live/index.m3u8
@@ -5983,7 +5533,7 @@ last_success: unknown
 
 La Tele (1080p)
 https://cablered.iptvperu.tv:1936/cablered/la_tele.stream/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 La Trois
@@ -6020,11 +5570,6 @@ LabbaykTV
 https://ncdn.telewebion.ir/labbayk/live/playlist.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
-
-labor14 (720p)
-https://5acade5fc0c29.streamlock.net/OKGera/tmbz_live_high.stream/playlist.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:09:09.094552+00:00
 
 Laboral TV (360p)
 https://tv.laboralsst.com.br/hls/stream.m3u8
@@ -6078,7 +5623,7 @@ last_success: unknown
 
 Latina
 https://cablered.iptvperu.tv:1936/cablered/latina_new/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 Lazio Style Channel (720p)
@@ -6185,11 +5730,6 @@ Leman Bleu (1080p)
 http://livevideo.infomaniak.com/streaming/livecast/naxoo/playlist.m3u8
 restricted: HTTP 403
 last_success: 2026-11-10T20:34:38.481033+00:00
-
-Lepanto
-https://fr.crystalweb.net:1936/lepantotv/lepantotv/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:14:13.912966+00:00
 
 Lider TV (720p)
 https://cdn-tiva-video08-logicahost-com-br.smartbit.co/lidertvssp/lidertvssp/playlist.m3u8
@@ -6341,11 +5881,6 @@ https://thor.mental-media.gr:19360/imp/imp.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-M1
-http://stream.mcquack.net/218/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:41:04.497777+00:00
-
 M1 (1080p)
 http://dtv.vol.net.ua/M1-HD/index.m3u8
 http_error: HTTP 404
@@ -6386,15 +5921,10 @@ https://streaming.magentamusik.de/csm/573870/magentamusik1/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Maincast Cybersport (1080p)
-http://stream.mcquack.net/487/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:48.929314+00:00
-
 Maincast Sport (1080p)
 http://stream.mcquack.net/490/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:38.089347+00:00
+last_success: 2026-11-11T23:21:52.886321+00:00
 
 MAK TV
 https://mcdn.antennaplus.gr/live/media0/MAK/HLS/MAK.m3u8
@@ -6405,11 +5935,6 @@ Mama (576p)
 http://flussonic.linkintel.ru/mama/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Mama (576p)
-http://stream.mcquack.net/79/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:14.068812+00:00
 
 Mango (1080p)
 https://lb2.pluscdn.pl/ch/1580235/3496/hls/a149fc4b/masterlist.m3u8
@@ -6436,24 +5961,14 @@ https://streaming.televizor-24-tochka.ru/live/6.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Match! Arena (576p)
-http://stream.mcquack.net/163/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:13.919269+00:00
-
-Match! Boets (576p)
-http://stream.mcquack.net/112/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-Match! Igra (576p)
-http://stream.mcquack.net/188/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:13.319338+00:00
-
 Match! Planeta
 http://212.0.211.102:9999/play/a00b/index.m3u8
-network_error: Connection or DNS/TLS failure
+timeout: Request timed out
+last_success: unknown
+
+Match! Planeta (576p)
+http://s1.merlive.am/matchplaneta/index.m3u8
+timeout: Request timed out
 last_success: unknown
 
 Match! Planeta (576p)
@@ -6564,7 +6079,7 @@ last_success: unknown
 Media TV (720p)
 https://live-evg5.tv360.bitel.com.pe/bitel/mediatv/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:19:38.033784+00:00
+last_success: 2026-11-11T23:20:02.268656+00:00
 
 Mediaset Extra
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
@@ -6626,6 +6141,11 @@ http://5.188.159.128:8070/megogo_sport/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
+Meltem TV (1080p)
+https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:02:49.212422+00:00
+
 Mesogeios TV
 https://rtmp.win:3793/live/mesogeiostvlive.m3u8
 http_error: HTTP 500
@@ -6634,7 +6154,7 @@ last_success: unknown
 Metropolitana del Cuzco
 https://video1.earthcam.com/myearthcam/075ff02f78c35af55564cf3af3b3f750.flv/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:10:58.441349+00:00
+last_success: 2026-11-11T23:12:05.066137+00:00
 
 MeTV Toons
 https://sr-live-weigel1.akamaized.net/out/v1/0d1dbf29e64e47bc991796cc24fbeb97/index_2.m3u8
@@ -6668,7 +6188,7 @@ last_success: unknown
 
 Minimax
 http://141.94.193.53:80/Minimax/index.m3u8
-http_error: HTTP 404
+timeout: Request timed out
 last_success: unknown
 
 Mir (540p)
@@ -6709,12 +6229,12 @@ last_success: unknown
 MISA TV
 https://vidl.youniverse.name:5050/MSTV/czech_360p/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:39:06.755070+00:00
+last_success: 2026-11-11T23:15:43.878148+00:00
 
 MISA TV
 https://vidl.youniverse.name:5050/MSTV/hungarian_360p/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T20:36:36.592173+00:00
+last_success: 2026-11-11T23:12:26.779477+00:00
 
 Misto+ (360p)
 http://93.78.206.172:8080/stream3/stream.m3u8
@@ -6823,7 +6343,7 @@ last_success: unknown
 
 Moselle TV (720p)
 https://live.creacast.com/mirabelletv/smil:mirabelletv.smil/playlist.m3u8
-http_error: HTTP 404
+restricted: HTTP 403
 last_success: unknown
 
 Mosfilm Gold Collection (576p)
@@ -6931,19 +6451,9 @@ https://fs.uplink.kz/mult/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-Mult i muzyka (576p)
-http://stream.mcquack.net/82/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:07.695893+00:00
-
 Multilandia (576p)
 https://fs.uplink.kz/multilandia/mono.m3u8?[redacted]
 restricted: HTTP 403
-last_success: unknown
-
-Music TV Granada (1080p)
-https://cloudvideo.servers10.com:8081/8032/index.m3u8
-http_error: HTTP 404
 last_success: unknown
 
 MusicTop (1080p)
@@ -6960,11 +6470,6 @@ Muz-TV (576p)
 http://46.32.176.50/muztv/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Muz-TV (576p)
-http://stream.mcquack.net/86/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:35.278739+00:00
 
 Muz-TV (576p)
 https://fs.uplink.kz/muz_tv/mono.m3u8?[redacted]
@@ -7019,17 +6524,7 @@ last_success: unknown
 Nasha Tema (1080p)
 https://fonbet.mediacdn.ru/live/nashatema/playlist.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:39:16.624419+00:00
-
-Nashe Lubimoe Kino Ukraine (1080p)
-http://stream.mcquack.net/456/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:36.277679+00:00
-
-Nashe muzhskoe (1080p)
-http://stream.mcquack.net/362/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
+last_success: 2026-11-11T23:15:54.453484+00:00
 
 National Geographic
 http://82.47.42.44/stream/405/index.m3u8
@@ -7038,7 +6533,7 @@ last_success: unknown
 
 National Geographic
 https://nord.ayakkabiparti.lol/natgeo/index.m3u8
-timeout: Request timed out
+invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 National Geographic (1080p)
@@ -7062,11 +6557,6 @@ network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 National Geographic (576p)
-http://stream.mcquack.net/116/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:10.906913+00:00
-
-National Geographic (576p)
 https://fs.uplink.kz/nat_geo/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
@@ -7075,11 +6565,6 @@ National Geographic (720p)
 http://198.58.104.90:8989/natgeo/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-National Geographic (720p)
-http://212.5.144.156:8080/natgeo/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:16:07.220935+00:00
 
 National Geographic (720p)
 https://live-fi.tvkaista.net/national-geographic/live.m3u8?[redacted]
@@ -7093,12 +6578,12 @@ last_success: unknown
 
 National Geographic Wild
 http://92.114.85.87:8010/play/a005/index.m3u8
-http_error: HTTP 404
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 National Geographic Wild
 https://nord.ayakkabiparti.lol/natgeowild/index.m3u8
-timeout: Request timed out
+invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 National Geographic Wild (1080p)
@@ -7146,11 +6631,6 @@ https://shls-live-ak.akamaized.net/out/v1/b06a89a463764d3688cda337d40dc5bf/index
 http_error: HTTP 404
 last_success: unknown
 
-Nauka (576p)
-http://stream.mcquack.net/403/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:35.801297+00:00
-
 Nayarit Comunica (1080p)
 https://live.iplanay.gob.mx/hls/nayarittv.m3u8
 http_error: HTTP 404
@@ -7160,11 +6640,6 @@ NBA TV (720p)
 http://198.58.104.90:8989/nba/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-NBA TV (720p)
-http://rezofoot.tv/NBATV/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:15:05.817945+00:00
 
 NBC (1080p)
 http://stream.cammonitorplus.net/1785/index.m3u8
@@ -7201,16 +6676,6 @@ https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Nelonen
-https://live-fi.tvkaista.net/nelonen/live.m3u8?[redacted]
-http_error: HTTP 404
-last_success: 2026-11-10T15:20:19.881932+00:00
-
-Nelonen (720p)
-https://live-fi.tvkaista.net/nelonen/live.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:20:49.113285+00:00
-
 Neo TV (720p)
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/DigitalTV/playlist.m3u8
 http_error: HTTP 404
@@ -7243,7 +6708,7 @@ last_success: unknown
 
 News12 Bronx (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/index_new.m3u8?[redacted]
-http_error: HTTP 404
+http_error: HTTP 408
 last_success: unknown
 
 News12 Brooklyn (720p)
@@ -7253,18 +6718,13 @@ last_success: unknown
 
 News12 Conneticut
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12CH_FFLD_MILF_A1/index_new.m3u8?[redacted]
-http_error: HTTP 404
-last_success: 2026-11-10T20:40:58.163205+00:00
-
-News12 Hudson Valley (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?[redacted]
 http_error: HTTP 408
-last_success: 2026-11-10T20:52:05.883864+00:00
+last_success: 2026-11-11T23:18:34.675751+00:00
 
-News12 Long Island (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8?[redacted]
+News12 New Jersey (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/index_new.m3u8?[redacted]
 http_error: HTTP 408
-last_success: 2026-11-10T15:16:30.892781+00:00
+last_success: 2026-11-11T10:06:16.833799+00:00
 
 News12 Westchester (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?[redacted]
@@ -7273,17 +6733,17 @@ last_success: 2026-11-10T21:06:33.555206+00:00
 
 News12+ Connecticut (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
-http_error: HTTP 404
+http_error: HTTP 408
 last_success: unknown
 
 News12+ Hudson Valley (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_WC_A1/index_new.m3u8
-http_error: HTTP 404
+http_error: HTTP 408
 last_success: 2026-11-10T20:55:07.677555+00:00
 
 News12+ Long Island (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_LI_A1/index_new.m3u8
-http_error: HTTP 404
+http_error: HTTP 408
 last_success: unknown
 
 News12+ New Jersey (1080p)
@@ -7293,7 +6753,7 @@ last_success: unknown
 
 News12+ New York (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_NYC_A1/index_new.m3u8
-http_error: HTTP 404
+http_error: HTTP 408
 last_success: unknown
 
 News24 (1080p)
@@ -7331,21 +6791,6 @@ http://198.58.104.90:8989/nfl/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-NG Federal
-https://617c5175c970b.streamlock.net:4444/tvlink/live/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:13:27.129481+00:00
-
-NG Federal (720p)
-http://www.coninfo.net:1935/tvlink/live/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:13:26.716531+00:00
-
-Nick Jr. (720p)
-http://212.5.144.156:8080/nickjr/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T20:50:25.559146+00:00
-
 Nick Jr. (720p)
 http://tvsen7.aynascope.net/nickjr/index.m3u8
 http_error: HTTP 404
@@ -7379,11 +6824,6 @@ last_success: unknown
 Nickelodeon
 https://unilivemtveu-lh.akamaihd.net/i/nickde_1@448749/master.m3u8
 restricted: HTTP 403
-last_success: unknown
-
-Nickelodeon (576p)
-http://stream.mcquack.net/443/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 Nickelodeon (576p)
@@ -7441,45 +6881,15 @@ https://pe-ak-lp04a-9c9media.akamaized.net/live/NOOVO/p/dash/00000001/f481c583db
 http_error: HTTP 400
 last_success: unknown
 
-Norte TV (720p)
-https://ntvcanal7.com.ar:81/dash/stream.mpd
-http_error: HTTP 404
-last_success: unknown
-
-Nova Action
-https://sktv.mxnticek.eu/new/stream.php?[redacted]
-timeout: Request timed out
-last_success: 2026-11-10T15:20:02.592672+00:00
-
-Nova Cinema
-https://sktv.mxnticek.eu/new/stream.php?[redacted]
-timeout: Request timed out
-last_success: 2026-11-10T15:20:21.009414+00:00
-
-Nova Gold
-https://sktv.mxnticek.eu/new/stream.php?[redacted]
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:19:40.790859+00:00
-
 NOVO19 (1080p)
 http://149.62.177.107:9999/NOVO19/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Novyi Channel (1080p)
-http://stream.mcquack.net/157/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:45.191822+00:00
-
 Now 90s00s (576p)
 https://web-primeprimetv2026.onrender.com/playlist.m3u8
 http_error: HTTP 503
 last_success: unknown
-
-NowMedia Television (1080p)
-https://stream-204968.castr.net/64e0c91d08bff3041638aee3/live_a4243540d4b911f0b624bda5e9a32aa9/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:15:06.159465+00:00
 
 NPC Radio e TV (720p)
 https://stmv5.samcast.com.br/nasciparacantartv/nasciparacantartv/playlist.m3u8
@@ -7586,20 +6996,10 @@ https://59e88b197fb16.streamlock.net:4443/live/canal4/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
 
-NTD TV (1080p)
-https://ntd02.akamaized.net/HD-NY/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:08:10.063790+00:00
-
 NTN (720p)
 https://stream4.xdevel.com/video0s975955-782/stream/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-NTN24 (720p)
-http://181.78.12.119:16123/play/ch80/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:19:17.306349+00:00
 
 NTV
 http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/223012
@@ -7626,15 +7026,15 @@ http://45.153.24.78/NTV/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
+NTV (576p)
+https://cdn.ntv.ru/ntv-spb/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:05:54.380407+00:00
+
 NTV Mir (576p)
 http://5.188.159.128:8070/ntvmir_TV/index.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-NTV Series (576p)
-http://stream.mcquack.net/301/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:26.494691+00:00
 
 Nuevo Tiempo (720p)
 https://stream.live.novotempo.com/tv/smil:tvnuevotiempo.smil/playlist.m3u8
@@ -7661,11 +7061,6 @@ https://reflect-stream-bronxnet.cablecast.tv/live-10/live/live.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-O! (576p)
-http://stream.mcquack.net/60/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 OAN Plus
 https://2-fss-2.streamhoster.com/pl_118/206858-4404458-1/playlist.m3u8
 http_error: HTTP 404
@@ -7685,11 +7080,6 @@ Odeon 24 (288p)
 https://streaming.softwarecreation.it/Odeon/Odeon/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Odisea TV (720p)
-https://v2.tustreaming.cl/odiseatv/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:19:53.015315+00:00
 
 oe24.TV
 https://oe24.mdn.ors.at/live/eds/oe24tv_hd/hls_nodrm/oe24tv_hd-nodrm.m3u8
@@ -7931,11 +7321,6 @@ https://tab.parlament.hu:446/edgelive/smil:mkogytab.smil/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Ostrosyuzhetnoye (1080p)
-http://stream.mcquack.net/214/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:23.852260+00:00
-
 OTR
 https://streaming.televizor-24-tochka.ru/live/12.m3u8
 restricted: HTTP 403
@@ -8076,20 +7461,10 @@ https://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Peretz International (576p)
-http://stream.mcquack.net/121/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 Pershiy XTV Media (576p)
 https://hls.xtvmedia.pp.ua:8443/hls/trk1tv.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Pershyi avtomobilnyi (1080p)
-http://stream.mcquack.net/404/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:31.183439+00:00
 
 Persiana Latino
 https://latinohls.persiana.live/hls/stream.m3u8
@@ -8170,16 +7545,6 @@ Play TV (720p)
 http://45.177.114.115/PLAY_TV/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-PLUSPLUS
-http://stream.mcquack.net/339/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:39:43.676537+00:00
-
-PLUSPLUS (1080p)
-http://stream.mcquack.net/339/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:28.925481+00:00
 
 Polsat (1080p)
 https://cdn-s-playnow-live.pluscdn.pl/ch/1502600/308/dash/20a18c30/live.mpd
@@ -8286,11 +7651,6 @@ http://5940924978228.streamlock.net:1935/8009/8009/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Positiv TV (636p)
-http://trn03.bozztv.com/gin-positiv/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:12:39.059539+00:00
-
 Positiv TV (720p)
 https://cdn.jwplayer.com/v2/sites/fGLyccP5/media/FoWynVnP/ssai.m3u8?[redacted]
 http_error: HTTP 400
@@ -8321,6 +7681,11 @@ https://pravdatytkievshina.cdn-02.cosmonova.net.ua/hls/pravdatytkievshina_ua.m3u
 timeout: Request timed out
 last_success: unknown
 
+Premialnoe (1080p)
+http://stream.mcquack.net/421/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:13:30.004511+00:00
+
 Press TV
 https://cdnlive.presstv.ir/cdnlive/smil:cdnlive.smil/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -8331,20 +7696,20 @@ https://live4.presstv.ir/live/smil:presstvfr.smil/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Priklyucheniya (1080p)
-http://stream.mcquack.net/198/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:03.454268+00:00
+Prima 4K
+http://92.180.26.103/stream/80/index.m3u8
+http_error: HTTP 404
+last_success: unknown
 
-Prima Max
+Prima Free (720p)
+https://5f22d76e220e1.streamlock.net/primafree/primafree/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:11:52.854234+00:00
+
+Prima Krimi
 https://sktv.mxnticek.eu/new/stream.php?[redacted]
-http_error: HTTP 404
-last_success: unknown
-
-Prima TV (720p)
-https://5db313b643fd8.streamlock.net/PrimaTV/PrimaTV/playlist.m3u8
-http_error: HTTP 404
-last_success: unknown
+timeout: Request timed out
+last_success: 2026-11-11T10:09:32.358257+00:00
 
 Primantenna Torino
 https://5f22d76e220e1.streamlock.net/primantenna14/primantenna14/playlist.m3u8
@@ -8375,11 +7740,6 @@ ProSieben Maxx (360p)
 https://lb.iptvnetwork.net/ls28/10828/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-ProSieben Maxx (576p)
-https://s6.hopslan.com/pro7maxxX/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:18:32.310888+00:00
 
 PTL TV Network (1080p)
 https://storage.sardius.media/archives/-KyMV-J0vDqnClcSXs8p/events/site_1a4721d3BA/playlist.m3u8
@@ -8576,6 +7936,11 @@ https://radiomaria.inovanex.stream/stream.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
+Radio Napoli Emme
+http://rtmp.streams.ovh:1935/radionapoliemme/radionapoliemme/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:04:00.343150+00:00
+
 Radio Radicale TV (240p) [Not 24/7]
 https://video-ar.radioradicale.it/diretta/padtv2/playlist.m3u8
 http_error: HTTP 404
@@ -8629,7 +7994,7 @@ last_success: unknown
 Radio Uno Tacna (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/radiounotv/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:19:35.512659+00:00
+last_success: 2026-11-11T23:20:00.701715+00:00
 
 Radio Via Libre (720p)
 https://live20.bozztv.com/akamaissh101/ssh101/vialibretv/playlist.m3u8
@@ -8716,11 +8081,6 @@ https://58c04fb1d143f.streamlock.net/rararadio/rararadio/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-RAZ 2 (1080p)
-http://stream.mcquack.net/464/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:10:28.835701+00:00
-
 Razavi TV
 https://ncdn.telewebion.ir/razavi/live/playlist.m3u8
 invalid: HLS manifest exceeds probe_bytes
@@ -8790,11 +8150,6 @@ RDE Tv
 https://rst2.saiuzwebnetwork.it:8081/rdetrieste/index.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Real Madrid TV (1080p)
-http://90.163.85.113:8093/stream/26/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:14:09.752184+00:00
 
 Really
 http://37.49.224.5/stream/36/index.m3u8
@@ -8906,11 +8261,6 @@ https://media2.cdntvms.com.br/tv_morena_dorados/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Rede Gospel (1080p)
-https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:52:17.153885+00:00
-
 Rede Gospel (720p)
 http://45.177.114.115/REDE_GOSPEL/index.m3u8
 timeout: Request timed out
@@ -8923,7 +8273,7 @@ last_success: unknown
 
 Rede Minas (1080p)
 https://v4-slbps-sambavideos.akamaized.net/[redacted]
-timeout: Request timed out
+http_error: HTTP 504
 last_success: unknown
 
 Rede NGT (720p)
@@ -8945,11 +8295,6 @@ Rede TV! (720p)
 https://hls.brasilstream.com.br/live/redetv/redetv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Rede TV! Mais (720p)
-https://cdn.live.br1.jmvstream.com/webtv/AVJ-15235/playlist/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:16:28.948504+00:00
 
 Rede Vida (576p)
 https://cdn-5.nxplay.com.br/REDE_VIDA/index.m3u8
@@ -9002,11 +8347,6 @@ timeout: Request timed out
 last_success: unknown
 
 REN TV (576p)
-http://31.148.5.241/kanal_11/index.m3u8
-network_error: Connection interrupted
-last_success: 2026-11-10T15:19:57.475991+00:00
-
-REN TV (576p)
 http://flussonic.linkintel.ru/ren_tv/index.m3u8
 timeout: Request timed out
 last_success: unknown
@@ -9035,16 +8375,6 @@ Reteveneta (480p)
 https://59d7d6f47d7fc.streamlock.net/reteveneta/reteveneta/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-Retro (576p)
-http://stream.mcquack.net/191/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-Retro Cartoon (720p)
-https://stmv1.video.brstream.com.br/retrotv/retrotv/chunklist_w1069200121.m3u8
-network_error: Connection or DNS/TLS failure
-last_success: 2026-11-10T15:08:20.864943+00:00
 
 Retro Music TV (360p)
 http://89.185.253.55/retrotv/retrotvHQ1/playlist.m3u8
@@ -9116,15 +8446,15 @@ http://145.239.5.177/333/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-RN Television (720p)
-https://videoserver.tmcreativos.com:19360/rnyurimaguas/rnyurimaguas.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:17:41.833892+00:00
-
 Rockland TV (480p)
 https://live.creacast.com/rockland-radio/smil:rockland-radio.smil/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
+
+Rodnoe Kino (576p)
+http://stream.mcquack.net/242/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:13:04.495754+00:00
 
 Roma Tv 82
 https://streaming.softwarecreation.it/RomaCH71/RomaCH71/playlist.m3u8
@@ -9160,11 +8490,6 @@ RT (1080p)
 http://31.148.48.15/RT_HD/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-RT (720p)
-http://212.5.144.156:8080/rt/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:20:05.624031+00:00
 
 RT Arabic
 https://rt-arb.rttv.com/dvr/rtarab/playlist.m3u8
@@ -9216,11 +8541,6 @@ http://etvhosts.site:55337/live/littlespiked/cam1gail2brian3/20641.m3u8
 restricted: HTTP 401
 last_success: unknown
 
-RTG int.
-http://213.91.179.28:8000/play/a0bw
-timeout: Request timed out
-last_success: 2026-11-10T15:17:31.393850+00:00
-
 RTH-TV2 Gospel (720p)
 https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4202592/playlist.m3u8
 http_error: HTTP 404
@@ -9231,21 +8551,6 @@ https://stream.ets-sistemi.it:8081/rticalabria/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-RTL Super (576p)
-https://s6.hopslan.com/superX/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:18:01.478979+00:00
-
-RTL Zwei (576p)
-https://s6.hopslan.com/rtl2q/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:17:20.934953+00:00
-
-RTLup (576p)
-https://s6.hopslan.com/rtltupz/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:07:59.665007+00:00
-
 RTM+ (720p)
 https://www.rtmplus.cz/live/1-playlist.m3u8
 timeout: Request timed out
@@ -9254,7 +8559,7 @@ last_success: unknown
 RTP (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/rtp/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:18:44.974389+00:00
+last_success: 2026-11-11T23:19:16.888115+00:00
 
 RTP 1
 https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8
@@ -9271,29 +8576,14 @@ https://streaming-live.rtp.pt/liverepeater/smil:rtpacoresHD.smil/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-RTP Acores (720p)
-https://streaming-live.rtp.pt/liverepeater/smil:rtpacoresHD.smil/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:20:21.662065+00:00
-
 RTP Madeira
 https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-RTP Madeira (504p)
-https://streaming-live.rtp.pt/liverepeater/smil:rtpmadeira.smil/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 RTP Memoria
 https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/playlist.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-RTP Memoria (504p)
-https://streaming-live.rtp.pt/liverepeater/smil:rtpmem.smil/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 RTP Mundo
@@ -9305,11 +8595,6 @@ RTP Noticias
 https://streaming-live.rtp.pt/liverepeater/smil:rtpnHD.smil/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
-
-RTP Noticias (720p)
-https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:11:16.476168+00:00
 
 RTP3
 https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/playlist.m3u8?[redacted]
@@ -9371,11 +8656,6 @@ https://593aed234297b.streamlock.net/rtvnof2/live/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-RTV Nuble (1080p)
-https://tv.arkeo.cl:1936/canalrtv/canalrtv/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:08:42.958025+00:00
-
 RTV Parkstad (1080p)
 https://live.streamteam.eu:8443/parkstad/parkstad/tv/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -9391,25 +8671,10 @@ https://s70378.cdn.ngenix.net/rtvi/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-RU.TV (576p)
-http://stream.mcquack.net/109/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:02.476353+00:00
-
 RU.TV Kids (720p)
 https://rutvkids.ru/live/efir/index.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Russia-1 (576p)
-http://109.207.243.18/2/index.m3u8
-network_error: Connection interrupted
-last_success: 2026-11-10T15:11:28.021103+00:00
-
-Russia-1 (576p)
-http://31.148.5.241/kanal_2/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:19:37.114214+00:00
 
 Russia-24 (1080p)
 http://77.232.131.211/Rossiya24/index.m3u8
@@ -9439,17 +8704,12 @@ last_success: unknown
 Russkiy Bestseller (576p)
 http://stream.mcquack.net/208/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
+last_success: 2026-11-11T23:22:23.426436+00:00
 
 Russkiy Detektiv (576p)
 http://stream.mcquack.net/204/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-Russkiy roman (576p)
-http://stream.mcquack.net/266/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:01.880248+00:00
+last_success: 2026-11-11T23:22:51.127145+00:00
 
 RZD TV (1080p)
 http://hls.tva.cdnvideo.ru/tva/tvahd.sdp/playlist.m3u8
@@ -9495,11 +8755,6 @@ Salsa Gorda Television (1080p)
 https://live20.bozztv.com/akamaissh101/ssh101/qMUAZEy/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Salt TV (1080p)
-http://stream.mcquack.net/398/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:24.598901+00:00
 
 Salto 4 (720p)
 https://salto-streams.nl/hls/sotv2.m3u8
@@ -9666,11 +8921,6 @@ https://stv-live.akamaized.net/hls/live/2031011/lingeoSTVATwebPri/master.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-ServusTV (576p)
-https://s6.hopslan.com/servuz1/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:19:27.613092+00:00
-
 SESC TV (1080p)
 https://slbps-ml-sambatech.akamaized.net/samba-live/2472/7424/8a00fe7cc36ac263b2c3e9324497d5ff/video/93a9920d-1b24-4c5e-a7d2-63d5489f59b5_index.m3u8
 http_error: HTTP 400
@@ -9688,7 +8938,7 @@ last_success: unknown
 
 Setanta Sports 1
 http://158.101.222.193:88/georgia_play.php?[redacted]
-network_error: Connection or DNS/TLS failure
+timeout: Request timed out
 last_success: unknown
 
 Setanta Sports 2
@@ -9726,6 +8976,11 @@ https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playl
 http_error: HTTP 404
 last_success: unknown
 
+Shanson TV (512p)
+http://hls.shansontv.cdnvideo.ru/shansontv/shansontv.sdp/playlist.m3u8
+restricted: HTTP 403
+last_success: 2026-11-11T10:02:40.023126+00:00
+
 Shanson TV (576p)
 https://fs.uplink.kz/shanson/mono.m3u8?[redacted]
 restricted: HTTP 403
@@ -9754,7 +9009,7 @@ last_success: unknown
 Shokiruyushchee (1080p)
 http://stream.mcquack.net/75/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:22.909500+00:00
+last_success: 2026-11-11T23:22:22.680804+00:00
 
 Shop LC (576p)
 https://tvsen3.aynaott.com/zZ6EndAn/index.m3u8
@@ -9811,11 +9066,6 @@ https://stream9.xdevel.com/video0s976441-1226/stream/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Sikh Spiritual Centre Rexdale (720p)
-https://cdn12.henico.net:8443/live/ssct/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:08:34.226725+00:00
-
 Simaye Azadi (1080p)
 https://simaytv.akamaized.net/hls/live/2043550/simayhls/index.m3u8
 restricted: HTTP 403
@@ -9831,6 +9081,11 @@ https://cdn.streammy.events/siris/playout/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
 
+Skoraya pomoshch (1080p)
+https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T10:02:19.471354+00:00
+
 Sky News
 https://linear021-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynews)/index_mob.m3u8
 restricted: HTTP 403
@@ -9838,7 +9093,7 @@ last_success: unknown
 
 Sky News Australia
 https://i.mjh.nz/sky-news-now.m3u8
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 Sky News International
@@ -9896,39 +9151,9 @@ http://37.49.224.5/stream/52/index.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-Sky Sport F1
-http://45.142.104.86/stream/49/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
-Sky Sport Golf
-http://45.142.104.86/stream/54/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
-Sky Sport Mix
-http://45.142.104.86/stream/51/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
-Sky Sport News
-http://45.142.104.86/stream/47/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
 Sky Sport Select
 http://37.49.224.5/stream/53/index.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-Sky Sport Tennis
-http://45.142.104.86/stream/53/index.m3u8
-timeout: Request timed out
-last_success: unknown
-
-Sky Sport Top Event
-http://45.142.104.86/stream/48/index.m3u8
-timeout: Request timed out
 last_success: unknown
 
 Sky TG24 Ⓖ
@@ -9979,7 +9204,7 @@ last_success: unknown
 Solar Television (720p)
 https://live-evg11.tv360.bitel.com.pe/bitel/solartvSRT/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:20:14.092949+00:00
+last_success: 2026-11-11T23:20:33.504311+00:00
 
 Solidaria TV (720p)
 https://canadaremar2.todostreaming.es/live/solidariatv-webhd.m3u8
@@ -10071,26 +9296,6 @@ https://budapest-cache-1.antik.sk/live/spirit_fm/index.m3u8
 http_error: HTTP 404
 last_success: 2026-11-10T15:14:10.772137+00:00
 
-Sport 1 (576p)
-http://stream.mcquack.net/391/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:21.915244+00:00
-
-Sport 1 Baltic (1080p)
-http://stream.mcquack.net/461/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:20.483414+00:00
-
-Sport 2 (1080p)
-http://stream.mcquack.net/392/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:32.608625+00:00
-
-Sport 5 (1080p)
-http://stream.mcquack.net/212/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 Sport TV+
 http://znty.dyndns.org:5010/hls/sportv+.m3u8
 timeout: Request timed out
@@ -10133,7 +9338,7 @@ last_success: unknown
 
 Sportitalia 24 (720p)
 https://di-yx2saj20.vo.lswcdn.net/sportitalia/smil:silive24.smil/playlist.m3u8
-http_error: HTTP 404
+restricted: HTTP 403
 last_success: unknown
 
 Sportitalia Motori (720p)
@@ -10493,7 +9698,7 @@ last_success: unknown
 
 Szlagier TV
 http://92.114.85.87:8010/play/a00l/index.m3u8
-network_error: Connection or DNS/TLS failure
+http_error: HTTP 404
 last_success: unknown
 
 T+E (720p)
@@ -10546,35 +9751,15 @@ https://livecdn.use1-0004.jwplive.com/live/sites/Yal8cmyO/media/fCGf6ROk/live.is
 http_error: HTTP 404
 last_success: unknown
 
-TBN (720p)
-http://212.5.144.156:8080/tbn/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:11:27.249427+00:00
-
 TBN Inspire (1080p)
 https://livecdn.use1-0004.jwplive.com/live/sites/Yal8cmyO/media/yfFI83Xz/live.isml/.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-TBS (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:19:08.260611+00:00
-
 Tci
 https://tbn-jw.cdn.vustreams.com/live/tci/live.isml/2b7d53c5-b504-4d26-b25f-a70deb8d0faf.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-TCM (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023186/tcmeast/noslate/VIDEO_1_5128000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:18:23.729762+00:00
-
-TCM (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023187/tcmwest/noslate/VIDEO_1_5128000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:17:51.845682+00:00
 
 Teatro TV (720p)
 https://m.iostream.it/hls/teatrotv/teatrotv.m3u8
@@ -10588,7 +9773,7 @@ last_success: unknown
 
 TeenNick
 http://92.114.85.87:8010/play/a009/index.m3u8
-http_error: HTTP 404
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 TeenNick (432p)
@@ -10605,11 +9790,6 @@ TELE 4 Ojocaliente (720p)
 https://stream.oursnetworktv.com/latin/encoder53/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-TELE 5 (576p)
-https://s6.hopslan.com/tele5X/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:16:26.885124+00:00
 
 Tele A
 https://lostream.it/hls/telea/video.m3u8
@@ -10631,20 +9811,10 @@ https://www.theclubfactory.com/streaming/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Tele Cupole
-https://load-balancer.azotosolutions.com/cdnedge40/telecupole/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:10:12.934937+00:00
-
 Tele Estense
 https://5e73cf528f404.streamlock.net/TeleEstense/livestream/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Tele Jonio
-http://59d7d6f47d7fc.streamlock.net/telejonio/telejonio/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:16:52.766515+00:00
 
 Tele Liberta' HD
 https://streaming.liberta.it/hls/liberta.m3u8
@@ -10699,7 +9869,7 @@ last_success: unknown
 Tele Posadas (576p)
 https://iptv.ixfo.com.ar:30443/live/TelePosadasTv/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:07:51.186115+00:00
+last_success: 2026-11-11T23:08:56.112937+00:00
 
 Tele Posadas (576p)
 https://lbgo.bozztv.com/giatv/giatv-teleposadastv/teleposadastv/playlist.m3u8
@@ -10769,7 +9939,7 @@ last_success: unknown
 Tele UV
 https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:10:37.057164+00:00
+last_success: 2026-11-11T23:11:44.942865+00:00
 
 Tele Venezia
 https://59d7d6f47d7fc.streamlock.net/televenezia/televenezia/playlist.m3u8
@@ -10809,6 +9979,11 @@ last_success: unknown
 TeleBilbao (384p)
 https://tbilbo.dyndns.org/hls/stream.m3u8
 timeout: Request timed out
+last_success: unknown
+
+Telecafe (1080p)
+http://s1.merlive.am/telekafe/index.m3u8
+http_error: HTTP 404
 last_success: unknown
 
 Telecafe (1080p)
@@ -10863,11 +10038,6 @@ last_success: 2026-11-10T15:10:11.582654+00:00
 
 TeleCostaSmeralda
 https://7e1cc2454f2242afabe05cc0a2f483cd.msvdn.net/tcs_live/tcs/tcs/playlist.m3u8
-network_error: Connection or DNS/TLS failure
-last_success: unknown
-
-Telecyan (720p)
-https://live20.bozztv.com/giatvplayout7/giatv-211227/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
@@ -10968,7 +10138,7 @@ last_success: unknown
 
 Telenord (1080p)
 http://www.coninfo.net:1935/previsoratv/live/playlist.m3u8
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 Telenord (576p)
@@ -10978,23 +10148,13 @@ last_success: unknown
 
 Telenord (720p)
 https://617c5175c970b.streamlock.net:4444/previsoratv/live/playlist.m3u8
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 Teleonuba (1080p)
 https://5d8d85cf2c308.streamlock.net:1936/Teleonuba/endirecto/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Telepacifico (1080p)
-https://play.cdn.enetres.net/6E5C615AA5FF4123ACAF0DAB57B7B8DC021/022/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:16:37.891118+00:00
-
-Telepacifico (1080p)
-https://play.cdn.enetres.net/6E5C615AA5FF4123ACAF0DAB57B7B8DC021/040/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:15:33.205233+00:00
 
 Telepavia (720p)
 http://wms.shared.streamshow.it/telepavia/mp4:telepavia/playlist.m3u8
@@ -11126,10 +10286,10 @@ https://televsesvit.cdn-04.cosmonova.net.ua/hls/televsesvit_ua_hi/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Telewizja Luban (720p)
-http://stream.herissons.cloud/hls/tvluban.m3u8
+Telewizja Jaslo (720p)
+https://cdn01.aztv.pl/live_tvjaslo/live_tvjaslo.stream/playlist.m3u8
 http_error: HTTP 404
-last_success: unknown
+last_success: 2026-11-11T10:02:02.264902+00:00
 
 TeleZuri (720p)
 https://klive.kaltura.com/env/cluster-1-d.live.nvp1/live/hls/p/1719221/e/1_se36k3uk/tl/main/st/0/t/d4y_3ZXUos_JzAX3LwBI3w/index-s32.m3u8
@@ -11159,7 +10319,7 @@ last_success: unknown
 TET (1080p)
 http://stream.mcquack.net/338/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:20:47.285795+00:00
+last_success: 2026-11-11T23:21:05.976094+00:00
 
 TF1
 http://151.80.18.177:86/TF1_HD/index.m3u8
@@ -11256,11 +10416,6 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01486-tickernews-tickernewsweb-ono/
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-ticker News (1080p)
-https://live-hls-7agy.livepush.io/live_abr_cdn/nsitWAl1pTZtwca/emnmZbKZcO8RfwJR/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:08:04.478536+00:00
-
 Tide TV (1080p)
 https://5889e7d0d6e28.streamlock.net/tide-live/_definst_/smil:livestream.smil/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -11277,24 +10432,24 @@ timeout: Request timed out
 last_success: unknown
 
 TiJi (576p)
+http://s1.merlive.am/TiJi/index.m3u8
+http_error: HTTP 404
+last_success: unknown
+
+TiJi (576p)
 https://live-3.otcnet.ru/Tiji/index.m3u8
 http_error: HTTP 404
 last_success: unknown
+
+TikTok Radio Brasil (1080p)
+https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?[redacted]
+http_error: HTTP 400
+last_success: 2026-11-11T10:04:41.184189+00:00
 
 Timeless Dizi Channel
 https://atlantida1.aquax1.cfd/dizy/usergendlk0tas9c.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-Tin TV (720p)
-https://bozztv.com/1gbw5/tintv/tintv/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:10:03.797113+00:00
-
-Tin TV (720p)
-https://tulixcdn.akamaized.net/tintv6/tintv/tintv/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:12:43.213582+00:00
 
 Tiny Pop (576p)
 http://92.114.85.72:8000/play/a08g
@@ -11333,18 +10488,8 @@ last_success: unknown
 
 Tlaxcala TV (360p)
 https://vid26.mega00.com:5443/live/streams/qNmc7nulmq8zPYZE1582752735050.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:10:37.470792+00:00
-
-TLC (1080p)
-http://stream.mcquack.net/168/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:01.128741+00:00
-
-TLC (576p)
-https://s6.hopslan.com/tlcX/index.m3u8
 timeout: Request timed out
-last_success: 2026-11-10T15:15:19.133541+00:00
+last_success: 2026-11-10T15:10:37.470792+00:00
 
 Tlnovelas Latin America (1080p)
 http://209.14.115.253:8081/TELENOVELAS/index.m3u8
@@ -11381,21 +10526,6 @@ http://flussonic.linkintel.ru/tnt/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-TNT (576p)
-http://stream.mcquack.net/135/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:03.874148+00:00
-
-TNT (720p)
-http://212.5.144.156/tnt/index.m3u8
-restricted: HTTP 403
-last_success: 2026-11-10T15:12:28.795623+00:00
-
-TNT (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:16:13.757176+00:00
-
 TNT International (480p)
 http://91.228.35.249:8001/1:0:1:6a7:3138:13e:820000:0:0:0:
 network_error: Connection or DNS/TLS failure
@@ -11410,11 +10540,6 @@ TNT Novelas
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/tntnovelas.stream/chunks.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-TNT Novelas (1080p)
-http://158.172.155.130:8000/play/a0at/index.m3u8
-network_error: Connection or DNS/TLS failure
-last_success: 2026-11-10T15:07:49.046218+00:00
 
 TNT Series Latin America
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/TNTseries.stream/chunks.m3u8
@@ -11470,11 +10595,6 @@ Tochka otryva (576p)
 https://fs.uplink.kz/tochka_otriva/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
-
-Tochka RF (1080p)
-http://stream.mcquack.net/161/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:22:03.291446+00:00
 
 Together TV
 http://92.114.85.72:8000/play/a0j8
@@ -11536,11 +10656,6 @@ http://77.232.131.211/TravelAdventureHD/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-Travel+Adventure (1080p)
-http://stream.mcquack.net/206/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:05.410491+00:00
-
 Tremedia Tv
 https://stream4.xdevel.com/video0s976062-1263/stream/playlist_dvr.m3u8
 restricted: HTTP 403
@@ -11573,12 +10688,12 @@ last_success: unknown
 
 TRT 1
 https://tv-trt1.medya.trt.com.tr/master.m3u8
-invalid: HLS manifest exceeds probe_bytes
+invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 TRT 2
 https://tv-trt2.medya.trt.com.tr/master.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
+invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
 
 TRT 3 (720p)
@@ -11606,20 +10721,10 @@ https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
 
-TRT EBA Ilkokul
-https://tv-e-okul00.medya.trt.com.tr/master.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 TRT EBA Lise
 https://tv-e-okul02.medya.trt.com.tr/master.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
-
-TRT Genc (1440p)
-https://tv-trtgenc.medya.trt.com.tr/master.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:11:52.826149+00:00
 
 TRT Spor
 https://tv-trtspor1.medya.trt.com.tr/master.m3u8
@@ -11640,16 +10745,6 @@ TRT World
 https://www.youtube.com/channel/UC7fWeaHhqgM4Ry-RMpM2YYw/live
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
-
-truTV (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023176/trueast/slate/VIDEO_0_3564000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:15:00.903099+00:00
-
-truTV (720p)
-https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:12:22.317718+00:00
 
 TSN TeleSondrio News (480p)
 http://wms.shared.streamshow.it/tsn/tsn_mobile/playlist.m3u8
@@ -11711,11 +10806,6 @@ https://fs.uplink.kz/tvxxi/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-TV 21 International (576p)
-http://stream.mcquack.net/152/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:22.822701+00:00
-
 TV 3 Curitiba (720p)
 https://stmv.webtvninjas.com.br/tv3/tv3/playlist.m3u8
 restricted: HTTP 403
@@ -11741,11 +10831,6 @@ https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-TV A Critica (1080p)
-https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:03:11.521315+00:00
-
 TV A Folha (720p)
 https://video01.logicahost.com.br/tvafolha/tvafolha/playlist.m3u8
 http_error: HTTP 404
@@ -11755,11 +10840,6 @@ TV Adorar (720p)
 https://cdn-tiva-isaocorp-cloudecast-com.smartbit.co/tvadorar/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
-
-TV Aparecida (1080p)
-https://cdn.jmvstream.com/w/LVW-9716/LVW9716_HbtQtezcaw/playlist.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:38:14.935415+00:00
 
 TV Aparecida (720p)
 http://45.177.114.115/TV_APARECIDA_HD/index.m3u8
@@ -11778,7 +10858,7 @@ last_success: unknown
 
 TV Bergueda (1080p)
 https://liveingesta318.cdnmedia.tv/berguedatvlive/smil:migracion.smil/playlist.m3u8?[redacted]
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 TV Birigui (320p)
@@ -11851,11 +10931,6 @@ http://flussonic.linkintel.ru/tvc/index.m3u8
 timeout: Request timed out
 last_success: unknown
 
-TV Centr (576p)
-https://fs.uplink.kz/tvc/mono.m3u8?[redacted]
-http_error: HTTP 404
-last_success: 2026-11-10T15:20:22.163769+00:00
-
 TV Chile
 https://mdstrm.com/live-stream-playlist/533adcc949386ce765657d7c.m3u8
 restricted: HTTP 403
@@ -11865,11 +10940,6 @@ TV Cidade de Petropolis (1080p)
 https://video01.kshost.com.br:4443/inside2133/inside2133/playlist.m3u8
 timeout: Request timed out
 last_success: unknown
-
-TV Costa Brava (1080p)
-https://liveingesta318.cdnmedia.tv/costabravatvlive/smil:live.smil/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:16:37.418933+00:00
 
 TV Cuatro 4.1 (1080p)
 https://5ca3e84a76d30.streamlock.net/tv4gto/tv4gto.smil/.m3u8
@@ -11928,7 +10998,7 @@ last_success: unknown
 
 TV Diario Macapa (1080p)
 https://5ad482a77183d.streamlock.net/marliomelohotmail.com/marliomelohotmail.com/playlist.m3u8
-http_error: HTTP 404
+restricted: HTTP 403
 last_success: unknown
 
 TV Difusora Leste (1080p)
@@ -12041,11 +11111,6 @@ https://tvlocales-live.freecaster.com/tvlux/95d2f632-0780-4ac1-9895-9e50212dd3b6
 restricted: HTTP 403
 last_success: unknown
 
-TV Lux (504p)
-https://dlgt0tdl2hpq3.cloudfront.net/rtbf/clr-rtbf/764748cd/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:08:09.991252+00:00
-
 TV Mackenzie (480p)
 https://player.internetaovivo.com:8443/live_tvmackenzieabr/tvmackenzieabr/playlist.m3u8
 timeout: Request timed out
@@ -12054,7 +11119,7 @@ last_success: unknown
 TV MAR (720p)
 https://live-evg11.tv360.bitel.com.pe/bitel/tvmarSRT/playlist.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:19:07.023046+00:00
+last_success: 2026-11-11T23:19:36.350245+00:00
 
 TV Meio (720p)
 https://cdn-tiva-maystreaming-cloudecast-com.smartbit.co/redemeio/index.m3u8
@@ -12075,11 +11140,6 @@ TV Noe+ (720p)
 https://n105.quickmedia.tv/noetvplus/live/noetvplus/Shz3_1_1/chunks_dvr_timeshift-0-7200.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
-
-TV Nova
-https://sktv.mxnticek.eu/new/stream.php?[redacted]
-timeout: Request timed out
-last_success: 2026-11-10T15:20:29.609995+00:00
 
 TV Okazje (1080p)
 https://lb2-e3-20.pluscdn.pl/ch/1523532/366/dash/2cf383bb/live.mpd
@@ -12103,7 +11163,7 @@ last_success: unknown
 
 TV Peru
 https://cablered.iptvperu.tv:1936/cablered/tvperu_new/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 TV Peru (1080p)
@@ -12138,7 +11198,7 @@ last_success: unknown
 
 TV Ripolles (1080p)
 https://liveingesta318.cdnmedia.tv/tvripolleslive/smil:live.smil/playlist.m3u8?[redacted]
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 TV Rivera
@@ -12236,11 +11296,6 @@ https://streaming.televizor-24-tochka.ru/live/18.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-TV-3 (1080p)
-http://stream.mcquack.net/136/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:44:00.474154+00:00
-
 TV-3 (576p)
 http://flussonic.linkintel.ru/tv-3/index.m3u8
 timeout: Request timed out
@@ -12250,11 +11305,6 @@ TV-4 (720p)
 https://vs2126.vcdn.biz/c27a63fda28be51f87a7d0046de1f4b8_megogo/live/hls/b/700_2490/u_sid/0/o/71044361/rsid/393818da-edd4-44bd-b2db-4ebf226abd3d/u_uid/0/u_vod/1/u_device/cms_webandroid/u_devicekey/_site_mobile/lip/5.63.189.224*asn/u_did/web_0voqy4czLIxD4iwJZ0z0GctEMa9GIH7A/type.live/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-TV1000 Russian Kino Global
-http://213.91.179.28:8000/play/a0bx
-timeout: Request timed out
-last_success: 2026-11-10T15:16:43.012053+00:00
 
 TV3 (1080p)
 https://directes-tv-cat.3catdirectes.cat/live-origin/tv3-hls/master.m3u8
@@ -12352,11 +11402,6 @@ timeout: Request timed out
 last_success: unknown
 
 TV5Monde Europe (1080p)
-https://ert-ucdn.broadpeak-aas.com/bpk-tv/TV5/default/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:19:56.045520+00:00
-
-TV5Monde Europe (1080p)
 https://ott.tv5monde.com/Content/HLS/Live/channel(europe)/variant.m3u8
 restricted: HTTP 403
 last_success: unknown
@@ -12365,6 +11410,11 @@ TV5Monde Info
 https://ott.tv5monde.com/Content/HLS/Live/channel(info)/index.m3u8
 restricted: HTTP 403
 last_success: unknown
+
+TV5Monde Info (1080p)
+http://91.235.255.32:8001/1:0:1:2CA:14B4:13E:820000:0:0:0
+timeout: Request timed out
+last_success: 2026-11-11T10:00:10.929037+00:00
 
 TV5Monde Info (1080p)
 https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
@@ -12463,7 +11513,7 @@ last_success: unknown
 
 TVC Super
 http://92.114.85.87:8010/play/a00n/index.m3u8
-http_error: HTTP 404
+network_error: Connection or DNS/TLS failure
 last_success: 2026-11-10T15:16:02.372548+00:00
 
 TVC-Rio
@@ -12499,17 +11549,17 @@ last_success: unknown
 TVenLinea (1080p)
 https://srt.tvdatta.com/tvenlinea/index.m3u8
 http_error: HTTP 404
-last_success: 2026-11-10T15:11:00.902858+00:00
+last_success: 2026-11-11T23:12:07.005859+00:00
+
+TVGracia
+https://vs20.live.opencaster.com/diego_57244803/index.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:06:20.606121+00:00
 
 TVI
 http://zntx.dyndns.org:8085/hls/tvi.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Tviy serial (1080p)
-http://stream.mcquack.net/466/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:54:16.901174+00:00
 
 TVK (576p)
 https://air.tvk6.ru/tvk24/playlist.m3u8
@@ -12576,6 +11626,11 @@ http://38.44.109.41:8003/play/a0gz/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
+TVNBN (720p)
+https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: 2026-11-11T09:58:55.198538+00:00
+
 TVNET (1080p)
 https://tvnet-live.lg.mncdn.com/tvnet/tvnet/playlist.m3u8
 http_error: HTTP 404
@@ -12631,19 +11686,19 @@ http://wms.shared.streamshow.it:1935/tvrs/tvrs/live.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-TVRUS
-http://213.91.179.28:8000/play/a082
-timeout: Request timed out
-last_success: 2026-11-10T15:19:43.150460+00:00
-
 TVRUS+
 http://83.228.75.166:8000/play/a0aq
 timeout: Request timed out
 last_success: unknown
 
+TVRUS+ (576p)
+http://91.235.255.32:8001/1:0:1:6AC:3138:13E:820000:0:0:0
+timeout: Request timed out
+last_success: 2026-11-11T10:05:09.267731+00:00
+
 TVS
 http://92.114.85.87:8010/play/a00e/index.m3u8
-http_error: HTTP 404
+network_error: Connection or DNS/TLS failure
 last_success: unknown
 
 TVS Film Noir Network (720p)
@@ -12696,11 +11751,6 @@ https://live03-col.msf.cdn.mediaset.net/live/ch-ts/ts-clr.isml/manifest.mpd
 restricted: HTTP 403
 last_success: unknown
 
-TyC Sports USA
-http://45.170.130.224:8000/play/a020/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:15:18.468564+00:00
-
 TZiK
 https://54627d4fc5996.streamlock.net/tzik/tzik/chunklist.m3u8
 timeout: Request timed out
@@ -12736,11 +11786,6 @@ https://5ca3e84a76d30.streamlock.net/uacj/videouacj/playlist.m3u8
 http_error: HTTP 404
 last_success: unknown
 
-UATV (1080p)
-https://unlimited1-us.dps.live/uatv/uatv.smil/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:17:18.936117+00:00
-
 UChile TV
 https://unlimited1-us.dps.live/uchiletv/uchiletv.smil/playlist.m3u8
 restricted: HTTP 403
@@ -12754,11 +11799,6 @@ last_success: unknown
 UDAR (1080p)
 http://5.188.159.128:8070/udar/index.m3u8
 http_error: HTTP 404
-last_success: unknown
-
-UDAR (1080p)
-http://stream.mcquack.net/279/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 UDG TV (720p)
@@ -12776,29 +11816,14 @@ https://diretta.teleterni.it:8080//show/show.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-UNIAN Serial (1080p)
-http://stream.mcquack.net/341/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:53:51.078202+00:00
-
 Unison TV (1080p)
 https://stream.unison.mx/hls/unisontvatem.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Unisul TV (720p)
-https://sitetv.brasilstream.com.br/hls/sitetv/index.m3u8?[redacted]
-http_error: HTTP 404
-last_success: 2026-11-10T15:08:29.132486+00:00
-
 UniTV Porto Alegre (480p)
 http://unitvaovivo.ufrgs.br:8080/live.ogg
 timeout: Request timed out
-last_success: unknown
-
-Univers TV (720p)
-https://cloud2.streaminglivehd.com:1936/universfaller/universfaller/playlist.m3u8
-http_error: HTTP 404
 last_success: unknown
 
 Universal Comedy (1080p)
@@ -12846,6 +11871,11 @@ https://vgtrkregion-reg.cdnvideo.ru/vgtrk/chelyabinsk/ural24-hd/index.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
+Uranio TV (720p)
+https://live-evg8.tv360.bitel.com.pe/bitel/uranioyurimaguasSRT/playlist.m3u8
+http_error: HTTP 404
+last_success: 2026-11-11T10:05:15.702757+00:00
+
 Urbana TeVe
 https://www.youtube.com/channel/UCTnbbQUGmWEKeCq9wWoyN0g/live
 invalid: Empty, HTML/JSON or unrecognized stream response
@@ -12860,11 +11890,6 @@ USA Network Latin America (1080p)
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/SYFY.stream/playlist.m3u8
 restricted: HTTP 403
 last_success: unknown
-
-Usadba (576p)
-http://stream.mcquack.net/211/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:07.318220+00:00
 
 USMPTV
 https://streamusmptv.ddns.net/live/stream.m3u8
@@ -12881,11 +11906,6 @@ https://fs.uplink.kz/v_gostyah_u_skazki/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-V mire zhivotnykh (1080p)
-http://stream.mcquack.net/241/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
 Vallenato Internacional (720p)
 https://59a564764e2b6.streamlock.net/vallenato/vallenatom/playlist.m3u8
 network_error: Connection or DNS/TLS failure
@@ -12893,7 +11913,7 @@ last_success: unknown
 
 Valles Visio (1080p)
 https://liveingesta318.cdnmedia.tv/vallesvisiotvlive/smil:live.smil/playlist.m3u8
-timeout: Request timed out
+http_error: HTTP 404
 last_success: unknown
 
 Vastmanlands TV
@@ -12909,11 +11929,6 @@ last_success: unknown
 Vedia (1080p)
 https://tvlocales-live.freecaster.com/vedia/95d2f480-b0b0-4027-9f4a-057183312305/95d2f480-b0b0-4027-9f4a-057183312305.isml/master.m3u8
 restricted: HTTP 403
-last_success: unknown
-
-Velayat TV
-https://ncdn.telewebion.ir/velayat/live/playlist.m3u8
-invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
 
 Velvet. European Movies (1080p)
@@ -12981,16 +11996,6 @@ https://lb.iptvnetwork.net/ls28/10011/playlist.m3u8
 network_error: Connection or DNS/TLS failure
 last_success: unknown
 
-Via X (576p)
-http://45.170.130.224:8000/play/a025/index.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:13:30.263883+00:00
-
-ViaMatele (1080p)
-https://5dd226f8f01e8.streamlock.net/via-matele-live/matelelive_1080/playlist.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:09:48.249779+00:00
-
 ViaOccitanie (540p)
 https://streamer01.myvideoplace.tv/streamer02/hls/MDS_VIA_PAD_301117.m3u8
 network_error: Connection or DNS/TLS failure
@@ -13013,7 +12018,7 @@ last_success: unknown
 
 Viasat History (720p)
 https://nord.ayakkabiparti.lol/viasathistory/index.m3u8
-timeout: Request timed out
+invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
 
 Viasat Kino (576p)
@@ -13025,6 +12030,11 @@ Viasat Kino Action (576p)
 http://dtv.vol.net.ua/Viasat_Kino_Action_HD/index.m3u8
 http_error: HTTP 404
 last_success: unknown
+
+Viasat True Crime
+http://92.114.85.87:8010/play/a00a/index.m3u8
+network_error: Connection or DNS/TLS failure
+last_success: 2026-11-11T10:01:56.597267+00:00
 
 Vida Nueva TV
 https://mc.servidor.stream:19360/8240/8240.m3u8
@@ -13072,19 +12082,9 @@ restricted: HTTP 403
 last_success: unknown
 
 viju TV1000 (576p)
-http://stream.mcquack.net/110/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:19.021792+00:00
-
-viju TV1000 (576p)
 https://fs.uplink.kz/viju_tv1000/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
-
-viju TV1000 action (576p)
-http://stream.mcquack.net/100/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T21:12:00.225950+00:00
 
 viju TV1000 action (576p)
 https://fs.uplink.kz/viju_tv1000_action/mono.m3u8?[redacted]
@@ -13096,25 +12096,10 @@ https://fs.uplink.kz/viju_tv1000_russkoe/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-viju+ Comedy (1080p)
-http://stream.mcquack.net/201/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T15:21:57.212694+00:00
-
 viju+ Megahit (1080p)
 http://stream.mcquack.net/200/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-viju+ Planet (1080p)
-http://stream.mcquack.net/240/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:14.287895+00:00
-
-viju+ Premiere (1080p)
-http://stream.mcquack.net/202/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:57.224684+00:00
+last_success: 2026-11-11T23:22:12.449633+00:00
 
 viju+ Sport (576p)
 https://fs.uplink.kz/viju_sport/mono.m3u8?[redacted]
@@ -13128,7 +12113,7 @@ last_success: unknown
 
 Vision Sur (1080p)
 https://ott1.hdlatam.tv/live_abr/webtvVisionSur/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 VIVA Russia
@@ -13186,16 +12171,6 @@ http://138.121.113.175:8000/play/a04r/index.m3u8
 restricted: HTTP 403
 last_success: unknown
 
-Voxup (576p)
-https://s6.hopslan.com/voxupz/index.m3u8
-timeout: Request timed out
-last_success: 2026-11-10T15:13:31.302447+00:00
-
-Vremya (576p)
-http://stream.mcquack.net/237/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:56:12.075797+00:00
-
 Vremya (576p)
 https://fs.uplink.kz/vremya/mono.m3u8?[redacted]
 restricted: HTTP 403
@@ -13233,7 +12208,7 @@ last_success: unknown
 
 VTV Mor (360p)
 https://cloudfront44.lexanetwork.com:1344/freerelay/morvtv.sdp/playlist.m3u8
-timeout: Request timed out
+invalid: HLS playlist has no playable variants or segments
 last_success: unknown
 
 Vuemme Tv
@@ -13283,7 +12258,7 @@ last_success: unknown
 
 WEST (1080p)
 https://cablered.iptvperu.tv:1936/cablered/west/playlist.m3u8
-restricted: HTTP 403
+timeout: Request timed out
 last_success: unknown
 
 Willamette Falls Media Center
@@ -13431,11 +12406,6 @@ https://yletvworld.akamaized.net/hls/live/622540/yletv1w/index.m3u8
 invalid: HLS manifest exceeds probe_bytes
 last_success: unknown
 
-Yle TV1 (720p)
-https://live-fi.tvkaista.net/yle-tv1/live.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:20:37.450098+00:00
-
 Yle TV2
 https://yletv.akamaized.net/hls/live/622366/yletv2fin/index.m3u8
 restricted: HTTP 403
@@ -13460,11 +12430,6 @@ YourTime TV
 https://hls.yourtime.live/hls/stream.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
 last_success: unknown
-
-Yurivision (720p)
-https://live-evg5.tv360.bitel.com.pe/bitel/yurivisionSRT/playlist.m3u8
-http_error: HTTP 404
-last_success: 2026-11-10T15:11:02.139858+00:00
 
 Yvii Tv
 https://stream.wired-shop.com/hls/yviitv.m3u8
@@ -13546,11 +12511,6 @@ https://fs.uplink.kz/zhara/mono.m3u8?[redacted]
 restricted: HTTP 403
 last_success: unknown
 
-Zhivaya priroda (1080p)
-http://stream.mcquack.net/83/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:43:55.848951+00:00
-
 Zhivi! (576p)
 https://fs.uplink.kz/zhivi/mono.m3u8?[redacted]
 http_error: HTTP 404
@@ -13560,11 +12520,6 @@ Zoom (1080p)
 http://200.122.223.13:55000/play/zoom-banda-ku/index.m3u8
 timeout: Request timed out
 last_success: unknown
-
-Zoom (1080p)
-http://stream.mcquack.net/327/index.m3u8
-invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: 2026-11-10T20:42:49.114911+00:00
 
 Zoom News (720p)
 https://live.zoomnews.info/live/Zoom_playlist.m3u8

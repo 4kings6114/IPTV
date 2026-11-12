@@ -37,8 +37,6 @@ https://eslahtvhls.wns.live/hls/stream.m3u8
 https://ncdn.telewebion.ir/fars/live/playlist.m3u8
 #EXTINF:-1 tvg-id="FX1.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",FX 1
 https://fxtvhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="FX2.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",FX 2
-https://toonixhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="GanjeHozourTV.us@SD" tvg-logo="https://i.imgur.com/TnQYtKh.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Ganj e Hozour TV (1080p)
 https://media.parvizshahbazi.com/ganjehozour/Main_tv/playlist.m3u8
 #EXTINF:-1 tvg-id="GolkhaneTv.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/686599d8-c1ee-4557-aa72-b1293a21906d/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Golkhane Tv
@@ -121,6 +119,8 @@ https://hls.tamadon.live/hls/stream.m3u8
 https://hls.nejat.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD" tvg-logo="https://i.imgur.com/U4sKHWy.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",TV ITN
 https://itnhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="VelayatTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/ae05de5b-9fe4-4012-900a-4d0763d6fafc/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Velayat TV
+https://ncdn.telewebion.ir/velayat/live/playlist.m3u8
 #EXTINF:-1 tvg-id="VelayatTVNetwork.us@SD" tvg-logo="https://i.imgur.com/bRQSzhs.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Velayat TV Network (480p)
 https://nl.livekadeh.com/hls2/velayattv.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="VoATVPersian.us@SD" tvg-logo="https://i.imgur.com/TmqComb.png" tvg-country="us" tvg-language="fa",VOA Persian (1080p)
@@ -151,8 +151,6 @@ https://gcinemahls.wns.live/hls/stream.m3u8
 https://live.presstv.co.uk/hls/ifilm2.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="iFilmPersian.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b9/IFILM.png" tvg-country="ir" tvg-language="fa",iFilm Persian
 https://live.presstv.co.uk/hls/ifilmfa.m3u8
-#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-name="IRIB TV2" tvg-logo="https://i.imgur.com/FKiTd3O.png" tvg-id="IRIB2.ir" tvg-chno="2" tvg-country="ir"  tvg-language="fa",IRIB TV2
-https://ncdn.telewebion.ir/tv2/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MetaFilmTV.ir@SD" tvg-logo="" group-title="فارسی - فیلم و سریال" tvg-country="ir" tvg-language="fa",Meta Film TV
 https://metafilmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="OXIRTV.ir@SD" tvg-logo="https://i.imgur.com/MGMhUDx.png" tvg-country="ir" tvg-language="fa",OXIR TV
