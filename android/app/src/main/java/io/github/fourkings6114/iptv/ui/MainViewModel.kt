@@ -231,6 +231,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
     }
     fun showLogos(show: Boolean) { viewModelScope.launch { app.settings.showLogos(show) } }
     fun automaticPictureInPicture(allow: Boolean) { viewModelScope.launch { app.settings.automaticPictureInPicture(allow) } }
+    fun themeStyle(style: String) { viewModelScope.launch { app.settings.themeStyle(style) } }
     fun allowHttp(allow: Boolean, onDone: () -> Unit = {}) {
         viewModelScope.launch {
             app.settings.allowHttp(allow)

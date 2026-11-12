@@ -221,6 +221,7 @@ class SourceManagementTest {
 
     private fun addLink(title: String, url: String) {
         ui.onNodeWithText("تنظیمات").performClick()
+        ui.onNodeWithText("لیست‌های پخش").performClick()
         ui.onNodeWithText("افزودن لینک").performScrollTo().performClick()
         ui.onNodeWithText("نام فهرست").performTextInput(title)
         ui.onNodeWithText("لینک HTTP / HTTPS").performTextInput(url)
@@ -229,7 +230,7 @@ class SourceManagementTest {
     }
     private fun openManager() {
         ui.onNodeWithText("تنظیمات").performClick()
-        ui.onNodeWithText("مدیریت فهرست‌ها").performScrollTo().performClick()
+        ui.onNodeWithText("لیست‌های پخش").performClick()
     }
     private fun awaitSource(title: String): SourceEntity {
         await { dao.observeSources().first().any { it.title == title } }

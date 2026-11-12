@@ -76,7 +76,7 @@ class StabilityTest {
             ui.onNodeWithText("کانال‌ها").performClick()
             repeat(7) {
                 ui.onNodeWithText("تنظیمات").performClick()
-                ui.onNodeWithText("منبع و حریم خصوصی").assertIsDisplayed()
+                ui.onNodeWithText("لیست‌های پخش").assertIsDisplayed()
                 ui.onNodeWithText("کانال‌ها").performClick()
                 SystemClock.sleep(10_000)
             }
@@ -181,6 +181,7 @@ class StabilityTest {
             }
             ui.onNodeWithText("بستن").performClick()
             ui.onNodeWithText("تنظیمات").performClick()
+            ui.onNodeWithText("تنظیمات اضافی").performClick()
             ui.onNodeWithText("مشاهده و کپی گزارش کرش").performScrollTo().performClick()
             ui.onNodeWithText("گزارش اشکال برنامه").assertIsDisplayed()
             ui.onNodeWithText("بستن").performClick()
@@ -189,8 +190,10 @@ class StabilityTest {
                 ui.onAllNodesWithText("مشاهده و کپی گزارش کرش").fetchSemanticsNodes(atLeastOneRootRequired = false).isEmpty()
             }
             assertNull(app.crashReports.read())
+            ui.onNodeWithText("تنظیمات اضافی").performScrollTo().performClick()
             scenario.recreate()
-            awaitText("منبع و حریم خصوصی")
+            awaitText("تنظیمات اضافی")
+            ui.onNodeWithText("تنظیمات اضافی").performScrollTo().performClick()
             ui.onNodeWithText("گزارش اشکال برنامه").assertDoesNotExist()
         }
     }
