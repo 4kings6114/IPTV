@@ -149,6 +149,7 @@ class EpgGuideTest {
                 assertFalse(bytes.contains(token))
                 assertFalse(bytes.contains("DO_NOT_STORE_DESCRIPTION"))
                 ui.onNodeWithText("تنظیمات").performClick()
+                expandEpgSettings()
                 ui.onNodeWithText("تنظیم لینک XMLTV").performScrollTo().performClick()
                 ui.onNodeWithText("حذف لینک و راهنما").performScrollTo().performClick()
                 await { app.settings.state.value.epgUrl.isBlank() && app.settings.epgUrlFor(first).isBlank() }
@@ -205,6 +206,7 @@ class EpgGuideTest {
                 runBlocking { app.settings.allowHttp(true); app.settings.state.first { it.allowHttp } }
                 mode.set("slow")
                 ui.onNodeWithText("تنظیمات").performClick()
+                expandEpgSettings()
                 ui.onNodeWithText("دریافت راهنما").performScrollTo().assertIsEnabled().performClick()
                 awaitEpg(scenario, "Explicit slow guide refresh did not reach the loopback server") { requests.size > beforeHttp }
                 ui.onNodeWithText("لغو دریافت راهنما").performScrollTo().performClick()
@@ -221,11 +223,20 @@ class EpgGuideTest {
 
     private fun saveUrl(url: String) {
         ui.onNodeWithText("تنظیمات").performClick()
+        expandEpgSettings()
         ui.onNodeWithText("تنظیم لینک XMLTV").performScrollTo().performClick()
         ui.onNodeWithText("لینک XMLTV (HTTP / HTTPS)").performTextReplacement(url)
         ui.onNodeWithText("ذخیره لینک").performClick()
         awaitText("دریافت راهنما")
     }
+    private fun expandEpgSettings() {
+        val configuredControls = ui.onAllNodesWithText("تنظیم لینک XMLTV")
+            .fetchSemanticsNodes(atLeastOneRootRequired = false)
+        if (configuredControls.isEmpty()) {
+            ui.onNodeWithText("راهنمای برنامه‌ها").performScrollTo().performClick()
+        }
+    }
+
     private fun awaitError(scenario: ActivityScenario<MainActivity>, contains: String) {
         var error: String? = null
         ui.waitUntil(20_000) { scenario.onActivity { error = model(it).epgError.value }; error?.contains(contains) == true }

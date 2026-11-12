@@ -18,6 +18,23 @@ import org.robolectric.annotation.Config
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [33], application = Application::class)
 class SettingsStoreTest {
+    @Test fun graphiteThemeDefaultsAndThemeChoicePersists() = runBlocking {
+        assertEquals(DEFAULT_THEME_STYLE, AppSettings().themeStyle)
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        try {
+            val store = SettingsStore(ApplicationProvider.getApplicationContext<Application>(), scope)
+            withTimeout(20_000) {
+                store.state.first { it.loaded }
+                assertEquals(DEFAULT_THEME_STYLE, store.state.value.themeStyle)
+                store.themeStyle("plum")
+                assertEquals("plum", store.state.first { it.themeStyle == "plum" }.themeStyle)
+                store.themeStyle("not-a-real-theme")
+                assertEquals("plum", store.state.first().themeStyle)
+                assertEquals("plum", SettingsStore(ApplicationProvider.getApplicationContext<Application>(), scope).state.first { it.loaded }.themeStyle)
+            }
+        } finally { scope.cancel() }
+    }
+
     @Test fun automaticPictureInPictureDefaultsOffAndPersistsIndependently() = runBlocking {
         assertFalse(AppSettings().autoPictureInPicture)
         val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)

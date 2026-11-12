@@ -9,8 +9,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.SystemBarStyle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.runtime.getValue
 import io.github.fourkings6114.iptv.player.PlaybackActivity
-import io.github.fourkings6114.iptv.ui.IPTVTheme
+import io.github.fourkings6114.iptv.ui.AppThemeStyle
+import io.github.fourkings6114.iptv.ui.IPTVMainTheme
 import io.github.fourkings6114.iptv.ui.MainScreen
 import io.github.fourkings6114.iptv.ui.MainViewModel
 
@@ -23,11 +26,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.light(android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT),
-            navigationBarStyle = SystemBarStyle.light(android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT),
+            statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
         )
         setContent {
-            IPTVTheme(dark = false) {
+            val settings by model.settings.collectAsStateWithLifecycle()
+            IPTVMainTheme(AppThemeStyle.fromId(settings.themeStyle)) {
                 MainScreen(
                     model = model,
                     onImportFile = { request ->
