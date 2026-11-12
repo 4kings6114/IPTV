@@ -9,4 +9,11 @@
         <item name="android:windowLightStatusBar">false</item>
     </style>
     <style name="Theme.IPTV" parent="Theme.IPTV.Base" />
+    <style name="Theme.IPTV.Main" parent="Theme.IPTV.Base">
+        <item name="android:windowBackground">#F5F4ED</item>
+        <item name="android:colorAccent">#5754D8</item>
+        <item name="android:statusBarColor">#F5F4ED</item>
+        <item name="android:navigationBarColor">#F5F4ED</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>
