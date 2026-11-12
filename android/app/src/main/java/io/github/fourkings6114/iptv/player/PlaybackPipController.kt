@@ -146,10 +146,7 @@ internal class PlaybackPipController(
         hideControls = hidden
         playerView()?.apply {
             useController = !hidden
-            if (hidden) {
-                hideController()
-                resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIT
-            }
+            if (hidden) hideController()
         }
     }
 

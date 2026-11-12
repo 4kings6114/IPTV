@@ -37,6 +37,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -49,6 +50,7 @@ import androidx.media3.common.Tracks
 import androidx.media3.common.VideoSize
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.okhttp.OkHttpDataSource
+import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.DefaultRenderersFactory
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
@@ -61,6 +63,9 @@ import io.github.fourkings6114.iptv.core.Channel
 import io.github.fourkings6114.iptv.network.NetworkClients
 import io.github.fourkings6114.iptv.ui.IPTVTheme
 import java.net.URI
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.ensureActive
@@ -78,7 +83,7 @@ class PlaybackActivity : ComponentActivity() {
     private var buffering by mutableStateOf(true)
     private var formatInfo by mutableStateOf("")
     private var copied by mutableStateOf(false)
-    private var zoom by mutableStateOf(false)
+    private var resizeOverride by mutableStateOf<String?>(null)
     private var videoView: PlayerView? = null
     private var playbackClient: okhttp3.OkHttpClient? = null
     private var resumePosition = C.TIME_UNSET
@@ -110,6 +115,22 @@ class PlaybackActivity : ComponentActivity() {
         onBackPressedDispatcher.addCallback(this) { pip.finishPlayback() }
         lifecycleScope.launch { app.settings.state.collect { pip.update() } }
         setContent {
+            val playbackSettings by app.settings.state.collectAsStateWithLifecycle()
+            var clockNow by remember { mutableLongStateOf(System.currentTimeMillis()) }
+            LaunchedEffect(playbackSettings.showPlayerClock, pip.hideControls) {
+                while (playbackSettings.showPlayerClock && !pip.hideControls) {
+                    clockNow = System.currentTimeMillis()
+                    kotlinx.coroutines.delay(1_000)
+                }
+            }
+            LaunchedEffect(playbackSettings.sleepTimerMinutes, channel?.id) {
+                val minutes = playbackSettings.sleepTimerMinutes
+                if (minutes > 0 && channel != null) {
+                    kotlinx.coroutines.delay(minutes * 60_000L)
+                    if (player != null) pip.finishPlayback()
+                }
+            }
+            val clockText = remember(clockNow) { SimpleDateFormat("HH:mm", Locale.forLanguageTag("fa-IR")).format(Date(clockNow)) }
             IPTVTheme {
                 Box(Modifier.fillMaxSize().background(Color.Black)) {
                     AndroidView(
@@ -121,6 +142,7 @@ class PlaybackActivity : ComponentActivity() {
                                 setShowNextButton(false)
                                 setShowPreviousButton(false)
                                 setShowShuffleButton(false)
+                                setControllerShowTimeoutMs(playbackSettings.controllerTimeoutMs)
                                 layoutDirection = android.view.View.LAYOUT_DIRECTION_LTR
                                 videoView = this
                                 addOnLayoutChangeListener { _, _, _, _, _, _, _, _, _ -> pip.update() }
@@ -130,10 +152,24 @@ class PlaybackActivity : ComponentActivity() {
                             view.player = player
                             view.useController = !pip.hideControls
                             if (pip.hideControls) view.hideController()
-                            view.resizeMode = if (zoom && !pip.hideControls) AspectRatioFrameLayout.RESIZE_MODE_ZOOM else AspectRatioFrameLayout.RESIZE_MODE_FIT
+                            view.setControllerShowTimeoutMs(playbackSettings.controllerTimeoutMs)
+                            player?.setSeekBackIncrementMs(playbackSettings.rewindSeconds * 1_000L)
+                            player?.setSeekForwardIncrementMs(playbackSettings.rewindSeconds * 1_000L)
+                            val mode = if (pip.hideControls) playbackSettings.windowedResizeMode
+                                else resizeOverride ?: playbackSettings.fullScreenResizeMode
+                            view.resizeMode = when (mode) {
+                                "fill" -> AspectRatioFrameLayout.RESIZE_MODE_FILL
+                                "zoom" -> AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+                                else -> AspectRatioFrameLayout.RESIZE_MODE_FIT
+                            }
                         },
                         modifier = Modifier.fillMaxSize(),
                     )
+                    if (!pip.hideControls && playbackSettings.showPlayerClock) {
+                        Text(clockText, Modifier.align(Alignment.TopEnd).safeDrawingPadding().padding(18.dp)
+                            .background(Color.Black.copy(alpha = 0.65f), RoundedCornerShape(8.dp)).padding(horizontal = 10.dp, vertical = 6.dp),
+                            color = Color.White, style = MaterialTheme.typography.titleMedium)
+                    }
                     if (!pip.hideControls && buffering && failure == null) {
                         Column(Modifier.align(Alignment.Center).background(Color.Black.copy(alpha = 0.8f), RoundedCornerShape(16.dp)).padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
                             CircularProgressIndicator()
@@ -145,7 +181,10 @@ class PlaybackActivity : ComponentActivity() {
                         Text(channel?.name ?: "پخش کانال", Modifier.weight(1f), color = Color.White, maxLines = 2, style = MaterialTheme.typography.titleSmall)
                         TextButton(onClick = { pip.enter() }, enabled = pip.available,
                             modifier = Modifier.semantics { contentDescription = "پخش در پنجرهٔ شناور" }) { Text("شناور") }
-                        TextButton(onClick = { zoom = !zoom }) { Text(if (zoom) "نمای کامل" else "برش تصویر") }
+                        val currentResizeMode = resizeOverride ?: playbackSettings.fullScreenResizeMode
+                        TextButton(onClick = { resizeOverride = if (currentResizeMode == "zoom") "fit" else "zoom" }) {
+                            Text(if (currentResizeMode == "zoom") "نمای کامل" else "برش تصویر")
+                        }
                         TextButton(onClick = ::rotateScreen) { Text("چرخش") }
                     }
                     if (!pip.hideControls) failure?.let { problem ->
@@ -243,8 +282,24 @@ class PlaybackActivity : ComponentActivity() {
         val dataSource = OkHttpDataSource.Factory(client).setUserAgent("IPTVHamrah/0.1 (Android)")
         val sourceFactory = DefaultMediaSourceFactory(dataSource)
             .setLoadErrorHandlingPolicy(DefaultLoadErrorHandlingPolicy(2))
-        val renderers = DefaultRenderersFactory(this).setEnableDecoderFallback(true)
-        val engine = ExoPlayer.Builder(this, renderers).setMediaSourceFactory(sourceFactory).build()
+        val savedSettings = playbackSettings.state.value
+        val loadControlBuilder = DefaultLoadControl.Builder()
+        val bufferProfile = BufferProfile.fromId(savedSettings.bufferProfile)
+        bufferProfile.targetBytes?.let(loadControlBuilder::setTargetBufferBytes)
+        val loadControl = loadControlBuilder.build()
+        requestedOrientation = when (savedSettings.playerOrientation) {
+            "landscape" -> ActivityInfo.SCREEN_ORIENTATION_USER_LANDSCAPE
+            "portrait" -> ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT
+            else -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
+        val renderers = DefaultRenderersFactory(this).setEnableDecoderFallback(savedSettings.audioDecoderFallback)
+        val seekIncrementMs = savedSettings.rewindSeconds * 1_000L
+        val engine = ExoPlayer.Builder(this, renderers)
+            .setLoadControl(loadControl)
+            .setMediaSourceFactory(sourceFactory)
+            .setSeekBackIncrementMs(seekIncrementMs)
+            .setSeekForwardIncrementMs(seekIncrementMs)
+            .build()
         player = engine
         engine.setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).setContentType(C.AUDIO_CONTENT_TYPE_MOVIE).build(), true)
         engine.setHandleAudioBecomingNoisy(true)
