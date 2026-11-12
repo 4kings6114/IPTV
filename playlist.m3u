@@ -309,10 +309,16 @@ https://tvsen6.aynaott.com/msnbc/index.m3u8
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003
 #EXTINF:-1 tvg-id="NewsoftheWorld.us@USA" tvg-logo="https://i.imgur.com/MfyRQCs.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News of the World (1080p)
 https://live.nowtelly.com/now_usa/live_usa/playlist.m3u8
+#EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/index_new.m3u8?omap=https
 #EXTINF:-1 tvg-id="News12HudsonValley.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Hudson Valley (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?omap=https
 #EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8?omap=https
+#EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?omap=https
+#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Connecticut (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (1080p)
 https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8
 #EXTINF:-1 tvg-id="NewsmaxTV.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Newsmax TV (720p)
@@ -1448,6 +1454,8 @@ https://tvboom.ro/live-tv/live.m3u8
 http://178.134.1.158:8081/BRIDGE/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEDeluxe.ru@HD" tvg-logo="https://i.imgur.com/EazL8w7.png" tvg-country="ru" tvg-language="rus",BRIDGE Deluxe HD (576p)
 http://stream.mcquack.net/92/index.m3u8
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEHits.ru@SD" tvg-logo="https://i.imgur.com/sIW9oR4.png" tvg-country="ru" tvg-language="rus",BRIDGE Hits (576p)
+http://stream.mcquack.net/320/index.m3u8
 #EXTINF:-1 tvg-id="CadenaElite.es@SD" tvg-logo="https://i.imgur.com/3yeGDTP.png" tvg-country="es" tvg-language="es" group-title="موزیک - اروپا",Cadena Elite (720p)
 https://cloudvideo.servers10.com:8081/8004/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ClassicMusic.ru@SD" tvg-logo="https://i.imgur.com/TpXs1qA.png" tvg-country="ru" tvg-language="rus",Classic Music (1080p)
@@ -2489,6 +2497,8 @@ https://sktv.mxnticek.eu/new/stream.php?ch=NovaAction
 https://sktv.mxnticek.eu/new/stream.php?ch=NovaCinema
 #EXTINF:-1 tvg-id="Ostrosyuzhetnoye.ru@HD" tvg-logo="https://i.imgur.com/NwQ7GBy.png" tvg-country="ru" tvg-language="rus" group-title="فیلم - اروپا",Ostrosyuzhetnoye (1080p)
 http://stream.mcquack.net/214/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Premialnoe.ru@HD" tvg-logo="https://i.imgur.com/ck4aLBP.png" tvg-country="ru" tvg-language="rus",Premialnoe HD (1080p)
+http://stream.mcquack.net/421/index.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ProCinema.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a6/Pro_Cinema_logo_2022.svg/revision/latest/scale-to-width-down/1000?cb=20220419100521" tvg-country="ro" tvg-language="ron",Pro Cinema (1080p)
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0
 #EXTINF:-1 tvg-id="RaiMovie.it@HD" tvg-logo="https://i.imgur.com/0FjxXU9.png" tvg-country="it" tvg-language="ita" group-title="فیلم - اروپا",Rai Movie (1080p)
@@ -2782,6 +2792,8 @@ https://live77cdn2.antenaplay.ro/live2_fast/ch2/stream.m3u8
 https://streams2.sofast.tv/ptnr-yupptv/title-JUST_FOR_LAUGHS_GAGS_YUPPTV/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2790d143-5874-4146-bf91-9063c52b2f15/manifest.m3u8
 #EXTINF:-1 tvg-id="Komedia.ru@SD" tvg-logo="https://i.imgur.com/VRC5juh.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Komedia (576p)
 http://stream.mcquack.net/68/index.m3u8
+#EXTINF:-1 tvg-id="Komediynoe.ru@HD" tvg-logo="https://i.imgur.com/cEKe8XC.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Komediynoe (1080p)
+http://stream.mcquack.net/74/index.m3u8
 #EXTINF:-1 tvg-id="KVNTV.ru@SD" tvg-logo="https://i.imgur.com/Vw3LFLX.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",KVN TV (576p)
 http://178.124.179.122:8080/KVN-TV/index.m3u8
 #EXTINF:-1 tvg-id="LatinaClasicos.pe@SD" tvg-logo="https://i.imgur.com/q0dAWyj.png" tvg-country="pe" tvg-language="es" group-title="سریال و کمدی",Latina Clasicos (1080p)
@@ -4037,6 +4049,8 @@ https://lfmmd.vedge.infomaniak.com/livecast/ik:carac5/manifest.m3u8
 https://ovp-live.akamaized.net/ac115_live/canale3.smil/playlist.m3u8
 #EXTINF:-1 tvg-name="Casa Sanremo Tv" tvg-logo="https://i.imgur.com/WL3SFTs.png" tvg-country="it" group-title="سرگرمی - اروپا",Casa Sanremo Tv
 https://router.xdevel.com/video0s975911-633/stream/playlist_dvr.m3u8
+#EXTINF:-1 tvg-name="Castrovillari Tv" tvg-logo="https://i.imgur.com/V0kjYNG.png" tvg-country="it" group-title="سرگرمی - اروپا",Castrovillari Tv
+http://msh0062.stream.seeweb.it/live/flv:stream00.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="CenterTV.gr@SD" tvg-logo="https://i.imgur.com/aV5QoNG.png" tvg-country="gr" tvg-language="ell" group-title="سرگرمی - اروپا",Center TV (1080p)
 https://eu1.streams.gr:8081/centertv/index.m3u8
 #EXTINF:-1 tvg-id="CetelmonTV.es@SD" tvg-logo="https://i.imgur.com/GGn7itj.png" tvg-country="es" tvg-language="es" group-title="سرگرمی - اروپا",Cetelmon TV (404p)
@@ -4143,6 +4157,8 @@ https://streaming.cloud.innovasur.es/mmj2/index.m3u8
 https://streaming.cloud.innovasur.es/mmj/index.m3u8
 #EXTINF:-1 tvg-id="Digi4K.ro@UHD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/57/DIGI_4K.jpg" tvg-country="ro" tvg-language="ron" group-title="سرگرمی - اروپا",Digi 4K
 https://vip-acasatv.online:25463/lrZuGxAuP3/6782859900/5928.m3u8
+#EXTINF:-1 tvg-id="Dikayaokhota.ru@HD" tvg-logo="https://i.imgur.com/EOue13e.png" tvg-country="ru" tvg-language="rus" group-title="سرگرمی - اروپا",Dikaya okhota (1080p)
+http://stream.mcquack.net/274/index.m3u8
 #EXTINF:-1 tvg-id="DikhTV.hu@SD" tvg-logo="https://i.imgur.com/aAcORTL.png" tvg-country="hu" tvg-language="hun" group-title="سرگرمی - اروپا",Dikh TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/dikh/index.m3u8
@@ -4981,6 +4997,8 @@ http://88.212.15.50/live/prima_avc_25p/playlist.m3u8
 https://tele2dvrnat01-02.cdnvideo.ru/stream/NAT_Prima/hls/index.m3u8
 #EXTINF:-1 tvg-id="PrimaCool.cz@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Prima_Cool_logo_zelen%C3%A9.png/960px-Prima_Cool_logo_zelen%C3%A9.png" tvg-country="cz" tvg-language="ces" group-title="سرگرمی - اروپا",Prima Cool
 http://88.212.15.50/live/prima_cool_cz_avc/index.m3u8
+#EXTINF:-1 tvg-id="PrimaFree.it@SD" tvg-logo="https://irp.cdn-website.com/184bfd6a/MOBILE/jpg/477.jpg" tvg-country="it" tvg-language="ita" group-title="سرگرمی - اروپا",Prima Free (720p)
+https://5f22d76e220e1.streamlock.net/primafree/primafree/playlist.m3u8
 #EXTINF:-1 tvg-id="PrimaKrimi.cz@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Prima_Krimi.png/960px-Prima_Krimi.png" tvg-country="cz" tvg-language="ces" group-title="سرگرمی - اروپا",Prima Krimi
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.15.50/live/test_prima_krimi_cz/playlist.m3u8
@@ -5745,7 +5763,8 @@ https://h056.video-stream-hosting.de/easycast8-live/_definst_/mp4:livestreamhd8/
 #EXTINF:-1 tvg-id="Terra.ua@SD" tvg-logo="https://i.imgur.com/HFY61gj.png" tvg-country="ua" tvg-language="ukr" group-title="سرگرمی - اروپا",Terra (576p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 http://stream.mcquack.net/402/index.m3u8
-#EXTINF:-1 tvg-name="TET" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/TET_logo.svg/500px-TET_logo.svg.png" tvg-id="TET.ua" tvg-chno="13" tvg-country="ua" group-title="سرگرمی - اروپا" tvg-language="ukr",TET
+#EXTINF:-1 tvg-id="TET.ua@SD" tvg-logo="https://i.imgur.com/Wu6wtbe.png" tvg-country="ua" tvg-language="ukr" group-title="سرگرمی - اروپا",TET (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://stream.mcquack.net/338/index.m3u8
 #EXTINF:-1 tvg-name="TG Norba 24" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Tg_norba24.png/500px-Tg_norba24.png" tvg-id="TGNorba24.it" tvg-country="it" group-title="سرگرمی - اروپا" tvg-language="ita",TG Norba 24
 https://live-telenorba.cdn.netrw.it/telenorba/hls/ccr/tgnorba/master.m3u8
@@ -6397,6 +6416,8 @@ http://15.204.246.24:8080/Canal13HD/index.m3u8
 http://arcast.net:1935/mp/mp/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal2AlpavisionNeiva.co@SD" tvg-logo="https://i.imgur.com/Yv8XIGW.png" tvg-country="co" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal 2 Alpavision Neiva (720p)
 https://stmv1.voxtvhd.com.br/alpavision/alpavision/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal2deUshuaia.ar@SD" tvg-logo="https://i.ibb.co/q5NPdK2/canal2-logo.png" tvg-country="ar" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal 2 de Ushuaia (1080p)
+https://nd106.republicaservers.com:4433/hls/c6611/index.m3u8
 #EXTINF:-1 tvg-id="Canal2Gualeguay.ar@SD" tvg-logo="https://i.imgur.com/TOlncyp.png" tvg-country="ar" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal 2 Gualeguay
 https://stream.arcast.net:4443/gualeguay/gualeguay/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal2MardelPlata.ar@SD" tvg-logo="https://i.imgur.com/wlKFPBW.jpeg" tvg-country="ar" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal 2 Mar del Plata (720p)
@@ -6529,6 +6550,8 @@ https://v2.tustreaming.cl/canallocalcl/index.m3u8
 https://live-evg10.tv360.bitel.com.pe/bitel/anqaratv/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalMasTelevision.co@SD" tvg-logo="https://i.imgur.com/ODMa27W.jpg" tvg-country="co" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal Mas Television (720p)
 https://movil.ejeserver.com/live/teledoradahd.m3u8
+#EXTINF:-1 tvg-id="CanalMasTV.pe@SD" tvg-logo="https://i.imgur.com/rdHygJ1.png" tvg-country="pe" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal Mas TV (720p)
+https://live-evg11.tv360.bitel.com.pe/bitel/mastvSRT/playlist.m3u8
 #EXTINF:-1 tvg-name="Canal Once" tvg-logo="https://graph.facebook.com/CANALONCETV/picture?width=200&height=200" tvg-id="CanalOnce.mx" tvg-chno="10" tvg-country="mx" group-title="سرگرمی - آمریکای لاتین" tvg-language="es",Canal Once
 https://vivo.canaloncelive.tv/secureoncedos/oncedigital/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalOracionConSon.co@SD" tvg-logo="https://i.imgur.com/rfnFqU3.png" tvg-country="co" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",Canal Oracion Con Son (1080p)
@@ -7321,6 +7344,8 @@ https://stream01.msolutionbrasil.com.br/hls/tvitape/live.m3u8
 https://www.latinasat.com.br/hls/live/stream/index.m3u8
 #EXTINF:-1 tvg-id="TVN.cl@SD" tvg-logo="https://i.imgur.com/3FKZHL4.png" tvg-country="cl" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",TVN (1080p)
 http://138.121.15.230:9002/TVN/index.m3u8
+#EXTINF:-1 tvg-id="TVNBN.br@SD" tvg-logo="https://i.imgur.com/zoHBxn1.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TVNBN (720p)
+https://cdn.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8
 #EXTINF:-1 tvg-id="TVOSanVicente.cl@SD" tvg-logo="https://i.imgur.com/PCVWtHd.png" tvg-country="cl" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",TVO San Vicente (720p)
 #EXTVLCOPT:http-referrer=http://www.tvosanvicente.cl/
 https://5ff3d9babae13.streamlock.net/8014/8014/playlist.m3u8
@@ -8026,6 +8051,8 @@ http://170.83.49.66:8083/AGROCANALHD/index.m3u8
 https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="AlternaTV.ar@SD" tvg-logo="https://tv.alterna.ar/alternatv.png" tvg-country="ar" tvg-language="es" group-title="مستند و علمی - سایر زبان‌ها",AlternaTV (720p)
 https://tv.alterna.ar/stream/hls/live.m3u8
+#EXTINF:-1 tvg-id="AnimalPlanet.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" tvg-country="ru" tvg-language="rus" group-title="مستند و علمی - سایر زبان‌ها",Animal Planet (1080p)
+http://stream.mcquack.net/114/index.m3u8
 #EXTINF:-1 tvg-id="AnimalPlanetLatinAmerica.us@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" tvg-country="us" tvg-language="es" group-title="مستند و علمی - سایر زبان‌ها",Animal Planet Latin America (720p)
 http://15.204.246.24:8080/AnimalPlanetHD/index.m3u8
 #EXTINF:-1 tvg-id="ARDalpha.de@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/ARD_alpha.svg/960px-ARD_alpha.svg.png" tvg-country="de" tvg-language="de" group-title="مستند و علمی - سایر زبان‌ها",ARD-alpha (720p)

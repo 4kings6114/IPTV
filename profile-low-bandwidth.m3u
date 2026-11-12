@@ -157,8 +157,14 @@ https://amg00488-foxdigital-livenowbyfox-lgus-y0a81.amagi.tv/ts-us-e2-n1/playlis
 https://tvsen6.aynaott.com/msnbc/index.m3u8
 #EXTINF:-1 tvg-id="NBCNewsNOW.us@SD" tvg-logo="https://i.imgur.com/JZt2qh5.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",NBC News NOW (432p)
 https://d1bl6tskrpq9ze.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_lgchannels-cdp-springserve/cc251ce5-1ce7-4cf6-af0b-33afc16ba187/0.m3u8
+#EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/.swnf3347af6-1b84-4a40-8151-000000000000apple2apple/.rate_1577480/index_new_v_1577480_2.m3u8
 #EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swnfcb9a150-401a-4db0-9216-000000000000apple2apple/.rate_1637880/index_new_v_1637880_2.m3u8
+#EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/.swn2b658133-a403-460f-921c-000000000000apple2apple/.rate_1483780/index_new_v_1483780_2.m3u8
+#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Connecticut (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/.swna0af5936-a0ac-4569-9ac9-000000000000apple2apple/.rate_1638080/index_new_v_1638080_2.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (360p)
 https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swn767d97bb-6764-4dd9-98d8-47d6f0b306acapple2apple/.rate_1637880/index_new_v_1637880_2.m3u8?lbhdk=-804447599&sn=&corp=&lineupid=&fipscode=
 #EXTINF:-1 tvg-id="NewsmaxTV.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Newsmax TV (360p)
@@ -1722,6 +1728,8 @@ https://ovp-live.akamaized.net/ac115_live/canale3.smil/playlist.m3u8
 https://ovp-live.akamaized.net/ac115_live/canale3.smil/chunklist_b1100000.m3u8
 #EXTINF:-1 tvg-name="Casa Sanremo Tv" tvg-logo="https://i.imgur.com/WL3SFTs.png" tvg-country="it" group-title="سرگرمی - اروپا",Casa Sanremo Tv
 https://router.xdevel.com/video0s975911-633/stream/playlist_dvr.m3u8
+#EXTINF:-1 tvg-name="Castrovillari Tv" tvg-logo="https://i.imgur.com/V0kjYNG.png" tvg-country="it" group-title="سرگرمی - اروپا",Castrovillari Tv (360p)
+http://msh0062.stream.seeweb.it/live/flv:stream00.sdp/chunklist_w290358672.m3u8
 #EXTINF:-1 tvg-name="Samiaki TV" tvg-logo="https://i.imgur.com/aV5QoNG.png" tvg-id="CenterTV.gr" tvg-chno="121" tvg-country="gr" group-title="سرگرمی - اروپا" tvg-language="ell",Center TV (540p)
 http://live.cast-control.eu:1935/samiaki/samiaki/chunklist_w1735756207.m3u8
 #EXTINF:-1 tvg-id="Channel10.ru@SD" tvg-logo="https://i.imgur.com/k8JjFDw.png" tvg-country="ru" tvg-language="rus" group-title="سرگرمی - اروپا",Channel 10 (360p)
@@ -2121,8 +2129,12 @@ https://stream-us-east-1.getpublica.com/cl/261111dbqfekt8e8cs73fnnht0/1280x720_1
 https://pull-live-156-1.global.ssl.fastly.net/pc5865dc25400thmb-ea6bf03b14fa318f7133/smil:pc1-jhrgyuoqe5865db-68tkgb14fa318f7133f03.smil/chunklist_b1996000_slen.m3u8
 #EXTINF:-1 tvg-name="Praha TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/czech-republic/praha-tv-cz.png" tvg-id="PrahaTV.cz" tvg-chno="36" tvg-country="cz" group-title="سرگرمی - اروپا" tvg-language="ces",Praha TV (360p)
 https://1977134029.rsc.cdn77.org/1977134029/tracks-v3a1/mono.ts.m3u8
+#EXTINF:-1 tvg-id="PrimaFree.it@SD" tvg-logo="https://irp.cdn-website.com/184bfd6a/MOBILE/jpg/477.jpg" tvg-country="it" tvg-language="ita" group-title="سرگرمی - اروپا",Prima Free (720p)
+https://5f22d76e220e1.streamlock.net/primafree/primafree/chunklist_w1338641586.m3u8
 #EXTINF:-1 tvg-name="Prima Tv Napoli" tvg-logo="https://i.imgur.com/yPuQeEy.jpg" tvg-country="it" group-title="سرگرمی - اروپا",Prima Tv Napoli (720p)
 https://57068da1deb21.streamlock.net/primatvnapoli/primatvnapoli/chunklist_w746723242.m3u8
+#EXTINF:-1 tvg-name="PrimaFREE" tvg-logo="https://i.imgur.com/YrSSmOL.png" tvg-country="it" group-title="سرگرمی - اروپا",PrimaFREE
+https://5f22d76e220e1.streamlock.net/primafree/primafree/playlist.m3u8
 #EXTINF:-1 tvg-name="Pro TV" tvg-logo="https://i.imgur.com/aKAfKtW.png" tvg-id="ProTV.ro" tvg-chno="6" tvg-country="ro" group-title="سرگرمی - اروپا" tvg-language="ron",PRO TV (360p)
 https://cmero-ott-live.ssl.cdn.cra.cz/channels/cme-ro-voyo-news/playlist/rum/live_lq.m3u8?offsetSeconds=0&url=0
 #EXTINF:-1 tvg-id="Prodvizhenie.ru@SD" tvg-logo="https://i.imgur.com/KlsnfG9.png" tvg-country="ru" tvg-language="rus" group-title="سرگرمی - اروپا",Prodvizhenie (480p)

@@ -283,10 +283,16 @@ https://tvsen6.aynaott.com/msnbc/index.m3u8
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003
 #EXTINF:-1 tvg-id="NewsoftheWorld.us@USA" tvg-logo="https://i.imgur.com/MfyRQCs.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News of the World (1080p)
 https://live.nowtelly.com/now_usa/live_usa/chunks.m3u8?nimblesessionid=78928664
+#EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/.swnf3347af6-1b84-4a40-8151-000000000000apple2apple/.rate_5573680/index_new_v_5573680_5.m3u8
 #EXTINF:-1 tvg-id="News12HudsonValley.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Hudson Valley (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/.swn8fecbcf4-0685-464e-b44f-000000000000apple2apple/.rate_3288580/index_new_v_3288580_5.m3u8
 #EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swnfcb9a150-401a-4db0-9216-000000000000apple2apple/.rate_1637880/index_new_v_1637880_2.m3u8
+#EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/.swn2b658133-a403-460f-921c-000000000000apple2apple/.rate_4782280/index_new_v_4782280_5.m3u8
+#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Connecticut (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/.swna0af5936-a0ac-4569-9ac9-000000000000apple2apple/.rate_1638080/index_new_v_1638080_2.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (1080p)
 https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swn767d97bb-6764-4dd9-98d8-47d6f0b306acapple2apple/.rate_4101980/index_new_v_4101980_5.m3u8?lbhdk=-804447599&sn=&corp=&lineupid=&fipscode=
 #EXTINF:-1 tvg-id="Newsmax2.us@SD" tvg-logo="https://i.imgur.com/iE1izWq.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Newsmax 2 (720p)

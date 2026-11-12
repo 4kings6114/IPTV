@@ -394,6 +394,8 @@ https://sktv.mxnticek.eu/new/stream.php?ch=NovaAction
 https://sktv.mxnticek.eu/new/stream.php?ch=NovaCinema
 #EXTINF:-1 tvg-id="Ostrosyuzhetnoye.ru@HD" tvg-logo="https://i.imgur.com/NwQ7GBy.png" tvg-country="ru" tvg-language="rus" group-title="فیلم - اروپا",Ostrosyuzhetnoye (1080p)
 http://stream.mcquack.net/214/index.m3u8
+#EXTINF:-1 group-title="فیلم - اروپا" tvg-id="Premialnoe.ru@HD" tvg-logo="https://i.imgur.com/ck4aLBP.png" tvg-country="ru" tvg-language="rus",Premialnoe HD (1080p)
+http://stream.mcquack.net/421/index.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="ProCinema.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a6/Pro_Cinema_logo_2022.svg/revision/latest/scale-to-width-down/1000?cb=20220419100521" tvg-country="ro" tvg-language="ron",Pro Cinema (1080p)
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-procinema/live_fullhd?offsetSeconds=0
 #EXTINF:-1 tvg-id="RaiMovie.it@HD" tvg-logo="https://i.imgur.com/0FjxXU9.png" tvg-country="it" tvg-language="ita" group-title="فیلم - اروپا",Rai Movie (1080p)
@@ -687,6 +689,8 @@ https://live77cdn2.antenaplay.ro/live2_fast/ch2/stream.m3u8
 https://streams2.sofast.tv/ptnr-yupptv/title-JUST_FOR_LAUGHS_GAGS_YUPPTV/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2790d143-5874-4146-bf91-9063c52b2f15/manifest.m3u8
 #EXTINF:-1 tvg-id="Komedia.ru@SD" tvg-logo="https://i.imgur.com/VRC5juh.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Komedia (576p)
 http://stream.mcquack.net/68/index.m3u8
+#EXTINF:-1 tvg-id="Komediynoe.ru@HD" tvg-logo="https://i.imgur.com/cEKe8XC.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Komediynoe (1080p)
+http://stream.mcquack.net/74/index.m3u8
 #EXTINF:-1 tvg-id="KVNTV.ru@SD" tvg-logo="https://i.imgur.com/Vw3LFLX.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",KVN TV (576p)
 http://178.124.179.122:8080/KVN-TV/index.m3u8
 #EXTINF:-1 tvg-id="LatinaClasicos.pe@SD" tvg-logo="https://i.imgur.com/q0dAWyj.png" tvg-country="pe" tvg-language="es" group-title="سریال و کمدی",Latina Clasicos (1080p)
