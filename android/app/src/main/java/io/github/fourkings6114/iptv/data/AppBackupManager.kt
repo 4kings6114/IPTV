@@ -139,7 +139,7 @@ object BackupCodec {
             formatVersion = FORMAT_VERSION,
             createdAtMillis = now,
             sources = safeSources.map { BackupSource(it.id, it.title, it.url, it.updatedAt, it.count, it.skipped) },
-            channels = channels.map(ChannelEntity::toBackup),
+            channels = channels.map { it.toBackup() },
             sourceChannels = safeReferences.map { BackupSourceChannel(it.sourceId, it.channelId, it.position) },
             favorites = snapshot.favorites.filter { it.channelId in retainedChannelIds }
                 .map { BackupSavedChannel(it.channelId, it.savedAt) },
@@ -247,7 +247,7 @@ object BackupCodec {
         validate(backup)
         return ChannelDatabaseSnapshot(
             sources = backup.sources.map { SourceEntity(it.id, it.title, it.url, it.updatedAt, it.count, it.skipped) },
-            channels = backup.channels.map(BackupChannel::toEntity),
+            channels = backup.channels.map { it.toEntity() },
             sourceChannels = backup.sourceChannels.map { SourceChannelEntity(it.sourceId, it.channelId, it.position) },
             favorites = backup.favorites.map { FavoriteEntity(it.channelId, it.savedAt) },
             history = backup.history.map { HistoryEntity(it.channelId, it.savedAt) },
