@@ -100,10 +100,6 @@ class PlaybackActivity : ComponentActivity() {
             statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
             navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.BLACK),
         )
-        WindowCompat.getInsetsController(window, window.decorView).apply {
-            hide(WindowInsetsCompat.Type.systemBars())
-            systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        }
         resumePosition = savedInstanceState?.getLong("playback_position", C.TIME_UNSET) ?: C.TIME_UNSET
         wasPlaying = savedInstanceState?.getBoolean("play_when_ready", true) ?: true
         historyRecorded = savedInstanceState?.getBoolean("history_recorded", false) ?: false
@@ -409,6 +405,26 @@ class PlaybackActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         pip.onResume()
+        applyImmersiveFullscreenWhenFocused()
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) applyImmersiveFullscreenWhenFocused()
+    }
+
+    /** Hiding bars before PiP expansion has restored the Activity's input focus can
+     * leave API 31's fullscreen window visible but unfocused. Apply immersive mode
+     * on the next UI turn, and only after WindowManager grants focus back.
+     */
+    private fun applyImmersiveFullscreenWhenFocused() {
+        window.decorView.post {
+            if (isFinishing || isDestroyed || isInPictureInPictureMode || !hasWindowFocus()) return@post
+            WindowCompat.getInsetsController(window, window.decorView).apply {
+                hide(WindowInsetsCompat.Type.systemBars())
+                systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            }
+        }
     }
 
     override fun onUserLeaveHint() {
@@ -419,7 +435,7 @@ class PlaybackActivity : ComponentActivity() {
     override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
         pip.onModeChanged(isInPictureInPictureMode)
-        if (!isInPictureInPictureMode) WindowCompat.getInsetsController(window, window.decorView).hide(WindowInsetsCompat.Type.systemBars())
+        if (!isInPictureInPictureMode) applyImmersiveFullscreenWhenFocused()
     }
 
     @RequiresApi(31)
