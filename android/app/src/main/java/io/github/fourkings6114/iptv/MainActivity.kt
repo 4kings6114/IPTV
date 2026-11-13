@@ -22,6 +22,12 @@ class MainActivity : ComponentActivity() {
     private val chooseFile = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         model.fileChosen(uri)
     }
+    private val createBackup = registerForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+        if (uri != null) model.createBackup(uri)
+    }
+    private val chooseBackup = registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) model.previewBackup(uri)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,9 +46,31 @@ class MainActivity : ComponentActivity() {
                     model = model,
                     onImportFile = { request ->
                         if (model.prepareFileImport(request.title, request.sourceId)) {
-                            try { chooseFile.launch(arrayOf("*/*")) }
-                            catch (_: ActivityNotFoundException) { model.filePickerUnavailable() }
-                            catch (_: SecurityException) { model.filePickerUnavailable() }
+                            try {
+                                chooseFile.launch(arrayOf("*/*"))
+                            } catch (_: ActivityNotFoundException) {
+                                model.filePickerUnavailable()
+                            } catch (_: SecurityException) {
+                                model.filePickerUnavailable()
+                            }
+                        }
+                    },
+                    onCreateBackup = {
+                        try {
+                            createBackup.launch("iptv-backup-${System.currentTimeMillis()}.json")
+                        } catch (_: ActivityNotFoundException) {
+                            model.backupPickerUnavailable()
+                        } catch (_: SecurityException) {
+                            model.backupPickerUnavailable()
+                        }
+                    },
+                    onChooseBackup = {
+                        try {
+                            chooseBackup.launch(arrayOf("application/json", "text/json", "application/octet-stream"))
+                        } catch (_: ActivityNotFoundException) {
+                            model.backupPickerUnavailable()
+                        } catch (_: SecurityException) {
+                            model.backupPickerUnavailable()
                         }
                     },
                     onPlay = { channel ->

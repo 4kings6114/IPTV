@@ -60,7 +60,13 @@ private enum class Pane(val label: String, val icon: ImageVector) {
 }
 
 @Composable
-fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, onPlay: (Channel) -> Unit) {
+fun MainScreen(
+    model: MainViewModel,
+    onImportFile: (FileImportRequest) -> Unit,
+    onCreateBackup: () -> Unit,
+    onChooseBackup: () -> Unit,
+    onPlay: (Channel) -> Unit,
+) {
     val crashReport by model.crashReport.collectAsStateWithLifecycle()
     var showCrashReport by rememberSaveable { mutableStateOf(true) }
     var crashCopied by rememberSaveable { mutableStateOf(false) }
@@ -88,6 +94,8 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
     val source by model.source.collectAsStateWithLifecycle()
     val availableSources by model.availableSources.collectAsStateWithLifecycle()
     val busy by model.busy.collectAsStateWithLifecycle()
+    val backupBusy by model.backupBusy.collectAsStateWithLifecycle()
+    val backupPreview by model.backupPreview.collectAsStateWithLifecycle()
     val error by model.error.collectAsStateWithLifecycle()
     val notice by model.notice.collectAsStateWithLifecycle()
     var pane by rememberSaveable { mutableStateOf(Pane.Channels) }
@@ -197,7 +205,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                     }
                 }
             }
-            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
+            if (busy || backupBusy) LinearProgressIndicator(Modifier.fillMaxWidth())
             if (error != null) {
                 Surface(color = MaterialTheme.colorScheme.errorContainer, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), shape = RoundedCornerShape(12.dp)) {
                     Text(error.orEmpty(), Modifier.padding(14.dp), style = MaterialTheme.typography.bodySmall)
@@ -232,7 +240,7 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
                         trailing = if (showAdditionalSettings) "باز" else null,
                         onClick = { showAdditionalSettings = !showAdditionalSettings },
                     )
-                    SettingsMenuRow("پشتیبان‌گیری و بازیابی", onClick = { backupInfo = true })
+                    SettingsMenuRow("پشتیبان‌گیری و بازیابی", enabled = settings.loaded && !busy && !backupBusy && !epgBusy, onClick = { backupInfo = true })
                     SettingsMenuRow("حذف داده‌ها", accent = MaterialTheme.colorScheme.error, onClick = { deleteDataInfo = true })
                     SettingsMenuRow(
                         "رنگ تم",
@@ -533,8 +541,54 @@ fun MainScreen(model: MainViewModel, onImportFile: (FileImportRequest) -> Unit, 
         AlertDialog(
             onDismissRequest = { backupInfo = false },
             title = { Text("پشتیبان‌گیری و بازیابی") },
-            text = { Text("خروجی‌گرفتن یا بازیابی داده‌های برنامه هنوز پیاده‌سازی نشده است. پشتیبان ابری نداریم؛ لینک‌های دارای توکن را به فایل یا فضای اشتراکی صادر نمی‌کنیم. برای حفظ داده‌ها برنامه را حذف یا داده‌هایش را پاک نکن.") },
-            confirmButton = { TextButton(onClick = { backupInfo = false }) { Text("بستن") } },
+            text = {
+                Text("نسخهٔ JSON شامل فهرست‌ها، علاقه‌مندی‌ها، سابقه و تنظیمات است. لینک‌ها و سرآیندهای دارای نشانهٔ رمز یا توکن صادر نمی‌شوند. فایل پشتیبان ممکن است نشانی‌های خصوصی دیگر داشته باشد؛ آن را امن نگه دار و به اشتراک نگذار. بازیابی، داده‌های فعلی را پس از پیش‌نمایش جایگزین می‌کند. رضایت HTTP، PiP خودکار و رمز والدین منتقل نمی‌شوند.")
+            },
+            confirmButton = {
+                Column(horizontalAlignment = Alignment.End) {
+                    TextButton(enabled = !backupBusy, onClick = { backupInfo = false; onCreateBackup() }) { Text("ساخت فایل پشتیبان") }
+                    TextButton(enabled = !backupBusy, onClick = { backupInfo = false; onChooseBackup() }) { Text("انتخاب فایل برای بازیابی") }
+                }
+            },
+            dismissButton = { TextButton(onClick = { backupInfo = false }) { Text("بستن") } },
+        )
+    }
+    if (backupBusy && backupPreview == null) {
+        AlertDialog(
+            onDismissRequest = {},
+            title = { Text("در حال آماده‌سازی نسخهٔ پشتیبان") },
+            text = {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                    Text("لطفاً تا پایان خواندن یا نوشتن فایل صبر کن.")
+                }
+            },
+            confirmButton = {},
+        )
+    }
+    backupPreview?.let { preview ->
+        AlertDialog(
+            onDismissRequest = { model.dismissBackupPreview() },
+            title = { Text("تأیید جایگزینی داده‌ها") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("فایل شامل ${persianNumber(preview.sourceCount)} فهرست، ${persianNumber(preview.channelCount)} کانال، ${persianNumber(preview.favoriteCount)} علاقه‌مندی و ${persianNumber(preview.historyCount)} مورد سابقه است.")
+                    if (preview.omittedSensitiveSources > 0 || preview.omittedSensitiveChannels > 0) {
+                        Text("در نسخهٔ ساخته‌شده ${persianNumber(preview.omittedSensitiveSources)} فهرست و ${persianNumber(preview.omittedSensitiveChannels)} کانال دارای نشانهٔ اطلاعات ورود حذف شده بود.", color = MaterialTheme.colorScheme.error)
+                    }
+                    Text("با تأیید، فهرست‌ها و داده‌های فعلی به‌طور کامل جایگزین می‌شوند. ابتدا فایل انتخاب‌شده را بررسی کن.")
+                    Text("دسترسی HTTP، PiP خودکار و رمز والدین بازیابی نمی‌شوند؛ فیلتر والدین خاموش خواهد بود.", style = MaterialTheme.typography.bodySmall)
+                    error?.takeIf { it.startsWith("بازیابی انجام نشد") }?.let {
+                        Text(it, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(enabled = !backupBusy && !busy && !epgBusy, onClick = { model.restoreBackup() }) {
+                    Text(if (backupBusy) "در حال بازیابی…" else "جایگزینی و بازیابی")
+                }
+            },
+            dismissButton = { TextButton(enabled = !backupBusy, onClick = { model.dismissBackupPreview() }) { Text("انصراف") } },
         )
     }
     if (languageInfo) {

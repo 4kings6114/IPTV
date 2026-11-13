@@ -10,6 +10,7 @@ import androidx.media3.common.util.UnstableApi
 import androidx.room.Room
 import coil.ImageLoader
 import coil.ImageLoaderFactory
+import io.github.fourkings6114.iptv.data.AppBackupManager
 import io.github.fourkings6114.iptv.data.AppDatabase
 import io.github.fourkings6114.iptv.data.PlaylistRepository
 import io.github.fourkings6114.iptv.data.SettingsStore
@@ -39,6 +40,7 @@ class IPTVApplication : Application(), ImageLoaderFactory {
     private val epgIds by lazy { EpgChannelIds(File(filesDir, "epg-channel-ids")) }
     val repository by lazy { PlaylistRepository(this, database.channels(), network, epgIds) }
     val epg by lazy { EpgRepository(EpgCache(File(cacheDir, "epg")), settings, database.channels(), network, epgIds) }
+    val backupManager by lazy { AppBackupManager(contentResolver, database.channels(), settings, epg::invalidateAliases) }
 
     @androidx.annotation.OptIn(UnstableApi::class)
     override fun onCreate() {

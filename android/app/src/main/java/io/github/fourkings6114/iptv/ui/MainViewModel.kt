@@ -10,6 +10,7 @@ import io.github.fourkings6114.iptv.core.PlaylistParseException
 import io.github.fourkings6114.iptv.core.persianNumber
 import io.github.fourkings6114.iptv.core.sha256
 import io.github.fourkings6114.iptv.epg.EpgSnapshot
+import io.github.fourkings6114.iptv.data.BackupPreview
 import io.github.fourkings6114.iptv.data.FileSourceSelectionRequiredException
 import io.github.fourkings6114.iptv.data.InvalidSourceNameException
 import io.github.fourkings6114.iptv.data.NotAFileSourceException
@@ -71,6 +72,8 @@ class MainViewModel(application: Application, private val savedState: SavedState
     val busy = MutableStateFlow(false)
     val error = MutableStateFlow<String?>(null)
     val notice = MutableStateFlow<String?>(null)
+    val backupBusy = MutableStateFlow(false)
+    val backupPreview = MutableStateFlow<BackupPreview?>(null)
 
     init {
         viewModelScope.launch { crashReport.value = withContext(Dispatchers.IO) { app.crashReports.read() } }
@@ -99,9 +102,85 @@ class MainViewModel(application: Application, private val savedState: SavedState
         }
     }
 
+    fun createBackup(uri: Uri) {
+        if (busy.value || epgBusy.value || backupBusy.value) {
+            error.value = "پیش از پشتیبان‌گیری، عملیات جاری را تمام کن."
+            return
+        }
+        backupBusy.value = true
+        error.value = null
+        viewModelScope.launch {
+            try {
+                val result = app.backupManager.create(uri)
+                val skippedSources = result.preview.omittedSensitiveSources
+                val skippedChannels = result.preview.omittedSensitiveChannels
+                notice.value = if (skippedSources == 0 && skippedChannels == 0) "نسخهٔ پشتیبان ذخیره شد (${result.bytes / 1024} کیلوبایت)."
+                else "نسخه ذخیره شد؛ ${persianNumber(skippedSources)} فهرست و ${persianNumber(skippedChannels)} کانال دارای نشانهٔ اطلاعات ورود صادر نشد."
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (_: Exception) {
+                error.value = "ساخت فایل پشتیبان انجام نشد؛ فضای ذخیره‌سازی و دسترسی فایل را بررسی کن."
+            } finally {
+                backupBusy.value = false
+            }
+        }
+    }
+
+    fun previewBackup(uri: Uri) {
+        if (busy.value || epgBusy.value || backupBusy.value) {
+            error.value = "پیش از انتخاب نسخهٔ پشتیبان، عملیات جاری را تمام کن."
+            return
+        }
+        backupBusy.value = true
+        error.value = null
+        backupPreview.value = null
+        viewModelScope.launch {
+            try {
+                backupPreview.value = app.backupManager.preview(uri)
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (_: Exception) {
+                error.value = "فایل پشتیبان معتبر یا پشتیبانی‌شده نیست؛ داده‌های فعلی تغییری نکردند."
+            } finally {
+                backupBusy.value = false
+            }
+        }
+    }
+
+    fun dismissBackupPreview() { if (!backupBusy.value) backupPreview.value = null }
+
+    fun restoreBackup() {
+        val preview = backupPreview.value ?: return
+        if (busy.value || epgBusy.value || backupBusy.value) {
+            error.value = "پیش از بازیابی، عملیات جاری را تمام کن."
+            return
+        }
+        busy.value = true
+        backupBusy.value = true
+        error.value = null
+        viewModelScope.launch {
+            try {
+                app.backupManager.restore(preview.backup)
+                backupPreview.value = null
+                notice.value = "بازیابی کامل شد؛ فهرست‌ها، علاقه‌مندی‌ها، سابقه و تنظیمات جایگزین شدند."
+            } catch (cancelled: CancellationException) {
+                throw cancelled
+            } catch (_: Exception) {
+                error.value = "بازیابی انجام نشد؛ داده‌های قبلی حفظ شدند. فایل را بررسی کن و دوباره تلاش کن."
+            } finally {
+                busy.value = false
+                backupBusy.value = false
+            }
+        }
+    }
+
+    fun backupPickerUnavailable() {
+        error.value = "انتخاب‌گر فایل در این دستگاه در دسترس نیست."
+    }
+
     /** Set busy before launch, so rapid clicks cannot start overlapping source mutations. */
     private fun runSourceOperation(action: suspend () -> Unit) {
-        if (busy.value) return
+        if (busy.value || backupBusy.value) return
         busy.value = true
         error.value = null
         viewModelScope.launch {
@@ -113,7 +192,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
     }
 
     fun selectSource(id: String) {
-        if (!busy.value) viewModelScope.launch { error.value = null; app.settings.selectSource(id) }
+        if (!busy.value && !backupBusy.value) viewModelScope.launch { error.value = null; app.settings.selectSource(id) }
     }
     fun refresh() = refreshSource(settings.value.sourceId)
     fun refreshSource(id: String) = runSourceOperation {
@@ -190,7 +269,7 @@ class MainViewModel(application: Application, private val savedState: SavedState
     }
 
     private fun runEpgOperation(id: String, action: suspend () -> Unit) {
-        if (epgBusy.value || busy.value || !settings.value.loaded) return
+        if (epgBusy.value || busy.value || backupBusy.value || !settings.value.loaded) return
         val sequence = ++epgSequence
         epgSourceId = id
         epgBusy.value = true

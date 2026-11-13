@@ -57,6 +57,14 @@ data class FavoriteEntity(@PrimaryKey val channelId: String, val savedAt: Long)
 @Entity(tableName = "history")
 data class HistoryEntity(@PrimaryKey val channelId: String, val playedAt: Long)
 
+data class ChannelDatabaseSnapshot(
+    val sources: List<SourceEntity>,
+    val channels: List<ChannelEntity>,
+    val sourceChannels: List<SourceChannelEntity>,
+    val favorites: List<FavoriteEntity>,
+    val history: List<HistoryEntity>,
+)
+
 @Dao
 abstract class ChannelDao {
     @Query("SELECT * FROM sources ORDER BY updatedAt DESC")
@@ -80,6 +88,21 @@ abstract class ChannelDao {
     @Query("SELECT * FROM sources WHERE id = :sourceId LIMIT 1")
     abstract suspend fun source(sourceId: String): SourceEntity?
 
+    @Query("SELECT * FROM sources")
+    abstract suspend fun allSources(): List<SourceEntity>
+
+    @Query("SELECT * FROM channels")
+    abstract suspend fun allChannels(): List<ChannelEntity>
+
+    @Query("SELECT * FROM source_channels")
+    abstract suspend fun allSourceChannels(): List<SourceChannelEntity>
+
+    @Query("SELECT * FROM favorites")
+    abstract suspend fun allFavorites(): List<FavoriteEntity>
+
+    @Query("SELECT * FROM history")
+    abstract suspend fun allHistory(): List<HistoryEntity>
+
     @Query("SELECT * FROM channels WHERE id = :id LIMIT 1")
     abstract suspend fun channel(id: String): ChannelEntity?
 
@@ -94,6 +117,21 @@ abstract class ChannelDao {
 
     @Query("DELETE FROM source_channels WHERE sourceId = :sourceId")
     abstract suspend fun clearReferences(sourceId: String)
+
+    @Query("DELETE FROM source_channels")
+    abstract suspend fun clearAllReferences()
+
+    @Query("DELETE FROM favorites")
+    abstract suspend fun clearAllFavorites()
+
+    @Query("DELETE FROM history")
+    abstract suspend fun clearAllHistory()
+
+    @Query("DELETE FROM sources")
+    abstract suspend fun clearAllSources()
+
+    @Query("DELETE FROM channels")
+    abstract suspend fun clearAllChannels()
 
     @Query("UPDATE sources SET title = :title WHERE id = :sourceId")
     abstract suspend fun renameSourceRecord(sourceId: String, title: String): Int
@@ -139,6 +177,30 @@ abstract class ChannelDao {
     open suspend fun recordPlayback(id: String) {
         saveHistory(HistoryEntity(id, System.currentTimeMillis()))
         trimHistory()
+    }
+
+    @Transaction
+    open suspend fun backupSnapshot(): ChannelDatabaseSnapshot = ChannelDatabaseSnapshot(
+        sources = allSources(),
+        channels = allChannels(),
+        sourceChannels = allSourceChannels(),
+        favorites = allFavorites(),
+        history = allHistory(),
+    )
+
+    /** Replace all persisted catalog state atomically after a validated backup is confirmed. */
+    @Transaction
+    open suspend fun restoreSnapshot(snapshot: ChannelDatabaseSnapshot) {
+        clearAllReferences()
+        clearAllFavorites()
+        clearAllHistory()
+        clearAllSources()
+        clearAllChannels()
+        if (snapshot.channels.isNotEmpty()) saveChannels(snapshot.channels)
+        if (snapshot.sources.isNotEmpty()) snapshot.sources.forEach { saveSource(it) }
+        if (snapshot.sourceChannels.isNotEmpty()) saveReferences(snapshot.sourceChannels)
+        if (snapshot.favorites.isNotEmpty()) snapshot.favorites.forEach { addFavorite(it) }
+        if (snapshot.history.isNotEmpty()) snapshot.history.forEach { saveHistory(it) }
     }
 
     /** A failed/empty fetch must never call this or destroy last-known-good metadata. */

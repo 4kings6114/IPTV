@@ -62,6 +62,13 @@ class EpgRepository(
         }
     }
 
+    /** Remove derived catalog aliases before replacing source rows with a restored snapshot. */
+    suspend fun invalidateAliases(ids: Set<String>) = withContext(Dispatchers.IO) {
+        gate.withLock {
+            ids.forEach(channelIds::remove)
+        }
+    }
+
     /** Also usable after Room deletion; never touches channel/favorite/history records. */
     suspend fun remove(id: String) = withContext(Dispatchers.IO) {
         gate.withLock {

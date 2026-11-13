@@ -141,6 +141,53 @@ class SettingsStoreTest {
         } finally { scope.cancel() }
     }
 
+    @Test fun backupRestoreResetsDeviceConsentsAndPinButReplacesSafePreferences() = runBlocking {
+        val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+        try {
+            val context = ApplicationProvider.getApplicationContext<Application>()
+            val store = SettingsStore(context, scope)
+            withTimeout(20_000) {
+                store.state.first { it.loaded }
+                store.allowHttp(true)
+                store.automaticPictureInPicture(true)
+                store.setParentalPin("4815")
+                store.epgUrl("old-source", "https://example.invalid/old.xml")
+                store.selectSource("old-source")
+                store.state.first { it.sourceId == "old-source" && it.allowHttp && it.autoPictureInPicture && it.parentalControlEnabled }
+
+                val backup = BackupPreferences(
+                    sourceId = "restored-source", showLogos = false, themeStyle = "plum", bufferProfile = "large",
+                    playerOrientation = "landscape", hideSourceSelector = true, sleepTimerMinutes = 30, rewindSeconds = 15,
+                    fullScreenResizeMode = "zoom", windowedResizeMode = "fill", controllerTimeoutMs = 10_000,
+                    showPlayerClock = true, audioDecoderFallback = false, textScale = 1.2f, screenScale = 0.9f,
+                    epgUrls = mapOf("restored-source" to "https://example.invalid/guide.xml"),
+                )
+                store.restoreFromBackup(backup)
+
+                val restored = store.state.first { it.sourceId == "restored-source" && it.themeStyle == "plum" }
+                assertFalse(restored.allowHttp)
+                assertFalse(restored.autoPictureInPicture)
+                assertFalse(restored.parentalControlEnabled)
+                assertTrue(restored.parentalPinHash.isEmpty())
+                assertTrue(store.verifyParentalPin("4815").not())
+                assertFalse(restored.showLogos)
+                assertEquals("large", restored.bufferProfile)
+                assertEquals("landscape", restored.playerOrientation)
+                assertEquals(30, restored.sleepTimerMinutes)
+                assertEquals(15, restored.rewindSeconds)
+                assertEquals("zoom", restored.fullScreenResizeMode)
+                assertEquals("fill", restored.windowedResizeMode)
+                assertEquals(10_000, restored.controllerTimeoutMs)
+                assertTrue(restored.showPlayerClock)
+                assertFalse(restored.audioDecoderFallback)
+                assertEquals(1.2f, restored.textScale)
+                assertEquals(0.9f, restored.screenScale)
+                assertEquals("https://example.invalid/guide.xml", restored.epgUrl)
+                assertEquals("", store.epgUrlFor("old-source"))
+            }
+        } finally { scope.cancel() }
+    }
+
     @Test fun forgettingOnlyTheSelectedSourcePreservesOtherSelectionsAndPreferences() = runBlocking {
         val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
         try {

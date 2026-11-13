@@ -171,6 +171,58 @@ class SettingsStore(context: Context, scope: CoroutineScope) {
     suspend fun parentalControl(enabled: Boolean) {
         store.edit { it[parentalEnabled] = enabled }
     }
+    suspend fun backupPreferences(): BackupPreferences {
+        val current = state.first { it.loaded }
+        val epgUrls = store.data.first().asMap().mapNotNull { (key, value) ->
+            if (key.name.startsWith("xmltv_url_")) (value as? String)?.let { key.name.removePrefix("xmltv_url_") to it }
+            else null
+        }.toMap()
+        return BackupPreferences(
+            sourceId = current.sourceId,
+            showLogos = current.showLogos,
+            themeStyle = current.themeStyle,
+            bufferProfile = current.bufferProfile,
+            playerOrientation = current.playerOrientation,
+            hideSourceSelector = current.hideSourceSelector,
+            sleepTimerMinutes = current.sleepTimerMinutes,
+            rewindSeconds = current.rewindSeconds,
+            fullScreenResizeMode = current.fullScreenResizeMode,
+            windowedResizeMode = current.windowedResizeMode,
+            controllerTimeoutMs = current.controllerTimeoutMs,
+            showPlayerClock = current.showPlayerClock,
+            audioDecoderFallback = current.audioDecoderFallback,
+            textScale = current.textScale,
+            screenScale = current.screenScale,
+            epgUrls = epgUrls,
+        )
+    }
+
+    /** Restores transferable preferences only; network/PiP consent and parental PIN are device-local. */
+    suspend fun restoreFromBackup(value: BackupPreferences) {
+        store.edit { preferences ->
+            preferences.clear()
+            preferences[source] = value.sourceId
+            preferences[http] = false
+            preferences[logos] = value.showLogos
+            preferences[autoPip] = false
+            preferences[theme] = value.themeStyle
+            preferences[buffer] = value.bufferProfile
+            preferences[orientation] = value.playerOrientation
+            preferences[hideSource] = value.hideSourceSelector
+            preferences[sleepTimer] = value.sleepTimerMinutes
+            preferences[rewind] = value.rewindSeconds
+            preferences[fullScreenResize] = value.fullScreenResizeMode
+            preferences[windowedResize] = value.windowedResizeMode
+            preferences[controllerTimeout] = value.controllerTimeoutMs
+            preferences[playerClock] = value.showPlayerClock
+            preferences[decoderFallback] = value.audioDecoderFallback
+            preferences[textScaleKey] = value.textScale
+            preferences[screenScaleKey] = value.screenScale
+            preferences[parentalEnabled] = false
+            value.epgUrls.forEach { (id, url) -> if (url.isNotBlank()) preferences[epgKey(id)] = url }
+        }
+    }
+
     suspend fun epgUrlFor(id: String): String = store.data.first()[epgKey(id)].orEmpty()
     suspend fun epgUrl(id: String, url: String) {
         store.edit { if (url.isBlank()) it.remove(epgKey(id)) else it[epgKey(id)] = url }

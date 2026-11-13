@@ -38,6 +38,52 @@ class AppDatabaseTest {
         assertEquals(listOf(one.id), dao.observeFavorites().first().map { it.id })
         assertEquals(listOf(one.id), dao.observeHistory().first().map { it.id })
     }
+    @Test fun restoreSnapshotReplacesCatalogFavoritesAndHistoryAsOneUnit() = runBlocking {
+        val old = source("old")
+        dao.replaceSource(old, listOf(one))
+        dao.toggleFavorite(one.id)
+        dao.recordPlayback(one.id)
+
+        val replacementChannel = two.copy(headers = mapOf("user-agent" to "backup test"))
+        val replacementEntity = replacementChannel.entity()
+        val replacement = ChannelDatabaseSnapshot(
+            sources = listOf(source("restored")),
+            channels = listOf(replacementEntity),
+            sourceChannels = listOf(SourceChannelEntity("restored", replacementChannel.id, 0)),
+            favorites = listOf(FavoriteEntity(replacementChannel.id, 20)),
+            history = listOf(HistoryEntity(replacementChannel.id, 30)),
+        )
+        dao.restoreSnapshot(replacement)
+
+        assertEquals(listOf("restored"), dao.allSources().map { it.id })
+        assertEquals(listOf(replacementChannel.id), dao.observeSource("restored").first().map { it.id })
+        assertTrue(dao.isFavorite(replacementChannel.id))
+        assertFalse(dao.isFavorite(one.id))
+        assertEquals(replacementChannel.id, dao.observeHistory().first().single().id)
+        assertEquals("backup test", dao.channel(replacementChannel.id)!!.channel().headers["user-agent"])
+    }
+
+    @Test fun failedRestoreSnapshotRollsBackAllDeletedRows() = runBlocking {
+        dao.replaceSource(source("old"), listOf(one))
+        dao.toggleFavorite(one.id)
+        val replacement = ChannelDatabaseSnapshot(
+            sources = listOf(source("new")), channels = listOf(two.entity()),
+            sourceChannels = listOf(SourceChannelEntity("new", two.id, 0)),
+            favorites = emptyList(), history = emptyList(),
+        )
+        database.openHelper.writableDatabase.execSQL(
+            "CREATE TRIGGER reject_backup_channel BEFORE INSERT ON channels BEGIN SELECT RAISE(ABORT, 'test restore rollback'); END",
+        )
+
+        var rejected = false
+        try { dao.restoreSnapshot(replacement) } catch (_: android.database.sqlite.SQLiteException) { rejected = true }
+
+        assertTrue(rejected)
+        assertEquals(listOf("old"), dao.allSources().map { it.id })
+        assertEquals(one.id, dao.observeSource("old").first().single().id)
+        assertTrue(dao.isFavorite(one.id))
+    }
+
     @Test fun emptyRefreshCannotDestroyLastKnownGoodSource() = runBlocking {
         dao.replaceSource(source(), listOf(one))
         try {
