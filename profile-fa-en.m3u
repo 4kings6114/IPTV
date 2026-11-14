@@ -4,11 +4,13 @@ https://hls.4utv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AbadanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/3/39/Abadan_tv.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Abadan TV (1080p)
 https://live-aburayhan1111.telewebion.ir/ek/abadan/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="AflakTV.ir@SD" tvg-logo="https://i.imgur.com/LkLCHpf.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aflak TV (576p)
-https://live-aburayhan1108.telewebion.ir/ek/aflak/live/576p/index.m3u8
+https://live-aburayhan1107.telewebion.ir/ek/aflak/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="AftabTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/6/6e/Arak_AFTAB.svg/960px-Arak_AFTAB.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aftab TV (1080p)
-https://live-aburayhan1101.telewebion.ir/ek/aftab/live/1080p/index.m3u8
+https://live-aburayhan1102.telewebion.ir/ek/aftab/live/1080p/index.m3u8
+#EXTINF:-1 tvg-id="AlMahdiTV.us@SD" tvg-logo="https://i.imgur.com/S1YM83i.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Al-Mahdi TV (1080p)
+https://iptv.almahditv.com/almahditv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlborzTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Alborz_TV_logo.svg/960px-Alborz_TV_logo.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Alborz TV (1080p)
-https://live-aburayhan1105.telewebion.ir/ek/alborz/live/1080p/index.m3u8
+https://live-aburayhan1110.telewebion.ir/ek/alborz/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arax TV
 https://araxhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ArkoTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arko TV
@@ -16,29 +18,31 @@ https://arkhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ArvanTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arvan TV
 https://arvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AtrakTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/28/Bojnourd_ATRAK_TV.svg/960px-Bojnourd_ATRAK_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Atrak TV (576p)
-https://live-aburayhan1111.telewebion.ir/ek/atrak/live/576p/index.m3u8
+https://live-aburayhan1103.telewebion.ir/ek/atrak/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="BaranTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/b/b9/TV_Baran.svg/500px-TV_Baran.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Baran TV (1080p)
-https://live-aburayhan1112.telewebion.ir/ek/baran/live/1080p/index.m3u8
+https://live-aburayhan1102.telewebion.ir/ek/baran/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="BoushehrTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/9/94/Bushehr_TV.svg/500px-Bushehr_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Boushehr TV (576p)
-https://live-aburayhan1105.telewebion.ir/ek/bushehr/live/576p/index.m3u8
+https://live-aburayhan1102.telewebion.ir/ek/bushehr/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="DenaTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/1/1c/Yasuj_DENA.svg/960px-Yasuj_DENA.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Dena TV (576p)
-https://live-aburayhan1105.telewebion.ir/ek/dena/live/576p/index.m3u8
+https://live-aburayhan1113.telewebion.ir/ek/dena/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="ErfanHalghehTV.ca@SD" tvg-logo="https://i.ibb.co/mGC5BMR/erfan-halgheh-tv-au.png" tvg-country="ca" tvg-language="fa" group-title="فارسی - تلویزیون",Erfan Halgheh TV (720p)
 https://hls.erfanhalgheh.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="EshraghNetwork.ir@SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3AM7W8mE877olzjDXmTN_Sxn_cmR_WAlDKPmE62G8E3cJPJwKdRnIa42quYie9z71Lwo&usqp=CAU" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Eshragh Network (1080p)
-https://live-aburayhan1110.telewebion.ir/ek/eshragh/live/1080p/index.m3u8
+https://live-aburayhan1112.telewebion.ir/ek/eshragh/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="FarsTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/7/7b/Iribfars.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Fars TV (1080p)
-https://live-aburayhan1111.telewebion.ir/ek/fars/live/1080p/index.m3u8
+https://live-aburayhan1101.telewebion.ir/ek/fars/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="FX1.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",FX 1
 https://fxtvhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="FX2.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",FX 2
+https://toonixhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="GanjeHozourTV.us@SD" tvg-logo="https://i.imgur.com/TnQYtKh.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Ganj e Hozour TV (1080p)
 https://media.parvizshahbazi.com/ganjehozour/Main_tv/chunks.m3u8
 #EXTINF:-1 tvg-id="GolkhaneTv.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/686599d8-c1ee-4557-aa72-b1293a21906d/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Golkhane Tv (720p)
 https://live-aburayhan1108.telewebion.ir/ek/golkhane/live/720p/index.m3u8
 #EXTINF:-1 tvg-id="HamedanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/IRIB_Hamadan_tv.svg/960px-IRIB_Hamadan_tv.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamedan TV (1080p)
-https://live-aburayhan1101.telewebion.ir/ek/sina/live/1080p/index.m3u8
+https://live-aburayhan1107.telewebion.ir/ek/sina/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="HamoonTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/b/bc/Zahedan_Hamoon.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamoon TV (1080p)
-https://live-aburayhan1105.telewebion.ir/ek/hamoon/live/1080p/index.m3u8
+https://live-aburayhan1104.telewebion.ir/ek/hamoon/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="ICnet1.ca@SD" tvg-logo="https://i.imgur.com/aeS4Sjv.png" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",ICnet 1
 https://icnet1hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ICnet2.ca@SD" tvg-logo="https://i.imgur.com/Ke5xn4E.png" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",ICnet 2
@@ -46,37 +50,37 @@ https://icnet2hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="icnet3.ca@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",icnet 3
 https://ic3hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="IlamTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Ilam_TV.png/960px-Ilam_TV.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Ilam TV (576p)
-https://live-aburayhan1107.telewebion.ir/ek/ilam/live/576p/index.m3u8
+https://live-aburayhan1109.telewebion.ir/ek/ilam/live/576p/index.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="IranJewishTV.ir@SD" tvg-logo="https://i.ibb.co/JWXs7csN/en.png" tvg-country="ir" tvg-language="fa",Iran Jewish TV
 http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
 #EXTINF:-1 tvg-id="IranNationalRevolutionTV.us@HD" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Iran National Revolution TV
 https://hls.irannrtv.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="IsfahanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/IsfahanTV.svg/960px-IsfahanTV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Isfahan TV (1080p)
-https://live-aburayhan1110.telewebion.ir/ek/esfahan/live/1080p/index.m3u8
+https://live-aburayhan1107.telewebion.ir/ek/esfahan/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="JahanbinTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/4/4a/Shahrekord_Jahanbin.svg/960px-Shahrekord_Jahanbin.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Jahanbin TV (1080p)
-https://live-aburayhan1109.telewebion.ir/ek/jahanbin/live/1080p/index.m3u8
+https://live-aburayhan1102.telewebion.ir/ek/jahanbin/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="KanalJadid.uk@SD" tvg-logo="https://i.imgur.com/7oGGgfD.png" group-title="فارسی - تلویزیون" tvg-country="uk" tvg-language="fa",Kanal Jadid
 https://kjhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="KermanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Kerman_irib_logo_%28blue_version%29.png/960px-Kerman_irib_logo_%28blue_version%29.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kerman TV (1080p)
 https://live-aburayhan1103.telewebion.ir/ek/kerman/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="KhalijeFarsTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/7/7c/Bandar_KHALI_J_e_FARS_TV.svg/960px-Bandar_KHALI_J_e_FARS_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khalij-e Fars TV (576p)
-https://live-aburayhan1103.telewebion.ir/ek/khalijefars/live/576p/index.m3u8
+https://live-aburayhan1104.telewebion.ir/ek/khalijefars/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="KhavaranTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/8/86/KHAVARAN_tv.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khavaran TV (576p)
-https://live-aburayhan1111.telewebion.ir/ek/khavaran/live/576p/index.m3u8
+https://live-aburayhan1105.telewebion.ir/ek/khavaran/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="KhorasanRazaviTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/b/bd/%D9%84%D9%88%DA%AF%D9%88_%D8%B4%D8%A8%DA%A9%D9%87_%D8%AE%D8%B1%D8%A7%D8%B3%D8%A7%D9%86_%D8%B1%D8%B6%D9%88%DB%8C.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khorasan Razavi TV (1080p)
-https://live-aburayhan1111.telewebion.ir/ek/khorasanrazavi/live/1080p/index.m3u8
+https://live-aburayhan1104.telewebion.ir/ek/khorasanrazavi/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="KhozestanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/9/9a/Ahwaz_TV.svg/960px-Ahwaz_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khozestan TV (1080p)
-https://live-aburayhan1105.telewebion.ir/ek/khoozestan/live/1080p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/khoozestan/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="KishTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/1/14/Kish_tv.svg/960px-Kish_tv.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kish TV (576p)
-https://live-aburayhan1102.telewebion.ir/ek/kish/live/576p/index.m3u8
+https://live-aburayhan1101.telewebion.ir/ek/kish/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="KordestanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/2c/Sanandaj_KORDESTAN.svg/960px-Sanandaj_KORDESTAN.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kordestan TV (576p)
-https://live-aburayhan1111.telewebion.ir/ek/kordestan/live/576p/index.m3u8
+https://live-aburayhan1113.telewebion.ir/ek/kordestan/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="MahabadTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/c/cb/Mahabad_tv.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Mahabad TV (576p)
-https://live-aburayhan1107.telewebion.ir/ek/mahabad/live/576p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/mahabad/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="MTC.us@SD" tvg-logo="https://i.imgur.com/JxoAR4j.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",MTC
 https://mtchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/c/ce/Qum_Noor_TV.svg/960px-Qum_Noor_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Noor TV (1080p)
-https://live-aburayhan1108.telewebion.ir/ek/noor/live/1080p/index.m3u8
+https://live-aburayhan1101.telewebion.ir/ek/noor/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Omid e Iran TV
 https://oitnhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ParsTV.us@SD" tvg-logo="https://i.imgur.com/RQ5DzEE.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Pars TV
@@ -90,39 +94,39 @@ https://turkhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PooyaTV.ir@SD" tvg-logo="https://i.imgur.com/hjeQUtg.png" tvg-country="ir" tvg-language="fa",Pooya TV
 https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="QazvinTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/QazvinTV.svg/960px-QazvinTV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Qazvin TV (576p)
-https://live-aburayhan1112.telewebion.ir/ek/qazvin/live/576p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/qazvin/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" tvg-country="ir" tvg-language="fa" group-title="فارسی - تلویزیون",RasoulallahTv (1080p)
 https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RoyaTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/0e3d7425-1a1b-47c4-b020-2e09a5fc2598/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Roya TV (720p)
-https://live-aburayhan1110.telewebion.ir/na/iribu/live/720p/index.m3u8
+https://live-aburayhan1102.telewebion.ir/na/iribu/live/720p/index.m3u8
 #EXTINF:-1 tvg-id="SabalanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/f/f2/Ardabil_SABALAN.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabalan TV (576p)
-https://live-aburayhan1103.telewebion.ir/ek/sabalan/live/576p/index.m3u8
+https://live-aburayhan1105.telewebion.ir/ek/sabalan/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="SabzTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Logo_Golestan.png/960px-Logo_Golestan.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabz TV (576p)
-https://live-aburayhan1108.telewebion.ir/ek/sabz/live/576p/index.m3u8
+https://live-aburayhan1101.telewebion.ir/ek/sabz/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="SahandTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/3/37/Tabriz_Sahand.svg/960px-Tabriz_Sahand.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sahand TV (1080p)
-https://live-aburayhan1106.telewebion.ir/ek/sahand/live/1080p/index.m3u8
+https://live-aburayhan1105.telewebion.ir/ek/sahand/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="SemnanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/3/35/Semnan_TV.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Semnan TV (1080p)
-https://live-aburayhan1113.telewebion.ir/ek/semnan/live/1080p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/semnan/live/1080p/index.m3u8
 #EXTINF:-1 tvg-id="Shabakeh7.us@SD" tvg-logo="https://i.imgur.com/oHmh5Jb.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Shabakeh 7
 https://sh7hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TabarestanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/IRIB_Mazandaran_Last_Orange_Logo.png/960px-IRIB_Mazandaran_Last_Orange_Logo.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Tabarestan TV (1080p)
-https://live-aburayhan1109.telewebion.ir/ek/tabarestan/live/1080p/index.m3u8
+https://live-aburayhan1110.telewebion.ir/ek/tabarestan/live/1080p/index.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TBNNejatTV.ir@SD" tvg-logo="https://i.imgur.com/e4WffQA.png" tvg-country="ir" tvg-language="fa",TBN Nejat TV
 https://hls.nejat.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD" tvg-logo="https://i.imgur.com/U4sKHWy.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",TV ITN
 https://itnhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="VelayatTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/ae05de5b-9fe4-4012-900a-4d0763d6fafc/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Velayat TV (720p)
-https://live-aburayhan1103.telewebion.ir/ek/velayat/live/720p/index.m3u8
+#EXTINF:-1 tvg-id="VelayatTV.ir@SD" tvg-logo="https://static.telewebion.com/channelsLogo/ae05de5b-9fe4-4012-900a-4d0763d6fafc/default" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Velayat TV
+https://ncdn.telewebion.ir/velayat/live/playlist.m3u8
 #EXTINF:-1 tvg-id="VelayatTVNetwork.us@SD" tvg-logo="https://i.imgur.com/bRQSzhs.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Velayat TV Network (480p)
 https://nl.livekadeh.com/hls2/velayattv.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="VoATVPersian.us@SD" tvg-logo="https://i.imgur.com/TmqComb.png" tvg-country="us" tvg-language="fa",VOA Persian (1080p)
 https://voa-ingest.akamaized.net/hls/live/2033876/tvmc07/playlist.m3u8
 #EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/2/21/Urmia_TV.svg/960px-Urmia_TV.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",West Azerbaijan TV (576p)
-https://live-aburayhan1104.telewebion.ir/ek/azarbayjangharbi/live/576p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/azarbayjangharbi/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="YazdTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Yazd_taban.svg/960px-Yazd_taban.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Yazd TV (576p)
-https://live-aburayhan1108.telewebion.ir/ek/taban/live/576p/index.m3u8
+https://live-aburayhan1107.telewebion.ir/ek/taban/live/576p/index.m3u8
 #EXTINF:-1 tvg-id="ZagrosTV.ir@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/fa/thumb/e/e4/Kermanshah_Zaghros.svg/960px-Kermanshah_Zaghros.svg.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Zagros TV (576p)
-https://live-aburayhan1103.telewebion.ir/ek/zagros/live/576p/index.m3u8
+https://live-aburayhan1111.telewebion.ir/ek/zagros/live/576p/index.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="247BoxTV.ir@SD" tvg-logo="https://i.imgur.com/t5AUthL.png" tvg-country="ir" tvg-language="fa",247 Box TV
 https://hls.247box.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AfraFilm.ir@SD" tvg-logo="" group-title="فارسی - فیلم و سریال" tvg-country="ir" tvg-language="fa",Afra Film
@@ -193,6 +197,8 @@ https://rjtvhls.wns.live/hls/stream.m3u8
 https://t2hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="BBCPersian.uk@SD" tvg-logo="https://i.imgur.com/4uTMnPb.png" group-title="اخبار - فارسی" tvg-country="uk" tvg-language="fa",BBC Persian (1080p)
 https://vs-cmaf-pushb-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_persian_tv/hevc_iptv_mse_v0.mpd
+#EXTINF:-1 tvg-id="DidgahTV.us@SD" tvg-logo="https://i.imgur.com/3SeAyBS.png" tvg-country="us" tvg-language="fa" group-title="اخبار - فارسی",Didgah TV (486p)
+https://media.streambrothers.com:1936/8276/8276/main_stream.m3u8?s=3c1025e786aea01d4aff39f7
 #EXTINF:-1 group-title="اخبار - فارسی" tvg-id="iranintl.iitv" tvg-logo="https://i.imgur.com/55RpaF3.png" tvg-country="uk" tvg-language="fa" x-original-tvg-id="IranInternational.uk@SD",Iran International (1080p)
 https://hlspackager.akamaized.net/live/DB/IRAN_INTERNATIONAL/HLS/IRAN_INTERNATIONAL.m3u8
 #EXTINF:-1 tvg-id="IraneFardaTV.uk@SD" tvg-logo="https://i.imgur.com/ixgcgZY.png" tvg-country="uk" tvg-language="fa" group-title="اخبار - فارسی",IraneFarda TV
@@ -204,11 +210,11 @@ https://iptv.mihantv.com/mihantv/playlist.m3u8
 #EXTINF:-1 tvg-id="NationalIranianCongressTV.us@SD" tvg-logo="https://iraniancongress.com/tv/logo.png" tvg-country="us" tvg-language="fa" group-title="اخبار - فارسی",National Iranian Congress TV
 https://tv.iraniancongress.com/stream/tv.m3u8
 #EXTINF:-1 tvg-name="ABC News" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/ABC_News_Channel.svg/500px-ABC_News_Channel.svg.png" tvg-id="ABCNews.au" tvg-chno="5" tvg-country="au" group-title="اخبار - انگلیسی" tvg-language="en",ABC News (720p)
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/7c7a6abe4d604faca4d6b91f6567558f/hdntl=exp=1794652079~acl=%2f*~data=hdntl~hmac=290ce5dce315c6af42582c520061b2281e63839b061800b7669a4a6592c94cd9/index_47.m3u8
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/7c7a6abe4d604faca4d6b91f6567558f/hdntl=exp=1794736193~acl=%2f*~data=hdntl~hmac=fba51f0e59c2af69a06fb672547da1689810dcc2621348bd47e2aa656ebb6f3c/index_47.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="ABCNews.au@Sydney" tvg-logo="https://i.imgur.com/BrW7gk8.png" tvg-country="au" tvg-language="en",ABC News (720p)
 https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8
 #EXTINF:-1 tvg-name="America's Voice" tvg-logo="https://graph.facebook.com/RealAmericasVoice/picture?width=200&height=200" tvg-id="AmericasVoice.us" tvg-chno="9" tvg-country="us" group-title="اخبار - انگلیسی" tvg-language="en",America's Voice (720p)
-https://d2jiqiw4g5lj5k.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/AmericasVoiceChannel-prod/3ab52302-9e24-44ab-951b-077e643c9b9c/0.m3u8
+https://d2jiqiw4g5lj5k.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/AmericasVoiceChannel-prod/8179fa3c-3693-4abc-a1b5-d3030ef7a376/0.m3u8
 #EXTINF:-1 tvg-name="BBC News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png" tvg-id="BBCNews.uk" tvg-chno="231" tvg-country="uk" group-title="اخبار - انگلیسی" tvg-language="en",BBC News
 https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
 #EXTINF:-1 tvg-id="BBCNews.uk@Europe" tvg-logo="https://dtil.tmsimg.com/assets/s158142_ld_h15_aa.png?lock=720x540" tvg-country="uk" tvg-language="en" group-title="اخبار - انگلیسی",BBC News (576p)
@@ -241,7 +247,7 @@ https://tvsen6.aynaott.com/cnn/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
 http://103.253.74.210:7070/stream/115/index.m3u8
 #EXTINF:-1 tvg-id="CNNInternational.us@LatinAmerica" tvg-logo="https://i.imgur.com/dfxefQw.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",CNN International (1080p)
-http://168.228.44.241:9997/play/a073/16757757.m3u8
+http://168.228.44.241:9997/play/a073/50535817.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNNInternational.us@Europe" tvg-logo="https://i.imgur.com/dfxefQw.png" tvg-country="us" tvg-language="en",CNN International (1080p)
 https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="CNNInternational.us@NorthAmerica" tvg-logo="https://i.imgur.com/dfxefQw.png" tvg-country="us" tvg-language="en",CNN International North America (1080p)
@@ -262,8 +268,8 @@ https://p14.usnlive.com/stream/foxnews.m3u8
 http://103.253.74.210:7070/stream/124/index.m3u8
 #EXTINF:-1 tvg-id="FoxNewsRadio.us@SD" tvg-logo="https://radio.foxnews.com/wp-content/uploads/2017/10/default_logo-150x150.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Fox News Radio (720p)
 https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8
-#EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="France24.fr@English" tvg-logo="https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540" tvg-country="fr" tvg-language="en",France 24 English (1080p)
-https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_5000.m3u8
+#EXTINF:-1 tvg-id="France24.fr@English" tvg-logo="https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540" tvg-country="fr" tvg-language="en" group-title="اخبار - انگلیسی",France 24 (1080p)
+https://ec01-pop1-hlc.tv360.vn/bpk-token/x3qeqh5p3n4r7mvrpvrl7ycid67oasa7/bpk-tv/470/output/470-audio_198800_eng=196800-video=5256400.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="FreeSpeechTV.us@SD" tvg-logo="https://i.imgur.com/Qq6heRq.png" tvg-country="us" tvg-language="en",Free Speech TV (720p)
 https://na.linear.zype.com/f2f02a72-71d0-45f3-829f-4ae51f721102/86ef0177-697d-41c4-be57-c4d1a2b83cad-hls4/live.m3u8
 #EXTINF:-1 tvg-id="GBNews.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/GB_News_Logo.svg/960px-GB_News_Logo.svg.png" tvg-country="uk" tvg-language="en" group-title="اخبار - انگلیسی",GB News (1080p)
@@ -283,19 +289,9 @@ https://tvsen6.aynaott.com/msnbc/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NBCNewsNOW.us@SD" tvg-logo="https://i.imgur.com/JZt2qh5.png" tvg-country="us" tvg-language="en",NBC News NOW (1080p)
 https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003
 #EXTINF:-1 tvg-id="NewsoftheWorld.us@USA" tvg-logo="https://i.imgur.com/MfyRQCs.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News of the World (1080p)
-https://live.nowtelly.com/now_usa/live_usa/chunks.m3u8?nimblesessionid=80588427
-#EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-id="News12HudsonValley.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Hudson Valley (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/index_new.m3u8?omap=https
-#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Connecticut (1080p)
-https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
+https://live.nowtelly.com/now_usa/live_usa/chunks.m3u8?nimblesessionid=81406985
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (1080p)
-https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swncaf71d4f-7a3b-47e4-8ff7-00acec986725apple2apple/.rate_4101980/index_new_v_4101980_5.m3u8?lbhdk=-2028545904&sn=&corp=&lineupid=&fipscode=
+https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swn4f7a2195-0d67-4290-8c06-f74e15a1bc0dapple2apple/.rate_4101980/index_new_v_4101980_5.m3u8?lbhdk=-4356890&sn=&corp=&lineupid=&fipscode=
 #EXTINF:-1 tvg-id="Newsmax2.us@SD" tvg-logo="https://i.imgur.com/iE1izWq.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Newsmax 2 (720p)
 https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8
 #EXTINF:-1 tvg-id="NewsmaxTV.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Newsmax_logo.svg/960px-Newsmax_logo.svg.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",Newsmax TV (1080p)
@@ -306,10 +302,8 @@ https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/e3e6e290958
 https://stream-204968.castr.net/64e0c91d08bff3041638aee3/live_a4243540d4b911f0b624bda5e9a32aa9/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NTDTVEnglish.us@USA" tvg-logo="https://i.imgur.com/26uv1ww.png" tvg-country="us" tvg-language="en",NTD TV English (1080p)
 https://amg17596-amg17596c1-ntdtv-worldwide-3276.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-ntdtvworldwide/playlist.m3u8
-#EXTINF:-1 tvg-id="NTDTVEnglish.us@UK" tvg-logo="https://i.imgur.com/26uv1ww.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",NTD TV English (1080p)
-https://ntd02.akamaized.net/NTD-UK/index.m3u8
-#EXTINF:-1 tvg-id="OANPlus.us@SD" tvg-logo="https://i.imgur.com/0xW69iu.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",OAN Plus (1080p)
-https://a-cdn.herringnetwork.com/affiliate/oane/live/oane_1080p/chunks.m3u8
+#EXTINF:-1 tvg-id="OANPlus.us@SD" tvg-logo="https://i.imgur.com/0xW69iu.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",OAN Plus (720p)
+https://a-cdn.herringnetwork.com/affiliate/oane/playlist.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="OneAmericaNewsNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/One_America_News_Network_logo.svg/960px-One_America_News_Network_logo.svg.png" tvg-country="us" tvg-language="en",One America News Network (720p)
 http://23.237.104.106:8080/USA_OAN/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="PayvandTV.us@SD" tvg-logo="https://i.imgur.com/A4gqEmG.png" tvg-country="us" tvg-language="en",Payvand TV (720p)
@@ -325,7 +319,7 @@ https://live.rte.ie/live/a/channel3/channel3.isml/channel3-video=6000000.m3u8?dv
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="SalemNewsChannel.us@SD" tvg-logo="https://i.imgur.com/aDbc64y.png" tvg-country="us" tvg-language="en",Salem News Channel (1080p)
 https://amg00732-salemmediagroup-snc-ono-ekp8j.amagi.tv/playlist/amg00732-salemmediagroup-snc-ono/playlist.m3u8
 #EXTINF:-1 tvg-name="Scripps News" tvg-logo="https://i.imgur.com/W0Jvi5o.png" tvg-id="ScrippsNews.us" tvg-chno="28" group-title="اخبار - انگلیسی" tvg-country="us" tvg-language="en",Scripps News (720p)
-https://content-ause1-up-2.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37/e.m3u8?pbs=9313f57aee7c48a6b4b2c4d134c11666
+https://content-ausw2-up-2.uplynk.com/channel/4bb4901b934c4e029fd4c1abfc766c37/e.m3u8?pbs=d3cb90530cfc430dbb85d6001a98216f
 #EXTINF:-1 tvg-id="SkyNews.ie@SD" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1404.png" tvg-country="ie" tvg-language="en" group-title="اخبار - انگلیسی",Sky News
 https://dash4.antik.sk/live/test_skynews/playlist.m3u8
 #EXTINF:-1 tvg-id="SkyNewsExtra1.au@SD" tvg-logo="https://i.imgur.com/ZsPb8nL.png" tvg-country="au" tvg-language="en" group-title="اخبار - انگلیسی",Sky News Extra 1 (540p)
@@ -345,7 +339,7 @@ https://dash2.antik.sk/live/test_tvp_world/playlist.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="UNWebTV.us@SD" tvg-logo="https://i.imgur.com/UcAwBep.png" tvg-country="us" tvg-language="en",UN Web TV (540p)
 https://cdnapi.kaltura.com/p/2503451/sp/250345100/playManifest/entryId/1_gb6tjmle/protocol/https/format/applehttp/a.m3u8
 #EXTINF:-1 tvg-name="USA Today" tvg-logo="https://i.imgur.com/37K0AZX.png" tvg-id="USATODAY.us" tvg-chno="29" group-title="اخبار - انگلیسی" tvg-country="us" tvg-language="en",USA TODAY (1080p)
-https://amg00731-gannettcoinc-usatodaynews-plex-r45dz.amagi.tv/ts-us-e2-n1/playlist/amg00731-gannettcoinc-usatodaynews-plex/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266844769acabb2eda9a0f5de4dc5c372bb22c1f4cac0d11d63856248fbe495f8668e67c5215da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec32a942884ed8c72e90d0fed965e6c05a73aad9b1c8cf003c86/142/1920x1080_6046040/index.m3u8
+https://amg00731-gannettcoinc-usatodaynews-plex-r45dz.amagi.tv/ts-us-e2-n1/playlist/amg00731-gannettcoinc-usatodaynews-plex/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e037d98ccb57bde9b1014e7d80e2a37b27b4850e3071385744e748bef4c5bdc3ee77b0146bd3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df32ae428844cffc2e906c626a7cd26465c2631c119445f34d57/45/1920x1080_6046040/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="W14DKD142.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/98/NewsNetLogo2022.png" tvg-country="us" tvg-language="en",W14DK-D 14.2 NEWSNET
 https://2-fss-2.streamhoster.com/pl_118/204972-1954106-1/playlist.m3u8
 #EXTINF:-1 tvg-id="WSOCNow.us@SD" tvg-logo="https://i.imgur.com/tUb1mdc.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",WSOC Now (1080p)
@@ -359,17 +353,17 @@ https://bein-xtra-bein.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="CBSSportsGolazoNetwork.us@SD" tvg-logo="https://i.imgur.com/eMjutHS.png" tvg-country="us" tvg-language="en",CBS Sports Golazo Network (720p)
 https://dai.google.com/linear/hls/event/7f3Wv6f7QEKfQna22jHqLQ/master.m3u8
 #EXTINF:-1 tvg-id="CricketGold.au@SD" tvg-logo="https://resources.cricket-australia.pulselive.com/cricket-australia/photo/2025/07/25/836eddae-4329-4542-ad17-dcd37e9d951a/Cricket-Gold-1920x1080_noBG.png" tvg-country="au" tvg-language="en" group-title="ورزشی",Cricket Gold (1080p)
-https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/fed33eef291362bd9762db528f553c44/0.m3u8?ads.partner=yupptv
+https://streams2.sofast.tv/ptnr-yupptv/title-cricketgold/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b2048bb8-1686-4432-aa50-647245383e0c/ac79618b7663a1da9d76326c0b72e356/0.m3u8?ads.partner=yupptv
 #EXTINF:-1 group-title="ورزشی" tvg-id="DraftKingsNetwork.us@SD" tvg-logo="https://i.imgur.com/SFYhgrt.png" tvg-country="us" tvg-language="en",DraftKings Network (1080p)
 https://na.linear.zype.com/e0bd0e23-a958-4e43-8164-4f2fef8876a8/fd3614bd-90bf-4530-a277-65ae3a1720c8-zype/live.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ElevenSports1.pl@SD" tvg-logo="https://i.imgur.com/AOu4FXH.png" tvg-country="pl" tvg-language="en",Eleven Sports 1
 http://92.114.85.87:8002/play/a00e/index.m3u8
 #EXTINF:-1 tvg-id="ElevenSports2.pl@SD" tvg-logo="https://i.imgur.com/bTIRgqG.png" tvg-country="pl" tvg-language="en" group-title="ورزشی",Eleven Sports 2 (1080p)
-http://92.114.85.87:8002/play/a00f/25857778.m3u8
+http://92.114.85.87:8002/play/a00f/80515626.m3u8
 #EXTINF:-1 tvg-id="ElevenSports3.pl@SD" tvg-logo="https://i.imgur.com/bWjGol4.png" tvg-country="pl" tvg-language="en" group-title="ورزشی",Eleven Sports 3 (1080p)
-http://92.114.85.87:8002/play/a00g/64350235.m3u8
+http://92.114.85.87:8002/play/a00g/67890405.m3u8
 #EXTINF:-1 tvg-id="ElevenSports4.pl@SD" tvg-logo="https://i.imgur.com/SEKXaAW.png" tvg-country="pl" tvg-language="en" group-title="ورزشی",Eleven Sports 4 (1080p)
-http://92.114.85.87:8002/play/a00h/17613990.m3u8
+http://92.114.85.87:8002/play/a00h/81709767.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPN2.us@HD" tvg-logo="https://i.imgur.com/00tsvjE.png" tvg-country="us" tvg-language="en",ESPN 2 HD (720p)
 http://85.237.89.160:9590/usa-s/ESPN-2-HD/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPN.us@HD" tvg-logo="https://imgx.fubo.tv/station_logos/espn-hd_c.png" tvg-country="us" tvg-language="en",ESPN HD (720p)
@@ -382,7 +376,7 @@ http://103.253.74.210:7070/stream/122/index.m3u8
 #EXTINF:-1 tvg-id="Eurosport1.fr@UK" tvg-logo="https://i.imgur.com/olQJgm7.png" tvg-country="fr" tvg-language="en" group-title="ورزشی",Eurosport 1 (1080p)
 http://85.117.37.43/eurosport1/index.m3u8
 #EXTINF:-1 tvg-id="EurovisionSport.uk@Europe" tvg-logo="https://images.ctfassets.net/2b1dkanupt14/1A1Z8Gcn2NkbJRzTjxuj6h/2c14436cdc5b78e746a256e9f0c11a70/eurovision-icon.png" tvg-country="uk" tvg-language="en" group-title="ورزشی",Eurovision Sport (1080p)
-https://amg26268-amg26268c34-amgplt0018.playout.now3.amagi.tv/ts-us-e2-n1/playlist/amg26268-amg26268c34-amgplt0018/084007fc-df4c-11f1-8618-562ecc75c2bb/158/1920x1080_8854560/index.m3u8
+https://amg26268-amg26268c34-amgplt0018.playout.now3.amagi.tv/ts-us-e2-n1/playlist/amg26268-amg26268c34-amgplt0018/c0c0b088-e00f-11f1-8016-8257ca3e8211/120/1920x1080_8854560/index.m3u8
 #EXTINF:-1 tvg-id="F1Channel.ie@US" tvg-logo="https://i.imgur.com/cjXzWsI.png" tvg-country="ie" tvg-language="en" group-title="ورزشی",F1 Channel (1080p)
 https://amg12058-c15studio-amg12058c1-lg-us-5787.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FastFunBox.nl@SD" tvg-logo="https://i.imgur.com/a9ZtP17.png" tvg-country="nl" tvg-language="en",Fast&FunBox
@@ -404,7 +398,7 @@ https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FUELTV.pt@EMEA" tvg-logo="https://i.imgur.com/I8mviBy.png" tvg-country="pt" tvg-language="en",FUEL TV (1080p)
 https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8
 #EXTINF:-1 tvg-name="Glory Kickboxing Poland (720p)" tvg-logo="https://i.imgur.com/tS7Ub7i.png" tvg-id="GloryKickboxing.us" tvg-chno="60" tvg-country="us" group-title="ورزشی" tvg-language="en",Glory Kickboxing (720p)
-https://6f972d29.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/8c6181a9-29dd-4e8e-977e-145f306c7297/2.m3u8
+https://6f972d29.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0dsb3J5S2lja2JveGluZ19ITFM/69920dc7-b758-4a5b-87fc-decaf224d8f2/2.m3u8
 #EXTINF:-1 tvg-id="GolfChannel.us@SD" tvg-logo="https://i.imgur.com/Lgux6Ik.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Golf Channel (576p)
 https://tvsen6.aynaott.com/golfchannel/index.m3u8
 #EXTINF:-1 tvg-id="InTrouble.nl@SD" tvg-logo="https://cdn.uc.assets.prezly.com/28ebc4a6-cfda-4bb1-9b9c-14e2c3da67a8/InTrouble_portraitOrange.png" tvg-country="nl" tvg-language="en" group-title="ورزشی",InTrouble (1080p)
@@ -412,7 +406,7 @@ https://amg00861-amg00861c6-rlaxx-uk-3951.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="MarqueeSportsNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/960px-Marquee_Sports_Network_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Marquee Sports Network (576p)
 https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8
 #EXTINF:-1 tvg-name="Monster Jam (720p)" tvg-logo="https://provider-static.plex.tv/epg/cms/production/23824964-562b-4498-9eaa-d6262cb7e0c3/Monster_Jam_Logo_on_Transparent_1500x1000_Casey_Murawski.png" tvg-id="MonsterJam.us" tvg-chno="70" tvg-country="us" group-title="ورزشی" tvg-language="en",Monster Jam (720p)
-https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/65bcc9c8d77d450008b34c6b/1577180/playlist.m3u8?sid=544185ef-df2a-11f1-9979-92e04ec9165c&deviceId=ae946ebd-f5c1-47b2-8873-033a8c6e6fc4&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjNhZWExYjA4LTI2YWItNGFmZC1iODAzLTg0OWU4NTBmOTkyNCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI1NDQxODVlZi1kZjJhLTExZjEtOTk3OS05MmUwNGVjOTE2NWMiLCJjbGllbnRJUCI6IjE5Mi4yMDYuMTUxLjEzMSIsImNpdHkiOiJUb3JvbnRvIiwicG9zdGFsQ29kZSI6Im01diAwczgiLCJjb3VudHJ5IjoiQ0EiLCJkbWEiOjEyNDUzNSwiYWN0aXZlUmVnaW9uIjoiQ0EiLCJkZXZpY2VMYXQiOjQzLjY1MDAwMTUyNTg3ODkwNiwiZGV2aWNlTG9uIjotNzkuMzc5OTk3MjUzNDE3OTcsInByZWZlcnJlZExhbmd1YWdlIjoiZW4iLCJkZXZpY2VUeXBlIjoid2ViIiwiZGV2aWNlVmVyc2lvbiI6IjEyMi4wLjAiLCJkZXZpY2VNYWtlIjoiY2hyb21lIiwiZGV2aWNlTW9kZWwiOiJ3ZWIiLCJhcHBOYW1lIjoid2ViIiwiYXBwVmVyc2lvbiI6IjkuMjAuMC04OTI1ODI5MDI2NDgzODUxNWUyNjRmNWIwNTFiN2MxNjAyYTU4NDgyIiwiY2xpZW50SUQiOiJhZTk0NmViZC1mNWMxLTQ3YjItODg3My0wMzNhOGM2ZTZmYzQiLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IiIsImxvZ0xldmVsIjoiREVGQVVMVCIsInRpbWVab25lIjoiQW1lcmljYS9Ub3JvbnRvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic2VhcmNoQVBJIjp7InF1ZXJ5VmVyc2lvbiI6Imh5YnJpZCJ9LCJzdGl0Y2hlckFkU2Vzc2lvbkV2ZW50Ijp7ImVuYWJsZWQiOnRydWV9LCJzdGl0Y2hlckRhc2hOZyI6eyJqaXRQYWNrIjoicmVwYWNrSml0LGRlY3J5cHQifSwic3RpdGNoZXJIbHNOZyI6eyJkZW11eGVkQXVkaW8iOiJqaXQifSwic3RpdGNoZXJIbHNOZ1ZsbCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJIbHNOZ1ZvZCI6eyJlbmFibGVkIjp0cnVlfX0sImZtc1BhcmFtcyI6eyJmd1ZjSUQyIjoiYWU5NDZlYmQtZjVjMS00N2IyLTg4NzMtMDMzYThjNmU2ZmM0IiwiZndWY0lEMkNvcHBhIjoiYWU5NDZlYmQtZjVjMS00N2IyLTg4NzMtMDMzYThjNmU2ZmM0IiwiY3VzdG9tUGFyYW1zIjp7ImZtc19saXZlcmFtcF9pZGwiOiIiLCJmbXNfZW1haWxoYXNoIjoiIiwiZm1zX3N1YnNjcmliZXJpZCI6IiIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiJhZTk0NmViZC1mNWMxLTQ3YjItODg3My0wMzNhOGM2ZTZmYzQiLCJmbXNfdmNpZDJ0eXBlIjoidXNlcmlkIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIxMDQ1LDEwMzUsMTAxNSwxMDc1LDEwODUiLCJfZndfM1BfVUlEIjoiSURMOkFnZUJtWGhVQ2VMR2ZPajI1b1RYa1pkcjNWN2RXR0kyazBqY1UwZEZzUmwwaUZaVUpsUXdSSUp6Y3FROWhfZW1SYTNDLS1CN2pTS1FwQWpvMnlQdkNReEpWUmpJWW5YcTlTNWw5U1RFX1d5YTFVQXdad2oySC1WSmNIb1RETHBsM2dfRHhseTBJaEJYZzJQeDBkdW01UFhHUmo4V0ozeF84ZEFYLW9BUGYxSUdIQWtvR2syaW1YMjd1cnlFd2FIOENna2dTQVVpY3hQdGptRXJJWVEza0dZV0JWUWpMMkhPb1NpQzFMVno2bllXUHRzX1VCSWhiZnFacnBCWTlRelF0eUp4NE1vSm15ZEtHVm1VWDRvalRTRHh1aW9Vd25CcHpoNThkLWdPVUhkSktLbHhlampoM3RqaWVWNUpIelZ1S0NYWVYyYThBYmVaY1JIU2NyckdIbUtEMzNFbFRCdE1lbXJYMHlwMFlnLGNvbm5lY3RpZDotQU9jU0U0bmlFVGJPUURQOE9jWHVoNmw2ckhQUVVBaDlQd0xqNGxRVTk5bnQzbXJHMFl0d0UtZjc4NTlnTkZyQm5ucnIyRG1iNy1NcFhvODVVM1h2QSxVSUQyOkE0QUFBRXpQRlQ5OWRGMWV5T2JpQ1FsZUJTdFJvbTNLOGRCeTlHTW9SaWhKQWxFdnNsYUc3dzE0VzV2U09Bd1dnaE84LW4zbVhQTjN3dHJxWHpXMExwc1FoMlFrSkppakdQYlg1Wk95WTFQQjJKeGNmc2hpOU9RR1ljYWRaVkFwc00tWmRxUDRzNmVKajBaSi0xSUJieE80T0pIUDlMWjV1QVdFU2FRTFNlYW9JT1FtU3hrWmQ2SkFtdXNvbFRMeUdHLUUxOXpLYVRwQXJNTldsRGpENEhNQmhRLFZJQU5UUDozMzhlYzYxOWMxM2JkMDRmYjM0YzEwM2RjOGY3OWI5N2I1OGQ0ZTc1ZTYyODk3OGNlZTNmMzI0ZDNmZTZiM2Y4LFRJTlVJVEk6Mzc4MWUyMTI0ZGQzZjY3ZjZlMmUwZWUyZWIxNzMzMTdmZTEyMjQ4MmQwODEzZTZjYWE0YzFhOTFiMjYzNGQ1NiIsImZtc19ydWxlaWQiOiIxMDAwOSwxMDAwMCJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDU1MDgzMjAzOSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkNBOllXVTVORFpsWW1RdFpqVmpNUzAwTjJJeUxUZzROek10TURNellUaGpObVUyWm1NMCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ2MzcyMzIsImlhdCI6MTc5NDU1MDgzMiwianRpIjoiYzFhYTM3OTctYzRhZC00ZTBmLTgyZTktZWY5NGY2ZjY0ZDUzIn0.5t-uVX9mdRpsbhy4AUP08L8Kk7oejF1L4asWseY3kYE
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/65bcc9c8d77d450008b34c6b/1577180/playlist.m3u8?sid=62778c05-dff3-11f1-8f42-b247825e01c2&deviceId=081e37ba-27a3-4b6c-9e18-e881e78e3b5e&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6ImM0YTc2ZmFjLWE5M2YtNDhhYi04MGU5LWEwOWM3OGU0N2UzZCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2Mjc3OGMwNS1kZmYzLTExZjEtOGY0Mi1iMjQ3ODI1ZTAxYzIiLCJjbGllbnRJUCI6IjE5Mi4yMDYuMTUxLjEzMSIsImNpdHkiOiJUb3JvbnRvIiwicG9zdGFsQ29kZSI6Im01diAwczgiLCJjb3VudHJ5IjoiQ0EiLCJkbWEiOjEyNDUzNSwiYWN0aXZlUmVnaW9uIjoiQ0EiLCJkZXZpY2VMYXQiOjQzLjY1MDAwMTUyNTg3ODkwNiwiZGV2aWNlTG9uIjotNzkuMzc5OTk3MjUzNDE3OTcsInByZWZlcnJlZExhbmd1YWdlIjoiZW4iLCJkZXZpY2VUeXBlIjoid2ViIiwiZGV2aWNlVmVyc2lvbiI6IjEyMi4wLjAiLCJkZXZpY2VNYWtlIjoiY2hyb21lIiwiZGV2aWNlTW9kZWwiOiJ3ZWIiLCJhcHBOYW1lIjoid2ViIiwiYXBwVmVyc2lvbiI6IjkuMjAuMC04OTI1ODI5MDI2NDgzODUxNWUyNjRmNWIwNTFiN2MxNjAyYTU4NDgyIiwiY2xpZW50SUQiOiIwODFlMzdiYS0yN2EzLTRiNmMtOWUxOC1lODgxZTc4ZTNiNWUiLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IiIsImxvZ0xldmVsIjoiREVGQVVMVCIsInRpbWVab25lIjoiQW1lcmljYS9Ub3JvbnRvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic2VhcmNoQVBJIjp7InF1ZXJ5VmVyc2lvbiI6Imh5YnJpZCJ9LCJzdGl0Y2hlckFkU2Vzc2lvbkV2ZW50Ijp7ImVuYWJsZWQiOnRydWV9LCJzdGl0Y2hlckRhc2hOZyI6eyJqaXRQYWNrIjoicmVwYWNrSml0LGRlY3J5cHQifSwic3RpdGNoZXJIbHNOZyI6eyJkZW11eGVkQXVkaW8iOiJqaXQifSwic3RpdGNoZXJIbHNOZ1ZsbCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJIbHNOZ1ZvZCI6eyJlbmFibGVkIjp0cnVlfX0sImZtc1BhcmFtcyI6eyJmd1ZjSUQyIjoiMDgxZTM3YmEtMjdhMy00YjZjLTllMTgtZTg4MWU3OGUzYjVlIiwiZndWY0lEMkNvcHBhIjoiMDgxZTM3YmEtMjdhMy00YjZjLTllMTgtZTg4MWU3OGUzYjVlIiwiY3VzdG9tUGFyYW1zIjp7ImZtc19saXZlcmFtcF9pZGwiOiIiLCJmbXNfZW1haWxoYXNoIjoiIiwiZm1zX3N1YnNjcmliZXJpZCI6IiIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiIwODFlMzdiYS0yN2EzLTRiNmMtOWUxOC1lODgxZTc4ZTNiNWUiLCJmbXNfdmNpZDJ0eXBlIjoidXNlcmlkIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIxMDQ1LDEwMzUsMTAxNSwxMDc1LDEwODUiLCJfZndfM1BfVUlEIjoiSURMOkFnZUJtWGhVQ2VMR2ZPajI1b1RYa1pkcjNWN2RXR0kyazBqY1UwZEZzUmwwaUZaVUpsUXdSSUp6Y3FROWhfZW1SYTNDLS1CN2pTS1FwQWpvMnlQdkNReEpWUmpJWW5YcTlTNWw5U1RFX1d5YTFVQXdad2oySC1WSmNIb1RETHBsM2dfRHhseTBJaEJYZzJQeDBkdW01UFhHUmo4V0ozeF84ZEFYLW9BUGYxSUdIQWtvR2syaW1YMjd1cnlFd2FIOENna2dTQVVpY3hQdGptRXJJWVEza0dZV0JWUWpMMkhPb1NpQzFMVno2bllXUHRzX1VCSWhiZnFacnBCWTlRelF0eUp4NE1vSm15ZEtHVm1VWDRvalRTRHh1aW9Vd25CcHpoNThkLWdPVUhkSktLbHhlampoM3RqaWVWNUpIelZ1S0NYWVYyYThBYmVaY1JIU2NyckdIbUtEMzNFbFRCdE1lbXJYMHlwMFlnLGNvbm5lY3RpZDotQU9jU0U0bmlFVGJPUURQOE9jWHVoNmw2ckhQUVVBaDlQd0xqNGxRVTk5bnQzbXJHMFl0d0UtZjc4NTlnTkZyQm5ucnIyRG1iNy1NcFhvODVVM1h2QSxVSUQyOkE0QUFBRXpUQWdIWFpGQWlRSzdJa3Z0TDM4UWVTQ0JOWEN2d0liVzRYbUgteC16eFZ2MFA3ajN3NDdrY0pYV3czTmVLa05aZE1sTUV5cmNrU2hMTVFCejZQdHBMNWZMNDkwS19RcTlWWUNnUUtRQmVWeU85aDBqaE90WFRPQTFxUDk0b0JNNHhxeUo1VDhPMDAxWlZuMVVKREtPSi04ZHJvVm1uWWdzN2tPUl9jMEh6RzJVRUtJNTc4dGEtRjgyd1NJVEpqMTdTT1RCN08xcTdreU52djRxVVhnLFZJQU5UUDozMzhlYzYxOWMxM2JkMDRmYjM0YzEwM2RjOGY3OWI5N2I1OGQ0ZTc1ZTYyODk3OGNlZTNmMzI0ZDNmZTZiM2Y4LFRJTlVJVEk6Mzc4MWUyMTI0ZGQzZjY3ZjZlMmUwZWUyZWIxNzMzMTdmZTEyMjQ4MmQwODEzZTZjYWE0YzFhOTFiMjYzNGQ1NiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDYzNzE4NDcyNCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkNBOk1EZ3haVE0zWW1FdE1qZGhNeTAwWWpaakxUbGxNVGd0WlRnNE1XVTNPR1V6WWpWbCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ3MjM1ODQsImlhdCI6MTc5NDYzNzE4NCwianRpIjoiOWE1NjdhMjEtNDQyZi00ZGI0LWJlNWEtY2I5OTBmZDI1MGRjIn0.eGpIqF7r_d_1nG1oFw9-tzZ_9JH9nvgFEkEfYmFibS4
 #EXTINF:-1 group-title="ورزشی" tvg-id="MUTV.uk@SD" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb1834.png" tvg-country="uk" tvg-language="en",MUTV (720p)
 https://fastly.live.brightcove.com/6374054671112/eu-west-1/6058004203001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiYXplMnp5LmVncmVzcy55ODN1ZWIiLCJhY2NvdW50X2lkIjoiNjA1ODAwNDIwMzAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU4MDA0MjAzMDAxIl0sImp0aSI6IjYzNzQwNTQ2NzExMTIifQ.3FmuTna3DAmY7xlhK5fk6LMrosrtrR5VsU2QOgYO5y4/playlist-hls.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="NBATV.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/NBA_TV.svg/960px-NBA_TV.svg.png" tvg-country="us" tvg-language="en",NBA TV (720p)
@@ -421,10 +415,12 @@ http://23.237.104.106:8080/USA_NBA/index.m3u8
 https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008
 #EXTINF:-1 tvg-id="NFLNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/960px-NFL_Network_logo.svg.png" tvg-country="us" tvg-language="en" group-title="ورزشی",NFL Network (576p)
 https://tvsen6.aynaott.com/nfl/index.m3u8
+#EXTINF:-1 tvg-id="NHLAntenaPlay.ro@SD" tvg-logo="https://assets.antenaplay.ro/2024/10/25/SN0nevshXwKDcZ2Tw1jm.png" tvg-country="ro" tvg-language="en" group-title="ورزشی",NHL AntenaPlay
+https://stream1.antenaplay.ro/promo/nhl-12-1411/chunklist.m3u8
 #EXTINF:-1 tvg-id="PersianaFight.fr@HD" tvg-logo="" group-title="ورزشی" tvg-country="fr" tvg-language="fa",Persiana Fight
 https://fighthls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-name="PFL MMA (720p)" tvg-logo="https://provider-static.plex.tv/epg/cms/production/96dd0531-b500-4bd4-93ca-763cbf46defe/1500x1000_PFL_SHIELD_DARK_BG_-_Allie_Dinsmore.png" tvg-id="PFLMMA.us" tvg-chno="84" tvg-country="us" group-title="ورزشی" tvg-language="en",PFL MMA (720p)
-https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/64f6180130ab3300083d896b/1577180/playlist.m3u8?sid=c6a2343b-df11-11f1-9f9b-526b6a68d480&deviceId=a1eb2fee-3c76-48e3-bb98-52f2e56a02a6&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjNhZWExYjA4LTI2YWItNGFmZC1iODAzLTg0OWU4NTBmOTkyNCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJjNmEyMzQzYi1kZjExLTExZjEtOWY5Yi01MjZiNmE2OGQ0ODAiLCJjbGllbnRJUCI6IjE3Ny4xOTIuMjU1LjM4IiwiY2l0eSI6IlJpbyBEZSBKYW5laXJvIiwicG9zdGFsQ29kZSI6IjIxNTQ1LTI3MCIsImNvdW50cnkiOiJCUiIsImRtYSI6NzYwMDgsImFjdGl2ZVJlZ2lvbiI6IkJSIiwiZGV2aWNlTGF0IjotMjIuODQwMDAwMTUyNTg3ODksImRldmljZUxvbiI6LTQzLjM0MDAwMDE1MjU4Nzg5LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiYTFlYjJmZWUtM2M3Ni00OGUzLWJiOTgtNTJmMmU1NmEwMmE2IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvU2FvX1BhdWxvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6ImExZWIyZmVlLTNjNzYtNDhlMy1iYjk4LTUyZjJlNTZhMDJhNiIsImZ3VmNJRDJDb3BwYSI6ImExZWIyZmVlLTNjNzYtNDhlMy1iYjk4LTUyZjJlNTZhMDJhNiIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiYTFlYjJmZWUtM2M3Ni00OGUzLWJiOTgtNTJmMmU1NmEwMmE2IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAxMywxMDAxNiwxMDAxNSwxMDAyMCwxMDAwMCwxMDAwOSwxMDAxNCwxMDAyMSwxMDAyMiwxMDAyMyJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDU0MDI4NjUxNSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkJSOllURmxZakptWldVdE0yTTNOaTAwT0dVekxXSmlPVGd0TlRKbU1tVTFObUV3TW1FMiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ2MjY2ODYsImlhdCI6MTc5NDU0MDI4NiwianRpIjoiZDNhMTc5ZmMtZDUzMy00ZDVlLTllODgtM2JhN2I4MTY3MmQ1In0.H8-uVSjzYfxss3_u6lFTvfR87wA9WxVFuN5lnaNTPxs
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/64f6180130ab3300083d896b/1577180/playlist.m3u8?sid=d6f2e486-dfc1-11f1-856d-229b4ebd3cb8&deviceId=4a4d016b-a887-40be-81f4-8e1047088aa1&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6ImM0YTc2ZmFjLWE5M2YtNDhhYi04MGU5LWEwOWM3OGU0N2UzZCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiJkNmYyZTQ4Ni1kZmMxLTExZjEtODU2ZC0yMjliNGViZDNjYjgiLCJjbGllbnRJUCI6IjE3Ny4xOTIuMjU1LjM4IiwiY2l0eSI6IlJpbyBEZSBKYW5laXJvIiwicG9zdGFsQ29kZSI6IjIxNTQ1LTI3MCIsImNvdW50cnkiOiJCUiIsImRtYSI6NzYwMDgsImFjdGl2ZVJlZ2lvbiI6IkJSIiwiZGV2aWNlTGF0IjotMjIuODQwMDAwMTUyNTg3ODksImRldmljZUxvbiI6LTQzLjM0MDAwMDE1MjU4Nzg5LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiNGE0ZDAxNmItYTg4Ny00MGJlLTgxZjQtOGUxMDQ3MDg4YWExIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvU2FvX1BhdWxvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjRhNGQwMTZiLWE4ODctNDBiZS04MWY0LThlMTA0NzA4OGFhMSIsImZ3VmNJRDJDb3BwYSI6IjRhNGQwMTZiLWE4ODctNDBiZS04MWY0LThlMTA0NzA4OGFhMSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiNGE0ZDAxNmItYTg4Ny00MGJlLTgxZjQtOGUxMDQ3MDg4YWExIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAxNCwxMDAxNiwxMDAyMCwxMDAyMiwxMDAyMywxMDAwOSwxMDAxMywxMDAxNSwxMDAyMSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDYxNTkwNTMxMiwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkJSOk5HRTBaREF4Tm1JdFlUZzROeTAwTUdKbExUZ3haalF0T0dVeE1EUTNNRGc0WVdFeCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ3MDIzMDUsImlhdCI6MTc5NDYxNTkwNSwianRpIjoiMGUxOTE2NzYtMDJhYi00ZmEzLThhY2ItM2Q4NGYxZTU5YTliIn0.uaEoBbBMdy6Fm_SzQspsqXoe5QIqWjhp58oIqqqOx-s
 #EXTINF:-1 tvg-name="RACER International (1080p)" tvg-logo="https://provider-static.plex.tv/epg/cms/production/dd4e5871-4347-49e3-9ea1-a8770ea9c518/RACER_Intl_logo_1500x1000.png" tvg-id="RACERInternational.pl" tvg-chno="109" tvg-country="pl" group-title="ورزشی" tvg-language="en",RACER International (1080p)
 https://amg00378-mavtv-amg00378c2-rakuten-us-1048.playouts.now.amagi.tv/playlist/amg00378-mavtvfast-motorsportsnetwork-rakutenus/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="RacerNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/7/74/Racer_Network.jpg" tvg-country="us" tvg-language="en",Racer Network (1080p)
@@ -436,7 +432,7 @@ https://rally-tv-live.akamaized.net/hls/live/2117704/RallyTV-Pri/master.m3u8
 #EXTINF:-1 tvg-id="RealMadridTVEnglish.es@SD" tvg-logo="https://i.imgur.com/5pMo7dL.png" tvg-country="es" tvg-language="en" group-title="ورزشی",Real Madrid TV English
 http://88.212.15.50/live/real_madrid_tv/index.m3u8
 #EXTINF:-1 tvg-id="RedBullTV.at@EUMENA" tvg-logo="https://i.postimg.cc/8c78JM28/image.png" tvg-country="at" tvg-language="en" group-title="ورزشی",Red Bull TV (1080p)
-https://3ea22335.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWdiX1JlZEJ1bGxUVl9ITFM/f62cf545-2156-40d1-a808-ed9ac8fb483d/1.m3u8
+https://3ea22335.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWdiX1JlZEJ1bGxUVl9ITFM/9f2c09e8-6b2b-44a2-9d98-0e4ce0424ee6/1.m3u8
 #EXTINF:-1 tvg-id="RedBullTV.at@SD" tvg-logo="https://i.postimg.cc/8c78JM28/image.png" tvg-country="at" tvg-language="en" group-title="ورزشی",Red Bull TV (1080p)
 https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="RedBullTV.at@AU" tvg-logo="https://i.postimg.cc/8c78JM28/image.png" tvg-country="at" tvg-language="en",Red Bull TV AU (1080p)
@@ -493,13 +489,13 @@ https://rpn.bozztv.com/gusa/gusa-tvsturbo/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="TVSWomenSports.us@SD" tvg-logo="https://i.imgur.com/8hC4PfF.png" tvg-country="us" tvg-language="en",TVS Women Sports (720p)
 https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8
 #EXTINF:-1 tvg-id="Unbeaten.us@SD" tvg-logo="https://i.imgur.com/LmkNt3v.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Unbeaten (1080p)
-https://lukentvlive.vgcdn.net/v1/manifest/cef183924f24adfa3d5d7601c3a17769082c0c2b/UnbeatenSports-v2/c64000aa-2d63-4488-aed8-6b9febff94ee/4.m3u8
+https://lukentvlive.vgcdn.net/v1/manifest/cef183924f24adfa3d5d7601c3a17769082c0c2b/UnbeatenSports-v2/c4b56e29-520d-468b-b18a-21340053a531/4.m3u8
 #EXTINF:-1 tvg-id="Willow.us@SD" tvg-logo="https://cricket.willow.tv/_nuxt/img/willow_blue_logo.362ed8e.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Willow (720p)
 https://tvsen5.aynaott.com/willowhd/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="WillowSports.us@HD" tvg-logo="https://provider-static.plex.tv/epg/cms/production/acf3d1d8-c53e-49ca-86e9-0d9410b106b4/Willow_Sports_dark_Background_1500_1000_color.png" tvg-country="us" tvg-language="en",Willow Sports (1080p)
 https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8
 #EXTINF:-1 tvg-name="World Poker Tour Poland (1080p)" tvg-logo="https://i.imgur.com/98kLMjj.png" tvg-id="WorldPokerTour.us" tvg-chno="186" tvg-country="us" group-title="ورزشی" tvg-language="en",World Poker Tour (1080p)
-https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/016bd5e1-d882-48ac-9dac-22523ec11e76/1.m3u8
+https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/0d038890-e2f3-40e3-a7f8-413609c63d3c/1.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="XFCTV.us@SD" tvg-logo="https://i.imgur.com/LcfzmG0.png" tvg-country="us" tvg-language="en",XFC TV (720p)
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2247
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="ACECountryRadio.us@KPVMLD" tvg-logo="https://i.imgur.com/iPtuku6.png" tvg-country="us" tvg-language="en",ACE Country Radio KPVM-LD
@@ -650,11 +646,11 @@ https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2229
 #EXTINF:-1 tvg-name="Great! Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Great%21_Movies_logo_2021.svg/500px-Great%21_Movies_logo_2021.svg.png" tvg-id="GreatMovies.uk" tvg-chno="34" tvg-country="uk" group-title="فیلم - انگلیسی‌زبان" tvg-language="en",GREAT! movies
 https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8
 #EXTINF:-1 tvg-id="GREATmovies.uk@UK" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb3709.png" tvg-country="uk" tvg-language="en" group-title="فیلم - انگلیسی‌زبان",GREAT! movies (1080p)
-https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg01753-narrativeuk-greatmovies-lggb/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266817719c9ce37b8c910f5de4dc5c372bb22c1f4cf70f44d0385b248fbb4b0d8764b42d5140da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51e5341bc33f74c8cbff5a164d13c4c1af47109e8fb199d22766/82/1920x1080_5903040/index.m3u8
+https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg01753-narrativeuk-greatmovies-lggb/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0326ce9eb47b8b9c1114e7d80f7c37b27b4850e30740d0734e76d8bb495ed669ed2f5640bd3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df3ea842882ec9fc2e90fc03f43bce70f0c8ec66bf9120346e5d/83/1920x1080_5903040/index.m3u8
 #EXTINF:-1 tvg-name="Great! Romance" tvg-logo="https://www.freeview.co.uk/sites/default/files/styles/255_wide/public/2023-09/GREAT-Christmas-logo.png" tvg-id="GreatRomance.uk" tvg-chno="52" tvg-country="uk" group-title="فیلم - انگلیسی‌زبان" tvg-language="en",GREAT! romance
 https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8
 #EXTINF:-1 tvg-id="GREATromance.uk@UK" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/512/512/skychb3643.png" tvg-country="uk" tvg-language="en" group-title="فیلم - انگلیسی‌زبان",GREAT! romance (1080p)
-https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg01753-narrativeuk-greatchristmas-lggb/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266817719c9eb12d8fcd0f5de4dc5c372bb22c1f4caf0615833857778fb04f51d13ee2280315da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f52e8869a744066c41a9702bf4af47d6b4d6893b40a0bfcbd1d/5/1920x1080_5903040/index.m3u8
+https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/ts-us-e2-n2/playlist/amg01753-narrativeuk-greatchristmas-lggb/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0326ce90b6728c9a1714e7d80f7c37b27b4850e30614812c4e2adcec190d8768b1215243b03b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37a3f209bc80c619417244529efca90c5fc029066e1b89d2acd4/180/1920x1080_5903040/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="HallmarkMoviesMore.us@SD" tvg-logo="https://provider-static.plex.tv/epg/cms/production/29af70d1-d3ba-4a16-bc4d-bd99e7e7def4/hallmark-movies-and-more_color.png" tvg-country="us" tvg-language="en",Hallmark Movies & More (1080p)
 https://dbrb49pjoymg4.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-ams-aws/master.m3u8?ads.xumo_channelId=99991709
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="IFC.us@East" tvg-logo="https://i.imgur.com/bQdkyF9.png" tvg-country="us" tvg-language="en",IFC (1080p)
@@ -693,7 +689,7 @@ http://193.33.39.108:9009/play/a024
 #EXTINF:-1 tvg-id="CinemaxCentralEurope.hu@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png" tvg-country="hu" tvg-language="en" group-title="فیلم - اروپا",Cinemax Central Europe
 http://193.33.39.108:9023/play/a01b
 #EXTINF:-1 tvg-id="FILMBOXPlusAction.pl@HD" tvg-logo="https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Baction.png" tvg-country="pl" tvg-language="en" group-title="فیلم - اروپا",FILMBOX+ Action (720p)
-http://92.114.85.87:8008/play/a007/94584105.m3u8
+http://92.114.85.87:8008/play/a007/51852082.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="FILMBOXPlusComedy.pl@Romania" tvg-logo="https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bcomedy.png" tvg-country="pl" tvg-language="en",FILMBOX+ Comedy Romania
 https://nosignal1.antenaplay.ro/hls/fb-comedy-hd/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusEmotion.pl@Adria" tvg-logo="https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bemotion.png" tvg-country="pl" tvg-language="en" group-title="فیلم - اروپا",FILMBOX+ Emotion (720p)
@@ -763,7 +759,7 @@ https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="CameraSmileTV.us@SD" tvg-logo="https://i.imgur.com/V5h4R83.png" tvg-country="us" tvg-language="en",Camera Smile (480p)
 https://rpn.bozztv.com/gusa/gusa-camerasmile/index.m3u8
 #EXTINF:-1 tvg-name="FailArmy Poland (720p)" tvg-logo="https://i.imgur.com/VIpQJxL.png" tvg-id="FailArmy.us" tvg-chno="51" tvg-country="us" group-title="سریال و کمدی" tvg-language="en",FailArmy (720p)
-https://bd93cfed.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZhaWxBcm15X0hMUw/a7dcc3b4-b990-4791-98da-647cd7de9773/0.m3u8
+https://bd93cfed.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZhaWxBcm15X0hMUw/1e722e23-5ca0-4694-88b6-c647216a7837/0.m3u8
 #EXTINF:-1 tvg-id="HallmarkMystery.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/32/Hallmark_Mystery_2024.svg" tvg-country="us" tvg-language="en" group-title="سریال و کمدی",Hallmark Mystery (720p)
 http://41.205.93.154/HALLMARK/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="JustforLaughsGags.us@SD" tvg-logo="https://i.imgur.com/HjVEVMJ.png" tvg-country="us" tvg-language="en",Just for Laughs Gags (1080p)
@@ -777,49 +773,49 @@ http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
 #EXTINF:-1 tvg-id="Telecyan.us@HD" tvg-logo="https://i.imgur.com/9BnHCj5.png" tvg-country="us" tvg-language="en" group-title="سریال و کمدی",Telecyan (720p)
 https://183.giatvcdn.com/giatvplayout7/giatv-211227/playlist.m3u8
 #EXTINF:-1 tvg-id="TheDoctors.us@HD" tvg-logo="https://i.imgur.com/2sAz8dZ.png" tvg-country="us" tvg-language="en" group-title="سریال و کمدی",The Doctors (720p)
-https://lukentvlive.vgcdn.net/v1/manifest/cef183924f24adfa3d5d7601c3a17769082c0c2b/Doctors/6831e9b0-eca2-4c3b-9744-b1499d45686e/1.m3u8
+https://lukentvlive.vgcdn.net/v1/manifest/cef183924f24adfa3d5d7601c3a17769082c0c2b/Doctors/96bf6649-6db1-40f7-aeab-1cbdb98b5122/1.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="TheLoop.us@SD" tvg-logo="https://i.imgur.com/iyYLuJj.png" tvg-country="us" tvg-language="en",The Loop (1080p)
 https://tgn.bozztv.com/watc57/watc57-theloop/watc57-theloop/index.m3u8
 #EXTINF:-1 tvg-name="True Crime" tvg-logo="https://raw.githubusercontent.com/dp247/mediaportal-uk-logos/master/TV/True-Crime-UK.png" tvg-id="TrueCrime.uk" tvg-chno="67" tvg-country="uk" group-title="سریال و کمدی" tvg-language="en",True Crime (1080p)
-https://b6cca454.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/68366676-6a51-475c-a3ba-75d22a850cd9/5.m3u8
+https://b6cca454.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9UcnVlQ3JpbWVVS2Zyb21DQlNSZWFsaXR5X0hMUw/be18b044-3406-4e20-b4b5-01a39f7487b7/5.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="TVSComedyNetwork.us@SD" tvg-logo="https://i.imgur.com/rXORbti.png" tvg-country="us" tvg-language="en",TVS Comedy Network (720p)
 https://rpn.bozztv.com/gusa/gusa-tvscomedy/index.m3u8
 #EXTINF:-1 tvg-name="Viasat Epic Drama Poland (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e1/Viasat_Epic_Drama_2026.svg" tvg-id="ViasatEpicDrama.uk" tvg-chno="175" tvg-country="uk" group-title="سریال و کمدی" tvg-language="en",Viasat Epic Drama (1080p)
-http://92.114.85.87:8001/play/a00x/33597247.m3u8
+http://92.114.85.87:8001/play/a00x/81122125.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="WeTV.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wetv-july-2024-logo.svg/3840px-Wetv-july-2024-logo.svg.png" tvg-country="us" tvg-language="en",We TV (1080p)
 http://23.237.104.106:8080/USA_WE_TV/index.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="XPTVUS.es@SD" tvg-logo="https://i.imgur.com/1m7kDmc.png" tvg-country="es" tvg-language="en",XPTV US (720p)
 https://janus.xpbroadcasting.com:8443/hls/xptvUS.m3u8
 #EXTINF:-1 tvg-name="10 Peach" tvg-logo="https://i.imgur.com/NlZLut8.png" tvg-id="10Peach.au" tvg-chno="5" tvg-country="au" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",10 Peach (720p)
-https://dai.google.com/linear/hls/pa/event/g-1wsnh4RZ6khrx3LSzKgQ/stream/3fd36a03-8de8-4953-bc3a-c1bc5d05583f:MRN2/variant/543efe546ba549f4575d902865cddb30/bandwidth/3924487.m3u8
+https://dai.google.com/linear/hls/pa/event/g-1wsnh4RZ6khrx3LSzKgQ/stream/5c2a94fc-b1f9-4c53-a2b6-75b2eac4732d:DLS/variant/543efe546ba549f4575d902865cddb30/bandwidth/3924487.m3u8
 #EXTINF:-1 tvg-name="7flix" tvg-logo="https://i.imgur.com/6iIYCyC.png" tvg-id="7flix.au" tvg-chno="5" tvg-country="au" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",7flix (720p)
-https://csm-e-cesevextprdausw2live-0bb611e39adf9cc19.bln1.yospace.com/csm/extlive/sevenprd01,SYD6/5.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ2NTA5MzZ-YWNsPS8qfmhtYWM9ZmE5NzEyMmJkMmFhOGJkNzE1NTU1YzQ2M2M5MDkyM2ZiMmI4OTFiZDUxZGY0NTVlY2Y4NDY2ZTlmOGRhMGFjMyZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRZMU1Ea3pObjBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5UWTBOVE0xZlgxOVhYMF8mU2lnbmF0dXJlPVE3LWJGdUhYWkhnN0d3R0xCVjVINlJpTTZ4SjgybVhhSHpINkxZaU12LWFoMHVYYUtNVWNBNEdMeDFxM2ljYTdDbnhSWWpiclZESGdUNjJFLTlTT2hRbmpHOVpBOWZPUzJLVTljdmlaSDdPeDVEWUlKbEpudWRCZHF-bUNKSGVrVUlPU1BIcTQyS0xDWWZOc2RVRGFwU2tyN2Z6MFpBWEFoSWxkQUlheXZndVY2RWJkWmZNeG16NmpHfkFjWlU2aHgzMGFTeXJtUC1PVUFiYjB-NzdTaHRQLS1ubHA5SXRWUWZZUEx6TnNiYm4xTWZjT0w4eURnSG9xREpwNTMtcX4xalo0bmxrTEFmcXlmUGNnd0FwUzBZbDBtRUhMZWp0YkN5SFByVHE5eW80TmE0R2NRUW1ORGt4NjdKek5DS3VJZUVvczAteWR0aGcwZXpjVHc5ZkFEd19fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD6MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6371775817112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=3C8315A4721552FD5F913FFF30A77C1F.csm-e-cesevextprdausw2live-0bb611e39adf9cc19.bln1.yospace.com
+https://csm-e-cesevextprdausw2live-0bb611e39adf9cc19.bln1.yospace.com/csm/extlive/sevenprd01,SYD6/5.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ3MzM3MjF-YWNsPS8qfmhtYWM9ZjdkMWUyNTUyMWU0OWNkN2VlYzJhYWZlMGI2NjNkYjY1ODk0Nzg3YzkzMDc3MzYwMDU2YjQ1MWZhNTY2ODE0MyZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRjek16Y3lNWDBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5qUTNNekl3ZlgxOVhYMF8mU2lnbmF0dXJlPVdHNXE0fjJsZXd0eTBIYXM0SzVON2RqWjVUUnVva05lY3ZXLVdRWjJOVXV6M2RSb0QwRHRqUTU2Rk9Ob1VpdWdUcGpCYVJYMnhCT1p3Zk5PNXFpaGgtY0JMQW9YNFVjeWVMTWhpZ1o4S0hUM3cyMVJ3eXFjZThWLU9Rc1ZzM211eWlZVFF-Si14Z1V2SlRMcnBBQjZuV0JmUUZIdTRwUU53R0JaTkpXdHF4M1pEUmNjMi1TelBaR2RsdU1pbjNLR1RuVzJEZFRNc0pxeG5jQlNrMjU2Q2p5MUVjbUpuOGRZRXBreUwxU0l0fjV5QWdlQWIxUk1aa2ZLbDFNQkxjb213WHlWSktUc2x1WTJNdWo4ZFI3N3M4YlIwVFdVTXlsTDdwflhkdkxiem9aWVBhN0JzNkk5Qm5TWk55UnlLMUREZDFNNDR4bDdWZlVZWXh0eFpkeEQtUV9fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD6MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6371775817112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=C6819F32E70B7829A058B47C62BED904.csm-e-cesevextprdausw2live-0bb611e39adf9cc19.bln1.yospace.com
 #EXTINF:-1 tvg-name="7mate" tvg-logo="https://i.imgur.com/zpr12HP.png" tvg-id="7mate.au" tvg-chno="5" tvg-country="au" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",7mate (720p)
-https://csm-e-cesevextprdausw2live-0f2c6175e8097ae07.bln1.yospace.com/csm/extlive/sevenprd01,SYD3/6.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ2NTA5MzZ-YWNsPS8qfmhtYWM9ZmE5NzEyMmJkMmFhOGJkNzE1NTU1YzQ2M2M5MDkyM2ZiMmI4OTFiZDUxZGY0NTVlY2Y4NDY2ZTlmOGRhMGFjMyZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRZMU1Ea3pObjBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5UWTBOVE0xZlgxOVhYMF8mU2lnbmF0dXJlPVE3LWJGdUhYWkhnN0d3R0xCVjVINlJpTTZ4SjgybVhhSHpINkxZaU12LWFoMHVYYUtNVWNBNEdMeDFxM2ljYTdDbnhSWWpiclZESGdUNjJFLTlTT2hRbmpHOVpBOWZPUzJLVTljdmlaSDdPeDVEWUlKbEpudWRCZHF-bUNKSGVrVUlPU1BIcTQyS0xDWWZOc2RVRGFwU2tyN2Z6MFpBWEFoSWxkQUlheXZndVY2RWJkWmZNeG16NmpHfkFjWlU2aHgzMGFTeXJtUC1PVUFiYjB-NzdTaHRQLS1ubHA5SXRWUWZZUEx6TnNiYm4xTWZjT0w4eURnSG9xREpwNTMtcX4xalo0bmxrTEFmcXlmUGNnd0FwUzBZbDBtRUhMZWp0YkN5SFByVHE5eW80TmE0R2NRUW1ORGt4NjdKek5DS3VJZUVvczAteWR0aGcwZXpjVHc5ZkFEd19fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD3MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6363902449112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=08BAFA9309DACCEB144C85D39BB73943.csm-e-cesevextprdausw2live-0f2c6175e8097ae07.bln1.yospace.com
+https://csm-e-cesevextprdausw2live-0e1372481cbec63e5.bln1.yospace.com/csm/extlive/sevenprd01,SYD3/6.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ3MzM3MjB-YWNsPS8qfmhtYWM9ZTlhYjg3NzIxOTI0MTFmYTg2Y2U2MzYzYTQxMzEwYzA1ZGU3ODY5YjAxMDFjNzBiNGRhZjVmOGFmYjAyOGQ0ZCZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRjek16Y3lNSDBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5qUTNNekU1ZlgxOVhYMF8mU2lnbmF0dXJlPVY4WEE0UkNmWTcyTFVxLTJJMXBZZ3N0VjV2aDdqZ01EcWpTNkk5THBheERqfmprcFJMMkFmbjdJMjJMZjhHM09hQjlFSGh0QnZLU2VXWmk4WkhIeXRzTXZPbFBOTXd6N0RyaVYxR1Fyb3l0SWZXMU5sSE0teHlsTE80dzBMSn5sSGs1aUVjNWFkfjNxYjlrN2lhYzBaTGhWLXBaZ0ctUUNueUpzZURBTUtoSU5YaGZLZURUSmdRc0dtTGhjLWROY1RqUXd5ZmN3RTVQM3FiU3hzU0NTOFJycGUyY0ZobW1JaTk2WVhlfmt6bk1QdEotQ2FHekRFdWZYZ1ZpV3M3Vk1yLUx0OVllSjUzQjk3ek1nWEd1Sn5QMVBrb1Z-emNVdGRxVlJEQ01GV2VQQ0dWd2ZzYXc5RWNKajVJaWRtQktGWTBkZGlTQkVjY2FMOXo0dVpzUEJHZ19fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD3MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6363902449112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=4838075D4D1AB4215F6D901DB85DFD99.csm-e-cesevextprdausw2live-0e1372481cbec63e5.bln1.yospace.com
 #EXTINF:-1 tvg-name="7two" tvg-logo="https://i.imgur.com/6pyIg02.png" tvg-id="7two.au" tvg-chno="5" tvg-country="au" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",7two (720p)
-https://csm-e-cesevextprdausw2live-0f469d095ca6d07f7.bln1.yospace.com/csm/extlive/sevenprd01,SYD2/6.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ2NTA5MzZ-YWNsPS8qfmhtYWM9ZmE5NzEyMmJkMmFhOGJkNzE1NTU1YzQ2M2M5MDkyM2ZiMmI4OTFiZDUxZGY0NTVlY2Y4NDY2ZTlmOGRhMGFjMyZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRZMU1Ea3pObjBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5UWTBOVE0xZlgxOVhYMF8mU2lnbmF0dXJlPVE3LWJGdUhYWkhnN0d3R0xCVjVINlJpTTZ4SjgybVhhSHpINkxZaU12LWFoMHVYYUtNVWNBNEdMeDFxM2ljYTdDbnhSWWpiclZESGdUNjJFLTlTT2hRbmpHOVpBOWZPUzJLVTljdmlaSDdPeDVEWUlKbEpudWRCZHF-bUNKSGVrVUlPU1BIcTQyS0xDWWZOc2RVRGFwU2tyN2Z6MFpBWEFoSWxkQUlheXZndVY2RWJkWmZNeG16NmpHfkFjWlU2aHgzMGFTeXJtUC1PVUFiYjB-NzdTaHRQLS1ubHA5SXRWUWZZUEx6TnNiYm4xTWZjT0w4eURnSG9xREpwNTMtcX4xalo0bmxrTEFmcXlmUGNnd0FwUzBZbDBtRUhMZWp0YkN5SFByVHE5eW80TmE0R2NRUW1ORGt4NjdKek5DS3VJZUVvczAteWR0aGcwZXpjVHc5ZkFEd19fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD2MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6371773730112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=C4C45A08C3162F0A5AC625BB925422CD.csm-e-cesevextprdausw2live-0f469d095ca6d07f7.bln1.yospace.com
+https://csm-e-cesevextprdausw2live-0f469d095ca6d07f7.bln1.yospace.com/csm/extlive/sevenprd01,SYD2/6.m3u8?&&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&c=n&pp=csai-tv&yo.pp=aGRudHM9ZXhwPTE3OTQ3MzM3MjB-YWNsPS8qfmhtYWM9ZTlhYjg3NzIxOTI0MTFmYTg2Y2U2MzYzYTQxMzEwYzA1ZGU3ODY5YjAxMDFjNzBiNGRhZjVmOGFmYjAyOGQ0ZCZQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVGM1TkRjek16Y3lNSDBzSWtSaGRHVkhjbVZoZEdWeVZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TnprME5qUTNNekU1ZlgxOVhYMF8mU2lnbmF0dXJlPVY4WEE0UkNmWTcyTFVxLTJJMXBZZ3N0VjV2aDdqZ01EcWpTNkk5THBheERqfmprcFJMMkFmbjdJMjJMZjhHM09hQjlFSGh0QnZLU2VXWmk4WkhIeXRzTXZPbFBOTXd6N0RyaVYxR1Fyb3l0SWZXMU5sSE0teHlsTE80dzBMSn5sSGs1aUVjNWFkfjNxYjlrN2lhYzBaTGhWLXBaZ0ctUUNueUpzZURBTUtoSU5YaGZLZURUSmdRc0dtTGhjLWROY1RqUXd5ZmN3RTVQM3FiU3hzU0NTOFJycGUyY0ZobW1JaTk2WVhlfmt6bk1QdEotQ2FHekRFdWZYZ1ZpV3M3Vk1yLUx0OVllSjUzQjk3ek1nWEd1Sn5QMVBrb1Z-emNVdGRxVlJEQ01GV2VQQ0dWd2ZzYXc5RWNKajVJaWRtQktGWTBkZGlTQkVjY2FMOXo0dVpzUEJHZ19fJktleS1QYWlyLUlkPUFQS0FJT1Q0TTZLTjZDUU9BV0VR&yo.pdt=sync&platformType=tv&mstatus=true&used=null&deviceId=fm-k_zfMS1it5axvWRqkRt&custParams=y%253D9%2526c%253Dn%2526dpc%253D8023%2526oi1%253D80671533-5a40-64af-c9e8-fbeffb9fb6c7%2526od1%253DA8%2526ois%253D5a6d3bb9-1532-4b1c-81af-cd434c85a6f2%2526ouc%253D1&referenceId=SYD2MPL&yo.hb=5000&yo.rl=0&ppId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&vid=6371773730112&yo.lb=400&omsdk=JnNka19hcGlzPTc%3D&optinAdTracking=0&dpc=8023&yo.dap=true&appId=7plus&deviceType=androidtv&c=n&optinDeviceType=adid&videoType=live&yo.ac=false&yo.oh=Y3NtLWUtc2V2ZW5leHRwcmRsaXZlLWViLmJsbjEueW9zcGFjZS5jb20%3D&yo.sl=4&advertId=null&accountId=5650355166001&uaId=be191eaf32a61baf8ea60a6acace1d8ed16671a1bb7343a085364945bd6e58d6&yo.t.pf=8000&ozid=b09f7dc3-3999-47c7-a09f-8dce404c0455&pc=6500&yo.br=true&y=9&yo.js=20CD4C580014D44D3E13E5A6C49312F7.csm-e-cesevextprdausw2live-0f469d095ca6d07f7.bln1.yospace.com
 #EXTINF:-1 tvg-id="ABC.us@WSOCTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNvETpbhVGYqrNLKf-Jh12zQsXVxAWJM-r6HlUG5NmHqNVlvDaWbBcFKRc-7wWaL7DVM0&usqp=CAU" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC (1080p)
-https://amg00327-coxmediagroup-wsocbreaking-ono-1smz5.amagi.tv/ts-us-w2-n1/playlist/amg00327-coxmediagroup-wsocbreaking-ono/cf991a70-df4c-11f1-b3fd-de87c924b95a/74/1920x1080_7619040/index.m3u8
+https://amg00327-coxmediagroup-wsocbreaking-ono-1smz5.amagi.tv/ts-us-w2-n1/playlist/amg00327-coxmediagroup-wsocbreaking-ono/a296055d-e010-11f1-a9ae-8224a1396c1a/147/1920x1080_7619040/index.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@QLD" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/23fd2612d8804b2690b026f92cead114/hdntl=exp=1794651977~acl=%2f*~data=hdntl~hmac=52bf8069d8691cd97ce91abe7b58e8f4ce3c8cd86799b4e27a0323896ceb9b32/index_31.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/23fd2612d8804b2690b026f92cead114/hdntl=exp=1794736073~acl=%2f*~data=hdntl~hmac=2b48c53956c34365a6763493f02394ae48e258ebbf1debe03b533c224c50fb63/index_31.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@VIC" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/3198d7aadc42410abd6a68b1ac2f4e36/hdntl=exp=1794651773~acl=%2f*~data=hdntl~hmac=0c56c8be53745745de780ca7a094c777e7c6de5d0684d05dd04a06b86257c235/index_33.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/3198d7aadc42410abd6a68b1ac2f4e36/hdntl=exp=1794735844~acl=%2f*~data=hdntl~hmac=2b489f47d640ba1b87ff46cd9a1a2d13a91113936f8162e8479c0874ee8395bf/index_33.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@TAS" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/42c4e613595341498e3a4bba500ddd0e/hdntl=exp=1794651873~acl=%2f*~data=hdntl~hmac=375cbeec616e38752c5f1111f5521eb1e9d5ff1d1d4db85db7b34f9cdf1bae69/index_34.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/42c4e613595341498e3a4bba500ddd0e/hdntl=exp=1794735957~acl=%2f*~data=hdntl~hmac=a0b0492164f06372ae5f0f216e983ddb0a0f6597e12607f9a424c80f0ce59745/index_34.m3u8
 #EXTINF:-1 tvg-name="ABC" tvg-logo="https://i.imgur.com/5CVl5EF.png" tvg-id="ABCTV.au" tvg-chno="1" tvg-country="au" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/543fd7638aa340c5917e0b9865cf8e6b/hdntl=exp=1794652052~acl=%2f*~data=hdntl~hmac=43ae00d47d7ea509e7f24fd81eecbcdb784e4b9279f118443c5a2a64e37250bb/index_4.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/543fd7638aa340c5917e0b9865cf8e6b/hdntl=exp=1794736160~acl=%2f*~data=hdntl~hmac=f4569505fca9fc770290d74efed0fd901d5a2583fdd56acd4fa7d0d5e5fe30c8/index_4.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@ACT" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/e54bf1897e004fb59b82e0303f25ada3/hdntl=exp=1794652066~acl=%2f*~data=hdntl~hmac=3dd82a6a520a3a3e49208bedbee1377e6bde859999ac2eaceedc9d23ec709447/index_39.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/e54bf1897e004fb59b82e0303f25ada3/hdntl=exp=1794736177~acl=%2f*~data=hdntl~hmac=d62d41c838ecb6622ec8e5ac3f74cf653f6986046c9c12d25225586c7303c200/index_39.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@SA" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/fc2edf6e905e4fbbabb0df82faf306c3/hdntl=exp=1794651933~acl=%2f*~data=hdntl~hmac=7eca2fd190fea5b1340f9290499c83e03e9bacaf2c66b1a64d655c1f6c4a3817/index_36.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/fc2edf6e905e4fbbabb0df82faf306c3/hdntl=exp=1794736025~acl=%2f*~data=hdntl~hmac=d5a912e622a9218c5b19a8ecf0aa0cdaf89824983b7c287b8b0c6ed354dce40a/index_36.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@WA" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/15fc7f5e0e344b368ecf677f8d687c5c/hdntl=exp=1794651453~acl=%2f*~data=hdntl~hmac=d4ac6d2edbff022f712347fe0eb635693b489b21703aaa91931ba2eda78c6834/index_23.m3u8
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/15fc7f5e0e344b368ecf677f8d687c5c/hdntl=exp=1794735487~acl=%2f*~data=hdntl~hmac=72efddb19f0090b125d632f8dadcdefef000751084743138d2f3c2a2009318b3/index_23.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@NT" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/8ee5da452cdc491085b97e17c85dbb4b/hdntl=exp=1794652034~acl=%2f*~data=hdntl~hmac=b4d5ed3f31ea478175a6ac0503fc17576395a6750d0583fdd59f9219d34f7032/index_47.m3u8
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/8ee5da452cdc491085b97e17c85dbb4b/hdntl=exp=1794736139~acl=%2f*~data=hdntl~hmac=058d02583044102088017119dfe936c030eb42726ac1b8cc54a4d9b46aa24171/index_47.m3u8
 #EXTINF:-1 tvg-id="ABCTV.au@NSW" tvg-logo="https://i.imgur.com/DPVQSjM.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV (720p)
 https://c.mjh.nz/abc-nsw.m3u8
 #EXTINF:-1 tvg-id="ABCTVPlus.au@Sydney" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/ABC_TV_Plus_logo_2021.svg/500px-ABC_TV_Plus_logo_2021.svg.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ABC TV Plus (720p)
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/c392d1efb61f48af830ade77d9073b6c/hdntl=exp=1794652009~acl=%2f*~data=hdntl~hmac=c7e8002774cf06c13bf8066dd9a3323d01531f0166e8f19c2c9f456873db9771/index_35.m3u8
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/c392d1efb61f48af830ade77d9073b6c/hdntl=exp=1794736111~acl=%2f*~data=hdntl~hmac=3c14a68814d088fbe1221d427c8baf58d74850cb8544b7ad11eb12155ca413c9/index_35.m3u8
 #EXTINF:-1 tvg-id="AccessNashua.us@SD" tvg-logo="https://i.imgur.com/iv9Vfcb.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Access Nashua (720p)
 https://livestream.telvue.com/nashuanh1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/nashuanh1/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="AccessVisionChannel16.us@SD" tvg-logo="https://i.imgur.com/vi4TCdb.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",AccessVision Channel 16 (720p)
@@ -827,7 +823,7 @@ https://livestream.telvue.com/accvision1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/ac
 #EXTINF:-1 tvg-id="AccessVisionChannel17.us@SD" tvg-logo="https://i.imgur.com/vi4TCdb.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",AccessVision Channel 17 (720p)
 https://livestream.telvue.com/accvision2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/accvision2/stream1/chunks.m3u8
 #EXTINF:-1 tvg-name="AccuWeather NOW" tvg-logo="https://i.imgur.com/M8wbVYK.png" tvg-id="AccuWeatherNOW.us" tvg-chno="201" group-title="سرگرمی - انگلیسی‌زبان" tvg-country="us" tvg-language="en",AccuWeather NOW (1080p)
-https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/ts-us-w2-n1/playlist/amg00684-accuweather-accuweather-plex/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266846229bcae37fd1cb0f5de4dc5c372bb22c1f4cac5d12d3385520ddb1430ad439ed2b5742da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51eb3f1bc35a76c8cbffa204c1fa83053ed85cbb0cae0b2ae7ff/69/1920x1080_7619040/index.m3u8
+https://amg00684-accuweather-accuweather-plex-jbd2s.amagi.tv/ts-us-w2-n1/playlist/amg00684-accuweather-accuweather-plex/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0373ce9ce773d89f1714e7d80e2a37b27b4850e3074486274e20dcb04d0c866eec2b544beb3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37acf309bcc6c0194172435caf8e2877aee4a929b908a6da275d/171/1920x1080_7619040/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AceTV.us@SD" tvg-logo="https://i.imgur.com/KtXQeeZ.png" tvg-country="us" tvg-language="en",Ace TV (480p)
 https://c.streamhoster.com/link/hls/W5s3fS/inLo5pcsHjo/iqg9wps0m1x_5/playlist.m3u8
 #EXTINF:-1 tvg-id="ACTV.us@SD" tvg-logo="https://i.imgur.com/Z6lB0Ww.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ACTV (720p)
@@ -837,7 +833,7 @@ https://turnerlive.warnermediacdn.com/hls/live/2023185/aswest/noslate/VIDEO_1_51
 #EXTINF:-1 tvg-id="AFTV.us@SD" tvg-logo="https://i.imgur.com/UoiUwFj.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",AFTV (1080p)
 https://livestream.telvue.com/accframingham1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/accframingham1/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="AhlulbaytTV.uk@SD" tvg-logo="https://i.imgur.com/lNGJGjy.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Ahlulbayt TV (1080p)
-https://cd198.anystream.uk:8082/hls/abtv3ng/1_2/index.m3u8?tkn=3052031861
+https://cd198.anystream.uk:8082/hls/abtv3ng/1_2/index.m3u8?tkn=569172845
 #EXTINF:-1 tvg-id="Akaku53.us@SD" tvg-logo="https://www.akaku.org/wp-content/uploads/bb-plugin/cache/Channel53-147x150-square.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Akaku 53 (1080p)
 https://castus-vod-dev.s3.amazonaws.com/vod_clients/akaku/live/ch1/CASTUS_Cloud_Services_Chan_1.0.m3u8.av.m3u8
 #EXTINF:-1 tvg-id="Akaku54.us@SD" tvg-logo="https://www.akaku.org/wp-content/uploads/bb-plugin/cache/Channel54-147x150-square.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Akaku 54 (1080p)
@@ -886,11 +882,11 @@ https://tgn.bozztv.com/betterlife/betterlife/betterlife/index.m3u8
 #EXTINF:-1 tvg-id="BigTenNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Big_Ten_Network_Logo.svg/960px-Big_Ten_Network_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Big Ten Network (720p)
 http://23.237.104.106:8080/USA_BTN/index.m3u8
 #EXTINF:-1 tvg-id="Binge.us@SD" tvg-logo="https://i.imgur.com/kEETRln.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Binge (720p)
-https://videostack1.cdnstream1.com:1936/binge-tv/binge-tv/chunklist_w404670623.m3u8
+https://videostack1.cdnstream1.com:1936/binge-tv/binge-tv/chunklist_w2103183292.m3u8
 #EXTINF:-1 tvg-id="BloombergTV.us@US" tvg-logo="https://i.imgur.com/OuogLHx.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg TV (1080p)
 http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
 #EXTINF:-1 tvg-id="BloombergTV.us@Plus" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Bloomberg_TV.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg TV (2160p)
-https://66e4bbba.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnVFZQbHVzX0hMUw/3f220035-4284-47ef-ba4c-a176b98636d1/0.m3u8
+https://66e4bbba.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnVFZQbHVzX0hMUw/9ac0ceea-a0f0-4022-aaf7-49b2a7fdac1d/0.m3u8
 #EXTINF:-1 tvg-id="BloombergTV.us@Australia" tvg-logo="https://i.imgur.com/OuogLHx.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg TV (270p)
 https://bloomberg.com/media-manifest/streams/aus.m3u8
 #EXTINF:-1 tvg-id="BloombergTV.us@EMEALiveEvent" tvg-logo="https://i.imgur.com/OuogLHx.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg TV (720p)
@@ -902,7 +898,7 @@ https://bloomberg.com/media-manifest/streams/politics.m3u8
 #EXTINF:-1 tvg-id="BloombergTV.us@LiveEvent" tvg-logo="https://i.imgur.com/OuogLHx.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Bloomberg TV (720p)
 https://bloomberg.com/media-manifest/streams/us-event.m3u8
 #EXTINF:-1 tvg-name="Bloomberg Television (US)" tvg-logo="https://i.imgur.com/OuogLHx.png" tvg-id="BloombergTV.us" tvg-chno="103" group-title="سرگرمی - انگلیسی‌زبان" tvg-country="us" tvg-language="en",Bloomberg TV (720p)
-https://liveproduseast.akamaized.net/us/Channel-USTV-AWS-virginia-2/Source-USTV-10000-1-slxdlg-BP-HD-4-86X4McEAF4SL_live.m3u8
+https://liveproduseast.global.ssl.fastly.net/us/Channel-USTV-AWS-virginia-2/Source-USTV-10000-1-slxdlg-BP-HD-4-86X4McEAF4SL_live.m3u8
 #EXTINF:-1 tvg-id="BMCHDTV.us@SD" tvg-logo="https://i.imgur.com/c9LiTz0.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",BMC- TV (720p)
 https://livestream.telvue.com/belmontmedia4/f7b44cfafd5c52223d5498196c8a2e7b.sdp/belmontmedia4/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="BotflixTV.us@HD" tvg-logo="https://botflix.tv/assets/img/botflix-mark.90c6a6f9a4.webp" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Botflix TV (1080p)
@@ -916,35 +912,35 @@ http://41.205.93.154/BRAVO/index.m3u8
 #EXTINF:-1 tvg-id="BritAsiaTV.uk@HD" tvg-logo="https://i.imgur.com/ULm80XF.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Brit Asia TV (1080p)
 https://hls.autopo.st/hls/britasiatv/index.m3u8
 #EXTINF:-1 tvg-id="BusinessRockstars.us@SD" tvg-logo="https://i.imgur.com/vfAMWLJ.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Business Rockstars (720p)
-https://stream-us-east-1.getpublica.com/cl/261113dbrecrqkv72c738bi99g/1280x720_2915101_2_f.m3u8?i=513_2220
+https://stream-us-east-1.getpublica.com/cl/261114dbs2u2d0ceqs73a3k71g/1280x720_2821101_2_f.m3u8?i=513_2220
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Buzzr.us@SD" tvg-logo="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/122019/buzzr-01.png?XpxREagj3UuXaSkmg8dIrgARuDpSggra&itok=lEDMDvuS" tvg-country="us" tvg-language="en",Buzzr (1080p)
 http://23.237.104.106:8080/USA_BUZZR/index.m3u8
 #EXTINF:-1 tvg-id="C31Melbourne.au@SD" tvg-logo="https://i.imgur.com/Ge1EutY.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",C31 Melbourne (240p)
 https://d1k6kax80wecy5.cloudfront.net/RLnAKY/index.m3u8
 #EXTINF:-1 tvg-id="CANTV19.us@SD" tvg-logo="https://i.imgur.com/PUQtIa3.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CAN TV19 (1080p)
-https://cantv.streamguys1.com/cantv/cantv19hls/chunks.m3u8?nimblesessionid=44823994
+https://cantv.streamguys1.com/cantv/cantv19hls/chunks.m3u8?nimblesessionid=44982983
 #EXTINF:-1 tvg-id="CANTV21.us@SD" tvg-logo="https://i.imgur.com/KP5bCYr.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CAN TV21 (1080p)
-https://cantv.streamguys1.com/cantv/cantv21hls/chunks.m3u8?nimblesessionid=44823922
+https://cantv.streamguys1.com/cantv/cantv21hls/chunks.m3u8?nimblesessionid=44982915
 #EXTINF:-1 tvg-id="CANTV27.us@SD" tvg-logo="https://i.imgur.com/43EpWsD.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CAN TV27 (1080p)
-https://cantv.streamguys1.com/cantv/cantv27hls/chunks.m3u8?nimblesessionid=44823798
+https://cantv.streamguys1.com/cantv/cantv27hls/chunks.m3u8?nimblesessionid=44982781
 #EXTINF:-1 tvg-id="CANTV36.us@SD" tvg-logo="https://i.imgur.com/43EpWsD.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CAN TV36 (1080p)
-https://cantv.streamguys1.com/cantv/cantv36hls/chunks.m3u8?nimblesessionid=44823564
+https://cantv.streamguys1.com/cantv/cantv36hls/chunks.m3u8?nimblesessionid=44982521
 #EXTINF:-1 tvg-id="CanadaOne.ca@SD" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Canada One (720p)
 http://cdn8.live247stream.com/canadaone/tv/canadaone/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="Canaf54TV.uk@SD" tvg-logo="https://i.imgur.com/viB0FS2.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Canaf54 TV (480p)
-https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/chunklist_w712331525.m3u8
+https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/chunklist_w52880129.m3u8
 #EXTINF:-1 tvg-id="CatholicFaithNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/0/07/Catholic_Faith_Network_2018.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Catholic Faith Network (720p)
-https://uni8rtmp.tulix.tv/cfntv/cfntv/chunklist_w1307125259.m3u8
+https://uni8rtmp.tulix.tv/cfntv/cfntv/chunklist_w259370544.m3u8
 #EXTINF:-1 tvg-id="CatholicTV.us@SD" tvg-logo="https://i.imgur.com/EL0rWD3.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Catholic TV (1080p)
 https://catholictvhd-lh.akamaized.net/hls/live/2043390/CTVLiveHD/master.m3u8
 #EXTINF:-1 tvg-id="CBNFamily.us@SD" tvg-logo="https://i.imgur.com/adHRFrS.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CBN Family (1080p)
 https://fastly.live.brightcove.com/6380399588112/us-east-1/734546207001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiczFpM3ZpLmVncmVzcy50N2M3emwiLCJhY2NvdW50X2lkIjoiNzM0NTQ2MjA3MDAxIiwiZWhuIjoiZmFzdGx5LmxpdmUuYnJpZ2h0Y292ZS5jb20iLCJpc3MiOiJibGl2ZS1wbGF5YmFjay1zb3VyY2UtYXBpIiwic3ViIjoicGF0aG1hcHRva2VuIiwiYXVkIjpbIjczNDU0NjIwNzAwMSJdLCJqdGkiOiI2MzgwMzk5NTg4MTEyIn0.LYfIeObmX4AEStY_xCnPZwMJHXgOAPFMTKfztq-9F8U/chunklist__4.m3u8
 #EXTINF:-1 tvg-id="CBS.us@KIROTV" tvg-logo="https://i.imgur.com/suvT0TN.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CBS (1080p)
-https://amg00327-coxmediagroup-kirobreaking-ono-sjf3c.amagi.tv/ts-us-e2-n1/playlist/amg00327-coxmediagroup-kirobreaking-ono/f37249a3-df4c-11f1-9dba-7aca4bdf2f30/61/1920x1080_7619040/index.m3u8
+https://amg00327-coxmediagroup-kirobreaking-ono-sjf3c.amagi.tv/ts-us-e2-n1/playlist/amg00327-coxmediagroup-kirobreaking-ono/cc675fec-e010-11f1-b333-ce58d09baebd/159/1920x1080_7619040/index.m3u8
 #EXTINF:-1 tvg-id="CBS.us@WHIOTV" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/WHIO_7_%282013%29.svg/1920px-WHIO_7_%282013%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CBS (1080p)
-https://amg00327-coxmediagroup-whiobreaking-ono-j9drr.amagi.tv/ts-us-w2-n1/playlist/amg00327-coxmediagroup-whiobreaking-ono/edd17cfc-df4c-11f1-9679-ae5b9e2b0b49/178/1920x1080_7619040/index.m3u8
+https://amg00327-coxmediagroup-whiobreaking-ono-j9drr.amagi.tv/ts-us-w2-n1/playlist/amg00327-coxmediagroup-whiobreaking-ono/c67eb9e2-e010-11f1-8ae6-96dd73ba2cb4/111/1920x1080_7619040/index.m3u8
 #EXTINF:-1 tvg-id="CBS.us@WJAXTV" tvg-logo="https://i.imgur.com/TBjVU9L.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CBS (1080p)
-https://amg00327-coxmediagroup-wjaxbreaking-ono-se64o.amagi.tv/ts-us-e2-n2/playlist/amg00327-coxmediagroup-wjaxbreaking-ono/e8815dd7-df4c-11f1-b40e-d65fe2aa8a11/52/1920x1080_7619040/index.m3u8
+https://amg00327-coxmediagroup-wjaxbreaking-ono-se64o.amagi.tv/ts-us-e2-n2/playlist/amg00327-coxmediagroup-wjaxbreaking-ono/c03db534-e010-11f1-9d93-5e0d00580f9c/9/1920x1080_7619040/index.m3u8
 #EXTINF:-1 tvg-id="CelebritySceneTV.us@SD" tvg-logo="https://i.imgur.com/n36jriB.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Celebrity Scene TV (720p)
 https://rpn.bozztv.com/gusa/gusa-celebrityscene/index.m3u8
 #EXTINF:-1 tvg-id="Channel44.au@SD" tvg-logo="https://i.imgur.com/P2wUGh9.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Channel 44 (480p)
@@ -958,13 +954,13 @@ https://2-fss-1.themediacdn.com/pl_122/206280-3059514-1/chunklist.m3u8
 #EXTINF:-1 tvg-id="CrimePlusInvestigationCEE.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/4d/Crime_%2B_Investigation_Logo_10.2019.svg" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Crime + Investigation CEE
 http://88.212.7.14/live/test_cai_hevc/playlist.m3u8
 #EXTINF:-1 tvg-id="CSatTV.us@SD" tvg-logo="https://i.imgur.com/fp2EaLJ.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CSat TV (1080p)
-http://media.smc-host.com:1935/csat.tv/smil:csat.smil/chunklist_w885100854_b1892000_slar.m3u8
+http://media.smc-host.com:1935/csat.tv/smil:csat.smil/chunklist_w744911080_b1892000_slar.m3u8
 #EXTINF:-1 tvg-id="CTNCourtFeed.us@SD" tvg-logo="https://i.imgur.com/pb0TFQt.jpeg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CT-N Court Feed (360p)
-http://video.ct-n.com/live/ctnSupreme/chunklist_w6600707_DVR.m3u8
+http://video.ct-n.com/live/ctnSupreme/chunklist_w1141746788_DVR.m3u8
 #EXTINF:-1 tvg-id="CTNLiveStream2.us@SD" tvg-logo="https://i.imgur.com/pb0TFQt.jpeg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CT-N Live Stream 2 (720p)
-http://video.ct-n.com/live/web2stream/chunklist_w795641517.m3u8
+http://video.ct-n.com/live/web2stream/chunklist_w1185477106.m3u8
 #EXTINF:-1 tvg-id="CTNTVConneticut.us@SD" tvg-logo="https://i.imgur.com/pb0TFQt.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CT-N TV Conneticut (720p)
-http://video.ct-n.com/live/ctnstream/chunklist_w2016939226_DVR.m3u8
+http://video.ct-n.com/live/ctnstream/chunklist_w725961784_DVR.m3u8
 #EXTINF:-1 tvg-id="CTN.us@SD" tvg-logo="https://i.imgur.com/0yi16c6.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CTN (720p)
 https://d3k5y954fiztgy.cloudfront.net/FREECAST/CTN-2b0dd347-f7b0-e7ed-9096-68966d29db50/01.m3u8
 #EXTINF:-1 tvg-id="CVTVChannel192.us@SD" tvg-logo="https://i.imgur.com/loGNYCc.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CVTV Channel 192 (1080p)
@@ -972,25 +968,30 @@ https://livestream.telvue.com/cvtv2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/cvtv2/s
 #EXTINF:-1 tvg-id="CVTVChannel194.us@SD" tvg-logo="https://i.imgur.com/loGNYCc.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",CVTV Channel 194 (1080p)
 https://livestream.telvue.com/cvtv1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/cvtv1/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="DaystarTV.us@WSLFLD" tvg-logo="https://i.imgur.com/IjzCv8f.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Daystar TV (720p)
-https://content-ausw2-up-2.uplynk.com/channel/1992858a34c3423dbdad491d07ae6f75/e.m3u8?pbs=eb3429988bd644c8a6acfe41b4d58fd8
+https://content-ausw2-up-2.uplynk.com/channel/1992858a34c3423dbdad491d07ae6f75/e.m3u8?pbs=dce099f2ba324f709fd08e5ab34532f3
 #EXTINF:-1 tvg-id="DerTV.uk@SD" tvg-logo="https://raw.githubusercontent.com/songwenhui239/Songwenhui239/refs/heads/main/Der%20TV.jpeg" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Der TV
 https://stream.berosat.live/hls/der-tv/der-tv.m3u8
 #EXTINF:-1 tvg-id="DerryTV17.us@SD" tvg-logo="https://i.imgur.com/MRR6UL3.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",DerryTV 17 (720p)
 https://livestream.telvue.com/derrynh1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/derrynh1/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="DGTV.au@HD" tvg-logo="https://dg.church/tile-dgtv.jpg" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",DG:TV (1080p)
 https://mdn.dg.church/673ac57a073a4-1/index.m3u8
+#EXTINF:-1 tvg-id="DiyaTV.us@SD" tvg-logo="https://i.imgur.com/1fC7tqH.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Diya TV (1080p)
+https://stream.diyatvinc.com/1080/diya1080SCTE35.m3u8
 #EXTINF:-1 tvg-id="DrGeneScott.us@SD" tvg-logo="https://i.imgur.com/Db3EI19.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Dr. Gene Scott (1080p)
 https://wescottcc.piksel.tech/hls/live/2041478/adp/1080p/chunklist.m3u8
 #EXTINF:-1 tvg-id="DungeonTV.us@SD" tvg-logo="https://i.imgur.com/cwazXHb.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Dungeon TV (720p)
-https://stream-us-east-1.getpublica.com/cl/261113dbrecobga52c73caj0pg/1280x720_2785851_2_f.m3u8?i=513_2226
+https://stream-us-east-1.getpublica.com/cl/261114dbs2ttom5r8c7396voj0/1280x720_2738875_2_f.m3u8?i=513_2226
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="E.us@East" tvg-logo="https://i.imgur.com/TWFDkap.png" tvg-country="us" tvg-language="en",E! (1080p)
 http://23.237.104.106:8080/USA_E/index.m3u8
 #EXTINF:-1 tvg-id="EntrepreneurTV.us@SD" tvg-logo="https://i.imgur.com/isRfHYZ.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",EntrepreneurTV (720p)
-https://stream-us-east-1.getpublica.com/cl/261113dbrecmvsi06s73b3sok0/1280x720_2780000_2_f.m3u8?i=513_2506
+https://stream-us-east-1.getpublica.com/cl/261114dbs2tsdhangs738s7gu0/1280x720_2826976_2_f.m3u8?i=513_2506
+#EXTINF:-1 tvg-id="Eurochannel.uk@SD" tvg-logo="https://i.imgur.com/yXAtmI6.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Eurochannel
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
+http://45.186.240.164:9000/stream/54/index.m3u8
 #EXTINF:-1 tvg-id="ExpoChannel.au@SD" tvg-logo="https://i.imgur.com/2KzCShW.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Expo Channel (360p)
 https://tvsnhlslivetest.akamaized.net/hls/live/2034711/EXPO-MSL4/master.m3u8
 #EXTINF:-1 tvg-id="ExtremaTV.us@SD" tvg-logo="https://i.imgur.com/Z1QVkqu.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Extrema TV (720p)
-http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/chunklist_w1095109753.m3u8
+http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/chunklist_w399309284.m3u8
 #EXTINF:-1 tvg-id="FairgroundAICreatorTV.us@SD" tvg-logo="https://raw.githubusercontent.com/RoqueDJ/iptv-svg/main/1792454211883.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fairground AI Creator TV (1080p)
 https://aka-live1050.delivery.roku.com/c849b7cc-7d7e-4de6-9d4f-50020322f3c2/t2-origin/out/v1/live_1080.m3u8
 #EXTINF:-1 tvg-id="FaithTV.us@SD" tvg-logo="https://i.imgur.com/lUBnKK1.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Faith TV (1080p)
@@ -1002,31 +1003,31 @@ https://faithworldtv.abs.tv/1826926230/index.m3u8
 #EXTINF:-1 tvg-id="FGTV.us@SD" tvg-logo="https://i.imgur.com/RXFmzVY.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",FGTV
 https://securestream11.champds.com/LIVE/FultonCoGALIVE/FultonCoGALIVE.m3u8
 #EXTINF:-1 tvg-id="Firstlight.nz@SD" tvg-logo="https://i.imgur.com/gtDROeT.png" tvg-country="nz" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Firstlight (576p)
-https://uni01rtmp.tulix.tv/firstlight/firstlight.smil/chunklist_w1386095744_b220000_slen.m3u8
+https://uni01rtmp.tulix.tv/firstlight/firstlight.smil/chunklist_w107350548_b220000_slen.m3u8
 #EXTINF:-1 tvg-id="Fox.us@KTTV" tvg-logo="https://farm8.staticflickr.com/7915/46516027895_d72f7ee41f_n.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox11losangeleskttv-vizious-a7b8z.amagi.tv/ts-us-e2-n2/playlist/amg00488-foxdigital-fox11losangeleskttv-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826684127999ab02e8f990f5de4dc5c372bb22c1f4cf60d16d9385477ddbd4c0c813bec2b5d12da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec37af428869dfc72e90b864935a179fb43f2f032e74c66293d7/114/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox11losangeleskttv-vizious-a7b8z.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-fox11losangeleskttv-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e03209c99b57b8ccb4314e7d80e2a37b27b4850e35c12d32c4e748fe84b5cdc6fb12d5441ed3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aafb09bcf9c1194172d9e160f84e3e58fa1bb7b1baa557d1e9/119/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WTVT" tvg-logo="https://farm8.staticflickr.com/7915/46516027895_d72f7ee41f_n.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox13tampabaywtvt-vizious-xr5q9.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-fox13tampabaywtvt-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826684676c8cab728df9f0f5de4dc5c372bb22c1f4cf60813d03806248ab1430cd06de32b014ada31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec36ac428803d8c72e908133c7cc2b4e0babca5496db0b9c3a11/107/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox13tampabaywtvt-vizious-xr5q9.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-fox13tampabaywtvt-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0372cc9bb52ad1994014e7d80e2a37b27b4850e30710d7244e26dcbf4c5c803ce4295511ea3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aff609bcaec01941725289926bd6e646de82a917414042b702/144/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WTXFTV" tvg-logo="https://i.imgur.com/fRjmk5r.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox29philadelphiawtx-vizious-x0v1b.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-fox29philadelphiawtx-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826681f729d9eb77ddd990f5de4dc5c372bb22c1f4caf0a43d43807738ceb1859d36bb17a5345da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec30ab428832d8c72e906e5db7b87b535675f6707c566ca39079/160/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox29philadelphiawtx-vizious-x0v1b.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-fox29philadelphiawtx-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e03719a91e0298a9a1714e7d80e2a37b27b4850e35c1286774e768bbc195c846fb72d544bbd3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37a3f209bc99c019417285ed6ce983024e5bd1f54304b9a63644/180/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WJBK" tvg-logo="https://i.imgur.com/EL9Bwtf.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox2detroitwjbk-vizious-v1gln.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-fox2detroitwjbk-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266843779b90e0798acc0f5de4dc5c372bb22c1f4cf7061085385120d8b1490edc6ab07a0346da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51ec311bc30671c8cbff813e950d7c86caf89164391cf692d1d7/17/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox2detroitwjbk-vizious-v1gln.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-fox2detroitwjbk-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e03259cccb77b8b911a14e7d80e2a37b27b4850e35f16842c4e228fb94f0dd738b67c5c44b83b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37adf109bc89c1194172cffde681657eec33720de0b883bb3194/163/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@KDFW" tvg-logo="https://farm8.staticflickr.com/7915/46516027895_d72f7ee41f_n.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox4dallaskdfw-vizious-g5zvc.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-fox4dallaskdfw-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266817279e9de078d09e0f5de4dc5b372bb22c1f4cf65a40d53850738bea485bd46ce62f5510da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec36af428852dfc72e906094d116d2664a177277f9b3bc3f2744/104/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox4dallaskdfw-vizious-g5zvc.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-fox4dallaskdfw-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e032192ccbb79d1cc1314e7d80e2a37b27b4850e35c46d1744e248beb4351d364ed7d5547ed3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aff609bc9ac2194172295a138618304e9b5c92fe12bb6e49f8/144/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WTTG" tvg-logo="https://i.imgur.com/ktLKla7.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-fox5dcwttg-vizious-c0eh0.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-fox5dcwttg-vizious/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826684573cc9be17f8fcc0f5de4dc5c372bb22c1f4cac5c13d4385a2480b94c0c8668ec290144da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51ef341bc36b76c8cbff1be0962dc9179a9162e57a71d970a075/22/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-fox5dcwttg-vizious-c0eh0.amagi.tv/ts-us-e2-n1/playlist/amg00488-foxdigital-fox5dcwttg-vizious/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e037c9dc9b07edac81514e7d80e2a37b27b4850e3064683734e20d8ef1c098064b37f0445b83b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aef709bcf5c01941720328e8adccb5386a52b04535aa72f8c8/155/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@KRIV" tvg-logo="https://i.imgur.com/AZ8MWRp.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-kriv-lgus-lw0a9.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-kriv-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a8482668177299ccb029dfcd0f5de4dc5b372bb22c1f4cf65c4484385a7781ba1b0c803eb07a5646da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51eb321bc36c71c8cbff9ae3d0dc4553a8bddc5400054a2ab2d4/64/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-kriv-lgus-lw0a9.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-kriv-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e03219b9dba7adb9f1414e7d80e2a37b27b4850e35f1186214e76d8bc180ad46be37d0645be3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df3faa428841cefc2e900e77bec0c3e492cf3517924d95107049/91/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@KSAZTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Fts-phoenix-a.svg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-ksaz-lgus-huzn4.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-ksaz-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826681777ce90e479d1910f5de4dc5b372bb22c1f4cac5c13d4385a2480b94c0c8668ec290144da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51ee3f1bc36871c8cbff65cb0a5a4372dc20e23902a763d8b156/39/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-ksaz-lgus-huzn4.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-ksaz-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0320cf9ab6298d9e1314e7d80e2a37b27b4850e35c47d6774e22dcb14e51d66fb67b0110ba3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df32ac42884acefc2e902a790ecf257c1a4939f228436632c79e/47/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@KTBC" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/bf/Fts-austin-a.svg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-ktbc-lgus-zwsvj.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-ktbc-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266817749f9fb772dbcf0f5de4dc5b372bb22c1f4cf6081c8438007781b8190ed669e1205d43da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec33af428866dfc72e909abb41e42171ad352914cd16f1a7e823/154/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-ktbc-lgus-zwsvj.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-ktbc-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0320cb9db078dccd4114e7d80e2a37b27b4850e35f44d2244e23dcec1c0e876ab12e0045bb3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37a2f709bce2c11941729d60ce27782cd5e26a2baf10bcfadc33/195/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WITI" tvg-logo="https://farm8.staticflickr.com/7915/46516027895_d72f7ee41f_n.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-witi-lgus-lr3y1.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-witi-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266843279e9fba2dd1910f5de4dc5c372bb22c1f4cac5d41d33800738ced4b59d368b32f5712da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51ef3f1bc31671c8cbffd9b215f6c28e0fedbfd25bab7f454a44/29/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-witi-lgus-lr3y1.amagi.tv/ts-us-w2-n1/playlist/amg00488-foxdigital-witi-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e03269899b27bd9cf4614e7d80e2a37b27b4850e35f4181274e27dcbe425dd06db72f0110be3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37acf109bcbec1194172e8ac8c5048d99eb73971f5038528494a/173/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WNYW" tvg-logo="https://i.imgur.com/zZd9Tkt.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg00488-foxdigital-wnyw-lgus-qxl2g.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-wnyw-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a8482668447398cdb37bd0980f5de4dc5c372bb22c1f4cac0943823807208cea4e09d73fe1285d46da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec32aa428846d8c72e90b23db2667591cf4cb172369baf5f1d41/141/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-wnyw-lgus-qxl2g.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-wnyw-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e037d939ebb7ddcc81b14e7d80e2a37b27b4850e35c1dd2234e228bb11b5ad165e12a0141bd3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aaf109bc97c119417238f8560b90fc969e73b5c79c25686ca9/113/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="Fox.us@WHBQTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/4a/WHBQ_%282015%29.svg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox (1080p)
-https://amg02104-imagicommcommun-whbqbreaking-ono-5aheb.amagi.tv/ts-us-e2-n2/playlist/amg02104-imagicommcommun-whbqbreaking-ono/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a848266842709bcab673db9b0f5de4dc5c372bb22c1f4caf0646d13807738db9425fd13ce27c0115da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51ee3f1bc32571c8cbffdf151cadc29e488c09ad4a831bc250c0/39/1920x1080_8048040/index.m3u8
+https://amg02104-imagicommcommun-whbqbreaking-ono-5aheb.amagi.tv/ts-us-e2-n2/playlist/amg02104-imagicommcommun-whbqbreaking-ono/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e0326cbccb27d8a984314e7d80e2a37b27b4850e35f46832c4e25d8b9195e803eed7f5041ed3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df30ae428801cefc2e9050834cac6ade2f3cb7aadc6f3df9ce10/65/1920x1080_8048040/index.m3u8
 #EXTINF:-1 tvg-id="FoxBusinessNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fox_Business.svg/960px-Fox_Business.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox Business Network (480p)
 https://247preview.foxbusiness.com/hls/live/2020026/fbnv3preview/primary.m3u8
 #EXTINF:-1 tvg-id="FoxWeather.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Fox_Weather_logo.svg/960px-Fox_Weather_logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Fox Weather (720p)
@@ -1040,7 +1041,7 @@ http://liveen24-manminglobal3.ktcdn.co.kr/liveen24/gcnus_1300k.stream/chunklist.
 #EXTINF:-1 tvg-id="GemShoppingNetwork.us@SD" tvg-logo="https://i.imgur.com/WlHEpAu.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Gem Shopping Network (720p)
 https://amg01460-gemshoppingnetw-gem-ono-x662c.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="GemsTV.uk@SD" tvg-logo="https://i.imgur.com/WgaJufI.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Gems TV (720p)
-https://lo3.gemporia.com/abrgemporiaukgfx/smil:livestream.smil/chunklist_w393279443_b3548000.m3u8
+https://lo3.gemporia.com/abrgemporiaukgfx/smil:livestream.smil/chunklist_w2078684786_b3548000.m3u8
 #EXTINF:-1 tvg-id="GillettePublicAccessTelevisionChannel190.us@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqMoPQ32FU8R2lR71LXhYrC3tCHfjJEXcm6E9PEO=s176-c-k-c0x00ffffff-no-rj" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Gillette Public Access Television Channel 190
 https://securestream11.champds.com/LIVE/GilletteWYLIVE/GilletteWYLIVE.m3u8
 #EXTINF:-1 tvg-id="GillettePublicAccessTelevisionChannel192.us@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqMoPQ32FU8R2lR71LXhYrC3tCHfjJEXcm6E9PEO=s176-c-k-c0x00ffffff-no-rj" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Gillette Public Access Television Channel 192
@@ -1066,7 +1067,7 @@ https://streamer12.vdn.dstreamone.net/carishowtime/showtime/chunks.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="Heartland.us@Eastern" tvg-logo="https://i.imgur.com/djCq2Z5.png" tvg-country="us" tvg-language="en",Heartland (720p)
 https://2-fss-2.streamhoster.com/pl_120/201950-2724904-1/playlist.m3u8
 #EXTINF:-1 tvg-id="HisGloryTV.us@SD" tvg-logo="https://i.imgur.com/VTcdAJj.jpeg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",His Glory TV (1080p)
-https://customer-6itfaqopbksp5p0q.cloudflarestream.com/3972e89fb79bf6d6dd2a16c75455087a/manifest/stream_t11fc45ffe5b425d6bb0f19cb604132f2_r1997864821.m3u8?llhlsHBs=0.5&lps=ba565696fe252a36&rcu=1794565439547
+https://customer-6itfaqopbksp5p0q.cloudflarestream.com/3972e89fb79bf6d6dd2a16c75455087a/manifest/stream_t11fc45ffe5b425d6bb0f19cb604132f2_r1997864821.m3u8?llhlsHBs=0.5&lps=4b228053d657f7a4&rcu=1794649500701
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="HollyWire.us@SD" tvg-logo="https://i.imgur.com/oVNjFoj.png" tvg-country="us" tvg-language="en",HollyWire (720p)
 https://bozztv.com/hwotta/playlist/playlist.m3u8
 #EXTINF:-1 tvg-id="HopeChannelInterAmericaEnglish.us@SD" tvg-logo="https://i.imgur.com/wzvgAch.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Hope Channel Inter-America English (1080p)
@@ -1082,7 +1083,7 @@ https://qvc-amd-live.akamaized.net/hls/live/2034113/lshsn1uswest/master.m3u8
 #EXTINF:-1 tvg-id="HSN2.us@SD" tvg-logo="https://i.imgur.com/R6oC2A3.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",HSN2 (720p)
 https://qvc-amd-live.akamaized.net/hls/live/2034113/lshsn2us/master.m3u8
 #EXTINF:-1 tvg-id="iHolyfieldTV.us@WHPSCD" tvg-logo="https://i.imgur.com/KW1iQ5W.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",iHolyfield TV (614p)
-https://f-tx-edge-87.christianworldmedia.com/313watkins/mp4:313watkins/chunklist_w514230810.m3u8
+https://f-tx-edge-87.christianworldmedia.com/313watkins/mp4:313watkins/chunklist_w1576681982.m3u8
 #EXTINF:-1 tvg-id="IIPCTV.ca@SD" tvg-logo="https://i.imgur.com/mIih39Y.png" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",IIPC TV (720p)
 https://rpn.bozztv.com/dvrfl03/iipctv/index.m3u8
 #EXTINF:-1 tvg-id="ImpactNetwork.us@SD" tvg-logo="https://i.imgur.com/57NH9sS.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Impact Network (720p)
@@ -1094,11 +1095,11 @@ http://23.237.104.106:8080/USA_ION/index.m3u8
 #EXTINF:-1 tvg-id="ItIsWrittenTV.us@SD" tvg-logo="https://i.imgur.com/0jgzoSF.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",It Is Written TV (1080p)
 https://itiswrittentv.akamaized.net/xR8gyATuHMVx69u9G79DXnpNRL/audio_128_ts/index.m3u8
 #EXTINF:-1 tvg-id="ItsSupernaturalNetwork.us@SD" tvg-logo="https://i.imgur.com/JWrdL9a.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",It's Supernatural! Network (1080p)
-https://content-ausw2-up-2.uplynk.com/channel/b880a791bf95426d917a509e0c44796a/f.m3u8?pbs=fd51f0cefe0441f78cc53a95dc9c59bc
+https://content-ausw2-up-2.uplynk.com/channel/b880a791bf95426d917a509e0c44796a/f.m3u8?pbs=75eaf281818041018394cc6ba99f642b
 #EXTINF:-1 tvg-id="JBS.us@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_lDWY-W9dD7UvLlp1NuWLJs1wV6t_KjeOT-1iVVIGuLZ8U=s512-c-k-c0x00ffffff-no-rj" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",JBS (720p)
-https://rpn3.bozztv.com/jbstv-srt/srt-push/jbstv/chunks.m3u8?nimblesessionid=1220050476
+https://rpn3.bozztv.com/jbstv-srt/srt-push/jbstv/chunks.m3u8?nimblesessionid=1222227134
 #EXTINF:-1 tvg-name="Jewellery Maker" tvg-logo="https://i.imgur.com/O7SdkBh.png" tvg-id="JewelleryMaker.uk" tvg-chno="72" tvg-country="uk" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",Jewellery Maker (720p)
-https://lo3.gemporia.com/abrjewellerymaker/smil:livestreamFullHD.smil/chunklist_w25708224_b3048000.m3u8
+https://lo3.gemporia.com/abrjewellerymaker/smil:livestreamFullHD.smil/chunklist_w169002137_b3048000.m3u8
 #EXTINF:-1 tvg-id="JewelryTV.us@SD" tvg-logo="https://i.imgur.com/ErEu9L6.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Jewelry TV (720p)
 https://content.jwplatform.com/live/broadcast/oe7UD7Ag.m3u8
 #EXTINF:-1 tvg-id="JewelryTV2.us@SD" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Jewelry TV 2 (720p)
@@ -1116,7 +1117,7 @@ https://ptvlive.kordia.net.nz/out/v1/3fc2254c865a457c8d7fbbce227a2aae/index_67.m
 #EXTINF:-1 tvg-id="KPVMLD251.us@HD" tvg-logo="https://i.imgur.com/dGoQ88j.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",KPVM-LD 25.1 (720p)
 https://2-fss-1.streamhoster.com/pl_122/206858-4405346-1/chunklist.m3u8
 #EXTINF:-1 tvg-id="LatestTV.uk@SD" tvg-logo="https://i.imgur.com/Cl1iGEb.jpeg" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Latest TV (360p)
-https://5a0e89631aa14.streamlock.net/live/LatestTelevision/chunklist_w1617571125.m3u8
+https://5a0e89631aa14.streamlock.net/live/LatestTelevision/chunklist_w1374116755.m3u8
 #EXTINF:-1 tvg-id="LGTV.us@SD" tvg-logo="https://i.imgur.com/d5w2pT4.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",LGTV (1080p)
 https://livestream.telvue.com/lexmedia3/f7b44cfafd5c52223d5498196c8a2e7b.sdp/lexmedia3/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="LifevisionTV.us@SD" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",LifevisionTV (406p)
@@ -1126,9 +1127,9 @@ https://brightstar-hislight-pull-secure.akamaized.net/brightstarhislight/stream.
 #EXTINF:-1 tvg-id="LLBNHisWord.us@SD" tvg-logo="https://i.imgur.com/GbyHlS2.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",LLBN His Word (720p)
 https://brightstar-hisword-pull-secure.akamaized.net/brightstarhisword/stream.m3u8
 #EXTINF:-1 tvg-id="LogosTVEnglish.us@SD" tvg-logo="https://i.imgur.com/LDfEK81.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Logos TV English (1080p)
-https://5aafcc5de91f1.streamlock.net/logoschannel.com/logoseng/chunklist_w1259734258.m3u8
+https://5aafcc5de91f1.streamlock.net/logoschannel.com/logoseng/chunklist_w1224515232.m3u8
 #EXTINF:-1 tvg-name="Lone Star Poland (720p)" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/DISTROTV/LIVECHANNEL/666988e3bac4421ebc533621/images/logo_20231219_215208_70.png" tvg-id="LoneStar.us" tvg-chno="67" tvg-country="us" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",Lone Star (720p)
-https://6b88cde9.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0xvbmVTdGFyX0hMUw/90eb3bcd-d010-4212-ad3e-a7fde8ae0e2d/2.m3u8
+https://6b88cde9.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0xvbmVTdGFyX0hMUw/a6c1f01b-2d89-4d88-9162-8b30bd3c6a3a/2.m3u8
 #EXTINF:-1 tvg-id="MariaVisionUSA.us@SD" tvg-logo="https://i.imgur.com/eaVt8R1.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Maria Vision USA (1080p)
 https://1601580044.rsc.cdn77.org/live/_jcn_/amls:PALMIAMI/chunklist.m3u8
 #EXTINF:-1 tvg-id="MBC1USA.us@SD" tvg-logo="https://i.imgur.com/CiA3plN.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",MBC 1 USA (1080p)
@@ -1136,13 +1137,13 @@ https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-1-usa/fdac3a4fc0473f1f56e
 #EXTINF:-1 tvg-id="MegaTV.us@WSBSTV" tvg-logo="https://i.imgur.com/MiPdjSX.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Mega TV (1080p)
 https://mdstrm.com/live-stream-playlist/67ed74e8af482ba71d47fd7b.m3u8
 #EXTINF:-1 tvg-id="MiracleTV.uk@SD" tvg-logo="https://i.imgur.com/pTn8Vc3.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Miracle TV (480p)
-https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_030/Stream/live30_3/high/chunks.m3u8?nimblesessionid=1983643128
+https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_030/Stream/live30_3/high/chunks.m3u8?nimblesessionid=1986512690
 #EXTINF:-1 tvg-id="MissionAsia.au@SD" tvg-logo="https://i.imgur.com/B5mKwF6.png" tvg-country="au" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Mission Asia (1080p)
 https://livecdn.live247stream.com/missionasia/tv/missionasia/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="MissionTV.us@SD" tvg-logo="https://i.imgur.com/Hb38BNo.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Mission TV (1080p)
-https://6096a9cf11ae5.streamlock.net:1943/live/missiontv/chunklist_w689392772.m3u8
+https://6096a9cf11ae5.streamlock.net:1943/live/missiontv/chunklist_w2120285519.m3u8
 #EXTINF:-1 tvg-id="MNT.us@WFLD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/MyNetworkTV_2D_Logo.svg/960px-MyNetworkTV_2D_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",MNT (1080p)
-https://amg00488-foxdigital-wfld-lgus-easfb.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-wfld-lgus/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826684222cf9cb773df9f0f5de4dc5c372bb22c1f4cf6091dd03805778cbc4351d16fb7780411da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f51e8301bc34971c8cbff96e809c8fc48e6edc7c2d9d405140c89/56/1920x1080_5701132/index.m3u8
+https://amg00488-foxdigital-wfld-lgus-easfb.amagi.tv/ts-us-w2-n2/playlist/amg00488-foxdigital-wfld-lgus/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e032792cae479d89f1014e7d80e2a37b27b4850e35f16842c4e228fb94f0dd738b67c5c44b83b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539de37aefa09bcc0c119417226e56f7f36af8a981ddc1610f95776e4/158/1920x1080_5701132/index.m3u8
 #EXTINF:-1 tvg-id="MNT.us@WOIO" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/MyNetworkTV_2D_Logo.svg/960px-MyNetworkTV_2D_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",MNT (720p)
 https://live-streaming-mcdn.api.graylive.quickplay.com/woio-xos1-input-1/woio-xos1-input-1.isml/woio-xos1-input-1-audio_eng=96000-video=388000.m3u8
 #EXTINF:-1 tvg-id="MRVTVChannel44.us@SD" tvg-logo="https://i.imgur.com/QZcENP2.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",MRVTV Channel 44 (720p)
@@ -1160,7 +1161,7 @@ https://livestream.telvue.com/natickpegasus3/f7b44cfafd5c52223d5498196c8a2e7b.sd
 #EXTINF:-1 tvg-id="NatickPublicAccessChannel.us@SD" tvg-logo="https://i.imgur.com/G4a3gW0.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Natick Public Access Channel (720p)
 https://livestream.telvue.com/natickpegasus2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/natickpegasus2/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="NBC.us@WPXI" tvg-logo="https://i.imgur.com/MNSBpDW.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NBC (1080p)
-https://amg00327-coxmediagroup-wpxibreaking-ono-1z51x.amagi.tv/ts-us-e2-n1/playlist/amg00327-coxmediagroup-wpxibreaking-ono/e181f082-df4c-11f1-a6c4-d64d77c288d2/30/1920x1080_7619040/index.m3u8
+https://amg00327-coxmediagroup-wpxibreaking-ono-1z51x.amagi.tv/ts-us-e2-n1/playlist/amg00327-coxmediagroup-wpxibreaking-ono/b7dbcb8e-e010-11f1-97a4-967337467376/107/1920x1080_7619040/index.m3u8
 #EXTINF:-1 tvg-id="NBC.us@WMAQTV" tvg-logo="https://i.imgur.com/wblxisu.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NBC (1080p)
 https://d368vp0qqzvkid.cloudfront.net/11603/88889704/hls/master.m3u8?ads.xumo_channelId=88889704a&ads.xumo_ifaType=&ads.xumo_providerId=3818&ads.xumo_providerName=NBCNCHI
 #EXTINF:-1 tvg-id="NBC.us@KXASTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e0/KXAS_2023.svg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NBC (1080p)
@@ -1182,7 +1183,7 @@ https://nbculocallive.akamaized.net/hls/live/2037096/lx/use1.m3u8
 #EXTINF:-1 tvg-id="NorCastWeather.us@HD" tvg-logo="https://i.imgur.com/AfjoZgo.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NorCast Weather (1080p)
 https://1267848452.rsc.cdn77.org/c1b5b114698e1ad4687153c4402d5ef0/tracks-v1/index.fmp4.m3u8?subscriber_project_id=0de71726-e556-4f01-8c2b-ea7f62c40e46
 #EXTINF:-1 tvg-id="NRBTV.us@SD" tvg-logo="https://i.imgur.com/zrx756t.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NRBTV (720p)
-https://stream-us-east-1.getpublica.com/cl/261113dbrecg6hloac73a64i0g/1280x720_3470000_0_f.m3u8?i=513_15811
+https://stream-us-east-1.getpublica.com/cl/261114dbs2tksqohac73cnn9ig/1280x720_3790000_0_f.m3u8?i=513_15811
 #EXTINF:-1 tvg-id="NTV.ca@CJONDT" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/bd/CJON-TV.PNG" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",NTV (480p)
 https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8
 #EXTINF:-1 tvg-id="OCNTV.us@SD" tvg-logo="https://i.imgur.com/iSB5Obl.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",OCN TV
@@ -1192,7 +1193,7 @@ https://origin-http-delivery.isilive.ca/live/_definst_/ontla/house-en/chunklist.
 #EXTINF:-1 tvg-id="OnTV4U.us@SD" tvg-logo="https://i.imgur.com/NcEygU5.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",OnTV4U (1080p)
 https://ontv4u-orka.b-cdn.net/ONTV4U-ORKA/index.m3u8
 #EXTINF:-1 tvg-id="OutdoorChannel.us@Vietnam" tvg-logo="https://i.imgur.com/Kh4MWaY.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Outdoor Channel (1080p)
-https://ec02-pop1-hlc.tv360.vn/bpk-token/u4xmiavmoliafm4dcvtkmlweakts5rac/bpk-tv/146/output/146-audio_198800_eng_iv_3=196800-video_iv_3=5256400.m3u8
+https://ec02-pop1-hlc.tv360.vn/bpk-token/7efhk36xbbrw7wwh4qfpqctvn74qu5lp/bpk-tv/146/output/146-audio_198800_eng_iv_3=196800-video_iv_3=5256400.m3u8
 #EXTINF:-1 tvg-id="OvercomersTV.us@SD" tvg-logo="https://i.imgur.com/ZA44lxn.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Overcomers TV (1080p)
 https://hugh.cdn.rumble.cloud/live/d0t27del/live-hls/0f6r-8tw0/chunklist_i0.m3u8
 #EXTINF:-1 tvg-id="PanjabTV.uk@SD" tvg-logo="https://d2n0069hmnqmmx.cloudfront.net/epgdata/1.0/newchanlogos/10000/10000/skychb1041.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Panjab TV (1080p)
@@ -1202,7 +1203,7 @@ http://stream.pardesitv.online/pardesi/index.m3u8
 #EXTINF:-1 tvg-id="ParliamentTV.nz@SD" tvg-logo="https://i.imgur.com/2aHW4q7.png" tvg-country="nz" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Parliament TV (1080p)
 https://ptvlive.kordia.net.nz/out/v1/daf20b9a9ec5449dadd734e50ce52b74/index.m3u8
 #EXTINF:-1 tvg-name="People Are Awesome Poland (720p)" tvg-logo="https://i.imgur.com/MsIx7Ax.png" tvg-id="PeopleAreAwesome.us" tvg-chno="83" tvg-country="us" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",People Are Awesome (720p)
-https://3ab76e42.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1Blb3BsZUFyZUF3ZXNvbWVfSExT/7ffb623b-6340-45a2-bbc7-782555b40fc8/0.m3u8
+https://3ab76e42.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1Blb3BsZUFyZUF3ZXNvbWVfSExT/983a3f94-8972-41c0-be85-953d970d37d7/0.m3u8
 #EXTINF:-1 tvg-id="PhillyCAM.us@SD" tvg-logo="https://i.imgur.com/ENOr31n.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",PhillyCAM (720p)
 https://livestream.telvue.com/phillycam1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/phillycam1/stream1/chunks.m3u8
 #EXTINF:-1 tvg-id="PHLgovTV.us@SD" tvg-logo="https://i.imgur.com/BmNc3hu.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",PHLgovTV (720p)
@@ -1210,7 +1211,7 @@ https://livestream.telvue.com/ctyphiladelphia1/f7b44cfafd5c52223d5498196c8a2e7b.
 #EXTINF:-1 tvg-id="Placid.us@EastHD" tvg-logo="https://static.wikitide.net/indietvwiki/0/03/Placid_(2026).svg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Placid (1080p)
 https://toy.vcdn.fyi/placid/index.m3u8
 #EXTINF:-1 tvg-id="Pop.uk@SD" tvg-logo="https://i.imgur.com/fGUlCY3.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Pop (1080p)
-https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/cb543d19796c678f9ed43e66d4ef44a8f91c1fde1d6988693eb5518975d1070adae1b192a912bd3409940f9e3d5b240d04248f048c2345d8d864a84826681676cf91b37e88cc0f5de4dc5b372bb22c1f4cf60e16d838002480b14b5adc6ee17d0442da31042f5a7236c99c5c60b2f218b51a77d2e9883529060301c80902b8827f99cd94386544b86c83367ee06a07b8c217e3e4068b82c0634674a7471f26a4287ff2a339f97ea66e02323deb433507688b8f69968671b9d49e6637a628420c335afcaa9ff24f73d309131cb0fcc4b275fe07c78b29843b77ab0c99568839997fe70ba8f501f6e3eb96302143cd863c4522b3eeb485eb3f50ec36a8428847dfc72e90bbffa617a25c94b8ec2a8c9afa21c9ef/103/1920x1080_5903040/index.m3u8
+https://amg01753-narrativeentert-popkids-lggb-xyy5k.amagi.tv/ts-eu-w1-n2/playlist/amg01753-narrativeentert-popkids-lggb/cb553d19796c678f9fd43d67d7ef41a9df2478fc087a8d6933fb4b926bc10f41d6e3ac83bc0fb63a00ca14ce21563c18013e885dc32e5e83c17cb6512d6e032298cbb629d0994414e7d80e2a37b27b4850e3071586244e218fec1b5cdc3eb67f5c44be3b563c4be542823d4778f7f77899414cd5f499346d6d2106c10a09bafd7c82c5d32820f8f0757c2e62a35a00a5dd029cfe2ca1b0d64fa69bb157c0faafab4a04aa60abfd6954a4fcd7ebd6124f588c927683cc129ad5946d36924b712c5478e9b99af2423dc9120d0cb8b7c8b068ef12da80278d656cfb10944e9d3c8378be44a5ee5aeffbf58f0b3359dead190603a5f6ab9ef42539df3eac428827cdfc2e90f5342e301690e349e3179bc2f59a49e2/87/1920x1080_5903040/index.m3u8
 #EXTINF:-1 tvg-id="PositivTV.us@SD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VIzSua00Fkp3YfEiAsIKjZ6qSysSCEp8Ng&s" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Positiv TV (1080p)
 https://livecdn.use1-0004.jwplive.com/live/sites/fGLyccP5/media/FoWynVnP/live.isml/.m3u8
 #EXTINF:-1 tvg-id="PrimeAsiaTV.ca@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Prime_Asia_HD.png" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Prime Asia TV (1080p)
@@ -1258,7 +1259,7 @@ https://livestream.telvue.com/roguevalleycmttv3/f7b44cfafd5c52223d5498196c8a2e7b
 #EXTINF:-1 tvg-id="SangatTV.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/c/c3/Sangat_TV_logo.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Sangat TV (576p)
 https://mumt06.tangotv.in/qYyB8fXVSANGATTV/index.m3u8
 #EXTINF:-1 tvg-id="SardariTV.ca@SD" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Sardari TV (1080p)
-http://158.69.124.9:1935/sardaritv/sardaritv/chunklist_w49716472.m3u8
+http://158.69.124.9:1935/sardaritv/sardaritv/chunklist_w789638805.m3u8
 #EXTINF:-1 tvg-id="SBNTV.us@SD" tvg-logo="https://i.imgur.com/JfRqVn6.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",SBN TV (720p)
 https://storage.sardius.media/archives/Ea867F3e1F56B06/events/site_c5402f016A/playlist_0.m3u8
 #EXTINF:-1 tvg-id="SBNTVGlobal.us@SD" tvg-logo="https://i.imgur.com/NJu6oYB.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",SBN TV Global (720p)
@@ -1290,17 +1291,15 @@ https://2-fss-1.streamhoster.com/pl_122/206858-4412976-1/chunklist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TalkinLiveClassicsTV.us@SD" tvg-logo="https://play-lh.googleusercontent.com/qt4POaxei89y6DP7sRJlRNv-yo4jlG3HuVO2Jb54Rf6T7aJ-j7RLG2z4aY9YrU5d0Q=w240-h480-rw" tvg-country="us" tvg-language="en",Talkin Live Classics TV (480p)
 https://2-fss-1.streamhoster.com/pl_122/206338-3120682-1/playlist.m3u8
 #EXTINF:-1 tvg-id="TalkTV.uk@SD" tvg-logo="https://i.imgur.com/KxHWpQB.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TalkTV (1080p)
-https://488f4ce4.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfVGFsa19ITFM/bbec1178-bb19-4edb-bd01-368bf292ac27/3.m3u8
-#EXTINF:-1 tvg-id="TBN.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/TBN_logo_2015.jpg/960px-TBN_logo_2015.jpg" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBN (720p)
-http://212.5.144.156:8080/tbn/index.m3u8
+https://488f4ce4.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfVGFsa19ITFM/6c6134ed-caaf-4687-beee-e164e259790d/3.m3u8
 #EXTINF:-1 tvg-id="TBNArmenia.us@SD" tvg-logo="https://i.imgur.com/U5XsT3j.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBN Armenia
 https://164475.gvideo.io/mpegts/164475_650646/master_mpegts.m3u8
 #EXTINF:-1 tvg-id="TBNPacific.us@SD" tvg-logo="https://i.imgur.com/yWJTxKk.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBN Pacific
 https://broadcast.tbnpacific.org.au:4430/stream/TBNPacificTV/playlist.m3u8
 #EXTINF:-1 tvg-id="TBNUK.uk@SD" tvg-logo="https://i.imgur.com/vFllwLd.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBN UK (1080p)
-https://live-tbn-ssai.simplestreamcdn.com/v1/manifest/774d979dd66704abea7c5b62cb34c6815fda0d35/tbn-live/e2eb6bf7-0d37-42f9-b388-8419963a3b7d/4.m3u8
+https://live-tbn-ssai.simplestreamcdn.com/v1/manifest/774d979dd66704abea7c5b62cb34c6815fda0d35/tbn-live/eb2ee335-1d4f-473e-b2a9-7f0943dc1d9d/4.m3u8
 #EXTINF:-1 tvg-id="TBNUkraine.us@SD" tvg-logo="https://i.imgur.com/PhbrGyM.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBN Ukraine (720p)
-https://5d23269b3ec0c.streamlock.net/WEB_Ukraine24/ngrp:Ukraine24.stream-adaptive/chunklist_w1782340084_b3682637.m3u8
+https://5d23269b3ec0c.streamlock.net/WEB_Ukraine24/ngrp:Ukraine24.stream-adaptive/chunklist_w490031365_b3682637.m3u8
 #EXTINF:-1 tvg-id="TBS.us@East" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/TBS_2020.svg/960px-TBS_2020.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBS (720p)
 https://turnerlive.warnermediacdn.com/hls/live/2023172/tbseast/slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 tvg-id="TBS.us@West" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/TBS_2020.svg/960px-TBS_2020.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TBS (720p)
@@ -1314,7 +1313,7 @@ https://nbculocallive.akamaized.net/hls/live/2037098/sandiego/stream1/master.m3u
 #EXTINF:-1 tvg-id="Telemundo.us@EastHD" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8c_WMuQx6ScVKpDbeYrzyOno6600xj708zvieuW4rS2YIeK9namdorbVRCKw6WsUAM4&usqp=CAU" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Telemundo (1080p)
 https://streamer1.nexgen.bz/TELEMUNDO/index.m3u8
 #EXTINF:-1 tvg-id="Telemundo.us@West" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8c_WMuQx6ScVKpDbeYrzyOno6600xj708zvieuW4rS2YIeK9namdorbVRCKw6WsUAM4&usqp=CAU" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Telemundo (720p)
-http://45.5.117.57:8900/play/a058/75042698.m3u8
+http://45.5.117.57:8900/play/a058/94056004.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheGrahamNortonShow.uk@SD" tvg-logo="https://image.tmdb.org/t/p/w500/xZkWYamzlT6nFu9MI2Rr6NkjedX.png" tvg-country="uk" tvg-language="en",The Graham Norton Show (1080p)
 https://amg00654-itv-amg00654c35-rakuten-gb-7598.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="TheNest.us@SD" tvg-logo="https://iili.io/JGqD21e.png" tvg-country="us" tvg-language="en",The Nest (1080p)
@@ -1322,7 +1321,7 @@ https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8
 #EXTINF:-1 tvg-id="TheNowNetwork.us@SD" tvg-logo="https://i.imgur.com/Wp6d0F8.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",The Now Network (480p)
 https://mediaprod1.nowcast.cc:5443/LiveApp/streams/anZPy7eaVWLyDMZB1697488814699.m3u8
 #EXTINF:-1 tvg-name="The Pet Collective Poland (720p)" tvg-logo="https://i.imgur.com/yH7n2dF.png" tvg-id="ThePetCollective.us" tvg-chno="136" tvg-country="us" group-title="سرگرمی - انگلیسی‌زبان" tvg-language="en",The Pet Collective (720p)
-https://6ec8627d.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1RoZVBldENvbGxlY3RpdmVfSExT/6d12c73b-83d1-4d30-9d3e-2c66a3178eae/0.m3u8
+https://6ec8627d.wurl.com/manifest/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X1RoZVBldENvbGxlY3RpdmVfSExT/9ad008bd-ece9-4c36-ae9d-6c1898fae269/0.m3u8
 #EXTINF:-1 tvg-id="ThePointTelevsionNetwork.us@SD" tvg-logo="https://i.imgur.com/2LWc0OG.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",The Point Televsion Network (1080p)
 https://tgn.bozztv.com/watc57/watc57-2/watc57-2/index.m3u8
 #EXTINF:-1 tvg-id="TheWalkTV.us@SD" tvg-logo="https://i.imgur.com/F5qqJPe.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",The Walk TV
@@ -1330,7 +1329,7 @@ https://wggstv16.ddns.net:9953/hls/walk1.m3u8
 #EXTINF:-1 tvg-id="TheWeatherChannel.us@SD" tvg-logo="https://i.imgur.com/PIaNjfa.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",The Weather Channel (1080p)
 https://twcprod-live.twc-tv.com/v1/manifest/b4d4d63a49309cc5140171fb2e92485c31be1e9e/DSP_6228e4760505741a116f1ba2_twcprod-live/6bf09ce5-366b-463c-b67e-c4b799f73c3f/4.m3u8
 #EXTINF:-1 tvg-name="The Weather Network" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/TWN_Logo_2011.svg/1920px-TWN_Logo_2011.svg.png" tvg-id="TheWeatherNetwork.ca" tvg-chno="205" group-title="سرگرمی - انگلیسی‌زبان" tvg-country="ca" tvg-language="en",The Weather Network
-https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/63da370e2e477400081cf8b6/1577180/playlist.m3u8?sid=9b12ce6c-df11-11f1-a0ef-0212a475bf6b&deviceId=35fe7fa2-8012-4af7-b34a-d78dbf32e0b6&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjNhZWExYjA4LTI2YWItNGFmZC1iODAzLTg0OWU4NTBmOTkyNCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI5YjEyY2U2Yy1kZjExLTExZjEtYTBlZi0wMjEyYTQ3NWJmNmIiLCJjbGllbnRJUCI6IjE5Mi4yMDYuMTUxLjEzMSIsImNpdHkiOiJUb3JvbnRvIiwicG9zdGFsQ29kZSI6Im01diAwczgiLCJjb3VudHJ5IjoiQ0EiLCJkbWEiOjEyNDUzNSwiYWN0aXZlUmVnaW9uIjoiQ0EiLCJkZXZpY2VMYXQiOjQzLjY1MDAwMTUyNTg3ODkwNiwiZGV2aWNlTG9uIjotNzkuMzc5OTk3MjUzNDE3OTcsInByZWZlcnJlZExhbmd1YWdlIjoiZW4iLCJkZXZpY2VUeXBlIjoid2ViIiwiZGV2aWNlVmVyc2lvbiI6IjEyMi4wLjAiLCJkZXZpY2VNYWtlIjoiY2hyb21lIiwiZGV2aWNlTW9kZWwiOiJ3ZWIiLCJhcHBOYW1lIjoid2ViIiwiYXBwVmVyc2lvbiI6IjkuMjAuMC04OTI1ODI5MDI2NDgzODUxNWUyNjRmNWIwNTFiN2MxNjAyYTU4NDgyIiwiY2xpZW50SUQiOiIzNWZlN2ZhMi04MDEyLTRhZjctYjM0YS1kNzhkYmYzMmUwYjYiLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IiIsImxvZ0xldmVsIjoiREVGQVVMVCIsInRpbWVab25lIjoiQW1lcmljYS9Ub3JvbnRvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic2VhcmNoQVBJIjp7InF1ZXJ5VmVyc2lvbiI6Imh5YnJpZCJ9LCJzdGl0Y2hlckFkU2Vzc2lvbkV2ZW50Ijp7ImVuYWJsZWQiOnRydWV9LCJzdGl0Y2hlckRhc2hOZyI6eyJqaXRQYWNrIjoicmVwYWNrSml0LGRlY3J5cHQifSwic3RpdGNoZXJIbHNOZyI6eyJkZW11eGVkQXVkaW8iOiJqaXQifSwic3RpdGNoZXJIbHNOZ1ZsbCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJIbHNOZ1ZvZCI6eyJlbmFibGVkIjp0cnVlfX0sImZtc1BhcmFtcyI6eyJmd1ZjSUQyIjoiMzVmZTdmYTItODAxMi00YWY3LWIzNGEtZDc4ZGJmMzJlMGI2IiwiZndWY0lEMkNvcHBhIjoiMzVmZTdmYTItODAxMi00YWY3LWIzNGEtZDc4ZGJmMzJlMGI2IiwiY3VzdG9tUGFyYW1zIjp7ImZtc19saXZlcmFtcF9pZGwiOiIiLCJmbXNfZW1haWxoYXNoIjoiIiwiZm1zX3N1YnNjcmliZXJpZCI6IiIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiIzNWZlN2ZhMi04MDEyLTRhZjctYjM0YS1kNzhkYmYzMmUwYjYiLCJmbXNfdmNpZDJ0eXBlIjoidXNlcmlkIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIxMDQ1LDEwMzUsMTAxNSwxMDc1LDEwODUiLCJfZndfM1BfVUlEIjoiSURMOkFnZUJtWGhVQ2VMR2ZPajI1b1RYa1pkcjNWN2RXR0kyazBqY1UwZEZzUmwwaUZaVUpsUXdSSUp6Y3FROWhfZW1SYTNDLS1CN2pTS1FwQWpvMnlQdkNReEpWUmpJWW5YcTlTNWw5U1RFX1d5YTFVQXdad2oySC1WSmNIb1RETHBsM2dfRHhseTBJaEJYZzJQeDBkdW01UFhHUmo4V0ozeF84ZEFYLW9BUGYxSUdIQWtvR2syaW1YMjd1cnlFd2FIOENna2dTQVVpY3hQdGptRXJJWVEza0dZV0JWUWpMMkhPb1NpQzFMVno2bllXUHRzX1VCSWhiZnFacnBCWTlRelF0eUp4NE1vSm15ZEtHVm1VWDRvalRTRHh1aW9Vd25CcHpoNThkLWdPVUhkSktLbHhlampoM3RqaWVWNUpIelZ1S0NYWVYyYThBYmVaY1JIU2NyckdIbUtEMzNFbFRCdE1lbXJYMHlwMFlnLGNvbm5lY3RpZDotQU9jU0U0bmlFVGJPUURQOE9jWHVoNmw2ckhQUVVBaDlQd0xqNGxRVTk5bnQzbXJHMFl0d0UtZjc4NTlnTkZyQm5ucnIyRG1iNy1NcFhvODVVM1h2QSxVSUQyOkE0QUFBRXpQRlQ5OWRGMWV5T2JpQ1FsZUJTdFJvbTNLOGRCeTlHTW9SaWhKQWxFdnNsYUc3dzE0VzV2U09Bd1dnaE84LW4zbVhQTjN3dHJxWHpXMExwc1FoMlFrSkppakdQYlg1Wk95WTFQQjJKeGNmc2hpOU9RR1ljYWRaVkFwc00tWmRxUDRzNmVKajBaSi0xSUJieE80T0pIUDlMWjV1QVdFU2FRTFNlYW9JT1FtU3hrWmQ2SkFtdXNvbFRMeUdHLUUxOXpLYVRwQXJNTldsRGpENEhNQmhRLFZJQU5UUDozMzhlYzYxOWMxM2JkMDRmYjM0YzEwM2RjOGY3OWI5N2I1OGQ0ZTc1ZTYyODk3OGNlZTNmMzI0ZDNmZTZiM2Y4LFRJTlVJVEk6Mzc4MWUyMTI0ZGQzZjY3ZjZlMmUwZWUyZWIxNzMzMTdmZTEyMjQ4MmQwODEzZTZjYWE0YzFhOTFiMjYzNGQ1NiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDU0MDIxMzQzMywiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkNBOk16Vm1aVGRtWVRJdE9EQXhNaTAwWVdZM0xXSXpOR0V0WkRjNFpHSm1NekpsTUdJMiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ2MjY2MTMsImlhdCI6MTc5NDU0MDIxMywianRpIjoiOTVkMWUzM2EtYTJhOS00NDkzLThiMzktM2JmZDA1MDY1YTc4In0.3GH7WurHbaiwIeSHqdVaTKkdJGYZFq6q4s8uuqwYu5E
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/63da370e2e477400081cf8b6/1577180/playlist.m3u8?sid=276c307c-dfa8-11f1-b986-6ea7ca8559d4&deviceId=ec4ad5c0-a0f8-4f5f-9fa7-9955eaf63226&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6ImM0YTc2ZmFjLWE5M2YtNDhhYi04MGU5LWEwOWM3OGU0N2UzZCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiIyNzZjMzA3Yy1kZmE4LTExZjEtYjk4Ni02ZWE3Y2E4NTU5ZDQiLCJjbGllbnRJUCI6IjE5Mi4yMDYuMTUxLjEzMSIsImNpdHkiOiJUb3JvbnRvIiwicG9zdGFsQ29kZSI6Im01diAwczgiLCJjb3VudHJ5IjoiQ0EiLCJkbWEiOjEyNDUzNSwiYWN0aXZlUmVnaW9uIjoiQ0EiLCJkZXZpY2VMYXQiOjQzLjY1MDAwMTUyNTg3ODkwNiwiZGV2aWNlTG9uIjotNzkuMzc5OTk3MjUzNDE3OTcsInByZWZlcnJlZExhbmd1YWdlIjoiZW4iLCJkZXZpY2VUeXBlIjoid2ViIiwiZGV2aWNlVmVyc2lvbiI6IjEyMi4wLjAiLCJkZXZpY2VNYWtlIjoiY2hyb21lIiwiZGV2aWNlTW9kZWwiOiJ3ZWIiLCJhcHBOYW1lIjoid2ViIiwiYXBwVmVyc2lvbiI6IjkuMjAuMC04OTI1ODI5MDI2NDgzODUxNWUyNjRmNWIwNTFiN2MxNjAyYTU4NDgyIiwiY2xpZW50SUQiOiJlYzRhZDVjMC1hMGY4LTRmNWYtOWZhNy05OTU1ZWFmNjMyMjYiLCJjbUF1ZGllbmNlSUQiOiIiLCJpc0NsaWVudEROVCI6ZmFsc2UsInVzZXJJRCI6IiIsImxvZ0xldmVsIjoiREVGQVVMVCIsInRpbWVab25lIjoiQW1lcmljYS9Ub3JvbnRvIiwic2VydmVyU2lkZUFkcyI6ZmFsc2UsImUyZUJlYWNvbnMiOmZhbHNlLCJmZWF0dXJlcyI6eyJtdWx0aVBvZEFkcyI6eyJjb2hvcnQiOiIiLCJlbmFibGVkIjp0cnVlfSwic2VhcmNoQVBJIjp7InF1ZXJ5VmVyc2lvbiI6Imh5YnJpZCJ9LCJzdGl0Y2hlckFkU2Vzc2lvbkV2ZW50Ijp7ImVuYWJsZWQiOnRydWV9LCJzdGl0Y2hlckRhc2hOZyI6eyJqaXRQYWNrIjoicmVwYWNrSml0LGRlY3J5cHQifSwic3RpdGNoZXJIbHNOZyI6eyJkZW11eGVkQXVkaW8iOiJqaXQifSwic3RpdGNoZXJIbHNOZ1ZsbCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJIbHNOZ1ZvZCI6eyJlbmFibGVkIjp0cnVlfX0sImZtc1BhcmFtcyI6eyJmd1ZjSUQyIjoiZWM0YWQ1YzAtYTBmOC00ZjVmLTlmYTctOTk1NWVhZjYzMjI2IiwiZndWY0lEMkNvcHBhIjoiZWM0YWQ1YzAtYTBmOC00ZjVmLTlmYTctOTk1NWVhZjYzMjI2IiwiY3VzdG9tUGFyYW1zIjp7ImZtc19saXZlcmFtcF9pZGwiOiIiLCJmbXNfZW1haWxoYXNoIjoiIiwiZm1zX3N1YnNjcmliZXJpZCI6IiIsImZtc19pZmEiOiIiLCJmbXNfaWRmdiI6IiIsImZtc191c2VyaWQiOiJlYzRhZDVjMC1hMGY4LTRmNWYtOWZhNy05OTU1ZWFmNjMyMjYiLCJmbXNfdmNpZDJ0eXBlIjoidXNlcmlkIiwiZm1zX3JhbXBfaWQiOiIiLCJmbXNfaGhfcmFtcF9pZCI6IiIsImZtc19iaWRpZHR5cGUiOiIxMDQ1LDEwMzUsMTAxNSwxMDc1LDEwODUiLCJfZndfM1BfVUlEIjoiSURMOkFnZUJtWGhVQ2VMR2ZPajI1b1RYa1pkcjNWN2RXR0kyazBqY1UwZEZzUmwwaUZaVUpsUXdSSUp6Y3FROWhfZW1SYTNDLS1CN2pTS1FwQWpvMnlQdkNReEpWUmpJWW5YcTlTNWw5U1RFX1d5YTFVQXdad2oySC1WSmNIb1RETHBsM2dfRHhseTBJaEJYZzJQeDBkdW01UFhHUmo4V0ozeF84ZEFYLW9BUGYxSUdIQWtvR2syaW1YMjd1cnlFd2FIOENna2dTQVVpY3hQdGptRXJJWVEza0dZV0JWUWpMMkhPb1NpQzFMVno2bllXUHRzX1VCSWhiZnFacnBCWTlRelF0eUp4NE1vSm15ZEtHVm1VWDRvalRTRHh1aW9Vd25CcHpoNThkLWdPVUhkSktLbHhlampoM3RqaWVWNUpIelZ1S0NYWVYyYThBYmVaY1JIU2NyckdIbUtEMzNFbFRCdE1lbXJYMHlwMFlnLGNvbm5lY3RpZDotQU9jU0U0bmlFVGJPUURQOE9jWHVoNmw2ckhQUVVBaDlQd0xqNGxRVTk5bnQzbXJHMFl0d0UtZjc4NTlnTkZyQm5ucnIyRG1iNy1NcFhvODVVM1h2QSxVSUQyOkE0QUFBRXpUQWdIWFpGQWlRSzdJa3Z0TDM4UWVTQ0JOWEN2d0liVzRYbUgteC16eFZ2MFA3ajN3NDdrY0pYV3czTmVLa05aZE1sTUV5cmNrU2hMTVFCejZQdHBMNWZMNDkwS19RcTlWWUNnUUtRQmVWeU85aDBqaE90WFRPQTFxUDk0b0JNNHhxeUo1VDhPMDAxWlZuMVVKREtPSi04ZHJvVm1uWWdzN2tPUl9jMEh6RzJVRUtJNTc4dGEtRjgyd1NJVEpqMTdTT1RCN08xcTdreU52djRxVVhnLFZJQU5UUDozMzhlYzYxOWMxM2JkMDRmYjM0YzEwM2RjOGY3OWI5N2I1OGQ0ZTc1ZTYyODk3OGNlZTNmMzI0ZDNmZTZiM2Y4LFRJTlVJVEk6Mzc4MWUyMTI0ZGQzZjY3ZjZlMmUwZWUyZWIxNzMzMTdmZTEyMjQ4MmQwODEzZTZjYWE0YzFhOTFiMjYzNGQ1NiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDYwNDg3MzQwOSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOkNBOlpXTTBZV1ExWXpBdFlUQm1PQzAwWmpWbUxUbG1ZVGN0T1RrMU5XVmhaall6TWpJMiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ2OTEyNzMsImlhdCI6MTc5NDYwNDg3MywianRpIjoiOWM0MTMyN2YtZGQ5MS00OTkzLTgyMTEtYWE2ODM3ZTg0YjA5In0.i-qeFCCJvjBqPrJijcPF3MFkCremJmAAXuXqTrNk62c
 #EXTINF:-1 tvg-id="TheWordNetwork.us@SD" tvg-logo="https://i.imgur.com/ltFBrrj.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",The Word Network (1080p)
 https://clouditize.piksel.tech/hls/live/2043070/ClouditizeStream1/Clouditize-Stream3/chunklist.m3u8
 #EXTINF:-1 tvg-id="theDoveTV.us@SD" tvg-logo="https://i.imgur.com/ULtuRsj.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",theDove TV (720p)
@@ -1346,9 +1345,9 @@ https://turnerlive.warnermediacdn.com/hls/live/2023168/tnteast/slate/VIDEO_0_356
 #EXTINF:-1 tvg-id="TNT.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TNT (720p)
 https://turnerlive.warnermediacdn.com/hls/live/2023170/tntwest/slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 tvg-id="TNTLatinAmerica.us@Colombia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/TNT_Logo_2016.svg/960px-TNT_Logo_2016.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TNT Latin America (1080p)
-http://181.78.211.244:8005/play/a09g/60312618.m3u8
+http://181.78.211.244:8005/play/a09g/98650514.m3u8
 #EXTINF:-1 tvg-id="Toronto360TV.ca@SD" tvg-logo="https://i.imgur.com/YJYdHKO.png" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Toronto 360 TV (720p)
-http://cdn3.toronto360.tv:8081/toronto360/hd/chunks.m3u8?nimblesessionid=20672359
+http://cdn3.toronto360.tv:8081/toronto360/hd/chunks.m3u8?nimblesessionid=20775815
 #EXTINF:-1 tvg-id="truTV.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",truTV (720p)
 http://23.237.104.106:8080/USA_TRUTV/index.m3u8
 #EXTINF:-1 tvg-id="truTV.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",truTV (720p)
@@ -1400,7 +1399,7 @@ https://stream.wairarapatv.co.nz/Broadband_High/playlist.m3u8
 #EXTINF:-1 tvg-id="WATCDT571.us@HD" tvg-logo="https://i.imgur.com/FhIRe7O.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",WATC-DT 57.1 (1080p)
 https://tgn2.bozztv.com/watc57/watc57-1/watc57-1/index.m3u8
 #EXTINF:-1 tvg-id="WeatherNation.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/WeatherNation_Logo.svg/500px-WeatherNation_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",WeatherNation (720p)
-https://d2ferbiwcx1539.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8zd06wicndthf-ssai-prd/caae7101-4eef-41ca-b512-e1b07fc8334d/0.m3u8
+https://d2ferbiwcx1539.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-8zd06wicndthf-ssai-prd/e40db311-a4cb-4443-927f-7647481dafee/0.m3u8
 #EXTINF:-1 tvg-id="WGGSTV161.us@HD" tvg-logo="https://i.imgur.com/Btw83JA.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",WGGS-TV 16.1
 https://wggstv16.ddns.net:9953/hls/WGGS1.m3u8
 #EXTINF:-1 tvg-id="Whiplash.us@HD" tvg-logo="https://whiplash.cc/assets/img/channels/whiplash.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Whiplash (720p)
@@ -1426,11 +1425,11 @@ http://23.237.104.106:8080/USA_YES_NETWORK/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="YTATV.us@SD" tvg-logo="https://i.imgur.com/UDpDJ7v.png" tvg-country="us" tvg-language="en",YTA TV (720p)
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=16767
 #EXTINF:-1 tvg-id="A2iTV.it@SD" tvg-logo="https://i.imgur.com/YlDFir7.jpg" tvg-country="it" tvg-language="en" group-title="سرگرمی - اروپا",A2i TV (1080p)
-https://stream.sen-gt.com/A2itv/myStream/chunklist_w255238677.m3u8
+https://stream.sen-gt.com/A2itv/myStream/chunklist_w500194135.m3u8
 #EXTINF:-1 tvg-name="American Crime Channel" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5d4ac35c-dd3f-4f56-a272-41ebfe3477a9/american_crime_channel_dark_logo_-_Kam_JeyRDXV2.png" tvg-id="AmericanCrimeChannel.pl" tvg-chno="5" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="en",American Crime Channel (720p)
-https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/2cf2b2c1-0d73-453c-9da2-26aa793dca91/5.m3u8
+https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/de5397fa-21e2-4141-9832-818d8fbc3a83/5.m3u8
 #EXTINF:-1 tvg-name="Buzzfeed Unsolved" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork/e16cfcc7-2040-4bd5-8339-16d499f8799e-width200-quality90.png" tvg-id="BuzzfeedUnsolved.pl" tvg-chno="21" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="en",Buzzfeed Unsolved (720p)
-https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/fae036d9-4046-467c-a8a9-0df8b6bd8ec8/5.m3u8
+https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/9da5a0ec-b458-48d2-89b5-c9bdb15b0cc2/5.m3u8
 #EXTINF:-1 tvg-id="DellaTV.it@HD" tvg-logo="https://i.imgur.com/6lvQ3Xz.png" tvg-country="it" tvg-language="en" group-title="سرگرمی - اروپا",DellaTV (720p)
 https://183.giatvcdn.com/giatvplayout7/giatv-211474/playlist.m3u8
 #EXTINF:-1 tvg-id="EbS.be@SD" tvg-logo="https://i.imgur.com/DIIRPNN.png" tvg-country="be" tvg-language="en" group-title="سرگرمی - اروپا",EbS (1080p)
@@ -1438,7 +1437,7 @@ https://streams.prd.commavservices.eu/live/ebs/1080p/1080p.m3u8
 #EXTINF:-1 tvg-id="EbSPlus.be@SD" tvg-logo="https://i.imgur.com/7V012zQ.png" tvg-country="be" tvg-language="en" group-title="سرگرمی - اروپا",EbS+ (1080p)
 https://streams.prd.commavservices.eu/live/ebsplus/1080p/1080p.m3u8
 #EXTINF:-1 tvg-id="Fox.pl@SD" tvg-logo="https://i.imgur.com/hSDN9YQ.png" tvg-country="pl" tvg-language="en" group-title="سرگرمی - اروپا",Fox
-http://92.114.85.87:8015/play/a00a/62906993.m3u8
+http://92.114.85.87:8015/play/a00a/65935507.m3u8
 #EXTINF:-1 tvg-id="FunBoxUHD.nl@SD" tvg-logo="https://i.imgur.com/9FJct9o.png" tvg-country="nl" tvg-language="en" group-title="سرگرمی - اروپا",FunBox UHD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 https://webtvstream.bhtelecom.ba/funbox.m3u8
@@ -1448,7 +1447,7 @@ https://webtvstream.bhtelecom.ba/gametoon.m3u8
 #EXTINF:-1 tvg-id="InsaytTV.ru@4K" tvg-logo="https://i.imgur.com/slLuRel.png" tvg-country="ru" tvg-language="en" group-title="سرگرمی - اروپا",Insayt TV (1080p)
 http://stream.mcquack.net/361/index.m3u8
 #EXTINF:-1 tvg-id="ManaChurchOnline.pt@SD" tvg-logo="https://i.imgur.com/FRDJSim.png" tvg-country="pt" tvg-language="en" group-title="سرگرمی - اروپا",Mana Church Online (1080p)
-https://w2.manasat.com/church-online/smil:church-online.smil/chunklist_w79182477_b30048000_sleng.m3u8
+https://w2.manasat.com/church-online/smil:church-online.smil/chunklist_w37415763_b30048000_sleng.m3u8
 #EXTINF:-1 tvg-id="MISATV.ro@English" tvg-logo="https://i.imgur.com/2RxQNm6.png" tvg-country="ro" tvg-language="en" group-title="سرگرمی - اروپا",MISA TV
 https://vidh.youniverse.name:5050/MSTV/english/chunklist_w1133422319.m3u8
 #EXTINF:-1 tvg-id="RaiItalia.it@EuropeAfrica" tvg-logo="https://i.imgur.com/1nN4rEP.png" tvg-country="it" tvg-language="en" group-title="سرگرمی - اروپا",Rai Italia (1080p)
@@ -1458,36 +1457,36 @@ https://d3k8wzt41aflvx.cloudfront.net/RAIEU/Live.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://d3k8wzt41aflvx.cloudfront.net/RAIHD/Live.m3u8
 #EXTINF:-1 tvg-id="SciFi.pl@SD" tvg-logo="https://i.imgur.com/QEqai8a.png" tvg-country="pl" tvg-language="en" group-title="سرگرمی - اروپا",Sci Fi (1080p)
-http://92.114.85.87:8003/play/a007/44085515.m3u8
+http://92.114.85.87:8003/play/a007/65356582.m3u8
 #EXTINF:-1 tvg-id="SwamijiTVAmerican.at@SD" tvg-logo="https://i.imgur.com/nrLcuzs.png" tvg-country="at" tvg-language="en" group-title="سرگرمی - اروپا",Swamiji TV American (1080p)
-https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamUS.smil/chunklist_w1045706877_b6256000.m3u8
+https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamUS.smil/chunklist_w1237256643_b6256000.m3u8
 #EXTINF:-1 tvg-id="SwamijiTVAustralian.at@SD" tvg-logo="https://i.imgur.com/nrLcuzs.png" tvg-country="at" tvg-language="en" group-title="سرگرمی - اروپا",Swamiji TV Australian (1080p)
-https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamAU.smil/chunklist_w596426783_b6256000.m3u8
+https://stream.swamiji.tv/YogaIPTV/smil:YogaStreamAU.smil/chunklist_w2131869118_b6256000.m3u8
 #EXTINF:-1 tvg-id="SwamijiTVEuropean.at@SD" tvg-logo="https://i.imgur.com/nrLcuzs.png" tvg-country="at" tvg-language="en" group-title="سرگرمی - اروپا",Swamiji TV European (1080p)
-https://stream.swamiji.tv/YogaIPTV/smil:YogaStream.smil/chunklist_w293003300_b6256000.m3u8
+https://stream.swamiji.tv/YogaIPTV/smil:YogaStream.smil/chunklist_w1103396013_b6256000.m3u8
 #EXTINF:-1 tvg-id="Tele7.es@SD" tvg-logo="https://i.imgur.com/JcuV9ZE.png" tvg-country="es" tvg-language="en" group-title="سرگرمی - اروپا",Tele 7 (720p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36 CrKey/1.44.191160
 https://ingest2-video.streaming-pro.com/tele7_ABR/stream/playlist.m3u8
 #EXTINF:-1 tvg-name="TNA Wrestling Channel (720p)" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5d4f68c3-82af-45e7-b2c4-39aff69f3ce0/TNAWrestling_Plex_LogoforDarkBG_1500x1000_-_Alex_TushinghamRDX.png" tvg-id="TNAWrestlingChannel.pl" tvg-chno="137" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="en",TNA Wrestling Channel (720p)
-https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/59b722526996084038c01e1b/1577180/playlist.m3u8?sid=5500762c-df2a-11f1-9f9b-526b6a68d480&deviceId=07ea04b6-a3bb-4ca6-9177-a1a4110ce046&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6IjNhZWExYjA4LTI2YWItNGFmZC1iODAzLTg0OWU4NTBmOTkyNCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI1NTAwNzYyYy1kZjJhLTExZjEtOWY5Yi01MjZiNmE2OGQ0ODAiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiMDdlYTA0YjYtYTNiYi00Y2E2LTkxNzctYTFhNDExMGNlMDQ2IiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjA3ZWEwNGI2LWEzYmItNGNhNi05MTc3LWExYTQxMTBjZTA0NiIsImZ3VmNJRDJDb3BwYSI6IjA3ZWEwNGI2LWEzYmItNGNhNi05MTc3LWExYTQxMTBjZTA0NiIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiMDdlYTA0YjYtYTNiYi00Y2E2LTkxNzctYTFhNDExMGNlMDQ2IiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDU1MDgzMzI5MSwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk1EZGxZVEEwWWpZdFlUTmlZaTAwWTJFMkxUa3hOemN0WVRGaE5ERXhNR05sTURRMiIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ2MzcyMzMsImlhdCI6MTc5NDU1MDgzMywianRpIjoiZDI0ZGNlZjYtZDliNC00ZDMzLWI5MWEtNzZjN2JiN2FmMjgxIn0.Ey8t6dlAzlGf5pnc_vms46zM3_Mdy-YztK5HJpCLry8
+https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/59b722526996084038c01e1b/1577180/playlist.m3u8?sid=6316e758-dff3-11f1-979d-ca0b4228f44e&deviceId=3b9cd442-18e4-4954-ba4b-665b4504c60a&appName=web&deviceMake=chrome&jwt=eyJhbGciOiJIUzI1NiIsImtpZCI6ImM0YTc2ZmFjLWE5M2YtNDhhYi04MGU5LWEwOWM3OGU0N2UzZCIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSUQiOiI2MzE2ZTc1OC1kZmYzLTExZjEtOTc5ZC1jYTBiNDIyOGY0NGUiLCJjbGllbnRJUCI6IjE4NS4yMzYuMjAwLjE3MiIsImNpdHkiOiJMb3MgQW5nZWxlcyIsInBvc3RhbENvZGUiOiI5MDAxMSIsImNvdW50cnkiOiJVUyIsImRtYSI6ODAzLCJhY3RpdmVSZWdpb24iOiJVUyIsImRldmljZUxhdCI6MzQuMDA5OTk4MzIxNTMzMiwiZGV2aWNlTG9uIjotMTE4LjI2MDAwMjEzNjIzMDQ3LCJwcmVmZXJyZWRMYW5ndWFnZSI6ImVuIiwiZGV2aWNlVHlwZSI6IndlYiIsImRldmljZVZlcnNpb24iOiIxMjIuMC4wIiwiZGV2aWNlTWFrZSI6ImNocm9tZSIsImRldmljZU1vZGVsIjoid2ViIiwiYXBwTmFtZSI6IndlYiIsImFwcFZlcnNpb24iOiI5LjIwLjAtODkyNTgyOTAyNjQ4Mzg1MTVlMjY0ZjViMDUxYjdjMTYwMmE1ODQ4MiIsImNsaWVudElEIjoiM2I5Y2Q0NDItMThlNC00OTU0LWJhNGItNjY1YjQ1MDRjNjBhIiwiY21BdWRpZW5jZUlEIjoiIiwiaXNDbGllbnRETlQiOmZhbHNlLCJ1c2VySUQiOiIiLCJsb2dMZXZlbCI6IkRFRkFVTFQiLCJ0aW1lWm9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJzZXJ2ZXJTaWRlQWRzIjpmYWxzZSwiZTJlQmVhY29ucyI6ZmFsc2UsImZlYXR1cmVzIjp7ImFkTG9hZCI6eyJjb2hvcnQiOiIifSwibXVsdGlBdWRpbyI6eyJlbmFibGVkIjp0cnVlfSwibXVsdGlQb2RBZHMiOnsiY29ob3J0IjoiIiwiZW5hYmxlZCI6dHJ1ZX0sInNlYXJjaEFQSSI6eyJxdWVyeVZlcnNpb24iOiJoeWJyaWQifSwic3RpdGNoZXJBZFNlc3Npb25FdmVudCI6eyJlbmFibGVkIjp0cnVlfSwic3RpdGNoZXJEYXNoTmciOnsiaml0UGFjayI6InJlcGFja0ppdCxkZWNyeXB0In0sInN0aXRjaGVySGxzTmciOnsiZGVtdXhlZEF1ZGlvIjoiaml0In0sInN0aXRjaGVySGxzTmdWbGwiOnsiZW5hYmxlZCI6dHJ1ZX0sInN0aXRjaGVySGxzTmdWb2QiOnsiZW5hYmxlZCI6dHJ1ZX19LCJmbXNQYXJhbXMiOnsiZndWY0lEMiI6IjNiOWNkNDQyLTE4ZTQtNDk1NC1iYTRiLTY2NWI0NTA0YzYwYSIsImZ3VmNJRDJDb3BwYSI6IjNiOWNkNDQyLTE4ZTQtNDk1NC1iYTRiLTY2NWI0NTA0YzYwYSIsImN1c3RvbVBhcmFtcyI6eyJmbXNfbGl2ZXJhbXBfaWRsIjoiIiwiZm1zX2VtYWlsaGFzaCI6IiIsImZtc19zdWJzY3JpYmVyaWQiOiIiLCJmbXNfaWZhIjoiIiwiZm1zX2lkZnYiOiIiLCJmbXNfdXNlcmlkIjoiM2I5Y2Q0NDItMThlNC00OTU0LWJhNGItNjY1YjQ1MDRjNjBhIiwiZm1zX3ZjaWQydHlwZSI6InVzZXJpZCIsImZtc19yYW1wX2lkIjoiIiwiZm1zX2hoX3JhbXBfaWQiOiIiLCJmbXNfYmlkaWR0eXBlIjoiIiwiX2Z3XzNQX1VJRCI6IiIsImZtc19ydWxlaWQiOiIxMDAwMCwxMDAwOSJ9fSwic2Vzc2lvblN0YXJ0VGltZSI6MTc5NDYzNzE4NTc2OCwiaXNzIjoiYm9vdC5wbHV0by50diIsInN1YiI6InByaTp2MTpwbHV0bzpkZXZpY2VzOlVTOk0ySTVZMlEwTkRJdE1UaGxOQzAwT1RVMExXSmhOR0l0TmpZMVlqUTFNRFJqTmpCaCIsImF1ZCI6IioucGx1dG8udHYiLCJleHAiOjE3OTQ3MjM1ODUsImlhdCI6MTc5NDYzNzE4NSwianRpIjoiNWNhOWFiODktMTdkYS00YTA5LWEwYzYtNTZmYmQ3ZDE3YTcxIn0.gMZlTlV6pGZ47Yj2ndoEVY7k1KnvPnMRi1JLsosuF3s
 #EXTINF:-1 tvg-name="TOP Barca (1080p)" tvg-logo="https://images-2.rakuten.tv/storage/global-live-channel/translation/artwork/7c59e962-086b-4d64-afb3-7f83ca8c3377-width200-quality90.jpeg" tvg-id="TOPBarca.pl" tvg-chno="138" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="en",TOP Barca (1080p)
 https://amg17560-fcb-amg17560c1-rakuten-uk-4891.playouts.now.amagi.tv/playlist/amg17560-fcbarcelona-topbarcaenglish-rakutenuk/playlist.m3u8
 #EXTINF:-1 tvg-id="TVManaEnglish.pt@SD" tvg-logo="https://i.imgur.com/I66IkCw.png" tvg-country="pt" tvg-language="en" group-title="سرگرمی - اروپا",TV Mana English (1080p)
-https://w1.manasat.com/tvmana-english/smil:tvmana-english.smil/chunklist_w790657266_b3048000_sleng.m3u8
+https://w1.manasat.com/tvmana-english/smil:tvmana-english.smil/chunklist_w884074142_b3048000_sleng.m3u8
 #EXTINF:-1 tvg-id="WedoTVAmor.ch@SD" tvg-logo="https://cdn-01.watch4.com/01/1720621000_wedo-amor_white_logo.png" tvg-country="ch" tvg-language="en" group-title="سرگرمی - اروپا",Wedo TV Amor (1080p)
 https://amg00735-videosolutions-amg00735c15-wedotv-eu-1915.playouts.now.amagi.tv/playlist/amg00735-videosolutionsagfast-wedoamor-wedotveu/playlist.m3u8
 #EXTINF:-1 tvg-name="World Billiards" tvg-logo="https://images-3.rakuten.tv/storage/global-live-channel/translation/artwork/80af06f2-a12e-4406-bd13-b932fd69fffe-width200-quality90.png" tvg-id="WorldBilliards.pl" tvg-chno="185" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="en",World Billiards (720p)
-https://9a81dd4ee3884d0dbcacafaf0d81327a.mediatailor.us-east-1.amazonaws.com/v1/manifest/04fd913bb278d8775298c26fdca9d9841f37601f/RakutenTV-eu_BilliardsTV/98b612ba-5bb7-4a9b-8f9f-3d0f27e3c504/2.m3u8
+https://9a81dd4ee3884d0dbcacafaf0d81327a.mediatailor.us-east-1.amazonaws.com/v1/manifest/04fd913bb278d8775298c26fdca9d9841f37601f/RakutenTV-eu_BilliardsTV/202f332a-72b9-40bb-94ef-1e311a0b6bd9/2.m3u8
 #EXTINF:-1 group-title="سرگرمی - اروپا" tvg-id="XPTV2.es@SD" tvg-logo="https://i.imgur.com/74Z8ATB.png" tvg-country="es" tvg-language="en",XPTV2 (720p)
 https://janus.xpbroadcasting.com:8443/hls/xptv2.m3u8
 #EXTINF:-1 tvg-id="PowerHD.ar@SD" tvg-logo="https://i.imgur.com/15gMDG0.png" tvg-country="ar" tvg-language="en" group-title="سرگرمی - آمریکای لاتین",PowerHD (720p)
 https://live2.tensila.com/1-1-1.power-tv/hls/live/mystream.m3u8
 #EXTINF:-1 tvg-id="ABCEntertains.au@Sydney" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/ABC_Entertains_logo.svg/960px-ABC_Entertains_logo.svg.png" tvg-country="au" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",ABC Entertains (720p)
-https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/33225e24c0e543af922929ede7b6941f/hdntl=exp=1794652098~acl=%2f*~data=hdntl~hmac=83ffcf87282b9196caaa72dffa0a804b149d40d0ff97be62ecbc4968d5473781/index_34.m3u8
+https://abc-iview-mediapackagestreams-1.akamaized.net/out/v1/33225e24c0e543af922929ede7b6941f/hdntl=exp=1794736214~acl=%2f*~data=hdntl~hmac=742f01974d3772ec5e0ead9404ff5b144faec7aaf654a7f064940ffced0303cd/index_34.m3u8
 #EXTINF:-1 tvg-id="ABCKids.au@Sydney" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/29/ABC_Kids_%282020%29.svg/revision/latest/scale-to-width-down/512" tvg-country="au" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",ABC Kids
 https://c.mjh.nz/abc-kids.m3u8
 #EXTINF:-1 tvg-name="ABC Kids" tvg-logo="https://i.imgur.com/GWDRR1t.png" tvg-id="ABCKids.au" tvg-chno="3" tvg-country="au" group-title="کودک و کارتون - انگلیسی‌زبان" tvg-language="en",ABC Kids (720p)
-https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/537787e477cb491b8cfd57eb8cc37da4/hdntl=exp=1794652089~acl=%2f*~data=hdntl~hmac=e3cdaad2a83e4ebd491f66e6843c956d7b925e4a4a475a6fe5d607fe09140ae0/index_4.m3u8
+https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/537787e477cb491b8cfd57eb8cc37da4/hdntl=exp=1794736204~acl=%2f*~data=hdntl~hmac=c01262f5f245b99e2299a18a473c82f6843128cafd8c10b5db056f610895eac8/index_4.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="BabyFirst.us@US" tvg-logo="https://i.imgur.com/WxLHBwu.png" tvg-country="us" tvg-language="en",BabyFirst (720p)
 https://cdn.fast.jwp.services/v1/channel/1_jB6940Ei_TvhvIHDL/manifest.m3u8
 #EXTINF:-1 tvg-id="Boomerang.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Boomerang (720p)
@@ -1498,8 +1497,6 @@ https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/04
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=269
 #EXTINF:-1 tvg-id="CartoonNetwork.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Cartoon Network
 https://turnerlive.warnermediacdn.com/hls/live/2023160/tooneast/noslate/VIDEO_3_1928000.m3u8
-#EXTINF:-1 tvg-id="CartoonNetwork.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Cartoon_Network_2010_logo.svg/960px-Cartoon_Network_2010_logo.svg.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Cartoon Network (1080p)
-http://212.5.144.156:8080/cartoon/index.m3u8
 #EXTINF:-1 tvg-id="CartoonitoCEE.uk@SD" tvg-logo="https://i.imgur.com/9MrzLb1.png" tvg-country="uk" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Cartoonito CEE
 http://193.33.39.108:9019/play/a00t
 #EXTINF:-1 tvg-id="CartoonitoCEE.uk@Poland" tvg-logo="https://i.imgur.com/9MrzLb1.png" tvg-country="uk" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Cartoonito CEE (1080p)
@@ -1517,23 +1514,21 @@ https://tvsen6.aynaott.com/ytv/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="HappyKids.us@SD" tvg-logo="https://i.imgur.com/cPrUCFw.png" tvg-country="us" tvg-language="en",HappyKids (576p)
 https://mumbai-edge.smartplaytv.in/HappyKids/index.m3u8
 #EXTINF:-1 tvg-id="HasbroLegends.us@SD" tvg-logo="https://i.imgur.com/JDM9rEV.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Hasbro Legends (1080p)
-https://amg02713-amg02713c11-amgplt0852.playout.now3.amagi.tv/ts-us-e2-n2/playlist/amg02713-amg02713c11-amgplt0852/0f390a0e-df4c-11f1-9b01-fac2878c882d/57/1920x1080_4300000/index.m3u8
-#EXTINF:-1 tvg-id="JimJamEurope.uk@SD" tvg-logo="https://i.imgur.com/ODhkYyx.png" tvg-country="uk" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",JimJam Europe (720p)
-http://212.5.144.156:8080/jimjam/index.m3u8
+https://amg02713-amg02713c11-amgplt0852.playout.now3.amagi.tv/ts-us-e2-n2/playlist/amg02713-amg02713c11-amgplt0852/c77c65ba-e00f-11f1-b241-de048840b4e0/94/1920x1080_4300000/index.m3u8
+#EXTINF:-1 tvg-id="JimJamEurope.uk@SD" tvg-logo="https://i.imgur.com/ODhkYyx.png" tvg-country="uk" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",JimJam Europe (576p)
+http://stream.mcquack.net/150/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="KartoonChannel.us@SD" tvg-logo="https://i.imgur.com/1luzP3T.png" tvg-country="us" tvg-language="en",Kartoon Channel! (1080p)
 https://hlspackager.akamaized.net/live/DB/KARTOON_CHANNEL/HLS/KARTOON_CHANNEL.m3u8
 #EXTINF:-1 tvg-id="KnowledgeNetwork.ca@SD" tvg-logo="https://i.imgur.com/VfofmZZ.png" tvg-country="ca" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Knowledge Network (720p)
 https://d1wal6k3d7ssin.cloudfront.net/out/v1/ea91db0906c847a4931b46a9ec36e77b/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="MoonbugKids.uk@SD" tvg-logo="https://i.imgur.com/vZHtxQb.png" tvg-country="uk" tvg-language="en",Moonbug Kids (720p)
 https://mumbai-edge.smartplaytv.in/Moonbug/index.m3u8
-#EXTINF:-1 tvg-id="NickJr.us@East" tvg-logo="https://i.imgur.com/KT4tdQs.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Nick Jr. (720p)
-http://212.5.144.156:8080/nickjr/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJr.us@EastHD" tvg-logo="https://i.imgur.com/KT4tdQs.png" tvg-country="us" tvg-language="en",Nick Jr. East HD (720p)
 http://107.167.16.138/nickjr/index.m3u8?token=test
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Nicktoons.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg" tvg-country="us" tvg-language="en",Nicktoons (720p)
 http://41.205.93.154/NICKTOONS/index.m3u8
 #EXTINF:-1 tvg-id="NickToons90s.au@AU" tvg-logo="https://images.pluto.tv/channels/64805525536e0c0008a19ca8/colorLogoPNG.png" tvg-country="au" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",NickToons 90s
-https://dai.google.com/linear/hls/pb/event/WZDgqUlxRRyUAa96o_L1Sg/stream/89163520-8ac7-46cd-87c6-16ef07de99ff:TPE2/variant/647f63b44694fec7cab19623702f8708/bandwidth/1042180.m3u8|user-agent=otg%2F1.5.1+%28AppleTv+Apple+TV+4%3B+tvOS16.0%3B+appletv.client%29+libcurl%2F7.58.0+OpenSSL%2F1.0.2o+zlib%2F1.2.11+clib%2F1.8.56
+https://dai.google.com/linear/hls/pb/event/WZDgqUlxRRyUAa96o_L1Sg/stream/c135a43f-6c5f-41bf-9da3-47cc3179b3f6:TPE/variant/647f63b44694fec7cab19623702f8708/bandwidth/1042180.m3u8|user-agent=otg%2F1.5.1+%28AppleTv+Apple+TV+4%3B+tvOS16.0%3B+appletv.client%29+libcurl%2F7.58.0+OpenSSL%2F1.0.2o+zlib%2F1.2.11+clib%2F1.8.56
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="PBSKids.us@SD" tvg-logo="https://i.imgur.com/fg8c9WK.png" tvg-country="us" tvg-language="en",PBS Kids (720p)
 https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="PBSKidsHawaii.us@SD" tvg-logo="https://i.imgur.com/ambc9le.png" tvg-country="us" tvg-language="en",PBS Kids Hawaii (720p)
@@ -1571,11 +1566,8 @@ http://88.212.15.50/live/test_minimax/playlist.m3u8
 #EXTINF:-1 tvg-id="NickJr.cz@SD" tvg-logo="https://i.imgur.com/KT4tdQs.png" tvg-country="cz" tvg-language="en" group-title="کودک و کارتون - اروپا",Nick Jr.
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.15.50/live/test_nick_jr/playlist.m3u8
-#EXTINF:-1 tvg-id="NickJr.de@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" tvg-country="de" tvg-language="en" group-title="کودک و کارتون - اروپا",Nick Jr.
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
-http://94.130.48.67:8042/stream/111/index.m3u8
 #EXTINF:-1 tvg-id="Nicktoons.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg" tvg-country="pl" tvg-language="en" group-title="کودک و کارتون - اروپا",Nicktoons
-http://92.114.85.87:8013/play/a008/16654383.m3u8
+http://92.114.85.87:8013/play/a008/36252275.m3u8
 #EXTINF:-1 tvg-id="PersianaJunior.fr@SD" tvg-logo="https://i.imgur.com/zeKHZYG.png" group-title="کودک و کارتون - اروپا" tvg-country="fr" tvg-language="fa",Persiana Junior
 https://junhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="AdventureEarth.de@SD" tvg-logo="https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/adventureearth_white.png" tvg-country="de" tvg-language="en",Adventure Earth (1080p)
@@ -1602,8 +1594,6 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo
 https://d4whmvwm0rdvi.cloudfront.net/10007/99993007/hls/master.m3u8?ads.xumo_channelId=99993007
 #EXTINF:-1 tvg-id="DerryTV23.us@SD" tvg-logo="https://i.imgur.com/MRR6UL3.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",DerryTV 23 (720p)
 https://livestream.telvue.com/derrynh2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/derrynh2/stream1/chunks.m3u8
-#EXTINF:-1 tvg-id="DiscoveryChannel.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",Discovery Channel (1080p)
-http://212.5.144.156:8080/discovery/index.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocuBox.nl@SD" tvg-logo="https://i.imgur.com/pX4U9OG.png" tvg-country="nl" tvg-language="en",DocuBox
 https://dash3.antik.sk/live/test_docubox_medium_atk/playlist.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="DocumentaryPlus.us@US" tvg-logo="https://i.imgur.com/x57klfS.png" tvg-country="us" tvg-language="en",Documentary+ (1080p)
@@ -1615,13 +1605,9 @@ https://2-fss-1.streamhoster.com/pl_122/amlst:206018-2645902/chunklist_b2000000.
 #EXTINF:-1 tvg-id="GillettePublicAccessTelevisionChannel189.us@SD" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqMoPQ32FU8R2lR71LXhYrC3tCHfjJEXcm6E9PEO=s176-c-k-c0x00ffffff-no-rj" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",Gillette Public Access Television Channel 189
 https://securestream11.champds.com/LIVE/GilletteWYLIVE3/GilletteWYLIVE3.m3u8
 #EXTINF:-1 tvg-id="History.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png" tvg-country="pl" tvg-language="en" group-title="مستند و علمی - انگلیسی",History
-http://92.114.85.87:8015/play/a00c/30846424.m3u8
-#EXTINF:-1 tvg-id="History.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",History (720p)
-http://212.5.144.156:8080/history/index.m3u8
+http://92.114.85.87:8015/play/a00c/36101645.m3u8
 #EXTINF:-1 tvg-id="HistoryAsia.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/History_%282021%29.svg/500px-History_%282021%29.svg.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",History Asia (1080p)
-https://ec02-pop1-hlc.tv360.vn/bpk-token/lbc6oy25dhzwgva6gudvsrphmnmelz3d/bpk-tv/191/output/191-audio_214835_und_iv_1=214800-video_iv_1=5254000.m3u8
-#EXTINF:-1 tvg-id="InvestigationDiscovery.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/InvestigationDiscoveryLogo2020.svg/960px-InvestigationDiscoveryLogo2020.svg.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",Investigation Discovery (1080p)
-http://212.5.144.156:8080/id/index.m3u8
+https://ec02-pop1-hlc.tv360.vn/bpk-token/2owg22ahszogrbtylek5fldnndj2y3li/bpk-tv/191/output/191-audio_214835_und_iv_1=214800-video_iv_1=5254000.m3u8
 #EXTINF:-1 tvg-id="LoveThePlanet.es@EN" tvg-logo="https://i.imgur.com/RBcD49X.png" tvg-country="es" tvg-language="en" group-title="مستند و علمی - انگلیسی",Love The Planet (1080p)
 https://amg01821-lovetv-amg01821c8-xumo-us-3443.playouts.now.amagi.tv/1080p/index.m3u8
 #EXTINF:-1 tvg-name="Moconomy" tvg-logo="https://i.imgur.com/GvqbLZB.png" tvg-id="MoconomyEconomyFinanceInfotainment.us" tvg-chno="109" group-title="مستند و علمی - انگلیسی" tvg-country="us" tvg-language="en",Moconomy Economy & Finance Infotainment (1080p)
@@ -1632,8 +1618,6 @@ https://livestream.telvue.com/nashuanh2/f7b44cfafd5c52223d5498196c8a2e7b.sdp/nas
 https://livestream.telvue.com/natickpegasus1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/natickpegasus1/stream1/chunks.m3u8
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="NationalGeographic.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" tvg-country="pl" tvg-language="en",National Geographic (576i)
 http://92.114.85.87:8006/play/a00a/index.m3u8
-#EXTINF:-1 tvg-id="NationalGeographic.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",National Geographic (720p)
-http://212.5.144.156:8080/natgeo/index.m3u8
 #EXTINF:-1 tvg-id="PBSAmerica.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/PBS_America_2022.svg/960px-PBS_America_2022.svg.png" tvg-country="uk" tvg-language="en" group-title="مستند و علمی - انگلیسی",PBS America (576p)
 http://185.19.191.2:8090/PBS/index.m3u8
 #EXTINF:-1 tvg-id="TUTV.us@SD" tvg-logo="https://i.imgur.com/At0BPeA.png" tvg-country="us" tvg-language="en" group-title="مستند و علمی - انگلیسی",TUTV (1080p)
@@ -1641,7 +1625,7 @@ https://livestream.telvue.com/templeuni1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/pl
 #EXTINF:-1 group-title="مستند و علمی - انگلیسی" tvg-id="WedoBigStories.ch@SD" tvg-logo="https://provider-static.plex.tv/epg/cms/production/49cf6309-0a4a-4d39-bdcc-fa48e4ef84a7/WEDOBIGSTORIES_LIGHTTHEME_-_Sorin_Stoian.png" tvg-country="ch" tvg-language="en",Wedo Big Stories (1080p)
 https://amg00735-videosolutionsa-wedobigdocs-ono-0urlz.amagi.tv/playlist/amg00735-videosolutionsa-wedobigdocs-ono/playlist.m3u8
 #EXTINF:-1 tvg-id="PayamJavanTV.us@SD" tvg-logo="https://i.imgur.com/GYfsHh9.png" tvg-country="us" tvg-language="fa" group-title="مستند و علمی - سایر زبان‌ها",Payam Javan TV (720p)
-https://uni01rtmp.tulix.tv/kensecure/pjtv.stream/chunklist_w2079430721.m3u8
+https://uni01rtmp.tulix.tv/kensecure/pjtv.stream/chunklist_w2069505347.m3u8
 #EXTINF:-1 tvg-id="PersianaDocs.fr@HD" tvg-logo="" group-title="مستند و علمی - سایر زبان‌ها" tvg-country="fr" tvg-language="fa",Persiana Docs
 https://scihls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaMedical.fr@SD" tvg-logo="" group-title="مستند و علمی - سایر زبان‌ها" tvg-country="fr" tvg-language="fa",Persiana Medical
@@ -1663,7 +1647,7 @@ https://uptv-aspiretvlife-klowdtv.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="AutenticTravel.de@SD" tvg-logo="https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/autentictravel_white.png" tvg-country="de" tvg-language="en",Autentic Travel (1080p)
 https://cb0c87cc605942ff9766a4e6744bbadc.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticTravel/playlist.m3u8
 #EXTINF:-1 tvg-name="BBC Food" tvg-logo="https://i.imgur.com/N3xiz4m.png" tvg-id="BBCFood.us" tvg-chno="1" tvg-country="us" group-title="سبک زندگی، آشپزی و سفر" tvg-language="en",BBC Food
-https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5844bf5514d0007945bda/1577180/playlist.m3u8?terminate=false&sid=ROKUCHANNEL-4126de2a-04c8-4478-92a3-ef5e31b78646&deviceDNT=1&advertisingId=channel&deviceModel=web&deviceVersion=1.0&embedPartner=rokuChannel&serverSideAds=true&appName=rokuchannel&deviceId=channel&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5844bf5514d0007945bda/1577180/playlist.m3u8?terminate=false&sid=ROKUCHANNEL-3f9cc516-2b5d-42ec-a485-aea61d8acad3&deviceDNT=1&advertisingId=channel&deviceModel=web&deviceVersion=1.0&embedPartner=rokuChannel&serverSideAds=true&appName=rokuchannel&deviceId=channel&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVFloridaAlabama.us@SD" tvg-logo="https://i.imgur.com/weypM9C.png" tvg-country="us" tvg-language="en",Beach TV Florida & Alabama (720p)
 http://media4.tripsmarter.com:1935/LiveTV/DTVHD/playlist.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="BeachTVKeyWestFloridaKeys.us@SD" tvg-logo="https://i.imgur.com/XhDBdff.png" tvg-country="us" tvg-language="en",Beach TV Key West & Florida Keys (720p)
@@ -1694,8 +1678,6 @@ http://41.205.93.154/ESPNNEWS/index.m3u8
 https://qvc-amd-live.akamaized.net/hls/live/2034113/lsqvc5us/master.m3u8
 #EXTINF:-1 tvg-id="FashionTV.ua@SD" tvg-logo="https://i.imgur.com/Bk7W39G.png" tvg-country="ua" tvg-language="en" group-title="سبک زندگی، آشپزی و سفر",Fashion TV (1080p)
 http://stream.mcquack.net/287/index.m3u8
-#EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionLifeStyle.ru@SD" tvg-logo="https://i.imgur.com/ETmpllL.png" tvg-country="ru" tvg-language="en",Fashion&LifeStyle (1080p)
-http://stream.mcquack.net/119/index.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionBox.nl@SD" tvg-logo="https://i.imgur.com/Taqj4yi.png" tvg-country="nl" tvg-language="en",FashionBox
 https://dash2.antik.sk/live/test_fashionbox_medium_atk/playlist.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="FashionTVSecrets.fr@HD" tvg-logo="https://i.ibb.co/fVGJyCC8/w512.png" tvg-country="fr" tvg-language="en",FashionTV Secrets (1080p)
@@ -1731,7 +1713,7 @@ http://23.237.104.106:8080/USA_OUTDOOR/index.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="OWN.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/OWN_2011_logo.svg/960px-OWN_2011_logo.svg.png" tvg-country="us" tvg-language="en",OWN (720p)
 http://23.237.104.106:8080/USA_OWN/index.m3u8
 #EXTINF:-1 tvg-id="PeerTVSouthTyrol.it@SD" tvg-logo="https://www.peer.biz/peertv-iptv/peer-tv-south-tyrol.png" tvg-country="it" tvg-language="en" group-title="سبک زندگی، آشپزی و سفر",Peer TV South Tyrol (1280p)
-https://iptv.peer.biz/live/peertv-en.m3u8?hls_ctx=4aavuz81
+https://iptv.peer.biz/live/peertv-en.m3u8?hls_ctx=2266n86e
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="PoconoTelevisionNetwork.us@HD" tvg-logo="https://i.imgur.com/et6giFo.png" tvg-country="us" tvg-language="en",Pocono Television Network (1080p)
 https://dfoiz3dv1euv7.cloudfront.net/ptnlive-s3/live1.m3u8
 #EXTINF:-1 group-title="سبک زندگی، آشپزی و سفر" tvg-id="Revry.us@SD" tvg-logo="https://i.imgur.com/XuTUaq4.png" tvg-country="us" tvg-language="en",Revry (1080p)
