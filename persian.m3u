@@ -157,6 +157,8 @@ https://live.presstv.co.uk/hls/ifilmfa.m3u8
 https://metafilmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="OXIRTV.ir@SD" tvg-logo="https://i.imgur.com/MGMhUDx.png" tvg-country="ir" tvg-language="fa",OXIR TV
 https://hls.oxir.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="PBCTapeshTV.us@SD" tvg-logo="https://i.imgur.com/50JzsmH.png" tvg-country="us" tvg-language="fa",PBC Tapesh TV (720p)
+https://iptv.tapesh.tv/tapesh/playlist.m3u8
 #EXTINF:-1 tvg-id="PersianaCinema.fr@SD" tvg-logo="https://i.imgur.com/hgIro9r.png" group-title="فارسی - فیلم و سریال" tvg-country="fr" tvg-language="fa",Persiana Cinema
 https://cinehls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaComedy.fr@SD" tvg-logo="https://i.imgur.com/DBZ3Pi5.png" group-title="فارسی - فیلم و سریال" tvg-country="fr" tvg-language="fa",Persiana Comedy
