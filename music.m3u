@@ -45,6 +45,8 @@ https://hls.botflix.tv/radioo/index.m3u8
 https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8
 #EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@SD" tvg-logo="https://i.imgur.com/FyNot5W.png" tvg-country="us" tvg-language="en" group-title="موزیک - انگلیسی‌زبان",California Music Channel (1080p)
 https://cmc-ono.amagi.tv/hls/amagi_hls_data_cmcAAAAAA-cmc-ono/CDN/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CMCUSACountryMusicChannel.us@SD" tvg-logo="https://i.imgur.com/QsANRSu.png" tvg-country="us" tvg-language="en",CMC-USA Country Music Channel (720p)
+https://hwlive.streamingmediahosting.com/14215-live/0_obd393sh/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CMT.us@East" tvg-logo="https://i.imgur.com/S7DOpdY.png" tvg-country="us" tvg-language="en",CMT (720p)
 http://23.237.104.106:8080/USA_CMT/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="ConcertChannel.us@SD" tvg-logo="https://i.imgur.com/u2irADf.png" tvg-country="us" tvg-language="en",Concert Channel (720p)
@@ -162,8 +164,6 @@ https://tvboom.ro/live-tv/live.m3u8
 http://178.134.1.158:8081/BRIDGE/index.m3u8
 #EXTINF:-1 tvg-id="BRIDGEClassic.ru@SD" tvg-logo="https://i.imgur.com/JJTQq81.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Classic (576p)
 https://fs.uplink.kz/bridge_classic/mono.m3u8?token=onlinetv
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEDeluxe.ru@HD" tvg-logo="https://i.imgur.com/EazL8w7.png" tvg-country="ru" tvg-language="rus",BRIDGE Deluxe HD (576p)
-http://stream.mcquack.net/92/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="BRIDGEHits.ru@SD" tvg-logo="https://i.imgur.com/sIW9oR4.png" tvg-country="ru" tvg-language="rus",BRIDGE Hits (576p)
 http://stream.mcquack.net/320/index.m3u8
 #EXTINF:-1 tvg-id="CadenaElite.es@SD" tvg-logo="https://i.imgur.com/3yeGDTP.png" tvg-country="es" tvg-language="es" group-title="موزیک - اروپا",Cadena Elite (720p)
@@ -202,8 +202,6 @@ http://stream.mcquack.net/261/index.m3u8
 http://46.53.200.153:7777/play/EuropaPlus/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="EuropaPlusTV.ru@SD" tvg-logo="https://i.imgur.com/GLc4qrc.png" tvg-country="ru" tvg-language="rus",Europa Plus TV SD (576p)
 http://stream.mcquack.net/184/index.m3u8
-#EXTINF:-1 tvg-id="FinestTV.de@SD" tvg-logo="https://i.imgur.com/1uoP10V.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",Finest TV (288p)
-https://media.finest.tv/hls/live.m3u8
 #EXTINF:-1 tvg-id="FMITALIA.it@SD" tvg-logo="https://i.imgur.com/54CO2u9.png" tvg-country="it" tvg-language="ita" group-title="موزیک - اروپا",FM ITALIA (1080p)
 https://stream2.xdevel.com/video0s975817-1183/stream/playlist.m3u8
 #EXTINF:-1 tvg-id="FolxMusicTelevision.de@SD" tvg-logo="https://i.imgur.com/ze04puX.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",Folx Music Television
@@ -263,7 +261,7 @@ http://stream.mcquack.net/218/index.m3u8
 http://stream.mcquack.net/330/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="m2oTV.it@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Radio_m2o_-_Logo_2019.svg/500px-Radio_m2o_-_Logo_2019.svg.png" tvg-country="it" tvg-language="ita",m2o TV (1080p)
 https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S62628868/uhdWBlkC1AoO/playlist.m3u8
-#EXTINF:-1 tvg-id="M6Music.fr@SD" tvg-country="fr" tvg-language="fr" group-title="موزیک - اروپا",M6 Music (1080p)
+#EXTINF:-1 tvg-id="M6Music.fr@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/68/M6music-95cde0867d.svg/revision/latest?cb=20200412210630" tvg-country="fr" tvg-language="fr" group-title="موزیک - اروپا",M6 Music (1080p)
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/m6_music_hits/live.livx/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MagicTV.ro@SD" tvg-logo="https://i.imgur.com/9izrr4d.png" tvg-country="ro" tvg-language="ron",Magic TV (720p)
 https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8
@@ -278,8 +276,9 @@ https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/melody/live.livx/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MessatidaTV.gr@SD" tvg-logo="https://i.imgur.com/WEYrIrC.png" tvg-country="gr" tvg-language="ell",Messatida TV (720p)
 https://rtmp.streams.ovh:8081/mtv/index.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="MezzoLive.fr@SD" tvg-logo="https://i.imgur.com/H9ytKPN.png" tvg-country="fr" tvg-language="en",Mezzo Live (1080p)
-http://stream.mcquack.net/276/index.m3u8
+#EXTINF:-1 tvg-id="MezzoLive.fr@SD" tvg-logo="https://i.imgur.com/H9ytKPN.png" tvg-country="fr" tvg-language="en" group-title="موزیک - اروپا",Mezzo Live
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://45.84.187.172:3001/udp/239.10.10.76:5000
 #EXTINF:-1 tvg-id="MNM.be@SD" tvg-logo="https://i.imgur.com/L4cD18H.png" tvg-country="be" tvg-language="nld" group-title="موزیک - اروپا",MNM (720p)
 https://live.vrtcdn.be/groupa/live/1718328a-5c53-410d-87ec-d8db68124cfc/live.isml/.m3u8
 #EXTINF:-1 tvg-id="MusicBoxClassic.cz@SD" tvg-logo="https://musicboxclassic.com/music_box_classic_logo.png" tvg-country="cz" tvg-language="en" group-title="موزیک - اروپا",Music Box Classic
@@ -391,6 +390,8 @@ http://stream7.xdevel.com/video0s975758-1051/stream/playlist.m3u8
 https://4c4b867c89244861ac216426883d1ad0.msvdn.net/live/S35394734/Z6U2wGoDYANk/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioCarnavalTV.es@SD" tvg-logo="https://i.imgur.com/cdpbkSo.png" tvg-country="es" tvg-language="es" group-title="موزیک - اروپا",Radio Carnaval TV (720p)
 https://eu1.servers10.com:8081/8116/index.m3u8
+#EXTINF:-1 tvg-id="RADIOCLUBDJTV.pl@HD" tvg-logo="https://radioclubdj.pro/studio/logo.png" tvg-country="pl" tvg-language="pl" group-title="موزیک - اروپا",RADIO CLUB DJ TV
+https://radioclubdj.pro/stream/tv.m3u8
 #EXTINF:-1 tvg-name="Radio Delta 1 TV" tvg-logo="https://hostux.pics/images/2026/09/11/07_radio_delta_1_tvc17419f8a8df1da6.png" tvg-country="it" group-title="موزیک - اروپا",Radio Delta 1 TV
 https://stream6.xdevel.com/video0s976486-1271/stream/playlist.m3u8
 #EXTINF:-1 tvg-name="Radio Digiesse TV" tvg-logo="https://hostux.pics/images/2026/09/11/08_radio_digiesse_tv62f4f919c0d901ef.png" tvg-country="it" group-title="موزیک - اروپا",Radio Digiesse TV
@@ -507,6 +508,8 @@ https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/p
 https://vidartv2.todostreaming.es/live/radiovida-emisiontvhd.m3u8
 #EXTINF:-1 tvg-id="RUTV.ru@SD" tvg-logo="https://i.imgur.com/Z7HUU7V.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",RU.TV (1080p)
 https://bl.rutube.ru/livestream/b1eb8e90d7e636677b3eb73b4fcbb717/index.m3u8?e=2069285076&s=d-E-bxKy2v3EEJ94RQX9CA&scheme=https
+#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="RussianMusicBox.ru@SD" tvg-logo="https://i.imgur.com/ZkJ3Rh9.png" tvg-country="ru" tvg-language="rus",Russian MusicBox (576p)
+http://stream.mcquack.net/319/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="ShansonTV.ru@SD" tvg-logo="https://i.imgur.com/Fk4sd8t.png" tvg-country="ru" tvg-language="rus",Shanson TV (576p)
 http://catchup.videoline.ru/shanson/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="SlagerMuzika.cz@SD" tvg-logo="https://i.imgur.com/hKdXwrW.png" tvg-country="cz" tvg-language="ces",Slager Muzika
@@ -558,6 +561,8 @@ http://stream.mcquack.net/281/index.m3u8
 https://live02-seg.msr.cdn.mediaset.net/live/ch-ew/ew-clr.isml/index.m3u8
 #EXTINF:-1 tvg-id="VisualRadio.it@SD" tvg-logo="https://i.imgur.com/ah14ah0.png" tvg-country="it" tvg-language="ita" group-title="موزیک - اروپا",Visual Radio (576p)
 http://wms.shared.streamshow.it:1935/visualradio/visualradio/live.m3u8
+#EXTINF:-1 tvg-id="VIVARussia.ru@SD" tvg-logo="https://i.imgur.com/OFhQQCD.png" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",VIVA Russia (1080p)
+https://183.giatvcdn.com/ssh101/ssh101/vivarussia/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VolksmusikTV.de@SD" tvg-logo="https://i.imgur.com/EsWuCJ3.png" tvg-country="de" tvg-language="de",Volksmusik TV (1080p)
 https://vmtv.iptv-playoutcenter.de/vmtv/vmtv1/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VOXMusicTV.pl@SD" tvg-logo="https://i.imgur.com/N993msF.png" tvg-country="pl" tvg-language="pl",VOX Music TV (1080p)
@@ -672,6 +677,8 @@ https://tuvideoonline.com.ar:3391/live/radioconexionlive.m3u8
 https://tv.arkeo.cl:19360/8046/8046.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="RadioDuna.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/427_Radio_Duna.png" tvg-country="cl" tvg-language="es",Radio Duna (720p)
 https://mdstrm.com/live-stream-playlist/67ed8a8d6db4af9a0188555c.m3u8
+#EXTINF:-1 tvg-id="RadioEdelweiss.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/1313_Radio_Edelweiss.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio Edelweiss (720p)
+https://stmv5.voxtvhd.com.br/edelweisstv/edelweisstv/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioElSembrador.cl@SD" tvg-logo="https://i.imgur.com/gBpMAc3.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio El Sembrador (720p)
 https://tv.arkeo.cl:1936/elsembrador/elsembrador/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioFantasiaTV.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/389_Radio_Fantasia_TV.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio Fantasia TV (720p)
@@ -736,6 +743,8 @@ http://186.148.196.100:8000/play/a02h
 https://live-evg5.tv360.bitel.com.pe/bitel/mixtvSRT/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="SaborTV.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/416_Sabor_TV.png" tvg-country="cl" tvg-language="es",Sabor TV (720p)
 https://v1.tustreaming.cl/sabortv/index.m3u8
+#EXTINF:-1 tvg-id="SalsaGordaTelevision.co@SD" tvg-logo="https://i.imgur.com/3IhYd7G.jpg" tvg-country="co" tvg-language="es" group-title="موزیک - آمریکای لاتین",Salsa Gorda Television (1080p)
+https://stmv1.voxtvhd.com.br/salsagorda/salsagorda/playlist.m3u8
 #EXTINF:-1 tvg-id="SensacionCosta.cl@SD" tvg-logo="https://i.imgur.com/oYQoWAB.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Sensacion Costa (1080p)
 https://tvcosta.gleeze.com/memfs/4d48db09-0b1e-4803-8da7-22be388bdd7e.m3u8
 #EXTINF:-1 tvg-id="SoloBailalo.cl@SD" tvg-logo="https://i.imgur.com/SImJE7c.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Solo Bailalo (480p)

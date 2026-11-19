@@ -63,10 +63,6 @@ https://mumbai-edge.smartplaytv.in/Moonbug/index.m3u8
 https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="NickJr.us@EastHD" tvg-logo="https://i.imgur.com/KT4tdQs.png" tvg-country="us" tvg-language="en",Nick Jr. East HD (720p)
 http://107.167.16.138/nickjr/index.m3u8?token=test
-#EXTINF:-1 tvg-id="Nickelodeon.us@East" tvg-logo="https://i.imgur.com/E84jnP8.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Nickelodeon
-#EXTVLCOPT:http-referrer=https://tvnow.st/
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
-https://cache0.wonvt.st/live/1ewxgzu023dos60vlh62k/master.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Nicktoons.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/be/Nicktoons_Logo_2023.svg" tvg-country="us" tvg-language="en",Nicktoons (720p)
 http://41.205.93.154/NICKTOONS/index.m3u8
 #EXTINF:-1 tvg-id="NickToons90s.au@AU" tvg-logo="https://images.pluto.tv/channels/64805525536e0c0008a19ca8/colorLogoPNG.png" tvg-country="au" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",NickToons 90s
@@ -185,10 +181,16 @@ https://foxkidstv.be:3369/stream/play.m3u8
 #EXTINF:-1 tvg-id="JimJam.hu@SD" tvg-logo="https://i.imgur.com/ODhkYyx.png" tvg-country="hu" tvg-language="hun" group-title="کودک و کارتون - اروپا",JimJam
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/jim_jam_hun/index.m3u8
+#EXTINF:-1 tvg-id="JimJam.ro@SD" tvg-logo="https://i.imgur.com/ODhkYyx.png" tvg-country="ro" tvg-language="en" group-title="کودک و کارتون - اروپا",JimJam (576p)
+#EXTVLCOPT:http-referrer=https://canale-tv.net/
+https://rundle.tv/proxy5.php?src=https%3A%2F%2Fsaruman1.tharen001.cfd%2Fjimy%2Fusergenq3n0lz7kr-got.htm
 #EXTINF:-1 tvg-name="K2" tvg-logo="https://i.imgur.com/wlLgSiA.png" tvg-id="K2.it" tvg-chno="41" tvg-country="it" group-title="کودک و کارتون - اروپا" tvg-language="ita",K2
 https://d1pmpe0hs35ka5.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-39hsskpppgf72/K2_IT.m3u8
 #EXTINF:-1 tvg-id="KapitanFantastika.ru@SD" tvg-logo="https://i.imgur.com/K3PSHiT.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Kapitan Fantastika (576p)
 https://stream8.cinerama.uz/1406/tracks-v1a1/mono.m3u8
+#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="KinoKazka.es@SD" tvg-logo="https://i.imgur.com/y6SWpsX.png" tvg-country="es" tvg-language="ukr",KinoKazka (1080p)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://stream.mcquack.net/167/index.m3u8
 #EXTINF:-1 tvg-id="Kolyokklub.hu@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/K%C3%B6ly%C3%B6kklub_II.svg/1920px-K%C3%B6ly%C3%B6kklub_II.svg.png" tvg-country="hu" tvg-language="hun" group-title="کودک و کارتون - اروپا",Kolyokklub
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
 http://88.212.7.14/live/kolyokklub_atk/index.m3u8
@@ -210,6 +212,8 @@ http://88.212.15.50/live/test_minimax/playlist.m3u8
 https://fs.uplink.kz/mult/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="Mult.ru@SD" tvg-logo="https://i.imgur.com/xi351Fx.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Mult (576p)
 https://stream8.cinerama.uz/1246/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="Multimuzyka.ru@SD" tvg-logo="https://i.imgur.com/SYt6BZP.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Mult i muzyka (576p)
+http://stream.mcquack.net/82/index.m3u8
 #EXTINF:-1 tvg-id="Multilandia.ru@SD" tvg-logo="https://i.imgur.com/ccwijY0.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Multilandia
 https://stream8.cinerama.uz/1440/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="NickJr.cz@SD" tvg-logo="https://i.imgur.com/KT4tdQs.png" tvg-country="cz" tvg-language="en" group-title="کودک و کارتون - اروپا",Nick Jr.
@@ -239,8 +243,6 @@ http://92.114.85.87:8013/play/a005/index.m3u8
 https://ma.anixa.tv/clips/stream/nickelodeon/playlist.php
 #EXTINF:-1 tvg-id="Nickelodeon.es@HD" tvg-logo="https://i.imgur.com/E84jnP8.png" tvg-country="es" tvg-language="es" group-title="کودک و کارتون - اروپا",Nickelodeon (1080p)
 http://90.170.214.40:9700/stream/avatel/nickelodeonhd/master.m3u8
-#EXTINF:-1 tvg-id="Nickelodeon.ru@SD" tvg-logo="https://i.imgur.com/w8iE8dV.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Nickelodeon (576p)
-http://stream.mcquack.net/443/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.fr@SD" tvg-logo="https://i.imgur.com/E84jnP8.png" tvg-country="fr" tvg-language="fr" group-title="کودک و کارتون - اروپا",Nickelodeon (720p)
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/nickelodeon/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="NickelodeonJunior.fr@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/960px-Nickelodeon_Junior.png" tvg-country="fr" tvg-language="fr" group-title="کودک و کارتون - اروپا",Nickelodeon Junior (720p)
@@ -268,8 +270,7 @@ https://web12.mdn.ors.at/orf/web12/qxa/manifest.mpd
 https://junhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PixelTV.ua@SD" tvg-logo="https://i.imgur.com/ECro8Ah.png" tvg-country="ua" tvg-language="ukr" group-title="کودک و کارتون - اروپا",Pixel TV (720p)
 https://cdn15.live-tv.cloud/ua_infinitas_tv/pixel-abr/playlist.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="PLUSPLUS.ua@SD" tvg-logo="https://i.imgur.com/9bPhStm.png" tvg-country="ua" tvg-language="ukr",PLUSPLUS (1080p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+#EXTINF:-1 tvg-name="ПлюсПлюс" tvg-logo="https://i.imgur.com/9bPhStm.png" tvg-id="PlusPlus.ua" tvg-chno="19" tvg-country="ua" group-title="کودک و کارتون - اروپا" tvg-language="ukr",PLUSPLUS
 http://stream.mcquack.net/339/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="PolsatJimJam.pl@SD" tvg-logo="https://i.imgur.com/GjppUlg.png" tvg-country="pl" tvg-language="pl",Polsat JimJam (576p)
 http://185.227.34.179:8080/jimjam/index.m3u8
