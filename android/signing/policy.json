@@ -4,5 +4,8 @@
   "branch": "arena/df65ff7a-iptv",
   "application_id": "io.github.fourkings6114.iptv.trial",
   "certificate_sha256": "eba2f7bdb4cfea267f4c30cedba8b2956f9c86ed3d5363512291fd3d6bd29c48",
-  "required_source": "legacy-cache-during-owner-setup"
+  "required_source": "actions-secret",
+  "owner_verified_backup_sha256": "799efdebef070304d202d528b18fb97040cf5944dd457f7faa68c1696e13b2e9",
+  "owner_request_id": "656644557637441cb5890cd3991c3f20",
+  "verification_nonce": "e28c652c4e624047903e2d9ef2acf488"
 }
