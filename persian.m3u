@@ -107,12 +107,12 @@ https://ncdn.telewebion.ir/noor/live/playlist.m3u8
 https://stream.novin.live/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Omid e Iran TV
 https://oitnhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="ParsTV.us@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/ParsTV.us.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Pars TV
-https://parshls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="ParsTV.us" tvg-name="Pars TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/ParsTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="us",Pars TV
+https://livestream.5centscdn.com/parstvtvweb1/e8ac8f595b3003ea3d22178c05c67593.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="PayameArameshTV.us@SD" tvg-logo="https://i.imgur.com/WaPr0t0.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Payame Aramesh TV (720p)
 https://hls.keshishhamid.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PayvandTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PayvandTV.ir.png" tvg-country="ir" tvg-language="fa" group-title="فارسی - تلویزیون",Payvand TV (720p)
-https://uni6rtmp.tulix.tv/ucur1/Payvand/playlist.m3u8
+#EXTINF:-1 tvg-id="PayvandTV.ir" tvg-name="Payvand TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PayvandTV.ir.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="ir",Payvand TV
+https://tgn.bozztv.com/cus01/ucur1/Payvand/playlist.m3u8
 #EXTINF:-1 tvg-id="PersianaTurkiye.fr@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="fr" tvg-language="fa",Persiana Turkiye
 https://turkhls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="PooyaTV.ir@SD" tvg-logo="https://i.imgur.com/hjeQUtg.png" tvg-country="ir" tvg-language="fa",Pooya TV
@@ -179,8 +179,8 @@ https://live.presstv.co.uk/hls/ifilmfa.m3u8
 https://metafilmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="OXIRTV.ir@SD" tvg-logo="https://i.imgur.com/MGMhUDx.png" tvg-country="ir" tvg-language="fa",OXIR TV
 https://hls.oxir.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PBCTapeshTV.us" tvg-name="Tapesh TV" tvg-logo="https://i.imgur.com/50JzsmH.png" group-title="فارسی - فیلم و سریال" tvg-language="fa" tvg-quality="SD" tvg-country="us",PBC Tapesh TV
-https://hls.tapeshtv.live/hls/stream.m3u8
+#EXTINF:-1 group-title="فارسی - فیلم و سریال" tvg-id="PBCTapeshTV.us@SD" tvg-logo="https://i.imgur.com/50JzsmH.png" tvg-country="us" tvg-language="fa",PBC Tapesh TV (720p)
+https://iptv.tapesh.tv/tapesh/playlist.m3u8
 #EXTINF:-1 tvg-id="PersianaChina.fr" tvg-name="Persiana China" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PersianaChina.fr.png" group-title="فارسی - فیلم و سریال" tvg-language="fa" tvg-quality="HD" tvg-country="fr",Persiana China | پرشیانا چین
 https://chinahls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PersianaCinema.fr@SD" tvg-logo="https://i.imgur.com/hgIro9r.png" group-title="فارسی - فیلم و سریال" tvg-country="fr" tvg-language="fa",Persiana Cinema

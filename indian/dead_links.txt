@@ -1,0 +1,78 @@
+# Unavailable links (not necessarily dead)
+# count: 15
+
+7X Music (1080p)
+https://7xshreeshyam.akamaized.net/7XPunjabi/index.m3u8
+http_error: HTTP 404
+last_success: unknown
+
+9X Jalwa (576p)
+https://mumt03.tangotv.in/Dsly5z3H9XJALWA/index.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+9XM (1080p)
+https://9xjio.wiseplayout.com/9XM/master.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Andy Haryana (576p)
+https://mumt03.tangotv.in/Dsly5z3HANDYHARYANA/index.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Boogle Bollywood (720p)
+https://yuppnimrestreammum.akamaized.net/181224/smil:bogglebollywood.smil/playlist.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Colors Bangla Cinema (576p)
+http://103.151.60.162:2122/play/a02m/index.m3u8?[redacted]
+restricted: HTTP 403
+last_success: unknown
+
+Deewana HD (540p)
+https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8
+network_error: Connection or DNS/TLS failure
+last_success: unknown
+
+Goldmines 2 (576p)
+https://mumt03.tangotv.in/Dsly5z3HGOLDMINES2/index.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Goldmines Action (576p)
+https://mumt03.tangotv.in/Dsly5z3HGOLDMINESACTION/index.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Jalsha Movies HD (1080p)
+http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8
+timeout: Request timed out
+last_success: unknown
+
+MH One Movies (576p)
+https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Pocket Films
+https://vglivessai.akamaized.net/sg/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/b8ada260-bb81-472b-b7c1-3a79213a84b8/e02a0ce5-6c42-4cca-bb53-e5cfecff74a9/0.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: unknown
+
+Studio One + (576p)
+https://d2gvyg6lvauoko.cloudfront.net/230226/studiooneplus/playlist.m3u8
+restricted: HTTP 403
+last_success: unknown
+
+Tabbar Hits (1080p)
+https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8
+invalid: Empty, HTML/JSON or unrecognized stream response
+last_success: unknown
+
+ZB Music (720p)
+https://server.zillarbarta.com/zbmusic/index.m3u8
+http_error: HTTP 404
+last_success: unknown
+

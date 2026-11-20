@@ -51,8 +51,8 @@ https://lsn.lv/bbcradio.m3u8?station=bbc_6music&bitrate=320000
 https://hls.botflix.tv/radioo/index.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="BPXTVRadio.us@SD" tvg-logo="https://i.imgur.com/86VXni8.jpeg" tvg-country="us" tvg-language="fr",BPX TV Radio
 https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8
-#EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@SD" tvg-logo="https://i.imgur.com/FyNot5W.png" tvg-country="us" tvg-language="en" group-title="موزیک - انگلیسی‌زبان",California Music Channel (1080p)
-https://cmc-ono.amagi.tv/hls/amagi_hls_data_cmcAAAAAA-cmc-ono/CDN/playlist.m3u8
+#EXTINF:-1 tvg-id="CaliforniaMusicChannel.us@SD" tvg-name="California Music Channel" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/FyNot5W.png" group-title="موزیک - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="1080p",California Music Channel
+https://cmc-kowdtv.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ClubbingTV.us@UK" tvg-name="Clubbing TV (UK)" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/MyiA92q.png" group-title="موزیک - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",Clubbing TV
 https://a-cdn.klowdtv.com/live3/clubbingtv_720p/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - انگلیسی‌زبان" tvg-id="CMCUSACountryMusicChannel.us@SD" tvg-logo="https://i.imgur.com/QsANRSu.png" tvg-country="us" tvg-language="en",CMC-USA Country Music Channel (720p)
@@ -248,8 +248,8 @@ http://46.53.200.153:7777/play/EuropaPlus/index.m3u8
 https://fs.uplink.kz/europa_plus/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="FinestTV.de@SD" tvg-logo="https://i.imgur.com/1uoP10V.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",Finest TV (288p)
 https://media.finest.tv/hls/live.m3u8
-#EXTINF:-1 tvg-id="FMITALIA.it@SD" tvg-logo="https://i.imgur.com/54CO2u9.png" tvg-country="it" tvg-language="italian" group-title="موزیک - اروپا",FM ITALIA (1080p)
-https://stream2.xdevel.com/video0s975817-1183/stream/playlist.m3u8
+#EXTINF:-1 tvg-id="FMITALIA.it" tvg-name="FM ITALIA" tvg-country="it" tvg-language="italian" tvg-logo="https://i.imgur.com/54CO2u9.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",FM ITALIA
+https://stream1.xdevel.com/video0s975817-1182/stream/playlist.m3u8
 #EXTINF:-1 tvg-id="FolxMusicTelevision.de@SD" tvg-logo="https://i.imgur.com/ze04puX.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",Folx Music Television
 https://folxapp.b-cdn.net/1080p/index.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="FomixTV.nl@HD" tvg-logo="https://i.imgur.com/7SLYEMG.png" tvg-country="nl" tvg-language="nld",FomixTV (1080p)
@@ -574,8 +574,8 @@ https://live.tele7music.ro/hls/stream/index.m3u8
 https://stream.tequilamusic.net/hls/tequila_tv.m3u8
 #EXTINF:-1 tvg-id="TraceBrazuca.fr@SD" tvg-name="Trace Brazuca" tvg-country="fr" tvg-language="pt" tvg-logo="https://i.imgur.com/DFBocPu.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",Trace Brazuca
 https://amg01131-tracetv-amg01131c4-stirr-us-4390.playouts.now.amagi.tv/playlist.m3u8
-#EXTINF:-1 tvg-name="Trace Latina" tvg-logo="https://i.imgur.com/CUVAi4u.png" tvg-id="TraceLatina.fr" tvg-chno="4734" group-title="موزیک - اروپا" tvg-country="fr" tvg-language="fr",Trace Latina
-https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01131-tracetv-tracelatinait-samsungit/playlist.m3u8
+#EXTINF:-1 tvg-id="TraceLatina.fr@SD" tvg-name="Trace Latina" tvg-country="fr" tvg-language="fr" tvg-logo="https://i.imgur.com/CUVAi4u.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",Trace Latina
+https://amg01131-tracetv-tracelatina-glewed-vtnk7.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-name="Trace Urban" tvg-logo="https://i.imgur.com/PAx9qj8.png" tvg-id="TraceUrban.fr" tvg-chno="4737" group-title="موزیک - اروپا" tvg-country="fr" tvg-language="fr",Trace Urban
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01131-tracetv-traceurbanit-samsungit/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TraditionalTV.ro@SD" tvg-logo="https://i.ibb.co/G5bNH48/Traditional-TV-HD.png" tvg-country="ro" tvg-language="ron",Traditional TV (1080p)
@@ -822,8 +822,8 @@ https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
 https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="PowerTurkTaptaze.tr@SD" tvg-logo="https://i.imgur.com/a5nW3HU.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",PowerTurk Taptaze (1080p)
 https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
-#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-logo="https://i.imgur.com/JgUzRH8.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",TRT Muzik
-https://stream8.cinerama.uz/1208/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-logo="https://i.imgur.com/JgUzRH8.png" tvg-country="tr" tvg-language="tr" group-title="موزیک - خاورمیانه",TRT Muzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="BRIDGERock.ru@SD" tvg-logo="https://i.imgur.com/MHuwct2.png" tvg-country="ru" tvg-language="rus",BRIDGE Rock (576p)
 http://178.134.1.158:8081/BRIDGEROCK/index.m3u8
 #EXTINF:-1 group-title="موزیک - راک" tvg-id="EskaRockTV.pl@SD" tvg-logo="https://i.imgur.com/o0Fg19Q.png" tvg-country="pl" tvg-language="pl",Eska Rock TV (1080p)
@@ -859,8 +859,8 @@ https://jmp2.uk/plu-64510d3ad3fdde00080951f2.m3u8
 #EXTINF:-1 tvg-id="MTVGlobal.uk@SD" tvg-logo="https://i.imgur.com/n2BoU7Q.png" tvg-country="uk" tvg-language="en" group-title="موزیک - MTV",MTV Global
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3
 http://85.14.32.26:8800/udp/239.100.10.67:5000
-#EXTINF:-1 tvg-id="MTVLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png" tvg-country="us" tvg-language="es" group-title="موزیک - MTV",MTV Latin America (1080p)
-https://streaming.onnethn.com/MTV/playlist.m3u8
+#EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVLatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png" tvg-country="us" tvg-language="es",MTV Latin America (1080p)
+http://15.204.246.24:8080/MTVHD/index.m3u8
 #EXTINF:-1 group-title="موزیک - MTV" tvg-id="MTVLive.us@SD" tvg-logo="https://i.imgur.com/3UByLqb.png" tvg-country="us" tvg-language="en",MTV Live (720p)
 http://23.237.104.106:8080/USA_MTV_LIVE/index.m3u8
 #EXTINF:-1 tvg-id="MTVPlutoTV.us@LatAm" tvg-name="MTV Pluto TV (LatAm)" tvg-country="us" tvg-language="es" tvg-logo="https://i.imgur.com/WsQRCmZ.png" group-title="موزیک - MTV" x-tier="community" x-status="verified" x-quality="720p",MTV Pluto TV
