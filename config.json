@@ -149,6 +149,31 @@
       "url": "https://iptv-org.github.io/iptv/languages/fas.m3u",
       "language": "fa",
       "allow_unknown_country": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shayanline/iptv-iran/main/playlists/iran-all-streams.m3u",
+      "allow_unknown_country": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/L834-57/iptv-de/main/de-public.m3u",
+      "country": "de"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/L834-57/iptv-de/main/intl.m3u",
+      "allow_unknown_country": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/nexonic-technologies/nexonic-iptv/main/playlists/verified.m3u",
+      "allow_unknown_country": true
+    },
+    {
+      "url": "https://dearbulut.github.io/iptv/playlists/country/ir.m3u",
+      "country": "ir"
+    },
+    {
+      "url": "https://dearbulut.github.io/iptv/playlists/language/fas.m3u",
+      "language": "fa",
+      "allow_unknown_country": true
     }
   ],
   "epg_urls": [
