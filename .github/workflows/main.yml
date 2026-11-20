@@ -86,7 +86,7 @@ jobs:
           import subprocess
           from pathlib import Path
 
-          names = ["playlist.m3u", "playlist-backup.m3u", "build_stats.txt", "build_report.json",
+          names = ["playlist.m3u", "playlist-alternatives.m3u", "playlist-backup.m3u", "build_stats.txt", "build_report.json",
                    "persian.m3u", "news.m3u", "music.m3u", "sports.m3u", "movies.m3u", "kids.m3u",
                    "dead_links.txt", "favorites.m3u", "index.html"]
           report = json.loads(Path("build_report.json").read_text(encoding="utf-8"))

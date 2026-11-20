@@ -211,6 +211,23 @@ class SiteTests(unittest.TestCase):
         self.assertIn("Disallow", (self.output / "robots.txt").read_text())
         self.assertTrue(read_json(self.output / "build_report.json")["site"]["preview"])
 
+    def test_manual_alternatives_use_the_same_publication_privacy_filter(self):
+        alternate = channel(url="https://stream.test/live?token=private").renamed(
+            "Example [جایگزین]"
+        )
+        path = self.source / "playlist-alternatives.m3u"
+        path.write_text(render_m3u([self.item, alternate]))
+        self.runtime["alternatives"] = {"channels_with_alternative": 1, "entries": 2}
+        self.write_reports()
+        self.stage()
+        rendered = (self.output / path.name).read_text()
+        self.assertNotIn("private", rendered)
+        self.assertIn(self.item.url, rendered)
+        self.assertEqual(read_json(self.output / "build_report.json")["alternatives"]["entries"], 2)
+        self.assertEqual(
+            read_json(self.output / "build_report.json")["site"]["omitted_sensitive_streams"], 1
+        )
+
     def test_unsafe_profile_names_symlinks_and_repository_root_are_rejected(self):
         with self.assertRaises(ValueError):
             stage_site(self.source, self.source / "runtime.json", self.source)

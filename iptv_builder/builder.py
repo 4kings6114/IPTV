@@ -9,6 +9,7 @@ from pathlib import Path
 
 from . import budget
 from .alerts import load_watch_ids, watched_failures
+from .alternatives import ALTERNATIVES_FILE, manual_alternatives
 from .catalog import ORDER, SPLIT
 from .changes import channel_changes, remember_channels
 from .classification import load_excludes, load_overrides, prepare_channels
@@ -230,6 +231,7 @@ def _stats_text(report: dict) -> str:
         f"URL changes: {report.get('changed_urls', 0)} | Quality up/down: {report.get('upgraded', 0)}/{report.get('downgraded', 0)} | Recovered: {report.get('recovered', 0)}",
         f"Checked now: {report['checked_links']} | Cached successes: {report.get('cached_links', 0)}",
         f"Retained unverified: {report['retained_unverified']}",
+        f"Channels with manual alternative: {report.get('alternatives', {}).get('channels_with_alternative', 0)}",
     ]
     known = [group for group in ORDER if group in report["groups"]]
     extra = sorted(set(report["groups"]) - set(known))
@@ -435,7 +437,11 @@ def _build(
         epg_report["rewritten_ids"] = sum(
             bool(channel.attrs.get("x-original-tvg-id")) for channel in final
         )
+    alternative_entries, alternative_report = manual_alternatives(
+        channels, final, results, history, settings, select_channels
+    )
     report = {
+        "alternatives": alternative_report,
         "schema_version": 2,
         "dashboard_revision": dashboard_revision() if settings.dashboard else "",
         "generated_at": runtime["generated_at"],
@@ -519,7 +525,12 @@ def _build(
     report["editor"] = editor_manifest(channels, results, history, epg_urls, favorites, profiles)
     report = public_data(report)
     runtime.update(report)
-    outputs = {"playlist.m3u": render_m3u(final, epg_urls), **personal_outputs}
+    outputs = {
+        "playlist.m3u": render_m3u(final, epg_urls),
+        ALTERNATIVES_FILE: render_m3u(alternative_entries, epg_urls),
+        **personal_outputs,
+    }
+    validate_output(outputs[ALTERNATIVES_FILE], len(alternative_entries))
     validate_output(outputs["playlist.m3u"], len(final))
     for filename, groups in SPLIT.items():
         subset = [channel for channel in final if channel.group in groups]
