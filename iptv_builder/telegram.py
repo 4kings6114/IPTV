@@ -54,6 +54,23 @@ def message_text(
     return "\n".join(lines)
 
 
+def indian_message_text(report: dict, repository: str, run_id: str) -> str:
+    base = f"https://raw.githubusercontent.com/{repository}/main/indian"
+    return "\n".join(
+        (
+            "🇮🇳 پلی‌لیست هندی به‌روزرسانی شد",
+            f"شبکه‌ها: {report.get('channels', '?')} | اضافه: {report.get('added', 0)} | حذف: {report.get('removed', 0)}",
+            f"لینک‌های دارای جایگزین: {report.get('alternatives', {}).get('channels_with_alternative', 0)}",
+            "",
+            "پلی‌لیست هندی:",
+            f"{base}/playlist.m3u",
+            "جایگزین دستی:",
+            f"{base}/playlist-alternatives.m3u",
+            f"https://github.com/{repository}/actions/runs/{run_id}",
+        )
+    )
+
+
 def send_message(token: str, chat_id: str, text: str) -> None:
     payload = json.dumps(
         {"chat_id": chat_id, "text": text[:4096], "disable_web_page_preview": True}
@@ -94,9 +111,27 @@ def main() -> int:
         and report.get("status") in {"published", "unchanged"}
     )
     summary = changed and previous.get("last_summary_run") != run_key
-    if "last_summary_run" in previous:
-        state["last_summary_run"] = previous["last_summary_run"]
-    if not events and not summary:
+    indian_outcome = os.environ.get("INDIAN_BUILD_OUTCOME", "")
+    indian_report = (
+        read_json(Path("indian/.cache/iptv/last_run.json"))
+        if os.environ.get("INDIAN_CHANGED") == "true" and not failed
+        else {}
+    )
+    indian_summary = (
+        not failed
+        and indian_outcome == "success"
+        and indian_report.get("status") in {"published", "unchanged"}
+        and previous.get("last_indian_summary_run") != run_key
+    )
+    indian_failure = indian_outcome == "failure" and not previous.get("indian_failure_active")
+    for key in ("last_summary_run", "last_indian_summary_run"):
+        if key in previous:
+            state[key] = previous[key]
+    if indian_outcome == "failure":
+        state["indian_failure_active"] = True
+    elif indian_outcome != "success" and previous.get("indian_failure_active"):
+        state["indian_failure_active"] = True
+    if not events and not summary and not indian_summary and not indian_failure:
         atomic_write(state_path, json_text(state))
         print(
             "No unpublished change summary or new targeted incident; Telegram notification suppressed."
@@ -105,6 +140,13 @@ def main() -> int:
     parts = []
     if summary:
         parts.append(message_text(report, repository, run_id, changed=True))
+    if indian_summary:
+        parts.append(indian_message_text(indian_report, repository, run_id))
+    if indian_failure:
+        parts.append(
+            "⚠️ بررسی پلی‌لیست هندی ناموفق بود؛ فایل قبلی حفظ شد.\n"
+            + f"https://github.com/{repository}/actions/runs/{run_id}"
+        )
     if events:
         text = "⚠️ هشدار هدفمند IPTV\n" + "\n".join(event["title"][:250] for event in events[:10])
         if len(events) > 10:
@@ -119,6 +161,8 @@ def main() -> int:
         # Record delivery only after Telegram accepted it; failed delivery can retry.
         if summary:
             state["last_summary_run"] = run_key
+        if indian_summary:
+            state["last_indian_summary_run"] = run_key
         atomic_write(state_path, json_text(state))
         print("Telegram notification accepted by the API.")
     except Exception as error:
