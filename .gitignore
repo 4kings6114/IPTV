@@ -10,20 +10,13 @@ build.log
 live-validation.log
 full-audit.log
 
-# Android tooling, private signing material and generated deliverables
-android/.gradle/
-android/.kotlin/
-android/**/build/
-android/local.properties
-android/.idea/
+# Keep private keys and legacy app artifacts out of the playlist-only checkout.
+# These safeguards remain even though the app and signing tools were removed.
 *.jks
 *.keystore
 *.apk
 *.aab
 android-deliverables/
-
-# Generated synthetic emulator fixture; never shipped in the app APK
-android/app/src/androidTest/assets/stability.mp4
 
 # Owner recovery belongs outside the checkout, even when encrypted
 .iptv-hamrah-signing/

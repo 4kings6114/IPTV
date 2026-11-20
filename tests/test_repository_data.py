@@ -11,7 +11,9 @@ from unittest.mock import patch
 from iptv_builder.builder import run_build
 from iptv_builder.config import EPGOptions, MetadataOptions, Source, load_settings
 from iptv_builder.m3u import parse, render_m3u, validate_output
+from iptv_builder.site import stage_site
 from iptv_builder.sources import SourceResult
+from iptv_builder.storage import read_json
 from tests.helpers import ROOT
 
 
@@ -60,4 +62,15 @@ class RepositoryDataTests(unittest.TestCase):
             self.assertNotIn("healthy", result["health"])
             self.assertTrue((output / "playlist-backup.m3u").exists())
             self.assertEqual((output / "playlist-backup.m3u").read_text(encoding="utf-8"), text)
+            # Exercise the publisher's next step as well: the playlist-only
+            # checkout must stage Pages without any removed app/tooling files.
+            site = output / "pages"
+            staged = stage_site(output, output / ".cache/iptv/last_run.json", site)
+            self.assertEqual(staged["status"], "staged")
+            self.assertEqual(staged["channels"], len(final))
+            self.assertTrue((site / "index.html").is_file())
+            self.assertTrue((site / "playlist.m3u").is_file())
+            self.assertTrue((site / "build_stats.txt").is_file())
+            self.assertEqual(read_json(site / "build_report.json")["channels"], len(final))
+            self.assertEqual(read_json(site / "last_run.json")["status"], "published")
         self.assertTrue(all(path.read_bytes() == old for path, old in before.items()))
