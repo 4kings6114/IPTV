@@ -3,6 +3,8 @@ name: Tests
 on:
   push:
     paths:
+      - "indian/config.json"
+      - "indian/channels.m3u"
       - "local_bot/**"
       - "**.py"
       - "iptv_builder/**.js"
@@ -16,6 +18,8 @@ on:
       - ".github/workflows/**"
   pull_request:
     paths:
+      - "indian/config.json"
+      - "indian/channels.m3u"
       - "local_bot/**"
       - "**.py"
       - "iptv_builder/**.js"
@@ -31,6 +35,9 @@ on:
     inputs:
       live_check:
         description: Run isolated public-network diagnostics (12 channels, 2 decoder samples)
+        type: boolean
+      indian_live_check:
+        description: Check the Indian playlist in an isolated dry run without publishing
         type: boolean
         default: false
 
@@ -61,7 +68,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile Python modules
-        run: python -m compileall -q build_playlist.py iptv_builder local_bot tools tests
+        run: python -m compileall -q build_playlist.py build_indian.py iptv_builder local_bot tools tests
       - name: Offline unit and local-HTTP integration tests
         run: python -m unittest discover -s tests -v
 
@@ -85,6 +92,45 @@ jobs:
         run: python -m unittest tests.test_local_bot -v
       - name: Build standalone ZIP from explicit non-secret sources
         run: python tools/package_local_bot.py --output .cache/local-bot-package.zip
+
+  indian-live-check:
+    if: github.event_name == 'workflow_dispatch' && inputs.indian_live_check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Isolated Indian playlist dry run (no publication or secrets)
+        run: python build_indian.py --dry-run --output-dir .cache/indian-preview
+      - name: Extract non-sensitive aggregate counts
+        if: always()
+        id: indian_stats
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from iptv_builder.storage import read_json
+          report = read_json(Path('.cache/indian-preview/.cache/iptv/last_run.json'))
+          health = report.get('health', {})
+          if not isinstance(health, dict):
+              health = {}
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              for key, value in {'channels': report.get('channels'), 'healthy': health.get('healthy'), 'checked': report.get('checked_links')}.items():
+                  print(f'{key}={value if type(value) is int and 0 <= value <= 50000 else 0}', file=out)
+          PY
+      - name: Upload sanitized validation report
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: indian-validation-${{ steps.indian_stats.outputs.channels }}-channels-${{ steps.indian_stats.outputs.healthy }}-healthy-${{ steps.indian_stats.outputs.checked }}-checked
+          path: .cache/indian-preview/.cache/iptv/last_run.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14
 
   live-check:
     if: github.event_name == 'workflow_dispatch' && (inputs.live_check || inputs.pages_preview)

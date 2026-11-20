@@ -30,7 +30,8 @@ jobs:
     # Dispatching an experimental branch must never publish its data to main.
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    # Main build (105m), Indian build (10m), tests, publication and notifications.
+    timeout-minutes: 135
     permissions:
       contents: write
     outputs:
@@ -54,7 +55,9 @@ jobs:
       - name: Restore last-known-good sources and link history
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: .cache/iptv
+          path: |
+            .cache/iptv
+            indian/.cache/iptv
           key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             iptv-state-${{ github.ref_name }}-
@@ -71,10 +74,22 @@ jobs:
           if [[ "$PLAYBACK_CHECKS" == 'true' ]]; then args+=(--playback-checks); fi
           timeout --signal=TERM --kill-after=30s 105m python build_playlist.py "${args[@]}" 2>&1 | tee build.log
 
+      - name: Build separate Indian playlist
+        id: indian
+        continue-on-error: true
+        env:
+          FORCE_CHECK: ${{ inputs.force_check }}
+        run: |
+          set -euo pipefail
+          args=()
+          if [[ "$FORCE_CHECK" == 'true' ]]; then args+=(--force-check); fi
+          timeout --signal=TERM --kill-after=30s 10m python build_indian.py "${args[@]}" 2>&1 | tee indian-build.log
+
       - name: Commit and push generated files only
         id: commit
         env:
           GH_TOKEN: ${{ github.token }}
+          INDIAN_BUILD_OUTCOME: ${{ steps.indian.outcome }}
         run: |
           set -euo pipefail
           gh auth setup-git
@@ -82,6 +97,7 @@ jobs:
           git config user.email "playlist-bot@users.noreply.github.com"
           python - <<'PY'
           import json
+          import os
           import re
           import subprocess
           from pathlib import Path
@@ -94,6 +110,11 @@ jobs:
               if not re.fullmatch(r"profile-[a-z0-9][a-z0-9-]{0,39}\.m3u", name):
                   raise ValueError("Unsafe generated profile filename")
               names.append(name)
+          if os.environ.get("INDIAN_BUILD_OUTCOME") == "success":
+              names.extend("indian/" + name for name in (
+                  "playlist.m3u", "playlist-alternatives.m3u", "playlist-backup.m3u",
+                  "build_report.json", "build_stats.txt", "dead_links.txt",
+              ))
           subprocess.run(["git", "add", "--", *[name for name in names if Path(name).is_file()]], check=True)
           PY
 
@@ -105,15 +126,23 @@ jobs:
           fi
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "root_changed=false" >> "$GITHUB_OUTPUT"
+            echo "indian_changed=false" >> "$GITHUB_OUTPUT"
             echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
             echo "No content changes to publish"
             exit 0
           fi
+          root_changed=false
+          indian_changed=false
+          if ! git diff --cached --quiet -- . ':(exclude)indian/**'; then root_changed=true; fi
+          if ! git diff --cached --quiet -- indian/; then indian_changed=true; fi
 
           git commit -m "Auto-update playlist $(date -u +%F)"
           # A concurrent human push after the check is safely rejected by Git.
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "root_changed=$root_changed" >> "$GITHUB_OUTPUT"
+          echo "indian_changed=$indian_changed" >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Stage Pages with latest telemetry and last meaningful publication
@@ -132,7 +161,9 @@ jobs:
           name: playlist-build-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             build.log
+            indian-build.log
             .cache/iptv/last_run.json
+            indian/.cache/iptv/last_run.json
             build_report.json
             index.html
           include-hidden-files: true
@@ -145,14 +176,18 @@ jobs:
           TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
           BUILD_JOB_STATUS: ${{ job.status }}
-          PLAYLIST_CHANGED: ${{ steps.commit.outputs.changed }}
+          PLAYLIST_CHANGED: ${{ steps.commit.outputs.root_changed }}
+          INDIAN_CHANGED: ${{ steps.commit.outputs.indian_changed }}
+          INDIAN_BUILD_OUTCOME: ${{ steps.indian.outcome }}
         run: python -m iptv_builder.telegram
 
       - name: Save source caches, link history and snapshots
         if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: .cache/iptv
+          path: |
+            .cache/iptv
+            indian/.cache/iptv
           key: iptv-state-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
 
 
