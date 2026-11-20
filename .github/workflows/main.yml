@@ -30,7 +30,8 @@ jobs:
     # Dispatching an experimental branch must never publish its data to main.
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    # Main build (105m), Indian build (10m), tests, publication and notifications.
+    timeout-minutes: 135
     permissions:
       contents: write
     outputs:
