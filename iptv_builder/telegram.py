@@ -29,6 +29,11 @@ def message_text(
         f"لینک‌های ناموفق: {len(report.get('unavailable_links', []))}",
         f"نگه‌داری موقت بدون تأیید سلامت: {report.get('retained_unverified', 0)}",
     ]
+    alternatives = report.get("alternatives", {})
+    if alternatives:
+        lines.append(
+            f"شبکه‌های دارای لینک جایگزین: {alternatives.get('channels_with_alternative', 0)}"
+        )
     cached = sum(item.get("status") == "cached" for item in report.get("sources", []))
     if cached:
         lines.append(f"منابع بازیابی‌شده از کش: {cached}")
@@ -36,6 +41,7 @@ def message_text(
         base = f"https://raw.githubusercontent.com/{repository}/main"
         for label, name in (
             ("همهٔ کانال‌ها", "playlist"),
+            *([("اصلی + جایگزین دستی", "playlist-alternatives")] if alternatives else []),
             ("فارسی", "persian"),
             ("اخبار", "news"),
             ("موزیک", "music"),
@@ -44,6 +50,7 @@ def message_text(
             ("کودک", "kids"),
         ):
             lines.extend(("", f"{label}:", f"{base}/{name}.m3u"))
+    lines.extend(("", "گزارش اجرا:", run_url))
     return "\n".join(lines)
 
 
@@ -66,25 +73,54 @@ def send_message(token: str, chat_id: str, text: str) -> None:
 def main() -> int:
     token, chat = os.environ.get("TG_TOKEN"), os.environ.get("TG_CHAT")
     if not token or not chat:
-        print("Telegram secrets are not configured; skipping notification.")
+        print("::warning::Telegram secrets are not configured; skipping notification.")
         return 0
     report = read_json(Path(".cache/iptv/last_run.json"))
     state_path = Path(".cache/iptv/alerts.json")
-    events, state = alert_plan(
-        report, read_json(state_path), os.environ.get("BUILD_JOB_STATUS") != "success"
+    previous = read_json(state_path)
+    failed = os.environ.get("BUILD_JOB_STATUS") != "success" or report.get("status") in {
+        "failed",
+        "blocked",
+    }
+    events, state = alert_plan(report, previous, failed)
+    repository, run_id = os.environ["GITHUB_REPOSITORY"], os.environ["GITHUB_RUN_ID"]
+    run_key = f"{repository}/{run_id}/{os.environ.get('GITHUB_RUN_ATTEMPT', '1')}"
+    # A local build is not proof of a successful Git push. Only the publisher's
+    # explicit output can authorize a change summary; never announce a dry run,
+    # blocked build, or failed/stale publication as a successful update.
+    changed = (
+        not failed
+        and os.environ.get("PLAYLIST_CHANGED") == "true"
+        and report.get("status") in {"published", "unchanged"}
     )
-    if not events:
+    summary = changed and previous.get("last_summary_run") != run_key
+    if "last_summary_run" in previous:
+        state["last_summary_run"] = previous["last_summary_run"]
+    if not events and not summary:
         atomic_write(state_path, json_text(state))
-        print("No new targeted incident; Telegram notification suppressed.")
+        print(
+            "No unpublished change summary or new targeted incident; Telegram notification suppressed."
+        )
         return 0
-    text = "⚠️ هشدار هدفمند IPTV\n" + "\n".join(event["title"][:250] for event in events[:10])
-    if len(events) > 10:
-        text += f"\nو {len(events) - 10} مورد دیگر؛ گزارش اجرا را ببینید."
-    text += f"\nhttps://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+    parts = []
+    if summary:
+        parts.append(message_text(report, repository, run_id, changed=True))
+    if events:
+        text = "⚠️ هشدار هدفمند IPTV\n" + "\n".join(event["title"][:250] for event in events[:10])
+        if len(events) > 10:
+            text += f"\nو {len(events) - 10} مورد دیگر؛ گزارش اجرا را ببینید."
+        text += f"\nhttps://github.com/{repository}/actions/runs/{run_id}"
+        parts.append(text)
+    # Keep targeted warnings first so Telegram's size limit cannot hide them
+    # behind the ordinary summary/download links.
+    text = "\n\n".join(reversed(parts))
     try:
         send_message(token, chat, text)
         # Record delivery only after Telegram accepted it; failed delivery can retry.
+        if summary:
+            state["last_summary_run"] = run_key
         atomic_write(state_path, json_text(state))
+        print("Telegram notification accepted by the API.")
     except Exception as error:
         # Do not print Request/HTTPError URLs: they contain the bot token.
         print(f"Telegram notification failed ({type(error).__name__}).", file=sys.stderr)
