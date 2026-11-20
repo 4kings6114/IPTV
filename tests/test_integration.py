@@ -43,6 +43,11 @@ def fixture_server():
                     '#EXTINF:-1 tvg-id="CinemaxHits.us@HD" group-title="Music",Cinemax Hits (1080p)\n'
                     f"{base}/movie.m3u8\n"
                 )
+                if state.get("include_alternate"):
+                    playlist += (
+                        '#EXTINF:-1 tvg-id="CNN.us@SD" group-title="News",CNN (360p)\n'
+                        f"{base}/alternate.m3u8\n"
+                    )
                 self.respond(200, playlist.encode(), "application/x-mpegurl")
             elif self.path == "/bad":
                 self.respond(200, b"<html>Not a stream</html>", "text/html")
@@ -52,6 +57,11 @@ def fixture_server():
                 self.path == "/live.m3u8" and self.headers.get("Referer") != "https://player.test/"
             ):
                 self.respond(403, b"missing referer", "text/plain")
+            elif self.path == "/alternate.m3u8":
+                if state.get("alternate_down"):
+                    self.respond(404, b"unavailable", "text/plain")
+                else:
+                    self.respond(200, HLS, "application/x-mpegurl")
             elif self.path == "/kids.master":
                 self.respond(
                     200,
@@ -165,6 +175,26 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(self.published_hashes(), hashes)
         self.assertTrue(any(path == "/segment.ts" for path, _ in self.state["requests"]))
         self.assertFalse((self.output / "playlist-backup.m3u").exists())
+
+    def test_manual_alternate_is_probed_and_removed_when_no_longer_healthy(self):
+        self.state["include_alternate"] = True
+        self.assert_success(self.cli())
+        main = (self.output / "playlist.m3u").read_bytes()
+        path = self.output / "playlist-alternatives.m3u"
+        entries = parse(path.read_text())
+        self.assertEqual(len(entries), 5)
+        index = next(i for i, item in enumerate(entries) if item.url == self.base + "/live.m3u8")
+        self.assertEqual(entries[index + 1].url, self.base + "/alternate.m3u8")
+        self.assertIn("[جایگزین]", entries[index + 1].name)
+        self.assertEqual(entries[index].identity, entries[index + 1].identity)
+        self.assertEqual(self.runtime()["channels"], 4)
+        self.assertEqual(self.runtime()["alternatives"]["channels_with_alternative"], 1)
+        self.state["alternate_down"] = True
+        self.assert_success(self.cli())
+        self.assertEqual((self.output / "playlist.m3u").read_bytes(), main)
+        self.assertEqual(len(parse(path.read_text())), 4)
+        self.assertEqual(self.runtime()["alternatives"]["channels_with_alternative"], 0)
+        self.assertEqual((self.runtime()["added"], self.runtime()["removed"]), (0, 0))
 
     def test_source_outage_uses_cache_without_losing_channels(self):
         self.assert_success(self.cli())

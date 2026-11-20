@@ -82,6 +82,7 @@ $('site-notice').textContent=report.site&&report.site.offline?'پیش‌نمای
 if(report.site&&report.site.omitted_sensitive_streams)$('site-notice').textContent+=' لینک دارای اطلاعات حساس از دانلودهای عمومی این صفحه کنار گذاشته شده است.';
 for(const [value,label] of [[report.channels,'کانال موجود در این تصویر'],[report.checked_links,'درخواست بررسی‌شده در این اجرا'],[report.cached_links||0,'پاسخ سالم از کش'],[report.added||0,'کانال جدید'],[report.removed||0,'کانال حذف‌شده'],[report.recovered||0,'کانال بازیابی‌شده']]){const card=node('div',undefined,'card');card.append(node('div',value,'number'),node('div',label,'label'));$('cards').append(card)}
 const downloads=[['playlist.m3u','همهٔ کانال‌ها'],['persian.m3u','فارسی'],['news.m3u','اخبار'],['music.m3u','موسیقی'],['sports.m3u','ورزش'],['movies.m3u','فیلم'],['kids.m3u','کودک'],['favorites.m3u','علاقه‌مندی‌ها']];
+if(report.alternatives)downloads.push(['playlist-alternatives.m3u','اصلی + جایگزین دستی · '+report.alternatives.channels_with_alternative+' شبکه با لینک دوم']);
 for(const [name,profile] of Object.entries((report.personalization||{}).profiles||{}))if(/^profile-[a-z0-9][a-z0-9-]{0,39}\\.m3u$/.test(profile.file))downloads.push([profile.file,name+' · '+profile.channels]);
 for(const [file,label] of downloads){const a=node('a',label,'download');a.href=file;a.setAttribute('download',file);$('downloads').append(a)}
 const personal=report.personalization||{};$('favorites').textContent='علاقه‌مندی‌های موجود: '+(personal.favorites||0)+' · شناسه‌های پیدا‌نشده: '+(personal.missing_favorites||[]).join('، ');

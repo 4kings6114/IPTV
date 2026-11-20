@@ -4,6 +4,7 @@ import argparse
 import re
 from pathlib import Path
 
+from .alternatives import ALTERNATIVES_FILE
 from .dashboard import render_dashboard
 from .m3u import attributes, parse, render_m3u, validate_output
 from .privacy import exportable_channel, public_data, sensitive_url
@@ -11,6 +12,7 @@ from .storage import atomic_write, json_text, read_json
 
 BASE_PLAYLISTS = (
     "playlist.m3u",
+    ALTERNATIVES_FILE,
     "persian.m3u",
     "news.m3u",
     "music.m3u",
@@ -43,6 +45,7 @@ def stage_site(root: Path, runtime_path: Path, destination: Path, preview: bool 
     # snapshot and its original publication timestamp intentionally did not churn.
     for key in (
         "channel_catalog",
+        "alternatives",
         "checked_links",
         "cached_links",
         "health",
