@@ -106,11 +106,27 @@ jobs:
           python-version: "3.12"
       - name: Isolated Indian playlist dry run (no publication or secrets)
         run: python build_indian.py --dry-run --output-dir .cache/indian-preview
+      - name: Extract non-sensitive aggregate counts
+        if: always()
+        id: indian_stats
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from iptv_builder.storage import read_json
+          report = read_json(Path('.cache/indian-preview/.cache/iptv/last_run.json'))
+          health = report.get('health', {})
+          if not isinstance(health, dict):
+              health = {}
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              for key, value in {'channels': report.get('channels'), 'healthy': health.get('healthy'), 'checked': report.get('checked_links')}.items():
+                  print(f'{key}={value if type(value) is int and 0 <= value <= 50000 else 0}', file=out)
+          PY
       - name: Upload sanitized validation report
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: indian-playlist-validation
+          name: indian-validation-${{ steps.indian_stats.outputs.channels }}-channels-${{ steps.indian_stats.outputs.healthy }}-healthy-${{ steps.indian_stats.outputs.checked }}-checked
           path: .cache/indian-preview/.cache/iptv/last_run.json
           include-hidden-files: true
           if-no-files-found: ignore
