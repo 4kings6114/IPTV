@@ -12,4 +12,12 @@
 - Workflow actions are pinned to reviewed official release SHAs with weekly Dependabot PRs. Checkout does not persist credentials. Only the main publisher has contents-write; only deployment jobs have Pages-write/OIDC. Telegram credentials are scoped to its step. Experimental branches cannot invoke the production publisher. Preview Pages publication is explicit and labelled, and may need owner approval under the `github-pages` environment rules.
 - One-time Pages enablement needs owner permissions beyond the current integration's capabilities (the API returned 403 in this session). Enable **Settings → Pages → Source: GitHub Actions**, or review/reconnect the GitHub integration with the appropriate permissions. Never paste credentials into chat or add them to workflows.
 
+## Optional local Telegram bot
+
+- `local_bot/` is an independent read-only client, not a new server or playlist-builder dependency. Only the pinned public report/commit/workflow APIs are read; it cannot dispatch Actions, push commits, or play/probe stream URLs.
+- Bot tokens are entered with hidden local input and stored **unencrypted** in `local_bot/data/config.json`, excluded from Git. Protect that folder with your OS account permissions. Unix writes use mode 0600; Windows uses the user's folder ACLs. Never share the data directory or a configured copy of the package. Revoke exposed tokens through BotFather.
+- A fresh random console pairing code is required before binding an owner. Subsequent messages are restricted to the paired numeric private-chat ID, not a username. Group/stranger messages are ignored. An active webhook is never deleted automatically; simultaneous pollers are rejected. A dedicated new bot is recommended rather than disrupting an existing hosted service.
+- Normal TLS verification, no redirects, bounded response sizes/timeouts, plain-text messages, Telegram API acceptance checks, and token-free controlled error logs apply. Queues/cursors persist only after accepted delivery; process interruption or partial multi-message delivery can still cause duplicates.
+- The deterministic package builder uses an explicit source allowlist. It never bundles runtime configuration, state, report caches, or tokens. Keep the generated `MANIFEST.sha256` to verify the packaged source files. Package checksums establish integrity, not a signed publisher identity.
+
 Report suspected secret exposure privately to the repository owner and rotate exposed credentials; do not reproduce them in public issues or test fixtures.

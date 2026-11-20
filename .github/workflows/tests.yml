@@ -3,6 +3,7 @@ name: Tests
 on:
   push:
     paths:
+      - "local_bot/**"
       - "**.py"
       - "iptv_builder/**.js"
       - "config.json"
@@ -15,6 +16,7 @@ on:
       - ".github/workflows/**"
   pull_request:
     paths:
+      - "local_bot/**"
       - "**.py"
       - "iptv_builder/**.js"
       - "config.json"
@@ -59,9 +61,30 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Compile Python modules
-        run: python -m compileall -q build_playlist.py iptv_builder tests
+        run: python -m compileall -q build_playlist.py iptv_builder local_bot tools tests
       - name: Offline unit and local-HTTP integration tests
         run: python -m unittest discover -s tests -v
+
+  local-bot-portability:
+    name: Local bot (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, windows-2025, macos-15]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Offline local bot and standalone package tests (no bot secrets)
+        env:
+          PYTHONUTF8: "1"
+        run: python -m unittest tests.test_local_bot -v
+      - name: Build standalone ZIP from explicit non-secret sources
+        run: python tools/package_local_bot.py --output .cache/local-bot-package.zip
 
   live-check:
     if: github.event_name == 'workflow_dispatch' && (inputs.live_check || inputs.pages_preview)
