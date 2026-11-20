@@ -357,10 +357,14 @@ https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=9998400
 https://live.nowtelly.com/now_usa/live_usa/chunks.m3u8?nimblesessionid=87362515
 #EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/.swna7689a7b-7d15-40c8-a732-000000000000apple2apple/.rate_5573680/index_new_v_5573680_5.m3u8
+#EXTINF:-1 tvg-id="News12Brooklyn.us@SD" tvg-logo="https://i.imgur.com/fvcOzzK.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Brooklyn (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/.swn973fbef2-14e9-4f99-b12c-000000000000apple2apple/.rate_1296680/index_new_v_1296680_2.m3u8
 #EXTINF:-1 tvg-id="News12Conneticut.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Conneticut (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12CH_FFLD_MILF_A1/.swn86abf590-8b58-47b3-af17-000000000000apple2apple/.rate_4170180/index_new_v_4170180_5.m3u8
 #EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swn5a3e4dc7-9860-4e7b-b22b-000000000000apple2apple/.rate_1637880/index_new_v_1637880_2.m3u8
+#EXTINF:-1 tvg-id="News12NewJersey.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 New Jersey (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/.swn8903e717-bdec-41be-9bfb-000000000000apple2apple/.rate_830080/index_new_v_830080_2.m3u8
 #EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/.swnca38aa44-b5da-4ce6-84d1-000000000000apple2apple/.rate_1483780/index_new_v_1483780_2.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (1080p)
@@ -1192,6 +1196,8 @@ https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(616d6f49-eaec-6f7e-718
 https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(f97b5ddc-b7e4-dff8-9f10-8c16d0833639)/05.m3u8
 #EXTINF:-1 tvg-id="ATXN3.us@SD" tvg-logo="https://i.imgur.com/tSMtDlz.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",ATXN3 (1080p)
 https://cdn-atxn-01.vos360.video/Content/HLS/Live/channel(c55d1594-ad62-7434-aa17-4d71adb80f99)/05.m3u8
+#EXTINF:-1 tvg-id="AWE.us@SD" tvg-name="AWE" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/OjpCtGj.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",AWE (720p)
+https://a-cdn.klowdtv.com/live1/awe_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="AWEInternational.us@SD" tvg-name="AWE International" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/VhxtMUQ.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="1080p",AWE International (1080p)
 https://a-cdn.klowdtv.com/live1/aweint/live/aweint_1080p/chunks.m3u8
 #EXTINF:-1 tvg-id="AWEPlus.us@SD" tvg-logo="https://i.imgur.com/hL8i7Ar.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",AWE Plus (1080p)
@@ -1407,6 +1413,8 @@ http://23.237.104.106:8080/USA_E/index.m3u8
 https://linear-1066.frequency.stream/dist/stirr/1066/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="EntrepreneurTV.us@SD" tvg-logo="https://i.imgur.com/isRfHYZ.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",EntrepreneurTV (720p)
 https://stream-us-east-1.getpublica.com/cl/261120dc0342vn768s73dekmbg/1280x720_2826976_2_f.m3u8?i=513_2506
+#EXTINF:-1 tvg-id="ESTV.us@SD" tvg-name="ES.TV" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/ihY01ao.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",ES.TV (720p)
+https://a-cdn.klowdtv.com/live2/estv_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="Eurochannel.uk@SD" tvg-logo="https://i.imgur.com/yXAtmI6.png" tvg-country="uk" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Eurochannel
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
 http://45.186.240.164:9000/stream/54/index.m3u8
@@ -1458,6 +1466,8 @@ https://aka-live1050.delivery.roku.com/2ff50939-341e-4fa8-becf-718769322f14/t2-o
 http://23.237.104.106:8080/USA_FUSE/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="GalxyTV.us@SD" tvg-logo="https://i.imgur.com/7gZlQDn.png" tvg-country="us" tvg-language="en",Galxy TV (720p)
 https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=2230
+#EXTINF:-1 tvg-id="GameShowNetwork.us@East" tvg-name="Game Show Network" tvg-country="us" tvg-language="en" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Game_Show_Network_2018.svg/960px-Game_Show_Network_2018.svg.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",Game Show Network (720p)
+https://a-cdn.klowdtv.com/live2/gsn_720p/chunks.m3u8
 #EXTINF:-1 tvg-id="GCNAmerica.us@SD" tvg-logo="https://i.imgur.com/DWSWrtV.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",GCN America (720p)
 http://liveen24-manminglobal3.ktcdn.co.kr/liveen24/gcnus_1300k.stream/chunklist.m3u8
 #EXTINF:-1 tvg-id="GemShoppingNetwork.us@SD" tvg-logo="https://i.imgur.com/WlHEpAu.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",Gem Shopping Network (720p)
@@ -1612,6 +1622,8 @@ https://d9069ugodwkju.cloudfront.net/Merit_Street.m3u8
 https://mhz-samsung-linear-ca.samsung.wurl.tv/3000.m3u8
 #EXTINF:-1 tvg-id="MidnightPulp.us@SD" tvg-name="Midnight Pulp" tvg-country="us" tvg-language="en" tvg-logo="https://provider-static.plex.tv/a/epg/channels/logos/gracenote/a1a2cdc3d6f0714c586e9959732580c7.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="1080p",Midnight Pulp
 https://linear-897.frequency.stream/dist/cineverse/897/hls/master/playlist.m3u8
+#EXTINF:-1 tvg-id="MidpenMediaCenterChannel26.us@SD" tvg-name="Midpen Media Center Channel 26" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/aX1GkCD.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",Midpen Media Center Channel 26 (720p)
+https://5c2974786200d.streamlock.net/live-chan26/ngrp:ch26_all/chunklist_w1629822559_b5251072.m3u8
 #EXTINF:-1 tvg-id="MidpenMediaCenterChannel29.us@SD" tvg-name="Midpen Media Center Channel 29" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/RPJiolQ.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",Midpen Media Center Channel 29 (720p)
 https://5c2974786200d.streamlock.net/live-chan29/ngrp:ch29_all/chunklist_w2110474005_b5251072.m3u8
 #EXTINF:-1 tvg-id="MidpenMediaCenterChannel30.us@SD" tvg-name="Midpen Media Center Channel 30" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/RPJiolQ.png" group-title="سرگرمی - انگلیسی‌زبان" x-tier="community" x-status="verified" x-quality="720p",Midpen Media Center Channel 30 (720p)
@@ -1942,6 +1954,8 @@ http://cdn3.toronto360.tv:8081/toronto360/hd/chunks.m3u8?nimblesessionid=2145967
 https://amg02507-giantpictures-tribeca-xumo-ey2b7.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="truTV.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",truTV (720p)
 http://23.237.104.106:8080/USA_TRUTV/index.m3u8
+#EXTINF:-1 tvg-id="truTV.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TruTV_2014.svg/960px-TruTV_2014.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",truTV (720p)
+https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 tvg-id="TSC.ca@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/TSC_logo.svg/960px-TSC_logo.svg.png" tvg-country="ca" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TSC (720p)
 https://tscamd.akamaized.net/hls/live/503340/TSCLive/audio_0_eng/audio_0_eng.m3u8
 #EXTINF:-1 tvg-id="TSTV.us@SD" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",TSTV (720p)

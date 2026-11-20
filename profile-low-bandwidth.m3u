@@ -185,8 +185,12 @@ https://tvsen6.aynaott.com/msnbc/index.m3u8
 https://d1bl6tskrpq9ze.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_lgchannels-cdp-springserve/d2c23ef4-0644-47fc-b079-2176243f56ae/0.m3u8
 #EXTINF:-1 tvg-id="News12Bronx.us@SD" tvg-logo="https://i.imgur.com/d6xQiaf.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Bronx (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12XH_A1/.swna7689a7b-7d15-40c8-a732-000000000000apple2apple/.rate_1577480/index_new_v_1577480_2.m3u8
+#EXTINF:-1 tvg-id="News12Brooklyn.us@SD" tvg-logo="https://i.imgur.com/fvcOzzK.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Brooklyn (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/.swn973fbef2-14e9-4f99-b12c-000000000000apple2apple/.rate_1296680/index_new_v_1296680_2.m3u8
 #EXTINF:-1 tvg-id="News12LongIsland.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Long Island (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/.swn5a3e4dc7-9860-4e7b-b22b-000000000000apple2apple/.rate_1637880/index_new_v_1637880_2.m3u8
+#EXTINF:-1 tvg-id="News12NewJersey.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 New Jersey (360p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/.swn8903e717-bdec-41be-9bfb-000000000000apple2apple/.rate_830080/index_new_v_830080_2.m3u8
 #EXTINF:-1 tvg-id="News12Westchester.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 Westchester (360p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12WH_A1/.swnca38aa44-b5da-4ce6-84d1-000000000000apple2apple/.rate_1483780/index_new_v_1483780_2.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (360p)
@@ -2383,6 +2387,8 @@ https://bild-und-ton.stream/die-neue-zeit-tv-live/smil:dnz-de.smil/chunklist_w20
 http://streaming.senecadot.com/live/flv:tv7.sdp/playlist.m3u8
 #EXTINF:-1 tvg-name="Dr G Medical Examiner" tvg-logo="" tvg-id="DrGMedicalExaminer.pl" tvg-chno="37" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="pl",Dr G Medical Examiner (360p)
 https://d39g1vxj2ef6in.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/aadca169-2af8-4606-aacb-cc43b553b21a/3.m3u8
+#EXTINF:-1 tvg-id="DRTV.dk@SD" tvg-logo="https://i.ibb.co/c6n2vbW/512px-DR-TV-logo-svg.png" tvg-country="dk" tvg-language="dan" group-title="سرگرمی - اروپا",DRTV (360p)
+https://drlivedrtvahls.akamaized.net/hls/live/2113613/drlivedrtva/1.m3u8
 #EXTINF:-1 tvg-name="E'live Brescia Tv" tvg-logo="https://i.imgur.com/bZ3B7pi.png" tvg-country="it" group-title="سرگرمی - اروپا",E'live Brescia Tv
 https://59d7d6f47d7fc.streamlock.net/elivebresciatv/elivebresciatv/playlist.m3u8
 #EXTINF:-1 tvg-id="EbS.be@SD" tvg-logo="https://i.imgur.com/DIIRPNN.png" tvg-country="be" tvg-language="en" group-title="سرگرمی - اروپا",EbS (480p)
@@ -2743,6 +2749,8 @@ https://n-5-1.eu.cdn-redge.media/livehls/oeu/mt/live/paris_premiere/live.livx/pl
 https://stream.paroledivita.org/pdv/live/stream_3.m3u8
 #EXTINF:-1 tvg-id="ParolediVita.it@SD" tvg-logo="https://i.imgur.com/vkFlXbR.png" tvg-country="it" tvg-language="ita" group-title="سرگرمی - اروپا",Parole di Vita (360p)
 https://stream.paroledivita.org/pdv/live/stream_2.m3u8
+#EXTINF:-1 tvg-name="Pella" tvg-logo="https://i.imgur.com/pwUkkGL.jpeg" tvg-id="pellatv.gr" tvg-chno="55" tvg-country="gr" group-title="سرگرمی - اروپا" tvg-language="ell",Pella TV (720p)
+https://video.streams.ovh:1936/pellatv/pellatv/chunklist_w204055014.m3u8
 #EXTINF:-1 tvg-id="Pobeda.ru@SD" tvg-name="Pobeda" tvg-country="ru" tvg-language="russian" tvg-logo="https://i.imgur.com/4KiYSln.png" group-title="سرگرمی - اروپا" x-tier="community" x-status="verified" x-quality="sd",Pobeda (360p)
 https://streaming.thestream.cyou/live/43-req_offset_28000000-req_window_0-2k_v5.m3u8
 #EXTINF:-1 tvg-id="PopularTVMurcia.es@SD" tvg-logo="https://i.imgur.com/jFg9dGO.png" tvg-country="es" tvg-language="es" group-title="سرگرمی - اروپا",Popular TV Murcia (720p)
