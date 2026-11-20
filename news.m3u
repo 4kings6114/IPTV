@@ -319,6 +319,8 @@ http://181.78.211.244:8005/play/a09u/index.m3u8
 https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
 #EXTINF:-1 tvg-id="Canal33Tijuana.mx@SD" tvg-logo="https://iili.io/JCt1Nbn.png" tvg-country="mx" tvg-language="es" group-title="اخبار - سایر زبان‌ها",Canal 33 Tijuana (720p)
 https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal38.br@SD" tvg-logo="https://i.imgur.com/co7TCWC.png" tvg-country="br" tvg-language="pt" group-title="اخبار - سایر زبان‌ها",Canal 38 (720p)
+https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalMetropolitanodeNoticias.br@SD" tvg-logo="https://i.imgur.com/G0x4xqa.png" tvg-country="br" tvg-language="pt" group-title="اخبار - سایر زبان‌ها",Canal Metropolitano de Noticias
 https://stmv5.samcast.com.br/claudio8701/claudio8701/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalN.pe@SD" tvg-logo="https://i.imgur.com/Xytvw3J.png" tvg-country="pe" tvg-language="es" group-title="اخبار - سایر زبان‌ها",Canal N (576p)
@@ -605,6 +607,8 @@ https://live.smotrim.ru/vgtrk/0/russia24-hd/1080p.m3u8
 https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8
 #EXTINF:-1 tvg-id="SK1.ua@SD" tvg-logo="https://i.imgur.com/XiXwr5h.png" tvg-country="ua" tvg-language="ukr" group-title="اخبار - سایر زبان‌ها",SK 1 (720p)
 http://cdn10.live-tv.od.ua:8081/sk1zt/sk1zt-abr/playlist.m3u8
+#EXTINF:-1 tvg-id="Sochi24.ru@SD" tvg-logo="https://i.imgur.com/iwWxkl6.png" tvg-country="ru" tvg-language="rus" group-title="اخبار - سایر زبان‌ها",Sochi24 (720p)
+http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8
 #EXTINF:-1 tvg-id="StarKentrikisElladas.gr@SD" tvg-logo="https://i.imgur.com/ZBt6beo.png" tvg-country="gr" tvg-language="ell" group-title="اخبار - سایر زبان‌ها",Star Kentrikis Elladas (1080p)
 https://telmaco-cdn.akamaized.net/starcgr/default/index.m3u8
 #EXTINF:-1 tvg-id="SterkTV.be@SD" tvg-logo="https://i.imgur.com/bIheNAI.png" tvg-country="be" tvg-language="kur" group-title="اخبار - سایر زبان‌ها",Sterk TV (1080p)

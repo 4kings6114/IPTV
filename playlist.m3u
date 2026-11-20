@@ -549,6 +549,8 @@ http://181.78.211.244:8005/play/a09u/index.m3u8
 https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
 #EXTINF:-1 tvg-id="Canal33Tijuana.mx@SD" tvg-logo="https://iili.io/JCt1Nbn.png" tvg-country="mx" tvg-language="es" group-title="اخبار - سایر زبان‌ها",Canal 33 Tijuana (720p)
 https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal38.br@SD" tvg-logo="https://i.imgur.com/co7TCWC.png" tvg-country="br" tvg-language="pt" group-title="اخبار - سایر زبان‌ها",Canal 38 (720p)
+https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalMetropolitanodeNoticias.br@SD" tvg-logo="https://i.imgur.com/G0x4xqa.png" tvg-country="br" tvg-language="pt" group-title="اخبار - سایر زبان‌ها",Canal Metropolitano de Noticias
 https://stmv5.samcast.com.br/claudio8701/claudio8701/playlist.m3u8
 #EXTINF:-1 tvg-id="CanalN.pe@SD" tvg-logo="https://i.imgur.com/Xytvw3J.png" tvg-country="pe" tvg-language="es" group-title="اخبار - سایر زبان‌ها",Canal N (576p)
@@ -835,6 +837,8 @@ https://live.smotrim.ru/vgtrk/0/russia24-hd/1080p.m3u8
 https://dai.google.com/linear/hls/event/1XSOdtQ0SH2G8OEmEfGgjQ/master.m3u8
 #EXTINF:-1 tvg-id="SK1.ua@SD" tvg-logo="https://i.imgur.com/XiXwr5h.png" tvg-country="ua" tvg-language="ukr" group-title="اخبار - سایر زبان‌ها",SK 1 (720p)
 http://cdn10.live-tv.od.ua:8081/sk1zt/sk1zt-abr/playlist.m3u8
+#EXTINF:-1 tvg-id="Sochi24.ru@SD" tvg-logo="https://i.imgur.com/iwWxkl6.png" tvg-country="ru" tvg-language="rus" group-title="اخبار - سایر زبان‌ها",Sochi24 (720p)
+http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8
 #EXTINF:-1 tvg-id="StarKentrikisElladas.gr@SD" tvg-logo="https://i.imgur.com/ZBt6beo.png" tvg-country="gr" tvg-language="ell" group-title="اخبار - سایر زبان‌ها",Star Kentrikis Elladas (1080p)
 https://telmaco-cdn.akamaized.net/starcgr/default/index.m3u8
 #EXTINF:-1 tvg-id="SterkTV.be@SD" tvg-logo="https://i.imgur.com/bIheNAI.png" tvg-country="be" tvg-language="kur" group-title="اخبار - سایر زبان‌ها",Sterk TV (1080p)
@@ -1348,6 +1352,8 @@ https://lukentvlive.vgcdn.net/v1/master/cef183924f24adfa3d5d7601c3a17769082c0c2b
 https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/64c3b106dac71b00080a26d2/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
 #EXTINF:-1 tvg-id="vijuPlusSport.ru@HD" tvg-logo="https://i.imgur.com/fXESG0l.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",viju+ Sport (1080p)
 http://46.53.200.153:7777/play/a01l/index.m3u8
+#EXTINF:-1 tvg-id="Volleyball.ru@SD" tvg-logo="https://smotreshka.server-img.lfstrm.tv/images/media/59/20/592021ab74bddb93907e2b18997215a9.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Volleyball (1080p)
+https://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8
 #EXTINF:-1 tvg-id="VoyoEvents.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/df/Voyo_2026.svg/revision/latest/scale-to-width-down/1000?cb=20261006171646" tvg-country="ro" tvg-language="ron" group-title="ورزشی",Voyo Events
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/cme-ro-protv-plus5/live_fullhd?offsetSeconds=0
 #EXTINF:-1 tvg-id="VoyoSport1.ro@HD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/a/a3/VoyoSport1.svg" tvg-country="ro" tvg-language="ron" group-title="ورزشی",Voyo Sport 1
@@ -3071,6 +3077,8 @@ https://fd18f1cadd404894a31a3362c5f319bd.mediatailor.us-east-1.amazonaws.com/v1/
 https://wurlrifftrax.global.transmit.live/hls/68222b9cbe836edbe6f39e74/playlist.m3u8
 #EXTINF:-1 tvg-id="Saphire.ru@SD" tvg-logo="https://i.imgur.com/NMOBvle.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Saphire (1080p)
 http://46.53.200.153:7777/play/Sapfir_HD/index.m3u8
+#EXTINF:-1 tvg-id="Skorayapomoshch.ru@SD" tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/skoraya_pom_llive.jpg" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Skoraya pomoshch (1080p)
+https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8
 #EXTINF:-1 tvg-id="Smotrim100Lyubov.ru@SD" tvg-logo="https://i.imgur.com/4EFh0nu.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Smotrim 100% Lyubov (720p)
 https://stream.smotrim.ru/hls/fasttv01/playlist_2.m3u8
 #EXTINF:-1 tvg-id="Smotrim100Muzhskoe.ru@SD" tvg-logo="https://i.imgur.com/UY3fjYU.png" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Smotrim 100% Muzhskoe (720p)
@@ -3183,6 +3191,10 @@ https://i.mjh.nz/.r/7mate-syd.m3u8
 https://i.mjh.nz/.r/7two-syd.m3u8
 #EXTINF:-1 tvg-name="98FM" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/98FM_2022.svg/1920px-98FM_2022.svg.png" tvg-id="98fm.com" tvg-chno="2" tvg-country="ie" group-title="سرگرمی - انگلیسی‌زبان",98FM
 https://live-bauerie.sharp-stream.com/98
+#EXTINF:-1 tvg-id="AE.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png" tvg-country="us" tvg-language="en" group-title="سرگرمی - انگلیسی‌زبان",A&E (1080p)
+#EXTVLCOPT:http-referrer=https://tvnow.st
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 Edge/12.246
+https://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AELatinAmerica.us@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png" tvg-country="us" tvg-language="es",A&E Latin America (1080p)
 http://138.121.15.230:9002/A&E/index.m3u8
 #EXTINF:-1 group-title="سرگرمی - انگلیسی‌زبان" tvg-id="AELatinAmerica.us@Brazil" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png" tvg-country="us" tvg-language="pt",A&E Latin America Brazil (720p)
@@ -4876,6 +4888,8 @@ https://5f22d76e220e1.streamlock.net/eurotv/eurotv/playlist.m3u8
 http://141.94.193.53:80/Eurosport_1_HD/index.m3u8
 #EXTINF:-1 tvg-id="EvandisGospelTV.fr@SD" tvg-logo="https://i.imgur.com/v8TiqhH.png" tvg-country="fr" tvg-language="fr" group-title="سرگرمی - اروپا",Evandis Gospel TV (1080p)
 https://evandis.streamakaci.tv/str_evandis_evandis/str_evandis_multi/playlist.m3u8
+#EXTINF:-1 tvg-name="TapahtumaTV Eveo" tvg-logo="https://i.imgur.com/fFIq7tY.png" tvg-id="Eveo.fi" tvg-chno="18" tvg-country="fi" group-title="سرگرمی - اروپا" tvg-language="fin",Eveo
+https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?src=freetv
 #EXTINF:-1 tvg-id="EWTN.de@SD" tvg-name="EWTN" tvg-country="de" tvg-language="de" tvg-logo="https://i.imgur.com/NXeygNk.png" group-title="سرگرمی - اروپا" x-tier="community" x-status="verified" x-quality="1080p",EWTN
 https://cdn3.wowza.com/1/ZUkxSDBrZHlMbjVn/ZkhNRFNZ/hls/live/playlist.m3u8
 #EXTINF:-1 tvg-name="EWTN Poland (1080p)" tvg-logo="https://i.imgur.com/VtKYELf.png" tvg-id="EWTNPoland.pl" tvg-chno="50" tvg-country="pl" group-title="سرگرمی - اروپا" tvg-language="pl",EWTN Poland (1080p)
@@ -6634,6 +6648,8 @@ http://185.227.34.179:8080/tvp-rozrywka/index.m3u8
 http://92.114.85.87:8009/play/a009/index.m3u8
 #EXTINF:-1 tvg-id="TVPlusSuceava.ro@SD" tvg-logo="https://i.imgur.com/f4fzoLe.png" tvg-country="ro" tvg-language="ron" group-title="سرگرمی - اروپا",TVPlus Suceava (576p)
 http://85.186.146.34:8080
+#EXTINF:-1 tvg-id="TVR.es@SD" tvg-logo="https://i.ibb.co/nRq3YfT/Logo-Rioja-Televisi-n-S-A.png" tvg-country="es" tvg-language="es" group-title="سرگرمی - اروپا",TVR (360p)
+https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8
 #EXTINF:-1 tvg-id="TVR1.ro@SD" tvg-logo="https://i.imgur.com/CcUX1gB.png" tvg-country="ro" tvg-language="ron" group-title="سرگرمی - اروپا",TVR 1 (1440p)
 https://tvr-1.lg.mncdn.com/tvr1/smil:tvr1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVR2.ro@SD" tvg-logo="https://i.imgur.com/mKouHIZ.png" tvg-country="ro" tvg-language="ron" group-title="سرگرمی - اروپا",TVR 2 (1440p)
@@ -7784,6 +7800,8 @@ http://190.93.224.42/TRIVU-TV/index.m3u8
 https://5bf8041cb3fed.streamlock.net/TUUNIVERSOTV/TUUNIVERSOTV/playlist.m3u8
 #EXTINF:-1 tvg-id="TUDN.mx@SD" tvg-logo="https://i.imgur.com/oT5CAvd.png" tvg-country="mx" tvg-language="es" group-title="سرگرمی - آمریکای لاتین",TUDN (576p)
 http://45.5.118.152:8000/play/a08n/index.m3u8
+#EXTINF:-1 tvg-id="TVACritica.br@SD" tvg-logo="https://i.imgur.com/j51rBro.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV A Critica (1080p)
+https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8
 #EXTINF:-1 tvg-id="TVAldeia.br@SD" tvg-logo="https://i.imgur.com/rsfnv4Z.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV Aldeia (720p)
 https://stmv1.samcast.com.br/giovane7843/giovane7843/playlist.m3u8
 #EXTINF:-1 tvg-id="TVAliancaCatarinense.br@SD" tvg-logo="https://i.imgur.com/eqmOhtP.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV Alianca Catarinense (720p)
@@ -7890,6 +7908,8 @@ https://janus-tv-ply.senado.cl/playlist/playlist.m3u8
 http://170.83.16.50/TV_SENADO/index.m3u8
 #EXTINF:-1 tvg-id="TVShowFortaleza.br@SD" tvg-logo="https://static.wixstatic.com/media/9af6b8_e963e864c8fb40d3954f5c1c8cab1b40~mv2.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV Show Fortaleza (720p)
 https://stmv8.samcast.com.br/raimundoanselmolimamororo1908/raimundoanselmolimamororo1908/playlist.m3u8
+#EXTINF:-1 tvg-id="TVSulBahia.br@SD" tvg-logo="https://i.imgur.com/qM6nMWm.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV Sul Bahia (320p)
+https://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="TVTerceiroAnjo.br@SD" tvg-logo="https://i.imgur.com/PExKWNv.png" tvg-country="br" tvg-language="pt" group-title="سرگرمی - آمریکای لاتین",TV Terceiro Anjo (360p)
 https://streamer1.streamhost.org/salive/GMI3anjoh/playlist.m3u8
 #EXTINF:-1 tvg-id="TVUNAM.mx" tvg-name="TV UNAM" tvg-country="mx" tvg-language="es" tvg-logo="https://i.imgur.com/ayg5kRM.png" group-title="سرگرمی - آمریکای لاتین" x-tier="community" x-status="verified" x-quality="sd",TV UNAM
@@ -8128,6 +8148,8 @@ https://tgn.bozztv.com/eshgtv-dvrfl05/gin-lemar/index.m3u8
 https://b01c02nl.mediatriple.net/videoonlylive/mtpayqrfkgirxelive/broadcast_5e91c5ac96898.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="MaviKaradenizTV.tr@SD" tvg-logo="https://i.imgur.com/wyWappU.png" tvg-country="tr" tvg-language="tr" group-title="سرگرمی - خاورمیانه",MaviKaradeniz TV (1080p)
 https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8
+#EXTINF:-1 tvg-id="MeltemTV.tr@SD" tvg-logo="https://i.imgur.com/C3m6w5S.png" tvg-country="tr" tvg-language="tr" group-title="سرگرمی - خاورمیانه",Meltem TV (1080p)
+https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8
 #EXTINF:-1 tvg-id="MercanTV.tr@SD" tvg-logo="https://i.imgur.com/3CWV8bS.png" tvg-country="tr" tvg-language="tr" group-title="سرگرمی - خاورمیانه",Mercan TV (576p)
 https://live.artidijitalmedya.com/artidijital_mercantv/mercantv/playlist.m3u8
 #EXTINF:-1 tvg-id="NOW.tr@SD" tvg-logo="https://i.imgur.com/5EYjWK7.png" tvg-country="tr" tvg-language="tr" group-title="سرگرمی - خاورمیانه",NOW (720p)
@@ -8905,6 +8927,8 @@ https://stream.smotrim.ru/hls/fasttv06/playlist_3.m3u8
 http://141.94.193.53:80/Spektrum_HD/index.m3u8
 #EXTINF:-1 tvg-id="Spektrum.cz@SD" tvg-logo="https://i.imgur.com/F5Uosum.png" tvg-country="cz" tvg-language="ces" group-title="مستند و علمی - سایر زبان‌ها",Spektrum
 http://88.212.15.50/live/test_spektrum/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleUV.mx@SD" tvg-logo="https://i.imgur.com/8MdUH69.jpeg" tvg-country="mx" tvg-language="es" group-title="مستند و علمی - سایر زبان‌ها",Tele UV
+https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="Telepace3.it@SD" tvg-logo="https://i.imgur.com/hE4i2ft.png" tvg-country="it" tvg-language="ita" group-title="مستند و علمی - سایر زبان‌ها",Telepace 3 (1080p)
 https://932y4273djv8-hls-live.mariatvcdn.it/teleradiopace3/d2274c22e9ee09eb2eda01ed0496f8f5.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="TerraMaterWILD.de@German" tvg-logo="https://d3b6luslimvglo.cloudfront.net/images/79/rlaxximages/channels-rescaled/icon-white/terramaterwild_white.png" tvg-country="de" tvg-language="de" group-title="مستند و علمی - سایر زبان‌ها",Terra Mater WILD (1080p)

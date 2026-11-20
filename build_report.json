@@ -1,79 +1,83 @@
 {
-  "added": 5,
+  "added": 1,
   "alternatives": {
-    "channels_with_alternative": 727,
-    "entries": 5534,
+    "channels_with_alternative": 729,
+    "entries": 5547,
     "file": "playlist-alternatives.m3u",
     "max_links_per_channel": 2,
     "switching": "manual"
   },
-  "cached_links": 6039,
+  "cached_links": 6051,
   "changed_urls": 0,
   "changes": {
     "added_channels": [
       {
-        "identity": "id:awe.us",
-        "name": "AWE",
-        "url": "https://a-cdn.klowdtv.com/live1/awe_720p/playlist.m3u8"
-      },
-      {
-        "identity": "id:estv.us",
-        "name": "ES.TV",
-        "url": "https://a-cdn.klowdtv.com/live2/estv_720p/playlist.m3u8"
-      },
-      {
-        "identity": "id:gameshownetwork.us@east",
-        "name": "Game Show Network",
-        "url": "https://a-cdn.klowdtv.com/live2/gsn_720p/playlist.m3u8"
-      },
-      {
-        "identity": "id:midpenmediacenterchannel26.us",
-        "name": "Midpen Media Center Channel 26",
-        "url": "https://5c2974786200d.streamlock.net/live-chan26/ngrp:ch26_all/playlist.m3u8"
-      },
-      {
-        "identity": "id:news12brooklyn.us",
-        "name": "News12 Brooklyn (720p)",
-        "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12KH_A1/index_new.m3u8?[redacted]"
+        "identity": "id:ae.us@east",
+        "name": "A&E (1080p)",
+        "url": "https://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8"
       }
     ],
     "quality_changes": [],
     "recovered_channels": [
       {
-        "identity": "id:drtv.dk",
+        "identity": "id:canal38.br",
         "kind": "returned",
-        "name": "DRTV (1080p)",
-        "url": "https://drlivedrtvahls.akamaized.net/hls/live/2113613/drlivedrtva/master.m3u8"
+        "name": "Canal 38 (720p)",
+        "url": "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8"
       },
       {
-        "identity": "id:news12newjersey.us",
+        "identity": "id:eveo.fi",
         "kind": "returned",
-        "name": "News12 New Jersey (1080p)",
-        "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/index_new.m3u8?[redacted]"
+        "name": "Eveo",
+        "url": "https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?[redacted]"
       },
       {
-        "identity": "id:pellatv.gr",
+        "identity": "id:meltemtv.tr",
         "kind": "returned",
-        "name": "Pella TV (576p)",
-        "url": "https://video.streams.ovh:1936/pellatv/pellatv/master.m3u8"
+        "name": "Meltem TV (1080p)",
+        "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
       },
       {
-        "identity": "id:tele1.tr",
+        "identity": "id:skorayapomoshch.ru",
         "kind": "returned",
-        "name": "Tele 1 (1080p)",
-        "url": "https://tele1-live.ercdn.net/tele1/tele1.m3u8"
+        "name": "Skoraya pomoshch (1080p)",
+        "url": "https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8"
       },
       {
-        "identity": "id:trutv.us@west",
+        "identity": "id:sochi24.ru",
         "kind": "returned",
-        "name": "truTV (720p)",
-        "url": "https://turnerlive.warnermediacdn.com/hls/live/2023178/truwest/slate/VIDEO_0_3564000.m3u8"
+        "name": "Sochi24 (720p)",
+        "url": "http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8"
       },
       {
-        "identity": "id:tvcsuper.pl",
+        "identity": "id:teleuv.mx",
         "kind": "returned",
-        "name": "TVC Super",
-        "url": "http://92.114.85.87:8010/play/a00n/index.m3u8"
+        "name": "Tele UV",
+        "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8"
+      },
+      {
+        "identity": "id:tvacritica.br",
+        "kind": "returned",
+        "name": "TV A Critica (1080p)",
+        "url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8"
+      },
+      {
+        "identity": "id:tvr.es",
+        "kind": "returned",
+        "name": "TVR (360p)",
+        "url": "https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8"
+      },
+      {
+        "identity": "id:tvsulbahia.br",
+        "kind": "returned",
+        "name": "TV Sul Bahia (320p)",
+        "url": "https://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8"
+      },
+      {
+        "identity": "id:volleyball.ru",
+        "kind": "returned",
+        "name": "Volleyball (1080p)",
+        "url": "https://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8"
       }
     ],
     "removed_channels": [],
@@ -4692,7 +4696,7 @@
     {
       "bitrate": 3720380,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:54:24.744412+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -4764,7 +4768,7 @@
     {
       "bitrate": 6828380,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:51:55.324501+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -6656,6 +6660,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",
       "status": "healthy",
       "url": "https://5f2c1b0d880e5.streamlock.net/canal33tijuana/videocanal33tijuana/playlist.m3u8"
+    },
+    {
+      "bitrate": 7152000,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:08:10.658191+00:00",
+      "country": "br",
+      "epg": "missing_id",
+      "group": "اخبار - سایر زبان‌ها",
+      "identity": "id:canal38.br",
+      "language": "pt",
+      "logo": "https://i.imgur.com/co7TCWC.png",
+      "name": "Canal 38 (720p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 18,
+        "observed_days": 11,
+        "score": 48,
+        "window_days": 30
+      },
+      "resolution": 1080,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "status": "healthy",
+      "url": "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8"
     },
     {
       "bitrate": 0,
@@ -10064,6 +10092,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ua.m3u",
       "status": "healthy",
       "url": "http://cdn10.live-tv.od.ua:8081/sk1zt/sk1zt-abr/playlist.m3u8"
+    },
+    {
+      "bitrate": 2788819,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:06:46.529533+00:00",
+      "country": "ru",
+      "epg": "missing_id",
+      "group": "اخبار - سایر زبان‌ها",
+      "identity": "id:sochi24.ru",
+      "language": "rus",
+      "logo": "https://i.imgur.com/iwWxkl6.png",
+      "name": "Sochi24 (720p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 13,
+        "observed_days": 9,
+        "score": 77,
+        "window_days": 30
+      },
+      "resolution": 720,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+      "status": "healthy",
+      "url": "http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8"
     },
     {
       "bitrate": 6278000,
@@ -16112,6 +16164,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
       "status": "healthy",
       "url": "http://46.53.200.153:7777/play/a01l/index.m3u8"
+    },
+    {
+      "bitrate": 8020000,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:06:40.131555+00:00",
+      "country": "ru",
+      "epg": "missing_id",
+      "group": "ورزشی",
+      "identity": "id:volleyball.ru",
+      "language": "rus",
+      "logo": "https://smotreshka.server-img.lfstrm.tv/images/media/59/20/592021ab74bddb93907e2b18997215a9.png",
+      "name": "Volleyball (1080p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 21,
+        "observed_days": 11,
+        "score": 51,
+        "window_days": 30
+      },
+      "resolution": 576,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+      "status": "healthy",
+      "url": "https://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8"
     },
     {
       "bitrate": 0,
@@ -35914,6 +35990,30 @@
       "url": "http://46.53.200.153:7777/play/Sapfir_HD/index.m3u8"
     },
     {
+      "bitrate": 3490000,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:06:42.845261+00:00",
+      "country": "ru",
+      "epg": "missing_id",
+      "group": "سریال و کمدی",
+      "identity": "id:skorayapomoshch.ru",
+      "language": "rus",
+      "logo": "https://cdn2-static.ntv.ru/home/promo/24740/skoraya_pom_llive.jpg",
+      "name": "Skoraya pomoshch (1080p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 20,
+        "observed_days": 11,
+        "score": 35,
+        "window_days": 30
+      },
+      "resolution": 360,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+      "status": "healthy",
+      "url": "https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8"
+    },
+    {
       "bitrate": 0,
       "bitrate_source": "",
       "cached": true,
@@ -37234,6 +37334,30 @@
       "url": "https://live-bauerie.sharp-stream.com/98"
     },
     {
+      "bitrate": 0,
+      "bitrate_source": "",
+      "cached": false,
+      "checked_at": "2026-11-20T15:07:19.859871+00:00",
+      "country": "us",
+      "epg": "missing_id",
+      "group": "سرگرمی - انگلیسی‌زبان",
+      "identity": "id:ae.us@east",
+      "language": "en",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png",
+      "name": "A&E (1080p)",
+      "reason": "Valid HLS media playlist (segments not sampled)",
+      "reliability": {
+        "observations": 9,
+        "observed_days": 4,
+        "score": 21,
+        "window_days": 30
+      },
+      "resolution": 1080,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+      "status": "healthy",
+      "url": "https://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8"
+    },
+    {
       "bitrate": 1190000,
       "bitrate_source": "hls_master_max",
       "cached": true,
@@ -38484,7 +38608,7 @@
     {
       "bitrate": 3829162,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:55:24.437927+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -41316,7 +41440,7 @@
     {
       "bitrate": 3902125,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:53:41.013694+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -42036,7 +42160,7 @@
     {
       "bitrate": 3907652,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:52:28.031765+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -44148,7 +44272,7 @@
     {
       "bitrate": 5631072,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:52:30.169157+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -48588,7 +48712,7 @@
     {
       "bitrate": 0,
       "bitrate_source": "",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:51:50.941173+00:00",
       "country": "us",
       "epg": "missing_id",
@@ -56076,7 +56200,7 @@
     {
       "bitrate": 8604736,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:49:29.636799+00:00",
       "country": "dk",
       "epg": "missing_id",
@@ -57248,6 +57372,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
       "status": "healthy",
       "url": "https://evandis.streamakaci.tv/str_evandis_evandis/str_evandis_multi/playlist.m3u8"
+    },
+    {
+      "bitrate": 0,
+      "bitrate_source": "",
+      "cached": false,
+      "checked_at": "2026-11-20T15:09:55.237988+00:00",
+      "country": "fi",
+      "epg": "missing_id",
+      "group": "سرگرمی - اروپا",
+      "identity": "id:eveo.fi",
+      "language": "fin",
+      "logo": "https://i.imgur.com/fFIq7tY.png",
+      "name": "Eveo",
+      "reason": "Valid HLS media playlist (segments not sampled)",
+      "reliability": {
+        "observations": 17,
+        "observed_days": 11,
+        "score": 35,
+        "window_days": 30
+      },
+      "resolution": 0,
+      "source": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+      "status": "healthy",
+      "url": "https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?[redacted]"
     },
     {
       "bitrate": 7858782,
@@ -65124,7 +65272,7 @@
     {
       "bitrate": 1551075,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:54:01.024349+00:00",
       "country": "gr",
       "epg": "missing_id",
@@ -77172,7 +77320,7 @@
     {
       "bitrate": 1280000,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:54:07.768561+00:00",
       "country": "pl",
       "epg": "missing_id",
@@ -77672,6 +77820,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ro.m3u",
       "status": "healthy",
       "url": "http://85.186.146.34:8080"
+    },
+    {
+      "bitrate": 1741892,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:08:38.716811+00:00",
+      "country": "es",
+      "epg": "missing_id",
+      "group": "سرگرمی - اروپا",
+      "identity": "id:tvr.es",
+      "language": "es",
+      "logo": "https://i.ibb.co/nRq3YfT/Logo-Rioja-Televisi-n-S-A.png",
+      "name": "TVR (360p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 22,
+        "observed_days": 11,
+        "score": 17,
+        "window_days": 30
+      },
+      "resolution": 1080,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u",
+      "status": "healthy",
+      "url": "https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8"
     },
     {
       "bitrate": 3628000,
@@ -91306,6 +91478,30 @@
       "url": "http://45.5.118.152:8000/play/a08n/index.m3u8"
     },
     {
+      "bitrate": 6811572,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:04:17.427911+00:00",
+      "country": "br",
+      "epg": "missing_id",
+      "group": "سرگرمی - آمریکای لاتین",
+      "identity": "id:tvacritica.br",
+      "language": "pt",
+      "logo": "https://i.imgur.com/j51rBro.png",
+      "name": "TV A Critica (1080p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 24,
+        "observed_days": 11,
+        "score": 27,
+        "window_days": 30
+      },
+      "resolution": 1080,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "status": "healthy",
+      "url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8"
+    },
+    {
       "bitrate": 0,
       "bitrate_source": "",
       "cached": true,
@@ -92528,6 +92724,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
       "status": "healthy",
       "url": "https://stmv8.samcast.com.br/raimundoanselmolimamororo1908/raimundoanselmolimamororo1908/playlist.m3u8"
+    },
+    {
+      "bitrate": 7194083,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:04:33.900050+00:00",
+      "country": "br",
+      "epg": "missing_id",
+      "group": "سرگرمی - آمریکای لاتین",
+      "identity": "id:tvsulbahia.br",
+      "language": "pt",
+      "logo": "https://i.imgur.com/qM6nMWm.png",
+      "name": "TV Sul Bahia (320p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 22,
+        "observed_days": 11,
+        "score": 17,
+        "window_days": 30
+      },
+      "resolution": 1080,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+      "status": "healthy",
+      "url": "https://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8"
     },
     {
       "bitrate": 3439066,
@@ -95362,6 +95582,30 @@
       "url": "https://live.artidijitalmedya.com/artidijital_mavikaradeniz/mavikaradeniz/playlist.m3u8"
     },
     {
+      "bitrate": 2886447,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:06:54.617351+00:00",
+      "country": "tr",
+      "epg": "missing_id",
+      "group": "سرگرمی - خاورمیانه",
+      "identity": "id:meltemtv.tr",
+      "language": "tr",
+      "logo": "https://i.imgur.com/C3m6w5S.png",
+      "name": "Meltem TV (1080p)",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 24,
+        "observed_days": 11,
+        "score": 37,
+        "window_days": 30
+      },
+      "resolution": 720,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
+      "status": "healthy",
+      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
+    },
+    {
       "bitrate": 1308225,
       "bitrate_source": "hls_master_max",
       "cached": true,
@@ -95676,7 +95920,7 @@
     {
       "bitrate": 3000000,
       "bitrate_source": "hls_master_max",
-      "cached": false,
+      "cached": true,
       "checked_at": "2026-11-20T14:51:16.704083+00:00",
       "country": "tr",
       "epg": "missing_id",
@@ -104240,6 +104484,30 @@
       "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cz.m3u",
       "status": "healthy",
       "url": "http://88.212.15.50/live/test_spektrum/playlist.m3u8"
+    },
+    {
+      "bitrate": 4295875,
+      "bitrate_source": "hls_master_max",
+      "cached": false,
+      "checked_at": "2026-11-20T15:06:06.778616+00:00",
+      "country": "mx",
+      "epg": "missing_id",
+      "group": "مستند و علمی - سایر زبان‌ها",
+      "identity": "id:teleuv.mx",
+      "language": "es",
+      "logo": "https://i.imgur.com/8MdUH69.jpeg",
+      "name": "Tele UV",
+      "reason": "Valid HLS master and sampled media playlists",
+      "reliability": {
+        "observations": 22,
+        "observed_days": 11,
+        "score": 28,
+        "window_days": 30
+      },
+      "resolution": 720,
+      "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",
+      "status": "healthy",
+      "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8"
     },
     {
       "bitrate": 2289714,
@@ -115450,8 +115718,8 @@
       "url": "https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/63eb82e24e83e70008ab735f/master.m3u8?[redacted]"
     }
   ],
-  "channels": 4807,
-  "checked_links": 2998,
+  "channels": 4818,
+  "checked_links": 2986,
   "dashboard_revision": "839c300dbc762dfa",
   "downgraded": 0,
   "editor": {
@@ -122084,6 +122352,21 @@
         "resolution": 720,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 0,
+        "bitrate_source": "",
+        "country": "us",
+        "group": "سرگرمی - انگلیسی‌زبان",
+        "identity": "id:ae.us@east",
+        "language": "en",
+        "m3u": "#EXTINF:-1 tvg-id=\"AE.us@East\" tvg-country=\"us\" tvg-language=\"en\" group-title=\"سرگرمی - انگلیسی‌زبان\" tvg-logo=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/A%26E_Network_logo.svg/960px-A%26E_Network_logo.svg.png\",A&E (1080p)\nhttps://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8|referer=https%3A%2F%2Ftvnow.st&user-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F81.0.4044.138+Safari%2F537.36+Edge%2F12.246\n",
+        "name": "A&E (1080p)",
+        "request_url": "https://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
+        "stability": 4,
         "status": "healthy"
       },
       {
@@ -142172,6 +142455,36 @@
         "status": "healthy"
       },
       {
+        "bitrate": 7152000,
+        "bitrate_source": "hls_master_max",
+        "country": "br",
+        "group": "اخبار - سایر زبان‌ها",
+        "identity": "id:canal38.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"Canal38.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"اخبار - سایر زبان‌ها\" tvg-logo=\"https://i.imgur.com/co7TCWC.png\",Canal 38 (720p)\nhttps://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8\n",
+        "name": "Canal 38 (720p)",
+        "request_url": "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 9,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 7152000,
+        "bitrate_source": "hls_peak",
+        "country": "br",
+        "group": "اخبار - سایر زبان‌ها",
+        "identity": "id:canal38.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"Canal38.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"اخبار - سایر زبان‌ها\" tvg-logo=\"https://i.imgur.com/co7TCWC.png\",Canal 38 (1080p)\nhttps://cdn.live.br1.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/chunklist.m3u8\n",
+        "name": "Canal 38 (1080p)",
+        "request_url": "https://cdn.live.br1.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/chunklist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 9,
+        "status": "healthy"
+      },
+      {
         "bitrate": 1,
         "bitrate_source": "hls_master_max",
         "country": "ar",
@@ -152369,6 +152682,36 @@
         "resolution": 720,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 3891384,
+        "bitrate_source": "hls_peak",
+        "country": "us",
+        "group": "سایر",
+        "identity": "id:cinesony.us",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"CineSony.us@SD\" tvg-country=\"us\" tvg-language=\"es\" group-title=\"سایر\" tvg-logo=\"https://i.imgur.com/bZWoDTg.png\",Cine Sony (720p)\nhttps://a-cdn.klowdtv.com/live1/cine_720p/chunks.m3u8\n",
+        "name": "Cine Sony (720p)",
+        "request_url": "https://a-cdn.klowdtv.com/live1/cine_720p/chunks.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/nexonic-technologies/nexonic-iptv/main/playlists/verified.m3u",
+        "stability": 10,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 3891384,
+        "bitrate_source": "hls_master_max",
+        "country": "us",
+        "group": "سایر",
+        "identity": "id:cinesony.us",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"CineSony.us@SD\" tvg-country=\"us\" tvg-language=\"es\" group-title=\"سایر\" tvg-logo=\"https://i.imgur.com/bZWoDTg.png\",Cine Sony\nhttps://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8\n",
+        "name": "Cine Sony",
+        "request_url": "https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/nexonic-technologies/nexonic-iptv/main/playlists/verified.m3u",
+        "stability": 10,
         "status": "healthy"
       },
       {
@@ -172169,6 +172512,36 @@
         "resolution": 1080,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 0,
+        "bitrate_source": "",
+        "country": "fi",
+        "group": "سرگرمی - اروپا",
+        "identity": "id:eveo.fi",
+        "language": "fin",
+        "m3u": "#EXTINF:-1 tvg-id=\"Eveo.fi@SD\" tvg-country=\"fi\" tvg-language=\"fin\" group-title=\"سرگرمی - اروپا\" tvg-logo=\"https://i.imgur.com/fFIq7tY.png\",Eveo (720p)\nhttps://live-fi.tvkaista.net/eveo/live.m3u8?hd=true\n",
+        "name": "Eveo (720p)",
+        "request_url": "https://live-fi.tvkaista.net/eveo/live.m3u8?[redacted]",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fi.m3u",
+        "stability": 5,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 0,
+        "bitrate_source": "",
+        "country": "fi",
+        "group": "سرگرمی - اروپا",
+        "identity": "id:eveo.fi",
+        "language": "fin",
+        "m3u": "#EXTINF:-1 tvg-id=\"Eveo.fi\" tvg-country=\"fi\" tvg-language=\"fin\" group-title=\"سرگرمی - اروپا\" tvg-logo=\"https://i.imgur.com/sR8nA8w.png\",Eveo\nhttps://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?src=freetv\n",
+        "name": "Eveo",
+        "request_url": "https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?[redacted]",
+        "resolution": 0,
+        "source": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+        "stability": 7,
         "status": "healthy"
       },
       {
@@ -207794,6 +208167,36 @@
         "resolution": 720,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/fr.m3u",
         "stability": 16,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 2886447,
+        "bitrate_source": "hls_peak",
+        "country": "tr",
+        "group": "سرگرمی - خاورمیانه",
+        "identity": "id:meltemtv.tr",
+        "language": "tr",
+        "m3u": "#EXTINF:-1 tvg-id=\"MeltemTV.tr@SD\" tvg-country=\"tr\" tvg-language=\"tr\" group-title=\"سرگرمی - خاورمیانه\" tvg-logo=\"https://i.imgur.com/C3m6w5S.png\",Meltem TV (720p)\nhttps://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8\n",
+        "name": "Meltem TV (720p)",
+        "request_url": "https://vhxyrsly.rocketcdn.com/meltemtv/chunklist.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
+        "stability": 7,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 2886447,
+        "bitrate_source": "hls_master_max",
+        "country": "tr",
+        "group": "سرگرمی - خاورمیانه",
+        "identity": "id:meltemtv.tr",
+        "language": "tr",
+        "m3u": "#EXTINF:-1 tvg-id=\"MeltemTV.tr@SD\" tvg-country=\"tr\" tvg-language=\"tr\" group-title=\"سرگرمی - خاورمیانه\" tvg-logo=\"https://i.imgur.com/C3m6w5S.png\",Meltem TV (1080p)\nhttps://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8\n",
+        "name": "Meltem TV (1080p)",
+        "request_url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/tr.m3u",
+        "stability": 7,
         "status": "healthy"
       },
       {
@@ -256322,6 +256725,36 @@
         "status": "healthy"
       },
       {
+        "bitrate": 3490000,
+        "bitrate_source": "hls_master_max",
+        "country": "ru",
+        "group": "سریال و کمدی",
+        "identity": "id:skorayapomoshch.ru",
+        "language": "rus",
+        "m3u": "#EXTINF:-1 tvg-id=\"Skorayapomoshch.ru@SD\" tvg-country=\"ru\" tvg-language=\"rus\" group-title=\"سریال و کمدی\" tvg-logo=\"https://cdn2-static.ntv.ru/home/promo/24740/skoraya_pom_llive.jpg\",Skoraya pomoshch (1080p)\nhttps://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8\n",
+        "name": "Skoraya pomoshch (1080p)",
+        "request_url": "https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8",
+        "resolution": 360,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+        "stability": 7,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 1140000,
+        "bitrate_source": "hls_peak",
+        "country": "ru",
+        "group": "سریال و کمدی",
+        "identity": "id:skorayapomoshch.ru",
+        "language": "rus",
+        "m3u": "#EXTINF:-1 tvg-id=\"Skorayapomoshch.ru@SD\" tvg-country=\"ru\" tvg-language=\"rus\" group-title=\"سریال و کمدی\" tvg-logo=\"https://cdn2-static.ntv.ru/home/promo/24740/skoraya_pom_llive.jpg\",Skoraya pomoshch (360p)\nhttps://cdn-dvr.ntv.ru/Skoraja_pomosh/tracks-v2a1/mono.ts.m3u8\n",
+        "name": "Skoraya pomoshch (360p)",
+        "request_url": "https://cdn-dvr.ntv.ru/Skoraja_pomosh/tracks-v2a1/mono.ts.m3u8",
+        "resolution": 360,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+        "stability": 7,
+        "status": "healthy"
+      },
+      {
         "bitrate": 2300000,
         "bitrate_source": "hls_master_max",
         "country": "us",
@@ -257699,6 +258132,21 @@
         "resolution": 240,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 2788819,
+        "bitrate_source": "hls_master_max",
+        "country": "ru",
+        "group": "اخبار - سایر زبان‌ها",
+        "identity": "id:sochi24.ru",
+        "language": "rus",
+        "m3u": "#EXTINF:-1 tvg-id=\"Sochi24.ru@SD\" tvg-country=\"ru\" tvg-language=\"rus\" group-title=\"اخبار - سایر زبان‌ها\" tvg-logo=\"https://i.imgur.com/iwWxkl6.png\",Sochi24 (720p)\nhttp://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8\n",
+        "name": "Sochi24 (720p)",
+        "request_url": "http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+        "stability": 15,
         "status": "healthy"
       },
       {
@@ -270737,6 +271185,36 @@
         "status": "healthy"
       },
       {
+        "bitrate": 4295875,
+        "bitrate_source": "hls_peak",
+        "country": "mx",
+        "group": "مستند و علمی - سایر زبان‌ها",
+        "identity": "id:teleuv.mx",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"TeleUV.mx@SD\" tvg-country=\"mx\" tvg-language=\"es\" group-title=\"مستند و علمی - سایر زبان‌ها\" tvg-logo=\"https://i.imgur.com/8MdUH69.jpeg\",Tele UV (720p)\nhttps://58fe359775f31.streamlock.net/tvuv/myStream/chunklist_w28110349.m3u8\n",
+        "name": "Tele UV (720p)",
+        "request_url": "https://58fe359775f31.streamlock.net/tvuv/myStream/chunklist_w28110349.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",
+        "stability": 5,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 4295875,
+        "bitrate_source": "hls_master_max",
+        "country": "mx",
+        "group": "مستند و علمی - سایر زبان‌ها",
+        "identity": "id:teleuv.mx",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"TeleUV.mx@SD\" tvg-country=\"mx\" tvg-language=\"es\" group-title=\"مستند و علمی - سایر زبان‌ها\" tvg-logo=\"https://i.imgur.com/8MdUH69.jpeg\",Tele UV\nhttps://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8\n",
+        "name": "Tele UV",
+        "request_url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8",
+        "resolution": 720,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/mx.m3u",
+        "stability": 5,
+        "status": "healthy"
+      },
+      {
         "bitrate": 5792943,
         "bitrate_source": "hls_peak",
         "country": "cl",
@@ -280247,6 +280725,36 @@
         "status": "healthy"
       },
       {
+        "bitrate": 6811572,
+        "bitrate_source": "hls_peak",
+        "country": "br",
+        "group": "سرگرمی - آمریکای لاتین",
+        "identity": "id:tvacritica.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVACritica.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"سرگرمی - آمریکای لاتین\" tvg-logo=\"https://i.imgur.com/j51rBro.png\",TV A Critica (1080p)\nhttps://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/chunklist.m3u8\n",
+        "name": "TV A Critica (1080p)",
+        "request_url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/chunklist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 5,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 6811572,
+        "bitrate_source": "hls_master_max",
+        "country": "br",
+        "group": "سرگرمی - آمریکای لاتین",
+        "identity": "id:tvacritica.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVACritica.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"سرگرمی - آمریکای لاتین\" tvg-logo=\"https://i.imgur.com/j51rBro.png\",TV A Critica (1080p)\nhttps://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8\n",
+        "name": "TV A Critica (1080p)",
+        "request_url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 5,
+        "status": "healthy"
+      },
+      {
         "bitrate": 4531000,
         "bitrate_source": "hls_peak",
         "country": "co",
@@ -285437,6 +285945,36 @@
         "status": "healthy"
       },
       {
+        "bitrate": 1741892,
+        "bitrate_source": "hls_peak",
+        "country": "es",
+        "group": "سرگرمی - اروپا",
+        "identity": "id:tvr.es",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVR.es@SD\" tvg-country=\"es\" tvg-language=\"es\" group-title=\"سرگرمی - اروپا\" tvg-logo=\"https://i.ibb.co/nRq3YfT/Logo-Rioja-Televisi-n-S-A.png\",TVR (1080p)\nhttps://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/chunklist_w1180665365.m3u8\n",
+        "name": "TVR (1080p)",
+        "request_url": "https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/chunklist_w1180665365.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u",
+        "stability": 3,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 1741892,
+        "bitrate_source": "hls_master_max",
+        "country": "es",
+        "group": "سرگرمی - اروپا",
+        "identity": "id:tvr.es",
+        "language": "es",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVR.es@SD\" tvg-country=\"es\" tvg-language=\"es\" group-title=\"سرگرمی - اروپا\" tvg-logo=\"https://i.ibb.co/nRq3YfT/Logo-Rioja-Televisi-n-S-A.png\",TVR (360p)\nhttps://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8\n",
+        "name": "TVR (360p)",
+        "request_url": "https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/es.m3u",
+        "stability": 3,
+        "status": "healthy"
+      },
+      {
         "bitrate": 1096000,
         "bitrate_source": "hls_peak",
         "country": "ro",
@@ -287174,6 +287712,36 @@
         "resolution": 360,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/us.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 7194083,
+        "bitrate_source": "hls_peak",
+        "country": "br",
+        "group": "سرگرمی - آمریکای لاتین",
+        "identity": "id:tvsulbahia.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVSulBahia.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"سرگرمی - آمریکای لاتین\" tvg-logo=\"https://i.imgur.com/qM6nMWm.png\",TV Sul Bahia (1080p)\nhttps://live.cdn.upx.com/00046/myStream.sdp/chunklist.m3u8\n",
+        "name": "TV Sul Bahia (1080p)",
+        "request_url": "https://live.cdn.upx.com/00046/myStream.sdp/chunklist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 3,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 7194083,
+        "bitrate_source": "hls_master_max",
+        "country": "br",
+        "group": "سرگرمی - آمریکای لاتین",
+        "identity": "id:tvsulbahia.br",
+        "language": "pt",
+        "m3u": "#EXTINF:-1 tvg-id=\"TVSulBahia.br@SD\" tvg-country=\"br\" tvg-language=\"pt\" group-title=\"سرگرمی - آمریکای لاتین\" tvg-logo=\"https://i.imgur.com/qM6nMWm.png\",TV Sul Bahia (320p)\nhttps://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8\n",
+        "name": "TV Sul Bahia (320p)",
+        "request_url": "https://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8",
+        "resolution": 1080,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u",
+        "stability": 3,
         "status": "healthy"
       },
       {
@@ -293834,6 +294402,21 @@
         "resolution": 1080,
         "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.m3u",
         "stability": 17,
+        "status": "healthy"
+      },
+      {
+        "bitrate": 8020000,
+        "bitrate_source": "hls_master_max",
+        "country": "ru",
+        "group": "ورزشی",
+        "identity": "id:volleyball.ru",
+        "language": "rus",
+        "m3u": "#EXTINF:-1 tvg-id=\"Volleyball.ru@SD\" tvg-country=\"ru\" tvg-language=\"rus\" group-title=\"ورزشی\" tvg-logo=\"https://smotreshka.server-img.lfstrm.tv/images/media/59/20/592021ab74bddb93907e2b18997215a9.png\",Volleyball (1080p)\nhttps://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8\n",
+        "name": "Volleyball (1080p)",
+        "request_url": "https://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8",
+        "resolution": 576,
+        "source": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/ru.m3u",
+        "stability": 10,
         "status": "healthy"
       },
       {
@@ -316914,7 +317497,7 @@
       "https://epg.pw/xmltv/epg_DE.xml"
     ],
     "favorites": [],
-    "private_identities_omitted": 639,
+    "private_identities_omitted": 641,
     "profiles": {
       "fa-en": {
         "countries": [],
@@ -316987,7 +317570,7 @@
       }
     ],
     "header_policy": "keep_unverified",
-    "missing": 4804,
+    "missing": 4815,
     "missing_channels": [
       {
         "id": "DunyaNawTV.af@SD",
@@ -318726,6 +319309,13 @@
         "target": ""
       },
       {
+        "id": "Canal38.br@SD",
+        "identity": "id:canal38.br",
+        "name": "Canal 38 (720p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "CanaldoBoi.br@SD",
         "identity": "id:canaldoboi.br",
         "name": "Canal do Boi (720p)",
@@ -319412,6 +320002,13 @@
         "target": ""
       },
       {
+        "id": "TVACritica.br@SD",
+        "identity": "id:tvacritica.br",
+        "name": "TV A Critica (1080p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "TVAldeia.br@SD",
         "identity": "id:tvaldeia.br",
         "name": "TV Aldeia (720p)",
@@ -319674,6 +320271,13 @@
         "id": "TVSimCachoeiro.br@SD",
         "identity": "id:tvsimcachoeiro.br",
         "name": "TV Sim Cachoeiro (720p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
+        "id": "TVSulBahia.br@SD",
+        "identity": "id:tvsulbahia.br",
+        "name": "TV Sul Bahia (320p)",
         "status": "missing_id",
         "target": ""
       },
@@ -323803,7 +324407,7 @@
       {
         "id": "DRTV.dk@SD",
         "identity": "id:drtv.dk",
-        "name": "DRTV",
+        "name": "DRTV (1080p)",
         "status": "missing_id",
         "target": ""
       },
@@ -324599,6 +325203,13 @@
         "target": ""
       },
       {
+        "id": "TVR.es@SD",
+        "identity": "id:tvr.es",
+        "name": "TVR (360p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "RTVManilva.es@SD",
         "identity": "id:rtvmanilva.es",
         "name": "RTV Manilva (1080p)",
@@ -324840,6 +325451,13 @@
         "id": "XPTVUS.es@SD",
         "identity": "id:xptvus.es",
         "name": "XPTV US (720p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
+        "id": "Eveo.fi@SD",
+        "identity": "id:eveo.fi",
+        "name": "Eveo",
         "status": "missing_id",
         "target": ""
       },
@@ -326216,9 +326834,9 @@
         "target": ""
       },
       {
-        "id": "pellatv.gr",
+        "id": "PellaTV.gr@SD",
         "identity": "id:pellatv.gr",
-        "name": "Pella TV",
+        "name": "Pella TV (576p)",
         "status": "missing_id",
         "target": ""
       },
@@ -329292,6 +329910,13 @@
         "id": "SkySports1.mx@SD",
         "identity": "id:skysports1.mx",
         "name": "Sky Sports 1 (1080p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
+        "id": "TeleUV.mx@SD",
+        "identity": "id:teleuv.mx",
+        "name": "Tele UV",
         "status": "missing_id",
         "target": ""
       },
@@ -334896,6 +335521,13 @@
         "target": ""
       },
       {
+        "id": "Skorayapomoshch.ru@SD",
+        "identity": "id:skorayapomoshch.ru",
+        "name": "Skoraya pomoshch (1080p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "SmileTV.ru@SD",
         "identity": "id:smiletv.ru",
         "name": "Smile TV (720p)",
@@ -335365,6 +335997,13 @@
         "target": ""
       },
       {
+        "id": "Volleyball.ru@SD",
+        "identity": "id:volleyball.ru",
+        "name": "Volleyball (1080p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "Vremya.ru@SD",
         "identity": "id:vremya.ru",
         "name": "Vremya (576p)",
@@ -335627,6 +336266,13 @@
         "id": "Sever.ru",
         "identity": "id:sever.ru",
         "name": "Sever",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
+        "id": "Sochi24.ru@SD",
+        "identity": "id:sochi24.ru",
+        "name": "Sochi24 (720p)",
         "status": "missing_id",
         "target": ""
       },
@@ -336247,6 +336893,13 @@
         "target": ""
       },
       {
+        "id": "MeltemTV.tr@SD",
+        "identity": "id:meltemtv.tr",
+        "name": "Meltem TV",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
         "id": "MercanTV.tr@SD",
         "identity": "id:mercantv.tr",
         "name": "Mercan TV (576p)",
@@ -336431,7 +337084,7 @@
       {
         "id": "Tele1.tr@SD",
         "identity": "id:tele1.tr",
-        "name": "Tele 1",
+        "name": "Tele 1 (1080p)",
         "status": "missing_id",
         "target": ""
       },
@@ -337979,6 +338632,13 @@
         "id": "48Hours.us@US",
         "identity": "id:48hours.us@us",
         "name": "48 Hours (1080p)",
+        "status": "missing_id",
+        "target": ""
+      },
+      {
+        "id": "AE.us@East",
+        "identity": "id:ae.us@east",
+        "name": "A&E (720p)",
         "status": "missing_id",
         "target": ""
       },
@@ -341002,7 +341662,7 @@
       {
         "id": "News12Brooklyn.us@SD",
         "identity": "id:news12brooklyn.us",
-        "name": "News12 Brooklyn",
+        "name": "News12 Brooklyn (720p)",
         "status": "missing_id",
         "target": ""
       },
@@ -342276,7 +342936,7 @@
       {
         "id": "truTV.us@West",
         "identity": "id:trutv.us@west",
-        "name": "truTV",
+        "name": "truTV (720p)",
         "status": "missing_id",
         "target": ""
       },
@@ -350621,19 +351281,19 @@
     "rewritten_ids": 3
   },
   "fresh_healthy_watched": [],
-  "generated_at": "2026-11-20T14:48:18.600173+00:00",
+  "generated_at": "2026-11-20T15:03:51.143742+00:00",
   "groups": {
     "اخبار - انگلیسی": 90,
-    "اخبار - سایر زبان‌ها": 218,
+    "اخبار - سایر زبان‌ها": 220,
     "اخبار - فارسی": 26,
     "حیوانات و طبیعت": 15,
     "سایر": 294,
     "سبک زندگی، آشپزی و سفر": 134,
-    "سرگرمی - آمریکای لاتین": 575,
-    "سرگرمی - اروپا": 1265,
-    "سرگرمی - انگلیسی‌زبان": 546,
-    "سرگرمی - خاورمیانه": 80,
-    "سریال و کمدی": 126,
+    "سرگرمی - آمریکای لاتین": 577,
+    "سرگرمی - اروپا": 1267,
+    "سرگرمی - انگلیسی‌زبان": 547,
+    "سرگرمی - خاورمیانه": 81,
+    "سریال و کمدی": 127,
     "فارسی - تلویزیون": 77,
     "فارسی - فیلم و سریال": 27,
     "فارسی - موزیک": 11,
@@ -350644,7 +351304,7 @@
     "فیلم اکشن": 3,
     "فیلم ترسناک": 2,
     "مستند و علمی - انگلیسی": 61,
-    "مستند و علمی - سایر زبان‌ها": 121,
+    "مستند و علمی - سایر زبان‌ها": 122,
     "موزیک - MTV": 16,
     "موزیک - آمریکای لاتین": 87,
     "موزیک - اروپا": 226,
@@ -350653,7 +351313,7 @@
     "موزیک - راک": 10,
     "موزیک - سایر": 14,
     "موزیک - هیپ‌هاپ و رپ": 2,
-    "ورزشی": 232,
+    "ورزشی": 233,
     "کلاسیک (فیلم و سریال قدیمی)": 33,
     "کودک و کارتون - آمریکای لاتین": 22,
     "کودک و کارتون - اروپا": 88,
@@ -350661,12 +351321,12 @@
     "کودک و کارتون - خاورمیانه": 5
   },
   "health": {
-    "healthy": 6051,
-    "http_error": 620,
-    "invalid": 423,
-    "network_error": 547,
-    "restricted": 865,
-    "timeout": 531
+    "healthy": 6064,
+    "http_error": 631,
+    "invalid": 422,
+    "network_error": 512,
+    "restricted": 876,
+    "timeout": 532
   },
   "metadata": {
     "ambiguous": 2,
@@ -350771,7 +351431,7 @@
     "missing_favorites": [],
     "profiles": {
       "fa-en": {
-        "channels": 1254,
+        "channels": 1255,
         "file": "profile-fa-en.m3u",
         "options": {
           "countries": [],
@@ -350784,12 +351444,12 @@
         },
         "over_bitrate_omitted": 0,
         "over_limit_omitted": 0,
-        "unknown_bitrate_included": 186,
+        "unknown_bitrate_included": 187,
         "unknown_bitrate_omitted": 0,
         "unknown_quality_omitted": 0
       },
       "low-bandwidth": {
-        "channels": 2188,
+        "channels": 2189,
         "file": "profile-low-bandwidth.m3u",
         "options": {
           "countries": [],
@@ -350798,10 +351458,10 @@
           "max_bitrate": 2000000,
           "max_resolution": 720
         },
-        "over_bitrate_omitted": 1445,
-        "over_limit_omitted": 185,
+        "over_bitrate_omitted": 1453,
+        "over_limit_omitted": 186,
         "unknown_bitrate_included": 0,
-        "unknown_bitrate_omitted": 3321,
+        "unknown_bitrate_omitted": 3312,
         "unknown_quality_omitted": 226
       }
     }
@@ -350809,9 +351469,9 @@
   "playback": {
     "enabled": false
   },
-  "previous_channels": 4796,
-  "previous_unique_identities": 4796,
-  "recovered": 6,
+  "previous_channels": 4807,
+  "previous_unique_identities": 4807,
+  "recovered": 10,
   "removed": 0,
   "retained_unverified": 0,
   "returned_unverified": 0,
@@ -351065,8 +351725,8 @@
     {
       "last_success": null,
       "name": ".red (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/RED/index.m3u8"
     },
     {
@@ -351394,8 +352054,8 @@
     {
       "last_success": "2026-11-19T10:56:00.852573+00:00",
       "name": "6 TV Gorlovka (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 503",
+      "status": "http_error",
       "url": "http://91.214.48.158:4022/udp/224.2.2.4:10000"
     },
     {
@@ -351491,13 +352151,6 @@
     },
     {
       "last_success": null,
-      "name": "A&E (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
-      "url": "https://cache0.wonvt.st/live/0c4r73315dt0we0fitn3j/master.m3u8"
-    },
-    {
-      "last_success": null,
       "name": "A&E (720p)",
       "reason": "Request timed out",
       "status": "timeout",
@@ -351569,8 +352222,8 @@
     {
       "last_success": "2026-11-19T11:03:18.403819+00:00",
       "name": "Active Family (720p)",
-      "reason": "HTTP 404",
-      "status": "http_error",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "http://92.114.85.87:8010/play/a00p/index.m3u8"
     },
     {
@@ -351625,8 +352278,8 @@
     {
       "last_success": null,
       "name": "Afontovo",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://stream.afontovo.ru/hd.m3u8"
     },
     {
@@ -352339,8 +352992,8 @@
     {
       "last_success": null,
       "name": "ATV (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://212.186.45.34:9981/stream/channelid/692531719?[redacted]"
     },
     {
@@ -352493,8 +353146,8 @@
     {
       "last_success": "2026-11-17T11:23:45.924732+00:00",
       "name": "Avers",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://avers.pp.ua/hls/efir.m3u8"
     },
     {
@@ -352640,15 +353293,15 @@
     {
       "last_success": null,
       "name": "Baden TV (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://badentv-stream2.siebnich.info/rtplive/btv.stream/live.m3u8"
     },
     {
       "last_success": null,
       "name": "Baden TV (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://badentv-stream2.siebnich.info/rtplive/btv.stream/playlist.m3u8"
     },
     {
@@ -352668,8 +353321,8 @@
     {
       "last_success": null,
       "name": "Bailen TV (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://cpd.bailen.tv:8080/Playlist_CANAL_24H/playlist.m3u8"
     },
     {
@@ -352766,15 +353419,15 @@
     {
       "last_success": null,
       "name": "BATV (480p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://reflect-batv.cablecast.tv/live-5/live/live.m3u8"
     },
     {
       "last_success": null,
       "name": "BATV Government TV (480p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://reflect-batv.cablecast.tv/live-3/live/live.m3u8"
     },
     {
@@ -352934,8 +353587,8 @@
     {
       "last_success": null,
       "name": "BBC UHD 4",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/bbc4/index.m3u8"
     },
     {
@@ -352990,8 +353643,8 @@
     {
       "last_success": null,
       "name": "Benguturk TV (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.234.111.229:8000/play/a05u"
     },
     {
@@ -353256,8 +353909,8 @@
     {
       "last_success": null,
       "name": "BRIDGE Classic (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/Bridge_TV_Classic/index.m3u8"
     },
     {
@@ -353590,13 +354243,6 @@
       "url": "https://rpn3.bozztv.com/ssh101/ssh101/canal30mx/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-17T11:30:54.849905+00:00",
-      "name": "Canal 38 (720p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
-      "url": "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "Canal 4 Catalunya (1080p)",
       "reason": "Connection or DNS/TLS failure",
@@ -353634,8 +354280,8 @@
     {
       "last_success": null,
       "name": "Canal 5 (576p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://206.135.11.174:8010/play/a0fl/index.m3u8"
     },
     {
@@ -353774,8 +354420,8 @@
     {
       "last_success": null,
       "name": "Canal Infantil (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://179.1.196.222:9000/play/a02y/index.m3u8"
     },
     {
@@ -354474,8 +355120,8 @@
     {
       "last_success": null,
       "name": "Channel 8 (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://v4.proofix.ru/okino-tv/index.m3u8"
     },
     {
@@ -354509,8 +355155,8 @@
     {
       "last_success": null,
       "name": "Channel One",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://edge1.1internet.tv/dash-live2/streams/1tv-dvr/1tvdash.mpd"
     },
     {
@@ -354523,15 +355169,15 @@
     {
       "last_success": null,
       "name": "CHCH",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/222841"
     },
     {
       "last_success": null,
       "name": "CHCH-DT (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.246.209.113/CHCHHD/index.m3u8"
     },
     {
@@ -354627,13 +355273,6 @@
     },
     {
       "last_success": null,
-      "name": "Cine Sony",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
-      "url": "https://a-cdn.klowdtv.com/live1/cine_720p/playlist.m3u8"
-    },
-    {
-      "last_success": null,
       "name": "Cine+ Classic",
       "reason": "Request timed out",
       "status": "timeout",
@@ -354691,15 +355330,15 @@
     {
       "last_success": null,
       "name": "CineLatino (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://206.135.11.174:8010/play/a0lq/index.m3u8"
     },
     {
       "last_success": null,
       "name": "Cinema",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "http://catchup.videoline.ru/cinema/playlist.m3u8"
     },
     {
@@ -354873,8 +355512,8 @@
     {
       "last_success": null,
       "name": "Combate (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "http://143.14.134.107/167/index.m3u8"
     },
     {
@@ -354978,8 +355617,8 @@
     {
       "last_success": null,
       "name": "Cottage Life (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.246.209.113/CottageLife/index.m3u8"
     },
     {
@@ -355055,8 +355694,8 @@
     {
       "last_success": null,
       "name": "CS History",
-      "reason": "HTTP 404",
-      "status": "http_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://sktv.mxnticek.eu/new/stream.php?[redacted]"
     },
     {
@@ -355090,8 +355729,8 @@
     {
       "last_success": null,
       "name": "CT Decko",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Malformed DASH manifest",
+      "status": "invalid",
       "url": "https://sktv.mxnticek.eu/new/stream.php?[redacted]"
     },
     {
@@ -355125,8 +355764,8 @@
     {
       "last_success": null,
       "name": "CTV Life Channel (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.246.209.113/ANIMALPLANETHD/index.m3u8"
     },
     {
@@ -355321,8 +355960,8 @@
     {
       "last_success": null,
       "name": "Den Haag TV (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://wowza5.video-streams.nl:1935/denhaag/denhaag/playlist.m3u8"
     },
     {
@@ -355510,22 +356149,22 @@
     {
       "last_success": null,
       "name": "Discovery World (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://209.61.12.77:9000/play/a08v/index.m3u8"
     },
     {
       "last_success": null,
       "name": "Disney Channel",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://178.27.12.3:9981/stream/channelid/269948147?[redacted]"
     },
     {
       "last_success": null,
       "name": "Disney Channel",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.77.12.179:9981/stream/channelid/2102298310?[redacted]"
     },
     {
@@ -355769,8 +356408,8 @@
     {
       "last_success": null,
       "name": "Donna TV (480p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://streaming.softwarecreation.it/DonnaTv/DonnaTv/playlist.m3u8"
     },
     {
@@ -356668,20 +357307,6 @@
       "reason": "HTTP 403",
       "status": "restricted",
       "url": "https://video01.logicahost.com.br/ypetv/ypetv/playlist.m3u8"
-    },
-    {
-      "last_success": "2026-11-14T09:51:46.755986+00:00",
-      "name": "Eveo",
-      "reason": "HTTP 404",
-      "status": "http_error",
-      "url": "https://live-fi.tvkaista.net/eveo/live.m3u8?[redacted]"
-    },
-    {
-      "last_success": "2026-11-15T10:15:12.065918+00:00",
-      "name": "Eveo",
-      "reason": "HTTP 404",
-      "status": "http_error",
-      "url": "https://live-fi.tvkaista.net/tapahtumatv-eveo/live.m3u8?[redacted]"
     },
     {
       "last_success": null,
@@ -357603,8 +358228,8 @@
     {
       "last_success": null,
       "name": "Globoplay Novelas (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://170.82.202.31/Viva/index.m3u8"
     },
     {
@@ -357631,8 +358256,8 @@
     {
       "last_success": null,
       "name": "GNT (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://170.82.202.31/GNT/index.m3u8"
     },
     {
@@ -357645,15 +358270,15 @@
     {
       "last_success": null,
       "name": "Gold TV (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://streaming.softwarecreation.it/GoldTv/GoldTv/playlist.m3u8"
     },
     {
       "last_success": null,
       "name": "Gold TV Sat (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://streaming.softwarecreation.it/GoldTvSat/GoldTvSat/playlist.m3u8"
     },
     {
@@ -357785,8 +358410,8 @@
     {
       "last_success": null,
       "name": "Gulli Girl (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "https://live-3.otcnet.ru/GulliGirl/index.m3u8"
     },
     {
@@ -358086,8 +358711,8 @@
     {
       "last_success": null,
       "name": "Home TV",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://92.114.85.87:8010/play/a00h/index.m3u8"
     },
     {
@@ -358156,8 +358781,8 @@
     {
       "last_success": null,
       "name": "Hunat TV (480p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://59cba4d34b678.streamlock.net/canlitv/hunattv/playlist.m3u8"
     },
     {
@@ -359150,29 +359775,29 @@
     {
       "last_success": null,
       "name": "ITV1",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/itv1/index.m3u8"
     },
     {
       "last_success": null,
       "name": "ITV2",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/itv2/index.m3u8"
     },
     {
       "last_success": null,
       "name": "ITV3",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/itv3/index.m3u8"
     },
     {
       "last_success": null,
       "name": "ITV4",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/itv4/index.m3u8"
     },
     {
@@ -359227,8 +359852,8 @@
     {
       "last_success": null,
       "name": "JOJ Cinema",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "https://sktv.mxnticek.eu/new/stream.php?[redacted]"
     },
     {
@@ -359318,8 +359943,8 @@
     {
       "last_success": null,
       "name": "kabel eins Doku",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://178.27.12.3:9981/stream/channelid/1958526590?[redacted]"
     },
     {
@@ -359682,8 +360307,8 @@
     {
       "last_success": null,
       "name": "Kinopremyera (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/KINOPREMIERA/index.m3u8"
     },
     {
@@ -359696,8 +360321,8 @@
     {
       "last_success": null,
       "name": "Kinosvidanie (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/kinosvidanie/index.m3u8"
     },
     {
@@ -359857,8 +360482,8 @@
     {
       "last_success": "2026-11-15T10:18:05.363424+00:00",
       "name": "Kutonen",
-      "reason": "HLS manifest exceeds probe_bytes",
-      "status": "invalid",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://live-fi.tvkaista.net/kutonen/live.m3u8?[redacted]"
     },
     {
@@ -359997,8 +360622,8 @@
     {
       "last_success": null,
       "name": "La Hermandad Salsera (1080p)",
-      "reason": "HTTP 404",
-      "status": "http_error",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8"
     },
     {
@@ -360235,8 +360860,8 @@
     {
       "last_success": null,
       "name": "Lazio TV (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://streaming.softwarecreation.it/LazioTv/LazioTv/playlist.m3u8"
     },
     {
@@ -360998,16 +361623,9 @@
     {
       "last_success": null,
       "name": "MEGOGO Sport (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/megogo_sport/index.m3u8"
-    },
-    {
-      "last_success": "2026-11-19T10:56:27.021052+00:00",
-      "name": "Meltem TV",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
-      "url": "https://vhxyrsly.rocketcdn.com/meltemtv/playlist.m3u8"
     },
     {
       "last_success": null,
@@ -361117,8 +361735,8 @@
     {
       "last_success": null,
       "name": "Mir 24 (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/mir_24/index.m3u8"
     },
     {
@@ -361453,8 +362071,8 @@
     {
       "last_success": "2026-11-16T10:28:43.580282+00:00",
       "name": "Muzhskoy (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "status": "invalid",
       "url": "https://fonbet.mediacdn.ru/live/muzhskoi/playlist.m3u8"
     },
     {
@@ -361705,8 +362323,8 @@
     {
       "last_success": null,
       "name": "National Geographic Wild",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://92.114.85.87:8010/play/a005/index.m3u8"
     },
     {
@@ -361908,7 +362526,7 @@
     {
       "last_success": "2026-11-16T10:29:49.460071+00:00",
       "name": "News12 Hudson Valley",
-      "reason": "HTTP 404",
+      "reason": "HTTP 408",
       "status": "http_error",
       "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?[redacted]"
     },
@@ -361936,14 +362554,14 @@
     {
       "last_success": null,
       "name": "News12+ New Jersey",
-      "reason": "HTTP 404",
+      "reason": "HTTP 408",
       "status": "http_error",
       "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_NJ_A1/index_new.m3u8"
     },
     {
       "last_success": "2026-11-16T10:31:36.443249+00:00",
       "name": "News12+ New York",
-      "reason": "HTTP 408",
+      "reason": "HTTP 404",
       "status": "http_error",
       "url": "https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_NYC_A1/index_new.m3u8"
     },
@@ -362055,8 +362673,8 @@
     {
       "last_success": null,
       "name": "Nickelodeon",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://185.77.12.179:9981/stream/channelid/788918401?[redacted]"
     },
     {
@@ -362230,8 +362848,8 @@
     {
       "last_success": "2026-11-16T10:27:22.256164+00:00",
       "name": "Novorossiya TV (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://31.131.139.253:9002/novoros/index.m3u8"
     },
     {
@@ -362426,8 +363044,8 @@
     {
       "last_success": null,
       "name": "NTV",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/223012"
     },
     {
@@ -362461,8 +363079,8 @@
     {
       "last_success": null,
       "name": "NTV Mir (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/ntvmir_TV/index.m3u8"
     },
     {
@@ -362489,8 +363107,8 @@
     {
       "last_success": null,
       "name": "NYXT (1080p)",
-      "reason": "HTTP 502",
-      "status": "http_error",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://reflect-stream-bronxnet.cablecast.tv/live-10/live/live.m3u8"
     },
     {
@@ -362944,8 +363562,8 @@
     {
       "last_success": null,
       "name": "OTR",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://streaming.televizor-24-tochka.ru/live/12.m3u8"
     },
     {
@@ -363098,8 +363716,8 @@
     {
       "last_success": null,
       "name": "Parlamento de Andalucia (576p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://193.147.254.64:1935/realizacion1/realizacion1/playlist.m3u8"
     },
     {
@@ -363574,8 +364192,8 @@
     {
       "last_success": null,
       "name": "Power TV",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://92.114.85.87:8010/play/a00k/index.m3u8"
     },
     {
@@ -363693,8 +364311,8 @@
     {
       "last_success": null,
       "name": "ProSieben Maxx",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://178.27.12.3:9981/stream/channelid/1567530044?[redacted]"
     },
     {
@@ -364015,8 +364633,8 @@
     {
       "last_success": null,
       "name": "Radio Hit",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection interrupted",
+      "status": "network_error",
       "url": "http://hithd.camsh.orsk.ru/hls/hithd.m3u8"
     },
     {
@@ -364071,8 +364689,8 @@
     {
       "last_success": null,
       "name": "Radio Shanson (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://chanson-video.hostingradio.ru:8080/hls/chansonabr/live.m3u8"
     },
     {
@@ -364386,15 +365004,15 @@
     {
       "last_success": null,
       "name": "RBC Ⓨ",
-      "reason": "HTTP 429",
-      "status": "http_error",
+      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "status": "invalid",
       "url": "https://www.youtube.com/watch?[redacted]"
     },
     {
       "last_success": null,
       "name": "RBK-TV",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "http://92.50.128.180/utv/1358/index.m3u8"
     },
     {
@@ -364925,15 +365543,15 @@
     {
       "last_success": null,
       "name": "RSI La 1",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://190.2.155.162/RSI1/index.m3u8"
     },
     {
       "last_success": null,
       "name": "RSI La 2",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://190.2.155.162/RSI2/index.m3u8"
     },
     {
@@ -365247,8 +365865,8 @@
     {
       "last_success": null,
       "name": "RU.TV Kids (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://rutvkids.ru/live/efir/index.m3u8"
     },
     {
@@ -365373,8 +365991,8 @@
     {
       "last_success": null,
       "name": "S4C",
-      "reason": "HTTP 404",
-      "status": "http_error",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://live-uk.s4c-cdn.co.uk/out/v1/a0134f1fd5a2461b9422b574566d4442/live_uk.m3u8"
     },
     {
@@ -365597,8 +366215,8 @@
     {
       "last_success": null,
       "name": "SBT Nacional",
-      "reason": "HTTP 429",
-      "status": "http_error",
+      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "status": "invalid",
       "url": "https://www.youtube.com/watch?[redacted]"
     },
     {
@@ -365938,13 +366556,6 @@
       "url": "https://cdn.streammy.events/siris/playout/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-19T10:56:01.703347+00:00",
-      "name": "Skoraya pomoshch (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
-      "url": "https://cdn-dvr.ntv.ru/Skoraja_pomosh/index.m3u8"
-    },
-    {
       "last_success": "2026-11-16T10:27:06.248344+00:00",
       "name": "Sky Cinema Action",
       "reason": "HTTP 403",
@@ -366178,8 +366789,8 @@
     {
       "last_success": null,
       "name": "Smile TV",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://5f05e059699ae.streamlock.net/WEB_Smilik/ngrp:Smilik.stream-adaptive/playlist.m3u8"
     },
     {
@@ -366188,13 +366799,6 @@
       "reason": "HTTP 404",
       "status": "http_error",
       "url": "https://live2.snn.ir/hls/snn2_hd720/index.m3u8"
-    },
-    {
-      "last_success": "2026-11-19T10:56:09.163293+00:00",
-      "name": "Sochi24 (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
-      "url": "http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8"
     },
     {
       "last_success": null,
@@ -366745,8 +367349,8 @@
     {
       "last_success": null,
       "name": "Sun RTV (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://tr.socialsmart.tv/suntv/bant1/chunks.m3u8"
     },
     {
@@ -367032,8 +367636,8 @@
     {
       "last_success": null,
       "name": "T9",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://streaming.softwarecreation.it/tnove/tnove/playlist.m3u8"
     },
     {
@@ -367415,13 +368019,6 @@
       "url": "https://600f07e114306.streamlock.net/TT24_TELETUTTO/livestream/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-17T11:22:15.824198+00:00",
-      "name": "Tele UV",
-      "reason": "HTTP 404",
-      "status": "http_error",
-      "url": "https://58fe359775f31.streamlock.net/tvuv/myStream/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "Tele Venezia",
       "reason": "HTTP 404",
@@ -367522,8 +368119,8 @@
     {
       "last_success": null,
       "name": "Telecanal (720p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "http://45.232.210.1:8029/play/a00s/index.m3u8"
     },
     {
@@ -368313,8 +368910,8 @@
     {
       "last_success": null,
       "name": "TiJi (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "https://live-3.otcnet.ru/Tiji/index.m3u8"
     },
     {
@@ -368537,8 +369134,8 @@
     {
       "last_success": null,
       "name": "TNT4 (576p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://176.118.197.101/TNT4/index.m3u8"
     },
     {
@@ -368614,8 +369211,8 @@
     {
       "last_success": null,
       "name": "Torba TV (720p) [Not 24/7]",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://59cba4d34b678.streamlock.net/canlitv/torbatv/playlist.m3u8"
     },
     {
@@ -368684,8 +369281,8 @@
     {
       "last_success": null,
       "name": "Travel & Food TV (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://nrpus.bozztv.com/36bay2/gusa-moviemagictv/index.m3u8"
     },
     {
@@ -368817,7 +369414,7 @@
     {
       "last_success": null,
       "name": "TRT Diyanet Cocuk (720p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "reason": "HLS manifest exceeds probe_bytes",
       "status": "invalid",
       "url": "https://tv-trtdiyanetcocuk.medya.trt.com.tr/master.m3u8"
     },
@@ -368997,13 +369594,6 @@
       "url": "https://edge1.socialsmart.tv/tv52/bant1/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-15T10:07:17.150211+00:00",
-      "name": "TV A Critica (1080p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
-      "url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "TV A Folha (720p)",
       "reason": "HTTP 404",
@@ -369090,8 +369680,8 @@
     {
       "last_success": null,
       "name": "TV BUAP (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://tvenvivo.buap.mx/livestream/stream/index.m3u8"
     },
     {
@@ -369174,8 +369764,8 @@
     {
       "last_success": "2026-11-19T10:53:18.245453+00:00",
       "name": "TV Comunitaria",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "https://5b7f3c45ab7c2.streamlock.net/8008/smil:8008.smil/playlist.m3u8?[redacted]"
     },
     {
@@ -369314,8 +369904,8 @@
     {
       "last_success": null,
       "name": "TV Evangelizar (480p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://5f593df7851db.streamlock.net/evangelizar/tv/playlist.m3u8"
     },
     {
@@ -369641,13 +370231,6 @@
       "url": "https://stream2.live-stream.ro/WebRTCApp/streams/118334672595255049029831.m3u8"
     },
     {
-      "last_success": "2026-11-10T15:08:28.646269+00:00",
-      "name": "TV Sul Bahia (320p)",
-      "reason": "HTTP 404",
-      "status": "http_error",
-      "url": "https://live.cdn.upx.com/00046/myStream.sdp/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "TV Sul de Minas (720p)",
       "reason": "HTTP 404",
@@ -369874,8 +370457,8 @@
     {
       "last_success": null,
       "name": "TV5Monde Asia (576p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://27.131.164.187:8080/TV5_Monde/index.m3u8"
     },
     {
@@ -369895,8 +370478,8 @@
     {
       "last_success": null,
       "name": "TV5Monde Europe (1080p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://45.14.84.37/tv5monde/index.m3u8"
     },
     {
@@ -370161,8 +370744,8 @@
     {
       "last_success": null,
       "name": "TVM Cordoba (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "https://5924d3ad0efcf.streamlock.net/cordoba/cordobalive/playlist.m3u8"
     },
     {
@@ -370285,13 +370868,6 @@
       "url": "https://5ca3e84a76d30.streamlock.net/gpacifico3/obregon.smil/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-10T15:14:08.593392+00:00",
-      "name": "TVR (360p)",
-      "reason": "Request timed out",
-      "status": "timeout",
-      "url": "https://5924d3ad0efcf.streamlock.net/riojatv/riojatvlive/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "TVR (720p)",
       "reason": "HTTP 404",
@@ -370343,8 +370919,8 @@
     {
       "last_success": null,
       "name": "TVS",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://92.114.85.87:8010/play/a00e/index.m3u8"
     },
     {
@@ -370364,8 +370940,8 @@
     {
       "last_success": null,
       "name": "TVSN Beauty (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 504",
+      "status": "http_error",
       "url": "https://live-tvsn.simplestreamcdn.com/live12/tvsnbeauty/bitrate1.isml/.m3u8"
     },
     {
@@ -370504,8 +371080,8 @@
     {
       "last_success": null,
       "name": "UDAR (1080p)",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 404",
+      "status": "http_error",
       "url": "http://5.188.159.128:8070/udar/index.m3u8"
     },
     {
@@ -370609,8 +371185,8 @@
     {
       "last_success": null,
       "name": "Uppera Balkan (720p)",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://89.187.168.245:8080/live/sUPPERchannel2/index.m3u8"
     },
     {
@@ -370875,8 +371451,8 @@
     {
       "last_success": null,
       "name": "Vera 24",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Connection or DNS/TLS failure",
+      "status": "network_error",
       "url": "https://5f05e059699ae.streamlock.net/WEB_Vera24/ngrp:Vera24.stream-adaptive/playlist.m3u8"
     },
     {
@@ -371160,13 +371736,6 @@
       "url": "https://5cd03f21c7193.streamlock.net/volgyhidtv/mediakft/playlist.m3u8"
     },
     {
-      "last_success": "2026-11-19T10:56:06.775025+00:00",
-      "name": "Volleyball (1080p)",
-      "reason": "Empty, HTML/JSON or unrecognized stream response",
-      "status": "invalid",
-      "url": "https://fonbet.mediacdn.ru/live/volleyball/playlist.m3u8"
-    },
-    {
       "last_success": null,
       "name": "Volver (576p)",
       "reason": "HTTP 403",
@@ -371407,15 +371976,15 @@
     {
       "last_success": "2026-11-17T11:28:08.323369+00:00",
       "name": "Whiplash Cinema",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "status": "invalid",
       "url": "https://cdn.whiplash.cc/whiplash-cinema/index.m3u8"
     },
     {
       "last_success": "2026-11-17T11:26:53.320152+00:00",
       "name": "Whiplash II",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Empty, HTML/JSON or unrecognized stream response",
+      "status": "invalid",
       "url": "https://cdn.whiplash.cc/whiplash-2/index.m3u8"
     },
     {
@@ -371736,8 +372305,8 @@
     {
       "last_success": null,
       "name": "ZDFneo",
-      "reason": "Connection or DNS/TLS failure",
-      "status": "network_error",
+      "reason": "Request timed out",
+      "status": "timeout",
       "url": "http://178.27.12.3:9981/stream/channelid/1351813628?[redacted]"
     },
     {
@@ -371883,8 +372452,8 @@
     {
       "last_success": null,
       "name": "ČT sport Plus",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "Malformed DASH manifest",
+      "status": "invalid",
       "url": "https://sktv.mxnticek.eu/new/stream.php?[redacted]"
     },
     {
@@ -371911,8 +372480,8 @@
     {
       "last_success": null,
       "name": "Пятый канал Ⓢ",
-      "reason": "Request timed out",
-      "status": "timeout",
+      "reason": "HTTP 403",
+      "status": "restricted",
       "url": "https://streaming.televizor-24-tochka.ru/live/8.m3u8"
     },
     {
