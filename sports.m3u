@@ -1,6 +1,10 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/SandObserver/live-tv-guide/main/output/iranintl.xml,https://epg.pw/xmltv/epg_US.xml,https://epg.pw/xmltv/epg_GB.xml,https://epg.pw/xmltv/epg_DE.xml"
+#EXTINF:-1 tvg-id="30AGolfKingdom.us@SD" tvg-name="30A Golf Kingdom" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/Lv53nh4.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="720p",30A Golf Kingdom
+https://30a-tv.com/feeds/vidaa/golf.m3u8
 #EXTINF:-1 tvg-id="ASpor.tr@SD" tvg-logo="https://i.imgur.com/ZhkZzLf.png" tvg-country="tr" tvg-language="tr" group-title="ورزشی",A Spor (1080p)
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/aspor/aspor.m3u8
+#EXTINF:-1 tvg-id="ACCDigitalNetwork.us@SD" tvg-name="ACC Digital Network" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/V6Kaqha.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",ACC Digital Network
+https://raycom-accdn-firetv.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="ACISportTV.it@SD" tvg-logo="https://i.imgur.com/U8cHMOt.png" tvg-country="it" tvg-language="ita" group-title="ورزشی",ACI Sport TV (1080p)
 https://webstream.multistream.it/memfs/e2cb3629-c1a2-495b-b43a-9eb386f04ed8.m3u8
 #EXTINF:-1 tvg-id="AmericanNinjaWarrior.us@SD" tvg-logo="https://raw.githubusercontent.com/RoqueDJ/iptv-svg/main/1792421696158.png" tvg-country="us" tvg-language="en" group-title="ورزشی",American Ninja Warrior (1080p)
@@ -26,6 +30,8 @@ http://57.129.0.61:1990/stream/117/index.m3u8
 https://tvsen6.aynaott.com/beinsports/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="beINSPORTSXTRA.us@SD" tvg-logo="https://i.ibb.co/HT49GPmB/XTRA-2.png" tvg-country="us" tvg-language="en",beIN SPORTS XTRA (1080p)
 https://bein-xtra-bein.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="beINSPORTSXTRAenEspanol.us@SD" tvg-name="beIN SPORTS XTRA en Espanol" tvg-country="us" tvg-language="es" tvg-logo="https://i.imgur.com/V562tpO.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",beIN SPORTS XTRA en Espanol
+https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8
 #EXTINF:-1 tvg-id="BicolorPlus.pe@SD" tvg-logo="https://img-evg3.tv360.bitel.com.pe/peru-image/2026/09/24/00/1790182833200/6a8e1eb7f5d6_640_360.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",Bicolor+ (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/bicolorfree_abr/playlist.m3u8
 #EXTINF:-1 tvg-id="BicolorPlusPremium.pe@SD" tvg-logo="https://img-evg3.tv360.bitel.com.pe/peru-image/2026/09/24/00/1790183086681/1dff7002a22a_640_360.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",Bicolor+ Premium
@@ -34,8 +40,10 @@ https://live-evg10.tv360.bitel.com.pe/bitel/bicolorpremium_abr/bitel/bicolorprem
 https://live-evg10.tv360.bitel.com.pe/bitel/bicolorpremium2_abr/playlist.m3u8
 #EXTINF:-1 tvg-id="BicolorPlusPremium3.pe@SD" tvg-logo="https://img-evg3.tv360.bitel.com.pe/peru-image/2026/09/24/03/1790194198636/d91910da3254_640_360.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",Bicolor+ Premium 3 (720p)
 https://live-evg10.tv360.bitel.com.pe/bitel/bicolorpremium3_abr/playlist.m3u8
-#EXTINF:-1 tvg-id="BoksTV.ru@SD" tvg-logo="https://i.imgur.com/R1UjyfX.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Boks TV (576p)
-http://stream.mcquack.net/154/index.m3u8
+#EXTINF:-1 tvg-id="BilliardTV.us@SD" tvg-name="Billiard TV" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/BZijfKh.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Billiard TV
+https://pb-wm04vonaerv0k.akamaized.net/billi.m3u8
+#EXTINF:-1 tvg-id="Canal11.pt" tvg-name="Canal 11" tvg-country="pt" tvg-language="pt" tvg-logo="https://i.imgur.com/mbQCGm5.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Canal 11
+https://dy4isoelz3s0x.cloudfront.net/0_hd.m3u8
 #EXTINF:-1 tvg-id="CanalShowsport.ar@SD" tvg-logo="https://i.imgur.com/0L9tW3Z.png" tvg-country="ar" tvg-language="es" group-title="ورزشی",Canal Showsport (720p)
 https://livestream.lumpentv.com.ar/hls/lumpen.m3u8
 #EXTINF:-1 tvg-id="CanalPlusSport.fr@SD" tvg-logo="https://i.imgur.com/EOXnU15.png" tvg-country="fr" tvg-language="fr" group-title="ورزشی",Canal+ Sport (1080p)
@@ -96,6 +104,8 @@ http://168.228.44.241:9997/play/a06p/index.m3u8
 http://181.78.211.244:8005/play/a08q/index.m3u8
 #EXTINF:-1 tvg-id="ESPNPremium.ar@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/ESPN_Premium_logo.svg/960px-ESPN_Premium_logo.svg.png" tvg-country="ar" tvg-language="es" group-title="ورزشی",ESPN Premium (1080p)
 http://158.172.155.130:8000/play/a0ao/index.m3u8
+#EXTINF:-1 tvg-id="ESPN8TheOcho.us@ESPN8TheOchoHD" tvg-name="ESPN8: The Ocho" tvg-country="us" tvg-language="en" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-dark/espn_8_the_ocho_bw.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",ESPN8: The Ocho
+https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="ESPNU.us@HD" tvg-logo="https://i.imgur.com/HiBrysh.png" tvg-country="us" tvg-language="en",ESPNU HD (720p)
 http://85.237.89.160:9590/usa-s/ESPN-U-HD/index.m3u8
 #EXTINF:-1 tvg-id="Esport3.es@Originals" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Esport3.svg/960px-Esport3.svg.png" tvg-country="es" tvg-language="cat" group-title="ورزشی",Esport3 (1080p)
@@ -176,8 +186,10 @@ https://cffda8ff.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3
 https://nosignal1.antenaplay.ro/hls/fightbox-hd/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FightBox.nl@Poland" tvg-logo="https://i.imgur.com/mRsnztA.png" tvg-country="nl" tvg-language="pl",FightBox Poland (576i)
 http://92.114.85.87:8003/play/a00b/index.m3u8
+#EXTINF:-1 tvg-id="FloHockey.us@HD" tvg-name="FloHockey" tvg-country="us" tvg-language="en" tvg-logo="https://images.fubo.tv/channel-config-ui/station-logos/on-dark/flohockey-white.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",FloHockey
+https://amg02278-amg02278c2-flosports-worldwide-9916.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="FONTV.ru@HD" tvg-logo="https://play-lh.googleusercontent.com/J0YeRB884koVfecR2mp43Y2mbNtRVTSSOiq2U1gkITJ9IxzIM4VA71Rqbh3UlREI4mCnlxGHm4wxoujt5ZH1AQ" tvg-country="ru" tvg-language="rus" group-title="ورزشی",FON TV (1080p)
-https://fontvlive.mediacdn.ru/stream/fontv/playlist.m3u8
+https://fonstreams.mediacdn.ru/stream/fontvclear/playlist.m3u8
 #EXTINF:-1 tvg-id="Formula1AntenaPlay.ro@SD" tvg-logo="https://assets.antenaplay.ro/2024/02/23/XUKfJwir4MxNeP4nHtG7.png" tvg-country="ro" tvg-language="en" group-title="ورزشی",Formula 1 AntenaPlay
 https://stream1.antenaplay.ro/promo/formula-1-las-vegas-20-2211/chunklist.m3u8
 #EXTINF:-1 tvg-id="Formula2AntenaPlay.ro@SD" tvg-logo="https://assets.antenaplay.ro/2024/02/28/YW9VML2K4hpFUKMHme97.png" tvg-country="ro" tvg-language="ron" group-title="ورزشی",Formula 2 AntenaPlay
@@ -194,6 +206,8 @@ http://85.237.89.160:9590/usa-s/FOX-SPORTS-1/index.m3u8
 https://1593604785.rsc.cdn77.org/FTF/FTF_SCTE.m3u8
 #EXTINF:-1 tvg-id="FuboSportsNetwork.us@HD" tvg-logo="https://i.imgur.com/qFNRJLb.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Fubo Sports Network (1080p)
 http://107.167.16.138/fubosportsnetwork/index.m3u8?token=test
+#EXTINF:-1 tvg-id="FUELTV.pt@AU" tvg-name="FUEL TV (AU)" tvg-country="pt" tvg-language="en" tvg-logo="https://i.imgur.com/I8mviBy.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",FUEL TV
+https://amg01074-fueltv-fueltvnz-samsungnz-i8ani.amagi.tv/playlist/amg01074-fueltv-fueltvnz-samsungnz/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="FUELTV.pt@EMEA" tvg-logo="https://i.imgur.com/I8mviBy.png" tvg-country="pt" tvg-language="en",FUEL TV (1080p)
 https://amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv/hls/amagi_hls_data_rakutenAA-fueltvemeaen/CDN/master.m3u8
 #EXTINF:-1 tvg-name="Glory Kickboxing Poland (720p)" tvg-logo="https://i.imgur.com/tS7Ub7i.png" tvg-id="GloryKickboxing.us" tvg-chno="60" tvg-country="us" group-title="ورزشی" tvg-language="en",Glory Kickboxing (720p)
@@ -206,6 +220,8 @@ https://dash4.antik.sk/live/test_golf_channel/playlist.m3u8
 https://tvsen6.aynaott.com/golfchannel/index.m3u8
 #EXTINF:-1 tvg-id="GolfChannelLatinAmerica.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golf_Channel_Logo_2018.png/960px-Golf_Channel_Logo_2018.png" tvg-country="us" tvg-language="es" group-title="ورزشی",Golf Channel Latin America (1080p)
 http://15.204.246.24:8080/GolfChannelHD/index.m3u8
+#EXTINF:-1 tvg-id="HBCUGOSports.us@SD" tvg-name="HBCU-GO Sports" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/TY6sx5W.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="720p",HBCU-GO Sports
+https://a-cdn.klowdtv.com/live3/hbcugo_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="HorseTV.it@SD" tvg-logo="https://i.imgur.com/nK4UUX4.png" tvg-country="it" tvg-language="ita" group-title="ورزشی",Horse TV (576p)
 https://cdn78-at.azotosolutions.com/cdnedge39/Canale4/master.m3u8
 #EXTINF:-1 tvg-id="HTSporTV.tr@SD" tvg-logo="https://www.htspor.com/images/manifest/social-share-logo.png" tvg-country="tr" tvg-language="tr" group-title="ورزشی",HTSpor TV (1080p)
@@ -218,11 +234,15 @@ https://amg00861-amg00861c6-rlaxx-uk-3951.playouts.now.amagi.tv/playlist.m3u8
 http://176.118.197.101/KHL/index.m3u8
 #EXTINF:-1 tvg-id="KHLPrime.ru@SD" tvg-logo="https://i.imgur.com/pwxT0ON.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",KHL Prime (1080p)
 https://fs.uplink.kz/khl_prime/mono.m3u8?token=onlinetv
+#EXTINF:-1 tvg-id="KozoomTV.fr@SD" tvg-name="Kozoom TV" tvg-country="fr" tvg-language="fr" tvg-logo="https://i.imgur.com/M1Ee79b.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Kozoom TV
+https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/fdd6f243-f971-4a1a-9510-97ac01d6b37f/manifest.m3u8
 #EXTINF:-1 tvg-id="LEquipe.fr@SD" tvg-logo="https://i.imgur.com/t35zhM9.png" tvg-country="fr" tvg-language="fr" group-title="ورزشی",L'Equipe (1080p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
 https://dq37unyetkpcz.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-m04j89j7k5gtp/LEquipe_FR.m3u8
 #EXTINF:-1 tvg-id="L1Max.pe@SD" tvg-logo="https://i.imgur.com/2fziU2B.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",L1 Max (1080p)
 http://190.93.224.42/LIGA-1-MAX/index.m3u8
+#EXTINF:-1 tvg-id="LacrosseTV.us@SD" tvg-name="Lacrosse TV" tvg-country="us" tvg-language="en" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_m_xSJFydxZ9QBU-85OuchjmzS0Bo0_Tukmk7to8hBfyl8=s512-c-k-c0x00ffffff-no-rj" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="720p",Lacrosse TV
+https://a-cdn.klowdtv.com/live2/lsn_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="LazioStyleChannel.it@HD" tvg-logo="https://i.imgur.com/vDB8HFq.png" tvg-country="it" tvg-language="ita" group-title="ورزشی",Lazio Style Channel (720p)
 https://distribution.sportitalialive.it/origin/laziostyle_abr/playlist.m3u8
 #EXTINF:-1 tvg-name="M4 Sport" tvg-logo="https://nb1.hu/uploads/news/3/31023.jpg" tvg-id="M4Sport.hu" tvg-chno="4" tvg-country="hu" group-title="ورزشی" tvg-language="hun",M4 Sport
@@ -231,8 +251,6 @@ http://141.94.193.53:80/M4_Sport_HD/index.m3u8
 https://srvx1.selftv.video/dmchannel/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MarqueeSportsNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Marquee_Sports_Network_Logo.svg/960px-Marquee_Sports_Network_Logo.svg.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Marquee Sports Network (576p)
 https://tvsen6.aynaott.com/MarqueeSportsNetwork/index.m3u8
-#EXTINF:-1 tvg-id="MatchIgra.ru@SD" tvg-logo="https://i.imgur.com/5XWpF19.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Match! Igra (576p)
-http://stream.mcquack.net/188/index.m3u8
 #EXTINF:-1 tvg-id="MatchPlaneta.ru@SD" tvg-logo="https://i.imgur.com/vhyMb9D.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Match! Planeta (576p)
 https://fs.uplink.kz/match_planeta/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-id="MatchPremier.ru@SD" tvg-logo="https://avatars.mds.yandex.net/i?id=0e4bdacd44c114798f7334dae02683d5b0336bd2-13079178-images-thumbs&n=13" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Match! Premier (576p)
@@ -263,14 +281,20 @@ http://23.237.104.106:8080/USA_NBA/index.m3u8
 https://d4whmvwm0rdvi.cloudfront.net/10007/99993008/hls/master.m3u8?ads.xumo_channelId=99993008
 #EXTINF:-1 tvg-id="NFLNetwork.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/NFL_Network_logo.svg/960px-NFL_Network_logo.svg.png" tvg-country="us" tvg-language="en" group-title="ورزشی",NFL Network (576p)
 https://tvsen6.aynaott.com/nfl/index.m3u8
-#EXTINF:-1 tvg-id="ORFSportPlus.at@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ORF_Sport%2B.svg/960px-ORF_Sport%2B.svg.png" tvg-country="at" tvg-language="de" group-title="ورزشی",ORF Sport+
-https://test02.mdn.ors.at/orf/orfs/qxa/manifest.m3u8
+#EXTINF:-1 tvg-id="NHLNetwork.us@SD" tvg-name="NHL Network" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/UNZ8bef.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",NHL Network
+https://nhl-firetv.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="NHRATV.us@SD" tvg-name="NHRA TV" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/jZgcm4k.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",NHRA TV
+https://d265y4sk8257lt.cloudfront.net/nh.m3u8
 #EXTINF:-1 tvg-id="OvacionTV.pe@SD" tvg-logo="https://i.imgur.com/7Xndgxk.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",Ovacion TV (720p)
 http://cdn2.ujjina.com:1935/iptvovacion1/liveovacion1tv/playlist.m3u8
+#EXTINF:-1 tvg-id="Overtime.us@SD" tvg-name="Overtime" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/9S9k4IK.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Overtime
+https://d1a8aq6t30gkqj.cloudfront.net/v1/amc_overtime_1/samsungheadend_us/latest/main/hls/playlist_hd.m3u8
 #EXTINF:-1 tvg-id="PersianaFight.fr@HD" tvg-logo="" group-title="ورزشی" tvg-country="fr" tvg-language="fa",Persiana Fight
 https://fighthls.persiana.live/hls/stream.m3u8
 #EXTINF:-1 tvg-name="PFL MMA (720p)" tvg-logo="https://provider-static.plex.tv/epg/cms/production/96dd0531-b500-4bd4-93ca-763cbf46defe/1500x1000_PFL_SHIELD_DARK_BG_-_Allie_Dinsmore.png" tvg-id="PFLMMA.us" tvg-chno="84" tvg-country="us" group-title="ورزشی" tvg-language="en",PFL MMA (720p)
 https://jmp2.uk/plu-64f6180130ab3300083d896b.m3u8
+#EXTINF:-1 tvg-id="PGATour.us@SD" tvg-name="PGA Tour" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/J0TY9dG.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",PGA Tour
+https://d11k1mnrgfposz.cloudfront.net/playlist.m3u8
 #EXTINF:-1 tvg-id="PrimaSportCzechia.cz@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/69/Prima_Sport_%28Czech_Republic%29.svg/revision/latest?cb=20260728085614" tvg-country="cz" tvg-language="cze" group-title="ورزشی",Prima Sport Czechia
 http://rpprod.hbbtv.cdn.cra.cz:8080/hbbTV/prima_sport/live_mq?offsetSeconds=0
 #EXTINF:-1 tvg-id="PrimaSportPPV1.ro@SD" tvg-logo="https://www.primaplay.ro/uploads/thumb/publisher/b05ce5d64523401d0fc3225c5b629019.png" tvg-country="ro" tvg-language="ron" group-title="ورزشی",Prima Sport PPV 1
@@ -316,6 +340,8 @@ https://0b73ace69ebb45eaa249bb87837cb958.mediatailor.us-west-2.amazonaws.com/v1/
 https://64b16f23efbee.streamlock.net/rete8sport/rete8sport/playlist.m3u8
 #EXTINF:-1 tvg-id="REVNAction.us@SD" tvg-logo="https://i.imgur.com/xsm8mMd.png" tvg-country="us" tvg-language="en" group-title="ورزشی",REV'N Action (720p)
 https://freecast-lukentvlive.vgcdn.net/out/v1/a4f31f297fc5440f814bd2cffd77e689/index.m3u8
+#EXTINF:-1 tvg-id="RightNowTV.us@SD" tvg-name="Right Now TV" tvg-country="us" tvg-language="en" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8rWZ8kofdRtH5CJ-BobD1pdpwVAq8COHt6Q&s" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="720p",Right Now TV
+https://a-cdn.klowdtv.com/live2/rightnowtv_720p/playlist.m3u8
 #EXTINF:-1 tvg-id="RussianExtremeUltra.ru@SD" tvg-logo="https://i.imgur.com/Dk8VbAc.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Russian Extreme Ultra (1440p)
 http://46.53.200.153:7777/play/test_krask1/index.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="SkyRacing1.au@SD" tvg-logo="https://i.imgur.com/Hf0EiaW.png" tvg-country="au" tvg-language="en",Sky Racing 1 (720p)
@@ -336,9 +362,6 @@ http://88.212.7.14/live/spiler1/index.m3u8
 http://88.212.7.14/live/spiler2/index.m3u8
 #EXTINF:-1 tvg-name="Sport1" tvg-logo="https://www.tvmustra.hu/logok/csatikon/sport1.gif" tvg-id="Sport1.hu" tvg-chno="18" tvg-country="hu" group-title="ورزشی" tvg-language="hun",Sport 1
 http://141.94.193.53:80/Sport_1_HD/index.m3u8
-#EXTINF:-1 tvg-id="Sport1.ua@SD" tvg-logo="https://i.imgur.com/Zjb8awW.png" tvg-country="ua" tvg-language="ukr" group-title="ورزشی",Sport 1 (576p)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
-http://stream.mcquack.net/391/index.m3u8
 #EXTINF:-1 tvg-name="Sport2" tvg-logo="https://www.tvmustra.hu/logok/csatikon/sport2.gif" tvg-id="Sport2.hu" tvg-chno="19" tvg-country="hu" group-title="ورزشی" tvg-language="hun",Sport 2
 http://141.94.193.53:80/Sport_2_HD/index.m3u8
 #EXTINF:-1 tvg-id="SportTotalFM.ro@SD" tvg-logo="https://sptfm.ro/wp-content/uploads/2021/05/logo-sport-total-fm-01.png" tvg-country="ro" tvg-language="ron" group-title="ورزشی",Sport Total FM
@@ -357,12 +380,18 @@ https://sportsitalia-samsungitaly.amagi.tv/playlist.m3u8
 https://edge-001.streamup.eu/sportitalia/sisolocalcio_abr/playlist.m3u8
 #EXTINF:-1 tvg-id="Sportivnyy.ru@SD" tvg-logo="https://i.imgur.com/ujS6mMo.png" tvg-country="ru" tvg-language="rus" group-title="ورزشی",Sportivnyy (1080p)
 https://live-3.otcnet.ru/sportivny/index.m3u8
+#EXTINF:-1 tvg-id="SportsGrid.us@SD" tvg-name="SportsGrid" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/ulGKX30.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",SportsGrid
+https://sportsgrid-tribal.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="SqalaTV.pe@SD" tvg-logo="https://i.imgur.com/DJ05m8s.png" tvg-country="pe" tvg-language="es" group-title="ورزشی",Sqala TV (720p)
 https://live-evg8.tv360.bitel.com.pe/bitel/studiotvhuanta/playlist.m3u8
+#EXTINF:-1 tvg-id="Stadium.us@SD" tvg-name="Stadium" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/6ae9E8d.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Stadium
+https://wurl120sports.global.transmit.live/hls/679a907dce42a042c23ace37/v1/stadium_gracenote/samsung_us/latest/main/hls/playlist.m3u8
 #EXTINF:-1 tvg-name="Strongman Champions League (720p)" tvg-logo="https://images-0.rakuten.tv/storage/global-live-channel/translation/artwork/30ccc088-dca7-4458-ad5a-328fef06e1ca-width200-quality90.png" tvg-id="StrongmanChampionsLeague.uk" tvg-chno="122" tvg-country="uk" group-title="ورزشی" tvg-language="en",Strongman Champions League (720p)
 https://rightsboosterltd-scl-1-be.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-name="Suspilne Sport" tvg-logo="https://i.imgur.com/16IhU0M.png" tvg-id="SuspilneSport.ua" tvg-chno="5" tvg-country="ua" group-title="ورزشی" tvg-language="ukr",Suspilne. Sport
 http://cdnua05.hls.tv/934/hls/8743361621b245838bee193c9ec28322/4856/stream.m3u8
+#EXTINF:-1 tvg-id="SwerveCombat.us@SD" tvg-name="Swerve Combat" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/eFZh7aG.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Swerve Combat
+https://linear-253.frequency.stream/mt/roku/253/hls/master/playlist.m3u8
 #EXTINF:-1 group-title="ورزشی" tvg-id="talkSPORT.uk@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/en/9/9d/Talksport_logo.png" tvg-country="uk" tvg-language="en",talkSPORT (1080p)
 https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8
 #EXTINF:-1 tvg-id="TennisChannel.us@SD" tvg-logo="https://i.imgur.com/tsljAnY.png" tvg-country="us" tvg-language="en" group-title="ورزشی",Tennis Channel (1080p)
@@ -429,6 +458,14 @@ https://d36r8jifhgsk5j.cloudfront.net/Willow_TV1080p.m3u8
 http://138.121.15.230:9002/WIN-SPORT/index.m3u8
 #EXTINF:-1 tvg-id="WinPlusFutbol.co@SD" tvg-logo="https://i.imgur.com/0UN87vB.png" tvg-country="co" tvg-language="es" group-title="ورزشی",Win+ Futbol (1080p)
 http://181.78.12.119:16123/play/ch19/index.m3u8
+#EXTINF:-1 tvg-id="WomensSportsNetwork.us@SD" tvg-name="Women's Sports Network" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/rhIwUcQ.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",Women's Sports Network
+https://d39accvx65hq9o.cloudfront.net/Womens_Sports_Network.m3u8
+#EXTINF:-1 tvg-id="WorldofFreesports.de@Poland" tvg-name="World of Freesports" tvg-country="de" tvg-language="de" tvg-logo="https://i.imgur.com/lta5Mog.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",World of Freesports
+https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-mainstreammediafreesportsintl-rakuten/CDN/master.m3u8
+#EXTINF:-1 tvg-id="WorldofFreesports.de@SD" tvg-name="World of Freesports" tvg-country="de" tvg-language="de" tvg-logo="https://i.imgur.com/lta5Mog.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",World of Freesports
+https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="WorldPokerTour.us@UK" tvg-name="World Poker Tour (UK)" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/98kLMjj.png" group-title="ورزشی" x-tier="community" x-status="verified" x-quality="1080p",World Poker Tour
+https://amg00477-samsungelectron-worldpokertour-samsunguk-81igb.amagi.tv/playlist/amg00477-samsungelectron-worldpokertour-samsunguk/playlist.m3u8
 #EXTINF:-1 tvg-name="World Poker Tour Poland (1080p)" tvg-logo="https://i.imgur.com/98kLMjj.png" tvg-id="WorldPokerTour.us" tvg-chno="186" tvg-country="us" group-title="ورزشی" tvg-language="en",World Poker Tour (1080p)
 https://d39g1vxj2ef6in.cloudfront.net/v1/master/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-rakuten-stitched/playlist.m3u8?ads.xumo_channelId=88883102
 #EXTINF:-1 group-title="ورزشی" tvg-id="XFCTV.us@SD" tvg-logo="https://i.imgur.com/LcfzmG0.png" tvg-country="us" tvg-language="en",XFC TV (720p)
