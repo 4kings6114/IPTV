@@ -8,6 +8,7 @@ from pathlib import Path
 from . import catalog as g
 from .config import Settings, Source, country_code, http_url
 from .m3u import Channel, base_name, country_from_tvg, parse, stable_id
+from .source_identity import normalize_source_identity
 
 _LANGUAGE_ALIASES = {
     "persian": "fa",
@@ -249,7 +250,7 @@ def prepare_channels(
     names, urls = excludes
     result = []
     for original in parse(text, source.url, manual):
-        channel = original
+        channel = original if manual else normalize_source_identity(original)
         override = override_for(channel, overrides)
         if override.get("disabled"):
             continue

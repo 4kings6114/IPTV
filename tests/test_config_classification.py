@@ -20,7 +20,18 @@ class ConfigTests(unittest.TestCase):
     def test_repository_config_is_valid(self):
         config = load_settings(ROOT / "config.json")
         self.assertEqual(len(config.allowed_countries), 35)
-        self.assertEqual(len(config.sources()), 37)
+        self.assertEqual(len(config.sources()), 43)
+        urls = [source.url for source in config.sources()]
+        self.assertEqual(len(urls), len(set(urls)))
+        for expected in (
+            "shayanline/iptv-iran/main/playlists/iran-all-streams.m3u",
+            "L834-57/iptv-de/main/de-public.m3u",
+            "L834-57/iptv-de/main/intl.m3u",
+            "nexonic-technologies/nexonic-iptv/main/playlists/verified.m3u",
+            "dearbulut.github.io/iptv/playlists/country/ir.m3u",
+            "dearbulut.github.io/iptv/playlists/language/fas.m3u",
+        ):
+            self.assertEqual(sum(expected in url for url in urls), 1)
         self.assertEqual(config.failure_threshold, 2)
         self.assertEqual(config.max_drop_ratio, 0.3)
 
