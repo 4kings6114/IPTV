@@ -107,6 +107,8 @@ https://ncdn.telewebion.ir/noor/live/playlist.m3u8
 https://stream.novin.live/hls/playlist.m3u8
 #EXTINF:-1 tvg-id="OmideIranTV.us@SD" tvg-logo="https://i.imgur.com/CeMf68L.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Omid e Iran TV
 https://oitnhls.wns.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="OmidJavedan.us" tvg-name="Omid Javedan" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/OmidJavedan.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="us",Omid Javedan
+https://livestream.5centscdn.com/pwocchurchweb1/cebac1e921182acff008ab1222f0c916.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="ParsTV.us" tvg-name="Pars TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/ParsTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="us",Pars TV
 https://livestream.5centscdn.com/parstvtvweb1/e8ac8f595b3003ea3d22178c05c67593.sdp/playlist.m3u8
 #EXTINF:-1 tvg-id="PayameArameshTV.us@SD" tvg-logo="https://i.imgur.com/WaPr0t0.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Payame Aramesh TV (720p)
