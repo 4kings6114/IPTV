@@ -145,6 +145,8 @@ https://stream.ottlive.co.in/utvtamil/index.m3u8
 https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="YRFMusic.in" tvg-country="in",YRF Music (1080p)
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
+#EXTINF:-1 group-title="موزیک هندی" tvg-id="ZBMusic.in" tvg-country="in",ZB Music (720p)
+https://server.zillarbarta.com/zbmusic/index.m3u8
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="Zoom.in" tvg-country="in",Zoom (720p)
 https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="Zoom.in" tvg-country="in" tvg-name="Zoom (576p) [جایگزین]",Zoom (576p) [جایگزین]

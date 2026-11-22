@@ -96,7 +96,7 @@ https://ncdn.telewebion.ir/mahabad/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MakranTV.ir" tvg-name="Makran" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/MakranTV.ir.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="FHD" tvg-country="ir",Makran | شبکه مکران
 https://ncdn.telewebion.ir/makran/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MohabatTV.us" tvg-name="Mohabat TV" tvg-logo="https://i.imgur.com/tucTC1O.jpg" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="SD" tvg-country="us",Mohabat TV
-https://5ad386ff92705.streamlock.net/live_transcodermh/ngrp:mohabat.stream_all/playlist.m3u8
+https://mohabathls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="MTC.us@SD" tvg-logo="https://i.imgur.com/JxoAR4j.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",MTC
 https://mtchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NetTV.us" tvg-name="Net TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NetTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-country="us",Net TV | نت
@@ -259,7 +259,7 @@ https://tv.irna.ir/live/stream/index.m3u8
 https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8
 #EXTINF:-1 tvg-id="MelliGTV.us" tvg-name="MelliG TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/MelliGTV.us.png" group-title="اخبار - فارسی" tvg-language="fa" tvg-quality="HD" tvg-country="us",MelliG TV | ملی‌گرا
 https://mellihls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="MihanTV.ir@SD" tvg-logo="https://i.imgur.com/XEMsM7w.png" tvg-country="ir" tvg-language="fa" group-title="اخبار - فارسی",Mihan TV
+#EXTINF:-1 tvg-id="MihanTV.ir@SD" tvg-logo="https://i.imgur.com/XEMsM7w.png" tvg-country="ir" tvg-language="fa" group-title="اخبار - فارسی",Mihan TV (1080p)
 https://iptv.mihantv.com/mihantv/playlist.m3u8
 #EXTINF:-1 tvg-id="NahadeAzadi.us" tvg-name="Nahade Azadi" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NahadeAzadi.us.png" group-title="اخبار - فارسی" tvg-language="fa" tvg-quality="HD" tvg-country="us",Nahade Azadi | نهاد آزادی
 https://livestream.5centscdn.com/nahadeazadi/14a66ff6dca989d3a2eb0dc8cdb50892.sdp/chunks.m3u8

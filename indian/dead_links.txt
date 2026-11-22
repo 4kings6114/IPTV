@@ -1,5 +1,5 @@
 # Unavailable links (not necessarily dead)
-# count: 15
+# count: 14
 
 7X Music (1080p)
 https://7xshreeshyam.akamaized.net/7XPunjabi/index.m3u8
@@ -69,10 +69,5 @@ last_success: unknown
 Tabbar Hits (1080p)
 https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8
 invalid: Empty, HTML/JSON or unrecognized stream response
-last_success: unknown
-
-ZB Music (720p)
-https://server.zillarbarta.com/zbmusic/index.m3u8
-http_error: HTTP 404
 last_success: unknown
 
