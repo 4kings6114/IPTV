@@ -1,17 +1,17 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/SandObserver/live-tv-guide/main/output/iranintl.xml,https://epg.pw/xmltv/epg_US.xml,https://epg.pw/xmltv/epg_GB.xml,https://epg.pw/xmltv/epg_DE.xml"
 #EXTINF:-1 tvg-id="4UTV.tr@SD" tvg-logo="https://i.imgur.com/PexhKwp.png" tvg-country="tr" tvg-language="fa" group-title="فارسی - تلویزیون",4U TV (720p)
 https://hls.4utv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="AbadanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AbadanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Abadan TV
+#EXTINF:-1 tvg-id="AbadanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AbadanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Abadan TV (1080p)
 https://ncdn.telewebion.ir/abadan/live/playlist.m3u8
-#EXTINF:-1 tvg-id="AflakTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AflakTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aflak TV
+#EXTINF:-1 tvg-id="AflakTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AflakTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aflak TV (576p)
 https://ncdn.telewebion.ir/aflak/live/playlist.m3u8
-#EXTINF:-1 tvg-id="AftabTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AftabTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aftab TV
+#EXTINF:-1 tvg-id="AftabTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AftabTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Aftab TV (1080p)
 https://ncdn.telewebion.ir/aftab/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AlWilayah.ir@SD" tvg-logo="https://i.imgur.com/OI1HQv5.png" tvg-country="ir" tvg-language="ar",Al Wilayah (720p)
 https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
 #EXTINF:-1 tvg-id="AlMahdiTV.us@SD" tvg-logo="https://i.imgur.com/S1YM83i.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Al-Mahdi TV (1080p)
 https://iptv.almahditv.com/almahditv/playlist.m3u8
-#EXTINF:-1 tvg-id="AlborzTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AlborzTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Alborz TV
+#EXTINF:-1 tvg-id="AlborzTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AlborzTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Alborz TV (1080p)
 https://ncdn.telewebion.ir/alborz/live/playlist.m3u8
 #EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arax TV
 https://araxhls.wns.live/hls/stream.m3u8
@@ -21,23 +21,23 @@ https://arkhls.wns.live/hls/stream.m3u8
 https://arvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="AsilTV.ir@SD" tvg-logo="https://i.imgur.com/gROQqFD.png" tvg-country="ir" tvg-language="ar",Asil TV (576p)
 https://live.asil.tv/asiltv/index.m3u8
-#EXTINF:-1 tvg-id="AtrakTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AtrakTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Atrak TV
+#EXTINF:-1 tvg-id="AtrakTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AtrakTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Atrak TV (576p)
 https://ncdn.telewebion.ir/atrak/live/playlist.m3u8
-#EXTINF:-1 tvg-id="BaranTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/BaranTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Baran TV
+#EXTINF:-1 tvg-id="BaranTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/BaranTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Baran TV (1080p)
 https://ncdn.telewebion.ir/baran/live/playlist.m3u8
-#EXTINF:-1 tvg-id="BoushehrTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/BoushehrTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Boushehr TV
+#EXTINF:-1 tvg-id="BoushehrTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/BoushehrTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Boushehr TV (576p)
 https://ncdn.telewebion.ir/bushehr/live/playlist.m3u8
-#EXTINF:-1 tvg-id="DenaTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/DenaTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Dena TV
+#EXTINF:-1 tvg-id="DenaTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/DenaTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Dena TV (576p)
 https://ncdn.telewebion.ir/dena/live/playlist.m3u8
 #EXTINF:-1 tvg-id="DerakhteZendegiTV.us" tvg-name="Derakhte Zendegi TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/DerakhteZendegiTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="SD" tvg-country="us",Derakhte Zendegi TV
 https://derakhtzhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ErfanHalghehTV.ca@SD" tvg-logo="https://i.ibb.co/mGC5BMR/erfan-halgheh-tv-au.png" tvg-country="ca" tvg-language="fa" group-title="فارسی - تلویزیون",Erfan Halgheh TV (720p)
 https://hls.erfanhalgheh.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="EshraghNetwork.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/EshraghNetwork.ir.jpg" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Eshragh Network
+#EXTINF:-1 tvg-id="EshraghNetwork.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/EshraghNetwork.ir.jpg" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Eshragh Network (1080p)
 https://ncdn.telewebion.ir/eshragh/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="EslahTV.af@SD" tvg-logo="https://i.imgur.com/To7VnsA.png" tvg-country="af" tvg-language="ps",Eslah TV (720p)
 https://eslahtvhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="FarsTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/FarsTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Fars TV
+#EXTINF:-1 tvg-id="FarsTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/FarsTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Fars TV (1080p)
 https://ncdn.telewebion.ir/fars/live/playlist.m3u8
 #EXTINF:-1 tvg-id="FX1.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",FX 1
 https://fxtvhls.wns.live/hls/stream.m3u8
@@ -45,11 +45,11 @@ https://fxtvhls.wns.live/hls/stream.m3u8
 https://toonixhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="GanjeHozourTV.us@SD" tvg-logo="https://i.imgur.com/TnQYtKh.png" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Ganj e Hozour TV (1080p)
 https://media.parvizshahbazi.com/ganjehozour/Main_tv/playlist.m3u8
-#EXTINF:-1 tvg-id="GolkhaneTv.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/GolkhaneTv.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Golkhane Tv
+#EXTINF:-1 tvg-id="GolkhaneTv.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/GolkhaneTv.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Golkhane Tv (720p)
 https://ncdn.telewebion.ir/golkhane/live/playlist.m3u8
-#EXTINF:-1 tvg-id="HamedanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/HamedanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamedan TV
+#EXTINF:-1 tvg-id="HamedanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/HamedanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamedan TV (1080p)
 https://ncdn.telewebion.ir/sina/live/playlist.m3u8
-#EXTINF:-1 tvg-id="HamoonTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/HamoonTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamoon TV
+#EXTINF:-1 tvg-id="HamoonTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/HamoonTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Hamoon TV (1080p)
 https://ncdn.telewebion.ir/hamoon/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ICnet1.ca@SD" tvg-logo="https://i.imgur.com/aeS4Sjv.png" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",ICnet 1
 https://icnet1hls.wns.live/hls/stream.m3u8
@@ -57,7 +57,7 @@ https://icnet1hls.wns.live/hls/stream.m3u8
 https://icnet2hls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="icnet3.ca@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ca" tvg-language="fa",icnet 3
 https://ic3hls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="IlamTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/IlamTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Ilam TV
+#EXTINF:-1 tvg-id="IlamTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/IlamTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Ilam TV (576p)
 https://ncdn.telewebion.ir/ilam/live/playlist.m3u8
 #EXTINF:-1 tvg-id="IranIndependent.us" tvg-name="Iran Independent" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/IranIndependent.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-country="us",Iran Independent | ایران ایندیپندنت
 https://mediamtx.elitelatrade.com/live/stream/main_stream.m3u8
@@ -65,33 +65,33 @@ https://mediamtx.elitelatrade.com/live/stream/main_stream.m3u8
 http://iran620.com:1935/live/IranJewishTv/playlist.m3u8
 #EXTINF:-1 tvg-id="IranNationalRevolutionTV.us@HD" tvg-country="us" tvg-language="fa" group-title="فارسی - تلویزیون",Iran National Revolution TV
 https://hls.irannrtv.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="IsfahanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/IsfahanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Isfahan TV
+#EXTINF:-1 tvg-id="IsfahanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/IsfahanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Isfahan TV (576p)
 https://ncdn.telewebion.ir/esfahan/live/playlist.m3u8
-#EXTINF:-1 tvg-id="JahanbinTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/JahanbinTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Jahanbin TV
+#EXTINF:-1 tvg-id="JahanbinTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/JahanbinTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Jahanbin TV (576p)
 https://ncdn.telewebion.ir/jahanbin/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KalemehTV.uk" tvg-name="Kalemeh TV" tvg-logo="https://i.imgur.com/RsKKULI.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="FHD" tvg-country="uk",Kalemeh TV
 https://klmhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="KanalJadid.uk@SD" tvg-logo="https://i.imgur.com/7oGGgfD.png" group-title="فارسی - تلویزیون" tvg-country="uk" tvg-language="fa",Kanal Jadid
 https://kjhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="KermanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KermanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kerman TV
+#EXTINF:-1 tvg-id="KermanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KermanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kerman TV (1080p)
 https://ncdn.telewebion.ir/kerman/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KhalijeFarsTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhalijeFarsTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khalij-e Fars TV
+#EXTINF:-1 tvg-id="KhalijeFarsTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhalijeFarsTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khalij-e Fars TV (576p)
 https://ncdn.telewebion.ir/khalijefars/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KhaterehTV.us" tvg-name="Khatereh TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhaterehTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="FHD" tvg-country="us",Khatereh TV | خاطره
 https://radio.khatereh.online:5443/LiveApp/streams/jWF37YKCgZ0FSYTR863687974499636.m3u8
-#EXTINF:-1 tvg-id="KhavaranTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhavaranTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khavaran TV
+#EXTINF:-1 tvg-id="KhavaranTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhavaranTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khavaran TV (576p)
 https://ncdn.telewebion.ir/khavaran/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KhorasanRazaviTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhorasanRazaviTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khorasan Razavi TV
+#EXTINF:-1 tvg-id="KhorasanRazaviTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhorasanRazaviTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khorasan Razavi TV (1080p)
 https://ncdn.telewebion.ir/khorasanrazavi/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KhozestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhozestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khozestan TV
+#EXTINF:-1 tvg-id="KhozestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhozestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khozestan TV (1080p)
 https://ncdn.telewebion.ir/khoozestan/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KishTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KishTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kish TV
+#EXTINF:-1 tvg-id="KishTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KishTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kish TV (576p)
 https://ncdn.telewebion.ir/kish/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KordestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KordestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kordestan TV
+#EXTINF:-1 tvg-id="KordestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KordestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Kordestan TV (576p)
 https://ncdn.telewebion.ir/kordestan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="LabbaykTV.ir" tvg-name="Labbayk TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/LabbaykTV.ir.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="ir",LabbaykTV
 https://live-aburayhan1101.telewebion.ir/na/labbayk/live/720p/index.m3u8
-#EXTINF:-1 tvg-id="MahabadTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/MahabadTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Mahabad TV
+#EXTINF:-1 tvg-id="MahabadTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/MahabadTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Mahabad TV (576p)
 https://ncdn.telewebion.ir/mahabad/live/playlist.m3u8
 #EXTINF:-1 tvg-id="MakranTV.ir" tvg-name="Makran" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/MakranTV.ir.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="FHD" tvg-country="ir",Makran | شبکه مکران
 https://ncdn.telewebion.ir/makran/live/playlist.m3u8
@@ -101,7 +101,7 @@ https://mohabathls.wns.live/hls/stream.m3u8
 https://mtchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="NetTV.us" tvg-name="Net TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NetTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-country="us",Net TV | نت
 https://nethls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NoorTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Noor TV
+#EXTINF:-1 tvg-id="NoorTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NoorTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Noor TV (576p)
 https://ncdn.telewebion.ir/noor/live/playlist.m3u8
 #EXTINF:-1 tvg-id="NovinTV.ir" tvg-name="Novin TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/NovinTV.ir.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="ir",Novin TV
 https://stream.novin.live/hls/playlist.m3u8
@@ -121,23 +121,23 @@ https://turkhls.persiana.live/hls/stream.m3u8
 https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="PorchoonehTV.us" tvg-name="Porchooneh TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PorchoonehTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-country="us",Porchooneh TV | پرچونه
 http://porchooneh.com/hls/live1/stream1.m3u8
-#EXTINF:-1 tvg-id="QazvinTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/QazvinTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Qazvin TV
+#EXTINF:-1 tvg-id="QazvinTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/QazvinTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Qazvin TV (576p)
 https://ncdn.telewebion.ir/qazvin/live/playlist.m3u8
 #EXTINF:-1 tvg-id="RaviTV.us" tvg-name="Ravi TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/RaviTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="us",Ravi TV | راوی
 https://hls.ravitv.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RoyaTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/RoyaTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Roya TV (720p)
 https://ncdn.telewebion.ir/iribu/live/playlist.m3u8
-#EXTINF:-1 tvg-id="SabalanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SabalanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabalan TV
+#EXTINF:-1 tvg-id="SabalanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SabalanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabalan TV (576p)
 https://ncdn.telewebion.ir/sabalan/live/playlist.m3u8
-#EXTINF:-1 tvg-id="SabzTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SabzTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabz TV
+#EXTINF:-1 tvg-id="SabzTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SabzTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sabz TV (576p)
 https://ncdn.telewebion.ir/sabz/live/playlist.m3u8
-#EXTINF:-1 tvg-id="SahandTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SahandTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sahand TV
+#EXTINF:-1 tvg-id="SahandTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SahandTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Sahand TV (1080p)
 https://ncdn.telewebion.ir/sahand/live/playlist.m3u8
 #EXTINF:-1 tvg-id="SemnanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/SemnanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Semnan TV (576p)
 https://ncdn.telewebion.ir/semnan/live/playlist.m3u8
 #EXTINF:-1 tvg-id="Shabakeh7.us@SD" tvg-logo="https://i.imgur.com/oHmh5Jb.png" group-title="فارسی - تلویزیون" tvg-country="us" tvg-language="fa",Shabakeh 7
 https://sh7hls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="TabarestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/TabarestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Tabarestan TV
+#EXTINF:-1 tvg-id="TabarestanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/TabarestanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Tabarestan TV (576p)
 https://ncdn.telewebion.ir/tabarestan/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TamadonTV.af@SD" tvg-logo="https://i.imgur.com/edGyj5H.png" tvg-country="af" tvg-language="prd",Tamadon TV (720p)
 https://hls.tamadon.live/hls/stream.m3u8
@@ -149,9 +149,9 @@ https://itnhls.wns.live/hls/stream.m3u8
 https://nl.livekadeh.com/hls2/velayattv.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="VoATVPersian.us@SD" tvg-logo="https://i.imgur.com/TmqComb.png" tvg-country="us" tvg-language="fa",VOA Persian (1080p)
 https://voa-ingest.akamaized.net/hls/live/2033876/tvmc07/playlist.m3u8
-#EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/WestAzerbaijanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",West Azerbaijan TV
+#EXTINF:-1 tvg-id="WestAzerbaijanTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/WestAzerbaijanTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",West Azerbaijan TV (576p)
 https://ncdn.telewebion.ir/azarbayjangharbi/live/playlist.m3u8
-#EXTINF:-1 tvg-id="YazdTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/YazdTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Yazd TV
+#EXTINF:-1 tvg-id="YazdTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/YazdTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Yazd TV (576p)
 https://ncdn.telewebion.ir/taban/live/playlist.m3u8
 #EXTINF:-1 tvg-id="ZagrosTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/ZagrosTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Zagros TV (576p)
 https://ncdn.telewebion.ir/zagros/live/playlist.m3u8
