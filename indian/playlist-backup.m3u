@@ -1,6 +1,8 @@
 #EXTM3U
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="7SMusic.in" tvg-country="in",7S Music (576p)
 https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8
+#EXTINF:-1 group-title="موزیک هندی" tvg-id="7XMusic.in" tvg-country="in",7X Music (1080p)
+https://7xshreeshyam.akamaized.net/7XPunjabi/index.m3u8
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="9XJalwa.in" tvg-country="in",9X Jalwa (1080p)
 https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8
 #EXTINF:-1 group-title="موزیک هندی" tvg-id="9XJhakaas.in" tvg-country="in",9X Jhakaas (1080p)

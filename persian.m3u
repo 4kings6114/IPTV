@@ -123,6 +123,8 @@ https://tgn.bozztv.com/eshgtv-dvrfl05/gin-iribpooya/tracks-v1a1/mono.m3u8
 http://porchooneh.com/hls/live1/stream1.m3u8
 #EXTINF:-1 tvg-id="QazvinTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/QazvinTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Qazvin TV (576p)
 https://ncdn.telewebion.ir/qazvin/live/playlist.m3u8
+#EXTINF:-1 tvg-id="RasoulallahTv.ir@HD" tvg-logo="https://i.imgur.com/Jh5ADee.png" tvg-country="ir" tvg-language="fa" group-title="فارسی - تلویزیون",RasoulallahTv (1080p)
+https://avr.host247.net/live/rasoulallahtv/playlist.m3u8
 #EXTINF:-1 tvg-id="RaviTV.us" tvg-name="Ravi TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/RaviTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="HD" tvg-country="us",Ravi TV | راوی
 https://hls.ravitv.com/hls/stream.m3u8
 #EXTINF:-1 tvg-id="RoyaTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/RoyaTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Roya TV (720p)
