@@ -8,65 +8,29 @@
     "switching": "manual"
   },
   "cached_links": 0,
-  "changed_urls": 2,
+  "changed_urls": 0,
   "changes": {
     "added_channels": [],
     "quality_changes": [
       {
-        "after": 720,
-        "before": 1080,
-        "direction": "down",
-        "identity": "id:b4umovies.in",
-        "name": "B4U Movies (576p)"
-      },
-      {
-        "after": 720,
-        "before": 576,
+        "after": 614,
+        "before": 478,
         "direction": "up",
-        "identity": "id:dhoommusic.in",
-        "name": "Dhoom Music (576p)"
-      },
-      {
-        "after": 478,
-        "before": 614,
-        "direction": "down",
         "identity": "id:suriyatv.in",
         "name": "Suriya TV (1080p)"
       }
     ],
-    "recovered_channels": [
-      {
-        "identity": "id:dhoommusic.in",
-        "kind": "health_restored",
-        "name": "Dhoom Music (576p)",
-        "url": "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8"
-      }
-    ],
+    "recovered_channels": [],
     "removed_channels": [],
     "returned_unverified_channels": [],
-    "url_changes": [
-      {
-        "after": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8",
-        "before": "https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8",
-        "headers_changed": false,
-        "identity": "id:b4umovies.in",
-        "name": "B4U Movies (576p)"
-      },
-      {
-        "after": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8",
-        "before": "https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8",
-        "headers_changed": false,
-        "identity": "id:b4umusic.in",
-        "name": "B4U Music (1080p)"
-      }
-    ]
+    "url_changes": []
   },
   "channel_catalog": [
     {
-      "bitrate": 2560000,
+      "bitrate": 2380000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:06.868005+00:00",
+      "checked_at": "2026-11-25T12:06:15.876629+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -76,9 +40,9 @@
       "name": "7S Music (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -87,10 +51,10 @@
       "url": "https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8"
     },
     {
-      "bitrate": 6100000,
+      "bitrate": 5440000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.660269+00:00",
+      "checked_at": "2026-11-25T12:06:12.251352+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -100,9 +64,9 @@
       "name": "7X Music (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 47,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 55,
         "window_days": 30
       },
       "resolution": 1080,
@@ -114,7 +78,7 @@
       "bitrate": 4000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.618431+00:00",
+      "checked_at": "2026-11-25T12:06:12.707450+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -124,9 +88,9 @@
       "name": "9X Jalwa (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -138,7 +102,7 @@
       "bitrate": 4716800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.507947+00:00",
+      "checked_at": "2026-11-25T12:06:08.774871+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -148,9 +112,9 @@
       "name": "9X Jhakaas (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -162,7 +126,7 @@
       "bitrate": 4716800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.492900+00:00",
+      "checked_at": "2026-11-25T12:06:08.872145+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -172,9 +136,9 @@
       "name": "9X Tashan (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -186,7 +150,7 @@
       "bitrate": 4000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.277433+00:00",
+      "checked_at": "2026-11-25T12:06:13.522359+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -196,9 +160,9 @@
       "name": "9XM (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -207,10 +171,10 @@
       "url": "https://wiselp.wiseplayout.com/9XM/master.m3u8"
     },
     {
-      "bitrate": 5910000,
+      "bitrate": 7000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:06.155089+00:00",
+      "checked_at": "2026-11-25T12:06:14.571549+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -220,9 +184,9 @@
       "name": "Aaryaa TV (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -231,10 +195,10 @@
       "url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8"
     },
     {
-      "bitrate": 2097401,
+      "bitrate": 2370886,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.203680+00:00",
+      "checked_at": "2026-11-25T12:06:12.571832+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -244,9 +208,9 @@
       "name": "Alankar TV (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -258,7 +222,7 @@
       "bitrate": 2830000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.441698+00:00",
+      "checked_at": "2026-11-25T12:06:09.116636+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -268,9 +232,9 @@
       "name": "All Time Movies (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -282,7 +246,7 @@
       "bitrate": 4000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:57.882778+00:00",
+      "checked_at": "2026-11-25T12:06:08.230198+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -292,9 +256,9 @@
       "name": "B4U Bhojpuri (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -306,7 +270,7 @@
       "bitrate": 2490000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:13.966668+00:00",
+      "checked_at": "2026-11-25T12:06:15.712922+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -316,9 +280,9 @@
       "name": "B4U Kadak (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -330,7 +294,7 @@
       "bitrate": 2660000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:12.150588+00:00",
+      "checked_at": "2026-11-25T12:06:19.090833+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -340,9 +304,9 @@
       "name": "B4U Movies (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -354,7 +318,7 @@
       "bitrate": 6046040,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.526101+00:00",
+      "checked_at": "2026-11-25T12:06:09.305764+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -364,9 +328,9 @@
       "name": "B4U Music (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -378,7 +342,7 @@
       "bitrate": 4025982,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.588810+00:00",
+      "checked_at": "2026-11-25T12:06:09.418186+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -388,9 +352,9 @@
       "name": "Balle Balle HD (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -402,7 +366,7 @@
       "bitrate": 3072000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.281773+00:00",
+      "checked_at": "2026-11-25T12:06:09.216837+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -412,9 +376,9 @@
       "name": "Bhojpuri Cinema (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -426,7 +390,7 @@
       "bitrate": 3128000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:07.172029+00:00",
+      "checked_at": "2026-11-25T12:06:15.644840+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -436,9 +400,9 @@
       "name": "Bollygold (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -447,10 +411,10 @@
       "url": "https://jmp2.uk/stvp-IN4000600Q"
     },
     {
-      "bitrate": 5000000,
+      "bitrate": 5700000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.299865+00:00",
+      "checked_at": "2026-11-25T12:06:09.300950+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -460,9 +424,9 @@
       "name": "Bollywood Masala (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -471,10 +435,10 @@
       "url": "https://lamhas.net/bollywoodmasala/index.m3u8"
     },
     {
-      "bitrate": 2215461,
+      "bitrate": 2217624,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.297395+00:00",
+      "checked_at": "2026-11-25T12:06:09.721797+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -484,9 +448,9 @@
       "name": "Dhool TV (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 396,
@@ -495,10 +459,10 @@
       "url": "https://d1msejlow1t3l4.cloudfront.net/fta/subhartitv/playlist.m3u8"
     },
     {
-      "bitrate": 2620000,
+      "bitrate": 2490000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:02.875781+00:00",
+      "checked_at": "2026-11-25T12:06:13.141758+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -508,9 +472,9 @@
       "name": "Dhoom Music (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 69,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 73,
         "window_days": 30
       },
       "resolution": 720,
@@ -522,7 +486,7 @@
       "bitrate": 4000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.397703+00:00",
+      "checked_at": "2026-11-25T12:06:11.777497+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -532,9 +496,9 @@
       "name": "Epic Music Digital (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -546,7 +510,7 @@
       "bitrate": 6280560,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.973048+00:00",
+      "checked_at": "2026-11-25T12:06:10.454460+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -556,9 +520,9 @@
       "name": "ETV Beats (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -570,7 +534,7 @@
       "bitrate": 6280560,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:02.845757+00:00",
+      "checked_at": "2026-11-25T12:06:12.585796+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -580,9 +544,9 @@
       "name": "ETV Music (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -594,7 +558,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:09.515857+00:00",
+      "checked_at": "2026-11-25T12:06:20.133506+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -604,9 +568,9 @@
       "name": "Goldmines (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -618,7 +582,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:11.929387+00:00",
+      "checked_at": "2026-11-25T12:06:16.735304+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -628,9 +592,9 @@
       "name": "Goldmines Bollywood (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -642,7 +606,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:14.217564+00:00",
+      "checked_at": "2026-11-25T12:06:17.412311+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -652,9 +616,9 @@
       "name": "Goldmines Movies (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -663,10 +627,10 @@
       "url": "https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8"
     },
     {
-      "bitrate": 2500000,
+      "bitrate": 2450000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.916744+00:00",
+      "checked_at": "2026-11-25T12:06:14.276171+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -676,9 +640,9 @@
       "name": "HMTV (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 396,
@@ -687,10 +651,10 @@
       "url": "https://mumbai-edge.smartplaytv.in/HMTV/index.m3u8"
     },
     {
-      "bitrate": 1705870,
+      "bitrate": 1684562,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.363537+00:00",
+      "checked_at": "2026-11-25T12:06:07.927778+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -700,9 +664,9 @@
       "name": "Indywood TV (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -711,10 +675,10 @@
       "url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8"
     },
     {
-      "bitrate": 2256906,
+      "bitrate": 2208080,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.677448+00:00",
+      "checked_at": "2026-11-25T12:06:11.771511+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -724,9 +688,9 @@
       "name": "Insync (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 396,
@@ -735,10 +699,10 @@
       "url": "https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8"
     },
     {
-      "bitrate": 2490000,
+      "bitrate": 2530000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:07.157439+00:00",
+      "checked_at": "2026-11-25T12:06:15.050952+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -748,9 +712,9 @@
       "name": "Manoranjan Grand (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -762,7 +726,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.725379+00:00",
+      "checked_at": "2026-11-25T12:06:14.474874+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -772,9 +736,9 @@
       "name": "Manoranjan Movies (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -783,10 +747,10 @@
       "url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8"
     },
     {
-      "bitrate": 1800000,
+      "bitrate": 1850000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.070860+00:00",
+      "checked_at": "2026-11-25T12:06:13.570436+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -796,9 +760,9 @@
       "name": "Mastiii (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -807,10 +771,10 @@
       "url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8"
     },
     {
-      "bitrate": 4290000,
+      "bitrate": 4200000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.083206+00:00",
+      "checked_at": "2026-11-25T12:06:10.427807+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -820,9 +784,9 @@
       "name": "Mh 1 Music (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -834,7 +798,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.613852+00:00",
+      "checked_at": "2026-11-25T12:06:13.420835+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -844,9 +808,9 @@
       "name": "Music India (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -858,7 +822,7 @@
       "bitrate": 5640800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:06.455201+00:00",
+      "checked_at": "2026-11-25T12:06:14.535824+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -868,9 +832,9 @@
       "name": "NH BollyFlix (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -882,7 +846,7 @@
       "bitrate": 5640800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.739726+00:00",
+      "checked_at": "2026-11-25T12:06:13.273262+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -892,9 +856,9 @@
       "name": "NH BollyRaga (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -903,10 +867,10 @@
       "url": "https://jmp2.uk/stvp-IN460001373"
     },
     {
-      "bitrate": 2310000,
+      "bitrate": 2380000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:02.355810+00:00",
+      "checked_at": "2026-11-25T12:06:12.435682+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -916,9 +880,9 @@
       "name": "Oscar Movies Bhojpuri (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -930,7 +894,7 @@
       "bitrate": 2460000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.166441+00:00",
+      "checked_at": "2026-11-25T12:06:11.304566+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -940,9 +904,9 @@
       "name": "Peppers TV (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -954,7 +918,7 @@
       "bitrate": 5000000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.528158+00:00",
+      "checked_at": "2026-11-25T12:06:11.680228+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -964,9 +928,9 @@
       "name": "Pitaara (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -975,10 +939,10 @@
       "url": "https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8"
     },
     {
-      "bitrate": 2410000,
+      "bitrate": 2580000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.479336+00:00",
+      "checked_at": "2026-11-25T12:06:11.036423+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -988,9 +952,9 @@
       "name": "PTC Chakde (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -999,10 +963,10 @@
       "url": "https://mumt06.tangotv.in/qYyB8fXVPTCCHAKDE/index.m3u8"
     },
     {
-      "bitrate": 3632560,
+      "bitrate": 3632644,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.493575+00:00",
+      "checked_at": "2026-11-25T12:06:10.014588+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1012,9 +976,9 @@
       "name": "PTC Music (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1023,10 +987,10 @@
       "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index.m3u8"
     },
     {
-      "bitrate": 2270000,
+      "bitrate": 2290000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.558524+00:00",
+      "checked_at": "2026-11-25T12:06:13.712937+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -1036,9 +1000,9 @@
       "name": "Public Movies (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1050,7 +1014,7 @@
       "bitrate": 2520000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.461955+00:00",
+      "checked_at": "2026-11-25T12:06:09.263388+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1060,9 +1024,9 @@
       "name": "Public Music (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1071,10 +1035,10 @@
       "url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/index.m3u8"
     },
     {
-      "bitrate": 6840000,
+      "bitrate": 6830000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.612592+00:00",
+      "checked_at": "2026-11-25T12:06:11.270267+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1084,9 +1048,9 @@
       "name": "Punjabi Hits (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1098,7 +1062,7 @@
       "bitrate": 2360000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.028233+00:00",
+      "checked_at": "2026-11-25T12:06:11.298646+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1108,9 +1072,9 @@
       "name": "Raj Musix Kannada (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1122,7 +1086,7 @@
       "bitrate": 2340800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.499119+00:00",
+      "checked_at": "2026-11-25T12:06:09.355189+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1132,9 +1096,9 @@
       "name": "Raj Musix Malayalam (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 576,
@@ -1146,7 +1110,7 @@
       "bitrate": 6128000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.113537+00:00",
+      "checked_at": "2026-11-25T12:06:13.495007+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1156,9 +1120,9 @@
       "name": "Raj Musix Tamil (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1170,7 +1134,7 @@
       "bitrate": 2530000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.161914+00:00",
+      "checked_at": "2026-11-25T12:06:13.319739+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1180,9 +1144,9 @@
       "name": "Raj Musix Telugu (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1191,10 +1155,10 @@
       "url": "https://mumt07.tangotv.in/zHjX9OFlRAJMUSIXTELUGU/index.m3u8"
     },
     {
-      "bitrate": 6590000,
+      "bitrate": 6230000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.531942+00:00",
+      "checked_at": "2026-11-25T12:06:08.987716+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1204,9 +1168,9 @@
       "name": "Sana Plus (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1215,10 +1179,10 @@
       "url": "https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8"
     },
     {
-      "bitrate": 2480000,
+      "bitrate": 2300000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.443376+00:00",
+      "checked_at": "2026-11-25T12:06:09.273957+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1228,9 +1192,9 @@
       "name": "Sangeet Bangla (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1242,7 +1206,7 @@
       "bitrate": 2540000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:02.983864+00:00",
+      "checked_at": "2026-11-25T12:06:13.219036+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1252,9 +1216,9 @@
       "name": "Sangeet Bhojpuri (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1263,10 +1227,10 @@
       "url": "https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8"
     },
     {
-      "bitrate": 2520000,
+      "bitrate": 2540000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:04.245736+00:00",
+      "checked_at": "2026-11-25T12:06:13.913371+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1276,9 +1240,9 @@
       "name": "Sangeet Marathi (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1290,7 +1254,7 @@
       "bitrate": 2340800,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.582501+00:00",
+      "checked_at": "2026-11-25T12:06:13.678371+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -1300,9 +1264,9 @@
       "name": "Shemaroo Josh (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 576,
@@ -1314,7 +1278,7 @@
       "bitrate": 2079642,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.874775+00:00",
+      "checked_at": "2026-11-25T12:06:08.827658+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -1324,9 +1288,9 @@
       "name": "Shubh Cinema TV (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1338,7 +1302,7 @@
       "bitrate": 6046040,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.771731+00:00",
+      "checked_at": "2026-11-25T12:06:09.697018+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -1348,9 +1312,9 @@
       "name": "South Station (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1359,10 +1323,10 @@
       "url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8"
     },
     {
-      "bitrate": 2200000,
+      "bitrate": 8770000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.217912+00:00",
+      "checked_at": "2026-11-25T12:06:13.400335+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1372,21 +1336,21 @@
       "name": "Suriya TV (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
-      "resolution": 478,
+      "resolution": 614,
       "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
       "status": "healthy",
       "url": "https://stream.ottlive.co.in/suryatvtamil/index.m3u8"
     },
     {
-      "bitrate": 2800000,
+      "bitrate": 2780000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:58.623505+00:00",
+      "checked_at": "2026-11-25T12:06:09.120710+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1396,9 +1360,9 @@
       "name": "Tabbar Hits (576p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1407,10 +1371,10 @@
       "url": "https://streams.tangotv.in/TABBARHITS/ORIGIN/index.m3u8"
     },
     {
-      "bitrate": 2063662,
+      "bitrate": 2053487,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:19:59.676659+00:00",
+      "checked_at": "2026-11-25T12:06:09.595346+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1420,9 +1384,9 @@
       "name": "Tarang Music (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1434,7 +1398,7 @@
       "bitrate": 6046040,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.470601+00:00",
+      "checked_at": "2026-11-25T12:06:10.377774+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "فیلم هندی و بالیوود",
@@ -1444,9 +1408,9 @@
       "name": "The Movie Club (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1455,10 +1419,10 @@
       "url": "https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8"
     },
     {
-      "bitrate": 8210000,
+      "bitrate": 8200000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:03.706287+00:00",
+      "checked_at": "2026-11-25T12:06:11.599584+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1468,9 +1432,9 @@
       "name": "Ultimate TV (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1479,10 +1443,10 @@
       "url": "https://stream.ottlive.co.in/utvtamil/index.m3u8"
     },
     {
-      "bitrate": 1303315,
+      "bitrate": 1774032,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.358958+00:00",
+      "checked_at": "2026-11-25T12:06:11.070089+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1492,9 +1456,9 @@
       "name": "Vaanavil TV (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1506,7 +1470,7 @@
       "bitrate": 5876488,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.104377+00:00",
+      "checked_at": "2026-11-25T12:06:09.920521+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1516,9 +1480,9 @@
       "name": "YRF Music (1080p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 1080,
@@ -1527,10 +1491,10 @@
       "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8"
     },
     {
-      "bitrate": 3200000,
+      "bitrate": 3550000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:01.719927+00:00",
+      "checked_at": "2026-11-25T12:06:11.586687+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1540,9 +1504,9 @@
       "name": "ZB Music (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 61,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 66,
         "window_days": 30
       },
       "resolution": 720,
@@ -1554,7 +1518,7 @@
       "bitrate": 1628000,
       "bitrate_source": "hls_master_max",
       "cached": false,
-      "checked_at": "2026-11-24T13:20:00.374946+00:00",
+      "checked_at": "2026-11-25T12:06:10.242592+00:00",
       "country": "in",
       "epg": "unchecked",
       "group": "موزیک هندی",
@@ -1564,9 +1528,9 @@
       "name": "Zoom (720p)",
       "reason": "Valid HLS master and sampled media playlists",
       "reliability": {
-        "observations": 5,
-        "observed_days": 5,
-        "score": 84,
+        "observations": 6,
+        "observed_days": 6,
+        "score": 85,
         "window_days": 30
       },
       "resolution": 720,
@@ -1578,7 +1542,7 @@
   "channels": 63,
   "checked_links": 92,
   "dashboard_revision": "",
-  "downgraded": 2,
+  "downgraded": 0,
   "editor": {
     "channels": [
       {
@@ -1593,7 +1557,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1257/1257_1.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1608,7 +1572,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1257/1257_2.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1623,11 +1587,11 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1257/master.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2560000,
+        "bitrate": 2380000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -1638,11 +1602,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2560000,
+        "bitrate": 2380000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -1653,11 +1617,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/7SMusic/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 6100000,
+        "bitrate": 5440000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -1668,11 +1632,11 @@
         "request_url": "https://7xshreeshyam.akamaized.net/7XPunjabi/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 9,
+        "stability": 11,
         "status": "healthy"
       },
       {
-        "bitrate": 6100000,
+        "bitrate": 5440000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -1683,11 +1647,11 @@
         "request_url": "https://7xshreeshyam.akamaized.net/7XPunjabi/tracks-v1a1/mono.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 9,
+        "stability": 11,
         "status": "healthy"
       },
       {
-        "bitrate": 1760000,
+        "bitrate": 1630000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -1698,11 +1662,11 @@
         "request_url": "https://7xshreeshyam.akamaized.net/7XPunjabi/tracks-v4a1/mono.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 9,
+        "stability": 11,
         "status": "healthy"
       },
       {
-        "bitrate": 900000,
+        "bitrate": 860000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -1713,7 +1677,7 @@
         "request_url": "https://7xshreeshyam.akamaized.net/7XPunjabi/tracks-v6a1/mono.m3u8",
         "resolution": 180,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 9,
+        "stability": 11,
         "status": "healthy"
       },
       {
@@ -1728,7 +1692,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jalwa/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1743,7 +1707,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jalwa/SD216/SD216.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1758,7 +1722,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jalwa/SD504/SD504.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1773,7 +1737,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1788,7 +1752,7 @@
         "request_url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1803,7 +1767,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jhakaas/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1818,7 +1782,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jhakaas/SD216/SD216.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1833,7 +1797,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jhakaas/SD504/SD504.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1848,7 +1812,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1863,7 +1827,7 @@
         "request_url": "https://streams.tangotv.in/9XM/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1878,7 +1842,7 @@
         "request_url": "https://streams.tangotv.in/9XM/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1893,7 +1857,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9XM/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1908,7 +1872,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9XM/SD216/SD216.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1923,7 +1887,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9XM/SD504/SD504.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1938,7 +1902,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9XM/master.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1953,7 +1917,7 @@
         "request_url": "https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1968,7 +1932,7 @@
         "request_url": "https://streams.tangotv.in/9XTASHAN/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1983,7 +1947,7 @@
         "request_url": "https://streams.tangotv.in/9XTASHAN/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -1998,7 +1962,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Tashan/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2013,7 +1977,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Tashan/SD216/SD216.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2028,7 +1992,7 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Tashan/SD504/SD504.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2043,11 +2007,11 @@
         "request_url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5910000,
+        "bitrate": 7000000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -2058,11 +2022,11 @@
         "request_url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5910000,
+        "bitrate": 7000000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -2073,11 +2037,11 @@
         "request_url": "https://stream.ottlive.co.in/aryatvtamil/tracks-v1a1/mono.ts.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 462672,
+        "bitrate": 506699,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2088,11 +2052,11 @@
         "request_url": "https://livetv.tarangplus.in/alankar-origin/live/alankar-origin/live_240p/chunks.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 850156,
+        "bitrate": 949037,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2103,11 +2067,11 @@
         "request_url": "https://livetv.tarangplus.in/alankar-origin/live/alankar-origin/live_360p/chunks.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2097401,
+        "bitrate": 2370886,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2118,11 +2082,11 @@
         "request_url": "https://livetv.tarangplus.in/alankar-origin/live/alankar-origin/live_720p/chunks.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2097401,
+        "bitrate": 2370886,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2133,7 +2097,7 @@
         "request_url": "https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2148,7 +2112,7 @@
         "request_url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2163,7 +2127,7 @@
         "request_url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2178,7 +2142,7 @@
         "request_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2193,7 +2157,7 @@
         "request_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/SD216/SD216.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2208,7 +2172,7 @@
         "request_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/SD504/SD504.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2223,7 +2187,7 @@
         "request_url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2238,7 +2202,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/227/227_1.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2253,7 +2217,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/227/227_2.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2268,7 +2232,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/227/master.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2283,7 +2247,7 @@
         "request_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2298,7 +2262,7 @@
         "request_url": "https://streams.tangotv.in/B4UKADAK/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2313,7 +2277,7 @@
         "request_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2328,7 +2292,7 @@
         "request_url": "https://streams.tangotv.in/B4UMOVIES/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2343,7 +2307,7 @@
         "request_url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/1080p/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2358,7 +2322,7 @@
         "request_url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/360p/index.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2373,7 +2337,7 @@
         "request_url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/480p/index.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2388,11 +2352,11 @@
         "request_url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5550000,
+        "bitrate": 2520000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -2401,24 +2365,24 @@
         "m3u": "#EXTINF:-1 tvg-id=\"B4UMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",B4U Music (576p)\nhttps://mumbai-edge.smartplaytv.in/B4uMusic/index.m3u8\n",
         "name": "B4U Music (576p)",
         "request_url": "https://mumbai-edge.smartplaytv.in/B4uMusic/index.m3u8",
-        "resolution": 1080,
+        "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5550000,
+        "bitrate": 2520000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
         "identity": "id:b4umusic.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"B4UMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",B4U Music (1080p)\nhttps://mumbai-edge.smartplaytv.in/B4uMusic/tracks-v1a1/mono.m3u8\n",
-        "name": "B4U Music (1080p)",
+        "m3u": "#EXTINF:-1 tvg-id=\"B4UMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",B4U Music (720p)\nhttps://mumbai-edge.smartplaytv.in/B4uMusic/tracks-v1a1/mono.m3u8\n",
+        "name": "B4U Music (720p)",
         "request_url": "https://mumbai-edge.smartplaytv.in/B4uMusic/tracks-v1a1/mono.m3u8",
-        "resolution": 1080,
+        "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2428,12 +2392,12 @@
         "group": "موزیک هندی",
         "identity": "id:balleballe.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (504p)\nhttps://mcncdndigital.com/balleballetv/504p/index.m3u8?s=61c415d6085a70d3e8340b4d\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (504p)\nhttps://mcncdndigital.com/balleballetv/504p/index.m3u8?s=11754c8691a4354a4b9517bb\n",
         "name": "Balle Balle (504p)",
         "request_url": "https://mcncdndigital.com/balleballetv/504p/index.m3u8?[redacted]",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2443,12 +2407,12 @@
         "group": "موزیک هندی",
         "identity": "id:balleballe.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (720p)\nhttps://mcncdndigital.com/balleballetv/720p/index.m3u8?s=61c415d6085a70d3e8340b4d\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (720p)\nhttps://mcncdndigital.com/balleballetv/720p/index.m3u8?s=11754c8691a4354a4b9517bb\n",
         "name": "Balle Balle (720p)",
         "request_url": "https://mcncdndigital.com/balleballetv/720p/index.m3u8?[redacted]",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2463,7 +2427,7 @@
         "request_url": "https://mcncdndigital.com/balleballetv/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2473,16 +2437,16 @@
         "group": "موزیک هندی",
         "identity": "id:balleballe.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (1080p)\nhttps://mcncdndigital.com/balleballetv/source/index.m3u8?s=61c415d6085a70d3e8340b4d\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"BalleBalle.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Balle Balle (1080p)\nhttps://mcncdndigital.com/balleballetv/source/index.m3u8?s=11754c8691a4354a4b9517bb\n",
         "name": "Balle Balle (1080p)",
         "request_url": "https://mcncdndigital.com/balleballetv/source/index.m3u8?[redacted]",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2510000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -2493,11 +2457,11 @@
         "request_url": "https://streams.tangotv.in/BALLEBALLE/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2510000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -2508,7 +2472,7 @@
         "request_url": "https://streams.tangotv.in/BALLEBALLE/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2523,7 +2487,7 @@
         "request_url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2538,7 +2502,7 @@
         "request_url": "https://live-bhojpuri.akamaized.net/liveabr/pub-iobhojpuqbu6yj/live_240p/chunks.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2553,7 +2517,7 @@
         "request_url": "https://live-bhojpuri.akamaized.net/liveabr/pub-iobhojpuqbu6yj/live_360p/chunks.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2568,11 +2532,11 @@
         "request_url": "https://live-bhojpuri.akamaized.net/liveabr/pub-iobhojpuqbu6yj/live_720p/chunks.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2270000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2583,11 +2547,11 @@
         "request_url": "https://streams.tangotv.in/BHOJPURICINEMA/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2270000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2598,7 +2562,7 @@
         "request_url": "https://streams.tangotv.in/BHOJPURICINEMA/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2608,12 +2572,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:bollygold.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (360p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (360p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/0.m3u8\n",
         "name": "Bollygold (360p)",
-        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/0.m3u8",
+        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/0.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2623,12 +2587,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:bollygold.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (576p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/1.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (576p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/1.m3u8\n",
         "name": "Bollygold (576p)",
-        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/1.m3u8",
+        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/1.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2638,12 +2602,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:bollygold.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (1080p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Bollygold.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Bollygold (1080p)\nhttps://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/3.m3u8\n",
         "name": "Bollygold (1080p)",
-        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/5fe2da85-21c1-458c-9147-4d3581086d02/3.m3u8",
+        "request_url": "https://d3hhl0gm4nhbkv.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-ovyg974fme8fw/7afbd3fe-a14f-4d30-b442-9f5b6d64d447/3.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2658,11 +2622,11 @@
         "request_url": "https://jmp2.uk/stvp-IN4000600Q",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5000000,
+        "bitrate": 5700000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2673,11 +2637,11 @@
         "request_url": "https://lamhas.net/bollywoodmasala/HD1080/HD1080.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 3000000,
+        "bitrate": 3111000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2688,11 +2652,11 @@
         "request_url": "https://lamhas.net/bollywoodmasala/HD720/HD720.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2000000,
+        "bitrate": 2031000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2703,11 +2667,11 @@
         "request_url": "https://lamhas.net/bollywoodmasala/SD480/SD480.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 5000000,
+        "bitrate": 5700000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -2718,11 +2682,11 @@
         "request_url": "https://lamhas.net/bollywoodmasala/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2215461,
+        "bitrate": 2217624,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -2733,11 +2697,11 @@
         "request_url": "https://d1msejlow1t3l4.cloudfront.net/fta/subhartitv/chunks.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2215461,
+        "bitrate": 2217624,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -2748,11 +2712,11 @@
         "request_url": "https://d1msejlow1t3l4.cloudfront.net/fta/subhartitv/playlist.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2620000,
+        "bitrate": 2490000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -2763,11 +2727,11 @@
         "request_url": "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 13,
+        "stability": 14,
         "status": "healthy"
       },
       {
-        "bitrate": 2620000,
+        "bitrate": 2490000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -2778,7 +2742,7 @@
         "request_url": "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 13,
+        "stability": 14,
         "status": "healthy"
       },
       {
@@ -2788,12 +2752,12 @@
         "group": "موزیک هندی",
         "identity": "id:epicmusic.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (1080p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (1080p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/0.m3u8\n",
         "name": "Epic Music Digital (1080p)",
-        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/0.m3u8",
+        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/0.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2803,12 +2767,12 @@
         "group": "موزیک هندی",
         "identity": "id:epicmusic.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (480p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/2.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (480p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/2.m3u8\n",
         "name": "Epic Music Digital (480p)",
-        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/2.m3u8",
+        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/2.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2818,12 +2782,12 @@
         "group": "موزیک هندی",
         "identity": "id:epicmusic.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (360p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"EpicMusic.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Epic Music Digital (360p)\nhttps://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/3.m3u8\n",
         "name": "Epic Music Digital (360p)",
-        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/bbcb9fef-c913-4a2e-a1a4-5ababf80f63b/3.m3u8",
+        "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/e45b6abe-87c1-45e8-9c55-8a39f599570c/3.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2838,7 +2802,7 @@
         "request_url": "https://cc-3cyxq80qusspd.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3cyxq80qusspd/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2853,7 +2817,7 @@
         "request_url": "https://streams.tangotv.in/EPICMUSIC/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2868,7 +2832,7 @@
         "request_url": "https://streams.tangotv.in/EPICMUSIC/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2878,12 +2842,12 @@
         "group": "موزیک هندی",
         "identity": "id:etvbeats.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (360p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (360p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/0.m3u8\n",
         "name": "ETV Beats (360p)",
-        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/0.m3u8",
+        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/0.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2893,12 +2857,12 @@
         "group": "موزیک هندی",
         "identity": "id:etvbeats.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (480p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/1.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (480p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/1.m3u8\n",
         "name": "ETV Beats (480p)",
-        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/1.m3u8",
+        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/1.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2908,12 +2872,12 @@
         "group": "موزیک هندی",
         "identity": "id:etvbeats.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (1080p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"ETVBeats.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",ETV Beats (1080p)\nhttps://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/3.m3u8\n",
         "name": "ETV Beats (1080p)",
-        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/7e6641a4-ea91-49d5-8d65-2e4924698d3f/3.m3u8",
+        "request_url": "https://d3twdfe0ao4jf6.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-komovoahp2ara/d54b946f-eb3d-4c64-b59a-5957449845e2/3.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2928,7 +2892,7 @@
         "request_url": "https://jmp2.uk/stvp-IN4900002RV",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2943,7 +2907,7 @@
         "request_url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/1080p-cc/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2958,7 +2922,7 @@
         "request_url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/360p-cc/index.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2973,7 +2937,7 @@
         "request_url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/480p-cc/index.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -2988,7 +2952,7 @@
         "request_url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3003,7 +2967,7 @@
         "request_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3018,7 +2982,7 @@
         "request_url": "https://streams.tangotv.in/GOLDMINES/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3033,7 +2997,7 @@
         "request_url": "https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3048,7 +3012,7 @@
         "request_url": "https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3063,7 +3027,7 @@
         "request_url": "https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3078,11 +3042,11 @@
         "request_url": "https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2450000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3093,11 +3057,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/HMTV/index.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2450000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3108,11 +3072,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/HMTV/tracks-v1a1/mono.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1705870,
+        "bitrate": 1684562,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3123,11 +3087,11 @@
         "request_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/chunks.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1705870,
+        "bitrate": 1684562,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3138,11 +3102,11 @@
         "request_url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2256906,
+        "bitrate": 2208080,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3153,11 +3117,11 @@
         "request_url": "https://d1msejlow1t3l4.cloudfront.net/fta/insync/chunks.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2256906,
+        "bitrate": 2208080,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3168,11 +3132,11 @@
         "request_url": "https://d1msejlow1t3l4.cloudfront.net/fta/insync/playlist.m3u8",
         "resolution": 396,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2490000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3183,11 +3147,11 @@
         "request_url": "https://streams.tangotv.in/MANORANJANGRAND/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2490000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3198,7 +3162,7 @@
         "request_url": "https://streams.tangotv.in/MANORANJANGRAND/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3213,7 +3177,7 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3228,11 +3192,11 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1800000,
+        "bitrate": 1850000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3243,11 +3207,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1800000,
+        "bitrate": 1850000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3258,11 +3222,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/MastiMusic/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 4290000,
+        "bitrate": 4200000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3273,11 +3237,11 @@
         "request_url": "https://livestream.jswk.online/playlisttest/live/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 4290000,
+        "bitrate": 4200000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3288,7 +3252,7 @@
         "request_url": "https://livestream.jswk.online/playlisttest/live/tracks-v1a1/mono.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3303,7 +3267,7 @@
         "request_url": "https://streams.tangotv.in/MUSICINDIA/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3318,7 +3282,7 @@
         "request_url": "https://streams.tangotv.in/MUSICINDIA/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3328,12 +3292,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:nhbollyflix.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (1080p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (1080p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/0.m3u8\n",
         "name": "NH BollyFlix (1080p)",
-        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/0.m3u8",
+        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/0.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3343,12 +3307,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:nhbollyflix.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (540p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/2.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (540p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/2.m3u8\n",
         "name": "NH BollyFlix (540p)",
-        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/2.m3u8",
+        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/2.m3u8",
         "resolution": 540,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3358,12 +3322,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:nhbollyflix.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (360p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/4.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyFlix.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",NH BollyFlix (360p)\nhttps://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/4.m3u8\n",
         "name": "NH BollyFlix (360p)",
-        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/8a786dbc-412c-4f6f-82e7-e2cd4b394697/4.m3u8",
+        "request_url": "https://d1bnb20pevkrom.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-8xs28buuqfw19/9269da10-971c-4ee0-8b77-37cae76bd3bc/4.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3378,7 +3342,7 @@
         "request_url": "https://jmp2.uk/stvp-IN46000140Q",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3388,12 +3352,12 @@
         "group": "موزیک هندی",
         "identity": "id:nhbollyraga.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (1080p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (1080p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/0.m3u8\n",
         "name": "NH BollyRaga (1080p)",
-        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/0.m3u8",
+        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/0.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3403,12 +3367,12 @@
         "group": "موزیک هندی",
         "identity": "id:nhbollyraga.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (540p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/2.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (540p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/2.m3u8\n",
         "name": "NH BollyRaga (540p)",
-        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/2.m3u8",
+        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/2.m3u8",
         "resolution": 540,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3418,12 +3382,12 @@
         "group": "موزیک هندی",
         "identity": "id:nhbollyraga.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (360p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/4.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"NHBollyRaga.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",NH BollyRaga (360p)\nhttps://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/4.m3u8\n",
         "name": "NH BollyRaga (360p)",
-        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/4297aa04-d53d-43fe-8dfc-e5f8f65a417d/4.m3u8",
+        "request_url": "https://d3q7boydbwbbm0.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-herfuyvo6swzh/5190dac1-b53c-46fb-bcb5-92bad57e968a/4.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3438,11 +3402,11 @@
         "request_url": "https://jmp2.uk/stvp-IN460001373",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2310000,
+        "bitrate": 2380000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3453,11 +3417,11 @@
         "request_url": "https://mumt05.tangotv.in/87NeALx2OSCARMOVIESBHOJPURI/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2310000,
+        "bitrate": 2380000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3468,7 +3432,7 @@
         "request_url": "https://mumt05.tangotv.in/87NeALx2OSCARMOVIESBHOJPURI/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3483,7 +3447,7 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlPEPPERS/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3498,11 +3462,11 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlPEPPERS/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2510000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3513,11 +3477,11 @@
         "request_url": "https://streams.tangotv.in/PITAARA/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2510000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3528,7 +3492,7 @@
         "request_url": "https://streams.tangotv.in/PITAARA/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3538,12 +3502,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:pitaara.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (1080p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (1080p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/0.m3u8\n",
         "name": "Pitaara (1080p)",
-        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/0.m3u8",
+        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/0.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3553,12 +3517,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:pitaara.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (504p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/2.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (504p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/2.m3u8\n",
         "name": "Pitaara (504p)",
-        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/2.m3u8",
+        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/2.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3568,12 +3532,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:pitaara.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (360p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Pitaara.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",Pitaara (360p)\nhttps://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/3.m3u8\n",
         "name": "Pitaara (360p)",
-        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/8fa6052b-3058-4cc7-8f1c-d8027cfae51d/3.m3u8",
+        "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/756dd42f-fcab-4816-92c8-6ff14affa751/3.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3588,11 +3552,11 @@
         "request_url": "https://vg-pitaaratvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-583798/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2410000,
+        "bitrate": 2580000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3603,11 +3567,11 @@
         "request_url": "https://mumt06.tangotv.in/qYyB8fXVPTCCHAKDE/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2410000,
+        "bitrate": 2580000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3618,11 +3582,11 @@
         "request_url": "https://mumt06.tangotv.in/qYyB8fXVPTCCHAKDE/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 3632560,
+        "bitrate": 3632644,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3633,7 +3597,7 @@
         "request_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3648,11 +3612,11 @@
         "request_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index_1.m3u8",
         "resolution": 216,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 3632560,
+        "bitrate": 3632644,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3663,11 +3627,11 @@
         "request_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index_4.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1243699,
+        "bitrate": 1243884,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3678,11 +3642,11 @@
         "request_url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index_5.m3u8",
         "resolution": 504,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3693,11 +3657,11 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PTCMUSIC/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2500000,
+        "bitrate": 2530000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3708,11 +3672,11 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PTCMUSIC/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2270000,
+        "bitrate": 2290000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3723,11 +3687,11 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2270000,
+        "bitrate": 2290000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -3738,7 +3702,7 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMOVIES/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3753,7 +3717,7 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3768,11 +3732,11 @@
         "request_url": "https://mumt04.tangotv.in/m18aqlK4PUBLICMUSIC/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 6840000,
+        "bitrate": 6830000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -3783,11 +3747,11 @@
         "request_url": "https://stream.ottlive.co.in/punjabihits/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 6840000,
+        "bitrate": 6830000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3798,11 +3762,11 @@
         "request_url": "https://stream.ottlive.co.in/punjabihits/tracks-v1a1/mono.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1300000,
+        "bitrate": 1320000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3813,11 +3777,11 @@
         "request_url": "https://stream.ottlive.co.in/punjabihits/tracks-v3a1/mono.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 780000,
+        "bitrate": 800000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -3828,7 +3792,7 @@
         "request_url": "https://stream.ottlive.co.in/punjabihits/tracks-v4a1/mono.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3843,7 +3807,7 @@
         "request_url": "https://mumt01.tangotv.in/O5aw8Zn3RAJMUSIXKANDA/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3858,7 +3822,7 @@
         "request_url": "https://mumt01.tangotv.in/O5aw8Zn3RAJMUSIXKANDA/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3873,7 +3837,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1073/1073_1.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3888,7 +3852,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1073/1073_2.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3903,7 +3867,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/1073/master.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3918,7 +3882,7 @@
         "request_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/chunklist_0.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3933,7 +3897,7 @@
         "request_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/chunklist_2.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3948,7 +3912,7 @@
         "request_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/chunklist_4.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3963,7 +3927,7 @@
         "request_url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/Raj_Musix/master_1.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3978,7 +3942,7 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlRAJMUSIXTELUGU/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -3993,11 +3957,11 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlRAJMUSIXTELUGU/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 6590000,
+        "bitrate": 6230000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4008,11 +3972,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 6590000,
+        "bitrate": 6230000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4023,11 +3987,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/SanaPlusHD/tracks-v1a1/mono.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2480000,
+        "bitrate": 2300000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4038,11 +4002,11 @@
         "request_url": "https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2480000,
+        "bitrate": 2300000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4053,7 +4017,7 @@
         "request_url": "https://mumt05.tangotv.in/87NeALx2SANGEETBANGLA/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4068,7 +4032,7 @@
         "request_url": "https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4083,11 +4047,11 @@
         "request_url": "https://mumt01.tangotv.in/O5aw8Zn3SANGEETBHOJPURI/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2520000,
+        "bitrate": 2540000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4098,11 +4062,11 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlSANGEETMARATHI/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2520000,
+        "bitrate": 2540000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4113,7 +4077,7 @@
         "request_url": "https://mumt07.tangotv.in/zHjX9OFlSANGEETMARATHI/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4128,7 +4092,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/337/337_1.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4143,7 +4107,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/337/337_2.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4158,7 +4122,7 @@
         "request_url": "https://cdn.pishow.tv/ott/live/337/master.m3u8",
         "resolution": 576,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4173,7 +4137,7 @@
         "request_url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4188,7 +4152,7 @@
         "request_url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index_6.m3u8",
         "resolution": 288,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4203,7 +4167,7 @@
         "request_url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index_8.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4213,12 +4177,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:southstation.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (360p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (360p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/0.m3u8\n",
         "name": "South Station (360p)",
-        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/0.m3u8",
+        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/0.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4228,12 +4192,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:southstation.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (480p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/1.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (480p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/1.m3u8\n",
         "name": "South Station (480p)",
-        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/1.m3u8",
+        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/1.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4243,12 +4207,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:southstation.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (1080p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"SouthStation.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",South Station (1080p)\nhttps://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/3.m3u8\n",
         "name": "South Station (1080p)",
-        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/8e1c24d3-0456-448f-8212-6b83cb9f5606/3.m3u8",
+        "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/d788f73f-488a-4e84-bf28-fd4934a4417f/3.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4263,11 +4227,11 @@
         "request_url": "https://cc-yw7ztecy8do3q.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yw7ztecy8do3q/SS_IN.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2200000,
+        "bitrate": 8770000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4276,28 +4240,28 @@
         "m3u": "#EXTINF:-1 tvg-id=\"SuriyaTV.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Suriya TV (1080p)\nhttps://stream.ottlive.co.in/suryatvtamil/index.m3u8\n",
         "name": "Suriya TV (1080p)",
         "request_url": "https://stream.ottlive.co.in/suryatvtamil/index.m3u8",
-        "resolution": 478,
+        "resolution": 614,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2200000,
+        "bitrate": 8770000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
         "identity": "id:suriyatv.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"SuriyaTV.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Suriya TV (478p)\nhttps://stream.ottlive.co.in/suryatvtamil/tracks-v1a1/mono.ts.m3u8\n",
-        "name": "Suriya TV (478p)",
+        "m3u": "#EXTINF:-1 tvg-id=\"SuriyaTV.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Suriya TV (614p)\nhttps://stream.ottlive.co.in/suryatvtamil/tracks-v1a1/mono.ts.m3u8\n",
+        "name": "Suriya TV (614p)",
         "request_url": "https://stream.ottlive.co.in/suryatvtamil/tracks-v1a1/mono.ts.m3u8",
-        "resolution": 478,
+        "resolution": 614,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2800000,
+        "bitrate": 2780000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4308,11 +4272,11 @@
         "request_url": "https://streams.tangotv.in/TABBARHITS/ORIGIN/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2800000,
+        "bitrate": 2780000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4323,11 +4287,11 @@
         "request_url": "https://streams.tangotv.in/TABBARHITS/ORIGIN/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2063662,
+        "bitrate": 2053487,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4338,11 +4302,11 @@
         "request_url": "https://livetv.tarangplus.in/tarangmusic-origin/live/playlist.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 455963,
+        "bitrate": 449702,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4353,11 +4317,11 @@
         "request_url": "https://livetv.tarangplus.in/tarangmusic-origin/live/tarangmusic-origin/live_240p/chunks.m3u8",
         "resolution": 240,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 835575,
+        "bitrate": 823630,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4368,11 +4332,11 @@
         "request_url": "https://livetv.tarangplus.in/tarangmusic-origin/live/tarangmusic-origin/live_360p/chunks.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2063662,
+        "bitrate": 2053487,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4383,7 +4347,7 @@
         "request_url": "https://livetv.tarangplus.in/tarangmusic-origin/live/tarangmusic-origin/live_720p/chunks.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4393,12 +4357,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:themovieclub.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (360p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/0.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (360p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/0.m3u8\n",
         "name": "The Movie Club (360p)",
-        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/0.m3u8",
+        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/0.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4408,12 +4372,12 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:themovieclub.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (480p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/1.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (480p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/1.m3u8\n",
         "name": "The Movie Club (480p)",
-        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/1.m3u8",
+        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/1.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4423,16 +4387,16 @@
         "group": "فیلم هندی و بالیوود",
         "identity": "id:themovieclub.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (1080p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/3.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"TheMovieClub.in\" tvg-country=\"in\" group-title=\"فیلم هندی و بالیوود\",The Movie Club (1080p)\nhttps://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/3.m3u8\n",
         "name": "The Movie Club (1080p)",
-        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/01e1d4e9-f2af-4902-b0df-dcfec70806dc/3.m3u8",
+        "request_url": "https://d2tiq0lnb179mp.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-gp7rpz72nscfl/548f183e-c107-4735-a4a0-7cd951eb4aaf/3.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 890000,
+        "bitrate": 780000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -4443,11 +4407,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/TheMovieClub/index.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 890000,
+        "bitrate": 780000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "فیلم هندی و بالیوود",
@@ -4458,7 +4422,7 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/TheMovieClub/tracks-v1a1/mono.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4473,11 +4437,11 @@
         "request_url": "https://sis-global.prod.samsungtv.plus/v1/tvpprd/sc-mp2ar4ca425xo.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 8210000,
+        "bitrate": 8200000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4488,11 +4452,11 @@
         "request_url": "https://stream.ottlive.co.in/utvtamil/index.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 8210000,
+        "bitrate": 8200000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4503,11 +4467,11 @@
         "request_url": "https://stream.ottlive.co.in/utvtamil/tracks-v1a1/mono.ts.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1303315,
+        "bitrate": 1774032,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4518,11 +4482,11 @@
         "request_url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 1303315,
+        "bitrate": 1774032,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4533,7 +4497,7 @@
         "request_url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4548,11 +4512,11 @@
         "request_url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8",
         "resolution": 1080,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 3200000,
+        "bitrate": 3550000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4563,11 +4527,11 @@
         "request_url": "https://server.zillarbarta.com/zbmusic/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 12,
+        "stability": 13,
         "status": "healthy"
       },
       {
-        "bitrate": 3200000,
+        "bitrate": 3550000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4578,7 +4542,7 @@
         "request_url": "https://server.zillarbarta.com/zbmusic/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 12,
+        "stability": 13,
         "status": "healthy"
       },
       {
@@ -4593,7 +4557,7 @@
         "request_url": "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4603,12 +4567,12 @@
         "group": "موزیک هندی",
         "identity": "id:zoom.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (480p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/338b23ad2b353bf3f676c37b0bb6eb50/bandwidth/728000.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (480p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/338b23ad2b353bf3f676c37b0bb6eb50/bandwidth/728000.m3u8\n",
         "name": "Zoom (480p)",
-        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/338b23ad2b353bf3f676c37b0bb6eb50/bandwidth/728000.m3u8",
+        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/338b23ad2b353bf3f676c37b0bb6eb50/bandwidth/728000.m3u8",
         "resolution": 480,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4618,12 +4582,12 @@
         "group": "موزیک هندی",
         "identity": "id:zoom.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (720p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/b747bf7f16eca8387cf3b154486dd818/bandwidth/1628000.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (720p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/b747bf7f16eca8387cf3b154486dd818/bandwidth/1628000.m3u8\n",
         "name": "Zoom (720p)",
-        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/b747bf7f16eca8387cf3b154486dd818/bandwidth/1628000.m3u8",
+        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/b747bf7f16eca8387cf3b154486dd818/bandwidth/1628000.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
@@ -4633,16 +4597,16 @@
         "group": "موزیک هندی",
         "identity": "id:zoom.in",
         "language": "",
-        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (360p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/ef7396dca601d5f5dcefa35b43734dcb/bandwidth/1096000.m3u8\n",
+        "m3u": "#EXTINF:-1 tvg-id=\"Zoom.in\" tvg-country=\"in\" group-title=\"موزیک هندی\",Zoom (360p)\nhttps://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/ef7396dca601d5f5dcefa35b43734dcb/bandwidth/1096000.m3u8\n",
         "name": "Zoom (360p)",
-        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/d6be465b-7ccf-4f53-9ef6-9a2c846b1cef:ATL/variant/ef7396dca601d5f5dcefa35b43734dcb/bandwidth/1096000.m3u8",
+        "request_url": "https://dai.google.com/linear/hls/pa/event/JCAm25qkRXiKcK1AJMlvKQ/stream/7cb9391d-2478-4e69-89b3-4d822bcf0ee2:DLS/variant/ef7396dca601d5f5dcefa35b43734dcb/bandwidth/1096000.m3u8",
         "resolution": 360,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2200000,
+        "bitrate": 2310000,
         "bitrate_source": "hls_master_max",
         "country": "in",
         "group": "موزیک هندی",
@@ -4653,11 +4617,11 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/Zoom/index.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       },
       {
-        "bitrate": 2200000,
+        "bitrate": 2310000,
         "bitrate_source": "hls_peak",
         "country": "in",
         "group": "موزیک هندی",
@@ -4668,7 +4632,7 @@
         "request_url": "https://mumbai-edge.smartplaytv.in/Zoom/tracks-v1a1/mono.m3u8",
         "resolution": 720,
         "source": "/home/runner/work/IPTV/IPTV/indian/channels.m3u",
-        "stability": 16,
+        "stability": 17,
         "status": "healthy"
       }
     ],
@@ -4682,7 +4646,7 @@
     "enabled": false
   },
   "fresh_healthy_watched": [],
-  "generated_at": "2026-11-24T13:19:56.361913+00:00",
+  "generated_at": "2026-11-25T12:06:06.932923+00:00",
   "groups": {
     "فیلم هندی و بالیوود": 22,
     "موزیک هندی": 41
@@ -4766,7 +4730,7 @@
   },
   "previous_channels": 63,
   "previous_unique_identities": 63,
-  "recovered": 1,
+  "recovered": 0,
   "removed": 0,
   "retained_unverified": 0,
   "returned_unverified": 0,

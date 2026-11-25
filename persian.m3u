@@ -77,8 +77,6 @@ https://kjhls.wns.live/hls/stream.m3u8
 https://ncdn.telewebion.ir/kerman/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KhalijeFarsTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhalijeFarsTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khalij-e Fars TV (576p)
 https://ncdn.telewebion.ir/khalijefars/live/playlist.m3u8
-#EXTINF:-1 tvg-id="KhaterehTV.us" tvg-name="Khatereh TV" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhaterehTV.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="FHD" tvg-country="us",Khatereh TV | خاطره
-https://radio.khatereh.online:5443/LiveApp/streams/jWF37YKCgZ0FSYTR863687974499636.m3u8
 #EXTINF:-1 tvg-id="KhavaranTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhavaranTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khavaran TV (576p)
 https://ncdn.telewebion.ir/khavaran/live/playlist.m3u8
 #EXTINF:-1 tvg-id="KhorasanRazaviTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/KhorasanRazaviTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Khorasan Razavi TV (1080p)

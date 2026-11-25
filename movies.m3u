@@ -100,8 +100,8 @@ http://138.121.15.230:9002/CINECANAL/index.m3u8
 http://23.237.104.106:8080/USA_5STARMAX/index.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxHits.us@East" tvg-logo="https://i.ibb.co/Kp7m2G19/IMG-2477.png" tvg-country="us" tvg-language="en",Cinemax Hits (1080p)
 http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
-#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxLatinAmerica.us@HD" tvg-logo="https://i.imgur.com/cZWoJWD.png" tvg-country="us" tvg-language="es",Cinemax Latin America HD (1080p)
-http://38.65.175.84:8000/play/a093/index.m3u8
+#EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="CinemaxLatinAmerica.us@SD" tvg-logo="https://i.imgur.com/cZWoJWD.png" tvg-country="us" tvg-language="es",Cinemax Latin America (720p)
+https://streaming.onnethn.com/CINEMAX/playlist.m3u8
 #EXTINF:-1 group-title="فیلم - انگلیسی‌زبان" tvg-id="Cinemax.us@West" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cinemax_2016.svg/960px-Cinemax_2016.svg.png" tvg-country="us" tvg-language="en",Cinemax West (720p)
 http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
 #EXTINF:-1 tvg-id="ClassicCinema.us@SD" tvg-logo="https://i.imgur.com/FJoPnTb.png" tvg-country="us" tvg-language="en" group-title="فیلم - انگلیسی‌زبان",Classic Cinema (240p)
@@ -302,8 +302,9 @@ http://88.212.15.50/live/test_film_plus_25p/playlist.m3u8
 #EXTINF:-1 tvg-id="FilmPlus.hu@SD" tvg-logo="https://i.imgur.com/OWqzJyy.png" tvg-country="hu" tvg-language="hun" group-title="فیلم - اروپا",Film+
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/film_plus_hun_atk/index.m3u8
-#EXTINF:-1 tvg-name="Film4" tvg-logo="https://www.tvmustra.hu/logok/csatikon/film4.gif" tvg-id="Film4.hu" tvg-chno="32" tvg-country="hu" group-title="فیلم - اروپا" tvg-language="hun",Film4
-http://141.94.193.53:80/Film4_HD/index.m3u8
+#EXTINF:-1 tvg-id="Film4.hu@SD" tvg-logo="https://www.tvmustra.hu/logok/csatikon/film4.gif" tvg-country="hu" tvg-language="hun" group-title="فیلم - اروپا",Film4
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://88.212.7.14/live/film4_hun/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusAction.pl@HD" tvg-logo="https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Baction.png" tvg-country="pl" tvg-language="en" group-title="فیلم - اروپا",FILMBOX+ Action (720p)
 http://92.114.85.87:8008/play/a007/index.m3u8
 #EXTINF:-1 tvg-id="FILMBOXPlusComedy.pl@Czechia" tvg-logo="https://spiintl.com/data/files/kcfinderUploadDir/images/filmboxplus/filmbox%2Bcomedy.png" tvg-country="pl" tvg-language="cze" group-title="فیلم - اروپا",FILMBOX+ Comedy
@@ -420,8 +421,9 @@ http://102.129.186.182:81/la7d/index.m3u8
 http://88.212.7.14/live/mozi/index.m3u8
 #EXTINF:-1 group-title="فیلم - اروپا" tvg-id="MAX4.hu@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png" tvg-country="hu" tvg-language="hun",MAX4 (1080p)
 http://141.94.193.53:80/MAX4_HD/index.m3u8
-#EXTINF:-1 tvg-name="Mozi+" tvg-logo="https://www.sms.cz/kategorie/televize/bmp/loga/velka/mozi.png" tvg-id="MoziPlus.hu" tvg-chno="33" tvg-country="hu" group-title="فیلم - اروپا" tvg-language="hun",Mozi+
-http://141.94.193.53:80/Mozi+_HD/index.m3u8
+#EXTINF:-1 tvg-id="MoziPlus.hu@SD" tvg-logo="https://www.sms.cz/kategorie/televize/bmp/loga/velka/mozi.png" tvg-country="hu" tvg-language="hun" group-title="فیلم - اروپا",Mozi+
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+http://88.212.7.14/live/mozi_plusz/index.m3u8
 #EXTINF:-1 tvg-id="Moziverzum.hu@SD" tvg-logo="https://i.imgur.com/NMifecQ.png" tvg-country="hu" tvg-language="hun" group-title="فیلم - اروپا",Moziverzum
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
 http://88.212.7.14/live/moziverzum/index.m3u8
@@ -489,6 +491,8 @@ http://213.91.179.28:8000/play/a0bx
 #EXTVLCOPT:http-referrer=http://live.tvstitch.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
 http://777905.live.tvstitch.com/playlist.m3u8?master=104&source=aHR0cDovLzE3Ni4xMjIuMTAzLjUxOjcwMDAvY2g0Ni90cmFja3MtdjFhMS9tb25vLm0zdTg/bGl2ZT0xJmlwPTE3OC4xMzYuNDIuMjIwJmlkPTk0ODg2NSZzZWNyZXQ9bjF1N3VpMDYmc3NsPTEmMjF5bz0wJmU9MTc5MDU5NzA2MyZzdD1IMENxaGExNldkUTV0YWFSaW04QWlR
+#EXTINF:-1 tvg-id="ViasatKino.ro@SD" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/0f/Viasat_Kino_2025.svg/revision/latest?cb=20250506205346" tvg-country="ro" tvg-language="en" group-title="فیلم - اروپا",Viasat Kino
+http://91.235.165.117:8001/play/a055/index.m3u8
 #EXTINF:-1 tvg-id="ViasatKino.ua@Romania" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2b/Viasat_Kino_Logo_2025.svg" tvg-country="ua" tvg-language="ron" group-title="فیلم - اروپا",Viasat Kino
 #EXTVLCOPT:http-referrer=https://cool-tv.net/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 VLC/3.0.18 LibVLC/3.0.18
@@ -681,6 +685,8 @@ https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8
 https://30a-tv.com/feeds/720p/63.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="48Hours.us@US" tvg-logo="https://images.pluto.tv/channels/6176f39e709f160007ec61c3/colorLogoPNG.png" tvg-country="us" tvg-language="en",48 Hours (1080p)
 https://dai.google.com/linear/hls/event/JUr94WL2QAiVpGNHY5n5dA/master.m3u8
+#EXTINF:-1 tvg-id="5minuttishiny.ru@SD" tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/5minut_live.jpg" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",5 minut tishiny (1080p)
+https://cdn-dvr.ntv.ru/5_minut_tishiny/index.m3u8
 #EXTINF:-1 tvg-id="AFV.us@SD" tvg-name="AFV" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/TOB9vmW.png" group-title="سریال و کمدی" x-tier="community" x-status="verified" x-quality="720p",AFV
 https://linear-12.frequency.stream/dist/plex/12/hls/master/playlist.m3u8
 #EXTINF:-1 tvg-id="AllRealitybyWEtv.us@SD" tvg-name="All Reality by WE tv" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/hbJAs8h.png" group-title="سریال و کمدی" x-tier="community" x-status="verified" x-quality="720p",All Reality by WE tv
@@ -704,8 +710,6 @@ http://46.244.99.71:8181/stream/50/index.m3u8
 http://92.114.85.87:8014/play/a004/index.m3u8
 #EXTINF:-1 tvg-id="AzCorazon.mx@SD" tvg-logo="https://i.imgur.com/KIpSdQC.png" tvg-country="mx" tvg-language="es" group-title="سریال و کمدی",Az Corazon (720p)
 http://200.115.120.1:8000/play/ca020/index.m3u8
-#EXTINF:-1 tvg-id="Balabol.ru@SD" tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/balabol_vse.jpg" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Balabol (1080p)
-https://cdn-dvr.ntv.ru/Balabol/index.m3u8
 #EXTINF:-1 tvg-id="BBCDrama.uk@Spain" tvg-name="BBC Drama" tvg-country="uk" tvg-language="es" tvg-logo="https://i.imgur.com/HctHhLL.png" group-title="سریال و کمدی" x-tier="community" x-status="verified" x-quality="1080p",BBC Drama
 https://amg00793-amg00793c40-rakuten-es-5444.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="سریال و کمدی" tvg-id="CameraSmileTV.us@SD" tvg-logo="https://i.imgur.com/V5h4R83.png" tvg-country="us" tvg-language="en",Camera Smile (480p)
@@ -832,6 +836,8 @@ http://23.237.104.106:8080/USA_PARAMOUNT_NETWORK/index.m3u8
 https://d3mr43kyql7wgk.cloudfront.net/PBS_Nature.m3u8
 #EXTINF:-1 tvg-id="Perviyotdel.ru@SD" tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/perv_otdel_llive.jpg" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Perviy otdel (1080p)
 https://cdn-dvr.ntv.ru/Perviy_otdel/index.m3u8
+#EXTINF:-1 tvg-id="Pes.ru@SD" tvg-logo="https://cdn2-static.ntv.ru/home/promo/24740/pes_llive.jpg" tvg-country="ru" tvg-language="rus" group-title="سریال و کمدی",Pes (1080p)
+https://cdn-dvr.ntv.ru/Pes/index.m3u8
 #EXTINF:-1 tvg-id="PolsatSeriale.pl@HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Polsat_Seriale_2021_gradient.svg/500px-Polsat_Seriale_2021_gradient.svg.png" tvg-country="pl" tvg-language="pl" group-title="سریال و کمدی",Polsat Seriale (720p)
 http://92.114.85.87:8014/play/a00a/index.m3u8
 #EXTINF:-1 tvg-name="Rakuten Viki Poland" tvg-logo="https://i.imgur.com/pbyd1g2.png" tvg-id="RakutenViki.us" tvg-chno="112" tvg-country="us" group-title="سریال و کمدی" tvg-language="es",Rakuten Viki
