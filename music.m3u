@@ -210,12 +210,6 @@ http://178.134.1.158:8081/BRIDGE/index.m3u8
 https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff09f290affe00013a80a9/720p.m3u8
 #EXTINF:-1 tvg-id="BRIDGEJazz.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/jazz-white.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Jazz (720p)
 https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff0a0390affe00013a80aa/720p.m3u8
-#EXTINF:-1 tvg-id="BRIDGERap.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/rap-logo-dark.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Rap (720p)
-https://bridgemedia-hls.cdnvideo.ru/hls/live/6affed9990affe00013a80b1/720p.m3u8
-#EXTINF:-1 tvg-id="BRIDGERNB.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/rnb-logo-dark.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE RNB (720p)
-https://bridgemedia-hls.cdnvideo.ru/hls/live/6affedb990affe00013a80b2/720p.m3u8
-#EXTINF:-1 tvg-id="BRIDGESoul.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/soul-logo-dark.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Soul (720p)
-https://bridgemedia-hls.cdnvideo.ru/hls/live/6affed7590affe00013a80b0/720p.m3u8
 #EXTINF:-1 tvg-id="BRIDGESymphony.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/symphony-white.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Symphony (720p)
 https://bridgemedia-hls.cdnvideo.ru/hls/live/6aff0d2a81d78600017e02c2/720p.m3u8
 #EXTINF:-1 tvg-id="BRIDGEVostok.ru@SD" tvg-logo="https://bridgemusic.ru/s/img/channels/vostok-white.svg" tvg-country="ru" tvg-language="rus" group-title="موزیک - اروپا",BRIDGE Vostok (720p)
@@ -584,14 +578,14 @@ https://rst2.saiuzwebnetwork.it:8081/teleradioercolano/index.m3u8
 https://live.tele7music.ro/hls/stream/index.m3u8
 #EXTINF:-1 tvg-id="TequilaMusicTV.ro@SD" tvg-logo="https://tequilamusic.net/imagini/tv-logo.png" tvg-country="ro" tvg-language="ron" group-title="موزیک - اروپا",Tequila Music TV
 https://stream.tequilamusic.net/hls/tequila_tv.m3u8
-#EXTINF:-1 tvg-id="TraceBrazuca.fr@SD" tvg-name="Trace Brazuca" tvg-country="fr" tvg-language="pt" tvg-logo="https://i.imgur.com/DFBocPu.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",Trace Brazuca
-https://amg01131-tracetv-amg01131c4-stirr-us-4390.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="TraceBrazuca.fr@SD" tvg-logo="https://i.imgur.com/DFBocPu.png" tvg-country="fr" tvg-language="pt" group-title="موزیک - اروپا",Trace Brazuca (1090p)
+#EXTVLCOPT:http-referrer=https://trace.plus
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36
+https://channels.trace.plus/Traceprod/BRAZIL_sd/index.m3u8
 #EXTINF:-1 tvg-id="TraceLatina.fr@SD" tvg-name="Trace Latina" tvg-country="fr" tvg-language="fr" tvg-logo="https://i.imgur.com/CUVAi4u.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",Trace Latina
 https://amg01131-tracetv-tracelatina-glewed-vtnk7.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-name="Trace Urban" tvg-logo="https://i.imgur.com/PAx9qj8.png" tvg-id="TraceUrban.fr" tvg-chno="4737" group-title="موزیک - اروپا" tvg-country="fr" tvg-language="fr",Trace Urban
 https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01131-tracetv-traceurbanit-samsungit/playlist.m3u8
-#EXTINF:-1 group-title="موزیک - اروپا" tvg-id="TraditionalTV.ro@SD" tvg-logo="https://i.ibb.co/G5bNH48/Traditional-TV-HD.png" tvg-country="ro" tvg-language="ron",Traditional TV (1080p)
-http://83.103.149.75:8085/udp/239.30.0.9:4000
 #EXTINF:-1 tvg-name="TRL Tele Radio Leo" tvg-logo="https://i.imgur.com/qAagkJT.png" tvg-country="it" group-title="موزیک - اروپا",TRL Tele Radio Leo
 https://5db313b643fd8.streamlock.net/TRL/TRL/playlist.m3u8
 #EXTINF:-1 tvg-name="TRSP Tele Radio San Pietro" tvg-logo="https://hostux.pics/images/2026/09/11/31_trsp_tele_radio_san_pietroe201f062394d1eaa.png" tvg-chno="86" tvg-country="it" group-title="موزیک - اروپا",TRSP Tele Radio San Pietro
@@ -618,7 +612,7 @@ https://183.giatvcdn.com/ssh101/ssh101/vivarussia/playlist.m3u8
 https://vmtv.iptv-playoutcenter.de/vmtv/vmtv1/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="VOXMusicTV.pl@SD" tvg-logo="https://i.imgur.com/N993msF.png" tvg-country="pl" tvg-language="pl",VOX Music TV (1080p)
 http://92.114.85.87:8016/play/a00a/index.m3u8
-#EXTINF:-1 tvg-id="XITE.nl@SD" tvg-name="XITE" tvg-country="nl" tvg-language="nld" tvg-logo="https://i.imgur.com/jxuwGRi.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="720p",XITE
+#EXTINF:-1 tvg-id="XITE.nl@SD" tvg-name="XITE" tvg-country="nl" tvg-language="dutch" tvg-logo="https://i.imgur.com/jxuwGRi.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="720p",XITE
 https://xite-rakuten.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="XITEHits.nl@NL" tvg-name="XITE Hits" tvg-country="nl" tvg-language="en" tvg-logo="https://i.imgur.com/N51Rp7E.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",XITE Hits
 https://d726x48n2pd5h.cloudfront.net/XITE_Hits.m3u8
@@ -630,8 +624,6 @@ https://amg01243-xitenetworksint-hitsuk-samsunguk-mvovq.amagi.tv/playlist/amg012
 https://dvnftgdlbnemm.cloudfront.net/XITE_Just_Chill.m3u8
 #EXTINF:-1 tvg-id="XITEReggaeVibes.nl@HD" tvg-name="XITE Reggae Vibes" tvg-country="nl" tvg-language="en" tvg-logo="https://provider-static.plex.tv/epg/cms/production/c7506335-967f-46a9-917a-2a35475cd96c/xitereggaevibes_logo_light_-_Arlette_FiranRDX.png" group-title="موزیک - اروپا" x-tier="community" x-status="verified" x-quality="1080p",XITE Reggae Vibes
 https://dw2m7yrngfg8c.cloudfront.net/XITE_Reggae_Vibes.m3u8
-#EXTINF:-1 tvg-id="XITERockxMetal.nl@US" tvg-logo="https://i.imgur.com/szDM09P.png" tvg-country="nl" tvg-language="en" group-title="موزیک - اروپا",XITE Rock x Metal (1080p)
-https://amg01243-xite-amg01243c21-tcl-us-6483.playouts.now.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="موزیک - اروپا" tvg-id="XPTV1.es@SD" tvg-logo="https://i.imgur.com/Ty7GkoN.png" tvg-country="es" tvg-language="en",XPTV1 (720p)
 https://janus.xpbroadcasting.com:8443/hls/xptv1.m3u8
 #EXTINF:-1 tvg-id="ZweiMusicTelevision.de@SD" tvg-logo="https://i.imgur.com/RbdpCNf.png" tvg-country="de" tvg-language="de" group-title="موزیک - اروپا",Zwei Music Television
@@ -772,6 +764,8 @@ https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8
 https://media.neuquen.gov.ar/rtn/television/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioUNIACC.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/1744_Radio_UNIACC.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio UNIACC (720p)
 https://scl.edge.grupoz.cl/uniaccastream/live/playlist.m3u8
+#EXTINF:-1 tvg-id="RadioUniversal.cl@SD" tvg-logo="https://cdn.m3u.cl/logo/390_Radio_Universal.png" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio Universal (720p)
+https://videostream.chileservidores.com:8081/universal/index.m3u8
 #EXTINF:-1 tvg-id="RadioUP.ar@SD" tvg-logo="https://radioup.com.ar/wp-content/uploads/2025/06/logo-radioup-footer.png" tvg-country="ar" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio UP (1080p)
 https://iptv.ixfo.com.ar:30443/live/RadioUpTvStreaming/playlist.m3u8
 #EXTINF:-1 tvg-id="RadioUSACH.cl@SD" tvg-logo="https://static.mytuner.mobi/media/tvos_radios/997/radio-udesantiago.75310738.jpg" tvg-country="cl" tvg-language="es" group-title="موزیک - آمریکای لاتین",Radio USACH (720p)
@@ -814,8 +808,8 @@ https://pantera1-100gb-cl-movistar.dps.live/teleangolradio/teleangolradio.smil/p
 http://190.61.47.54:8000/play/a029/index.m3u8
 #EXTINF:-1 tvg-id="TopLatinoTV.pe@SD" tvg-logo="https://i.imgur.com/VRl8nPZ.png" tvg-country="pe" tvg-language="es" group-title="موزیک - آمریکای لاتین",Top Latino TV
 http://38.87.224.20:2220/play/a02b/index.m3u8
-#EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TurboMixRadioTV.pe@SD" tvg-logo="https://i.imgur.com/AsdBQa3.png" tvg-country="pe" tvg-language="es",Turbo Mix Radio TV (720p)
-https://live-evg11.tv360.bitel.com.pe/bitel/turbomixSRT/playlist.m3u8
+#EXTINF:-1 tvg-id="TurboMixRadioTV.pe@SD" tvg-logo="https://i.imgur.com/AsdBQa3.png" tvg-country="pe" tvg-language="es" group-title="موزیک - آمریکای لاتین",Turbo Mix Radio TV (360p)
+https://7.innovatestream.pe:19360/turbomixoficial/turbomixoficial.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TVPeruanisima.pe@SD" tvg-logo="https://i.imgur.com/m50qAVY.png" tvg-country="pe" tvg-language="es",TV Peruanisima (720p)
 https://k20.usastreams.com:8081/tvperuanisima/index.m3u8
 #EXTINF:-1 group-title="موزیک - آمریکای لاتین" tvg-id="TVUNO.pe@SD" tvg-logo="https://i.imgur.com/dht94P4.png" tvg-country="pe" tvg-language="es",TVUNO (720p)

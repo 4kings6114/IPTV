@@ -155,6 +155,8 @@ https://live.nowtelly.com/now_usa/live_usa/playlist.m3u8
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12HH_A1/index_new.m3u8?omap=https
 #EXTINF:-1 tvg-id="News12NewJersey.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/News_12_logo_2019.png/960px-News_12_logo_2019.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12 New Jersey (1080p)
 https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12JH_CENT_A1/index_new.m3u8?omap=https
+#EXTINF:-1 tvg-id="News12PlusConnecticut.us@HD" tvg-logo="https://i.ibb.co/n8m2mcsV/news12plus-CT.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Connecticut (1080p)
+https://mdc.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12PLUS_H_CT_A1/index_new.m3u8
 #EXTINF:-1 tvg-id="News12PlusLongIsland.us@HD" tvg-logo="https://i.ibb.co/p6FPNcCk/news12plus-LI.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ Long Island (1080p)
 https://mdc4.ott.alticeusa.net/live4.ott.optimum.net/live4-uploads/N12LH_WEST_A1/index_new.m3u8
 #EXTINF:-1 tvg-id="News12PlusNewYork.us@HD" tvg-logo="https://i.ibb.co/tThKYM09/news12plus-NYC.jpg" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",News12+ New York (1080p)
@@ -169,6 +171,8 @@ https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/e3e6e290958
 https://stream-204968.castr.net/64e0c91d08bff3041638aee3/live_a4243540d4b911f0b624bda5e9a32aa9/index.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="NTDTVEnglish.us@USA" tvg-logo="https://i.imgur.com/26uv1ww.png" tvg-country="us" tvg-language="en",NTD TV English (1080p)
 https://amg17596-amg17596c1-ntdtv-worldwide-3276.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-ntdtvworldwide/playlist.m3u8
+#EXTINF:-1 tvg-id="NTDTVEnglish.us@UK" tvg-logo="https://i.imgur.com/26uv1ww.png" tvg-country="us" tvg-language="en" group-title="اخبار - انگلیسی",NTD TV English (1080p)
+https://ntd02.akamaized.net/NTD-UK/index.m3u8
 #EXTINF:-1 tvg-id="OANPlus.us@SD" tvg-name="OAN Plus" tvg-country="us" tvg-language="en" tvg-logo="https://i.imgur.com/0xW69iu.png" group-title="اخبار - انگلیسی" x-tier="community" x-status="verified" x-quality="1080p",OAN Plus
 https://oneamericanews-roku-us.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="اخبار - انگلیسی" tvg-id="OANPlus.us@KPVMLD" tvg-logo="https://i.imgur.com/0xW69iu.png" tvg-country="us" tvg-language="en",OAN Plus KPVM-LD
@@ -276,8 +280,6 @@ https://livestream.a3sv.ro/master.m3u8
 #EXTINF:-1 tvg-id="ApostropheTV.ua@SD" tvg-logo="https://i.imgur.com/LCXvbQX.png" tvg-country="ua" tvg-language="ukr" group-title="اخبار - سایر زبان‌ها",Apostrophe TV (1080p)
 #EXTVLCOPT:http-user-agent=curl/8.16.0
 https://ext.cdn.nashnet.tv/228.0.2.165/index.m3u8
-#EXTINF:-1 tvg-id="AratuOn.br@SD" tvg-logo="https://i.imgur.com/Ht4jCab.png" tvg-country="br" tvg-language="pt" group-title="اخبار - سایر زبان‌ها",Aratu On (1080p)
-https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8
 #EXTINF:-1 tvg-id="ArmyTV.ua@SD" tvg-logo="https://i.imgur.com/pGByjbh.png" tvg-country="ua" tvg-language="ukr" group-title="اخبار - سایر زبان‌ها",Army TV (576p)
 http://195.54.52.40/test/index.m3u8
 #EXTINF:-1 tvg-id="ASTV.tr@SD" tvg-logo="https://asset.artidijitalmedya.com/image/188x188/channels/v1/logo_13.png" tvg-country="tr" tvg-language="tr" group-title="اخبار - سایر زبان‌ها",AS TV (900p)
@@ -554,8 +556,8 @@ http://31.131.141.195:8000/play/a006/index.m3u8
 http://190.93.224.42/PBO/index.m3u8
 #EXTINF:-1 tvg-id="PervyyRespublikanskiy.ru@SD" tvg-name="Pervyy Respublikanskiy" tvg-country="ru" tvg-language="russian" tvg-logo="https://i.imgur.com/ti4OMBv.png" group-title="اخبار - سایر زبان‌ها" x-tier="community" x-status="verified" x-quality="sd",Pervyy Respublikanskiy
 https://streaming.televizor-24-tochka.ru/live/27.m3u8
-#EXTINF:-1 tvg-id="PressTVFrench.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PressTVFrench.ir.png" tvg-country="ir" tvg-language="fr" group-title="اخبار - سایر زبان‌ها",Press TV French (1080p)
-https://live4.presstv.ir/live/smil:presstvfr.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="PressTVFrench.ir" tvg-name="Press TV French" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/PressTVFrench.ir.png" group-title="اخبار - سایر زبان‌ها" tvg-language="fr" tvg-quality="FHD" tvg-country="ir",Press TV French
+https://live4.presstv.ir/live/mp4:presstvfr/playlist.m3u8
 #EXTINF:-1 tvg-id="PrimaNews.ro@SD" tvg-logo="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Prima_News_logo_2022.svg/1280px-Prima_News_logo_2022.svg.png" tvg-country="ro" tvg-language="ron" group-title="اخبار - سایر زبان‌ها",Prima News
 https://hls02ns.antenaplay.ro/hls/prima-news-hd/index.m3u8
 #EXTINF:-1 tvg-id="ProbashiTVNews.ca@SD" tvg-logo="https://i.imgur.com/7oTsfQ4.png" tvg-country="ca" tvg-language="ben" group-title="اخبار - سایر زبان‌ها",Probashi TV News (1080p)
