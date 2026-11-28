@@ -13,8 +13,6 @@ https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8
 https://iptv.almahditv.com/almahditv/playlist.m3u8
 #EXTINF:-1 tvg-id="AlborzTV.ir@SD" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/AlborzTV.ir.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Alborz TV (1080p)
 https://ncdn.telewebion.ir/alborz/live/playlist.m3u8
-#EXTINF:-1 tvg-id="AmouzeshTV.ir" tvg-name="IRIB Amoozesh" tvg-logo="https://i.imgur.com/qox2azH.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-quality="SD" tvg-country="ir",Amouzesh TV
-https://live-aburayhan1103.telewebion.ir/ek/amouzesh/live/240p/index.m3u8
 #EXTINF:-1 tvg-id="AraxTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arax TV
 https://araxhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ArkoTV.ir@SD" tvg-logo="" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",Arko TV
@@ -143,6 +141,8 @@ https://sh7hls.wns.live/hls/stream.m3u8
 https://ncdn.telewebion.ir/tabarestan/live/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TamadonTV.af@SD" tvg-logo="https://i.imgur.com/edGyj5H.png" tvg-country="af" tvg-language="prd",Tamadon TV (720p)
 https://hls.tamadon.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="TapeshIran.us" tvg-name="Tapesh Iran" tvg-logo="https://raw.githubusercontent.com/shayanline/iptv-iran/main/assets/logos/TapeshIran.us.png" group-title="فارسی - تلویزیون" tvg-language="fa" tvg-country="us",Tapesh Iran | تپش ایران
+https://iptv.tapesh.tv/tapeshiran/playlist.m3u8
 #EXTINF:-1 group-title="فارسی - تلویزیون" tvg-id="TBNNejatTV.ir@SD" tvg-logo="https://i.imgur.com/e4WffQA.png" tvg-country="ir" tvg-language="fa",TBN Nejat TV
 https://hls.nejat.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD" tvg-logo="https://i.imgur.com/U4sKHWy.png" group-title="فارسی - تلویزیون" tvg-country="ir" tvg-language="fa",TV ITN

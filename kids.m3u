@@ -49,10 +49,8 @@ http://4.30.180.36:8420/disneychannel/index.m3u8?token=test
 https://directv-iptv-player.vercel.app/api/stream?url=http://212.5.144.156:8080/disneyjr/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-id="DisneyXD.us@East" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a8/2015_Disney_XD_logo.svg" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Disney XD (720p)
 http://89.187.179.148:826/1368/gXwiagaXda/1672
-#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DreamWorksChannelLatinAmerica.us@SD" tvg-country="us" tvg-language="es",DreamWorks Channel Latin America (1080p)
+#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="DreamWorksChannelLatinAmerica.us@SD" tvg-logo="https://i.imgur.com/mZnH8ep.png" tvg-country="us" tvg-language="es",DreamWorks Channel Latin America (1080p)
 http://138.121.15.230:9002/DREAMWORKS/index.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="GiggleMug.us@SD" tvg-logo="https://i.imgur.com/NbNHJXo.png" tvg-country="us" tvg-language="en",Giggle Mug (576p)
-https://tvsen6.aynaott.com/ytv/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="HappyKids.us@SD" tvg-logo="https://i.imgur.com/cPrUCFw.png" tvg-country="us" tvg-language="en",HappyKids (576p)
 https://mumbai-edge.smartplaytv.in/HappyKids/index.m3u8
 #EXTINF:-1 tvg-id="HasbroLegends.us@SD" tvg-logo="https://i.imgur.com/JDM9rEV.png" tvg-country="us" tvg-language="en" group-title="کودک و کارتون - انگلیسی‌زبان",Hasbro Legends (1080p)
@@ -128,6 +126,10 @@ http://api.toonamiaftermath.com:3000/est/playlist.m3u8
 http://api.toonamiaftermath.com:3000/pst/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="Tooncast.us@SD" tvg-logo="https://i.imgur.com/3yXRbQy.png" tvg-country="us" tvg-language="es",Tooncast (1080p)
 http://38.134.250.110:8000/play/a01t/index.m3u8
+#EXTINF:-1 tvg-id="Tooncast.us@SouthAmerica" tvg-logo="https://i.imgur.com/3yXRbQy.png" tvg-country="us" group-title="کودک و کارتون - انگلیسی‌زبان",Tooncast (480p)
+http://190.61.42.218:9000/play/a06i/index.m3u8
+#EXTINF:-1 tvg-id="Tooncast.us@Argentina" tvg-logo="https://i.imgur.com/3yXRbQy.png" tvg-country="us" group-title="کودک و کارتون - انگلیسی‌زبان",Tooncast (720p)
+http://45.134.141.161:2200/ARG/Tooncast/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="ToonGoggles.us@SD" tvg-logo="https://i.imgur.com/JMnxswq.png" tvg-country="us" tvg-language="en",ToonGoggles (720p)
 https://d1eg24xrsfr6kv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-b4b1bzxkt1uzo-prod/tg/tg/tg.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - انگلیسی‌زبان" tvg-id="TVOKids.ca@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tvokids-logo.svg/960px-Tvokids-logo.svg.png" tvg-country="ca" tvg-language="en",TVOKids (720p)
@@ -260,10 +262,10 @@ http://88.212.7.14/live/nick_junior_hun/index.m3u8
 http://91.235.165.117:8001/play/a038/index.m3u8
 #EXTINF:-1 tvg-id="NickJr.pl@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" tvg-country="pl" tvg-language="pl" group-title="کودک و کارتون - اروپا",Nick Jr.
 http://92.114.85.87:8013/play/a004/index.m3u8
-#EXTINF:-1 tvg-id="NickJr.it@SD" tvg-logo="https://i.imgur.com/6p3eFgf.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Nick Jr.
-https://streamer-jv9.pages.dev/italy/nickjr.m3u
 #EXTINF:-1 tvg-id="NickJr.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nick_Jr._logo_2023_(outline).svg/960px-Nick_Jr._logo_2023_(outline).svg.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Nick Jr. (576p)
 https://stream8.cinerama.uz/1501/playlist.m3u8
+#EXTINF:-1 tvg-id="NickJr.it@SD" tvg-logo="https://i.imgur.com/6p3eFgf.png" tvg-country="it" tvg-language="ita" group-title="کودک و کارتون - اروپا",Nick Jr. (720p)
+http://102.129.186.182:81/nick/index.m3u8
 #EXTINF:-1 tvg-id="NickComedyCentralPlus1.de@SD" tvg-logo="https://i.imgur.com/08ZUI9k.png" tvg-country="de" tvg-language="de" group-title="کودک و کارتون - اروپا",Nick/Comedy Central +1
 http://90.183.52.46:4000/play/a046/index.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.hu@SD" tvg-logo="https://i.imgur.com/fXs8f6a.png" tvg-country="hu" tvg-language="hun" group-title="کودک و کارتون - اروپا",Nickelodeon
@@ -299,8 +301,6 @@ http://91.235.165.117:8001/play/a061/index.m3u8
 https://r.eu.cdn-redge.media/livehls/oeu/mt/live/nicktoons/live.livx/playlist.m3u8
 #EXTINF:-1 tvg-id="NicktoonsCIS.ru@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",Nicktoons CIS (1080p)
 https://stream8.cinerama.uz/1502/playlist.m3u8
-#EXTINF:-1 tvg-id="O.ru@International" tvg-logo="https://i.imgur.com/pDc665V.png" tvg-country="ru" tvg-language="rus" group-title="کودک و کارتون - اروپا",O! (720p)
-http://88.212.15.50/live/test_telekanal_o/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="ORFKids.at@SD" tvg-logo="https://i.imgur.com/Zxuah2b.png" tvg-country="at" tvg-language="de",ORF Kids (720p)
 https://web12.mdn.ors.at/orf/web12/qxa/manifest.mpd
 #EXTINF:-1 tvg-id="PersianaJunior.fr@SD" tvg-logo="https://i.imgur.com/zeKHZYG.png" group-title="کودک و کارتون - اروپا" tvg-country="fr" tvg-language="fa",Persiana Junior
@@ -347,8 +347,6 @@ https://crtvg-xabarinr2-schlive.flumotion.cloud/crtvglive/smil:channel7PRG.smil/
 https://crtvg-xabarinr3-schlive.flumotion.cloud/crtvglive/smil:channel8PRG.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="TVGPequerrechos.es@SD" tvg-logo="https://i.imgur.com/rS9i9RL.png" tvg-country="es" tvg-language="glg" group-title="کودک و کارتون - اروپا",TVG Pequerrechos
 https://crtvg-xabarinr1-schlive.flumotion.cloud/crtvglive/smil:channel6PRG.smil/playlist.m3u8
-#EXTINF:-1 tvg-name="TVP ABC (576i)" tvg-logo="https://i.imgur.com/wP2mpfM.png" tvg-id="TVPABC.pl" tvg-chno="160" tvg-country="pl" group-title="کودک و کارتون - اروپا" tvg-language="pl",TVP ABC
-http://92.114.85.87:8002/play/a00b/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Vgostyakhuskazki.ru@SD" tvg-logo="https://i.imgur.com/jNJkLHl.png" tvg-country="ru" tvg-language="rus",V gostyakh u skazki (1080p)
 https://stream8.cinerama.uz/1270/tracks-v1a1/mono.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - اروپا" tvg-id="Solnce.ru@SD" tvg-logo="https://i.imgur.com/HCefxaK.png" tvg-country="ru" tvg-language="rus",Солнце (576p)
@@ -357,8 +355,6 @@ http://tv.mediacdn.ru/live/solntse/playlist.m3u8
 https://bstonline.mediacdn.ru/cdn/tamyr/playlist.m3u8
 #EXTINF:-1 tvg-id="13Kids.cl@SD" tvg-logo="https://i.imgur.com/8WJUbSD.png" tvg-country="cl" tvg-language="es" group-title="کودک و کارتون - آمریکای لاتین",13 Kids (1080p)
 https://origin.dpsgo.com/ssai/event/LhHrVtyeQkKZ-Ye_xEU75g/master.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="BoxKidsTV.br@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/1/18/Boxkidstv.png" tvg-country="br" tvg-language="pt",Box Kids TV (720p)
-http://170.83.49.66:8083/BOXKIDSHD/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="Chikitoonz.pe@SD" tvg-logo="https://chikitoonz.com/site/wp-content/uploads/2024/08/logochikitoonz2.png" tvg-country="pe" tvg-language="es",Chikitoonz (1080p)
 http://45.70.201.81:8000/play/a00p/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="DisneyChannelLatinAmerica.ar@Panregional" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/ff/2024_Disney_Channel_text_logo.svg" tvg-country="ar" tvg-language="es",Disney Channel Latin America (1080p)
@@ -393,8 +389,6 @@ https://vtm2.msinteractiva.com/lamil35/lamil35/playlist.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.br@SD" tvg-logo="https://i.imgur.com/E84jnP8.png" tvg-country="br" tvg-language="pt" group-title="کودک و کارتون - آمریکای لاتین",Nickelodeon (480p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
-#EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="Pakapaka.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Paka-Paka-2025.svg/1920px-Paka-Paka-2025.svg.png" tvg-country="ar" tvg-language="es",Pakapaka (1080p)
-http://138.59.227.20:8000/play/a05t/index.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="PequesTV.pe@SD" tvg-logo="https://img-evg3.tv360.bitel.com.pe/peru-image/2026/01/06/04/1767647409377/6123aa5e7fc7.png" tvg-country="pe" tvg-language="es",Peques TV (720p)
 https://live-evg7.tv360.bitel.com.pe/bitel/pequestv/playlist.m3u8
 #EXTINF:-1 group-title="کودک و کارتون - آمریکای لاتین" tvg-id="PlimPlim.ar@SD" tvg-logo="https://i.imgur.com/MYc8srh.png" tvg-country="ar" tvg-language="es",Plim Plim (1080p)
